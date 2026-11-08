@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink-950: #07080a;
+  --color-ink-900: #0b0d10;
+  --color-ink-850: #0e1014;
+  --color-ink-800: #12151a;
+  --color-ink-700: #1b1f26;
+  --color-ink-600: #262b34;
+  --color-ink-500: #363d48;
+
+  --color-mist-500: #6e727b;
+  --color-mist-400: #898d96;
+  --color-mist-300: #a9abb1;
+  --color-mist-200: #cdcbc4;
+
+  --color-paper-100: #eeebe3;
+  --color-paper-50: #f8f5ed;
+
+  --color-ochre-500: #c4934a;
+  --color-ochre-400: #dfb168;
+  --color-ochre-300: #efcf98;
+
+  --color-sage-500: #7d9778;
+  --color-sage-400: #9db398;
+
+  --color-clay-500: #b86f57;
+
+  --font-sans: "Avenir Next", "Avenir", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100vh;
+    background-color: var(--color-ink-950);
+    background-image:
+      radial-gradient(circle at 12% -8%, rgb(196 147 74 / 0.1), transparent 32rem),
+      radial-gradient(circle at 92% 12%, rgb(125 151 120 / 0.07), transparent 28rem);
+    background-attachment: fixed;
+    color: var(--color-paper-100);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: rgb(196 147 74 / 0.32);
+    color: var(--color-paper-50);
+  }
+
+  :where(a, button, [tabindex]):focus-visible {
+    outline: 2px solid var(--color-ochre-400);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+    }
+  }
+}

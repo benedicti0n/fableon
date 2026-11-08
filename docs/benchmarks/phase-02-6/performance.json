@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-11-08T22:40:49.454Z",
+  "capturedAt": "2026-11-08T22:47:06.529Z",
   "browser": "158.0.8127.18",
   "platform": "darwin",
   "release": "25.5.0",
@@ -9,25 +9,25 @@
   "fps": 24,
   "artworkStatus": "diagnostic-not-artistic-validation",
   "premiumArtworkBlocked": true,
-  "readyMs": 2507,
-  "importMs": 1889.2999999523163,
-  "decodeMs": 19.90000021457672,
-  "packBuildMs": 1869.3999997377396,
-  "firstFrameRenderMs": 44.699999928474426,
-  "medianFrameRenderMs": 43.799999952316284,
-  "p95FrameRenderMs": 45,
-  "totalRenderMs": 2091.8999997377396,
+  "readyMs": 2459,
+  "importMs": 1904,
+  "decodeMs": 18.199999809265137,
+  "packBuildMs": 1885.8000001907349,
+  "firstFrameRenderMs": 44.89999997615814,
+  "medianFrameRenderMs": 44,
+  "p95FrameRenderMs": 45.89999997615814,
+  "totalRenderMs": 2116,
   "warmRenderMs": {
     "environmentMs": 0.8000000715255737,
     "shadowMs": 0,
-    "characterMs": 0,
-    "baselineMs": 1,
+    "characterMs": 0.09999990463256836,
+    "baselineMs": 0.8999999761581421,
     "samples": 15
   },
   "captureRenderNote": "Capture render timing includes per-frame canvas readback synchronization in headless Chromium before PNG encoding. warmRenderMs measures the actual compositor work on reused surfaces.",
-  "playbackElapsedMs": 1100,
-  "playbackFrame": 25,
-  "observedPlaybackFps": 22.727272727272727,
+  "playbackElapsedMs": 1151,
+  "playbackFrame": 26,
+  "observedPlaybackFps": 22.58905299739357,
   "fidelity": {
     "frameMetrics": {
       "0": {
@@ -102,13 +102,13 @@
     "deterministic": true
   },
   "memoryBefore": {
-    "usedJSHeapSize": 72200000,
-    "totalJSHeapSize": 81400000,
+    "usedJSHeapSize": 18200000,
+    "totalJSHeapSize": 29400000,
     "jsHeapSizeLimit": 3760000000
   },
   "memoryAfter": {
-    "usedJSHeapSize": 72200000,
-    "totalJSHeapSize": 81400000,
+    "usedJSHeapSize": 18200000,
+    "totalJSHeapSize": 29400000,
     "jsHeapSizeLimit": 3760000000
   },
   "video": {

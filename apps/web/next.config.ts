@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
     "@fableon/render-engine",
     "@fableon/paint-engine",
     "@fableon/sprite-motion",
+    "@fableon/illustration-pipeline",
   ],
   // Fableon owns its agent guidance in docs/DEVELOPMENT_PROTOCOL.md. Next's
   // generated block would otherwise dirty the tree on every `next dev` run.

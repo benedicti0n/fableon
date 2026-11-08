@@ -1,3 +1,4 @@
+export * from "./archive";
 export * from "./browser-import";
 export * from "./character";
 export * from "./constants";

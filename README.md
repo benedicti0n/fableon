@@ -5,9 +5,10 @@ illustrated, narrated animated film. The product is designed around a
 renderer-independent pipeline — from story planning and painterly asset
 generation through deterministic motion, camera work, sound, and video export.
 
-> **Status: Phase 0 — Foundation.** The repository contains the workspace,
-> web shell, quality gates, and architecture documentation. No rendering, AI,
-> audio, or video-generation capability is implemented yet.
+> **Status: Phase 1 — Scene schema and deterministic timeline.** The repository
+> contains the versioned project/scene contracts, validated serialization, a
+> deterministic timeline evaluator, and a read-only Studio inspector. No
+> rendering, AI, audio, or video-generation capability is implemented yet.
 
 ## Requirements
 
@@ -24,7 +25,18 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) for the homepage and
 [http://localhost:3000/studio](http://localhost:3000/studio) for the Studio
-shell.
+timeline inspector.
+
+## Timeline inspector
+
+The Studio loads the sample project
+`packages/scene-schema/fixtures/where-the-light-lands.project.json` through the
+real `@fableon/scene-schema` parser and `@fableon/animation-core` evaluator.
+You can scrub global frames, jump to scene starts, step between scenes, select
+layers, and inspect resolved transforms.
+
+The canvas is a deliberate placeholder: no artwork is loaded or rendered until
+the paint engine phase. The inspector displays scene data only.
 
 ## Commands
 
@@ -47,6 +59,8 @@ fableon/
 ├── apps/
 │   └── web/                 # Next.js App Router application
 ├── packages/
+│   ├── scene-schema/        # Versioned project/scene contracts and fixtures
+│   ├── animation-core/      # Timeline resolution and deterministic frame plans
 │   └── shared/              # Cross-surface brand and product domain constants
 ├── docs/                    # Architecture, roadmap, MVP scope, protocol, reports
 ├── package.json             # Root scripts and shared tooling
@@ -57,7 +71,9 @@ fableon/
 Future packages such as the paint engine, motion engine, camera engine, asset
 providers, audio engine, and video compositor are documented in
 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). They are intentionally not
-scaffolded before their phases begin.
+scaffolded before their phases begin. Renderer-independent scene data and
+deterministic frame evaluation are now real (`scene-schema` and
+`animation-core`).
 
 ## Documentation
 
@@ -73,7 +89,7 @@ scaffolded before their phases begin.
 - Deterministic animation wherever possible.
 - Renderers never depend on AI providers.
 - Versioned, renderer-independent scene data.
-- Minimal dependencies; no cloud infrastructure or paid services in Phase 0.
+- Minimal dependencies; no cloud infrastructure or paid services are required.
 - No credentials or secrets in the repository.
 
 ## License

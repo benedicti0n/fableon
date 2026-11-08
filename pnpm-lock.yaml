@@ -59,6 +59,12 @@ importers:
 
   apps/web:
     dependencies:
+      '@fableon/animation-core':
+        specifier: workspace:*
+        version: link:../../packages/animation-core
+      '@fableon/scene-schema':
+        specifier: workspace:*
+        version: link:../../packages/scene-schema
       '@fableon/shared':
         specifier: workspace:*
         version: link:../../packages/shared

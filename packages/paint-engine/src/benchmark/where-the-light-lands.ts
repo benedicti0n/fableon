@@ -773,19 +773,26 @@ function paintBranch(canvas: HTMLCanvasElement, seed: number): void {
     0.85,
   );
 
-  renderPaperGrain(
-    context,
-    createPaperGrain({
-      seed: derivePaintSeed(seed, "branch-paper"),
-      width: canvas.width,
-      height: canvas.height,
-      density: 0.0005,
-      minSize: 0.5,
-      maxSize: 1.5,
-      opacity: 0.5,
-    }),
-    0.7,
-  );
+  // Grain applies only to painted pixels, preserving transparent areas.
+  context.save();
+  try {
+    context.globalCompositeOperation = "source-atop";
+    renderPaperGrain(
+      context,
+      createPaperGrain({
+        seed: derivePaintSeed(seed, "branch-paper"),
+        width: canvas.width,
+        height: canvas.height,
+        density: 0.0005,
+        minSize: 0.5,
+        maxSize: 1.5,
+        opacity: 0.5,
+      }),
+      0.7,
+    );
+  } finally {
+    context.restore();
+  }
 }
 
 function paintBird(canvas: HTMLCanvasElement, seed: number): void {

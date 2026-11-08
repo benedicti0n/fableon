@@ -21,7 +21,7 @@
       "sceneId": "dawn",
       "sceneName": "Dawn over the painted forest",
       "localFrame": 0,
-      "renderMs": 4.5
+      "renderMs": 4.100000023841858
     },
     {
       "frame": 216,
@@ -29,7 +29,7 @@
       "sceneId": "glide",
       "sceneName": "A path between the trunks",
       "localFrame": 0,
-      "renderMs": 1.5
+      "renderMs": 1.1999999284744263
     },
     {
       "frame": 528,
@@ -37,7 +37,7 @@
       "sceneId": "descent",
       "sceneName": "The ribbon of sunlight",
       "localFrame": 0,
-      "renderMs": 3.100000023841858
+      "renderMs": 0.8000000715255737
     },
     {
       "frame": 840,
@@ -45,7 +45,7 @@
       "sceneId": "landing",
       "sceneName": "The forest exhales",
       "localFrame": 0,
-      "renderMs": 2.6999999284744263
+      "renderMs": 2.399999976158142
     },
     {
       "frame": 1151,
@@ -53,18 +53,18 @@
       "sceneId": "landing",
       "sceneName": "The forest exhales",
       "localFrame": 311,
-      "renderMs": 1.2000000476837158
+      "renderMs": 0.8999999761581421
     }
   ],
   "metrics": {
-    "assetGenerationMs": 29.90000009536743,
+    "assetGenerationMs": 31,
     "frameRenderMs": {
-      "0": 4.5,
-      "216": 1.5,
-      "528": 3.100000023841858,
-      "840": 2.6999999284744263,
-      "1151": 1.2000000476837158
+      "0": 4.100000023841858,
+      "216": 1.1999999284744263,
+      "528": 0.8000000715255737,
+      "840": 2.399999976158142,
+      "1151": 0.8999999761581421
     },
-    "totalGenerationMs": 604.6000000238419
+    "totalGenerationMs": 598.7999999523163
   }
 }

@@ -39,3 +39,23 @@ export type {
   BirdPartId,
   StorybookBirdArt,
 } from "./benchmark/phase-02-5/bird-art";
+export { createLandingSceneArt } from "./benchmark/phase-02-5/scene-art";
+export type { LandingSceneArt } from "./benchmark/phase-02-5/scene-art";
+export {
+  BIRD_FOOT_LOCAL,
+  createLandingRig,
+  evaluateLandingRig,
+  LANDING_CONTACT_FRAME,
+  LANDING_FPS,
+  LANDING_FRAME_COUNT,
+  LANDING_SETTLE_FRAME,
+  landingPhaseForFrame,
+} from "./benchmark/phase-02-5/landing-rig";
+export type { LandingPhase } from "./benchmark/phase-02-5/landing-rig";
+export {
+  createLandingBenchmark,
+  renderLandingCharacter,
+  renderLandingFrame,
+} from "./benchmark/phase-02-5/landing-render";
+export type { LandingBenchmark } from "./benchmark/phase-02-5/landing-render";
+export type { LandingRenderOptions } from "./benchmark/phase-02-5/landing-render";

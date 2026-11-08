@@ -935,6 +935,14 @@ export function AssetWorkspace() {
               data-pivot={selectedPart ? `${selectedPart.pivot.x},${selectedPart.pivot.y}` : ""}
               data-pack-state={preparation.ready ? "ready" : "incomplete"}
               data-source={archiveForMode ? "archive" : "session"}
+              data-layer-order={
+                mode === "environment"
+                  ? [...pack.parts]
+                      .sort((left, right) => left.zIndex - right.zIndex)
+                      .map((part) => part.id)
+                      .join(",")
+                  : ""
+              }
               className={cn(
                 "relative w-full overflow-hidden rounded-md border border-ink-700",
                 mode === "character" ? "aspect-square" : "aspect-video",

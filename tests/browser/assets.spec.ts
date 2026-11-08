@@ -171,6 +171,39 @@ test.describe("Illustration asset preparation workspace", () => {
     await expect(page.getByRole("button", { name: "Export pack ZIP" })).toBeEnabled();
   });
 
+  test("blocks export while hidden anatomy requires reconstruction", async ({ page }) => {
+    await page.goto("/studio/assets");
+    await page.getByLabel("Import artwork files").setInputFiles(await makeCharacterFiles(page));
+    await expect(page.getByTestId("asset-composition")).toHaveAttribute("data-pack-state", "ready");
+
+    await page.getByLabel("Hidden anatomy requires reconstruction").check();
+    await expect(page.getByTestId("asset-composition")).toHaveAttribute(
+      "data-pack-state",
+      "incomplete",
+    );
+    await expect(page.getByRole("button", { name: "Export pack ZIP" })).toBeDisabled();
+    await expect(page.getByText(/hidden-anatomy reconstruction/i).first()).toBeVisible();
+
+    await page.getByLabel("Hidden anatomy requires reconstruction").uncheck();
+    await expect(page.getByTestId("asset-composition")).toHaveAttribute("data-pack-state", "ready");
+    await expect(page.getByRole("button", { name: "Export pack ZIP" })).toBeEnabled();
+  });
+
+  test("rejects a corrupted PNG with a decode error", async ({ page }) => {
+    await page.goto("/studio/assets");
+    const corrupted = Buffer.concat([
+      Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]),
+      Buffer.from("not-a-valid-png-payload"),
+    ]);
+    await page.getByLabel("Import artwork files").setInputFiles({
+      name: "corrupted.png",
+      mimeType: "image/png",
+      buffer: corrupted,
+    });
+    await expect(page.locator('p[role="alert"]')).toContainText(/decode|PNG|corrupt/i);
+    await expect(page.getByTestId("asset-composition")).toHaveAttribute("data-part-count", "0");
+  });
+
   test("prepares a layered environment with an independent branch layer", async ({ page }) => {
     await page.goto("/studio/assets");
     await page.getByRole("tab", { name: "Environment" }).click();
@@ -186,6 +219,15 @@ test.describe("Illustration asset preparation workspace", () => {
     const stats = await compositionStats(page);
     expect(stats.width).toBe(1920);
     expect(stats.height).toBe(1080);
+    await expect(page.getByTestId("asset-composition")).toHaveAttribute(
+      "data-layer-order",
+      "sky,landing-branch",
+    );
+    await page.getByRole("button", { name: "Move Landing branch backward" }).click();
+    await expect(page.getByTestId("asset-composition")).toHaveAttribute(
+      "data-layer-order",
+      "landing-branch,sky",
+    );
     await expect(page.getByRole("button", { name: "Export pack ZIP" })).toBeEnabled();
   });
 });

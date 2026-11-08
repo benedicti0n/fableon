@@ -62,6 +62,12 @@ importers:
       '@fableon/animation-core':
         specifier: workspace:*
         version: link:../../packages/animation-core
+      '@fableon/paint-engine':
+        specifier: workspace:*
+        version: link:../../packages/paint-engine
+      '@fableon/render-engine':
+        specifier: workspace:*
+        version: link:../../packages/render-engine
       '@fableon/scene-schema':
         specifier: workspace:*
         version: link:../../packages/scene-schema

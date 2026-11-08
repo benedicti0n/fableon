@@ -1,0 +1,60 @@
+{
+  "capturedWith": "Chrome headless shell (Playwright cache revision 1248), macOS, 2D canvas",
+  "viewport": "1920×1080 native canvas",
+  "seed": 20261109,
+  "assetIds": ["forest-dawn", "forest-deep", "branch", "bird"],
+  "assetSizes": {
+    "forest-dawn": [2048, 1152],
+    "forest-deep": [2048, 1152],
+    "branch": [2048, 360],
+    "bird": [720, 540]
+  },
+  "frames": [
+    {
+      "frame": 0,
+      "label": "Dawn",
+      "sceneName": "Dawn over the painted forest",
+      "localFrame": 0,
+      "renderMs": 3.899999976158142
+    },
+    {
+      "frame": 216,
+      "label": "Glide",
+      "sceneName": "A path between the trunks",
+      "localFrame": 0,
+      "renderMs": 1
+    },
+    {
+      "frame": 528,
+      "label": "Descent",
+      "sceneName": "The ribbon of sunlight",
+      "localFrame": 0,
+      "renderMs": 1.100000023841858
+    },
+    {
+      "frame": 840,
+      "label": "Landing",
+      "sceneName": "The forest exhales",
+      "localFrame": 0,
+      "renderMs": 2.200000047683716
+    },
+    {
+      "frame": 1151,
+      "label": "Final",
+      "sceneName": "The forest exhales",
+      "localFrame": 311,
+      "renderMs": 1
+    }
+  ],
+  "metrics": {
+    "assetGenerationMs": 34.39999997615814,
+    "frameRenderMs": {
+      "0": 3.899999976158142,
+      "216": 1,
+      "528": 1.100000023841858,
+      "840": 2.200000047683716,
+      "1151": 1
+    },
+    "totalGenerationMs": 552.1000000238419
+  }
+}

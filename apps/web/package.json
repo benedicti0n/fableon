@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@fableon/animation-core": "workspace:*",
+    "@fableon/paint-engine": "workspace:*",
+    "@fableon/render-engine": "workspace:*",
     "@fableon/scene-schema": "workspace:*",
     "@fableon/shared": "workspace:*",
     "next": "^16.4.5",

@@ -23,3 +23,8 @@ export type {
 } from "./strokes";
 export { createPaperGrain, renderPaperGrain } from "./texture";
 export type { GrainSpeck, PaperGrainData, PaperGrainOptions } from "./texture";
+export {
+  BENCHMARK_ASSET_DIMENSIONS,
+  createWhereTheLightLandsAssets,
+} from "./benchmark/where-the-light-lands";
+export type { PaintedBenchmarkAssets } from "./benchmark/where-the-light-lands";

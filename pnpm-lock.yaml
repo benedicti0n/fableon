@@ -112,6 +112,9 @@ importers:
       '@fableon/animation-core':
         specifier: workspace:*
         version: link:../animation-core
+      '@fableon/scene-schema':
+        specifier: workspace:*
+        version: link:../scene-schema
     devDependencies:
       typescript:
         specifier: ~6.0.3

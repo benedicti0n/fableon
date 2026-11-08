@@ -14,7 +14,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@fableon/animation-core": "workspace:*"
+    "@fableon/animation-core": "workspace:*",
+    "@fableon/scene-schema": "workspace:*"
   },
   "devDependencies": {
     "typescript": "~6.0.3"

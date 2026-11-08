@@ -18,6 +18,11 @@ coverage/
 .turbo/
 .vercel/
 
+# Test artifacts
+test-results/
+playwright-report/
+blob-report/
+
 # Environment and secrets
 .env
 .env.*

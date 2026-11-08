@@ -15,13 +15,17 @@
     "build": "pnpm --filter @fableon/web build",
     "start": "pnpm --filter @fableon/web start",
     "lint": "eslint . --max-warnings=0",
-    "typecheck": "pnpm -r --workspace-concurrency=1 typecheck",
+    "typecheck": "pnpm typecheck:root && pnpm -r --workspace-concurrency=1 typecheck",
+    "typecheck:root": "tsc --noEmit -p tsconfig.playwright.json",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:browser": "playwright test",
+    "benchmark:capture": "node scripts/capture-phase-02.mjs",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
   "devDependencies": {
+    "@playwright/test": "^1.65.0",
     "@tailwindcss/postcss": "^4.3.5",
     "@testing-library/dom": "^10.4.2",
     "@testing-library/jest-dom": "^7.0.1",

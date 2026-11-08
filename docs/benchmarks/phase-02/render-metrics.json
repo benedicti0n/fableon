@@ -1,5 +1,10 @@
 {
-  "capturedWith": "Chrome headless shell (Playwright cache revision 1248), macOS, 2D canvas",
+  "capturedWith": "Playwright Chromium 158.0.8127.18 and Canvas 2D",
+  "environment": {
+    "platform": "darwin",
+    "release": "25.5.0",
+    "cpu": "Apple M1"
+  },
   "viewport": "1920×1080 native canvas",
   "seed": 20261109,
   "assetIds": ["forest-dawn", "forest-deep", "branch", "bird"],
@@ -13,48 +18,53 @@
     {
       "frame": 0,
       "label": "Dawn",
+      "sceneId": "dawn",
       "sceneName": "Dawn over the painted forest",
       "localFrame": 0,
-      "renderMs": 3.899999976158142
+      "renderMs": 4.5
     },
     {
       "frame": 216,
       "label": "Glide",
+      "sceneId": "glide",
       "sceneName": "A path between the trunks",
       "localFrame": 0,
-      "renderMs": 1
+      "renderMs": 1.5
     },
     {
       "frame": 528,
       "label": "Descent",
+      "sceneId": "descent",
       "sceneName": "The ribbon of sunlight",
       "localFrame": 0,
-      "renderMs": 1.100000023841858
+      "renderMs": 3.100000023841858
     },
     {
       "frame": 840,
       "label": "Landing",
+      "sceneId": "landing",
       "sceneName": "The forest exhales",
       "localFrame": 0,
-      "renderMs": 2.200000047683716
+      "renderMs": 2.6999999284744263
     },
     {
       "frame": 1151,
       "label": "Final",
+      "sceneId": "landing",
       "sceneName": "The forest exhales",
       "localFrame": 311,
-      "renderMs": 1
+      "renderMs": 1.2000000476837158
     }
   ],
   "metrics": {
-    "assetGenerationMs": 34.39999997615814,
+    "assetGenerationMs": 29.90000009536743,
     "frameRenderMs": {
-      "0": 3.899999976158142,
-      "216": 1,
-      "528": 1.100000023841858,
-      "840": 2.200000047683716,
-      "1151": 1
+      "0": 4.5,
+      "216": 1.5,
+      "528": 3.100000023841858,
+      "840": 2.6999999284744263,
+      "1151": 1.2000000476837158
     },
-    "totalGenerationMs": 552.1000000238419
+    "totalGenerationMs": 604.6000000238419
   }
 }

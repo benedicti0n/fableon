@@ -4,19 +4,20 @@
 
 All paths are relative to the repository root.
 
-| Artifact              | Path                                              |
-| --------------------- | ------------------------------------------------- |
-| Contact sheet         | `docs/benchmarks/phase-02/contact-sheet.png`      |
-| Frame 0 — Dawn        | `docs/benchmarks/phase-02/frame-0000-dawn.png`    |
-| Frame 216 — Glide     | `docs/benchmarks/phase-02/frame-0216-glide.png`   |
-| Frame 528 — Descent   | `docs/benchmarks/phase-02/frame-0528-descent.png` |
-| Frame 840 — Landing   | `docs/benchmarks/phase-02/frame-0840-landing.png` |
-| Frame 1151 — Final    | `docs/benchmarks/phase-02/frame-1151-final.png`   |
-| Render metrics        | `docs/benchmarks/phase-02/render-metrics.json`    |
-| Painted forest (dawn) | `apps/web/public/assets/forest-dawn.png`          |
-| Painted forest (deep) | `apps/web/public/assets/forest-deep.png`          |
-| Painted branch        | `apps/web/public/assets/branch.png`               |
-| Painted bird          | `apps/web/public/assets/bird.png`                 |
+| Artifact              | Path                                                |
+| --------------------- | --------------------------------------------------- |
+| Contact sheet         | `docs/benchmarks/phase-02/contact-sheet.png`        |
+| Frame 0 — Dawn        | `docs/benchmarks/phase-02/frame-0000-dawn.png`      |
+| Frame 216 — Glide     | `docs/benchmarks/phase-02/frame-0216-glide.png`     |
+| Frame 528 — Descent   | `docs/benchmarks/phase-02/frame-0528-descent.png`   |
+| Frame 840 — Landing   | `docs/benchmarks/phase-02/frame-0840-landing.png`   |
+| Frame 1151 — Final    | `docs/benchmarks/phase-02/frame-1151-final.png`     |
+| Render metrics        | `docs/benchmarks/phase-02/render-metrics.json`      |
+| Browser performance   | `docs/benchmarks/phase-02/browser-performance.json` |
+| Painted forest (dawn) | `apps/web/public/assets/forest-dawn.png`            |
+| Painted forest (deep) | `apps/web/public/assets/forest-deep.png`            |
+| Painted branch        | `apps/web/public/assets/branch.png`                 |
+| Painted bird          | `apps/web/public/assets/bird.png`                   |
 
 The five benchmark frames are direct `canvas.toDataURL("image/png")` captures of
 native 1920×1080 canvases rendered by `@fableon/render-engine` from

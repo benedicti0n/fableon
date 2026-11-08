@@ -46,17 +46,19 @@ or external art is used. The five-frame visual benchmark and provenance are in
 
 ## Commands
 
-| Command             | Purpose                                          |
-| ------------------- | ------------------------------------------------ |
-| `pnpm dev`          | Run the Next.js application in development mode  |
-| `pnpm build`        | Create a production build of the web application |
-| `pnpm start`        | Serve the production build                       |
-| `pnpm lint`         | Run ESLint across the workspace                  |
-| `pnpm typecheck`    | Run strict TypeScript checks for every package   |
-| `pnpm test`         | Run the Vitest suite once                        |
-| `pnpm test:watch`   | Run Vitest in watch mode                         |
-| `pnpm format`       | Format the repository with Prettier              |
-| `pnpm format:check` | Verify formatting without writing changes        |
+| Command                  | Purpose                                           |
+| ------------------------ | ------------------------------------------------- |
+| `pnpm dev`               | Run the Next.js application in development mode   |
+| `pnpm build`             | Create a production build of the web application  |
+| `pnpm start`             | Serve the production build                        |
+| `pnpm lint`              | Run ESLint across the workspace                   |
+| `pnpm typecheck`         | Run strict TypeScript checks for every package    |
+| `pnpm test`              | Run the Vitest suite once                         |
+| `pnpm test:watch`        | Run Vitest in watch mode                          |
+| `pnpm test:browser`      | Run Playwright checks and performance measurement |
+| `pnpm benchmark:capture` | Regenerate benchmark assets, frames, and metrics  |
+| `pnpm format`            | Format the repository with Prettier               |
+| `pnpm format:check`      | Verify formatting without writing changes         |
 
 ## Workspace layout
 
@@ -82,12 +84,31 @@ audio engine, and video compositor are documented in
 scaffolded before their phases begin. Scene data, deterministic evaluation, the
 Canvas 2D renderer, and procedural paint primitives are now real.
 
+## Benchmark artifacts
+
+The five native 1920×1080 outputs, the contact sheet, and the rendered frame
+metrics are in
+[docs/benchmarks/phase-02/](docs/benchmarks/phase-02/). All artwork is generated
+locally by seeded Fableon Paint code; no external or AI-generated art is used.
+Provenance and the honest artistic assessment are documented alongside the
+images.
+
+Browser tests cover canvas rendering, deterministic repeat frames, scene
+boundaries, playback, PNG export dimensions, asset failures, mobile layout, and
+performance. The performance test records first-frame/cached render timing,
+playback throughput, and available heap measurements.
+
+```bash
+pnpm exec playwright install chromium
+pnpm test:browser
+```
+
 ## Continuous integration
 
 `.github/workflows/ci.yml` validates every push to `main` and every pull
 request on Node.js 24 LTS. It installs with a frozen lockfile and runs
-formatting, linting, type checking, unit tests, and the production build. It
-requires no secrets and performs no deployment.
+formatting, linting, type checking, unit tests, the production build, and the
+Playwright browser suite. It requires no secrets and performs no deployment.
 
 ## Documentation
 

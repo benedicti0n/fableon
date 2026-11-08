@@ -1,0 +1,42 @@
+{
+  "capturedAt": "2026-11-09",
+  "method": "Playwright performance.spec.ts, one warm session, 1440×1000 UI and native 1920×1080 canvas",
+  "browser": "Chromium 158.0.8127.18 (Playwright 1.65.0)",
+  "platform": "darwin",
+  "release": "25.5.0",
+  "cpu": "Apple M1",
+  "firstFrameReadyMs": 526,
+  "firstFrameRenderMs": 34.1,
+  "assetTimings": {
+    "requests": 2,
+    "wallMs": 6,
+    "totalTransferBytes": 1923618,
+    "entries": [
+      { "name": "forest-dawn.png", "durationMs": 6, "transferSize": 1785687 },
+      { "name": "bird.png", "durationMs": 3, "transferSize": 137931 }
+    ]
+  },
+  "cachedFrameSamplesMs": [34.1, 0.1, 0.1, 0.1, 0, 0.1, 0.1, 0.1, 0, 32.2],
+  "cachedFrameMedianMs": 0.1,
+  "cachedFrameP95Ms": 34.1,
+  "playbackElapsedMs": 1122,
+  "playbackCurrentFrame": 25,
+  "playbackEffectiveFps": 22.28163992869875,
+  "memoryBefore": {
+    "usedJSHeapSize": 23100000,
+    "totalJSHeapSize": 37300000,
+    "jsHeapSizeLimit": 3760000000
+  },
+  "memoryAfter": {
+    "usedJSHeapSize": 23100000,
+    "totalJSHeapSize": 37300000,
+    "jsHeapSizeLimit": 3760000000
+  },
+  "notes": [
+    "First-frame render includes image fetch/decode and initial compositing.",
+    "Cached render samples are measured by the Studio around renderFrameToCanvas.",
+    "The 34.1 ms initial sample is retained in the percentile calculation; most later cached samples are sub-millisecond.",
+    "The performance.memory values are rounded Chrome JS heap snapshots and are not a full GPU or canvas-memory measurement.",
+    "Playback advances by elapsed time at a 24 FPS target; the measured effective rate was approximately 22.3 frames per second over the sample window."
+  ]
+}

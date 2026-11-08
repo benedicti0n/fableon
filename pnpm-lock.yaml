@@ -117,6 +117,10 @@ importers:
         version: 6.0.3
 
   packages/paint-engine:
+    dependencies:
+      '@fableon/sprite-motion':
+        specifier: workspace:*
+        version: link:../sprite-motion
     devDependencies:
       typescript:
         specifier: ~6.0.3
@@ -146,6 +150,19 @@ importers:
         version: 6.0.3
 
   packages/shared:
+    devDependencies:
+      typescript:
+        specifier: ~6.0.3
+        version: 6.0.3
+
+  packages/sprite-motion:
+    dependencies:
+      '@fableon/animation-core':
+        specifier: workspace:*
+        version: link:../animation-core
+      '@fableon/scene-schema':
+        specifier: workspace:*
+        version: link:../scene-schema
     devDependencies:
       typescript:
         specifier: ~6.0.3

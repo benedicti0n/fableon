@@ -9,7 +9,7 @@ export const BRAND = {
   tagline: "Painterly stories, set in motion.",
   description:
     "An AI-native animation studio that turns a single idea into an illustrated, narrated, animated film.",
-  phaseLabel: "Phase 0 · Foundation",
+  phaseLabel: "Phase 1 · Scene timeline",
 } as const;
 
 export type Brand = typeof BRAND;

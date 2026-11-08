@@ -1,6 +1,6 @@
 import { BRAND } from "@fableon/shared";
 
-import { FeatherIcon, FrameIcon, LayersIcon } from "@/components/icons";
+import { FrameIcon, LayersIcon, TimelineIcon } from "@/components/icons";
 import { ForestPlate } from "@/components/forest-plate";
 import { PipelineOverview } from "@/components/pipeline-overview";
 import { SiteFooter } from "@/components/site-footer";
@@ -64,19 +64,19 @@ export default function HomePage() {
             <div className="grid gap-6 md:grid-cols-[0.9fr_1.1fr] md:items-end">
               <div>
                 <p className="font-mono text-[10px] tracking-[0.2em] text-ochre-400 uppercase">
-                  Phase 0 · Foundation
+                  Phase 1 · Scene data
                 </p>
                 <h2
                   id="foundation-heading"
                   className="mt-4 max-w-md font-serif text-4xl leading-[1.08] text-balance text-paper-50"
                 >
-                  A narrow base, built to carry a studio.
+                  A narrow base, now carrying real scenes.
                 </h2>
               </div>
               <p className="max-w-lg text-sm leading-7 text-mist-400 md:justify-self-end">
-                Phase 0 deliberately stops before scene rendering. It puts the workspace, interface
-                structure, quality gates, and architectural boundaries in place so later phases can
-                be built and replaced independently.
+                Phase 1 adds versioned project, scene, and layer contracts, validated import/export,
+                a deterministic timeline evaluator, and a read-only Studio inspector. Rendering
+                still begins in Phase 2.
               </p>
             </div>
 
@@ -99,27 +99,28 @@ export default function HomePage() {
                 <span className="flex size-10 items-center justify-center rounded-lg border border-ink-600 bg-ink-800 text-sage-400">
                   <FrameIcon className="size-5" />
                 </span>
-                <h3 className="mt-6 font-serif text-xl text-paper-100">A studio-shaped shell</h3>
+                <h3 className="mt-6 font-serif text-xl text-paper-100">A real scene contract</h3>
                 <p className="mt-3 text-[13px] leading-6 text-mist-400">
-                  Project, scenes, canvas, timeline, assets, and properties are laid out as explicit
-                  placeholders. Nothing pretends to be a working control.
+                  Versioned project, scene, layer, transform, and keyframe data with strict runtime
+                  validation, safe asset references, and a four-scene bird-in-the-forest fixture.
                 </p>
                 <p className="mt-5 font-mono text-[10px] tracking-[0.15em] text-mist-500 uppercase">
-                  Interface · Placeholder
+                  Schema · Implemented
                 </p>
               </article>
 
               <article className="rounded-xl border border-ink-700 bg-ink-900 p-6">
                 <span className="flex size-10 items-center justify-center rounded-lg border border-ink-600 bg-ink-800 text-mist-300">
-                  <FeatherIcon className="size-5" />
+                  <TimelineIcon className="size-5" />
                 </span>
-                <h3 className="mt-6 font-serif text-xl text-paper-100">An authored direction</h3>
+                <h3 className="mt-6 font-serif text-xl text-paper-100">A deterministic clock</h3>
                 <p className="mt-3 text-[13px] leading-6 text-mist-400">
-                  Architecture, roadmap, MVP scope, and development protocol are written down before
-                  engines, providers, or storage choices harden around assumptions.
+                  Frame-index scene resolution, hold/linear/cubic interpolation, and
+                  renderer-independent frame plans. The inspector never reimplements timeline math
+                  in React.
                 </p>
                 <p className="mt-5 font-mono text-[10px] tracking-[0.15em] text-mist-500 uppercase">
-                  Documentation · Provisional
+                  Evaluator · Implemented
                 </p>
               </article>
             </div>
@@ -141,19 +142,20 @@ export default function HomePage() {
                   id="studio-cta-heading"
                   className="mt-4 font-serif text-4xl leading-tight text-balance text-paper-50 md:text-5xl"
                 >
-                  Walk through the studio shell.
+                  Walk through the timeline inspector.
                 </h2>
                 <p className="mt-5 max-w-xl text-sm leading-7 text-mist-300">
-                  The layout anticipates real scene work while every unfinished capability is
-                  labeled. It is the groundwork for the Phase 1 scene model and timeline.
+                  The inspector is connected to real scene data and the deterministic evaluator.
+                  Scrub frames, jump scene boundaries, and inspect resolved transforms. Painterly
+                  rendering begins in Phase 2.
                 </p>
                 <div className="mt-8 flex flex-wrap items-center gap-4">
                   <ButtonLink href="/studio">
-                    Open the Studio
+                    Open the Inspector
                     <span aria-hidden="true">→</span>
                   </ButtonLink>
                   <span className="font-mono text-[10px] tracking-[0.13em] text-mist-500 uppercase">
-                    No project data or renderer connected
+                    No artwork or renderer connected
                   </span>
                 </div>
               </div>

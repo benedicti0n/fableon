@@ -10,7 +10,10 @@ export function SiteFooter() {
           <BrandMark className="size-7" />
           <span className="font-serif text-sm text-mist-200">Fableon</span>
         </Link>
-        <p>Phase 0 · Foundation. No rendering, audio, or AI pipeline is connected yet.</p>
+        <p>
+          Phase 1 · Scene timeline. Scene data and inspection are live; no renderer, audio, or AI
+          pipeline is connected yet.
+        </p>
       </div>
     </footer>
   );

@@ -22,8 +22,8 @@ export function PipelineOverview() {
             evolve without rebuilding the studio.
           </p>
           <p className="mt-5 max-w-md text-xs leading-6 text-mist-500">
-            Stages below describe intended behavior. Phase 0 implements the foundation and Studio
-            shell only.
+            Stages below describe intended behavior. Phase 1 implements the schema, deterministic
+            timeline, and read-only inspector; rendering and the remaining engines are future work.
           </p>
         </div>
 

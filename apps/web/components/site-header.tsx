@@ -11,7 +11,7 @@ export function SiteHeader() {
           <BrandMark />
           <span className="font-serif text-xl tracking-tight text-paper-50">Fableon</span>
           <Badge variant="muted" className="hidden md:inline-flex">
-            Phase 0
+            Phase 1
           </Badge>
         </Link>
 

@@ -5,38 +5,38 @@
   "platform": "darwin",
   "release": "25.5.0",
   "cpu": "Apple M1",
-  "firstFrameReadyMs": 526,
-  "firstFrameRenderMs": 34.1,
+  "firstFrameReadyMs": 472,
+  "firstFrameRenderMs": 42.7,
   "assetTimings": {
     "requests": 2,
-    "wallMs": 6,
+    "wallMs": 7,
     "totalTransferBytes": 1923618,
     "entries": [
-      { "name": "forest-dawn.png", "durationMs": 6, "transferSize": 1785687 },
-      { "name": "bird.png", "durationMs": 3, "transferSize": 137931 }
+      { "name": "forest-dawn.png", "durationMs": 7, "transferSize": 1785687 },
+      { "name": "bird.png", "durationMs": 4, "transferSize": 137931 }
     ]
   },
-  "cachedFrameSamplesMs": [34.1, 0.1, 0.1, 0.1, 0, 0.1, 0.1, 0.1, 0, 32.2],
+  "cachedFrameSamplesMs": [42.7, 0.1, 0.1, 0, 0, 0, 0.1, 0.1, 0, 34.5],
   "cachedFrameMedianMs": 0.1,
-  "cachedFrameP95Ms": 34.1,
-  "playbackElapsedMs": 1122,
+  "cachedFrameP95Ms": 42.7,
+  "playbackElapsedMs": 1132,
   "playbackCurrentFrame": 25,
-  "playbackEffectiveFps": 22.28163992869875,
+  "playbackEffectiveFps": 22.084805653710248,
   "memoryBefore": {
-    "usedJSHeapSize": 23100000,
+    "usedJSHeapSize": 20500000,
     "totalJSHeapSize": 37300000,
     "jsHeapSizeLimit": 3760000000
   },
   "memoryAfter": {
-    "usedJSHeapSize": 23100000,
+    "usedJSHeapSize": 20500000,
     "totalJSHeapSize": 37300000,
     "jsHeapSizeLimit": 3760000000
   },
   "notes": [
-    "First-frame render includes image fetch/decode and initial compositing.",
+    "First-frame render includes image fetch/decode and initial compositing; it was slightly above the 41.7 ms 24 FPS budget in this run.",
     "Cached render samples are measured by the Studio around renderFrameToCanvas.",
-    "The 34.1 ms initial sample is retained in the percentile calculation; most later cached samples are sub-millisecond.",
+    "Most cached samples were sub-millisecond; the first sample and one scene-switch sample dominate the p95.",
     "The performance.memory values are rounded Chrome JS heap snapshots and are not a full GPU or canvas-memory measurement.",
-    "Playback advances by elapsed time at a 24 FPS target; the measured effective rate was approximately 22.3 frames per second over the sample window."
+    "Playback advances by elapsed time at a 24 FPS target; the measured effective rate was approximately 22.1 frames per second over the sample window."
   ]
 }

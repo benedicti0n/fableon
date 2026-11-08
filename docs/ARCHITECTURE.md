@@ -1,11 +1,10 @@
 # Fableon Architecture
 
-> **Status:** Phase 1 — scene data and deterministic timeline. The versioned
-> scene schema, validated serialization, timeline resolver, keyframe evaluator,
-> and read-only Studio inspector exist today. Paint, motion, camera, AI, audio,
-> and video composition remain provisional future work. Nothing in this
-> document should be read as an implemented rendering, AI, audio, or video
-> capability.
+> **Status:** Phase 2 — Canvas paint preview. The versioned scene schema,
+> deterministic timeline, procedural paint primitives, Canvas 2D renderer,
+> local image asset resolution, and live Studio preview exist today. Artistic
+> quality remains under human review. Motion, camera, AI, audio, and video
+> composition remain provisional future work.
 
 ## 1. Architectural goals
 
@@ -41,7 +40,8 @@ packages/shared (brand, product constants; future shared domain contracts)
   │
   ├── scene-schema .............. implemented versioned story data + validation
   ├── animation-core ............ implemented timeline + keyframe evaluation
-  ├── future paint-engine ....... brush/stroke rasterization
+  ├── paint-engine .............. implemented seeded painterly primitives
+  ├── render-engine ............. implemented Canvas 2D frame composition
   ├── future motion-engine ...... character rig and motion evaluation
   ├── future camera-engine ...... camera and parallax evaluation
   ├── future asset-providers .... image, video, audio generation adapters
@@ -56,19 +56,20 @@ produce the same output without importing React.
 
 ## 3. Module boundaries
 
-| Module                               | Responsibility                                                                  | May depend on                                       | Status      |
-| ------------------------------------ | ------------------------------------------------------------------------------- | --------------------------------------------------- | ----------- |
-| `apps/web`                           | Next.js routes, Studio shell, inspector, presentation, browser interaction      | `packages/shared`, `scene-schema`, `animation-core` | Implemented |
-| `packages/shared`                    | Cross-surface product constants and stable contracts that are not scene schemas | Nothing application-specific                        | Implemented |
-| `packages/scene-schema`              | Versioned serializable project/scene definitions, validation, and serialization | No UI, engine, or provider packages                 | Implemented |
-| `packages/animation-core`            | Pure timeline resolution, keyframe evaluation, and `FramePlan` generation       | `scene-schema`                                      | Implemented |
-| `packages/paint-engine` (future)     | Deterministic stroke rendering into layer surfaces                              | `scene-schema`, animation contracts, asset APIs     | Planned     |
-| `packages/motion-engine` (future)    | Character rig, pose, cycle, and secondary-motion evaluation                     | `scene-schema`, `animation-core`                    | Planned     |
-| `packages/camera-engine` (future)    | Camera path sampling and projection/parallax                                    | `scene-schema`, `animation-core`                    | Planned     |
-| `packages/asset-providers` (future)  | Ports and adapters for generated/imported media                                 | Domain asset contracts, never scene UI              | Planned     |
-| `packages/ai-orchestration` (future) | Prompt planning, job state, approval gates, provenance                          | Provider ports, scene-schema                        | Planned     |
-| `packages/audio-engine` (future)     | Narration, music, alignment, caption timing                                     | Domain audio contracts                              | Planned     |
-| `packages/video-compositor` (future) | Frame rasterization orchestration, encoding, muxing, export                     | `animation-core`, engines, asset and audio APIs     | Planned     |
+| Module                               | Responsibility                                                                  | May depend on                                                               | Status      |
+| ------------------------------------ | ------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ----------- |
+| `apps/web`                           | Next.js routes, Studio shell, preview, inspector, browser interaction           | `shared`, `scene-schema`, `animation-core`, `render-engine`, `paint-engine` | Implemented |
+| `packages/shared`                    | Cross-surface product constants and stable contracts that are not scene schemas | Nothing application-specific                                                | Implemented |
+| `packages/scene-schema`              | Versioned serializable project/scene definitions, validation, and serialization | No UI, engine, or provider packages                                         | Implemented |
+| `packages/animation-core`            | Pure timeline resolution, keyframe evaluation, and `FramePlan` generation       | `scene-schema`                                                              | Implemented |
+| `packages/paint-engine`              | Seeded strokes, washes, grain, and procedural benchmark artwork                 | Browser Canvas APIs; no UI or provider code                                 | Implemented |
+| `packages/render-engine`             | FramePlan composition, Canvas 2D backend, and local image loading               | `animation-core`, `scene-schema`, browser APIs                              | Implemented |
+| `packages/motion-engine` (future)    | Character rig, pose, cycle, and secondary-motion evaluation                     | `scene-schema`, `animation-core`                                            | Planned     |
+| `packages/camera-engine` (future)    | Camera path sampling and projection/parallax                                    | `scene-schema`, `animation-core`                                            | Planned     |
+| `packages/asset-providers` (future)  | Ports and adapters for generated/imported media                                 | Domain asset contracts, never scene UI                                      | Planned     |
+| `packages/ai-orchestration` (future) | Prompt planning, job state, approval gates, provenance                          | Provider ports, scene-schema                                                | Planned     |
+| `packages/audio-engine` (future)     | Narration, music, alignment, caption timing                                     | Domain audio contracts                                                      | Planned     |
+| `packages/video-compositor` (future) | Frame rasterization orchestration, encoding, muxing, export                     | `animation-core`, engines, asset and audio APIs                             | Planned     |
 
 Dependency rules:
 
@@ -197,10 +198,18 @@ Layers may be raster caches, but the authored representation should stay
 resolution-independent where practical. The layer contract must be settled in
 Phase 1/2 using a real rendered scene, not only diagrams.
 
-## 7. Paint engine direction (future)
+## 7. Paint engine direction (Phase 2 prototype)
 
-Fableon's visual differentiator is painterly motion. The paint engine is
-expected to explore:
+Phase 2 implemented `packages/paint-engine` as a deterministic prototype:
+seeded Mulberry32 variation, curved organic ribbon strokes, bristle-structured
+dry brush, layered translucent washes, paper grain, and procedurally painted
+forest/branch/bird benchmark assets. The Canvas 2D renderer in
+`packages/render-engine` composites those baked assets with solid, text, and
+image layers from a `FramePlan`.
+
+This is an engineering and visual-direction prototype, not a final production
+brush engine. Artistic quality is under human review. The longer-term paint
+engine is expected to explore:
 
 - A stroke model containing path, pressure, tilt, color, texture, opacity,
   seed, and blend behavior.

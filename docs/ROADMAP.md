@@ -8,20 +8,23 @@
 
 ## Phase summary
 
-| Phase | Objective                           | Primary output                                       | Status    |
-| ----- | ----------------------------------- | ---------------------------------------------------- | --------- |
-| 0     | Foundation                          | Monorepo, web shell, gates, architecture docs        | Delivered |
-| 1     | Scene specification and timeline    | Versioned scene data and deterministic timing        | Next      |
-| 2     | Paint engine                        | Reproducible painterly still frames                  | Planned   |
-| 3     | Motion and character animation      | Animated character performance in painted scenes     | Planned   |
-| 4     | Camera and effects                  | Cinematic 2.5D camera, parallax, and transitions     | Planned   |
-| 5     | Visual Studio editor                | End-to-end editing workspace                         | Planned   |
-| 6     | AI scene planning and storyboarding | Idea-to-plan assistance with approval and provenance | Planned   |
-| 7     | AI-assisted image/GIF animation     | Consistent generated assets and limited animation    | Planned   |
-| 8     | Narration and subtitles             | Timed voice track and editable captions              | Planned   |
-| 9     | Video composition and export        | Deterministic 1080p MP4 master                       | Planned   |
-| 10    | End-to-end generation               | Guided idea-to-video orchestration                   | Planned   |
-| 11    | Quality, performance, deployment    | Production readiness and operational confidence      | Planned   |
+| Phase | Objective                           | Primary output                                       | Status                 |
+| ----- | ----------------------------------- | ---------------------------------------------------- | ---------------------- |
+| 0     | Foundation                          | Monorepo, web shell, gates, architecture docs        | Delivered              |
+| 1     | Scene specification and timeline    | Versioned scene data and deterministic timing        | Delivered              |
+| 2     | Paint engine                        | Reproducible painterly still frames                  | Engineering delivered* |
+| 3     | Motion and character animation      | Animated character performance in painted scenes     | Planned                |
+| 4     | Camera and effects                  | Cinematic 2.5D camera, parallax, and transitions     | Planned                |
+| 5     | Visual Studio editor                | End-to-end editing workspace                         | Planned                |
+| 6     | AI scene planning and storyboarding | Idea-to-plan assistance with approval and provenance | Planned                |
+| 7     | AI-assisted image/GIF animation     | Consistent generated assets and limited animation    | Planned                |
+| 8     | Narration and subtitles             | Timed voice track and editable captions              | Planned                |
+| 9     | Video composition and export        | Deterministic 1080p MP4 master                       | Planned                |
+| 10    | End-to-end generation               | Guided idea-to-video orchestration                   | Planned                |
+| 11    | Quality, performance, deployment    | Production readiness and operational confidence      | Planned                |
+
+\* Phase 2 engineering and visual evidence are complete; artistic acceptance is
+pending human review.
 
 ## Phase 0 — Foundation
 

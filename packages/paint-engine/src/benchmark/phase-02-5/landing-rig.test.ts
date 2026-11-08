@@ -40,15 +40,31 @@ describe("landing rig", () => {
     expect(() => evaluateLandingRig(-1)).toThrow();
   });
 
-  it("progresses the body into the landing composition", () => {
+  it("progresses the body into the landing composition with constant scale", () => {
     const first = evaluateLandingRig(0);
+    const approach = evaluateLandingRig(24);
     const final = evaluateLandingRig(47);
     const firstBody = first.find((node) => node.id === "body");
+    const approachBody = approach.find((node) => node.id === "body");
     const finalBody = final.find((node) => node.id === "body");
 
-    expect(firstBody?.transform.x).toBeLessThan(finalBody?.transform.x ?? 0);
-    expect(firstBody?.transform.y).toBeLessThan(finalBody?.transform.y ?? 0);
-    expect(finalBody?.transform).toMatchObject({ x: 960, y: 647, rotation: 0 });
+    expect(firstBody?.transform.x).toBeLessThan(approachBody?.transform.x ?? 0);
+    expect(approachBody?.transform.x).toBeLessThan(finalBody?.transform.x ?? 0);
+    expect(firstBody?.transform.y).toBeLessThan(approachBody?.transform.y ?? 0);
+    expect(approachBody?.transform.y).toBeLessThan(finalBody?.transform.y ?? 0);
+    expect(finalBody?.transform).toMatchObject({
+      x: 960,
+      y: 647,
+      rotation: 0,
+      scaleX: 1,
+      scaleY: 1,
+    });
+
+    for (let frame = 0; frame < LANDING_FRAME_COUNT; frame += 1) {
+      const body = evaluateLandingRig(frame).find((node) => node.id === "body");
+      expect(body?.transform.scaleX).toBe(1);
+      expect(body?.transform.scaleY).toBe(1);
+    }
   });
 
   it("articulates wings with genuinely different poses", () => {

@@ -23,6 +23,9 @@ test-results/
 playwright-report/
 blob-report/
 
+# Generated full-resolution animation frames
+docs/benchmarks/phase-02-5/frames/
+
 # Environment and secrets
 .env
 .env.*

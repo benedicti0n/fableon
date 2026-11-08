@@ -1,0 +1,45 @@
+{
+  "capturedAt": "2026-11-08T21:49:02.516Z",
+  "browser": "158.0.8127.18",
+  "platform": "darwin",
+  "release": "25.5.0",
+  "cpu": "Apple M1",
+  "canvas": "1920×1080",
+  "frameCount": 48,
+  "fps": 24,
+  "readyMs": 1796,
+  "firstFrameRenderMs": 1.2000000476837158,
+  "medianFrameRenderMs": 1,
+  "p95FrameRenderMs": 1.600000023841858,
+  "totalRenderMs": 54.40000021457672,
+  "playbackElapsedMs": 1131,
+  "playbackFrame": 25,
+  "observedPlaybackFps": 22.104332449160037,
+  "memoryBefore": {
+    "usedJSHeapSize": 18200000,
+    "totalJSHeapSize": 24500000,
+    "jsHeapSizeLimit": 3760000000
+  },
+  "memoryAfter": {
+    "usedJSHeapSize": 18200000,
+    "totalJSHeapSize": 24500000,
+    "jsHeapSizeLimit": 3760000000
+  },
+  "gif": {
+    "path": "docs/benchmarks/phase-02-5/landing-preview.gif",
+    "width": 960,
+    "height": 540,
+    "fps": 24,
+    "frames": 48
+  },
+  "video": {
+    "path": "docs/benchmarks/phase-02-5/landing-preview.mp4",
+    "width": 1920,
+    "height": 1080,
+    "fps": 24,
+    "frames": 48
+  },
+  "videoError": null,
+  "pageErrors": [],
+  "note": "No network image decoding is involved: character and scene artwork are generated locally as canvases before animation capture."
+}

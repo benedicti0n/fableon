@@ -133,6 +133,7 @@ export function LandingPreview() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [hiddenParts, setHiddenParts] = useState<ReadonlySet<BirdPartId>>(new Set());
   const [renderMs, setRenderMs] = useState<number | null>(null);
+  const [renderedFrame, setRenderedFrame] = useState<number | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [exportMessage, setExportMessage] = useState<string | null>(null);
   const [isExporting, setIsExporting] = useState(false);
@@ -243,6 +244,7 @@ export function LandingPreview() {
       const elapsed = performance.now() - start;
       queueMicrotask(() => {
         if (!cancelled) {
+          setRenderedFrame(frame);
           setRenderMs(elapsed);
           setError(null);
         }
@@ -382,6 +384,7 @@ export function LandingPreview() {
         <div
           data-testid="landing-preview-surface"
           data-frame={frame}
+          data-rendered-frame={renderedFrame ?? -1}
           data-phase={phase}
           data-ready={benchmark ? "true" : "false"}
           className="relative aspect-video w-full overflow-hidden rounded-md border border-ink-700 bg-[#080a0b]"

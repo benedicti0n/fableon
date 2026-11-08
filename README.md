@@ -46,19 +46,20 @@ or external art is used. The five-frame visual benchmark and provenance are in
 
 ## Commands
 
-| Command                  | Purpose                                           |
-| ------------------------ | ------------------------------------------------- |
-| `pnpm dev`               | Run the Next.js application in development mode   |
-| `pnpm build`             | Create a production build of the web application  |
-| `pnpm start`             | Serve the production build                        |
-| `pnpm lint`              | Run ESLint across the workspace                   |
-| `pnpm typecheck`         | Run strict TypeScript checks for every package    |
-| `pnpm test`              | Run the Vitest suite once                         |
-| `pnpm test:watch`        | Run Vitest in watch mode                          |
-| `pnpm test:browser`      | Run Playwright checks and performance measurement |
-| `pnpm benchmark:capture` | Regenerate benchmark assets, frames, and metrics  |
-| `pnpm format`            | Format the repository with Prettier               |
-| `pnpm format:check`      | Verify formatting without writing changes         |
+| Command                     | Purpose                                           |
+| --------------------------- | ------------------------------------------------- |
+| `pnpm dev`                  | Run the Next.js application in development mode   |
+| `pnpm build`                | Create a production build of the web application  |
+| `pnpm start`                | Serve the production build                        |
+| `pnpm lint`                 | Run ESLint across the workspace                   |
+| `pnpm typecheck`            | Run strict TypeScript checks for every package    |
+| `pnpm test`                 | Run the Vitest suite once                         |
+| `pnpm test:watch`           | Run Vitest in watch mode                          |
+| `pnpm test:browser`         | Run Playwright checks and performance measurement |
+| `pnpm benchmark:capture`    | Regenerate Phase 2 benchmark assets and frames    |
+| `pnpm benchmark:phase-02-5` | Render the 48-frame bird landing scene + GIF      |
+| `pnpm format`               | Format the repository with Prettier               |
+| `pnpm format:check`         | Verify formatting without writing changes         |
 
 ## Workspace layout
 
@@ -102,6 +103,24 @@ playback throughput, and available heap measurements.
 pnpm exec playwright install chromium
 pnpm test:browser
 ```
+
+## Phase 2.5 animation benchmark
+
+The hybrid layered-bird experiment lives at
+[http://localhost:3000/benchmarks/phase-02-5](http://localhost:3000/benchmarks/phase-02-5).
+It is a 48-frame, 24 FPS, two-second landing sequence with articulated wings,
+head, tail, beak, eye, and legs, plus legend controls, part visibility, PNG
+export, and elapsed-time playback.
+
+```bash
+# Requires ffmpeg on PATH for GIF encoding.
+pnpm benchmark:phase-02-5
+```
+
+This writes the actual 48-frame sequence to an ignored generation directory,
+updates selected frames, contact sheet, character poses, GIF, and
+`performance.json` under `docs/benchmarks/phase-02-5/`. The artistic assessment
+is in that directory; the result is a feasibility prototype, not production art.
 
 ## Continuous integration
 

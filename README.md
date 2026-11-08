@@ -11,7 +11,7 @@ generation through deterministic motion, camera work, sound, and video export.
 
 ## Requirements
 
-- **Node.js 22.12+** (Node 24 LTS is the recommended baseline; see `.nvmrc`)
+- **Node.js 22.13+ or 24+** (Node 24 LTS is the recommended baseline; see `.nvmrc`)
 - **pnpm 11+** (`corepack enable` is the simplest way to provision it)
 
 ## Getting started

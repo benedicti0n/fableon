@@ -7,7 +7,7 @@ import { StudioInspector } from "./studio-inspector";
 export const metadata: Metadata = {
   title: "Studio",
   description:
-    "Fableon's read-only Phase 1 timeline inspector for the Where the Light Lands scene fixture.",
+    "Fableon's Phase 2 Canvas 2D preview and deterministic timeline inspector for the Where the Light Lands benchmark.",
 };
 
 export default function StudioPage() {

@@ -1,6 +1,6 @@
 import { BRAND } from "@fableon/shared";
 
-import { FrameIcon, LayersIcon, TimelineIcon } from "@/components/icons";
+import { FeatherIcon, FrameIcon, LayersIcon } from "@/components/icons";
 import { ForestPlate } from "@/components/forest-plate";
 import { PipelineOverview } from "@/components/pipeline-overview";
 import { SiteFooter } from "@/components/site-footer";
@@ -64,19 +64,19 @@ export default function HomePage() {
             <div className="grid gap-6 md:grid-cols-[0.9fr_1.1fr] md:items-end">
               <div>
                 <p className="font-mono text-[10px] tracking-[0.2em] text-ochre-400 uppercase">
-                  Phase 1 · Scene data
+                  Phase 2 · Paint engine
                 </p>
                 <h2
                   id="foundation-heading"
                   className="mt-4 max-w-md font-serif text-4xl leading-[1.08] text-balance text-paper-50"
                 >
-                  A narrow base, now carrying real scenes.
+                  A painted frame, rendered from the data.
                 </h2>
               </div>
               <p className="max-w-lg text-sm leading-7 text-mist-400 md:justify-self-end">
-                Phase 1 adds versioned project, scene, and layer contracts, validated import/export,
-                a deterministic timeline evaluator, and a read-only Studio inspector. Rendering
-                still begins in Phase 2.
+                Phase 2 adds seeded paint primitives, a Canvas 2D renderer, local asset resolution,
+                and a live Studio preview with playback and PNG export. Motion, camera, and sound
+                remain future phases.
               </p>
             </div>
 
@@ -111,16 +111,15 @@ export default function HomePage() {
 
               <article className="rounded-xl border border-ink-700 bg-ink-900 p-6">
                 <span className="flex size-10 items-center justify-center rounded-lg border border-ink-600 bg-ink-800 text-mist-300">
-                  <TimelineIcon className="size-5" />
+                  <FeatherIcon className="size-5" />
                 </span>
-                <h3 className="mt-6 font-serif text-xl text-paper-100">A deterministic clock</h3>
+                <h3 className="mt-6 font-serif text-xl text-paper-100">A painterly renderer</h3>
                 <p className="mt-3 text-[13px] leading-6 text-mist-400">
-                  Frame-index scene resolution, hold/linear/cubic interpolation, and
-                  renderer-independent frame plans. The inspector never reimplements timeline math
-                  in React.
+                  Seeded organic strokes, dry brush, washes, and paper grain generate the benchmark
+                  art. Canvas 2D composes the real FramePlan into stable 1920×1080 frames.
                 </p>
                 <p className="mt-5 font-mono text-[10px] tracking-[0.15em] text-mist-500 uppercase">
-                  Evaluator · Implemented
+                  Paint + render · Implemented
                 </p>
               </article>
             </div>
@@ -142,20 +141,20 @@ export default function HomePage() {
                   id="studio-cta-heading"
                   className="mt-4 font-serif text-4xl leading-tight text-balance text-paper-50 md:text-5xl"
                 >
-                  Walk through the timeline inspector.
+                  Walk through the painted preview.
                 </h2>
                 <p className="mt-5 max-w-xl text-sm leading-7 text-mist-300">
-                  The inspector is connected to real scene data and the deterministic evaluator.
-                  Scrub frames, jump scene boundaries, and inspect resolved transforms. Painterly
-                  rendering begins in Phase 2.
+                  The Studio is connected to real scene data, the deterministic evaluator, and a
+                  Canvas 2D paint renderer. Scrub frames, play the timeline, inspect transforms, and
+                  export the current frame as PNG.
                 </p>
                 <div className="mt-8 flex flex-wrap items-center gap-4">
                   <ButtonLink href="/studio">
-                    Open the Inspector
+                    Open the Studio
                     <span aria-hidden="true">→</span>
                   </ButtonLink>
                   <span className="font-mono text-[10px] tracking-[0.13em] text-mist-500 uppercase">
-                    No artwork or renderer connected
+                    Artistic quality pending human review
                   </span>
                 </div>
               </div>

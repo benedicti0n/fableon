@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 import {
   buildTimeline,
@@ -10,6 +10,7 @@ import {
   type EvaluatedLayer,
   type EvaluatedLayerContent,
 } from "@fableon/animation-core";
+import { createBrowserImageAssetResolver, renderFrameToCanvas } from "@fableon/render-engine";
 import type { Project } from "@fableon/scene-schema";
 
 import { BrandMark } from "@/components/brand-mark";
@@ -25,6 +26,8 @@ interface StudioInspectorProps {
 
 const secondaryButtonClassName =
   "inline-flex items-center justify-center rounded-md border border-ink-600 px-3 py-1.5 text-xs text-mist-200 transition-colors hover:border-mist-400 hover:text-paper-50 disabled:cursor-not-allowed disabled:opacity-40";
+const primaryButtonClassName =
+  "inline-flex items-center justify-center rounded-md border border-ochre-400 bg-ochre-400 px-3 py-1.5 text-xs font-medium text-ink-950 transition-colors hover:border-ochre-300 hover:bg-ochre-300 disabled:cursor-not-allowed disabled:opacity-40";
 
 function formatNumber(value: number): string {
   return (Object.is(value, -0) ? 0 : value).toFixed(2);
@@ -90,6 +93,21 @@ export function StudioInspector({ project }: StudioInspectorProps) {
   const timeline = useMemo(() => buildTimeline(project), [project]);
   const [frame, setFrame] = useState(0);
   const [selectedLayerId, setSelectedLayerId] = useState<string | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [hasRenderedFrame, setHasRenderedFrame] = useState(false);
+  const [isRendering, setIsRendering] = useState(true);
+  const [renderError, setRenderError] = useState<string | null>(null);
+  const [lastRenderMs, setLastRenderMs] = useState<number | null>(null);
+  const [isExporting, setIsExporting] = useState(false);
+  const [exportMessage, setExportMessage] = useState<string | null>(null);
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const renderRequestRef = useRef(0);
+  const renderQueueRef = useRef<Promise<void>>(Promise.resolve());
+  const playbackStartRef = useRef<{ frame: number; time: number } | null>(null);
+  const assetResolver = useMemo(
+    () => createBrowserImageAssetResolver(project.assets, { basePath: "/" }),
+    [project.assets],
+  );
   const plan = useMemo(() => evaluateProjectFrame(project, frame), [project, frame]);
 
   const activeTiming = timeline.scenes[plan.sceneIndex];
@@ -101,9 +119,151 @@ export function StudioInspector({ project }: StudioInspectorProps) {
   const previousScene = plan.sceneIndex > 0 ? timeline.scenes[plan.sceneIndex - 1] : undefined;
   const nextScene = timeline.scenes[plan.sceneIndex + 1];
   const timestamp = formatTimestamp(plan.globalFrame, project.frameRate);
+  const previewState = renderError ? "error" : hasRenderedFrame ? "ready" : "loading";
+  const frameBudgetMs = 1000 / project.frameRate;
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) {
+      return;
+    }
+
+    const requestId = ++renderRequestRef.current;
+    setIsRendering(true);
+
+    renderQueueRef.current = renderQueueRef.current.then(async () => {
+      if (requestId !== renderRequestRef.current) {
+        return;
+      }
+
+      const started = performance.now();
+      try {
+        await renderFrameToCanvas(canvas, plan, {
+          assets: assetResolver,
+          width: project.canvas.width,
+          height: project.canvas.height,
+        });
+
+        if (requestId !== renderRequestRef.current) {
+          return;
+        }
+
+        setLastRenderMs(performance.now() - started);
+        setHasRenderedFrame(true);
+        setRenderError(null);
+        setIsRendering(false);
+      } catch (error) {
+        if (requestId !== renderRequestRef.current) {
+          return;
+        }
+
+        const message = error instanceof Error ? error.message : String(error);
+        setRenderError(message);
+        setHasRenderedFrame(false);
+        setIsRendering(false);
+      }
+    });
+
+    return () => {
+      renderRequestRef.current += 1;
+    };
+  }, [assetResolver, plan, project.canvas.height, project.canvas.width]);
+
+  useEffect(() => {
+    if (!isPlaying) {
+      return;
+    }
+
+    const start = playbackStartRef.current;
+    if (!start) {
+      setIsPlaying(false);
+      return;
+    }
+
+    const lastFrame = timeline.totalFrames - 1;
+    let animationFrame = 0;
+
+    const tick = (now: number) => {
+      const elapsedSeconds = (now - start.time) / 1000;
+      const nextFrame = start.frame + Math.floor(elapsedSeconds * project.frameRate);
+
+      if (nextFrame >= lastFrame) {
+        setFrame(lastFrame);
+        setIsPlaying(false);
+        playbackStartRef.current = null;
+        return;
+      }
+
+      setFrame((current) => (current === nextFrame ? current : nextFrame));
+      animationFrame = requestAnimationFrame(tick);
+    };
+
+    animationFrame = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(animationFrame);
+  }, [isPlaying, project.frameRate, timeline.totalFrames]);
+
+  useEffect(() => {
+    return () => {
+      assetResolver.clear();
+    };
+  }, [assetResolver]);
 
   function seek(nextFrame: number): void {
+    setIsPlaying(false);
+    playbackStartRef.current = null;
+    setExportMessage(null);
     setFrame(Math.min(Math.max(Math.round(nextFrame), 0), timeline.totalFrames - 1));
+  }
+
+  function togglePlayback(): void {
+    if (isPlaying) {
+      setIsPlaying(false);
+      playbackStartRef.current = null;
+      return;
+    }
+
+    const lastFrame = timeline.totalFrames - 1;
+    const startFrame = plan.globalFrame >= lastFrame ? 0 : plan.globalFrame;
+    if (startFrame !== plan.globalFrame) {
+      setFrame(startFrame);
+    }
+    playbackStartRef.current = { frame: startFrame, time: performance.now() };
+    setIsPlaying(true);
+  }
+
+  async function exportFrame(): Promise<void> {
+    const canvas = canvasRef.current;
+    if (!canvas || !hasRenderedFrame || renderError) {
+      return;
+    }
+
+    setIsExporting(true);
+    setExportMessage(null);
+
+    try {
+      const blob = await new Promise<Blob | null>((resolve) => {
+        canvas.toBlob(resolve, "image/png");
+      });
+
+      if (!blob) {
+        setExportMessage("Could not encode the current canvas as PNG.");
+        return;
+      }
+
+      const objectUrl = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = objectUrl;
+      link.download = `fableon-frame-${String(plan.globalFrame).padStart(4, "0")}.png`;
+      document.body.append(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(objectUrl);
+      setExportMessage(`Exported frame ${plan.globalFrame} as PNG.`);
+    } catch (error) {
+      setExportMessage(error instanceof Error ? error.message : String(error));
+    } finally {
+      setIsExporting(false);
+    }
   }
 
   return (
@@ -126,7 +286,7 @@ export function StudioInspector({ project }: StudioInspectorProps) {
         </div>
         <div className="ml-auto flex items-center gap-3">
           <Badge variant="accent" className="hidden md:inline-flex">
-            Phase 1 · Inspector
+            Phase 2 · Paint preview
           </Badge>
           <Link
             href="/"
@@ -204,54 +364,96 @@ export function StudioInspector({ project }: StudioInspectorProps) {
           aria-label="Canvas and timeline"
           className="flex min-w-0 flex-col gap-3 border-b border-ink-700 p-3 lg:border-b-0"
         >
-          <Panel title="Canvas / Preview" status="Phase 2" bodyClassName="flex flex-col gap-2.5">
+          <Panel title="Canvas / Preview" status="Canvas 2D" bodyClassName="flex flex-col gap-2.5">
             <div
-              className="relative flex aspect-video w-full items-center justify-center overflow-hidden rounded-md border border-ink-700 bg-[#080a0b]"
-              style={{
-                backgroundImage:
-                  "linear-gradient(to right, rgb(38 43 52 / 0.3) 1px, transparent 1px), linear-gradient(to bottom, rgb(38 43 52 / 0.3) 1px, transparent 1px)",
-                backgroundSize: "40px 40px",
-              }}
+              data-testid="preview-surface"
+              data-preview-state={previewState}
+              data-rendering={isRendering ? "true" : "false"}
+              data-frame={plan.globalFrame}
+              data-scene={plan.sceneId}
+              className="relative aspect-video w-full overflow-hidden rounded-md border border-ink-700 bg-[#080a0b]"
             >
-              <span
-                aria-hidden="true"
-                className="absolute top-3 left-3 size-3 border-t border-l border-ink-500"
-              />
-              <span
-                aria-hidden="true"
-                className="absolute top-3 right-3 size-3 border-t border-r border-ink-500"
-              />
-              <span
-                aria-hidden="true"
-                className="absolute bottom-3 left-3 size-3 border-b border-l border-ink-500"
-              />
-              <span
-                aria-hidden="true"
-                className="absolute right-3 bottom-3 size-3 border-r border-b border-ink-500"
+              <canvas
+                ref={canvasRef}
+                width={project.canvas.width}
+                height={project.canvas.height}
+                role="img"
+                aria-label={`Rendered frame preview at frame ${plan.globalFrame}`}
+                className="block h-full w-full"
               />
 
-              <span className="absolute top-3 right-6 font-mono text-[9px] tracking-[0.12em] text-mist-500 uppercase">
+              {previewState === "loading" ? (
+                <div
+                  role="status"
+                  className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-ink-950/80 px-6 text-center"
+                >
+                  <span className="flex size-10 items-center justify-center rounded-full border border-ink-600 bg-ink-800 text-mist-400">
+                    <FrameIcon className="size-5" />
+                  </span>
+                  <p className="font-serif text-xl text-paper-100">Loading painted frame…</p>
+                  <p className="max-w-sm text-xs leading-5 text-mist-400">
+                    Decoding local image assets and compositing the current FramePlan on Canvas 2D.
+                  </p>
+                  <Badge variant="muted">Loading assets</Badge>
+                </div>
+              ) : null}
+
+              {previewState === "error" ? (
+                <div
+                  role="alert"
+                  className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-ink-950/90 px-6 text-center"
+                >
+                  <p className="font-serif text-xl text-paper-100">Frame could not be rendered</p>
+                  <p className="max-w-md text-xs leading-5 text-clay-500">{renderError}</p>
+                  <p className="max-w-md text-[10px] leading-4 text-mist-500">
+                    Missing or unsupported assets are reported explicitly; they are never replaced
+                    silently.
+                  </p>
+                </div>
+              ) : null}
+
+              <span className="pointer-events-none absolute top-3 right-6 font-mono text-[9px] tracking-[0.12em] text-mist-400 uppercase drop-shadow">
                 {project.canvas.width} × {project.canvas.height} · {project.frameRate} fps
               </span>
-              <span className="absolute bottom-3 left-6 font-mono text-[9px] tracking-[0.12em] text-mist-500 uppercase">
+              <span className="pointer-events-none absolute bottom-3 left-6 font-mono text-[9px] tracking-[0.12em] text-paper-100 uppercase drop-shadow">
                 {plan.sceneName} · local frame {plan.localFrame}
               </span>
-
-              <div className="relative flex max-w-sm flex-col items-center gap-3 px-6 text-center">
-                <span className="flex size-10 items-center justify-center rounded-full border border-ink-600 bg-ink-800 text-mist-400">
-                  <FrameIcon className="size-5" />
+              {previewState === "ready" ? (
+                <span className="pointer-events-none absolute top-3 left-3 flex items-center gap-2">
+                  <Badge variant="accent">Canvas 2D</Badge>
+                  {lastRenderMs !== null ? (
+                    <span
+                      aria-label="Last render time"
+                      className="rounded-full border border-ink-700 bg-ink-950/70 px-2 py-0.5 font-mono text-[9px] text-mist-300"
+                    >
+                      {lastRenderMs.toFixed(1)} ms
+                    </span>
+                  ) : null}
                 </span>
-                <p className="font-serif text-xl text-paper-100">No painterly preview yet</p>
-                <p className="text-xs leading-5 text-mist-400">
-                  The visual renderer arrives in Phase 2. This panel shows real evaluator data, not
-                  a rendered frame.
-                </p>
-                <Badge variant="outline">Renderer not connected</Badge>
-              </div>
+              ) : null}
             </div>
-            <p className="px-0.5 text-[11px] leading-5 text-mist-500">
-              Scene data is driving this inspector. No artwork is loaded or animated here.
-            </p>
+
+            <div className="flex flex-wrap items-start justify-between gap-2 px-0.5">
+              <p className="max-w-xl text-[11px] leading-5 text-mist-500">
+                Real Canvas 2D output composited from the active FramePlan. Artwork is procedural
+                Phase 2 benchmark painting, not AI imagery.
+              </p>
+              <p
+                aria-label="Render performance"
+                className="font-mono text-[9px] tracking-[0.1em] text-mist-500 uppercase"
+              >
+                {lastRenderMs === null
+                  ? "Waiting for first frame"
+                  : lastRenderMs > frameBudgetMs
+                    ? `Last render ${lastRenderMs.toFixed(1)} ms · slower than 24 FPS budget`
+                    : `Last render ${lastRenderMs.toFixed(1)} ms · within 24 FPS budget`}
+              </p>
+            </div>
+            {exportMessage ? (
+              <p aria-live="polite" className="px-0.5 text-[11px] text-mist-300">
+                {exportMessage}
+              </p>
+            ) : null}
           </Panel>
 
           <Panel title="Timeline" status="Phase 1" bodyClassName="space-y-4">
@@ -321,6 +523,31 @@ export function StudioInspector({ project }: StudioInspectorProps) {
                 <span>0</span>
                 <span>{timeline.totalFrames - 1}</span>
               </div>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-2 border-t border-ink-700 pt-4">
+              <button
+                type="button"
+                onClick={togglePlayback}
+                disabled={!hasRenderedFrame || Boolean(renderError)}
+                aria-label={isPlaying ? "Pause playback" : "Play animation"}
+                aria-pressed={isPlaying}
+                className={primaryButtonClassName}
+              >
+                {isPlaying ? "Pause" : "Play"}
+              </button>
+              <button
+                type="button"
+                onClick={() => void exportFrame()}
+                disabled={!hasRenderedFrame || Boolean(renderError) || isRendering || isExporting}
+                aria-label="Export frame PNG"
+                className={secondaryButtonClassName}
+              >
+                {isExporting ? "Exporting…" : "Export PNG"}
+              </button>
+              <span className="ml-auto font-mono text-[9px] tracking-[0.1em] text-mist-500 uppercase">
+                24 FPS target · elapsed-time playback
+              </span>
             </div>
 
             <div className="flex flex-wrap items-center gap-2">
@@ -423,7 +650,8 @@ export function StudioInspector({ project }: StudioInspectorProps) {
               ))}
             </ul>
             <p className="border-t border-ink-700 pt-2 text-[10px] leading-5 text-mist-500">
-              Reference metadata only. No media files are loaded or rendered in Phase 1.
+              Local image assets are loaded through the browser-safe resolver. Audio manifest
+              entries remain non-rendered references.
             </p>
           </Panel>
         </aside>
@@ -432,10 +660,11 @@ export function StudioInspector({ project }: StudioInspectorProps) {
       <footer className="flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-ink-700 bg-ink-900 px-4 py-2 font-mono text-[9px] tracking-[0.12em] text-mist-500 uppercase">
         <span className="flex items-center gap-2 text-mist-300">
           <span aria-hidden="true" className="size-1.5 rounded-full bg-ochre-400" />
-          Data-only inspector
+          Canvas 2D live preview
         </span>
-        <span className="hidden sm:inline">Renderer — not connected</span>
-        <span className="hidden md:inline">Assets — references only</span>
+        <span className="hidden sm:inline">Renderer — local Canvas 2D</span>
+        <span className="hidden md:inline">Assets — local PNG</span>
+        <span className="hidden md:inline">Procedural benchmark artwork</span>
         <span className="ml-auto">
           Frame {plan.globalFrame} · {timestamp}
         </span>

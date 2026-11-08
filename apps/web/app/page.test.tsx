@@ -29,7 +29,9 @@ describe("HomePage", () => {
     expect(stages).toHaveLength(PIPELINE_STAGES.length);
     expect(within(pipeline).getByText("Idea")).toBeInTheDocument();
     expect(within(pipeline).getByText("Export")).toBeInTheDocument();
-    expect(within(pipeline).getByText(/Phase 1 implements the schema/i)).toBeInTheDocument();
+    expect(
+      within(pipeline).getByText(/Phase 2 renders painted Canvas 2D frames/i),
+    ).toBeInTheDocument();
   });
 
   it("renders the concept plate with an accessible description", () => {

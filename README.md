@@ -5,10 +5,11 @@ illustrated, narrated animated film. The product is designed around a
 renderer-independent pipeline — from story planning and painterly asset
 generation through deterministic motion, camera work, sound, and video export.
 
-> **Status: Phase 1 — Scene schema and deterministic timeline.** The repository
-> contains the versioned project/scene contracts, validated serialization, a
-> deterministic timeline evaluator, and a read-only Studio inspector. No
-> rendering, AI, audio, or video-generation capability is implemented yet.
+> **Status: Phase 2 — Canvas paint preview.** The repository now renders real
+> 1920×1080 frames from validated scene data using procedural Fableon Paint
+> artwork and a Canvas 2D backend. The Studio supports live frame preview,
+> elapsed-time playback, and PNG export. Artistic quality is pending human
+> review; AI, audio, camera, and video export remain future work.
 
 ## Requirements
 
@@ -25,18 +26,23 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) for the homepage and
 [http://localhost:3000/studio](http://localhost:3000/studio) for the Studio
-timeline inspector.
+paint preview and timeline inspector.
 
-## Timeline inspector
+## Studio preview
 
 The Studio loads the sample project
 `packages/scene-schema/fixtures/where-the-light-lands.project.json` through the
-real `@fableon/scene-schema` parser and `@fableon/animation-core` evaluator.
-You can scrub global frames, jump to scene starts, step between scenes, select
-layers, and inspect resolved transforms.
+real parser, resolves frames with `@fableon/animation-core`, and composites
+procedurally painted assets with `@fableon/render-engine` and
+`@fableon/paint-engine`.
 
-The canvas is a deliberate placeholder: no artwork is loaded or rendered until
-the paint engine phase. The inspector displays scene data only.
+You can scrub global frames, jump to scene starts, step between scenes, play the
+timeline at a 24 FPS target using elapsed time, select layers, inspect resolved
+transforms, and export the current canvas frame as a 1920×1080 PNG.
+
+All artwork is generated locally by the Phase 2 paint benchmark. No AI imagery
+or external art is used. The five-frame visual benchmark and provenance are in
+[docs/benchmarks/phase-02/](docs/benchmarks/phase-02/).
 
 ## Commands
 
@@ -61,6 +67,8 @@ fableon/
 ├── packages/
 │   ├── scene-schema/        # Versioned project/scene contracts and fixtures
 │   ├── animation-core/      # Timeline resolution and deterministic frame plans
+│   ├── render-engine/       # Canvas 2D frame rendering and local asset resolution
+│   ├── paint-engine/        # Seeded painterly primitives and benchmark artwork
 │   └── shared/              # Cross-surface brand and product domain constants
 ├── docs/                    # Architecture, roadmap, MVP scope, protocol, reports
 ├── package.json             # Root scripts and shared tooling
@@ -68,12 +76,11 @@ fableon/
 └── tsconfig.base.json       # Strict TypeScript baseline
 ```
 
-Future packages such as the paint engine, motion engine, camera engine, asset
-providers, audio engine, and video compositor are documented in
+Future packages such as the motion engine, camera engine, asset providers,
+audio engine, and video compositor are documented in
 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). They are intentionally not
-scaffolded before their phases begin. Renderer-independent scene data and
-deterministic frame evaluation are now real (`scene-schema` and
-`animation-core`).
+scaffolded before their phases begin. Scene data, deterministic evaluation, the
+Canvas 2D renderer, and procedural paint primitives are now real.
 
 ## Continuous integration
 

@@ -1,0 +1,446 @@
+{
+  "format": "fableon.project",
+  "schemaVersion": 1,
+  "id": "where-the-light-lands",
+  "title": "Where the Light Lands",
+  "frameRate": 24,
+  "canvas": { "width": 1920, "height": 1080 },
+  "seed": 20261109,
+  "assets": [
+    {
+      "id": "forest-dawn",
+      "type": "image",
+      "name": "Dawn forest plate",
+      "path": "assets/forest-dawn.png"
+    },
+    {
+      "id": "forest-deep",
+      "type": "image",
+      "name": "Deep forest plate",
+      "path": "assets/forest-deep.png"
+    },
+    {
+      "id": "branch",
+      "type": "image",
+      "name": "Foreground branch",
+      "path": "assets/branch.png"
+    },
+    {
+      "id": "bird",
+      "type": "image",
+      "name": "Ochre-breasted bird",
+      "path": "assets/bird.png"
+    },
+    {
+      "id": "forest-ambience",
+      "type": "audio",
+      "name": "Forest ambience",
+      "path": "audio/forest-ambience.mp3"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "dawn",
+      "name": "Dawn over the painted forest",
+      "durationFrames": 216,
+      "layers": [
+        {
+          "id": "dawn-sky",
+          "type": "solid",
+          "name": "Dawn ink wash",
+          "visible": true,
+          "order": 0,
+          "transform": {
+            "x": 0,
+            "y": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "opacity": 1
+          },
+          "color": "#18211f"
+        },
+        {
+          "id": "dawn-forest",
+          "type": "asset",
+          "name": "Dawn forest layer",
+          "visible": true,
+          "order": 10,
+          "transform": {
+            "x": 0,
+            "y": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "opacity": 1
+          },
+          "assetId": "forest-dawn",
+          "animation": {
+            "x": {
+              "keyframes": [
+                { "frame": 0, "value": 0, "interpolation": "linear" },
+                { "frame": 215, "value": -36, "interpolation": "linear" }
+              ]
+            }
+          }
+        },
+        {
+          "id": "dawn-bird",
+          "type": "asset",
+          "name": "Bird entering",
+          "visible": true,
+          "order": 20,
+          "transform": {
+            "x": 420,
+            "y": 250,
+            "scaleX": 0.32,
+            "scaleY": 0.32,
+            "rotation": -7,
+            "opacity": 0.9
+          },
+          "assetId": "bird",
+          "animation": {
+            "x": {
+              "keyframes": [
+                { "frame": 0, "value": 420, "interpolation": "linear" },
+                { "frame": 108, "value": 560, "interpolation": "easeInOutCubic" },
+                { "frame": 215, "value": 640, "interpolation": "hold" }
+              ]
+            },
+            "y": {
+              "keyframes": [
+                { "frame": 0, "value": 250, "interpolation": "linear" },
+                { "frame": 215, "value": 290, "interpolation": "easeInOutCubic" }
+              ]
+            },
+            "rotation": {
+              "keyframes": [
+                { "frame": 0, "value": -7, "interpolation": "linear" },
+                { "frame": 120, "value": -2, "interpolation": "hold" },
+                { "frame": 215, "value": 4, "interpolation": "linear" }
+              ]
+            },
+            "opacity": {
+              "keyframes": [
+                { "frame": 0, "value": 0.9, "interpolation": "linear" },
+                { "frame": 48, "value": 1, "interpolation": "linear" },
+                { "frame": 215, "value": 1, "interpolation": "hold" }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "glide",
+      "name": "A path between the trunks",
+      "durationFrames": 312,
+      "layers": [
+        {
+          "id": "glide-forest",
+          "type": "asset",
+          "name": "Deep forest layer",
+          "visible": true,
+          "order": 0,
+          "transform": {
+            "x": -60,
+            "y": 0,
+            "scaleX": 1.04,
+            "scaleY": 1.04,
+            "rotation": 0,
+            "opacity": 1
+          },
+          "assetId": "forest-deep",
+          "animation": {
+            "x": {
+              "keyframes": [
+                { "frame": 0, "value": -60, "interpolation": "linear" },
+                { "frame": 311, "value": -120, "interpolation": "easeInOutCubic" }
+              ]
+            }
+          }
+        },
+        {
+          "id": "glide-bird",
+          "type": "asset",
+          "name": "Bird in flight",
+          "visible": true,
+          "order": 10,
+          "transform": {
+            "x": 520,
+            "y": 280,
+            "scaleX": 0.4,
+            "scaleY": 0.4,
+            "rotation": 8,
+            "opacity": 1
+          },
+          "assetId": "bird",
+          "animation": {
+            "x": {
+              "keyframes": [
+                { "frame": 0, "value": 520, "interpolation": "linear" },
+                { "frame": 120, "value": 760, "interpolation": "easeInOutCubic" },
+                { "frame": 311, "value": 900, "interpolation": "linear" }
+              ]
+            },
+            "y": {
+              "keyframes": [
+                { "frame": 0, "value": 280, "interpolation": "linear" },
+                { "frame": 80, "value": 240, "interpolation": "easeInOutCubic" },
+                { "frame": 311, "value": 300, "interpolation": "linear" }
+              ]
+            },
+            "rotation": {
+              "keyframes": [
+                { "frame": 0, "value": 8, "interpolation": "linear" },
+                { "frame": 120, "value": -4, "interpolation": "easeInOutCubic" },
+                { "frame": 311, "value": 6, "interpolation": "linear" }
+              ]
+            },
+            "opacity": {
+              "keyframes": [
+                { "frame": 0, "value": 0.95, "interpolation": "linear" },
+                { "frame": 24, "value": 1, "interpolation": "linear" }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "descent",
+      "name": "The ribbon of sunlight",
+      "durationFrames": 312,
+      "layers": [
+        {
+          "id": "descent-forest",
+          "type": "asset",
+          "name": "Deep forest behind the descent",
+          "visible": true,
+          "order": 0,
+          "transform": {
+            "x": -120,
+            "y": 0,
+            "scaleX": 1.04,
+            "scaleY": 1.04,
+            "rotation": 0,
+            "opacity": 1
+          },
+          "assetId": "forest-deep",
+          "animation": {
+            "x": {
+              "keyframes": [
+                { "frame": 0, "value": -120, "interpolation": "linear" },
+                { "frame": 311, "value": -160, "interpolation": "easeInOutCubic" }
+              ]
+            },
+            "opacity": {
+              "keyframes": [
+                { "frame": 0, "value": 1, "interpolation": "linear" },
+                { "frame": 311, "value": 0.92, "interpolation": "linear" }
+              ]
+            }
+          }
+        },
+        {
+          "id": "descent-branch",
+          "type": "asset",
+          "name": "Chosen branch",
+          "visible": true,
+          "order": 10,
+          "transform": {
+            "x": 0,
+            "y": 700,
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "opacity": 1
+          },
+          "assetId": "branch",
+          "animation": {
+            "y": {
+              "keyframes": [
+                { "frame": 0, "value": 700, "interpolation": "linear" },
+                { "frame": 311, "value": 680, "interpolation": "easeInOutCubic" }
+              ]
+            }
+          }
+        },
+        {
+          "id": "descent-bird",
+          "type": "asset",
+          "name": "Bird descending",
+          "visible": true,
+          "order": 20,
+          "transform": {
+            "x": 760,
+            "y": 300,
+            "scaleX": 0.4,
+            "scaleY": 0.4,
+            "rotation": 4,
+            "opacity": 1
+          },
+          "assetId": "bird",
+          "animation": {
+            "x": {
+              "keyframes": [
+                { "frame": 0, "value": 760, "interpolation": "linear" },
+                { "frame": 311, "value": 900, "interpolation": "easeInOutCubic" }
+              ]
+            },
+            "y": {
+              "keyframes": [
+                { "frame": 0, "value": 300, "interpolation": "linear" },
+                { "frame": 311, "value": 650, "interpolation": "easeInOutCubic" }
+              ]
+            },
+            "scaleX": {
+              "keyframes": [
+                { "frame": 0, "value": 0.4, "interpolation": "linear" },
+                { "frame": 311, "value": 0.52, "interpolation": "easeInOutCubic" }
+              ]
+            },
+            "scaleY": {
+              "keyframes": [
+                { "frame": 0, "value": 0.4, "interpolation": "linear" },
+                { "frame": 311, "value": 0.52, "interpolation": "easeInOutCubic" }
+              ]
+            },
+            "rotation": {
+              "keyframes": [
+                { "frame": 0, "value": 4, "interpolation": "linear" },
+                { "frame": 311, "value": -2, "interpolation": "easeInOutCubic" }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "landing",
+      "name": "The forest exhales",
+      "durationFrames": 312,
+      "layers": [
+        {
+          "id": "landing-forest",
+          "type": "asset",
+          "name": "Forest at the landing",
+          "visible": true,
+          "order": 0,
+          "transform": {
+            "x": -160,
+            "y": 0,
+            "scaleX": 1.04,
+            "scaleY": 1.04,
+            "rotation": 0,
+            "opacity": 0.92
+          },
+          "assetId": "forest-deep",
+          "animation": {
+            "opacity": {
+              "keyframes": [
+                { "frame": 0, "value": 0.92, "interpolation": "linear" },
+                { "frame": 311, "value": 1, "interpolation": "linear" }
+              ]
+            }
+          }
+        },
+        {
+          "id": "landing-branch",
+          "type": "asset",
+          "name": "Branch at rest",
+          "visible": true,
+          "order": 10,
+          "transform": {
+            "x": 0,
+            "y": 680,
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "opacity": 1
+          },
+          "assetId": "branch"
+        },
+        {
+          "id": "landing-bird",
+          "type": "asset",
+          "name": "Bird landing",
+          "visible": true,
+          "order": 20,
+          "transform": {
+            "x": 900,
+            "y": 650,
+            "scaleX": 0.52,
+            "scaleY": 0.52,
+            "rotation": -2,
+            "opacity": 1
+          },
+          "assetId": "bird",
+          "animation": {
+            "x": {
+              "keyframes": [
+                { "frame": 0, "value": 900, "interpolation": "linear" },
+                { "frame": 311, "value": 905, "interpolation": "hold" }
+              ]
+            },
+            "y": {
+              "keyframes": [
+                { "frame": 0, "value": 650, "interpolation": "linear" },
+                { "frame": 140, "value": 700, "interpolation": "easeInOutCubic" },
+                { "frame": 311, "value": 700, "interpolation": "hold" }
+              ]
+            },
+            "rotation": {
+              "keyframes": [
+                { "frame": 0, "value": -2, "interpolation": "linear" },
+                { "frame": 140, "value": 2, "interpolation": "easeInOutCubic" },
+                { "frame": 311, "value": 0, "interpolation": "easeInOutCubic" }
+              ]
+            },
+            "scaleX": {
+              "keyframes": [
+                { "frame": 0, "value": 0.52, "interpolation": "linear" },
+                { "frame": 311, "value": 0.54, "interpolation": "easeInOutCubic" }
+              ]
+            },
+            "scaleY": {
+              "keyframes": [
+                { "frame": 0, "value": 0.52, "interpolation": "linear" },
+                { "frame": 311, "value": 0.54, "interpolation": "easeInOutCubic" }
+              ]
+            }
+          }
+        },
+        {
+          "id": "end-title",
+          "type": "text",
+          "name": "End title",
+          "visible": true,
+          "order": 30,
+          "transform": {
+            "x": 760,
+            "y": 110,
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "opacity": 0
+          },
+          "text": "Where the Light Lands",
+          "fontFamily": "Iowan Old Style, Georgia, serif",
+          "fontSize": 72,
+          "color": "#f5e6c6",
+          "animation": {
+            "opacity": {
+              "keyframes": [
+                { "frame": 0, "value": 0, "interpolation": "hold" },
+                { "frame": 120, "value": 0, "interpolation": "linear" },
+                { "frame": 180, "value": 1, "interpolation": "easeInOutCubic" },
+                { "frame": 311, "value": 1, "interpolation": "hold" }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

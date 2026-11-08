@@ -44,3 +44,4 @@ export type {
 export { createAnimationTrack, createKeyframe, createTransform } from "./helpers";
 export { parseProject, ProjectValidationError, validateProject } from "./validation";
 export type { ProjectValidationResult, ValidationIssue } from "./validation";
+export { deserializeProject, serializeProject } from "./serialize";

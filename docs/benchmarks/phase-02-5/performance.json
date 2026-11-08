@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-11-08T21:49:02.516Z",
+  "capturedAt": "2026-11-08T21:53:45.088Z",
   "browser": "158.0.8127.18",
   "platform": "darwin",
   "release": "25.5.0",
@@ -7,21 +7,21 @@
   "canvas": "1920×1080",
   "frameCount": 48,
   "fps": 24,
-  "readyMs": 1796,
+  "readyMs": 1629,
   "firstFrameRenderMs": 1.2000000476837158,
-  "medianFrameRenderMs": 1,
-  "p95FrameRenderMs": 1.600000023841858,
-  "totalRenderMs": 54.40000021457672,
-  "playbackElapsedMs": 1131,
-  "playbackFrame": 25,
-  "observedPlaybackFps": 22.104332449160037,
+  "medianFrameRenderMs": 0.8999999761581421,
+  "p95FrameRenderMs": 1.2000000476837158,
+  "totalRenderMs": 45.99999964237213,
+  "playbackElapsedMs": 1032,
+  "playbackFrame": 23,
+  "observedPlaybackFps": 22.286821705426355,
   "memoryBefore": {
-    "usedJSHeapSize": 18200000,
+    "usedJSHeapSize": 19300000,
     "totalJSHeapSize": 24500000,
     "jsHeapSizeLimit": 3760000000
   },
   "memoryAfter": {
-    "usedJSHeapSize": 18200000,
+    "usedJSHeapSize": 19300000,
     "totalJSHeapSize": 24500000,
     "jsHeapSizeLimit": 3760000000
   },

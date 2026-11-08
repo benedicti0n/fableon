@@ -75,6 +75,13 @@ scaffolded before their phases begin. Renderer-independent scene data and
 deterministic frame evaluation are now real (`scene-schema` and
 `animation-core`).
 
+## Continuous integration
+
+`.github/workflows/ci.yml` validates every push to `main` and every pull
+request on Node.js 24 LTS. It installs with a frozen lockfile and runs
+formatting, linting, type checking, unit tests, and the production build. It
+requires no secrets and performs no deployment.
+
 ## Documentation
 
 - [Architecture](docs/ARCHITECTURE.md)

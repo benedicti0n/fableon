@@ -1,9 +1,10 @@
 # Fableon Architecture
 
-> **Status:** Phase 0 foundation. This document describes intended system
-> boundaries and provisional technical direction. Only the workspace, web
-> shell, shared product constants, and quality gates exist today. Nothing in
-> this document should be read as an implemented rendering, AI, audio, or video
+> **Status:** Phase 1 — scene data and deterministic timeline. The versioned
+> scene schema, validated serialization, timeline resolver, keyframe evaluator,
+> and read-only Studio inspector exist today. Paint, motion, camera, AI, audio,
+> and video composition remain provisional future work. Nothing in this
+> document should be read as an implemented rendering, AI, audio, or video
 > capability.
 
 ## 1. Architectural goals
@@ -38,8 +39,8 @@ apps/web (Next.js, React, Studio UI)
   ▼
 packages/shared (brand, product constants; future shared domain contracts)
   │
-  ├── future scene-schema ....... versioned, renderer-independent story data
-  ├── future animation-core ..... timeline sampling and frame planning
+  ├── scene-schema .............. implemented versioned story data + validation
+  ├── animation-core ............ implemented timeline + keyframe evaluation
   ├── future paint-engine ....... brush/stroke rasterization
   ├── future motion-engine ...... character rig and motion evaluation
   ├── future camera-engine ...... camera and parallax evaluation
@@ -55,19 +56,19 @@ produce the same output without importing React.
 
 ## 3. Module boundaries
 
-| Module                               | Responsibility                                                                  | May depend on                                   | Status      |
-| ------------------------------------ | ------------------------------------------------------------------------------- | ----------------------------------------------- | ----------- |
-| `apps/web`                           | Next.js routes, Studio shell, presentation, browser interaction                 | `packages/shared`, future domain packages       | Implemented |
-| `packages/shared`                    | Cross-surface product constants and stable contracts that are not scene schemas | Nothing application-specific                    | Implemented |
-| `packages/scene-schema` (future)     | Versioned serializable scene/project definitions and migrations                 | No UI, engine, or provider packages             | Planned     |
-| `packages/animation-core` (future)   | Pure timeline evaluation and `FramePlan` generation                             | `scene-schema`                                  | Planned     |
-| `packages/paint-engine` (future)     | Deterministic stroke rendering into layer surfaces                              | `scene-schema`, animation contracts, asset APIs | Planned     |
-| `packages/motion-engine` (future)    | Character rig, pose, cycle, and secondary-motion evaluation                     | `scene-schema`, `animation-core`                | Planned     |
-| `packages/camera-engine` (future)    | Camera path sampling and projection/parallax                                    | `scene-schema`, `animation-core`                | Planned     |
-| `packages/asset-providers` (future)  | Ports and adapters for generated/imported media                                 | Domain asset contracts, never scene UI          | Planned     |
-| `packages/ai-orchestration` (future) | Prompt planning, job state, approval gates, provenance                          | Provider ports, scene-schema                    | Planned     |
-| `packages/audio-engine` (future)     | Narration, music, alignment, caption timing                                     | Domain audio contracts                          | Planned     |
-| `packages/video-compositor` (future) | Frame rasterization orchestration, encoding, muxing, export                     | `animation-core`, engines, asset and audio APIs | Planned     |
+| Module                               | Responsibility                                                                  | May depend on                                       | Status      |
+| ------------------------------------ | ------------------------------------------------------------------------------- | --------------------------------------------------- | ----------- |
+| `apps/web`                           | Next.js routes, Studio shell, inspector, presentation, browser interaction      | `packages/shared`, `scene-schema`, `animation-core` | Implemented |
+| `packages/shared`                    | Cross-surface product constants and stable contracts that are not scene schemas | Nothing application-specific                        | Implemented |
+| `packages/scene-schema`              | Versioned serializable project/scene definitions, validation, and serialization | No UI, engine, or provider packages                 | Implemented |
+| `packages/animation-core`            | Pure timeline resolution, keyframe evaluation, and `FramePlan` generation       | `scene-schema`                                      | Implemented |
+| `packages/paint-engine` (future)     | Deterministic stroke rendering into layer surfaces                              | `scene-schema`, animation contracts, asset APIs     | Planned     |
+| `packages/motion-engine` (future)    | Character rig, pose, cycle, and secondary-motion evaluation                     | `scene-schema`, `animation-core`                    | Planned     |
+| `packages/camera-engine` (future)    | Camera path sampling and projection/parallax                                    | `scene-schema`, `animation-core`                    | Planned     |
+| `packages/asset-providers` (future)  | Ports and adapters for generated/imported media                                 | Domain asset contracts, never scene UI              | Planned     |
+| `packages/ai-orchestration` (future) | Prompt planning, job state, approval gates, provenance                          | Provider ports, scene-schema                        | Planned     |
+| `packages/audio-engine` (future)     | Narration, music, alignment, caption timing                                     | Domain audio contracts                              | Planned     |
+| `packages/video-compositor` (future) | Frame rasterization orchestration, encoding, muxing, export                     | `animation-core`, engines, asset and audio APIs     | Planned     |
 
 Dependency rules:
 
@@ -86,58 +87,66 @@ when the feature that needs them is implemented and tested.
 
 ## 4. Renderer-independent scene data
 
-The exact schema belongs to Phase 1. Its principles are fixed now:
+The version-1 schema is implemented in `packages/scene-schema`. Its principles
+are fixed:
 
 - **Serializable:** plain JSON-compatible values with no functions, class
   instances, DOM nodes, canvas handles, or SDK objects.
 - **Versioned:** an explicit `schemaVersion` on the project and migration
   functions for older documents. Unknown future versions fail loudly rather
   than render incorrectly.
-- **Stable identity:** every scene, layer, character, track, keyframe, and asset
-  has an ID that survives reordering and regeneration.
-- **Explicit timing:** timing uses integer frame indices or rational time at a
-  declared frame rate. Avoid floating-point seconds as the source of truth.
-- **Declared units and coordinate space:** transforms, dimensions, and anchors
-  use documented units and an origin. Resolution-independent authoring is
-  preferred over baking pixels.
-- **Asset references, not blobs:** scenes reference assets by ID and content
-  hash. Generated media lives in an asset store, not inside the scene document.
-- **Provenance:** assets and generated content record their origin
+- **Stable identity:** every project, scene, layer, track target, and asset has
+  an ID that survives reordering and regeneration. Keyframes are identified by
+  their integer frame within a track.
+- **Explicit timing:** timing uses integer frame indices at a declared frame
+  rate. Avoid floating-point seconds as the source of truth.
+- **Declared units and coordinate space:** transforms use canvas pixels,
+  degrees, and a top-left origin with declared opacity/scale semantics.
+- **Asset references, not blobs:** scenes reference assets by ID. Version 1
+  stores safe relative manifest paths; content hashes and immutable storage are
+  deferred until the asset pipeline exists.
+- **Provenance:** generated content will record its origin
   (provider/model/prompt/seed or imported source) for reproducibility, review,
-  and licensing.
+  and licensing. No provenance schema is implemented in version 1.
 - **No engine leakage:** scenes contain brush, rig, and camera intent, not
   engine-specific callbacks, shaders, or framework components.
 
-Provisional conceptual shape (Phase 1 will refine it):
+Implemented version-1 shape:
 
 ```text
 Project
-├── metadata, schemaVersion, frameRate, resolution, style direction
-├── characters[]        canonical design references, palettes, rig refs
-├── assets[]            content-addressed asset manifest references
-└── scenes[]
-    ├── timing          start frame, duration, transition
-    ├── layers[]        ordered visual layers with paint/motion/camera refs
-    ├── cameraTrack     keyframes and easing
-    ├── audioTracks[]   narration, music, effects
-    ├── captions[]      text, start/end, speaker/style
-    └── provenance      planning and generation references
+├── format, schemaVersion, id, title
+├── frameRate (24), canvas (1920×1080), deterministic seed
+├── assets[]            id, type, name, safe relative path
+└── scenes[]            ordered, half-open global timeline intervals
+    ├── id, name, durationFrames
+    └── layers[]        id, type, name, visible, order, transform, animation?
+        ├── asset       assetId -> assets[]
+        ├── text        text, fontFamily, fontSize, color
+        └── solid       color
 ```
+
+Transform tracks animate `x`, `y`, `scaleX`, `scaleY`, `rotation`, and
+`opacity` with scene-local keyframe indices. Character rigs, camera tracks,
+audio tracks, captions, and provenance structures remain deferred to their
+respective phases rather than being guessed in version 1.
 
 The scene format is the contract between the editor, evaluators, and renderers.
 Changing it is a compatibility event, not an implementation detail.
 
 ## 5. Deterministic frame evaluation
 
-The central runtime contract is a pure evaluation step:
+The central runtime contract is implemented in `packages/animation-core`:
 
 ```text
-evaluateScene(scene, frame, assetManifest, engineVersions) -> FramePlan
+evaluateProjectFrame(project, globalFrame) -> FramePlan
 ```
 
-`FramePlan` is a serializable description of what should be drawn at a single
-frame: ordered layers, resolved transforms, visibility, opacity, blend mode,
-masks, and asset/stroke references. It is not a raster image.
+`FramePlan` is a serializable description of a single frame: the global frame,
+active scene ID/index, local scene frame, frame rate, and layer states in
+ascending stacking order with resolved transforms, visibility, and content
+references. It is not a raster image. Project validation is an import boundary;
+the evaluator assumes a validated document and never mutates it.
 
 Determinism requirements:
 
@@ -145,7 +154,8 @@ Determinism requirements:
   and effect IDs.
 - No wall-clock time, filesystem ordering, network calls, or locale-dependent
   formatting inside evaluation.
-- Layers, characters, and effects are evaluated in stable declared order.
+- Layers are evaluated in stable ascending `order`; scene timing is resolved in
+  declared scene order.
 - Interpolation is defined in Fableon code, not inherited accidentally from a
   framework's undocumented behavior.
 - Frame indices are authoritative. Converting to seconds is a presentation

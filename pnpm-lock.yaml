@@ -116,6 +116,22 @@ importers:
         specifier: ~6.0.3
         version: 6.0.3
 
+  packages/illustration-pipeline:
+    dependencies:
+      '@fableon/scene-schema':
+        specifier: workspace:*
+        version: link:../scene-schema
+      '@fableon/sprite-motion':
+        specifier: workspace:*
+        version: link:../sprite-motion
+      zod:
+        specifier: ^4.6.7
+        version: 4.6.7
+    devDependencies:
+      typescript:
+        specifier: ~6.0.3
+        version: 6.0.3
+
   packages/paint-engine:
     dependencies:
       '@fableon/sprite-motion':

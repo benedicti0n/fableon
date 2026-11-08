@@ -28,3 +28,14 @@ export {
   createWhereTheLightLandsAssets,
 } from "./benchmark/where-the-light-lands";
 export type { PaintedBenchmarkAssets } from "./benchmark/where-the-light-lands";
+
+export {
+  createStorybookBirdArt,
+  BIRD_PART_IDS,
+  BIRD_PART_PIVOTS,
+} from "./benchmark/phase-02-5/bird-art";
+export type {
+  BirdPartArtwork,
+  BirdPartId,
+  StorybookBirdArt,
+} from "./benchmark/phase-02-5/bird-art";

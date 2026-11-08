@@ -1,0 +1,22 @@
+{
+  "name": "@fableon/animation-core",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Deterministic timeline resolution and frame evaluation for Fableon projects.",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fableon/scene-schema": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "~6.0.3"
+  }
+}

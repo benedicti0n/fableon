@@ -1,0 +1,1026 @@
+{
+  "diagnostic": true,
+  "artworkStatus": "diagnostic-not-artistic-validation",
+  "premiumArtworkBlocked": true,
+  "seed": 20261109,
+  "characterPack": {
+    "format": "fableon.illustration-pack",
+    "version": 1,
+    "id": "diagnostic-bird",
+    "name": "Diagnostic Bird — Phase 2.5 Import",
+    "kind": "character",
+    "canvas": {
+      "width": 1051,
+      "height": 833
+    },
+    "parts": [
+      {
+        "id": "body",
+        "name": "Body",
+        "category": "character-part",
+        "source": "assets/body.png",
+        "originalSource": "source/body-body.png",
+        "originalSize": {
+          "width": 760,
+          "height": 520
+        },
+        "preparedSize": {
+          "width": 491,
+          "height": 330
+        },
+        "registration": {
+          "x": 237,
+          "y": 196
+        },
+        "pivot": {
+          "space": "source",
+          "x": 380,
+          "y": 300
+        },
+        "preparedOffset": {
+          "x": 133,
+          "y": 125
+        },
+        "trim": {
+          "applied": true,
+          "alphaThreshold": 0,
+          "contentBounds": {
+            "x": 133,
+            "y": 125,
+            "width": 491,
+            "height": 330
+          }
+        },
+        "alpha": "required",
+        "parentId": null,
+        "zIndex": 50,
+        "characterId": "diagnostic-bird",
+        "role": "body",
+        "hashes": {
+          "algorithm": "sha256",
+          "source": "07ef0b78543e5e7f7c54956d0f47b32d3f00c4a2324b8e5b62c6413715425405",
+          "prepared": "6692e2e4c99383d20f8726b51c2c88b41e545f8c78efa7d41e255db411807279"
+        },
+        "provenance": {
+          "kind": "diagnostic",
+          "notes": "Phase 2.5 procedural storybook bird rasterized and re-imported as a diagnostic fixture. Not premium artwork and not artistic validation."
+        }
+      },
+      {
+        "id": "head",
+        "name": "Head",
+        "category": "character-part",
+        "source": "assets/head.png",
+        "originalSource": "source/head-head.png",
+        "originalSize": {
+          "width": 360,
+          "height": 300
+        },
+        "preparedSize": {
+          "width": 265,
+          "height": 223
+        },
+        "registration": {
+          "x": 587,
+          "y": 136
+        },
+        "pivot": {
+          "space": "source",
+          "x": 120,
+          "y": 245
+        },
+        "preparedOffset": {
+          "x": 58,
+          "y": 68
+        },
+        "trim": {
+          "applied": true,
+          "alphaThreshold": 0,
+          "contentBounds": {
+            "x": 58,
+            "y": 68,
+            "width": 265,
+            "height": 223
+          }
+        },
+        "alpha": "required",
+        "parentId": "body",
+        "zIndex": 70,
+        "characterId": "diagnostic-bird",
+        "role": "head",
+        "hashes": {
+          "algorithm": "sha256",
+          "source": "2fc62891cd5a88b115f3036c20b17b844af81db24fe64e56962fd943f77c2bda",
+          "prepared": "3cfc6626b7dcc668d4478d62d157bdc13ea67e35754ae833b07d7ea73615d84a"
+        },
+        "provenance": {
+          "kind": "diagnostic",
+          "notes": "Phase 2.5 procedural storybook bird rasterized and re-imported as a diagnostic fixture. Not premium artwork and not artistic validation."
+        }
+      },
+      {
+        "id": "eye",
+        "name": "Eye",
+        "category": "character-part",
+        "source": "assets/eye.png",
+        "originalSource": "source/eye-eye.png",
+        "originalSize": {
+          "width": 48,
+          "height": 48
+        },
+        "preparedSize": {
+          "width": 38,
+          "height": 38
+        },
+        "registration": {
+          "x": 796,
+          "y": 257
+        },
+        "pivot": {
+          "space": "source",
+          "x": 24,
+          "y": 24
+        },
+        "preparedOffset": {
+          "x": 5,
+          "y": 5
+        },
+        "trim": {
+          "applied": true,
+          "alphaThreshold": 0,
+          "contentBounds": {
+            "x": 5,
+            "y": 5,
+            "width": 38,
+            "height": 38
+          }
+        },
+        "alpha": "required",
+        "parentId": "head",
+        "zIndex": 85,
+        "characterId": "diagnostic-bird",
+        "role": "eye",
+        "hashes": {
+          "algorithm": "sha256",
+          "source": "67adcb68660b2351b2c49e2c5cc82a48c6df069881b324c3b0b9b0044272e715",
+          "prepared": "ae7632d1e8c365aa61a58c4225a74e0905230b277aa42fdc853d7bfeddf723fb"
+        },
+        "provenance": {
+          "kind": "diagnostic",
+          "notes": "Phase 2.5 procedural storybook bird rasterized and re-imported as a diagnostic fixture. Not premium artwork and not artistic validation."
+        }
+      },
+      {
+        "id": "beak",
+        "name": "Beak",
+        "category": "character-part",
+        "source": "assets/beak.png",
+        "originalSource": "source/beak-beak.png",
+        "originalSize": {
+          "width": 140,
+          "height": 78
+        },
+        "preparedSize": {
+          "width": 117,
+          "height": 37
+        },
+        "registration": {
+          "x": 879,
+          "y": 263
+        },
+        "pivot": {
+          "space": "source",
+          "x": 8,
+          "y": 38
+        },
+        "preparedOffset": {
+          "x": 8,
+          "y": 19
+        },
+        "trim": {
+          "applied": true,
+          "alphaThreshold": 0,
+          "contentBounds": {
+            "x": 8,
+            "y": 19,
+            "width": 117,
+            "height": 37
+          }
+        },
+        "alpha": "required",
+        "parentId": "head",
+        "zIndex": 80,
+        "characterId": "diagnostic-bird",
+        "role": "beak",
+        "hashes": {
+          "algorithm": "sha256",
+          "source": "bdb06ce6831bb0de236527f7fc864128cc3e5d691c213b6cb8e6f812c854b097",
+          "prepared": "6dc365c32edfe6f19d30be9b843dbfcb29b59ac8e06c50dc84d8d6a2827bcb18"
+        },
+        "provenance": {
+          "kind": "diagnostic",
+          "notes": "Phase 2.5 procedural storybook bird rasterized and re-imported as a diagnostic fixture. Not premium artwork and not artistic validation."
+        }
+      },
+      {
+        "id": "wing-far",
+        "name": "Far wing",
+        "category": "character-part",
+        "source": "assets/wing-far.png",
+        "originalSource": "source/wing-far-wing-far.png",
+        "originalSize": {
+          "width": 500,
+          "height": 480
+        },
+        "preparedSize": {
+          "width": 199,
+          "height": 359
+        },
+        "registration": {
+          "x": 164,
+          "y": 37
+        },
+        "pivot": {
+          "space": "source",
+          "x": 418,
+          "y": 394
+        },
+        "preparedOffset": {
+          "x": 219,
+          "y": 42
+        },
+        "trim": {
+          "applied": true,
+          "alphaThreshold": 0,
+          "contentBounds": {
+            "x": 219,
+            "y": 42,
+            "width": 199,
+            "height": 359
+          }
+        },
+        "alpha": "required",
+        "parentId": "body",
+        "zIndex": 20,
+        "characterId": "diagnostic-bird",
+        "role": "wing-far",
+        "hashes": {
+          "algorithm": "sha256",
+          "source": "5da9f2263520f781c8f49a4029715ed752804a6b2ec939d7bf3efe95072ba987",
+          "prepared": "92faf4a4ad7534f3d2c777703b9c1c6ef4f7219585bbba25e854e0267a685a96"
+        },
+        "provenance": {
+          "kind": "diagnostic",
+          "notes": "Phase 2.5 procedural storybook bird rasterized and re-imported as a diagnostic fixture. Not premium artwork and not artistic validation."
+        }
+      },
+      {
+        "id": "wing-near",
+        "name": "Near wing",
+        "category": "character-part",
+        "source": "assets/wing-near.png",
+        "originalSource": "source/wing-near-wing-near.png",
+        "originalSize": {
+          "width": 500,
+          "height": 480
+        },
+        "preparedSize": {
+          "width": 199,
+          "height": 359
+        },
+        "registration": {
+          "x": 264,
+          "y": 32
+        },
+        "pivot": {
+          "space": "source",
+          "x": 418,
+          "y": 394
+        },
+        "preparedOffset": {
+          "x": 219,
+          "y": 42
+        },
+        "trim": {
+          "applied": true,
+          "alphaThreshold": 0,
+          "contentBounds": {
+            "x": 219,
+            "y": 42,
+            "width": 199,
+            "height": 359
+          }
+        },
+        "alpha": "required",
+        "parentId": "body",
+        "zIndex": 60,
+        "characterId": "diagnostic-bird",
+        "role": "wing-near",
+        "hashes": {
+          "algorithm": "sha256",
+          "source": "ce342bb7cd417cada580383a7fa79b11e7b64ee9917aac10693e1018dd50bb7e",
+          "prepared": "c2f7c92dda5f6219f760889523a8f0f75a2b823a92ffe2e4a825e4d7ac20387c"
+        },
+        "provenance": {
+          "kind": "diagnostic",
+          "notes": "Phase 2.5 procedural storybook bird rasterized and re-imported as a diagnostic fixture. Not premium artwork and not artistic validation."
+        }
+      },
+      {
+        "id": "tail",
+        "name": "Tail",
+        "category": "character-part",
+        "source": "assets/tail.png",
+        "originalSource": "source/tail-tail.png",
+        "originalSize": {
+          "width": 500,
+          "height": 240
+        },
+        "preparedSize": {
+          "width": 408,
+          "height": 122
+        },
+        "registration": {
+          "x": 32,
+          "y": 418
+        },
+        "pivot": {
+          "space": "source",
+          "x": 440,
+          "y": 108
+        },
+        "preparedOffset": {
+          "x": 32,
+          "y": 61
+        },
+        "trim": {
+          "applied": true,
+          "alphaThreshold": 0,
+          "contentBounds": {
+            "x": 32,
+            "y": 61,
+            "width": 408,
+            "height": 122
+          }
+        },
+        "alpha": "required",
+        "parentId": "body",
+        "zIndex": 10,
+        "characterId": "diagnostic-bird",
+        "role": "tail",
+        "hashes": {
+          "algorithm": "sha256",
+          "source": "d47b8a0b6827cd3bfefa576ad252de1d37fd8bf2c9bda0dddeb6015243c695b5",
+          "prepared": "d486e5fae447b6bbc26e4625cf0a2237599f0f77df16c7870460a4671bfb67b4"
+        },
+        "provenance": {
+          "kind": "diagnostic",
+          "notes": "Phase 2.5 procedural storybook bird rasterized and re-imported as a diagnostic fixture. Not premium artwork and not artistic validation."
+        }
+      },
+      {
+        "id": "leg-left",
+        "name": "Left leg",
+        "category": "character-part",
+        "source": "assets/leg-left.png",
+        "originalSource": "source/leg-left-leg-left.png",
+        "originalSize": {
+          "width": 120,
+          "height": 250
+        },
+        "preparedSize": {
+          "width": 74,
+          "height": 210
+        },
+        "registration": {
+          "x": 507,
+          "y": 551
+        },
+        "pivot": {
+          "space": "source",
+          "x": 60,
+          "y": 20
+        },
+        "preparedOffset": {
+          "x": 20,
+          "y": 20
+        },
+        "trim": {
+          "applied": true,
+          "alphaThreshold": 0,
+          "contentBounds": {
+            "x": 20,
+            "y": 20,
+            "width": 74,
+            "height": 210
+          }
+        },
+        "alpha": "required",
+        "parentId": "body",
+        "zIndex": 30,
+        "characterId": "diagnostic-bird",
+        "role": "leg-left",
+        "hashes": {
+          "algorithm": "sha256",
+          "source": "f05c54b6b9418c32905b84d997f7c2385e27a6f2e9f857ed51923d1d20733385",
+          "prepared": "d3872b5a3af056df616d56047931c873616da65872ce327e210543404ccef02f"
+        },
+        "provenance": {
+          "kind": "diagnostic",
+          "notes": "Phase 2.5 procedural storybook bird rasterized and re-imported as a diagnostic fixture. Not premium artwork and not artistic validation."
+        }
+      },
+      {
+        "id": "leg-right",
+        "name": "Right leg",
+        "category": "character-part",
+        "source": "assets/leg-right.png",
+        "originalSource": "source/leg-right-leg-right.png",
+        "originalSize": {
+          "width": 120,
+          "height": 250
+        },
+        "preparedSize": {
+          "width": 72,
+          "height": 210
+        },
+        "registration": {
+          "x": 617,
+          "y": 551
+        },
+        "pivot": {
+          "space": "source",
+          "x": 60,
+          "y": 20
+        },
+        "preparedOffset": {
+          "x": 26,
+          "y": 20
+        },
+        "trim": {
+          "applied": true,
+          "alphaThreshold": 0,
+          "contentBounds": {
+            "x": 26,
+            "y": 20,
+            "width": 72,
+            "height": 210
+          }
+        },
+        "alpha": "required",
+        "parentId": "body",
+        "zIndex": 31,
+        "characterId": "diagnostic-bird",
+        "role": "leg-right",
+        "hashes": {
+          "algorithm": "sha256",
+          "source": "d134f3fba5f1d819da0f33c984cf35b4f6760cf17786539d56896d60d1740b97",
+          "prepared": "8f6882e0fb328bac76105fb9f7188573e1ac05e8e2c29a90155442d1ef03df20"
+        },
+        "provenance": {
+          "kind": "diagnostic",
+          "notes": "Phase 2.5 procedural storybook bird rasterized and re-imported as a diagnostic fixture. Not premium artwork and not artistic validation."
+        }
+      }
+    ]
+  },
+  "environmentPack": {
+    "format": "fableon.illustration-pack",
+    "version": 1,
+    "id": "diagnostic-forest",
+    "name": "Diagnostic Forest — Phase 2.5 Import",
+    "kind": "environment",
+    "canvas": {
+      "width": 1920,
+      "height": 1080
+    },
+    "parts": [
+      {
+        "id": "sky",
+        "name": "Sky",
+        "category": "background",
+        "source": "assets/sky.png",
+        "originalSource": "source/sky-diagnostic-forest.png",
+        "originalSize": {
+          "width": 1920,
+          "height": 1080
+        },
+        "preparedSize": {
+          "width": 1920,
+          "height": 1080
+        },
+        "registration": {
+          "x": 0,
+          "y": 0
+        },
+        "pivot": {
+          "space": "source",
+          "x": 960,
+          "y": 540
+        },
+        "preparedOffset": {
+          "x": 0,
+          "y": 0
+        },
+        "trim": {
+          "applied": false,
+          "alphaThreshold": 0,
+          "contentBounds": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "alpha": "opaque",
+        "parentId": null,
+        "zIndex": 0,
+        "role": "sky",
+        "hashes": {
+          "algorithm": "sha256",
+          "source": "9039a33ad9f738d8cb173c63a93a7da5b271ee9b34a3efee6c7fd74d763e03db",
+          "prepared": "9039a33ad9f738d8cb173c63a93a7da5b271ee9b34a3efee6c7fd74d763e03db"
+        },
+        "provenance": {
+          "kind": "diagnostic",
+          "notes": "Phase 2.5 procedural forest rasterized and re-imported as a diagnostic single background plate."
+        }
+      }
+    ]
+  },
+  "characterPreparation": {
+    "ready": true,
+    "missingPartIds": [],
+    "extraPartIds": [],
+    "issues": []
+  },
+  "environmentPreparation": {
+    "ready": true,
+    "missingRecommendedRoles": ["distant-forest", "midground-trees", "landing-branch"],
+    "issues": [
+      {
+        "code": "missing-recommended-layer",
+        "severity": "warning",
+        "path": "parts.distant-forest",
+        "message": "Recommended environment layer \"distant-forest\" is missing. A single background plate is still valid."
+      },
+      {
+        "code": "missing-recommended-layer",
+        "severity": "warning",
+        "path": "parts.midground-trees",
+        "message": "Recommended environment layer \"midground-trees\" is missing. A single background plate is still valid."
+      },
+      {
+        "code": "missing-recommended-layer",
+        "severity": "warning",
+        "path": "parts.landing-branch",
+        "message": "Recommended environment layer \"landing-branch\" is missing. A single background plate is still valid."
+      }
+    ]
+  },
+  "rigCompatibility": {
+    "ready": true,
+    "nodePartIds": {
+      "body": "body",
+      "tail": "tail",
+      "wingFar": "wing-far",
+      "legLeft": "leg-left",
+      "legRight": "leg-right",
+      "wingNear": "wing-near",
+      "head": "head",
+      "beak": "beak",
+      "eye": "eye"
+    },
+    "issues": []
+  },
+  "parts": [
+    {
+      "id": "body",
+      "sourceFileName": "body.png",
+      "originalSize": {
+        "width": 760,
+        "height": 520
+      },
+      "preparedSize": {
+        "width": 491,
+        "height": 330
+      },
+      "pivot": {
+        "x": 380,
+        "y": 300
+      },
+      "registration": {
+        "x": 237,
+        "y": 196
+      },
+      "trim": {
+        "applied": true,
+        "alphaThreshold": 0,
+        "contentBounds": {
+          "x": 133,
+          "y": 125,
+          "width": 491,
+          "height": 330
+        }
+      },
+      "preparedOffset": {
+        "x": 133,
+        "y": 125
+      },
+      "warnings": [],
+      "sourceHash": "07ef0b78543e5e7f7c54956d0f47b32d3f00c4a2324b8e5b62c6413715425405",
+      "preparedHash": "6692e2e4c99383d20f8726b51c2c88b41e545f8c78efa7d41e255db411807279",
+      "pixelDifference": {
+        "width": 491,
+        "height": 330,
+        "meanAbsoluteError": 0,
+        "maxChannelDifference": 0,
+        "changedPixelRatio": 0,
+        "alphaMeanAbsoluteError": 0
+      }
+    },
+    {
+      "id": "head",
+      "sourceFileName": "head.png",
+      "originalSize": {
+        "width": 360,
+        "height": 300
+      },
+      "preparedSize": {
+        "width": 265,
+        "height": 223
+      },
+      "pivot": {
+        "x": 120,
+        "y": 245
+      },
+      "registration": {
+        "x": 587,
+        "y": 136
+      },
+      "trim": {
+        "applied": true,
+        "alphaThreshold": 0,
+        "contentBounds": {
+          "x": 58,
+          "y": 68,
+          "width": 265,
+          "height": 223
+        }
+      },
+      "preparedOffset": {
+        "x": 58,
+        "y": 68
+      },
+      "warnings": [
+        {
+          "code": "premultiplied-risk",
+          "severity": "warning"
+        }
+      ],
+      "sourceHash": "2fc62891cd5a88b115f3036c20b17b844af81db24fe64e56962fd943f77c2bda",
+      "preparedHash": "3cfc6626b7dcc668d4478d62d157bdc13ea67e35754ae833b07d7ea73615d84a",
+      "pixelDifference": {
+        "width": 265,
+        "height": 223,
+        "meanAbsoluteError": 0,
+        "maxChannelDifference": 0,
+        "changedPixelRatio": 0,
+        "alphaMeanAbsoluteError": 0
+      }
+    },
+    {
+      "id": "eye",
+      "sourceFileName": "eye.png",
+      "originalSize": {
+        "width": 48,
+        "height": 48
+      },
+      "preparedSize": {
+        "width": 38,
+        "height": 38
+      },
+      "pivot": {
+        "x": 24,
+        "y": 24
+      },
+      "registration": {
+        "x": 796,
+        "y": 257
+      },
+      "trim": {
+        "applied": true,
+        "alphaThreshold": 0,
+        "contentBounds": {
+          "x": 5,
+          "y": 5,
+          "width": 38,
+          "height": 38
+        }
+      },
+      "preparedOffset": {
+        "x": 5,
+        "y": 5
+      },
+      "warnings": [],
+      "sourceHash": "67adcb68660b2351b2c49e2c5cc82a48c6df069881b324c3b0b9b0044272e715",
+      "preparedHash": "ae7632d1e8c365aa61a58c4225a74e0905230b277aa42fdc853d7bfeddf723fb",
+      "pixelDifference": {
+        "width": 38,
+        "height": 38,
+        "meanAbsoluteError": 0,
+        "maxChannelDifference": 0,
+        "changedPixelRatio": 0,
+        "alphaMeanAbsoluteError": 0
+      }
+    },
+    {
+      "id": "beak",
+      "sourceFileName": "beak.png",
+      "originalSize": {
+        "width": 140,
+        "height": 78
+      },
+      "preparedSize": {
+        "width": 117,
+        "height": 37
+      },
+      "pivot": {
+        "x": 8,
+        "y": 38
+      },
+      "registration": {
+        "x": 879,
+        "y": 263
+      },
+      "trim": {
+        "applied": true,
+        "alphaThreshold": 0,
+        "contentBounds": {
+          "x": 8,
+          "y": 19,
+          "width": 117,
+          "height": 37
+        }
+      },
+      "preparedOffset": {
+        "x": 8,
+        "y": 19
+      },
+      "warnings": [],
+      "sourceHash": "bdb06ce6831bb0de236527f7fc864128cc3e5d691c213b6cb8e6f812c854b097",
+      "preparedHash": "6dc365c32edfe6f19d30be9b843dbfcb29b59ac8e06c50dc84d8d6a2827bcb18",
+      "pixelDifference": {
+        "width": 117,
+        "height": 37,
+        "meanAbsoluteError": 0,
+        "maxChannelDifference": 0,
+        "changedPixelRatio": 0,
+        "alphaMeanAbsoluteError": 0
+      }
+    },
+    {
+      "id": "wing-far",
+      "sourceFileName": "wing-far.png",
+      "originalSize": {
+        "width": 500,
+        "height": 480
+      },
+      "preparedSize": {
+        "width": 199,
+        "height": 359
+      },
+      "pivot": {
+        "x": 418,
+        "y": 394
+      },
+      "registration": {
+        "x": 164,
+        "y": 37
+      },
+      "trim": {
+        "applied": true,
+        "alphaThreshold": 0,
+        "contentBounds": {
+          "x": 219,
+          "y": 42,
+          "width": 199,
+          "height": 359
+        }
+      },
+      "preparedOffset": {
+        "x": 219,
+        "y": 42
+      },
+      "warnings": [],
+      "sourceHash": "5da9f2263520f781c8f49a4029715ed752804a6b2ec939d7bf3efe95072ba987",
+      "preparedHash": "92faf4a4ad7534f3d2c777703b9c1c6ef4f7219585bbba25e854e0267a685a96",
+      "pixelDifference": {
+        "width": 199,
+        "height": 359,
+        "meanAbsoluteError": 0,
+        "maxChannelDifference": 0,
+        "changedPixelRatio": 0,
+        "alphaMeanAbsoluteError": 0
+      }
+    },
+    {
+      "id": "wing-near",
+      "sourceFileName": "wing-near.png",
+      "originalSize": {
+        "width": 500,
+        "height": 480
+      },
+      "preparedSize": {
+        "width": 199,
+        "height": 359
+      },
+      "pivot": {
+        "x": 418,
+        "y": 394
+      },
+      "registration": {
+        "x": 264,
+        "y": 32
+      },
+      "trim": {
+        "applied": true,
+        "alphaThreshold": 0,
+        "contentBounds": {
+          "x": 219,
+          "y": 42,
+          "width": 199,
+          "height": 359
+        }
+      },
+      "preparedOffset": {
+        "x": 219,
+        "y": 42
+      },
+      "warnings": [],
+      "sourceHash": "ce342bb7cd417cada580383a7fa79b11e7b64ee9917aac10693e1018dd50bb7e",
+      "preparedHash": "c2f7c92dda5f6219f760889523a8f0f75a2b823a92ffe2e4a825e4d7ac20387c",
+      "pixelDifference": {
+        "width": 199,
+        "height": 359,
+        "meanAbsoluteError": 0,
+        "maxChannelDifference": 0,
+        "changedPixelRatio": 0,
+        "alphaMeanAbsoluteError": 0
+      }
+    },
+    {
+      "id": "tail",
+      "sourceFileName": "tail.png",
+      "originalSize": {
+        "width": 500,
+        "height": 240
+      },
+      "preparedSize": {
+        "width": 408,
+        "height": 122
+      },
+      "pivot": {
+        "x": 440,
+        "y": 108
+      },
+      "registration": {
+        "x": 32,
+        "y": 418
+      },
+      "trim": {
+        "applied": true,
+        "alphaThreshold": 0,
+        "contentBounds": {
+          "x": 32,
+          "y": 61,
+          "width": 408,
+          "height": 122
+        }
+      },
+      "preparedOffset": {
+        "x": 32,
+        "y": 61
+      },
+      "warnings": [
+        {
+          "code": "black-halo",
+          "severity": "warning"
+        }
+      ],
+      "sourceHash": "d47b8a0b6827cd3bfefa576ad252de1d37fd8bf2c9bda0dddeb6015243c695b5",
+      "preparedHash": "d486e5fae447b6bbc26e4625cf0a2237599f0f77df16c7870460a4671bfb67b4",
+      "pixelDifference": {
+        "width": 408,
+        "height": 122,
+        "meanAbsoluteError": 0,
+        "maxChannelDifference": 0,
+        "changedPixelRatio": 0,
+        "alphaMeanAbsoluteError": 0
+      }
+    },
+    {
+      "id": "leg-left",
+      "sourceFileName": "leg-left.png",
+      "originalSize": {
+        "width": 120,
+        "height": 250
+      },
+      "preparedSize": {
+        "width": 74,
+        "height": 210
+      },
+      "pivot": {
+        "x": 60,
+        "y": 20
+      },
+      "registration": {
+        "x": 507,
+        "y": 551
+      },
+      "trim": {
+        "applied": true,
+        "alphaThreshold": 0,
+        "contentBounds": {
+          "x": 20,
+          "y": 20,
+          "width": 74,
+          "height": 210
+        }
+      },
+      "preparedOffset": {
+        "x": 20,
+        "y": 20
+      },
+      "warnings": [],
+      "sourceHash": "f05c54b6b9418c32905b84d997f7c2385e27a6f2e9f857ed51923d1d20733385",
+      "preparedHash": "d3872b5a3af056df616d56047931c873616da65872ce327e210543404ccef02f",
+      "pixelDifference": {
+        "width": 74,
+        "height": 210,
+        "meanAbsoluteError": 0,
+        "maxChannelDifference": 0,
+        "changedPixelRatio": 0,
+        "alphaMeanAbsoluteError": 0
+      }
+    },
+    {
+      "id": "leg-right",
+      "sourceFileName": "leg-right.png",
+      "originalSize": {
+        "width": 120,
+        "height": 250
+      },
+      "preparedSize": {
+        "width": 72,
+        "height": 210
+      },
+      "pivot": {
+        "x": 60,
+        "y": 20
+      },
+      "registration": {
+        "x": 617,
+        "y": 551
+      },
+      "trim": {
+        "applied": true,
+        "alphaThreshold": 0,
+        "contentBounds": {
+          "x": 26,
+          "y": 20,
+          "width": 72,
+          "height": 210
+        }
+      },
+      "preparedOffset": {
+        "x": 26,
+        "y": 20
+      },
+      "warnings": [],
+      "sourceHash": "d134f3fba5f1d819da0f33c984cf35b4f6760cf17786539d56896d60d1740b97",
+      "preparedHash": "8f6882e0fb328bac76105fb9f7188573e1ac05e8e2c29a90155442d1ef03df20",
+      "pixelDifference": {
+        "width": 72,
+        "height": 210,
+        "meanAbsoluteError": 0,
+        "maxChannelDifference": 0,
+        "changedPixelRatio": 0,
+        "alphaMeanAbsoluteError": 0
+      }
+    }
+  ],
+  "environmentDifference": {
+    "width": 1920,
+    "height": 1080,
+    "meanAbsoluteError": 0,
+    "maxChannelDifference": 0,
+    "changedPixelRatio": 0,
+    "alphaMeanAbsoluteError": 0
+  },
+  "timing": {
+    "importMs": 1889.2999999523163,
+    "decodeMs": 19.90000021457672,
+    "packBuildMs": 1869.3999997377396
+  }
+}

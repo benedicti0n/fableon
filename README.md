@@ -46,20 +46,21 @@ or external art is used. The five-frame visual benchmark and provenance are in
 
 ## Commands
 
-| Command                     | Purpose                                           |
-| --------------------------- | ------------------------------------------------- |
-| `pnpm dev`                  | Run the Next.js application in development mode   |
-| `pnpm build`                | Create a production build of the web application  |
-| `pnpm start`                | Serve the production build                        |
-| `pnpm lint`                 | Run ESLint across the workspace                   |
-| `pnpm typecheck`            | Run strict TypeScript checks for every package    |
-| `pnpm test`                 | Run the Vitest suite once                         |
-| `pnpm test:watch`           | Run Vitest in watch mode                          |
-| `pnpm test:browser`         | Run Playwright checks and performance measurement |
-| `pnpm benchmark:capture`    | Regenerate Phase 2 benchmark assets and frames    |
-| `pnpm benchmark:phase-02-5` | Render the 48-frame bird landing scene + GIF      |
-| `pnpm format`               | Format the repository with Prettier               |
-| `pnpm format:check`         | Verify formatting without writing changes         |
+| Command                     | Purpose                                                |
+| --------------------------- | ------------------------------------------------------ |
+| `pnpm dev`                  | Run the Next.js application in development mode        |
+| `pnpm build`                | Create a production build of the web application       |
+| `pnpm start`                | Serve the production build                             |
+| `pnpm lint`                 | Run ESLint across the workspace                        |
+| `pnpm typecheck`            | Run strict TypeScript checks for every package         |
+| `pnpm test`                 | Run the Vitest suite once                              |
+| `pnpm test:watch`           | Run Vitest in watch mode                               |
+| `pnpm test:browser`         | Run Playwright checks and performance measurement      |
+| `pnpm benchmark:capture`    | Regenerate Phase 2 benchmark assets and frames         |
+| `pnpm benchmark:phase-02-5` | Render the 48-frame bird landing scene + GIF           |
+| `pnpm benchmark:phase-02-6` | Import, rig, and capture the diagnostic 48-frame scene |
+| `pnpm format`               | Format the repository with Prettier                    |
+| `pnpm format:check`         | Verify formatting without writing changes              |
 
 ## Workspace layout
 
@@ -72,6 +73,8 @@ fableon/
 │   ├── animation-core/      # Timeline resolution and deterministic frame plans
 │   ├── render-engine/       # Canvas 2D frame rendering and local asset resolution
 │   ├── paint-engine/        # Seeded painterly primitives and benchmark artwork
+│   ├── sprite-motion/       # Hierarchical sprite transform prototype
+│   ├── illustration-pipeline/ # Packs, image import, preparation, rig adapter, ZIP
 │   └── shared/              # Cross-surface brand and product domain constants
 ├── docs/                    # Architecture, roadmap, MVP scope, protocol, reports
 ├── package.json             # Root scripts and shared tooling
@@ -121,6 +124,32 @@ This writes the actual 48-frame sequence to an ignored generation directory,
 updates selected frames, contact sheet, character poses, GIF, and
 `performance.json` under `docs/benchmarks/phase-02-5/`. The artistic assessment
 is in that directory; the result is a feasibility prototype, not production art.
+
+## Phase 2.6 illustration asset pipeline
+
+The preparation workspace is at
+[http://localhost:3000/studio/assets](http://localhost:3000/studio/assets). It
+imports local PNG/WebP/JPEG artwork, inspects alpha and edge warnings, prepares
+trimmed derivatives with hashes, assigns character parts or environment layers,
+edits pivots and registration, validates completeness/occlusion, and exports or
+re-imports portable `.fableon-pack.zip` archives.
+
+The comparison benchmark is at
+[http://localhost:3000/benchmarks/phase-02-6](http://localhost:3000/benchmarks/phase-02-6).
+It re-imports the Phase 2.5 bird and forest as **diagnostic artwork**, runs the
+same 48-frame landing motion, and reports pixel-fidelity, rig, and performance
+evidence. Premium source artwork is currently **BLOCKED**; see
+[docs/benchmarks/phase-02-6/SOURCE_ASSET_REQUIREMENTS.md](docs/benchmarks/phase-02-6/SOURCE_ASSET_REQUIREMENTS.md).
+
+```bash
+# Requires Playwright Chromium and ffmpeg on PATH.
+pnpm benchmark:phase-02-6
+```
+
+This writes the actual 48-frame sequence to an ignored directory, updates
+selected frames, contact sheet, fidelity comparison, source/prepared previews,
+import/rig validation JSON, performance metrics, and an MP4 under
+`docs/benchmarks/phase-02-6/`.
 
 ## Continuous integration
 

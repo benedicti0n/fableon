@@ -22,6 +22,7 @@
     "test:browser": "playwright test",
     "benchmark:capture": "node scripts/capture-phase-02.mjs",
     "benchmark:phase-02-5": "node scripts/capture-phase-02-5.mjs",
+    "benchmark:phase-02-6": "node scripts/capture-phase-02-6.mjs",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },

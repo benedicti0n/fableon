@@ -16,6 +16,7 @@
     "@fableon/render-engine": "workspace:*",
     "@fableon/scene-schema": "workspace:*",
     "@fableon/shared": "workspace:*",
+    "@fableon/sprite-motion": "workspace:*",
     "next": "^16.4.5",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"

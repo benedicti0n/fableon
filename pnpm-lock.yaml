@@ -80,6 +80,9 @@ importers:
       '@fableon/shared':
         specifier: workspace:*
         version: link:../../packages/shared
+      '@fableon/sprite-motion':
+        specifier: workspace:*
+        version: link:../../packages/sprite-motion
       next:
         specifier: ^16.4.5
         version: 16.4.5(@babel/core@7.29.13)(@playwright/test@1.65.0)(@types/node@24.19.2)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)

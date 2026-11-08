@@ -1,0 +1,184 @@
+{
+  "adaptedDrawOrder": [
+    "tail",
+    "wingFar",
+    "legLeft",
+    "legRight",
+    "body",
+    "wingNear",
+    "head",
+    "beak",
+    "eye"
+  ],
+  "nodePartIds": {
+    "body": "body",
+    "tail": "tail",
+    "wingFar": "wing-far",
+    "legLeft": "leg-left",
+    "legRight": "leg-right",
+    "wingNear": "wing-near",
+    "head": "head",
+    "beak": "beak",
+    "eye": "eye"
+  },
+  "pivotMappings": [
+    {
+      "nodeId": "tail",
+      "partId": "tail",
+      "basePivot": {
+        "x": 440,
+        "y": 108
+      },
+      "importedPivot": {
+        "x": 440,
+        "y": 108
+      },
+      "drawOffsetX": 32,
+      "drawOffsetY": 61
+    },
+    {
+      "nodeId": "wingFar",
+      "partId": "wing-far",
+      "basePivot": {
+        "x": 418,
+        "y": 394
+      },
+      "importedPivot": {
+        "x": 418,
+        "y": 394
+      },
+      "drawOffsetX": 219,
+      "drawOffsetY": 42
+    },
+    {
+      "nodeId": "legLeft",
+      "partId": "leg-left",
+      "basePivot": {
+        "x": 60,
+        "y": 20
+      },
+      "importedPivot": {
+        "x": 60,
+        "y": 20
+      },
+      "drawOffsetX": 20,
+      "drawOffsetY": 20
+    },
+    {
+      "nodeId": "legRight",
+      "partId": "leg-right",
+      "basePivot": {
+        "x": 60,
+        "y": 20
+      },
+      "importedPivot": {
+        "x": 60,
+        "y": 20
+      },
+      "drawOffsetX": 26,
+      "drawOffsetY": 20
+    },
+    {
+      "nodeId": "body",
+      "partId": "body",
+      "basePivot": {
+        "x": 380,
+        "y": 300
+      },
+      "importedPivot": {
+        "x": 380,
+        "y": 300
+      },
+      "drawOffsetX": 133,
+      "drawOffsetY": 125
+    },
+    {
+      "nodeId": "wingNear",
+      "partId": "wing-near",
+      "basePivot": {
+        "x": 418,
+        "y": 394
+      },
+      "importedPivot": {
+        "x": 418,
+        "y": 394
+      },
+      "drawOffsetX": 219,
+      "drawOffsetY": 42
+    },
+    {
+      "nodeId": "head",
+      "partId": "head",
+      "basePivot": {
+        "x": 120,
+        "y": 245
+      },
+      "importedPivot": {
+        "x": 120,
+        "y": 245
+      },
+      "drawOffsetX": 58,
+      "drawOffsetY": 68
+    },
+    {
+      "nodeId": "beak",
+      "partId": "beak",
+      "basePivot": {
+        "x": 8,
+        "y": 38
+      },
+      "importedPivot": {
+        "x": 8,
+        "y": 38
+      },
+      "drawOffsetX": 8,
+      "drawOffsetY": 19
+    },
+    {
+      "nodeId": "eye",
+      "partId": "eye",
+      "basePivot": {
+        "x": 24,
+        "y": 24
+      },
+      "importedPivot": {
+        "x": 24,
+        "y": 24
+      },
+      "drawOffsetX": 5,
+      "drawOffsetY": 5
+    }
+  ],
+  "footContact": {
+    "frame": 30,
+    "left": {
+      "x": 910,
+      "y": 930
+    },
+    "right": {
+      "x": 1020,
+      "y": 930
+    },
+    "maxDrift": 0,
+    "locked": true
+  },
+  "determinism": {
+    "framesChecked": 48,
+    "allRepeatedEvaluationsEqual": true
+  },
+  "compatibility": {
+    "ready": true,
+    "nodePartIds": {
+      "body": "body",
+      "tail": "tail",
+      "wingFar": "wing-far",
+      "legLeft": "leg-left",
+      "legRight": "leg-right",
+      "wingNear": "wing-near",
+      "head": "head",
+      "beak": "beak",
+      "eye": "eye"
+    },
+    "issues": []
+  }
+}

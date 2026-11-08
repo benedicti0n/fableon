@@ -1,0 +1,140 @@
+{
+  "capturedAt": "2026-11-08T22:40:49.454Z",
+  "browser": "158.0.8127.18",
+  "platform": "darwin",
+  "release": "25.5.0",
+  "cpu": "Apple M1",
+  "canvas": "1920×1080",
+  "frameCount": 48,
+  "fps": 24,
+  "artworkStatus": "diagnostic-not-artistic-validation",
+  "premiumArtworkBlocked": true,
+  "readyMs": 2507,
+  "importMs": 1889.2999999523163,
+  "decodeMs": 19.90000021457672,
+  "packBuildMs": 1869.3999997377396,
+  "firstFrameRenderMs": 44.699999928474426,
+  "medianFrameRenderMs": 43.799999952316284,
+  "p95FrameRenderMs": 45,
+  "totalRenderMs": 2091.8999997377396,
+  "warmRenderMs": {
+    "environmentMs": 0.8000000715255737,
+    "shadowMs": 0,
+    "characterMs": 0,
+    "baselineMs": 1,
+    "samples": 15
+  },
+  "captureRenderNote": "Capture render timing includes per-frame canvas readback synchronization in headless Chromium before PNG encoding. warmRenderMs measures the actual compositor work on reused surfaces.",
+  "playbackElapsedMs": 1100,
+  "playbackFrame": 25,
+  "observedPlaybackFps": 22.727272727272727,
+  "fidelity": {
+    "frameMetrics": {
+      "0": {
+        "width": 1920,
+        "height": 1080,
+        "meanAbsoluteError": 0.00014049639917695472,
+        "maxChannelDifference": 9,
+        "changedPixelRatio": 0.00002845293209876543,
+        "alphaMeanAbsoluteError": 0
+      },
+      "8": {
+        "width": 1920,
+        "height": 1080,
+        "meanAbsoluteError": 0.00011236496913580248,
+        "maxChannelDifference": 7,
+        "changedPixelRatio": 0.000017843364197530866,
+        "alphaMeanAbsoluteError": 0
+      },
+      "16": {
+        "width": 1920,
+        "height": 1080,
+        "meanAbsoluteError": 0.00010898919753086419,
+        "maxChannelDifference": 9,
+        "changedPixelRatio": 0.00001591435185185185,
+        "alphaMeanAbsoluteError": 0
+      },
+      "24": {
+        "width": 1920,
+        "height": 1080,
+        "meanAbsoluteError": 0.00007635673868312758,
+        "maxChannelDifference": 4,
+        "changedPixelRatio": 0.000009162808641975309,
+        "alphaMeanAbsoluteError": 0
+      },
+      "30": {
+        "width": 1920,
+        "height": 1080,
+        "meanAbsoluteError": 0.0000472608024691358,
+        "maxChannelDifference": 3,
+        "changedPixelRatio": 0.0000028935185185185184,
+        "alphaMeanAbsoluteError": 0
+      },
+      "38": {
+        "width": 1920,
+        "height": 1080,
+        "meanAbsoluteError": 0.00006349665637860082,
+        "maxChannelDifference": 3,
+        "changedPixelRatio": 0.000003375771604938272,
+        "alphaMeanAbsoluteError": 0
+      },
+      "47": {
+        "width": 1920,
+        "height": 1080,
+        "meanAbsoluteError": 0.00023180298353909465,
+        "maxChannelDifference": 13,
+        "changedPixelRatio": 0.000038580246913580246,
+        "alphaMeanAbsoluteError": 0
+      }
+    },
+    "frame47MeanAbsoluteError": 0.00023180298353909465,
+    "environmentMeanAbsoluteError": 0,
+    "maxPartPixelError": 0
+  },
+  "validation": {
+    "characterParts": 9,
+    "environmentLayers": 1,
+    "characterReady": true,
+    "environmentReady": true,
+    "rigReady": true,
+    "footLocked": true,
+    "footMaxDrift": 0,
+    "deterministic": true
+  },
+  "memoryBefore": {
+    "usedJSHeapSize": 72200000,
+    "totalJSHeapSize": 81400000,
+    "jsHeapSizeLimit": 3760000000
+  },
+  "memoryAfter": {
+    "usedJSHeapSize": 72200000,
+    "totalJSHeapSize": 81400000,
+    "jsHeapSizeLimit": 3760000000
+  },
+  "video": {
+    "path": "docs/benchmarks/phase-02-6/animation-preview.mp4",
+    "width": 1920,
+    "height": 1080,
+    "fps": 24,
+    "frames": 48,
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "r_frame_rate": "24/1",
+          "avg_frame_rate": "24/1",
+          "nb_read_frames": "48"
+        }
+      ],
+      "format": {
+        "duration": "2.000000"
+      }
+    }
+  },
+  "videoError": null,
+  "pageErrors": [],
+  "note": "Diagnostic artwork only. Phase 2.5 procedural layers were rasterized, imported through the real PNG pipeline, validated, and animated by the same landing rig. No premium artwork is claimed."
+}

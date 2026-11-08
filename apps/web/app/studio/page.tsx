@@ -23,6 +23,7 @@ export const metadata: Metadata = {
 export default function StudioPage() {
   return (
     <div className="flex min-h-screen flex-col">
+      <h1 className="sr-only">Fableon Studio</h1>
       <header className="flex min-h-14 flex-wrap items-center gap-3 border-b border-ink-700 bg-ink-900/90 px-4 py-2">
         <Link href="/" className="flex items-center gap-2.5" aria-label="Fableon home">
           <BrandMark className="size-8" />

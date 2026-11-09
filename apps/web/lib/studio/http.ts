@@ -94,10 +94,7 @@ export function readBodyBoolean(body: Record<string, unknown>, key: string): boo
   return body[key] === true;
 }
 
-export function readBodyStringArray(
-  body: Record<string, unknown>,
-  key: string,
-): string[] {
+export function readBodyStringArray(body: Record<string, unknown>, key: string): string[] {
   const value = body[key];
   if (value === undefined || value === null) return [];
   if (!Array.isArray(value) || value.some((item) => typeof item !== "string")) {

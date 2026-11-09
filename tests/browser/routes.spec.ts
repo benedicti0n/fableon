@@ -4,7 +4,8 @@ const ROUTES = [
   { path: "/", content: /Fableon/ },
   { path: "/studio", content: /Fableon Studio/ },
   { path: "/studio/assets", content: /Illustration Asset Preparation/ },
-  { path: "/benchmarks/phase-02", content: /Phase 2/ },
+  { path: "/studio/composition", content: /Phase 4/ },
+  { path: "/benchmarks/phase-02", content: /Where the Light Lands/ },
   { path: "/benchmarks/phase-02-5", content: /The Little Bird Comes Home/ },
   { path: "/benchmarks/phase-02-6", content: /Imported Artwork, Same Motion/ },
   {

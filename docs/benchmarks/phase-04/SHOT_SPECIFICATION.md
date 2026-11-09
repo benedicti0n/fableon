@@ -7,12 +7,12 @@
 
 ## Timeline contract
 
-| Shot | Start | End | Frames | Duration |
-| --- | ---: | ---: | ---: | ---: |
-| `shot-1` Awakening Forest | 0 | 143 | 144 | 6.000 s |
-| `shot-2` Little Bird in Flight | 144 | 359 | 216 | 9.000 s |
-| `shot-3` The Landing | 360 | 527 | 168 | 7.000 s |
-| `shot-4` A Place to Rest | 528 | 719 | 192 | 8.000 s |
+| Shot                           | Start | End | Frames | Duration |
+| ------------------------------ | ----: | --: | -----: | -------: |
+| `shot-1` Awakening Forest      |     0 | 143 |    144 |  6.000 s |
+| `shot-2` Little Bird in Flight |   144 | 359 |    216 |  9.000 s |
+| `shot-3` The Landing           |   360 | 527 |    168 |  7.000 s |
+| `shot-4` A Place to Rest       |   528 | 719 |    192 |  8.000 s |
 
 Frame indices are integer and global. `localFrame = globalFrame - startFrame`. The
 composition validator rejects gaps, overlaps, duplicate IDs, non-contiguous shots, invalid
@@ -37,40 +37,40 @@ the viewport never leaves the world.
 
 ### Shot 1 — camera-awakening
 
-| Frame | Center | Zoom | Easing |
-| ---: | --- | ---: | --- |
-| 0 | (1180, 680) | 1.00 | ease-in-out |
-| 143 | (1300, 710) | 1.06 | ease-in-out |
+| Frame | Center      | Zoom | Easing      |
+| ----: | ----------- | ---: | ----------- |
+|     0 | (1180, 680) | 1.00 | ease-in-out |
+|   143 | (1300, 710) | 1.06 | ease-in-out |
 
 Slow pan/zoom reveal of the painted forest and branch.
 
 ### Shot 2 — camera-flight
 
-| Frame | Center | Zoom | Easing |
-| ---: | --- | ---: | --- |
-| 0 | (980, 700) | 1.02 | ease-in-out |
-| 108 | (1180, 780) | 1.04 | ease-in-out |
-| 215 | (1360, 830) | 1.03 | ease-in-out |
+| Frame | Center      | Zoom | Easing      |
+| ----: | ----------- | ---: | ----------- |
+|     0 | (980, 700)  | 1.02 | ease-in-out |
+|   108 | (1180, 780) | 1.04 | ease-in-out |
+|   215 | (1360, 830) | 1.03 | ease-in-out |
 
 Gentle follow as the bird crosses the frame. The bird is not centered every frame; the
 camera leaves breathing room and the background parallax supplies depth.
 
 ### Shot 3 — camera-landing
 
-| Frame | Center | Zoom | Easing |
-| ---: | --- | ---: | --- |
-| 0 | (1300, 790) | 1.04 | ease-in-out |
-| 110 | (1420, 830) | 1.06 | ease-in-out |
-| 167 | (1450, 835) | 1.07 | ease-in-out |
+| Frame | Center      | Zoom | Easing      |
+| ----: | ----------- | ---: | ----------- |
+|     0 | (1300, 790) | 1.04 | ease-in-out |
+|   110 | (1420, 830) | 1.06 | ease-in-out |
+|   167 | (1450, 835) | 1.07 | ease-in-out |
 
 Camera settles on the branch as the bird brakes and contacts it.
 
 ### Shot 4 — camera-rest
 
-| Frame | Center | Zoom | Easing |
-| ---: | --- | ---: | --- |
-| 0 | (1450, 820) | 1.07 | ease-in-out |
-| 191 | (1520, 840) | 1.16 | ease-in-out |
+| Frame | Center      | Zoom | Easing      |
+| ----: | ----------- | ---: | ----------- |
+|     0 | (1450, 820) | 1.07 | ease-in-out |
+|   191 | (1520, 840) | 1.16 | ease-in-out |
 
 Slow push-in toward the perched bird.
 

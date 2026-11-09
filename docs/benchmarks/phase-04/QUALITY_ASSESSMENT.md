@@ -8,24 +8,24 @@ actual decoded frames at 3 s, 10 s, 15 s, 19.58 s, 25.83 s, and 29.96 s
 
 ## Gate A — Engineering
 
-| Criterion | Result | Evidence |
-| --- | --- | --- |
-| Multi-shot timeline | **PASS** | Four contiguous shots, 0–143 / 144–359 / 360–527 / 528–719 |
-| Total output duration | **PASS** | 720 frames / 24 fps = exactly 30.000 s |
-| Resolution | **PASS** | 1920×1080 |
-| Frame rate | **PASS** | 24 fps |
-| Codec/container | **PASS** | H.264 MP4 |
-| Full decode | **PASS** | `ffmpeg -v error -i final.mp4 -f null -` exit 0 |
-| Character articulation | **PASS (technical)** | Nine-part hierarchical rig, wing/tail/head/leg transforms |
-| Landing contact | **PASS (mathematical)** | Lower foot solved to branch world Y 1250 at and after contact |
-| Camera animation | **PASS** | Four deterministic camera tracks with pan/zoom/follow/push-in |
-| Parallax | **PASS (conservative)** | Two derived depth planes plus atmosphere; not a full repaint |
-| Ambient effects | **PASS** | Seeded pollen, leaf sway, light, mist; absolute-frame evaluation |
-| Transitions | **PASS** | Fade from black, 12-frame crossfades, 24-frame fade to black |
-| Titles | **PASS** | Opening and ending titles render and fade |
-| Studio preview | **PASS** | `/studio/composition` loads, scrubs, plays, and exports |
-| Local MP4 export | **PASS** | Studio job and CLI render verified |
-| Paid API calls | **ZERO** | No provider code path or network request in the render pipeline |
+| Criterion              | Result                  | Evidence                                                         |
+| ---------------------- | ----------------------- | ---------------------------------------------------------------- |
+| Multi-shot timeline    | **PASS**                | Four contiguous shots, 0–143 / 144–359 / 360–527 / 528–719       |
+| Total output duration  | **PASS**                | 720 frames / 24 fps = exactly 30.000 s                           |
+| Resolution             | **PASS**                | 1920×1080                                                        |
+| Frame rate             | **PASS**                | 24 fps                                                           |
+| Codec/container        | **PASS**                | H.264 MP4                                                        |
+| Full decode            | **PASS**                | `ffmpeg -v error -i final.mp4 -f null -` exit 0                  |
+| Character articulation | **PASS (technical)**    | Nine-part hierarchical rig, wing/tail/head/leg transforms        |
+| Landing contact        | **PASS (mathematical)** | Lower foot solved to branch world Y 1250 at and after contact    |
+| Camera animation       | **PASS**                | Four deterministic camera tracks with pan/zoom/follow/push-in    |
+| Parallax               | **PASS (conservative)** | Two derived depth planes plus atmosphere; not a full repaint     |
+| Ambient effects        | **PASS**                | Seeded pollen, leaf sway, light, mist; absolute-frame evaluation |
+| Transitions            | **PASS**                | Fade from black, 12-frame crossfades, 24-frame fade to black     |
+| Titles                 | **PASS**                | Opening and ending titles render and fade                        |
+| Studio preview         | **PASS**                | `/studio/composition` loads, scrubs, plays, and exports          |
+| Local MP4 export       | **PASS**                | Studio job and CLI render verified                               |
+| Paid API calls         | **ZERO**                | No provider code path or network request in the render pipeline  |
 
 ## Gate B — Artistic review
 
@@ -94,15 +94,15 @@ finished story.
 
 ## Overall assessment
 
-| Area | Observation |
-| --- | --- |
+| Area                     | Observation                                                        |
+| ------------------------ | ------------------------------------------------------------------ |
 | Engineering completeness | Strong: real 30 s, 4-shot, 1080p local render with verified decode |
-| Story clarity | Clear: forest → flight → landing → rest |
-| Character animation | Functional articulated rig; puppet-like and seam-heavy |
-| Camera | Smooth and coherent |
-| Environment | Warm painterly plate; soft upscaled detail; conservative parallax |
-| Audio | None |
-| Production readiness | **NOT READY** artistically |
+| Story clarity            | Clear: forest → flight → landing → rest                            |
+| Character animation      | Functional articulated rig; puppet-like and seam-heavy             |
+| Camera                   | Smooth and coherent                                                |
+| Environment              | Warm painterly plate; soft upscaled detail; conservative parallax  |
+| Audio                    | None                                                               |
+| Production readiness     | **NOT READY** artistically                                         |
 
 **Artistic quality: PENDING USER REVIEW.** The film is a valid local-pipeline demonstration,
 but the candidate character artwork and soft environment plate are below the intended

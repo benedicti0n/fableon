@@ -23,12 +23,12 @@ morning light, lands carefully, and settles into a quiet moment.
 
 ## Shot sequence
 
-| Shot | Title | Frames | Time | Action | Camera | Transition in/out |
-| --- | --- | --- | --- | --- | --- | --- |
-| 1 | Awakening Forest | 0–143 | 0.00–6.00 s | Forest reveal, light and mist drift, opening title | Slow pan right and subtle zoom toward the clearing | Fade from black (12f) / cut |
-| 2 | Little Bird in Flight | 144–359 | 6.00–15.00 s | Bird enters left, flies across layered forest with wing beats, tail follow-through, head stabilization | Gentle camera follow from left to right | Crossfade (12f) / cut |
-| 3 | The Landing | 360–527 | 15.00–22.00 s | Bird descends, brakes with spread wings, extends legs, contacts branch at frame 470, compresses, folds wings | Camera settles on the landing branch | Crossfade (12f) / cut |
-| 4 | A Place to Rest | 528–719 | 22.00–30.00 s | Perched idle, breathing, tail/head adjustments, blink, ending title, final fade | Slow push-in toward the resting bird | Crossfade (12f) / fade to black (24f) |
+| Shot | Title                 | Frames  | Time          | Action                                                                                                       | Camera                                             | Transition in/out                     |
+| ---- | --------------------- | ------- | ------------- | ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------- | ------------------------------------- |
+| 1    | Awakening Forest      | 0–143   | 0.00–6.00 s   | Forest reveal, light and mist drift, opening title                                                           | Slow pan right and subtle zoom toward the clearing | Fade from black (12f) / cut           |
+| 2    | Little Bird in Flight | 144–359 | 6.00–15.00 s  | Bird enters left, flies across layered forest with wing beats, tail follow-through, head stabilization       | Gentle camera follow from left to right            | Crossfade (12f) / cut                 |
+| 3    | The Landing           | 360–527 | 15.00–22.00 s | Bird descends, brakes with spread wings, extends legs, contacts branch at frame 470, compresses, folds wings | Camera settles on the landing branch               | Crossfade (12f) / cut                 |
+| 4    | A Place to Rest       | 528–719 | 22.00–30.00 s | Perched idle, breathing, tail/head adjustments, blink, ending title, final fade                              | Slow push-in toward the resting bird               | Crossfade (12f) / fade to black (24f) |
 
 ## Story beats
 

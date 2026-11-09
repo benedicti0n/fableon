@@ -27,9 +27,9 @@ ffmpeg -i apps/web/public/assets/film/where-the-light-lands-plate.png \
   apps/web/public/assets/film/where-the-light-lands-plate-distant.png
 ```
 
-| Derived asset | Path | SHA-256 |
-| --- | --- | --- |
-| Primary plate | `apps/web/public/assets/film/where-the-light-lands-plate.png` | `bbea1b1be41a8689f65f829b5ec4d1c68d841142110c9d94200af53623e14329` |
+| Derived asset | Path                                                                  | SHA-256                                                            |
+| ------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| Primary plate | `apps/web/public/assets/film/where-the-light-lands-plate.png`         | `bbea1b1be41a8689f65f829b5ec4d1c68d841142110c9d94200af53623e14329` |
 | Distant plate | `apps/web/public/assets/film/where-the-light-lands-plate-distant.png` | `fecfa8941f6ef5884e9bc4e9d828d371d30c36585359a9c74fc816b2a3f06bc3` |
 
 The plate is an upscaled 852×479 crop. It is intentionally documented as a soft painted

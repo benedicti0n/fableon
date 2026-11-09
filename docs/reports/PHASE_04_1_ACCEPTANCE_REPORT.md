@@ -91,10 +91,10 @@ pending human sign-off; evidence is in `VISUAL_QUALITY_REVIEW.md`.
 
 Confirmed visual defects:
 
-- **P1 — shot 2→3 crossfade, ≈360–370 / 15.00–15.42 s.** Two birds are visible at once,
-  with duplicate body, wing, and feet (frames 364 and 368).
-- **P1 — shot 3→4 crossfade, ≈529–539 / 22.04–22.46 s.** Double eye and beak ghosting
-  (frames 532 and 536).
+- **P1 — shot 2→3 crossfade, frames 360–371 / 15.00–15.46 s.** Two birds are visible at
+  once, with duplicate body, wing, and feet (representative frames 364 and 368).
+- **P1 — shot 3→4 crossfade, frames 528–539 / 22.00–22.46 s.** Double eye and beak
+  ghosting (representative frames 532 and 536).
 - **P2 — character seams/fringe.** White halos and hard alpha edges at the belly, neck,
   and wing root (frames 216, 492, 528). The asset manifest itself labels the pack
   “not approved for production”.
@@ -211,7 +211,8 @@ rerun because the verified artifact was unchanged.
 
 Failure behavior: invalid ranges are rejected cleanly; duplicate exports return 409;
 cancellation is the one unstable path and can leave a partial file. No user data was
-corrupted during invalid-operation tests.
+corrupted during invalid-operation tests. Missing-asset and nonexistent-composition-ID
+cases were not exercised end-to-end and remain unverified.
 
 ## 10. Tests executed
 

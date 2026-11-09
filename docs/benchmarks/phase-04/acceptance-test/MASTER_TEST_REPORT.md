@@ -64,8 +64,10 @@ scores are in `VISUAL_QUALITY_REVIEW.md`.
 
 Headline findings:
 
-- **P1 ghosting at 2→3:** frames ≈360–370 show two birds (duplicate body, wing, feet).
-- **P1 ghosting at 3→4:** frames ≈529–539 show two eyes and two beaks.
+- **P1 ghosting at 2→3:** crossfade window 360–371 (15.00–15.46 s) shows two birds
+  (duplicate body, wing, feet) at frames 364/368.
+- **P1 ghosting at 3→4:** crossfade window 528–539 (22.00–22.46 s) shows two eyes and
+  two beaks at frames 532/536.
 - **P2 character seams/fringe:** hard belly and neck edges, wing-root halo, head/body
   seam; most visible around frames 216, 492, and 528.
 - **P2 environment softness:** the plate is an 852×479 crop upscaled to 2400×1350; the
@@ -212,8 +214,11 @@ Invalid operations tested without corrupting user data:
 - out-of-range export frame → visible 400 message;
 - duplicate active export → HTTP 409;
 - cancelled long export → stale `rendering` status and 48-byte partial file (defect);
-- missing/invalid frame indexes → rejected by the API contract;
 - existing project data and demo routes → unchanged and loadable.
+
+Missing-asset and nonexistent-composition-ID cases were **not** exercised end-to-end:
+the composition route renders one fixed demo, and deliberately breaking a tracked asset
+was out of scope for this test. Treat those paths as unverified rather than passed.
 
 Browser remained responsive during short export and preview. No unexpected page-level
 JavaScript errors occurred in the focused run.

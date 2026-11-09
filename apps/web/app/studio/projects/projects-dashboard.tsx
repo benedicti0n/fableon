@@ -14,6 +14,7 @@ import {
   studioInputClassName,
   studioLabelClassName,
   studioPrimaryButtonClassName,
+  studioSecondaryButtonClassName,
   studioSelectClassName,
   studioTextareaClassName,
 } from "@/components/studio/ui";
@@ -31,6 +32,7 @@ const RESOLUTIONS = {
 export function ProjectsDashboard({ projects, loadError }: ProjectsDashboardProps) {
   const router = useRouter();
   const [isCreating, setIsCreating] = useState(false);
+  const [isImportingDemo, setIsImportingDemo] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   async function createProject(event: React.FormEvent<HTMLFormElement>): Promise<void> {
@@ -57,6 +59,26 @@ export function ProjectsDashboard({ projects, loadError }: ProjectsDashboardProp
       );
     } finally {
       setIsCreating(false);
+    }
+  }
+
+  async function importDemo(): Promise<void> {
+    setIsImportingDemo(true);
+    setError(null);
+    try {
+      const response = await studioPostJson<{ project: StudioProject; created: boolean }>(
+        "/api/studio/demo",
+        {},
+      );
+      router.push(`/studio/projects/${response.project.id}`);
+    } catch (importError) {
+      setError(
+        importError instanceof StudioApiError
+          ? importError.message
+          : "The demonstration project could not be imported.",
+      );
+    } finally {
+      setIsImportingDemo(false);
     }
   }
 
@@ -98,12 +120,28 @@ export function ProjectsDashboard({ projects, loadError }: ProjectsDashboardProp
 
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_360px]">
         <section aria-labelledby="project-list-heading" className="space-y-3">
-          <div className="flex items-center justify-between gap-3">
+          <div className="flex flex-wrap items-center justify-between gap-3">
             <h2 id="project-list-heading" className="font-serif text-2xl text-paper-100">
               Your projects
             </h2>
-            <Badge variant="muted">{projects.length} total</Badge>
+            <div className="flex items-center gap-2">
+              <Badge variant="muted">{projects.length} total</Badge>
+              <button
+                type="button"
+                data-testid="import-demo-button"
+                onClick={() => void importDemo()}
+                disabled={isImportingDemo}
+                className={studioSecondaryButtonClassName}
+              >
+                {isImportingDemo ? "Importing demo…" : "Import demo project"}
+              </button>
+            </div>
           </div>
+          <p className="text-xs leading-5 text-mist-500">
+            The demo imports the real Phase 2.8 AI take and the Phase 2.7 deterministic take into
+            one project. Running it again reopens the existing demo without duplicating media or
+            shots.
+          </p>
           {projects.length === 0 ? (
             <EmptyState
               title="No projects yet"

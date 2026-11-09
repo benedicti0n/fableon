@@ -1,0 +1,198 @@
+{
+  "phase": "2.8",
+  "benchmark": "first real AI image-to-video bird landing",
+  "generated_at": "2026-11-09T09:51:55Z",
+  "provider": "Google",
+  "api": "Gemini API Interactions",
+  "model": "gemini-omni-1.2-flash",
+  "mode": "image_to_video",
+  "prompt_variant": "B \u2014 balanced motion",
+  "prompt": "Use the supplied hand-painted children's storybook illustration as the exact first frame. Preserve its composition, static camera framing, character identity, palette, and painted watercolor/gouache texture throughout the shot.\n\nAnimate the scene as a beautiful, fluid shot. A small, expressive woodland songbird with warm chestnut feathers, a golden ochre body, a soft cream breast, and layered slate-blue wings flies gracefully toward a moss-covered branch in a sunlit forest.\n\nThe bird begins in gentle flight. Its wings move through natural upstroke and downstroke motions with clearly articulated primary and secondary feathers. The motion has weight and follows the bird's body rather than rotating rigid plates.\n\nAs it approaches the branch, the bird gradually slows, slightly raises its head, spreads its wings to brake, and extends its delicate legs. Its feet touch the branch naturally and grip it. The bird absorbs the landing, lowers its body slightly, folds its wings against its sides, and settles into a peaceful perched pose. Its tail follows the landing with subtle secondary movement. The head makes one small natural adjustment after settling.\n\nThe forest remains beautifully illustrated: layered foliage, textured tree trunks, soft atmospheric depth, golden morning sunlight from the upper right, and delicate watercolor/gouache surface qualities. Preserve the appearance of the original artwork throughout: brush texture, pigment variation, paper grain, and soft painted edges.\n\nMaintain consistent character anatomy, markings, colors, proportions, facial identity, and feather structure. The same bird must remain recognizable from the first frame to the last. Keep the camera static, with no cuts, zooms, pans, or camera shake. Smooth continuous movement. Do not add extra birds, duplicate anatomy, extra wings, extra legs, extra eyes, or an extra beak. Do not change species, morph the character, change feather markings, or change the palette. Do not add new objects, characters, text, letters, typography, watermarks, borders, frames, UI, or labels. Do not let the bird slide through or pass through the branch. No sudden transformation, teleportation, jump cut, exaggerated cartoon physics, talking, or lip sync. No drastic changes to the forest layout or lighting direction.\n\nThe shot ends with the bird calmly perched on the branch.",
+  "source_image": {
+    "path": "assets/premium-video-v1/start-frame.png",
+    "sha256": "3bd6ed479b7febc43c25fcb44b46f68d760d335ecfe9bdd7c4d6b8c725a0e9d1",
+    "width": 1672,
+    "height": 941,
+    "mime_type": "image/png"
+  },
+  "request": {
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "duration": "3s",
+    "task": "image_to_video",
+    "attempts": 1,
+    "automatic_retries": 0
+  },
+  "response": {
+    "http_status": 200,
+    "interaction_id": "v1_Chd0cGZ4YXAzNEV2UE00dDRQaFBDVGdBOBIXdHBmeGFwMzRFdlBNNHQ0UGhQQ1RnQTg",
+    "status": "completed",
+    "object": "interaction",
+    "model": "gemini-omni-1.2-flash",
+    "created": "2026-11-09T09:51:50Z",
+    "updated": "2026-11-09T09:51:50Z",
+    "service_tier": "standard",
+    "usage": {
+      "total_tokens": 19638,
+      "total_input_tokens": 1563,
+      "input_tokens_by_modality": [
+        {
+          "modality": "text",
+          "tokens": 463
+        },
+        {
+          "modality": "image",
+          "tokens": 1100
+        }
+      ],
+      "total_cached_tokens": 0,
+      "total_output_tokens": 17376,
+      "output_tokens_by_modality": [
+        {
+          "modality": "video",
+          "tokens": 17376
+        }
+      ],
+      "total_tool_use_tokens": 0,
+      "total_thought_tokens": 699,
+      "initial_input_tokens": 1563
+    }
+  },
+  "timing": {
+    "request_started_at": "2026-11-09T09:51:17Z",
+    "request_finished_at": "2026-11-09T09:51:55Z",
+    "latency_seconds": 38.587,
+    "provider_latency_seconds": 38.587
+  },
+  "cost": {
+    "pricing_basis": "Official Gemini Omni 1.2 Flash standard tier, 2026-11-09: input $1.50/1M tokens; video output $12.00/1M tokens; text/thinking output $9.00/1M tokens.",
+    "estimated_usd": 0.2085,
+    "actual_reported_usd": null,
+    "note": "The provider did not return a per-request invoice. The usage-derived figure applies the official standard-tier rates to the returned usage record.",
+    "authorized_cap_usd": 1.0,
+    "usage_derived_usd": 0.217147,
+    "components_usd": {
+      "input": 0.002344,
+      "video_output": 0.208512,
+      "thought_output": 0.006291
+    },
+    "within_cap": true,
+    "attempts": 1,
+    "failed_attempts": 0
+  },
+  "artifacts": {
+    "original_video": {
+      "path": "docs/benchmarks/phase-02-8/generated/original-video.mp4",
+      "bytes": 2911778,
+      "sha256": "76fc11f30d36732b0149fe00624a4dfcdc88e5a6f22388ddde2971faf7e738bf"
+    },
+    "evaluation_clip": {
+      "path": "docs/benchmarks/phase-02-8/generated/evaluation-clip.mp4",
+      "bytes": 1233876,
+      "sha256": "19995fb86bd93fa5e720d9bcca594bb958481b235dc24103341017f87ae0abe9",
+      "derived": true,
+      "duration_seconds": 2.0,
+      "derivation": "First 2.0 seconds of the 3.029-second original, re-encoded to H.264, audio removed. No frame interpolation.",
+      "note": "Derived comparison clip only; the original 3.029-second MP4 remains authoritative."
+    },
+    "provider_response_sanitized": {
+      "path": "docs/benchmarks/phase-02-8/generated/provider-response.json",
+      "bytes": 9345,
+      "sha256": "426a5eebbecb84983b6fc848a2d7cc369ac185296ded13392a4c8948afa0237b"
+    },
+    "contact_sheet": {
+      "path": "docs/benchmarks/phase-02-8/contact-sheet.png",
+      "bytes": 3245528,
+      "sha256": "3be62b59d5263a2c362804f237d5fc2969908feba6d52f11295a5401b54712d3"
+    },
+    "comparison_side_by_side": {
+      "path": "docs/benchmarks/phase-02-8/comparison-side-by-side.mp4",
+      "bytes": 895521,
+      "sha256": "4f130ed6f2ad38544de9df84f5f9e335d2a898544d1d03c23255de005fa2fbbf"
+    },
+    "comparison_frames": {
+      "path": "docs/benchmarks/phase-02-8/comparison-frames.png",
+      "bytes": 3745225,
+      "sha256": "bb2a18ca0d9505a3daf1b2bc62856920ef684d30fee5a99e007923d711c19ebe"
+    },
+    "selected_frames": [
+      {
+        "path": "docs/benchmarks/phase-02-8/selected-frames/frame-0.0.png",
+        "bytes": 1610058,
+        "sha256": "500c85eb8764de43693eb55b954f415ae625657c304109006031b2c9790d3ba8"
+      },
+      {
+        "path": "docs/benchmarks/phase-02-8/selected-frames/frame-0.5.png",
+        "bytes": 1565000,
+        "sha256": "59f4973f0a05a28ba1b54db37392ceebd464d57be43375f3661fcb5ac96c1194"
+      },
+      {
+        "path": "docs/benchmarks/phase-02-8/selected-frames/frame-1.0.png",
+        "bytes": 1574267,
+        "sha256": "c3b123fa7a791533704334b29044f9e95a2e3b0f592922bf2ae85e18bff83ef8"
+      },
+      {
+        "path": "docs/benchmarks/phase-02-8/selected-frames/frame-1.5.png",
+        "bytes": 1578223,
+        "sha256": "22869b606b07b2d07fb4befb2db3d1c704cce32ddfd8743c980ea62870815f52"
+      },
+      {
+        "path": "docs/benchmarks/phase-02-8/selected-frames/frame-2.0.png",
+        "bytes": 1569422,
+        "sha256": "2fff60c1e56a59778156a3d11edd4efaa393060d0754ceca163855084080f1bb"
+      },
+      {
+        "path": "docs/benchmarks/phase-02-8/selected-frames/frame-2.5.png",
+        "bytes": 1578504,
+        "sha256": "bcf7743f03a583de64da1b4ffaf4e0dda9f58c30fa68320ef0dd6525f69862df"
+      },
+      {
+        "path": "docs/benchmarks/phase-02-8/selected-frames/frame-2.9.png",
+        "bytes": 1570246,
+        "sha256": "c5df65d861ce3c33d5fad3bd63d5b69b70caed84c60857fd0f052af4deb22997"
+      }
+    ],
+    "defect_evidence": [
+      {
+        "path": "docs/benchmarks/phase-02-8/defects/01-detached-far-wing-0.8s.png",
+        "bytes": 1533825,
+        "sha256": "2050ddac0deb2d7516e85398073f3a7ba30a28b37aa8a6622755e62c14f7c742"
+      },
+      {
+        "path": "docs/benchmarks/phase-02-8/defects/02-detached-far-wing-1.4s.png",
+        "bytes": 1600658,
+        "sha256": "403eae9f8686a89e29e597a316401cd3c3ff91cf82a6a2efaf6e5833466e99bf"
+      },
+      {
+        "path": "docs/benchmarks/phase-02-8/defects/03-source-vs-final-identity.png",
+        "bytes": 935988,
+        "sha256": "02251b2596f45acdc3b1a45dce2dbfb763bbe279884f9e438c605ebf13bbd2f1"
+      }
+    ],
+    "evaluation_report": {
+      "path": "docs/benchmarks/phase-02-8/EVALUATION.md",
+      "bytes": 12643,
+      "sha256": "c331ea53e7bcb9babec07efbaaa9340d7b9b7f00a8c64faebd36c3a15c277ed1"
+    }
+  },
+  "notes": [
+    "Original MP4 preserved unchanged.",
+    "Derived 2.0-second clip is labeled derived and does not replace the original.",
+    "Native AAC stereo audio is present in the original but was not evaluated; the derived clip is muted.",
+    "One generation only; no automatic retry.",
+    "Source frame is 1672x941; output is 1280x720."
+  ],
+  "evaluation_status": "completed_with_visible_anatomical_artifact",
+  "attempts": {
+    "performed": 1,
+    "retry_performed": false,
+    "reason_no_retry": "First attempt produced a valid, non-corrupt MP4 with a visible anatomical artifact; retry policy only permits a second attempt for a clear technical failure, not for artistic optimization."
+  },
+  "observed_defects": [
+    "At approximately 0.8-1.4 s, the far wing appears detached and reads as a wing emerging from the head/neck area. This is a visible anatomical/temporal artifact.",
+    "Character identity drifts during the landing: the final bird is rounder, with a shorter beak, larger eye, shorter tail, and simplified wing markings compared with the supplied frame.",
+    "A small scale/pose pop occurs around the landing transition (largest consecutive-frame difference at frame 28, approximately 1.17 s).",
+    "No duplicate legs or feet were observed; final foot contact and grip are plausible.",
+    "Forest layout, branch geometry, and lighting direction remain broadly stable throughout the shot."
+  ]
+}

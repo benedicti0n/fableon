@@ -41,9 +41,7 @@
     "finishedAt": "2026-11-09T23:27:19.555Z",
     "status": "completed",
     "attempt": 1,
-    "inputReferences": [
-      "/assets/folk-pilot/film.json"
-    ],
+    "inputReferences": ["/assets/folk-pilot/film.json"],
     "outputHash": "1f99ec3e791d09b929f86bf204c61562c2cd599e580d8509f729efee0dfb908e",
     "outputCount": 720,
     "runtimeMs": 194257,
@@ -67,9 +65,7 @@
     "finishedAt": "2026-11-09T23:30:30.571Z",
     "status": "completed",
     "attempt": 1,
-    "inputReferences": [
-      "/assets/folk-pilot/film.json"
-    ],
+    "inputReferences": ["/assets/folk-pilot/film.json"],
     "outputHash": "3869894b61c947e5dc7e138bd84da85e655b3c08b3ed901e3e93591bc541eb91",
     "outputCount": 720,
     "runtimeMs": 175690,
@@ -93,9 +89,7 @@
     "finishedAt": "2026-11-09T23:32:06.876Z",
     "status": "completed",
     "attempt": 1,
-    "inputReferences": [
-      "/assets/folk-pilot/film-variation.json"
-    ],
+    "inputReferences": ["/assets/folk-pilot/film-variation.json"],
     "outputHash": "14aa9fa9674d91e9f1f0fad34f4aee650562d6355f625188ff2f7dcb4feeb5b1",
     "outputCount": 192,
     "runtimeMs": 42819,
@@ -119,9 +113,7 @@
     "finishedAt": "2026-11-09T23:32:32.132Z",
     "status": "completed",
     "attempt": 1,
-    "inputReferences": [
-      "/assets/folk-pilot/film-variation.json"
-    ],
+    "inputReferences": ["/assets/folk-pilot/film-variation.json"],
     "outputHash": "8b3696d2112af9b04e59230b38bf195121382acb9d16c08c514a0ece28481387",
     "outputCount": 96,
     "runtimeMs": 23616,
@@ -193,9 +185,7 @@
     "finishedAt": "2026-11-09T23:36:31.027Z",
     "status": "completed",
     "attempt": 1,
-    "inputReferences": [
-      "/assets/folk-pilot/film.json"
-    ],
+    "inputReferences": ["/assets/folk-pilot/film.json"],
     "outputHash": "71f4c642bf5e8fd9e5b541df65c9553c01ea2d5f6d32c51e3cdb87c46c1c5c89",
     "outputCount": 24,
     "runtimeMs": 4901,
@@ -219,9 +209,7 @@
     "finishedAt": "2026-11-09T23:37:09.860Z",
     "status": "completed",
     "attempt": 1,
-    "inputReferences": [
-      "/assets/folk-pilot/film.json"
-    ],
+    "inputReferences": ["/assets/folk-pilot/film.json"],
     "outputHash": "71f4c642bf5e8fd9e5b541df65c9553c01ea2d5f6d32c51e3cdb87c46c1c5c89",
     "outputCount": 24,
     "runtimeMs": 4768,

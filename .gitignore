@@ -33,6 +33,9 @@ docs/benchmarks/phase-02-7-gate2/frames/
 .env.*
 !.env.example
 
+# Local Phase 3 Studio workspace data
+.fableon-data/
+
 # OS / editor noise
 .DS_Store
 .idea/

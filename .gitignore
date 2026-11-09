@@ -36,6 +36,9 @@ docs/benchmarks/phase-02-7-gate2/frames/
 # Local Phase 3 Studio workspace data
 .fableon-data/
 
+# Local Phase 4 rendered video outputs
+outputs/
+
 # OS / editor noise
 .DS_Store
 .idea/

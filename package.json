@@ -2,7 +2,7 @@
   "name": "fableon",
   "version": "0.0.0",
   "private": true,
-  "description": "Fableon — an AI-native studio for painterly illustrated animation.",
+  "description": "Fableon \u2014 an AI-native studio for painterly illustrated animation.",
   "license": "UNLICENSED",
   "type": "module",
   "packageManager": "pnpm@11.1.3",
@@ -25,7 +25,9 @@
     "benchmark:phase-02-6": "node scripts/capture-phase-02-6.mjs",
     "benchmark:phase-02-7-gate2": "node scripts/capture-phase-02-7-gate2.mjs",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "render:demo": "node scripts/render-phase-04.mjs --artifacts-dir docs/benchmarks/phase-04",
+    "render:demo:checkpoint": "node scripts/render-phase-04.mjs --start 120 --end 239 --resolution 1280x720 --output outputs/where-the-light-lands/checkpoint-5s.mp4"
   },
   "devDependencies": {
     "@playwright/test": "^1.65.0",

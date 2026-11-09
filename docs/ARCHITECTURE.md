@@ -1,11 +1,13 @@
 # Fableon Architecture
 
-> **Status:** Phase 3 — Local AI video studio. The versioned scene schema,
+> **Status:** Phase 4 — Local 30-second film. The versioned scene schema,
 > deterministic timeline, procedural paint primitives, Canvas 2D renderer, live
 > Studio preview, local project/shot/take store, media import, review workflow,
-> take comparison, and regeneration planning exist today. Artistic quality
-> remains under human review. Paid generation execution, motion, camera, AI
-> story planning, audio, and final video composition remain future work.
+> take comparison, regeneration planning, four-shot composition timeline,
+> cinematic camera, layered environment motion, character motion presets, and
+> local FFmpeg video export exist today. Artistic quality remains under human
+> review. Paid generation execution, AI story planning, audio, and production
+> deployment remain future work.
 
 ## 1. Architectural goals
 
@@ -388,6 +390,39 @@ production API.
 
 Phase 3 does **not** execute paid generation. Regeneration requests are durable
 planning records only. Provider adapters and authorization remain future work.
+
+## 12.2 Phase 4 local film pipeline (implemented)
+
+Phase 4 adds a renderer-independent film composition layer on top of the
+existing paint, rig, and Studio systems:
+
+```text
+apps/web/lib/film/where-the-light-lands.ts
+  ├── FilmComposition (4 shots, exact 720-frame global timeline)
+  ├── camera tracks (packages/camera-engine)
+  ├── character presets (packages/character-motion)
+  ├── environment layers (conservative two-plane parallax)
+  ├── ambient state (absolute-frame deterministic)
+  ├── titles and transitions (packages/composition-core)
+  └── FilmRenderer (Canvas 2D, shared by preview and export)
+```
+
+The timeline contract is integer-frame based and validates contiguity, shot
+order, transition ranges, titles, and global frame bounds. Crossfades hold the
+outgoing shot's last frame while the incoming shot fades in; the global output
+frame count is never changed. A 30-second film is exactly 720 output frames at
+24 fps.
+
+`FilmRenderer` draws the painted environment, the nine-part rig, deterministic
+atmosphere, titles, transitions, and fades into a canonical 1920×1080 canvas.
+The Studio composition page and the offline render surface both instantiate the
+same renderer and evaluator. The offline CLI drives Chromium to rasterize frames
+and pipes PNG frames to local FFmpeg; it does not use a separate animation
+implementation.
+
+The composition remains separate from the Phase 1 scene schema and Phase 3
+Studio project model. It references existing assets and reusable packages rather
+than replacing those contracts.
 
 ## 13. Asset storage
 

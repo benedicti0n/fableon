@@ -5,11 +5,11 @@ illustrated, narrated animated film. The product is designed around a
 renderer-independent pipeline — from story planning and painterly asset
 generation through deterministic motion, camera work, sound, and video export.
 
-> **Status: Phase 3 — AI video studio workspace.** The repository now includes
-> a local-first project workspace for AI-video and deterministic shots. It
-> imports real MP4 takes, inspects media with FFprobe, previews and scrubs
-> video, records take-specific review issues, compares takes, and prepares
-> regeneration requests. It does **not** call a paid video provider in Phase 3.
+> **Status: Phase 4 — Complete local 30-second film.** The repository now
+> includes a deterministic four-shot composition pipeline, reusable camera and
+> character-motion systems, layered environment motion, local Canvas 2D frame
+> rendering, and local FFmpeg export. The film **Where the Light Lands** renders
+> to a verified 30.000-second, 1920×1080, 24 fps MP4 with zero paid API calls.
 
 ## Requirements
 
@@ -82,6 +82,40 @@ Phase 3 does not execute paid generation. The regeneration form persists a
 draft or ready-for-authorization request only; provider execution requires a
 separate authorized workflow.
 
+## Phase 4 local film — Where the Light Lands
+
+The composition workspace is at
+[http://localhost:3000/studio/composition](http://localhost:3000/studio/composition).
+It previews the same four-shot film used by the offline exporter, scrubs across
+shot boundaries, plays at 24 fps, and can start a local MP4 export job with
+persisted progress.
+
+```bash
+# Required short checkpoint: 5 seconds crossing shot 1 → shot 2
+pnpm render:demo:checkpoint
+
+# Full 30-second film and review artifacts
+pnpm render:demo
+```
+
+The full render writes:
+
+```text
+outputs/where-the-light-lands/
+├── final.mp4
+├── render-manifest.json
+└── render-report.json
+```
+
+`outputs/` is intentionally Git-ignored. The final film is **silent**; audio is
+not part of the Phase 4 acceptance gate.
+
+The film uses a conservative two-plane parallax plate derived from the existing
+Phase 2.8 painted start frame, plus the Phase 2.7 candidate nine-part bird. The
+character artwork is still candidate quality and has visible seams/fringing.
+See `docs/benchmarks/phase-04/QUALITY_ASSESSMENT.md`; artistic quality is
+**pending user review**.
+
 ## Commands
 
 | Command                           | Purpose                                                |
@@ -98,6 +132,8 @@ separate authorized workflow.
 | `pnpm benchmark:phase-02-5`       | Render the 48-frame bird landing scene + GIF           |
 | `pnpm benchmark:phase-02-6`       | Import, rig, and capture the diagnostic 48-frame scene |
 | `pnpm benchmark:phase-02-7-gate2` | Render the repaired Gate 2 candidate 48-frame scene    |
+| `pnpm render:demo:checkpoint`     | Render a 5-second, 1280×720 multi-shot checkpoint      |
+| `pnpm render:demo`                | Render the full 30-second 1920×1080 film + artifacts   |
 | `pnpm format`                     | Format the repository with Prettier                    |
 | `pnpm format:check`               | Verify formatting without writing changes              |
 
@@ -110,6 +146,9 @@ fableon/
 ├── packages/
 │   ├── scene-schema/        # Versioned project/scene contracts and fixtures
 │   ├── animation-core/      # Timeline resolution and deterministic frame plans
+│   ├── composition-core/    # Multi-shot timeline, transitions, and titles
+│   ├── camera-engine/       # Deterministic cinematic camera and parallax math
+│   ├── character-motion/    # Reusable Little Bird flight/landing/idle presets
 │   ├── render-engine/       # Canvas 2D frame rendering and local asset resolution
 │   ├── paint-engine/        # Seeded painterly primitives and benchmark artwork
 │   ├── sprite-motion/       # Hierarchical sprite transform prototype

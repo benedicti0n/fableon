@@ -14,6 +14,7 @@
     "@fableon/camera-engine": "workspace:*",
     "@fableon/character-motion": "workspace:*",
     "@fableon/composition-core": "workspace:*",
+    "@fableon/folk-motion": "workspace:*",
     "@fableon/illustration-pipeline": "workspace:*",
     "@fableon/paint-engine": "workspace:*",
     "@fableon/render-engine": "workspace:*",

@@ -289,6 +289,12 @@ export function StudioInspector({ project }: StudioInspectorProps) {
             Phase 2 · Paint preview
           </Badge>
           <Link
+            href="/studio/projects"
+            className="rounded-md border border-ochre-500/50 px-2.5 py-1.5 text-[11px] text-ochre-300 transition-colors hover:border-ochre-400 hover:text-ochre-200"
+          >
+            AI video projects
+          </Link>
+          <Link
             href="/"
             className="rounded-md border border-ink-700 px-2.5 py-1.5 text-[11px] text-mist-300 transition-colors hover:border-ink-500 hover:text-paper-50"
           >

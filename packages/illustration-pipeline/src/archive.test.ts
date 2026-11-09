@@ -127,6 +127,17 @@ describe("illustration pack archive", () => {
     }
   });
 
+  it("ignores safe directory entries produced by common ZIP tools", () => {
+    const bytes = zipSync({
+      "manifest.json": strToU8(serializeIllustrationPack(makePack(false))),
+      "assets/": new Uint8Array(0),
+      "assets/body.png": new Uint8Array([1, 2, 3]),
+    });
+    const result = readIllustrationArchive(bytes);
+    expect(result.pack.id).toBe("archive-test");
+    expect(result.files.get("assets/body.png")).toEqual(new Uint8Array([1, 2, 3]));
+  });
+
   it("rejects archives missing referenced assets", () => {
     const bytes = zipSync({
       "manifest.json": strToU8(serializeIllustrationPack(makePack(false))),

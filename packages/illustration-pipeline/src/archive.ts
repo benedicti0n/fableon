@@ -150,7 +150,7 @@ export function readIllustrationArchive(bytes: Uint8Array): ReadIllustrationArch
     );
   }
 
-  const paths = Object.keys(entries);
+  const paths = Object.keys(entries).filter((path) => !path.endsWith("/"));
   if (paths.length > 256) {
     throw new IllustrationArchiveError(
       "too_large",

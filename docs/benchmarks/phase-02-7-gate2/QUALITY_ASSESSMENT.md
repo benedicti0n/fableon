@@ -97,7 +97,7 @@
   `defects/02-wing-root-halo.png`, `defects/04-body-matte-edge.png`
 - **Observed:** Semi-transparent near-white fringe pixels are visible against
   the dark forest. Edges look jagged and “stuck on” rather than painted.
-- **Likely cause:** Estimated saturation mattes; 102–283 near-white fringe pixels
+- **Likely cause:** Estimated saturation mattes; 66–283 near-white fringe pixels
   measured per affected part in the input audit.
 - **Repair type:** **Artwork.**
 - **Proposed remedy:** Re-extract/re-mat from higher-quality source with proper

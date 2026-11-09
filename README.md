@@ -46,21 +46,22 @@ or external art is used. The five-frame visual benchmark and provenance are in
 
 ## Commands
 
-| Command                     | Purpose                                                |
-| --------------------------- | ------------------------------------------------------ |
-| `pnpm dev`                  | Run the Next.js application in development mode        |
-| `pnpm build`                | Create a production build of the web application       |
-| `pnpm start`                | Serve the production build                             |
-| `pnpm lint`                 | Run ESLint across the workspace                        |
-| `pnpm typecheck`            | Run strict TypeScript checks for every package         |
-| `pnpm test`                 | Run the Vitest suite once                              |
-| `pnpm test:watch`           | Run Vitest in watch mode                               |
-| `pnpm test:browser`         | Run Playwright checks and performance measurement      |
-| `pnpm benchmark:capture`    | Regenerate Phase 2 benchmark assets and frames         |
-| `pnpm benchmark:phase-02-5` | Render the 48-frame bird landing scene + GIF           |
-| `pnpm benchmark:phase-02-6` | Import, rig, and capture the diagnostic 48-frame scene |
-| `pnpm format`               | Format the repository with Prettier                    |
-| `pnpm format:check`         | Verify formatting without writing changes              |
+| Command                           | Purpose                                                |
+| --------------------------------- | ------------------------------------------------------ |
+| `pnpm dev`                        | Run the Next.js application in development mode        |
+| `pnpm build`                      | Create a production build of the web application       |
+| `pnpm start`                      | Serve the production build                             |
+| `pnpm lint`                       | Run ESLint across the workspace                        |
+| `pnpm typecheck`                  | Run strict TypeScript checks for every package         |
+| `pnpm test`                       | Run the Vitest suite once                              |
+| `pnpm test:watch`                 | Run Vitest in watch mode                               |
+| `pnpm test:browser`               | Run Playwright checks and performance measurement      |
+| `pnpm benchmark:capture`          | Regenerate Phase 2 benchmark assets and frames         |
+| `pnpm benchmark:phase-02-5`       | Render the 48-frame bird landing scene + GIF           |
+| `pnpm benchmark:phase-02-6`       | Import, rig, and capture the diagnostic 48-frame scene |
+| `pnpm benchmark:phase-02-7-gate2` | Render the repaired Gate 2 candidate 48-frame scene    |
+| `pnpm format`                     | Format the repository with Prettier                    |
+| `pnpm format:check`               | Verify formatting without writing changes              |
 
 ## Workspace layout
 
@@ -150,6 +151,26 @@ This writes the actual 48-frame sequence to an ignored directory, updates
 selected frames, contact sheet, fidelity comparison, source/prepared previews,
 import/rig validation JSON, performance metrics, and an MP4 under
 `docs/benchmarks/phase-02-6/`.
+
+## Phase 2.7 Gate 2 candidate
+
+The Gate 2 production-renderer proof is at
+[http://localhost:3000/benchmarks/phase-02-7-gate2](http://localhost:3000/benchmarks/phase-02-7-gate2).
+It imports the externally supplied repaired nine-part Little Bird candidate as a
+validated `fableon.illustration-pack` v1 and renders the existing 48-frame
+landing motion through Fableon's Canvas renderer and hierarchical rig.
+
+The artwork is a **candidate, not approved production art**. The background is
+the existing diagnostic Phase 2.5 forest. The quality assessment documents
+visible matte seams, halos, low resolution, and inferred anatomy.
+
+```bash
+pnpm benchmark:phase-02-7-gate2
+```
+
+This regenerates the 48-frame sequence, selected frames, contact and pivot-debug
+sheets, validation JSON, performance metrics, and reviewable MP4 under
+`docs/benchmarks/phase-02-7-gate2/`.
 
 ## Continuous integration
 

@@ -1,0 +1,41 @@
+diff --git a/apps/web/lib/film/where-the-light-lands.ts b/apps/web/lib/film/where-the-light-lands.ts
+index d647766..8391472 100644
+--- a/apps/web/lib/film/where-the-light-lands.ts
++++ b/apps/web/lib/film/where-the-light-lands.ts
+@@ -37,9 +37,9 @@ export const CAMERA_TRACKS: Readonly<Record<string, CameraTrack>> = Object.freez
+     id: "camera-flight",
+     world: FILM_WORLD,
+     keyframes: [
+-      { frame: 0, x: 980, y: 700, zoom: 1.02, easing: "easeInOutCubic" },
+-      { frame: 108, x: 1180, y: 780, zoom: 1.04, easing: "easeInOutCubic" },
+-      { frame: 215, x: 1360, y: 830, zoom: 1.03, easing: "easeInOutCubic" },
++      { frame: 0, x: 760, y: 540, zoom: 1.08, easing: "easeInOutCubic" },
++      { frame: 108, x: 1180, y: 520, zoom: 1.12, easing: "easeInOutCubic" },
++      { frame: 215, x: 1540, y: 660, zoom: 1.16, easing: "easeInOutCubic" },
+     ],
+   },
+   "camera-landing": {
+@@ -192,8 +192,8 @@ function characterForShot(composition: CompositionFrame): CharacterPose | null {
+         frame: composition.localFrame,
+         startFrame: 0,
+         endFrame: composition.shot.frameCount - 1,
+-        start: { x: 420, y: 640 },
+-        end: { x: 1150, y: 760 },
++        start: { x: 360, y: 500 },
++        end: { x: 1450, y: 900 },
+         scale: FILM_BIRD_SCALE,
+         seed: 7,
+       });
+diff --git a/packages/character-motion/src/index.ts b/packages/character-motion/src/index.ts
+index 7309be6..54476ad 100644
+--- a/packages/character-motion/src/index.ts
++++ b/packages/character-motion/src/index.ts
+@@ -310,7 +310,7 @@ export function flightPose(options: MotionPathOptions): CharacterPose {
+   const progress = pathProgress(options.frame, options.startFrame, options.endFrame);
+   const eased = smooth(progress);
+   const seed = options.seed ?? 0;
+-  const flap = options.frame * 0.62 + seed;
++  const flap = options.frame * 1.15 + seed;
+   const arc = Math.sin(progress * Math.PI) * 34;
+   return {
+     x: lerp(options.start.x, options.end.x, eased),

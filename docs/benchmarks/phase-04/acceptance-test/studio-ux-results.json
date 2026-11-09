@@ -1,0 +1,53 @@
+{
+  "testedAt": "2026-11-10",
+  "browser": "Playwright Chromium",
+  "dataDir": "isolated temporary directory",
+  "checks": [
+    { "name": "composition page loads", "pass": true },
+    { "name": "four shots visible", "pass": true },
+    { "name": "30-second frame range exposed (0–719)", "pass": true },
+    { "name": "shot buttons jump to shot starts", "pass": true },
+    { "name": "scrubbing updates rendered frame", "pass": true },
+    { "name": "play advances frames", "pass": true, "detail": "528→540" },
+    { "name": "pause stops playback", "pass": true, "detail": "555→555" },
+    { "name": "preview resolution 1280×720 and 1920×1080", "pass": true },
+    { "name": "opening title visible at frame 72", "pass": true },
+    {
+      "name": "invalid export range gives visible error",
+      "pass": true,
+      "detail": "endFrame must be at most 719."
+    },
+    { "name": "short export completes", "pass": true, "detail": "24 frames at 1280×720" },
+    {
+      "name": "completed export is playable",
+      "pass": true,
+      "detail": "duration 1.000 s, 1280×720"
+    },
+    { "name": "duplicate active export rejected", "pass": true, "detail": "HTTP 409" },
+    {
+      "name": "long export cancellation reaches terminal state",
+      "pass": false,
+      "detail": "stuck at rendering; 48-byte partial MP4; process exited without terminal status"
+    },
+    { "name": "existing project route loads demo project", "pass": true },
+    { "name": "existing shot/review route loads", "pass": true }
+  ],
+  "cancellation": {
+    "jobId": "dc70309b-cfe9-4951-9a69-4ea289e3fa60",
+    "beforeCancel": "rendering",
+    "cancelRequested": true,
+    "after60Seconds": "rendering",
+    "renderedFrames": 18,
+    "partialOutputBytes": 48,
+    "processStillRunning": false
+  },
+  "pageErrors": [
+    "Failed to load resource: the server responded with a status of 400 (Bad Request) — expected from the deliberate invalid-export test"
+  ],
+  "artifacts": {
+    "screenshots": "docs/benchmarks/phase-04/acceptance-test/studio-screenshots/",
+    "previewFrames": "docs/benchmarks/phase-04/acceptance-test/comparison/preview-vs-export/",
+    "partialExport": "outputs/phase-04-acceptance/cancelled-partial.mp4",
+    "cancelledStatus": "outputs/phase-04-acceptance/cancelled-job-status.json"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "video": {
+    "readyState": 4,
+    "duration": 1,
+    "videoWidth": 1280,
+    "videoHeight": 720,
+    "error": null
+  },
+  "longJob": "dc70309b-cfe9-4951-9a69-4ea289e3fa60",
+  "beforeCancel": "rendering",
+  "cancelRes": {
+    "job": {
+      "id": "dc70309b-cfe9-4951-9a69-4ea289e3fa60",
+      "status": "rendering",
+      "progress": 0.025,
+      "startFrame": 0,
+      "endFrame": 719,
+      "totalFrames": 720,
+      "renderedFrames": 18,
+      "currentFrame": 17,
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "outputPath": "outputs/where-the-light-lands/studio-export-dc70309b-cfe9-4951-9a69-4ea289e3fa60.mp4",
+      "startedAt": "2026-11-09T21:20:34.581Z",
+      "updatedAt": "2026-11-09T21:20:38.383Z",
+      "finishedAt": null,
+      "pid": 79700,
+      "renderDurationMs": null,
+      "encodingDurationMs": null,
+      "error": null,
+      "cancelRequested": true
+    }
+  },
+  "afterCancel": {
+    "id": "dc70309b-cfe9-4951-9a69-4ea289e3fa60",
+    "status": "rendering",
+    "progress": 0.025,
+    "startFrame": 0,
+    "endFrame": 719,
+    "totalFrames": 720,
+    "renderedFrames": 18,
+    "currentFrame": 17,
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "outputPath": "outputs/where-the-light-lands/studio-export-dc70309b-cfe9-4951-9a69-4ea289e3fa60.mp4",
+    "startedAt": "2026-11-09T21:20:34.581Z",
+    "updatedAt": "2026-11-09T21:20:38.383Z",
+    "finishedAt": null,
+    "pid": 79700,
+    "renderDurationMs": null,
+    "encodingDurationMs": null,
+    "error": null,
+    "cancelRequested": true
+  },
+  "invalidExportAlert": "endFrame must be at most 719."
+}

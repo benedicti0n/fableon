@@ -94,6 +94,18 @@ export function readBodyBoolean(body: Record<string, unknown>, key: string): boo
   return body[key] === true;
 }
 
+export function readBodyStringArray(
+  body: Record<string, unknown>,
+  key: string,
+): string[] {
+  const value = body[key];
+  if (value === undefined || value === null) return [];
+  if (!Array.isArray(value) || value.some((item) => typeof item !== "string")) {
+    throw new StudioError("invalid_input", `${key} must be an array of strings.`);
+  }
+  return value.map((item) => (item as string).trim()).filter((item) => item.length > 0);
+}
+
 export function readBodyNullableNumber(body: Record<string, unknown>, key: string): number | null {
   const value = body[key];
   if (value === undefined || value === null || value === "") return null;

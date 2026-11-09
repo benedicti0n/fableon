@@ -19,6 +19,7 @@ import {
 import type { StudioProject, StudioTake } from "@/lib/studio/types";
 
 import { ComparisonPanel } from "./comparison-panel";
+import { RegenerationPanel } from "./regeneration-panel";
 import { ReviewPanel } from "./review-panel";
 import { MethodBadge, ReviewStatusBadge } from "./status-badges";
 import { ShotProperties } from "./shot-properties";
@@ -313,6 +314,16 @@ export function ShotWorkspace({
               project={project}
               shot={shot}
               selectedTakeId={selectedTake?.id ?? null}
+            />
+          </Panel>
+
+          <Panel title="Prepare regeneration" status="Planning only">
+            <RegenerationPanel
+              key={shot.id}
+              project={project}
+              shot={shot}
+              selectedTake={selectedTake}
+              onUpdated={handleProjectUpdated}
             />
           </Panel>
 

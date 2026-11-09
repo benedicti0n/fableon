@@ -3,6 +3,7 @@ import type {
   IssueSeverity,
   RegenerationStatus,
   RenderingMethod,
+  ReviewIssue,
   ReviewStatus,
   StudioShot,
   StudioTake,
@@ -85,4 +86,33 @@ export function formatDateTime(value: string): string {
 
 export function mediaUrl(projectId: string, mediaId: string): string {
   return `/api/studio/media/${encodeURIComponent(mediaId)}?projectId=${encodeURIComponent(projectId)}`;
+}
+
+export function issueGuidance(issue: ReviewIssue): string {
+  const correction = issue.description.trim();
+  switch (issue.category) {
+    case "character_inconsistency":
+      return `Preserve the approved character identity and correct: ${correction}`;
+    case "anatomy_defect":
+      return `Preserve natural anatomy and correct the attachment or anatomy issue: ${correction}`;
+    case "temporal_flicker":
+      return `Maintain temporal stability and remove the flicker or popping: ${correction}`;
+    case "motion_problem":
+      return `Keep the motion physically plausible and correct: ${correction}`;
+    case "background_morphing":
+      return `Preserve the background geometry and correct the morphing: ${correction}`;
+    case "composition_issue":
+      return `Preserve the intended composition and correct: ${correction}`;
+    case "lighting_issue":
+      return `Preserve the lighting direction and correct: ${correction}`;
+    case "audio_issue":
+      return `Preserve the intended audio and correct: ${correction}`;
+    case "other":
+      return `Correct: ${correction}`;
+  }
+}
+
+export function buildRegenerationGuidance(issues: readonly ReviewIssue[]): string {
+  if (issues.length === 0) return "";
+  return issues.map((issue) => `- ${issueGuidance(issue)}`).join("\n");
 }

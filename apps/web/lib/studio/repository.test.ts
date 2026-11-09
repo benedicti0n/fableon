@@ -10,6 +10,7 @@ import {
   addShot,
   addTake,
   createProject,
+  createRegenerationRequest,
   getProjectDir,
   getProjectFile,
   getProjectMediaDir,
@@ -19,6 +20,7 @@ import {
   setTakeReview,
   updateIssue,
   updateProjectMetadata,
+  updateRegenerationRequestStatus,
   writeProject,
 } from "./repository";
 import type { StudioMediaAsset, StudioProject } from "./types";
@@ -351,6 +353,73 @@ describe("studio project storage", () => {
     const resolvedIssue = resolved.shots[0]?.takes[0]?.issues[0];
     expect(resolvedIssue?.status).toBe("resolved");
     expect(resolvedIssue?.resolvedAt).not.toBeNull();
+  });
+
+  it("persists regeneration requests with defect references and status changes", async () => {
+    const project = await projectWithMedia();
+    const withShot = await addShot(project.id, {
+      title: "Regeneration",
+      description: "",
+      targetDurationSeconds: 3,
+      generationPrompt: "Bird landing.",
+      renderingMethod: "ai-video",
+      referenceImageMediaId: null,
+    });
+    const shotId = withShot.shots[0]?.id;
+    expect(shotId).toBeTruthy();
+    const withTake = await addTake(project.id, shotId!, {
+      sourceType: "ai-video",
+      mediaId: "media-1",
+      provider: "Google",
+      model: "gemini-omni-1.2-flash",
+      generationPrompt: "Bird landing.",
+      durationSeconds: 3.029,
+      width: 1280,
+      height: 720,
+      frameRate: 24,
+      codec: "h264",
+      hasAudio: true,
+      fileSizeBytes: 1024,
+      sha256: "a".repeat(64),
+    });
+    const takeId = withTake.shots[0]?.takes[0]?.id;
+    expect(takeId).toBeTruthy();
+    const withIssue = await addIssue(project.id, shotId!, takeId!, {
+      category: "anatomy_defect",
+      severity: "critical",
+      description: "Far wing detaches.",
+      timestampSeconds: 1.1,
+      frameImageMediaId: null,
+    });
+    const issueId = withIssue.shots[0]?.takes[0]?.issues[0]?.id;
+    expect(issueId).toBeTruthy();
+
+    const prepared = await createRegenerationRequest(project.id, shotId!, {
+      sourceTakeId: takeId!,
+      providerLabel: "Google",
+      modelLabel: "gemini-omni-1.2-flash",
+      prompt: "Bird landing with a clean wing fold.",
+      startReferenceMediaId: null,
+      endReferenceMediaId: null,
+      desiredDurationSeconds: 3,
+      desiredResolution: "720p",
+      preserveInstructions: "Preserve the forest and palette.",
+      changeInstructions: "Fix the far wing attachment.",
+      defectIssueIds: [issueId!],
+      budgetCeilingUsd: 0.25,
+      status: "ready_for_authorization",
+    });
+    const request = prepared.regenerationRequests[0];
+    expect(request?.sourceTakeId).toBe(takeId);
+    expect(request?.defectIssueIds).toEqual([issueId]);
+    expect(request?.budgetCeilingUsd).toBe(0.25);
+    expect(request?.status).toBe("ready_for_authorization");
+
+    const reloaded = await readProject(project.id);
+    expect(reloaded.regenerationRequests[0]?.prompt).toContain("clean wing fold");
+
+    const cancelled = await updateRegenerationRequestStatus(project.id, request!.id, "cancelled");
+    expect(cancelled.regenerationRequests[0]?.status).toBe("cancelled");
   });
 
   it("generates collision-resistant project and shot IDs", async () => {

@@ -94,6 +94,16 @@ export function readBodyBoolean(body: Record<string, unknown>, key: string): boo
   return body[key] === true;
 }
 
+export function readBodyNullableNumber(body: Record<string, unknown>, key: string): number | null {
+  const value = body[key];
+  if (value === undefined || value === null || value === "") return null;
+  const parsed = typeof value === "number" ? value : Number(value);
+  if (!Number.isFinite(parsed)) {
+    throw new StudioError("invalid_input", `${key} must be a number or null.`);
+  }
+  return parsed;
+}
+
 export function readFormString(
   form: FormData,
   key: string,

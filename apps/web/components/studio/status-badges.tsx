@@ -38,7 +38,10 @@ export function RegenerationStatusBadge({ status }: { status: RegenerationStatus
 
 export function IssueSeverityBadge({ severity }: { severity: IssueSeverity }) {
   return (
-    <Badge variant={severity === "critical" ? "outline" : "muted"}>
+    <Badge
+      variant={severity === "critical" ? "outline" : "muted"}
+      className={severity === "critical" ? "border-clay-500/60 text-clay-500" : ""}
+    >
       {ISSUE_SEVERITY_LABELS[severity]}
     </Badge>
   );

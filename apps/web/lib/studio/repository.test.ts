@@ -17,6 +17,7 @@ import {
   readProject,
   reorderShots,
   setTakeReview,
+  updateIssue,
   updateProjectMetadata,
   writeProject,
 } from "./repository";
@@ -40,15 +41,15 @@ afterEach(async () => {
   await rm(tempRoot, { recursive: true, force: true });
 });
 
-function mediaAsset(): StudioMediaAsset {
+function mediaAsset(id = "media-1", hash = "a"): StudioMediaAsset {
   return {
-    id: "media-1",
+    id,
     kind: "video",
-    fileName: "media-1.mp4",
+    fileName: `${id}.mp4`,
     originalName: "original-video.mp4",
     mimeType: "video/mp4",
     sizeBytes: 1024,
-    sha256: "a".repeat(64),
+    sha256: hash.repeat(64),
     width: 1280,
     height: 720,
     durationSeconds: 3.029,
@@ -264,6 +265,92 @@ describe("studio project storage", () => {
     expect(summaries[0]?.title).toBe("New title");
     expect(summaries[0]?.shotCount).toBe(0);
     expect(summaries[0]?.needsReviewShotCount).toBe(0);
+  });
+
+  it("keeps review state and issues independent across takes", async () => {
+    const project = await createProject({
+      title: "Take independence",
+      description: "",
+      targetFrameRate: 24,
+      targetWidth: 1920,
+      targetHeight: 1080,
+    });
+    await mkdir(getProjectMediaDir(project.id), { recursive: true });
+    await writeFile(path.join(getProjectMediaDir(project.id), "media-1.mp4"), "fake-video-1");
+    await writeFile(path.join(getProjectMediaDir(project.id), "media-2.mp4"), "fake-video-2");
+    await writeProject({
+      ...project,
+      media: [mediaAsset("media-1", "a"), mediaAsset("media-2", "b")],
+    });
+    const withShot = await addShot(project.id, {
+      title: "Two takes",
+      description: "",
+      targetDurationSeconds: 3,
+      generationPrompt: "",
+      renderingMethod: "ai-video",
+      referenceImageMediaId: null,
+    });
+    const shotId = withShot.shots[0]?.id;
+    expect(shotId).toBeTruthy();
+    const baseTake = {
+      sourceType: "ai-video" as const,
+      provider: null,
+      model: null,
+      generationPrompt: "",
+      durationSeconds: 3,
+      width: 1280,
+      height: 720,
+      frameRate: 24,
+      codec: "h264",
+      hasAudio: true,
+    };
+    const first = await addTake(project.id, shotId!, {
+      ...baseTake,
+      mediaId: "media-1",
+      fileSizeBytes: 1024,
+      sha256: "a".repeat(64),
+    });
+    const takeOneId = first.shots[0]?.takes[0]?.id;
+    const second = await addTake(project.id, shotId!, {
+      ...baseTake,
+      mediaId: "media-2",
+      fileSizeBytes: 2048,
+      sha256: "b".repeat(64),
+    });
+    const takeTwoId = second.shots[0]?.takes[1]?.id;
+    expect(takeOneId).toBeTruthy();
+    expect(takeTwoId).toBeTruthy();
+
+    const withIssue = await addIssue(project.id, shotId!, takeOneId!, {
+      category: "anatomy_defect",
+      severity: "critical",
+      description: "Detached wing",
+      timestampSeconds: 1.1,
+      frameImageMediaId: null,
+    });
+    const issueId = withIssue.shots[0]?.takes[0]?.issues[0]?.id;
+    expect(issueId).toBeTruthy();
+
+    const takeTwoApproved = await setTakeReview(
+      project.id,
+      shotId!,
+      takeTwoId!,
+      "approved",
+      "Second take is clean.",
+      false,
+    );
+    const takeOne = takeTwoApproved.shots[0]?.takes.find((take) => take.id === takeOneId);
+    const takeTwo = takeTwoApproved.shots[0]?.takes.find((take) => take.id === takeTwoId);
+    expect(takeOne?.reviewStatus).toBe("not_reviewed");
+    expect(takeOne?.issues[0]?.status).toBe("open");
+    expect(takeTwo?.reviewStatus).toBe("approved");
+
+    const resolved = await updateIssue(project.id, shotId!, takeOneId!, issueId!, {
+      status: "resolved",
+    });
+    const resolvedIssue = resolved.shots[0]?.takes[0]?.issues[0];
+    expect(resolvedIssue?.status).toBe("resolved");
+    expect(resolvedIssue?.resolvedAt).not.toBeNull();
   });
 
   it("generates collision-resistant project and shot IDs", async () => {

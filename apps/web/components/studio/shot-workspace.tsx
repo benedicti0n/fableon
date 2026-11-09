@@ -18,6 +18,8 @@ import {
 } from "@/lib/studio/model";
 import type { StudioProject, StudioTake } from "@/lib/studio/types";
 
+import { ComparisonPanel } from "./comparison-panel";
+import { ReviewPanel } from "./review-panel";
 import { MethodBadge, ReviewStatusBadge } from "./status-badges";
 import { ShotProperties } from "./shot-properties";
 import { TakeHistory } from "./take-history";
@@ -283,6 +285,36 @@ export function ShotWorkspace({
               />
             </Panel>
           </div>
+
+          <Panel
+            title="Review"
+            status={selectedTake ? `Take #${selectedTake.takeNumber}` : "No take"}
+          >
+            {selectedTake ? (
+              <ReviewPanel
+                key={selectedTake.id}
+                projectId={projectId}
+                shotId={shotId}
+                take={selectedTake}
+                onUpdated={handleProjectUpdated}
+              />
+            ) : (
+              <EmptyState
+                title="No take to review"
+                description="Import a take before recording review status or visual defects."
+                phase="Review"
+              />
+            )}
+          </Panel>
+
+          <Panel title="Compare takes" status="Manual sync">
+            <ComparisonPanel
+              key={`${shot.id}-${shot.takes.length}`}
+              project={project}
+              shot={shot}
+              selectedTakeId={selectedTake?.id ?? null}
+            />
+          </Panel>
 
           <Panel title="Take metadata" status="Read-only">
             {selectedTake ? (

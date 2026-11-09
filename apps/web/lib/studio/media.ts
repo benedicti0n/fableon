@@ -252,7 +252,7 @@ export async function importMediaFile(
     const mediaId = randomUUID();
     const fileName = `${mediaId}.${detected.extension}`;
     const mediaDir = getProjectMediaDir(projectId);
-    const destination = path.join(mediaDir, fileName);
+    const destination = path.join(/* turbopackIgnore: true */ mediaDir, fileName);
     await mkdir(mediaDir, { recursive: true });
     await copyFile(sourcePath, destination, constants.COPYFILE_EXCL);
 

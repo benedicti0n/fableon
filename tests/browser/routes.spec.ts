@@ -7,6 +7,10 @@ const ROUTES = [
   { path: "/benchmarks/phase-02", content: /Phase 2/ },
   { path: "/benchmarks/phase-02-5", content: /The Little Bird Comes Home/ },
   { path: "/benchmarks/phase-02-6", content: /Imported Artwork, Same Motion/ },
+  {
+    path: "/benchmarks/phase-02-7-gate2",
+    content: /Production Renderer Proof/,
+  },
 ] as const;
 
 test.describe("Preserved application routes", () => {

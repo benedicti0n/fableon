@@ -5,16 +5,17 @@ illustrated, narrated animated film. The product is designed around a
 renderer-independent pipeline — from story planning and painterly asset
 generation through deterministic motion, camera work, sound, and video export.
 
-> **Status: Phase 2 — Canvas paint preview.** The repository now renders real
-> 1920×1080 frames from validated scene data using procedural Fableon Paint
-> artwork and a Canvas 2D backend. The Studio supports live frame preview,
-> elapsed-time playback, and PNG export. Artistic quality is pending human
-> review; AI, audio, camera, and video export remain future work.
+> **Status: Phase 3 — AI video studio workspace.** The repository now includes
+> a local-first project workspace for AI-video and deterministic shots. It
+> imports real MP4 takes, inspects media with FFprobe, previews and scrubs
+> video, records take-specific review issues, compares takes, and prepares
+> regeneration requests. It does **not** call a paid video provider in Phase 3.
 
 ## Requirements
 
 - **Node.js 22.13+ or 24+** (Node 24 LTS is the recommended baseline; see `.nvmrc`)
 - **pnpm 11+** (`corepack enable` is the simplest way to provision it)
+- **FFmpeg/FFprobe** on `PATH` for MP4 metadata inspection during import
 
 ## Getting started
 
@@ -43,6 +44,43 @@ transforms, and export the current canvas frame as a 1920×1080 PNG.
 All artwork is generated locally by the Phase 2 paint benchmark. No AI imagery
 or external art is used. The five-frame visual benchmark and provenance are in
 [docs/benchmarks/phase-02/](docs/benchmarks/phase-02/).
+
+## Phase 3 AI video studio
+
+Open [http://localhost:3000/studio/projects](http://localhost:3000/studio/projects)
+for the AI-video workspace. The existing `/studio` timeline inspector and
+`/studio/assets` illustration workspace remain available from the Studio
+navigation.
+
+The Phase 3 workflow is:
+
+```text
+Create project → add shot → import MP4 take → preview/scrub → inspect metadata
+→ attach starting frame → annotate visual defects → set review status
+→ compare takes → prepare regeneration request → reload/reopen and recover state
+```
+
+A real demonstration project can be imported from the Projects dashboard. It
+contains the Phase 2.8 Gemini Omni take and the Phase 2.7 Gate 2 deterministic
+take, with review issues grounded in the published evaluations. Importing the
+demo again reopens the same project without duplicating media or shots.
+
+### Local data and limits
+
+- Project manifests and immutable media copies live under `.fableon-data/`,
+  which is ignored by Git.
+- Set `FABLEON_DATA_DIR` to use a different local directory.
+- Video uploads default to a 100 MB limit (`FABLEON_MAX_VIDEO_MB`); images
+  default to 20 MB (`FABLEON_MAX_IMAGE_MB`).
+- Media is streamed through constrained application routes with HTTP range
+  support for seeking.
+- This is a **local, single-user** storage design. Do not expose the write/media
+  APIs as an unauthenticated public production service. It is not suitable for
+  stateless serverless hosting.
+
+Phase 3 does not execute paid generation. The regeneration form persists a
+draft or ready-for-authorization request only; provider execution requires a
+separate authorized workflow.
 
 ## Commands
 
@@ -87,7 +125,11 @@ Future packages such as the motion engine, camera engine, asset providers,
 audio engine, and video compositor are documented in
 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). They are intentionally not
 scaffolded before their phases begin. Scene data, deterministic evaluation, the
-Canvas 2D renderer, and procedural paint primitives are now real.
+Canvas 2D renderer, procedural paint primitives, and the Phase 3 local Studio
+workspace are now real.
+
+Local Phase 3 project data is created under `.fableon-data/` at runtime. It is
+ignored by Git and must not be committed or treated as portable project data.
 
 ## Benchmark artifacts
 

@@ -1,10 +1,11 @@
 # Fableon Architecture
 
-> **Status:** Phase 2 — Canvas paint preview. The versioned scene schema,
-> deterministic timeline, procedural paint primitives, Canvas 2D renderer,
-> local image asset resolution, and live Studio preview exist today. Artistic
-> quality remains under human review. Motion, camera, AI, audio, and video
-> composition remain provisional future work.
+> **Status:** Phase 3 — Local AI video studio. The versioned scene schema,
+> deterministic timeline, procedural paint primitives, Canvas 2D renderer, live
+> Studio preview, local project/shot/take store, media import, review workflow,
+> take comparison, and regeneration planning exist today. Artistic quality
+> remains under human review. Paid generation execution, motion, camera, AI
+> story planning, audio, and final video composition remain future work.
 
 ## 1. Architectural goals
 
@@ -327,9 +328,71 @@ input hash, frame rate, resolution, codec settings, and software versions.
 MVP target: 1920×1080, 24 fps, H.264 MP4 with AAC audio, 45–60 seconds.
 Longer videos and higher resolutions are future work.
 
+## 12.1 Phase 3 local Studio workspace (implemented)
+
+Phase 3 adds the first production-facing workspace around imported animation.
+It is deliberately separate from the deterministic scene schema:
+
+```text
+StudioProject
+├── id, title, description, target frame/render settings
+├── shotOrder[]
+├── shots[]
+│   └── StudioShot
+│       ├── id, title, description, target duration
+│       ├── renderingMethod: ai-video | deterministic
+│       ├── referenceImageMediaId?
+│       ├── generationPrompt
+│       ├── currentTakeId?
+│       └── takes[]
+│           └── StudioTake
+│               ├── immutable mediaId + copied metadata/hash
+│               ├── sourceType, provider, model, prompt
+│               ├── reviewStatus + reviewHistory[]
+│               └── issues[]
+├── media[]  (video/image assets with FFprobe metadata and SHA-256)
+└── regenerationRequests[]
+```
+
+Domain boundaries:
+
+- `apps/web/lib/studio/types.ts` — serializable Studio contracts shared by
+  server and client code.
+- `apps/web/lib/studio/validation.ts` — strict read/write validation, ID and
+  media filename allowlists, cross-reference checks.
+- `apps/web/lib/studio/repository.ts` — atomic JSON manifests, project locks,
+  project/shot/take/review/regeneration mutations.
+- `apps/web/lib/studio/media.ts` — magic-byte validation, FFprobe inspection,
+  hashing, immutable copies, duplicate reuse, safe media paths, range parsing.
+- `apps/web/lib/studio/demo.ts` — explicit idempotent demo importer.
+- `apps/web/app/api/studio/...` — constrained route handlers for local writes,
+  media upload, review, regeneration planning, and media streaming.
+- `apps/web/app/studio/projects/...` and `components/studio/` — responsive
+  Studio UI and native video preview.
+
+Persistence is a local-first filesystem repository:
+
+```text
+.fableon-data/
+└── projects/<projectId>/
+    ├── project.json
+    └── media/<mediaId>.<ext>
+```
+
+Manifest writes use a temporary file followed by rename. Reads never repair
+invalid JSON or invalid cross-references silently. Media is copied, never
+modified; take metadata stores a snapshot of the imported file. The store is
+intended for local development or a persistent single server. It has no
+authentication boundary and must not be exposed as an unauthenticated public
+production API.
+
+Phase 3 does **not** execute paid generation. Regeneration requests are durable
+planning records only. Provider adapters and authorization remain future work.
+
 ## 13. Asset storage
 
-Phase 0 stores no user assets. The intended local-first model:
+Phase 0 stores no user assets. Phase 3 implements the first local Studio store
+described in section 12.1. The broader intended local-first model:
 
 - A project directory with a JSON project/scene document and an asset
   manifest.

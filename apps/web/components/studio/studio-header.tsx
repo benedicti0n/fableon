@@ -29,6 +29,12 @@ export function StudioHeader() {
             Projects
           </Link>
           <Link
+            href="/studio/composition"
+            className="rounded-md px-3 py-2 text-mist-300 transition-colors hover:bg-ink-850 hover:text-paper-50"
+          >
+            Composition
+          </Link>
+          <Link
             href="/studio"
             className="rounded-md px-3 py-2 text-mist-300 transition-colors hover:bg-ink-850 hover:text-paper-50"
           >

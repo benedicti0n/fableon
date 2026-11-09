@@ -1,0 +1,10 @@
+{
+  "firstFrameRenderMs": 113.43499999999995,
+  "medianFrameRenderMs": 246.06662500000675,
+  "p95FrameRenderMs": 325.1365420000002,
+  "totalFrameRenderMs": 181089,
+  "encodingMs": 1043,
+  "totalWallMs": 182132,
+  "renderedFrames": 720,
+  "outputBytes": 15419466
+}

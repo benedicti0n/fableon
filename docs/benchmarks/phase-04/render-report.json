@@ -1,0 +1,40 @@
+{
+  "status": "completed",
+  "jobId": "cli",
+  "title": "Where the Light Lands",
+  "specVersion": "where-the-light-lands-v1",
+  "specHash": "ecacc59ab78d851fc4e332ea4ffe608724d3827ed7bbafe9d469c03f41ff61ba",
+  "config": {
+    "startFrame": 0,
+    "endFrame": 719,
+    "totalFrames": 720,
+    "fps": 24,
+    "width": 1920,
+    "height": 1080,
+    "crf": 18
+  },
+  "performance": {
+    "firstFrameRenderMs": 113.43499999999995,
+    "medianFrameRenderMs": 246.06662500000675,
+    "p95FrameRenderMs": 325.1365420000002,
+    "totalFrameRenderMs": 181089,
+    "encodingMs": 1043,
+    "totalWallMs": 182132,
+    "renderedFrames": 720,
+    "outputBytes": 15419466
+  },
+  "ffprobe": {
+    "codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "frameRate": "24/1",
+    "durationSeconds": 30,
+    "frameCount": 720,
+    "hasAudio": false,
+    "decodeOk": true,
+    "decodeStderr": ""
+  },
+  "outputPath": "/Users/benediction/Downloads/Web Dev projects/fableon/outputs/where-the-light-lands/final.mp4",
+  "outputRelativePath": "outputs/where-the-light-lands/final.mp4",
+  "errors": []
+}

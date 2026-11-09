@@ -1,0 +1,36 @@
+{
+  "projectId": "where-the-light-lands-30s",
+  "filmTitle": "Where the Light Lands",
+  "filmSpecVersion": "where-the-light-lands-v1",
+  "filmSpecHash": "ecacc59ab78d851fc4e332ea4ffe608724d3827ed7bbafe9d469c03f41ff61ba",
+  "renderConfig": {
+    "startFrame": 0,
+    "endFrame": 719,
+    "totalFrames": 720,
+    "fps": 24,
+    "width": 1920,
+    "height": 1080,
+    "crf": 18
+  },
+  "renderStartedAt": "2026-11-09T19:22:29.518Z",
+  "renderFinishedAt": "2026-11-09T19:25:36.991Z",
+  "renderDurationMs": 181089,
+  "encodingDurationMs": 1043,
+  "outputPath": "/Users/benediction/Downloads/Web Dev projects/fableon/outputs/where-the-light-lands/final.mp4",
+  "outputRelativePath": "outputs/where-the-light-lands/final.mp4",
+  "outputBytes": 15419466,
+  "durationSeconds": 30,
+  "audioPresent": false,
+  "ffprobe": {
+    "codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "frameRate": "24/1",
+    "durationSeconds": 30,
+    "frameCount": 720,
+    "hasAudio": false,
+    "decodeOk": true,
+    "decodeStderr": ""
+  },
+  "errorStatus": null
+}

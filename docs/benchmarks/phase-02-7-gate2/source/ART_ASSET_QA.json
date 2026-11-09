@@ -1,0 +1,109 @@
+{
+  "partsCount": 9,
+  "images": [
+    {
+      "name": "beak",
+      "dimensions": [
+        65,
+        40
+      ],
+      "hasAlpha": true,
+      "transparentPixels": 1451,
+      "sha256": "6b5608391fbcbe1b3401da6d13c81247013223f74525bd4614fc34fe05a551b1"
+    },
+    {
+      "name": "body",
+      "dimensions": [
+        266,
+        161
+      ],
+      "hasAlpha": true,
+      "transparentPixels": 14431,
+      "sha256": "e6fc1f902f6b342279f1976f7155070e48de6683c64d9dd012c42cecacc98d07"
+    },
+    {
+      "name": "eye",
+      "dimensions": [
+        45,
+        45
+      ],
+      "hasAlpha": true,
+      "transparentPixels": 971,
+      "sha256": "c0db91cd3041348937e0c41a121833b087166ff69dd1f5e360f6f8a462dc6f0a"
+    },
+    {
+      "name": "head",
+      "dimensions": [
+        205,
+        160
+      ],
+      "hasAlpha": true,
+      "transparentPixels": 14397,
+      "sha256": "cfeeaf5777099e9ee814e1dd41fdcc3275f37b1e10a293287b6bdf4f48dab9b3"
+    },
+    {
+      "name": "leg-left",
+      "dimensions": [
+        93,
+        138
+      ],
+      "hasAlpha": true,
+      "transparentPixels": 10369,
+      "sha256": "7f9978cb3b84bf0f1904ee36ab3cc078c785312420289dcf9181cf8b7327e142"
+    },
+    {
+      "name": "leg-right",
+      "dimensions": [
+        101,
+        121
+      ],
+      "hasAlpha": true,
+      "transparentPixels": 9887,
+      "sha256": "cfe62c9d85cb35dcb1370b6328794ffb714abc750933c9d1122a9726b51d33c0"
+    },
+    {
+      "name": "tail",
+      "dimensions": [
+        131,
+        119
+      ],
+      "hasAlpha": true,
+      "transparentPixels": 8368,
+      "sha256": "a6a3b4b4c1db22b03359ab0648084c5dd483694d9fb0dd5faaf0eae45d3ed84c"
+    },
+    {
+      "name": "wing-far",
+      "dimensions": [
+        163,
+        149
+      ],
+      "hasAlpha": true,
+      "transparentPixels": 12377,
+      "sha256": "c963b91ead947578324f5e240c416b21ab67f9406badf8111967505f4b646b01"
+    },
+    {
+      "name": "wing-near",
+      "dimensions": [
+        168,
+        149
+      ],
+      "hasAlpha": true,
+      "transparentPixels": 12157,
+      "sha256": "7f2d341bb08f03979c4c5e2d26810e0e2f84efa9c932062146b79b0d0f9d8404"
+    }
+  ],
+  "video": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 960,
+        "height": 540,
+        "avg_frame_rate": "24/1",
+        "nb_frames": "48"
+      }
+    ]
+  },
+  "gate2": "candidate_needs_user_review",
+  "integrationWithFableonStudio": "NOT_VERIFIED \u2014 no local project checkout in this session"
+}

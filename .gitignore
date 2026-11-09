@@ -42,3 +42,6 @@ docs/benchmarks/phase-02-6/frames/
 *.log
 npm-debug.log*
 pnpm-debug.log*
+
+# Incoming artwork archives
+incoming/

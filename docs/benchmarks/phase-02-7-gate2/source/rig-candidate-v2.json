@@ -1,0 +1,278 @@
+{
+  "format": "fableon.gate2-repair-candidate",
+  "version": 2,
+  "status": "NOT_APPROVED_ARTWORK",
+  "canonicalFormat": "NOT a validated fableon.illustration-pack manifest",
+  "reference": "references/approved-master-reference.png",
+  "previewFile": "../../previews/pose-contact-sheet.png",
+  "rigCoordinateSpace": "diagnostic 960x540 test; source-space pivots in scripts",
+  "parts": [
+    {
+      "id": "tail",
+      "path": "parts/tail.png",
+      "dimensions": [
+        131,
+        119
+      ],
+      "sha256": "a6a3b4b4c1db22b03359ab0648084c5dd483694d9fb0dd5faaf0eae45d3ed84c",
+      "provenance": "previous Gate 2 hand-extracted sprite crop (lower resolution)",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "wing-far",
+      "path": "parts/wing-far.png",
+      "dimensions": [
+        163,
+        149
+      ],
+      "sha256": "c963b91ead947578324f5e240c416b21ab67f9406badf8111967505f4b646b01",
+      "provenance": "previous Gate 2 hand-extracted sprite crop (lower resolution)",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "leg-left",
+      "path": "parts/leg-left.png",
+      "dimensions": [
+        93,
+        138
+      ],
+      "sha256": "7f9978cb3b84bf0f1904ee36ab3cc078c785312420289dcf9181cf8b7327e142",
+      "provenance": "previous Gate 2 hand-extracted sprite crop (lower resolution)",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "leg-right",
+      "path": "parts/leg-right.png",
+      "dimensions": [
+        101,
+        121
+      ],
+      "sha256": "cfe62c9d85cb35dcb1370b6328794ffb714abc750933c9d1122a9726b51d33c0",
+      "provenance": "previous Gate 2 hand-extracted sprite crop (lower resolution)",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "body",
+      "path": "parts/body.png",
+      "dimensions": [
+        266,
+        161
+      ],
+      "sha256": "e6fc1f902f6b342279f1976f7155070e48de6683c64d9dd012c42cecacc98d07",
+      "provenance": "new inferred painting from source reference (feather coverage not in source crop)",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "wing-near",
+      "path": "parts/wing-near.png",
+      "dimensions": [
+        168,
+        149
+      ],
+      "sha256": "7f2d341bb08f03979c4c5e2d26810e0e2f84efa9c932062146b79b0d0f9d8404",
+      "provenance": "previous Gate 2 hand-extracted sprite crop (lower resolution)",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "head",
+      "path": "parts/head.png",
+      "dimensions": [
+        205,
+        160
+      ],
+      "sha256": "cfeeaf5777099e9ee814e1dd41fdcc3275f37b1e10a293287b6bdf4f48dab9b3",
+      "provenance": "new inferred painting from source reference (eye/beak not present)",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "beak",
+      "path": "parts/beak.png",
+      "dimensions": [
+        65,
+        40
+      ],
+      "sha256": "6b5608391fbcbe1b3401da6d13c81247013223f74525bd4614fc34fe05a551b1",
+      "provenance": "previous Gate 2 hand-extracted sprite crop (lower resolution)",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "eye",
+      "path": "parts/eye.png",
+      "dimensions": [
+        45,
+        45
+      ],
+      "sha256": "c0db91cd3041348937e0c41a121833b087166ff69dd1f5e360f6f8a462dc6f0a",
+      "provenance": "previous Gate 2 hand-extracted sprite crop (lower resolution)",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    }
+  ],
+  "knownLimitations": [
+    "Nine source images are not true artist-authored layers; they were extracted from printed reference boards.",
+    "Body/head reconstructed illustrations are model-generated visual estimates and require designer signoff.",
+    "Native sprite resolution is limited; upscaling does not recover actual detail.",
+    "Composite and motion tests reveal seams and registration problems that require QA.",
+    "Diagnostic test uses separate PIL renderer, not application repo Fableon renderer; it does not certify /studio/assets compatibility.",
+    "No production-ready import ZIP or Fableon v1 manifest is claimed."
+  ],
+  "previewRig": {
+    "description": "Provisional Pillow prototype; convert via Fableon /studio/assets and the production illustration-pack validator before use.",
+    "coordinateSystem": "960x540 canvas, x right, y down; joints relative to body top-left unless parent=head; preview body at (300,225) in perched pose",
+    "drawOrderBackToFront": [
+      "tail",
+      "wing-far",
+      "leg-left",
+      "leg-right",
+      "body",
+      "wing-near",
+      "head",
+      "beak",
+      "eye"
+    ],
+    "joints": {
+      "body": {
+        "parent": null,
+        "pivot": [
+          0,
+          0
+        ],
+        "localJoint": [
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "head": {
+        "parent": "body",
+        "pivot": [
+          0,
+          0
+        ],
+        "localJoint": [
+          151,
+          -34
+        ],
+        "scale": 1
+      },
+      "eye": {
+        "parent": "head",
+        "pivot": [
+          22,
+          22
+        ],
+        "localJoint": [
+          140,
+          56
+        ],
+        "scale": 0.62
+      },
+      "beak": {
+        "parent": "head",
+        "pivot": [
+          8,
+          22
+        ],
+        "localJoint": [
+          175,
+          65
+        ],
+        "scale": 0.72
+      },
+      "wing-near": {
+        "parent": "body",
+        "pivot": [
+          148,
+          23
+        ],
+        "localJoint": [
+          145,
+          65
+        ],
+        "scale": 1
+      },
+      "wing-far": {
+        "parent": "body",
+        "pivot": [
+          147,
+          25
+        ],
+        "localJoint": [
+          163,
+          51
+        ],
+        "scale": 0.94
+      },
+      "tail": {
+        "parent": "body",
+        "pivot": [
+          118,
+          18
+        ],
+        "localJoint": [
+          77,
+          114
+        ],
+        "scale": 0.9
+      },
+      "leg-left": {
+        "parent": "body",
+        "pivot": [
+          53,
+          13
+        ],
+        "localJoint": [
+          142,
+          145
+        ],
+        "scale": 0.63
+      },
+      "leg-right": {
+        "parent": "body",
+        "pivot": [
+          53,
+          12
+        ],
+        "localJoint": [
+          193,
+          145
+        ],
+        "scale": 0.64
+      }
+    }
+  },
+  "testsPerformed": [
+    "9 files are RGBA with alpha channel",
+    "5 poses composed using distinct wing angles",
+    "48 frames rendered with one character asset pack",
+    "MP4 encoded at 24 fps and 960x540",
+    "diagnostic post-contact leg positions have constant scene joint coords",
+    "visual review reveals residual anatomy and lighting mismatches"
+  ]
+}

@@ -220,6 +220,10 @@ export function CompositionStudio() {
         data-wing-near={state.character ? state.character.wingNear.toFixed(3) : ""}
         data-foot-contact={state.character?.contact ? "true" : "false"}
         data-title={state.composition.titles[0]?.text ?? ""}
+        data-title-opacity={state.composition.titles[0]?.opacity.toFixed(4) ?? ""}
+        data-black-opacity={state.composition.blackOpacity.toFixed(4)}
+        data-incoming-opacity={state.composition.incomingOpacity.toFixed(4)}
+        data-previous-opacity={state.composition.previousOpacity.toFixed(4)}
         data-camera-zoom={state.camera.zoom.toFixed(3)}
         data-camera-x={state.camera.centerX.toFixed(3)}
         className="sr-only"

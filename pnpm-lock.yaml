@@ -65,6 +65,15 @@ importers:
       '@fableon/animation-core':
         specifier: workspace:*
         version: link:../../packages/animation-core
+      '@fableon/camera-engine':
+        specifier: workspace:*
+        version: link:../../packages/camera-engine
+      '@fableon/character-motion':
+        specifier: workspace:*
+        version: link:../../packages/character-motion
+      '@fableon/composition-core':
+        specifier: workspace:*
+        version: link:../../packages/composition-core
       '@fableon/illustration-pipeline':
         specifier: workspace:*
         version: link:../../packages/illustration-pipeline

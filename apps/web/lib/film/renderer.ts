@@ -5,6 +5,7 @@ import { evaluateSpriteRig, multiplyMatrices } from "@fableon/sprite-motion";
 import { ENVIRONMENT_LAYERS, environmentLayerMatrix } from "./environment";
 import type { FilmAssets } from "./assets";
 import { titleFont, wrapTitle } from "./titles";
+import { crossfadePasses } from "./transition-plan";
 import {
   evaluateFilmFrame,
   FILM_TOTAL_FRAMES,
@@ -48,17 +49,19 @@ export class FilmRenderer {
     if (state.composition.previousOpacity > 0 && state.composition.previousShot) {
       const previousFrame = previousGlobalFrameForTransition(state.composition);
       if (previousFrame !== null) {
-        this.renderShot(this.previous, evaluateFilmFrame(previousFrame));
-        outputContext.save();
-        outputContext.globalAlpha = state.composition.previousOpacity;
-        outputContext.drawImage(this.previous, 0, 0);
-        outputContext.restore();
+        for (const pass of crossfadePasses(true)) {
+          const sourceState = pass.source === "previous" ? evaluateFilmFrame(previousFrame) : state;
+          const canvas = pass.source === "previous" ? this.previous : this.current;
+          this.renderShot(canvas, sourceState, pass.includeCharacter);
+          outputContext.save();
+          outputContext.globalAlpha =
+            pass.source === "previous"
+              ? state.composition.previousOpacity
+              : state.composition.incomingOpacity;
+          outputContext.drawImage(canvas, 0, 0);
+          outputContext.restore();
+        }
       }
-      this.renderShot(this.current, state);
-      outputContext.save();
-      outputContext.globalAlpha = state.composition.incomingOpacity;
-      outputContext.drawImage(this.current, 0, 0);
-      outputContext.restore();
     } else {
       this.renderShot(this.output, state);
     }
@@ -205,7 +208,11 @@ export class FilmRenderer {
     return canvas.toDataURL("image/png");
   }
 
-  private renderShot(canvas: HTMLCanvasElement, state: FilmFrameState): void {
+  private renderShot(
+    canvas: HTMLCanvasElement,
+    state: FilmFrameState,
+    includeCharacter = true,
+  ): void {
     const context = contextFor(canvas);
     context.setTransform(1, 0, 0, 1, 0, 0);
     context.clearRect(0, 0, CANONICAL_WIDTH, CANONICAL_HEIGHT);
@@ -225,7 +232,7 @@ export class FilmRenderer {
       context.restore();
     }
 
-    if (state.character) {
+    if (includeCharacter && state.character) {
       this.drawCharacter(context, state);
     }
     this.drawAtmosphere(context, state);

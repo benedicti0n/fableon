@@ -283,7 +283,6 @@ async function main() {
 
   let browser;
   let ffmpeg;
-  let outputWritten = false;
   try {
     persistStatus({
       status: "rendering",
@@ -401,7 +400,6 @@ async function main() {
     const encodingStart = Date.now();
     await ffmpegClosed;
     const encodingDurationMs = Date.now() - encodingStart;
-    outputWritten = true;
 
     const probe = probeVideo(args.output);
     const expectedFrames = args.end - args.start + 1;
@@ -529,7 +527,7 @@ async function main() {
       ffmpeg.kill("SIGKILL");
       await new Promise((resolveWait) => setTimeout(resolveWait, 200));
     }
-    if (outputWritten && existsSync(args.output)) {
+    if (existsSync(args.output)) {
       rmSync(args.output, { force: true });
     }
     const message = error instanceof Error ? error.message : String(error);

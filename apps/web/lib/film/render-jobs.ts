@@ -198,17 +198,116 @@ export async function createRenderJob(input: CreateRenderJobInput): Promise<Rend
 }
 
 export async function requestRenderJobCancel(jobId: string): Promise<RenderJob> {
-  const job = await readRenderJob(jobId);
+  let job = await readRenderJob(jobId);
   if (job.status === "completed" || job.status === "failed" || job.status === "cancelled") {
     return job;
   }
-  const updated: RenderJob = {
+
+  await writeRenderJob({
     ...job,
     cancelRequested: true,
     updatedAt: nowIso(),
+  });
+
+  // The child may not have recorded its PID yet. Give it a short window so a
+  // cancel issued immediately after POST can still terminate the process.
+  if (job.pid === null) {
+    for (let attempt = 0; attempt < 12 && job.pid === null; attempt += 1) {
+      await new Promise((resolveWait) => setTimeout(resolveWait, 125));
+      job = await readRenderJob(jobId);
+      if (job.status === "completed" || job.status === "failed" || job.status === "cancelled") {
+        return job;
+      }
+    }
+  }
+
+  if (job.pid !== null) {
+    await terminateProcess(job.pid);
+  }
+
+  const latest = await readRenderJob(jobId);
+  if (latest.status === "completed") {
+    return latest;
+  }
+  const cancelled: RenderJob = {
+    ...latest,
+    status: "cancelled",
+    cancelRequested: true,
+    finishedAt: nowIso(),
+    updatedAt: nowIso(),
+    error: latest.error ?? "Cancelled by user.",
   };
-  await writeRenderJob(updated);
-  return updated;
+  await writeRenderJob(cancelled);
+  await removePartialOutput(cancelled);
+  return cancelled;
+}
+
+function processIsAlive(pid: number): boolean {
+  try {
+    process.kill(pid, 0);
+    return true;
+  } catch (error) {
+    return error instanceof Error && "code" in error && error.code === "EPERM";
+  }
+}
+
+async function terminateProcess(pid: number): Promise<void> {
+  const signalGroup = (signal: NodeJS.Signals) => {
+    try {
+      process.kill(-pid, signal);
+      return true;
+    } catch {
+      try {
+        process.kill(pid, signal);
+        return true;
+      } catch {
+        return false;
+      }
+    }
+  };
+  if (!processIsAlive(pid)) return;
+  signalGroup("SIGTERM");
+  for (let attempt = 0; attempt < 10; attempt += 1) {
+    await new Promise((resolveWait) => setTimeout(resolveWait, 100));
+    if (!processIsAlive(pid)) return;
+  }
+  signalGroup("SIGKILL");
+}
+
+async function removePartialOutput(job: RenderJob): Promise<void> {
+  if (!job.outputPath) return;
+  let output = job.outputPath;
+  if (!path.isAbsolute(output)) output = path.join(getRepoRoot(), output);
+  try {
+    const safe = safeFilmOutputPath(output);
+    await rm(safe, { force: true });
+  } catch {
+    // A partial file outside the known film output directory is left untouched.
+  }
+}
+
+/**
+ * Repairs a stale active job whose child process exited without writing a
+ * terminal status. Called when reading or listing jobs so the UI cannot poll a
+ * ghost "rendering" job forever.
+ */
+export async function reconcileRenderJob(job: RenderJob): Promise<RenderJob> {
+  if (!isActiveRenderJob(job) || job.pid === null || processIsAlive(job.pid)) {
+    return job;
+  }
+  const cancelled = job.cancelRequested;
+  const repaired: RenderJob = {
+    ...job,
+    status: cancelled ? "cancelled" : "failed",
+    finishedAt: nowIso(),
+    updatedAt: nowIso(),
+    error: cancelled
+      ? (job.error ?? "Cancelled by user.")
+      : "Render process exited without writing a terminal status.",
+  };
+  await writeRenderJob(repaired);
+  await removePartialOutput(repaired);
+  return repaired;
 }
 
 export function isActiveRenderJob(job: RenderJob): boolean {

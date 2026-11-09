@@ -10,7 +10,10 @@ import {
   getRenderJobFile,
   isActiveRenderJob,
   listRenderJobs,
+  readRenderJob,
+  reconcileRenderJob,
   renderJobOutputPath,
+  writeRenderJob,
 } from "@/lib/film/render-jobs";
 import { getRepoRoot } from "@/lib/studio/repository";
 
@@ -53,7 +56,9 @@ export async function POST(request: Request): Promise<NextResponse> {
     if (Math.abs(width / height - 16 / 9) > 0.001) {
       throw new StudioError("invalid_input", "Phase 4 export requires a 16:9 resolution.");
     }
-    const active = (await listRenderJobs()).find(isActiveRenderJob);
+    const active = (await Promise.all((await listRenderJobs()).map(reconcileRenderJob))).find(
+      isActiveRenderJob,
+    );
     if (active) {
       throw new StudioError(
         "conflict",
@@ -97,6 +102,17 @@ export async function POST(request: Request): Promise<NextResponse> {
       },
     );
     child.unref();
+
+    // Record the child PID as early as possible so cancellation can terminate
+    // the process group even before the render script's first status write.
+    const current = await readRenderJob(job.id);
+    if (isActiveRenderJob(current) && child.pid !== undefined) {
+      await writeRenderJob({
+        ...current,
+        pid: child.pid,
+        updatedAt: new Date().toISOString(),
+      });
+    }
 
     return NextResponse.json({ job }, { status: 202 });
   } catch (error) {

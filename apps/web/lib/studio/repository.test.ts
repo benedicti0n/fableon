@@ -422,6 +422,80 @@ describe("studio project storage", () => {
     expect(cancelled.regenerationRequests[0]?.status).toBe("cancelled");
   });
 
+  it("stores AI-video and deterministic shots side by side with independent takes", async () => {
+    const project = await projectWithMedia();
+    const withAi = await addShot(project.id, {
+      title: "AI landing",
+      description: "",
+      targetDurationSeconds: 3,
+      generationPrompt: "AI landing.",
+      renderingMethod: "ai-video",
+      referenceImageMediaId: null,
+    });
+    const aiShotId = withAi.shots[0]?.id;
+    const withRig = await addShot(project.id, {
+      title: "Rig landing",
+      description: "",
+      targetDurationSeconds: 2,
+      generationPrompt: "",
+      renderingMethod: "deterministic",
+      referenceImageMediaId: null,
+    });
+    const rigShotId = withRig.shots[1]?.id;
+    expect(aiShotId).toBeTruthy();
+    expect(rigShotId).toBeTruthy();
+
+    const withAiTake = await addTake(project.id, aiShotId!, {
+      sourceType: "ai-video",
+      mediaId: "media-1",
+      provider: "Google",
+      model: "gemini-omni-1.2-flash",
+      generationPrompt: "AI landing.",
+      durationSeconds: 3,
+      width: 1280,
+      height: 720,
+      frameRate: 24,
+      codec: "h264",
+      hasAudio: true,
+      fileSizeBytes: 1024,
+      sha256: "a".repeat(64),
+    });
+    const withRigTake = await addTake(project.id, rigShotId!, {
+      sourceType: "deterministic-export",
+      mediaId: "media-1",
+      provider: "Fableon",
+      model: "Canvas 2D / Phase 2.7 Gate 2",
+      generationPrompt: "",
+      durationSeconds: 2,
+      width: 1920,
+      height: 1080,
+      frameRate: 24,
+      codec: "h264",
+      hasAudio: false,
+      fileSizeBytes: 2048,
+      sha256: "a".repeat(64),
+    });
+    const rigTakeId = withRigTake.shots[1]?.takes[0]?.id;
+    expect(rigTakeId).toBeTruthy();
+    const reviewed = await setTakeReview(
+      project.id,
+      rigShotId!,
+      rigTakeId!,
+      "approved",
+      "Deterministic proof approved for the hybrid example.",
+      false,
+    );
+    const reloaded = await readProject(project.id);
+    expect(reloaded.shots.map((shot) => shot.renderingMethod)).toEqual([
+      "ai-video",
+      "deterministic",
+    ]);
+    expect(withAiTake.shots[0]?.takes[0]?.sourceType).toBe("ai-video");
+    expect(reviewed.shots[1]?.takes[0]?.sourceType).toBe("deterministic-export");
+    expect(reloaded.shots[1]?.takes[0]?.reviewStatus).toBe("approved");
+    expect(reloaded.shots[0]?.takes[0]?.reviewStatus).toBe("not_reviewed");
+  });
+
   it("generates collision-resistant project and shot IDs", async () => {
     const project = await createProject({
       title: "IDs",

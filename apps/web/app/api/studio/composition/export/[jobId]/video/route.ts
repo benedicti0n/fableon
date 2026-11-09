@@ -24,7 +24,7 @@ async function resolveVideo(context: VideoContext) {
   const absolute = path.isAbsolute(job.outputPath)
     ? job.outputPath
     : path.join(getRepoRoot(), job.outputPath);
-  const filePath = safeFilmOutputPath(absolute);
+  const filePath = safeFilmOutputPath(absolute, job.production);
   let size: number;
   try {
     const info = await stat(filePath);

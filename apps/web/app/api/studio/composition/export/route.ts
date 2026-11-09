@@ -66,15 +66,20 @@ export async function POST(request: Request): Promise<NextResponse> {
       );
     }
 
+    const production = body["production"] === "folk-pilot" ? "folk-pilot" : "where-the-light-lands";
     const job = await createRenderJob({
       startFrame,
       endFrame,
       width,
       height,
       fps: 24,
+      production,
     });
-    const outputPath = renderJobOutputPath(job.id);
-    const scriptPath = path.join(getRepoRoot(), "scripts/render-phase-04.mjs");
+    const outputPath = renderJobOutputPath(job.id, production);
+    const scriptPath = path.join(
+      getRepoRoot(),
+      production === "folk-pilot" ? "scripts/render-folk.mjs" : "scripts/render-phase-04.mjs",
+    );
     const origin = new URL(request.url).origin;
     const child = spawn(
       process.execPath,
@@ -94,6 +99,7 @@ export async function POST(request: Request): Promise<NextResponse> {
         job.id,
         "--status-file",
         getRenderJobFile(job.id),
+        ...(production === "folk-pilot" ? ["--production", "folk-pilot"] : []),
       ],
       {
         cwd: getRepoRoot(),

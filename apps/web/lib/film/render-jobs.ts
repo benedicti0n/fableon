@@ -15,6 +15,7 @@ export const RENDER_JOB_STATUSES = [
   "cancelled",
 ] as const;
 export type RenderJobStatus = (typeof RENDER_JOB_STATUSES)[number];
+export type RenderProduction = "where-the-light-lands" | "folk-pilot";
 
 export interface RenderJob {
   readonly id: string;
@@ -37,6 +38,7 @@ export interface RenderJob {
   readonly encodingDurationMs: number | null;
   readonly error: string | null;
   readonly cancelRequested: boolean;
+  readonly production: RenderProduction;
 }
 
 export interface CreateRenderJobInput {
@@ -45,6 +47,7 @@ export interface CreateRenderJobInput {
   readonly width: number;
   readonly height: number;
   readonly fps: number;
+  readonly production?: RenderProduction;
 }
 
 const JOB_ID_PATTERN = /^[a-z0-9-]{2,64}$/;
@@ -60,8 +63,8 @@ export function getRenderJobFile(jobId: string): string {
   return path.join(getRenderJobsDir(), `${jobId}.json`);
 }
 
-export function getFilmOutputsDir(): string {
-  return path.join(getRepoRoot(), "outputs", "where-the-light-lands");
+export function getFilmOutputsDir(production: RenderProduction = "where-the-light-lands"): string {
+  return path.join(getRepoRoot(), "outputs", production);
 }
 
 function assertJob(value: unknown): RenderJob {
@@ -114,6 +117,11 @@ function assertJob(value: unknown): RenderJob {
       job["encodingDurationMs"] === null ? null : numberField("encodingDurationMs"),
     error: stringOrNull("error"),
     cancelRequested: job["cancelRequested"] === true,
+    production:
+      job["production"] === "folk-pilot" ||
+      (typeof job["outputPath"] === "string" && job["outputPath"].includes("outputs/folk-pilot"))
+        ? "folk-pilot"
+        : "where-the-light-lands",
   };
 }
 
@@ -192,6 +200,7 @@ export async function createRenderJob(input: CreateRenderJobInput): Promise<Rend
     encodingDurationMs: null,
     error: null,
     cancelRequested: false,
+    production: input.production ?? "where-the-light-lands",
   };
   await writeRenderJob(job);
   return job;
@@ -279,7 +288,7 @@ async function removePartialOutput(job: RenderJob): Promise<void> {
   let output = job.outputPath;
   if (!path.isAbsolute(output)) output = path.join(getRepoRoot(), output);
   try {
-    const safe = safeFilmOutputPath(output);
+    const safe = safeFilmOutputPath(output, job.production);
     await rm(safe, { force: true });
   } catch {
     // A partial file outside the known film output directory is left untouched.
@@ -314,13 +323,19 @@ export function isActiveRenderJob(job: RenderJob): boolean {
   return job.status === "queued" || job.status === "rendering" || job.status === "encoding";
 }
 
-export function renderJobOutputPath(jobId: string): string {
+export function renderJobOutputPath(
+  jobId: string,
+  production: RenderProduction = "where-the-light-lands",
+): string {
   assertStudioId(jobId, "jobId");
-  return path.join(getFilmOutputsDir(), `studio-export-${jobId}.mp4`);
+  return path.join(getFilmOutputsDir(production), `studio-export-${jobId}.mp4`);
 }
 
-export function safeFilmOutputPath(outputPath: string): string {
-  const root = path.resolve(getFilmOutputsDir());
+export function safeFilmOutputPath(
+  outputPath: string,
+  production: RenderProduction = "where-the-light-lands",
+): string {
+  const root = path.resolve(getFilmOutputsDir(production));
   const resolved = path.resolve(outputPath);
   if (!resolved.startsWith(`${root}${path.sep}`)) {
     throw new StudioError(

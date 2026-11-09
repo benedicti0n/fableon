@@ -1,0 +1,10 @@
+{
+  "packId": "premium-bird-v1",
+  "status": "NOT_APPROVED_ARTWORK",
+  "sourceArchive": "incoming/fableon-gate2-repaired-candidate-v2.zip",
+  "sourceArchiveSha256": "7b4f732c3b70d51da9bbcd25db96439791f34ee24094e62811110ab95c43f309",
+  "reference": "assets/premium-bird-v1/references/approved-master-reference.png",
+  "coordinateNote": "Pack registration is in the candidate's 960x540 diagnostic layout. The Gate 2 benchmark applies a 2x display scale and scene offset; the rig uses source-space pivots, not registration.",
+  "reconstruction": "Body and head are inferred reconstructions. Near/far shoulders and hidden body coverage require human review.",
+  "approval": "Gate 1 is externally claimed; Gate 2 artistic approval remains pending."
+}

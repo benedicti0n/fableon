@@ -243,6 +243,7 @@ export function ShotWorkspace({
                   src={mediaUrl(project.id, selectedMedia.id)}
                   title={`${shot.title} take ${selectedTake.takeNumber}`}
                   testId="shot-video-preview"
+                  {...(reference ? { poster: mediaUrl(project.id, reference.id) } : {})}
                 />
                 <div className="flex flex-wrap items-center gap-3 text-[11px] text-mist-400">
                   <span className="font-mono">

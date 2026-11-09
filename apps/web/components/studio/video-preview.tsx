@@ -12,9 +12,10 @@ interface VideoPreviewProps {
   readonly title: string;
   readonly testId?: string;
   readonly className?: string;
+  readonly poster?: string;
 }
 
-export function VideoPreview({ src, title, testId, className }: VideoPreviewProps) {
+export function VideoPreview({ src, title, testId, className, poster }: VideoPreviewProps) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [duration, setDuration] = useState(0);
@@ -72,6 +73,7 @@ export function VideoPreview({ src, title, testId, className }: VideoPreviewProp
         ref={videoRef}
         data-testid={testId ? `${testId}-video` : undefined}
         src={src}
+        poster={poster}
         aria-label={title}
         className="aspect-video w-full bg-black object-contain"
         playsInline

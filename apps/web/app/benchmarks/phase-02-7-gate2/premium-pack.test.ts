@@ -92,6 +92,19 @@ describe("Gate 2 premium bird illustration pack", () => {
     expect(serializeIllustrationPack(roundTrip.pack)).toBe(serializeIllustrationPack(pack));
   });
 
+  it("reads the exported portable pack archive", () => {
+    const archive = new Uint8Array(
+      readFileSync(join(ROOT, "docs/benchmarks/phase-02-7-gate2/premium-bird-v1.fableon-pack.zip")),
+    );
+    const result = readIllustrationArchive(archive);
+    expect(result.pack).toEqual(parseIllustrationPack(manifest));
+    expect(result.files.has("manifest.json")).toBe(true);
+    expect(result.files.has("provenance.json")).toBe(true);
+    for (const part of result.pack.parts) {
+      expect(result.files.has(part.source)).toBe(true);
+    }
+  });
+
   it("remains deterministic and does not mutate source bytes", () => {
     const pack = parseIllustrationPack(manifest);
     const before = pack.parts.map((part) => part.hashes?.source);

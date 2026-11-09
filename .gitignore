@@ -26,6 +26,7 @@ blob-report/
 # Generated full-resolution animation frames
 docs/benchmarks/phase-02-5/frames/
 docs/benchmarks/phase-02-6/frames/
+docs/benchmarks/phase-02-7-gate2/frames/
 
 # Environment and secrets
 .env

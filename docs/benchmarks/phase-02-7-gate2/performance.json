@@ -1,0 +1,67 @@
+{
+  "capturedAt": "2026-11-09T08:11:41.052Z",
+  "browser": "158.0.8127.18",
+  "platform": "darwin",
+  "release": "25.5.0",
+  "cpu": "Apple M1",
+  "canvas": "1920×1080",
+  "frameCount": 48,
+  "fps": 24,
+  "artworkStatus": "gate2-candidate-not-approved",
+  "backgroundStatus": "diagnostic-phase-2-5",
+  "readyMs": 1819,
+  "importMs": 43.300000071525574,
+  "decodeMs": 27.700000047683716,
+  "validationMs": 15.600000023841858,
+  "firstFrameRenderMs": 0.8999999761581421,
+  "medianFrameRenderMs": 0.8999999761581421,
+  "p95FrameRenderMs": 1.2000000476837158,
+  "totalRenderMs": 44.40000081062317,
+  "playbackElapsedMs": 1112,
+  "playbackFrame": 25,
+  "observedPlaybackFps": 22.48201438848921,
+  "fidelity": {
+    "footLocked": true,
+    "footMaxDrift": 1.1368683772161603e-13,
+    "deterministic": true,
+    "rigReady": true,
+    "preparationReady": true
+  },
+  "memoryBefore": {
+    "usedJSHeapSize": 19300000,
+    "totalJSHeapSize": 27600000,
+    "jsHeapSizeLimit": 3760000000
+  },
+  "memoryAfter": {
+    "usedJSHeapSize": 19300000,
+    "totalJSHeapSize": 27600000,
+    "jsHeapSizeLimit": 3760000000
+  },
+  "encodeMs": 856,
+  "video": {
+    "path": "docs/benchmarks/phase-02-7-gate2/landing-preview.mp4",
+    "width": 1920,
+    "height": 1080,
+    "fps": 24,
+    "frames": 48,
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "r_frame_rate": "24/1",
+          "avg_frame_rate": "24/1",
+          "nb_read_frames": "48"
+        }
+      ],
+      "format": {
+        "duration": "2.000000"
+      }
+    }
+  },
+  "videoError": null,
+  "pageErrors": [],
+  "note": "Rendered by Fableon's production Canvas renderer and imported-character rig. The supplied Python/Pillow MP4 was not used. Artwork is a reviewed candidate, not approved production art."
+}

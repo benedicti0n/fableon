@@ -1,0 +1,68 @@
+{
+  "generatedAt": "2026-11-09T23:37:45.208Z",
+  "production": "The Little Brass Bell",
+  "ledgerPath": "outputs/folk-pilot/cost-ledger.json",
+  "events": 9,
+  "totalApiSpendUsd": 0,
+  "totalGenerationAttempts": 1,
+  "successfulGenerations": 1,
+  "approvedAssets": 61,
+  "approvedMasterArtworks": 6,
+  "approvedParts": 61,
+  "rejectedAssets": 0,
+  "apiCostPerApprovedAsset": 0,
+  "apiCostPerCharacter": 0,
+  "apiCostPerBackground": 0,
+  "localGenerationRuntimeMs": 6009,
+  "localRenderRuntimeMs": 446051,
+  "measuredOrEstimatedEnergy": "unknown",
+  "manualPreparationMinutes": 0,
+  "agentAuthoringMinutes": null,
+  "firstFilmApiCostUsd": 0,
+  "repeatRenderApiCostUsd": 0,
+  "framesRendered": 1776,
+  "scenarioOutputs": 12,
+  "scenarioAssumption": "Hosted-provider scenarios assume six master artworks (artisan, horse, cart, bell, two backgrounds) with two candidate attempts each. They are price-based estimates, not observed calls.",
+  "electricity": {
+    "status": "unknown",
+    "reason": "No calibrated wall-power meter or GPU power telemetry is available on the Apple M1 test host.",
+    "instructions": "Measure whole-system wall power with a calibrated meter during a 60-second render and multiply mean kW by hours; do not label GPU-only data as total system energy."
+  },
+  "hypotheticalAlternatives": [
+    {
+      "provider": "Black Forest Labs",
+      "model": "FLUX 3 Image Klein",
+      "kind": "price-based scenario, not executed",
+      "outputs": 12,
+      "estimatedCostUsd": 0.168,
+      "assumption": "6 master artworks × 2 candidate attempts; not executed",
+      "costPerMasterUsd": 0.028,
+      "pricingSource": "planning-phase indicative price supplied in Phase 5 brief"
+    },
+    {
+      "provider": "Google",
+      "model": "gemini-nano-banana-2.1",
+      "kind": "price-based scenario, not executed",
+      "outputs": 12,
+      "estimatedCostUsd": 0.6048,
+      "assumption": "6 master artworks × 2 candidate attempts; not executed",
+      "costPerMasterUsd": 0.1008,
+      "pricingSource": "planning-phase indicative price supplied in Phase 5 brief"
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-image-2 medium 1536x1024",
+      "kind": "price-based scenario, not executed",
+      "outputs": 12,
+      "estimatedCostUsd": 0.492,
+      "assumption": "6 master artworks × 2 candidate attempts; not executed",
+      "costPerMasterUsd": 0.082,
+      "pricingSource": "planning-phase indicative price supplied in Phase 5 brief"
+    }
+  ],
+  "notes": [
+    "Final benchmark ledger starts after archiving the development ledger to outputs/folk-pilot/archive/cost-events-development.jsonl.",
+    "Local electricity is unknown because no calibrated wall-power meter was available.",
+    "Remote-provider rows are price-based scenarios only; no hosted image API was executed."
+  ]
+}

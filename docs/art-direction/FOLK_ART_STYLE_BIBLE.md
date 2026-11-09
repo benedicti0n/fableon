@@ -17,28 +17,28 @@ same asset must survive rotation, occlusion, and reuse across shots.
 
 ## 2. Palette
 
-| Role | Hex | Use |
-| --- | --- | --- |
-| Ink outline | `#2a1710` | Every major silhouette, 7–10 px at master scale |
-| Warm skin | `#c98254` | Artisan skin |
-| Skin shadow | `#a9633c` | Far limbs and facial shadow |
-| Skin light | `#e0a06b` | Hand and face highlights |
-| Ochre | `#d39a3d` | Coat, cart body, sandstone highlights |
-| Ochre dark | `#b77a2b` | Cart shafts, wheel shading, floor pattern |
-| Indigo | `#29445f` | Turbans, doors, harness, cart canopy |
-| Indigo light | `#3e6385` | Sleeve and joint accents |
-| Cream | `#f2e3c6` | Dhoti, horse body, trim |
-| Cream shade | `#dcc9a4` | Cloth folds and horse shadow |
-| Terracotta | `#b55034` | Sash, banners, wheel rims, horse mane |
-| Terracotta dark | `#8f3a26` | Tail tuft, deep accents |
-| Gold | `#e0b354` | Jewellery, harness studs, bell, trim |
-| Gold dark | `#b8872f` | Bell shadow and metal depth |
-| Saffron | `#cf5a32` | Artisan turban |
-| Shoe brown | `#5a2f1d` | Mojari shoes and hooves |
-| Hair | `#332018` | Hair, moustache, pupils |
-| Horse body | `#e8cda0` | Horse coat |
-| Horse shade | `#c9a878` | Far legs and horse shadow |
-| Horse mane | `#a94f32` | Mane and tail |
+| Role            | Hex       | Use                                             |
+| --------------- | --------- | ----------------------------------------------- |
+| Ink outline     | `#2a1710` | Every major silhouette, 7–10 px at master scale |
+| Warm skin       | `#c98254` | Artisan skin                                    |
+| Skin shadow     | `#a9633c` | Far limbs and facial shadow                     |
+| Skin light      | `#e0a06b` | Hand and face highlights                        |
+| Ochre           | `#d39a3d` | Coat, cart body, sandstone highlights           |
+| Ochre dark      | `#b77a2b` | Cart shafts, wheel shading, floor pattern       |
+| Indigo          | `#29445f` | Turbans, doors, harness, cart canopy            |
+| Indigo light    | `#3e6385` | Sleeve and joint accents                        |
+| Cream           | `#f2e3c6` | Dhoti, horse body, trim                         |
+| Cream shade     | `#dcc9a4` | Cloth folds and horse shadow                    |
+| Terracotta      | `#b55034` | Sash, banners, wheel rims, horse mane           |
+| Terracotta dark | `#8f3a26` | Tail tuft, deep accents                         |
+| Gold            | `#e0b354` | Jewellery, harness studs, bell, trim            |
+| Gold dark       | `#b8872f` | Bell shadow and metal depth                     |
+| Saffron         | `#cf5a32` | Artisan turban                                  |
+| Shoe brown      | `#5a2f1d` | Mojari shoes and hooves                         |
+| Hair            | `#332018` | Hair, moustache, pupils                         |
+| Horse body      | `#e8cda0` | Horse coat                                      |
+| Horse shade     | `#c9a878` | Far legs and horse shadow                       |
+| Horse mane      | `#a94f32` | Mane and tail                                   |
 
 Accent rules:
 

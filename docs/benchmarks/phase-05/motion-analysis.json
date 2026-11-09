@@ -1,0 +1,62 @@
+{
+  "frame_count": 720,
+  "fps": 24,
+  "duration_seconds": 30.0,
+  "mean_luminance_min": 16.0,
+  "mean_luminance_max": 146.08,
+  "black_ranges_mean_lt_8": [],
+  "frozen_runs_mad_lt_0_02_at_least_3": [[115, 118]],
+  "consecutive_mad_mean": 2.781,
+  "median": 2.506,
+  "p95": 6.564,
+  "p99": 7.945,
+  "max": 15.905,
+  "jump_candidates_gt_20_or_p99x1_5": [],
+  "shot_stats": [
+    {
+      "shot_frames": [0, 119],
+      "frames": 120,
+      "mad_mean": 2.447,
+      "mad_median": 1.7,
+      "mad_p95": 7.722,
+      "mad_max": 7.951
+    },
+    {
+      "shot_frames": [120, 263],
+      "frames": 144,
+      "mad_mean": 2.964,
+      "mad_median": 2.523,
+      "mad_p95": 6.116,
+      "mad_max": 7.454
+    },
+    {
+      "shot_frames": [264, 431],
+      "frames": 168,
+      "mad_mean": 2.337,
+      "mad_median": 2.428,
+      "mad_p95": 3.104,
+      "mad_max": 4.559
+    },
+    {
+      "shot_frames": [432, 599],
+      "frames": 168,
+      "mad_mean": 1.904,
+      "mad_median": 1.702,
+      "mad_p95": 3.545,
+      "mad_max": 5.074
+    },
+    {
+      "shot_frames": [600, 719],
+      "frames": 120,
+      "mad_mean": 4.61,
+      "mad_median": 4.152,
+      "mad_p95": 7.432,
+      "mad_max": 9.939
+    }
+  ],
+  "transition_frames": [
+    120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 264, 265, 266, 267, 268, 269, 270, 271,
+    272, 273, 432, 433, 434, 435, 436, 437, 438, 439, 440, 441, 600, 601, 602, 603, 604, 605, 606,
+    607, 608, 609
+  ]
+}

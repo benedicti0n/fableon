@@ -1,0 +1,2637 @@
+{
+  "format": "fableon.folk-asset-pack",
+  "version": 1,
+  "id": "folk-pilot-v1",
+  "title": "The Little Brass Bell",
+  "generatedAt": "2026-11-09T23:23:52.608Z",
+  "generationMode": "original-local-vector-art",
+  "aiGeneration": {
+    "status": "blocked",
+    "reason": "No NVIDIA/CUDA GPU or ComfyUI endpoint is available; remote image APIs are not authorized.",
+    "paidApiCalls": 0
+  },
+  "palette": {
+    "outline": "#2a1710",
+    "skin": "#c98254",
+    "skinShade": "#a9633c",
+    "skinLight": "#e0a06b",
+    "ochre": "#d39a3d",
+    "ochreDark": "#b77a2b",
+    "indigo": "#29445f",
+    "indigoLight": "#3e6385",
+    "cream": "#f2e3c6",
+    "creamShade": "#dcc9a4",
+    "terracotta": "#b55034",
+    "terracottaDark": "#8f3a26",
+    "gold": "#e0b354",
+    "goldDark": "#b8872f",
+    "saffron": "#cf5a32",
+    "shoe": "#5a2f1d",
+    "hair": "#332018"
+  },
+  "characters": {
+    "artisan": {
+      "masterPng": "masters/artisan.png",
+      "masterPngSha256": "c812bf80aaf39d3e52db34414032a19233a686f6edf683207fcb4a1681893615",
+      "masterSvg": "assets/folk-pilot/masters/artisan.svg",
+      "width": 900,
+      "height": 1100,
+      "parts": [
+        {
+          "id": "artisan_turbanTail",
+          "file": "parts/artisan/turbanTail.png",
+          "offsetX": 323,
+          "offsetY": 276,
+          "width": 153,
+          "height": 303,
+          "sourceBox": {
+            "x": 347.59,
+            "y": 300,
+            "width": 104.41,
+            "height": 254.85
+          },
+          "sha256": "979b2c7e7d089230d856cdceb960aad8efc1487fa4bc2805050774e6f7b37be2",
+          "bytes": 9307,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "artisan_farUpperArm",
+          "file": "parts/artisan/farUpperArm.png",
+          "offsetX": 374,
+          "offsetY": 451,
+          "width": 114,
+          "height": 215,
+          "sourceBox": {
+            "x": 398,
+            "y": 475,
+            "width": 66,
+            "height": 167
+          },
+          "sha256": "37f348b25a92a0797a755d0d0feca0d3ef187598edacfea93ac1f5ff6755c916",
+          "bytes": 7205,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "artisan_farForearm",
+          "file": "parts/artisan/farForearm.png",
+          "offsetX": 390,
+          "offsetY": 586,
+          "width": 104,
+          "height": 208,
+          "sourceBox": {
+            "x": 414,
+            "y": 610,
+            "width": 56,
+            "height": 160
+          },
+          "sha256": "5d29684b341dfc6c2d45ea7c20a887d20db11026178b9e4a3e6a8c284cf90bef",
+          "bytes": 5740,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "artisan_farHand",
+          "file": "parts/artisan/farHand.png",
+          "offsetX": 393,
+          "offsetY": 714,
+          "width": 99,
+          "height": 115,
+          "sourceBox": {
+            "x": 417.8,
+            "y": 738,
+            "width": 50.99,
+            "height": 66.85
+          },
+          "sha256": "9eb6650708ff0d9f7ef2dc8749d8a280616ccac2f244517066f7f7fecb0a4a51",
+          "bytes": 3377,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "artisan_farDhoti",
+          "file": "parts/artisan/farDhoti.png",
+          "offsetX": 331,
+          "offsetY": 626,
+          "width": 153,
+          "height": 273,
+          "sourceBox": {
+            "x": 355.16,
+            "y": 650,
+            "width": 104.98,
+            "height": 224.3
+          },
+          "sha256": "3c0760e872ddc8900d4939c2fa13a6ac6dde7272e2e5d8efdc127d260ee44386",
+          "bytes": 9419,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "artisan_farThigh",
+          "file": "parts/artisan/farThigh.png",
+          "offsetX": 346,
+          "offsetY": 646,
+          "width": 116,
+          "height": 234,
+          "sourceBox": {
+            "x": 370,
+            "y": 670,
+            "width": 68,
+            "height": 186
+          },
+          "sha256": "7a80214c010e2bcf3258eb6c5f024fea8587aae60681aa48b91486fb7b6cd9aa",
+          "bytes": 7476,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "artisan_farShin",
+          "file": "parts/artisan/farShin.png",
+          "offsetX": 345,
+          "offsetY": 800,
+          "width": 106,
+          "height": 231,
+          "sourceBox": {
+            "x": 369,
+            "y": 824,
+            "width": 58,
+            "height": 183
+          },
+          "sha256": "dbf71c7a1ae81fd741e5565a06245a0d5913267cd35fc0c2fea2b0e17e316fcb",
+          "bytes": 6161,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "artisan_farFoot",
+          "file": "parts/artisan/farFoot.png",
+          "offsetX": 350,
+          "offsetY": 927,
+          "width": 169,
+          "height": 117,
+          "sourceBox": {
+            "x": 374.95,
+            "y": 951.41,
+            "width": 120.58,
+            "height": 68.59
+          },
+          "sha256": "3ed3d9ece2a7f4f9ab2beb1a34fc40c285113306db8c9c836094af5ef16c432e",
+          "bytes": 4036,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "artisan_torso",
+          "file": "parts/artisan/torso.png",
+          "offsetX": 327,
+          "offsetY": 384,
+          "width": 246,
+          "height": 320,
+          "sourceBox": {
+            "x": 351.21,
+            "y": 408.58,
+            "width": 197.53,
+            "height": 271.42
+          },
+          "sha256": "ef09ff13e7ad9d574e42ecd7e037bc7aefb733b03a143b0913ac180ee48a6425",
+          "bytes": 16717,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "artisan_sash",
+          "file": "parts/artisan/sash.png",
+          "offsetX": 336,
+          "offsetY": 598,
+          "width": 245,
+          "height": 217,
+          "sourceBox": {
+            "x": 360,
+            "y": 622,
+            "width": 196.75,
+            "height": 168.34
+          },
+          "sha256": "96d81b7d2cfc824a7a0e7694026db08b94dcdddc0946194dfcb0a65dd8cf434e",
+          "bytes": 9158,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "artisan_pelvis",
+          "file": "parts/artisan/pelvis.png",
+          "offsetX": 334,
+          "offsetY": 624,
+          "width": 226,
+          "height": 193,
+          "sourceBox": {
+            "x": 358,
+            "y": 648,
+            "width": 178,
+            "height": 144.13
+          },
+          "sha256": "d410f031dcfe001944f8c93e57d5744f95edbfb5b13ae8f002344eb4ef791729",
+          "bytes": 11196,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "artisan_nearDhoti",
+          "file": "parts/artisan/nearDhoti.png",
+          "offsetX": 387,
+          "offsetY": 628,
+          "width": 153,
+          "height": 285,
+          "sourceBox": {
+            "x": 411.66,
+            "y": 652,
+            "width": 104.34,
+            "height": 236.66
+          },
+          "sha256": "8d978cf8bb996fd73407b832d488f6e20f18f5ecb563cad77165d90a94b580e8",
+          "bytes": 10304,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "artisan_nearThigh",
+          "file": "parts/artisan/nearThigh.png",
+          "offsetX": 419,
+          "offsetY": 646,
+          "width": 115,
+          "height": 235,
+          "sourceBox": {
+            "x": 443,
+            "y": 670,
+            "width": 67,
+            "height": 187
+          },
+          "sha256": "75f5bfb9385f3cd295937ae27b413d60ece269dcc404eddf1f28509899ab0f4d",
+          "bytes": 7819,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "artisan_nearShin",
+          "file": "parts/artisan/nearShin.png",
+          "offsetX": 426,
+          "offsetY": 800,
+          "width": 108,
+          "height": 232,
+          "sourceBox": {
+            "x": 450,
+            "y": 824,
+            "width": 60,
+            "height": 184
+          },
+          "sha256": "4eb6905655fd78e1334781bf488a98937e361b7241d00a702b5700f6a6ad5706",
+          "bytes": 6436,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "artisan_nearFoot",
+          "file": "parts/artisan/nearFoot.png",
+          "offsetX": 433,
+          "offsetY": 925,
+          "width": 173,
+          "height": 119,
+          "sourceBox": {
+            "x": 457.03,
+            "y": 949.96,
+            "width": 124.49,
+            "height": 70.04
+          },
+          "sha256": "0ca4d0a60962e36ef5a9b4973f27647e6884ca58d07989d96139dd9b5be8d8b0",
+          "bytes": 4214,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "artisan_neck",
+          "file": "parts/artisan/neck.png",
+          "offsetX": 416,
+          "offsetY": 364,
+          "width": 114,
+          "height": 124,
+          "sourceBox": {
+            "x": 440,
+            "y": 388,
+            "width": 66,
+            "height": 76
+          },
+          "sha256": "a96d06060e353a8b2009b3e0807ad9bde8a00c8ff1589f41bb5174d5ccb0c404",
+          "bytes": 2558,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "artisan_necklace",
+          "file": "parts/artisan/necklace.png",
+          "offsetX": 406,
+          "offsetY": 404,
+          "width": 140,
+          "height": 86,
+          "sourceBox": {
+            "x": 430,
+            "y": 428,
+            "width": 92,
+            "height": 38
+          },
+          "sha256": "e5932d4282d1e8a73376c6c9247f11788d5c23da4e827bd442fb33c61493f4b0",
+          "bytes": 3015,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "artisan_head",
+          "file": "parts/artisan/head.png",
+          "offsetX": 402,
+          "offsetY": 218,
+          "width": 177,
+          "height": 230,
+          "sourceBox": {
+            "x": 426,
+            "y": 242.96,
+            "width": 128.53,
+            "height": 181.07
+          },
+          "sha256": "8bcad895460df369992f12c946e9e83dcbf354c91b4ee3219346fed2e2ea1f78",
+          "bytes": 9346,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "artisan_eye",
+          "file": "parts/artisan/eye.png",
+          "offsetX": 454,
+          "offsetY": 271,
+          "width": 86,
+          "height": 68,
+          "sourceBox": {
+            "x": 478,
+            "y": 295.6,
+            "width": 38,
+            "height": 19.34
+          },
+          "sha256": "0351803a18d2e32d679f6a48de7cecbd53c59cff9755b4b54650862af1659314",
+          "bytes": 1513,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "artisan_eyelid",
+          "file": "parts/artisan/eyelid.png",
+          "offsetX": 454,
+          "offsetY": 271,
+          "width": 86,
+          "height": 68,
+          "sourceBox": {
+            "x": 478,
+            "y": 295.6,
+            "width": 38,
+            "height": 19.34
+          },
+          "sha256": "74d767634ed3ce3f8ee6249c3b7a6165faeeaed582d54f90e7a64d249ff650b6",
+          "bytes": 1264,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "artisan_brow",
+          "file": "parts/artisan/brow.png",
+          "offsetX": 446,
+          "offsetY": 255,
+          "width": 100,
+          "height": 59,
+          "sourceBox": {
+            "x": 470,
+            "y": 279.6,
+            "width": 52,
+            "height": 10.4
+          },
+          "sha256": "75c3f7cb717d6edfdbd779c3f8bb00e5c7e13c5fa04a982848aebd79f2155202",
+          "bytes": 1067,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "artisan_mustache",
+          "file": "parts/artisan/mustache.png",
+          "offsetX": 487,
+          "offsetY": 317,
+          "width": 85,
+          "height": 79,
+          "sourceBox": {
+            "x": 511.92,
+            "y": 341.92,
+            "width": 36.08,
+            "height": 30.08
+          },
+          "sha256": "bcd5959a0ea0906e6442384c66da9cf99fed933a50e2f7d3d6f676956425b748",
+          "bytes": 1586,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "artisan_earring",
+          "file": "parts/artisan/earring.png",
+          "offsetX": 410,
+          "offsetY": 312,
+          "width": 68,
+          "height": 101,
+          "sourceBox": {
+            "x": 434,
+            "y": 336,
+            "width": 20,
+            "height": 53
+          },
+          "sha256": "2ea7fc0ec3697e7628744608a2bcf6c654ad65e27ea6b7997054c1904b80d4d0",
+          "bytes": 1953,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "artisan_turban",
+          "file": "parts/artisan/turban.png",
+          "offsetX": 387,
+          "offsetY": 149,
+          "width": 198,
+          "height": 173,
+          "sourceBox": {
+            "x": 411.61,
+            "y": 173,
+            "width": 149.39,
+            "height": 124.09
+          },
+          "sha256": "d4cf3bd12e875ca0c0892ec2d5f9461c052b037456fb87629d055f1be69ee8a8",
+          "bytes": 9825,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "artisan_shoulderSash",
+          "file": "parts/artisan/shoulderSash.png",
+          "offsetX": 452,
+          "offsetY": 386,
+          "width": 100,
+          "height": 172,
+          "sourceBox": {
+            "x": 476,
+            "y": 410,
+            "width": 51.52,
+            "height": 124
+          },
+          "sha256": "a9b1a1b36df6eedde012080289d650478507f4ca07d10e04cda3e34414e8a868",
+          "bytes": 4920,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "artisan_nearUpperArm",
+          "file": "parts/artisan/nearUpperArm.png",
+          "offsetX": 470,
+          "offsetY": 446,
+          "width": 119,
+          "height": 221,
+          "sourceBox": {
+            "x": 494,
+            "y": 470,
+            "width": 71,
+            "height": 173
+          },
+          "sha256": "e26031e2ffd1fd5f0aba1c37aed360a1d712a655f06ad431895ca64e79d28d5b",
+          "bytes": 8117,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "artisan_nearForearm",
+          "file": "parts/artisan/nearForearm.png",
+          "offsetX": 495,
+          "offsetY": 586,
+          "width": 106,
+          "height": 209,
+          "sourceBox": {
+            "x": 519,
+            "y": 610,
+            "width": 58,
+            "height": 161
+          },
+          "sha256": "083849464b6dbbae3d1f643ba1d6e5c053909af520e2e473a39e710792c2e50b",
+          "bytes": 6257,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "artisan_handOpen",
+          "file": "parts/artisan/handOpen.png",
+          "offsetX": 497,
+          "offsetY": 712,
+          "width": 97,
+          "height": 113,
+          "sourceBox": {
+            "x": 521.95,
+            "y": 736,
+            "width": 48.84,
+            "height": 64.41
+          },
+          "sha256": "e1921ff968294ed6e9a96d66dda808976f31cffaa37a76de815256c1e4c08036",
+          "bytes": 3600,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "artisan_handGrip",
+          "file": "parts/artisan/handGrip.png",
+          "offsetX": 496,
+          "offsetY": 714,
+          "width": 98,
+          "height": 107,
+          "sourceBox": {
+            "x": 520.81,
+            "y": 738,
+            "width": 49.44,
+            "height": 58
+          },
+          "sha256": "80543d3cd287a1ea835cfce4a7a040ebc85d94a12e3df03d8d021b4597ab9cb9",
+          "bytes": 4106,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        }
+      ]
+    },
+    "horse": {
+      "masterPng": "masters/horse.png",
+      "masterPngSha256": "cd219577ebcdc9b0036c009696a79eeb060db701fd1641bbb038e282781c0950",
+      "masterSvg": "assets/folk-pilot/masters/horse.svg",
+      "width": 1400,
+      "height": 950,
+      "parts": [
+        {
+          "id": "horse_tailBase",
+          "file": "parts/horse/tailBase.png",
+          "offsetX": 280,
+          "offsetY": 356,
+          "width": 214,
+          "height": 281,
+          "sourceBox": {
+            "x": 304.43,
+            "y": 380,
+            "width": 165.57,
+            "height": 232.93
+          },
+          "sha256": "998112c6eaf78d798365f2ab39196bd93774ed6101b0476b82a6584146d3daab",
+          "bytes": 10479,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "horse_tailTuft",
+          "file": "parts/horse/tailTuft.png",
+          "offsetX": 244,
+          "offsetY": 532,
+          "width": 144,
+          "height": 258,
+          "sourceBox": {
+            "x": 268.98,
+            "y": 556,
+            "width": 95.4,
+            "height": 209.86
+          },
+          "sha256": "526ec056c42e7d352974c22f36991f9dcbbf4381185f7a4614dbcc8ac082a060",
+          "bytes": 8447,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "horse_farFrontUpper",
+          "file": "parts/horse/farFrontUpper.png",
+          "offsetX": 739,
+          "offsetY": 496,
+          "width": 106,
+          "height": 237,
+          "sourceBox": {
+            "x": 763,
+            "y": 520,
+            "width": 58,
+            "height": 189
+          },
+          "sha256": "deed870426e38c2681fb31c2c0df9cc707362a2c4a786c015700d55d3e38fbe6",
+          "bytes": 6177,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "horse_farFrontLower",
+          "file": "parts/horse/farFrontLower.png",
+          "offsetX": 747,
+          "offsetY": 656,
+          "width": 98,
+          "height": 217,
+          "sourceBox": {
+            "x": 771,
+            "y": 680,
+            "width": 50,
+            "height": 169
+          },
+          "sha256": "1d1e3cfad3560c7030d14cb6250c23d1005b7e194c1b446250ed899fe8854c75",
+          "bytes": 5525,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "horse_farFrontHoof",
+          "file": "parts/horse/farFrontHoof.png",
+          "offsetX": 754,
+          "offsetY": 792,
+          "width": 103,
+          "height": 126,
+          "sourceBox": {
+            "x": 778,
+            "y": 816,
+            "width": 54.6,
+            "height": 78
+          },
+          "sha256": "aa8a14d95b5e17dcf5158a450966b0a6fc7e58365a3e2c936af76b05cc37209a",
+          "bytes": 2257,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "horse_farHindUpper",
+          "file": "parts/horse/farHindUpper.png",
+          "offsetX": 397,
+          "offsetY": 496,
+          "width": 110,
+          "height": 239,
+          "sourceBox": {
+            "x": 421,
+            "y": 520,
+            "width": 62,
+            "height": 191
+          },
+          "sha256": "ce7e536440f8afe8b1b909e9f6e65301c1aee4080afc09df3c9d1d91063dc468",
+          "bytes": 6365,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "horse_farHindLower",
+          "file": "parts/horse/farHindLower.png",
+          "offsetX": 408,
+          "offsetY": 656,
+          "width": 100,
+          "height": 218,
+          "sourceBox": {
+            "x": 432,
+            "y": 680,
+            "width": 52,
+            "height": 170
+          },
+          "sha256": "97164d763c7e83a9c6a0cb3f09606a629781d7eb1fca393368d6d344d30f53f9",
+          "bytes": 5553,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "horse_farHindHoof",
+          "file": "parts/horse/farHindHoof.png",
+          "offsetX": 416,
+          "offsetY": 792,
+          "width": 103,
+          "height": 126,
+          "sourceBox": {
+            "x": 440,
+            "y": 816,
+            "width": 54.65,
+            "height": 78
+          },
+          "sha256": "1805e7a316076a019e73d13619b8d3fde3ac53b2556fb94121a4635ee2f2fd54",
+          "bytes": 2247,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "horse_torso",
+          "file": "parts/horse/torso.png",
+          "offsetX": 379,
+          "offsetY": 301,
+          "width": 554,
+          "height": 334,
+          "sourceBox": {
+            "x": 403.6,
+            "y": 325.54,
+            "width": 505.3,
+            "height": 285.97
+          },
+          "sha256": "b6087fdde2042b988da8ef5436ed5e5276c66a2466e1f478a410586b42d66c1a",
+          "bytes": 25400,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "horse_mane",
+          "file": "parts/horse/mane.png",
+          "offsetX": 840,
+          "offsetY": 228,
+          "width": 204,
+          "height": 245,
+          "sourceBox": {
+            "x": 864,
+            "y": 252.5,
+            "width": 155.3,
+            "height": 196.83
+          },
+          "sha256": "036cad9952547ddc5e7403227f8660fed2a4abc8d8f3777bd7b6690e3e8d5685",
+          "bytes": 9835,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "horse_farEar",
+          "file": "parts/horse/farEar.png",
+          "offsetX": 994,
+          "offsetY": 92,
+          "width": 87,
+          "height": 130,
+          "sourceBox": {
+            "x": 1018.49,
+            "y": 116,
+            "width": 38.19,
+            "height": 82
+          },
+          "sha256": "3a170e775c6e69a68ad68f4ed3f289d3a7c54b727a62027f0b7e09d61cbe4b11",
+          "bytes": 2981,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "horse_neck",
+          "file": "parts/horse/neck.png",
+          "offsetX": 809,
+          "offsetY": 231,
+          "width": 289,
+          "height": 306,
+          "sourceBox": {
+            "x": 833.75,
+            "y": 255.72,
+            "width": 240.58,
+            "height": 257.07
+          },
+          "sha256": "638034247592a14771b22aebaf78fd336a814c0d167f3f33a1b0803700846616",
+          "bytes": 15477,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "horse_head",
+          "file": "parts/horse/head.png",
+          "offsetX": 975,
+          "offsetY": 190,
+          "width": 218,
+          "height": 223,
+          "sourceBox": {
+            "x": 999.75,
+            "y": 214.52,
+            "width": 169.98,
+            "height": 174.84
+          },
+          "sha256": "7315693d57cd2875f27ef7231379e9640ff978ff91730d23cc52da78ff250fc8",
+          "bytes": 9484,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "horse_nearEar",
+          "file": "parts/horse/nearEar.png",
+          "offsetX": 1022,
+          "offsetY": 106,
+          "width": 90,
+          "height": 130,
+          "sourceBox": {
+            "x": 1046.49,
+            "y": 130,
+            "width": 41.06,
+            "height": 82
+          },
+          "sha256": "36872577845f61f574ba50c6c4e780ee3c4c2b01e4c8f0bd105730effcb41439",
+          "bytes": 3249,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "horse_eye",
+          "file": "parts/horse/eye.png",
+          "offsetX": 1022,
+          "offsetY": 237,
+          "width": 86,
+          "height": 67,
+          "sourceBox": {
+            "x": 1046,
+            "y": 261.6,
+            "width": 38,
+            "height": 18.17
+          },
+          "sha256": "94b497a6938cba482d19ccd7a9feefe95c769b52ff131c1184ae48b6b2af9c94",
+          "bytes": 1498,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "horse_forelock",
+          "file": "parts/horse/forelock.png",
+          "offsetX": 1000,
+          "offsetY": 161,
+          "width": 104,
+          "height": 111,
+          "sourceBox": {
+            "x": 1024,
+            "y": 185.85,
+            "width": 56,
+            "height": 62.65
+          },
+          "sha256": "925b49dd69df186ef6f258e3d2e01ef9a2d2f4812ca9539ffc9546d1c9ab012d",
+          "bytes": 2720,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "horse_harnessCollar",
+          "file": "parts/horse/harnessCollar.png",
+          "offsetX": 840,
+          "offsetY": 336,
+          "width": 129,
+          "height": 252,
+          "sourceBox": {
+            "x": 864,
+            "y": 360,
+            "width": 80.5,
+            "height": 204
+          },
+          "sha256": "aa62f235b0c3a23ab23c31e8faea6a24799b4330f64b23abf7ff050156fcaafb",
+          "bytes": 8624,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "horse_saddleBlanket",
+          "file": "parts/horse/saddleBlanket.png",
+          "offsetX": 574,
+          "offsetY": 300,
+          "width": 254,
+          "height": 262,
+          "sourceBox": {
+            "x": 598,
+            "y": 324.46,
+            "width": 206,
+            "height": 213.54
+          },
+          "sha256": "c9ae75e0af6130534920cdc51dd60bd3651833792009a5dc81c7afd1254cff16",
+          "bytes": 14894,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "horse_harnessStrap",
+          "file": "parts/horse/harnessStrap.png",
+          "offsetX": 536,
+          "offsetY": 462,
+          "width": 300,
+          "height": 87,
+          "sourceBox": {
+            "x": 560,
+            "y": 486,
+            "width": 252,
+            "height": 39
+          },
+          "sha256": "83e419c966657fc062ee073c7a0c61e5da254f6bfdec04943b95be0474530cb2",
+          "bytes": 5805,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "horse_bridle",
+          "file": "parts/horse/bridle.png",
+          "offsetX": 1024,
+          "offsetY": 208,
+          "width": 150,
+          "height": 172,
+          "sourceBox": {
+            "x": 1048,
+            "y": 232,
+            "width": 102,
+            "height": 124
+          },
+          "sha256": "480529a2f2ce5304f0e8e6b91664812c539fb6511f542459b5fe794d09d85a35",
+          "bytes": 7836,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "horse_nearFrontUpper",
+          "file": "parts/horse/nearFrontUpper.png",
+          "offsetX": 807,
+          "offsetY": 496,
+          "width": 111,
+          "height": 239,
+          "sourceBox": {
+            "x": 831,
+            "y": 520,
+            "width": 63,
+            "height": 191
+          },
+          "sha256": "4ba733bc28d6038cb6404a2d90ce3c66832f0b7c3135d0b46cd68d828805dcf6",
+          "bytes": 7258,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "horse_nearFrontLower",
+          "file": "parts/horse/nearFrontLower.png",
+          "offsetX": 816,
+          "offsetY": 656,
+          "width": 100,
+          "height": 218,
+          "sourceBox": {
+            "x": 840,
+            "y": 680,
+            "width": 52,
+            "height": 170
+          },
+          "sha256": "e1315649d43808d75962bbe7005372d61184a74504bc85bf982e2f8b26896505",
+          "bytes": 5849,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "horse_nearFrontHoof",
+          "file": "parts/horse/nearFrontHoof.png",
+          "offsetX": 822,
+          "offsetY": 792,
+          "width": 105,
+          "height": 126,
+          "sourceBox": {
+            "x": 846,
+            "y": 816,
+            "width": 56.6,
+            "height": 78
+          },
+          "sha256": "c1a03fcfb502dd1cb4f5a5c7c545a4254c0682658a06f543150f44420139e07f",
+          "bytes": 2730,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "horse_nearHindUpper",
+          "file": "parts/horse/nearHindUpper.png",
+          "offsetX": 458,
+          "offsetY": 496,
+          "width": 114,
+          "height": 240,
+          "sourceBox": {
+            "x": 482,
+            "y": 520,
+            "width": 66,
+            "height": 192
+          },
+          "sha256": "72be3c31a3e554980ba2918e0b49919b1745d64745c02adec8f19a9557b28d79",
+          "bytes": 7607,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "horse_nearHindLower",
+          "file": "parts/horse/nearHindLower.png",
+          "offsetX": 465,
+          "offsetY": 656,
+          "width": 103,
+          "height": 219,
+          "sourceBox": {
+            "x": 489,
+            "y": 680,
+            "width": 55,
+            "height": 171
+          },
+          "sha256": "999bfff0df3174ba9e37ddb8d654055636a3e97cce65e217541572131e9ad4c9",
+          "bytes": 5998,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "horse_nearHindHoof",
+          "file": "parts/horse/nearHindHoof.png",
+          "offsetX": 472,
+          "offsetY": 792,
+          "width": 107,
+          "height": 126,
+          "sourceBox": {
+            "x": 496,
+            "y": 816,
+            "width": 58.6,
+            "height": 78
+          },
+          "sha256": "436c81c2064c037b87941525f78ee42227349fca11721c1c28e61110b7e81c01",
+          "bytes": 2745,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "horse_harnessAnchor",
+          "file": "parts/horse/harnessAnchor.png",
+          "offsetX": 893,
+          "offsetY": 415,
+          "width": 74,
+          "height": 95,
+          "sourceBox": {
+            "x": 917,
+            "y": 439,
+            "width": 26,
+            "height": 47
+          },
+          "sha256": "f90b24d4429a2b136f06fae2d2db834d545f51386d4401003ac3332d787f370b",
+          "bytes": 1436,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        }
+      ]
+    },
+    "cart": {
+      "masterPng": "masters/cart.png",
+      "masterPngSha256": "50f7660f00a37c9d468a72e8801179e545802971aeb628f85104db3f38eafced",
+      "masterSvg": "assets/folk-pilot/masters/cart.svg",
+      "width": 1300,
+      "height": 800,
+      "parts": [
+        {
+          "id": "cart_farWheel",
+          "file": "parts/cart/farWheel.png",
+          "offsetX": 438,
+          "offsetY": 458,
+          "width": 284,
+          "height": 284,
+          "sourceBox": {
+            "x": 462,
+            "y": 482,
+            "width": 236,
+            "height": 236
+          },
+          "sha256": "f60b649bca6efe1c01b89f9e9044e19461d634d9e38e646fa0083928ea5a06db",
+          "bytes": 26027,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "cart_shafts",
+          "file": "parts/cart/shafts.png",
+          "offsetX": 586,
+          "offsetY": 326,
+          "width": 718,
+          "height": 208,
+          "sourceBox": {
+            "x": 610,
+            "y": 350,
+            "width": 670,
+            "height": 160
+          },
+          "sha256": "4b0daf9d4eede3f5910e619c8cd76d88efa5d5f80f5d10c3565351be51f01294",
+          "bytes": 15988,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "cart_cartBody",
+          "file": "parts/cart/cartBody.png",
+          "offsetX": 74,
+          "offsetY": 159,
+          "width": 586,
+          "height": 357,
+          "sourceBox": {
+            "x": 98,
+            "y": 183.91,
+            "width": 538,
+            "height": 308.88
+          },
+          "sha256": "797f3e43e99814bd32104a0ffe9e3e00d1d4691bcc83858b8cbd956048a24174",
+          "bytes": 39980,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "cart_nearWheel",
+          "file": "parts/cart/nearWheel.png",
+          "offsetX": 100,
+          "offsetY": 440,
+          "width": 300,
+          "height": 300,
+          "sourceBox": {
+            "x": 124,
+            "y": 464,
+            "width": 252,
+            "height": 252
+          },
+          "sha256": "f8bb944146543a44f95a1f07256a3c530b9a0b8ae01908f0494dd8c2fdcb150a",
+          "bytes": 31751,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        }
+      ]
+    },
+    "bell": {
+      "masterPng": "masters/bell.png",
+      "masterPngSha256": "2d294f4d7d7e9943fb2c0e244e85929a7246ec3bb0a2cb40e779a2b637bab5ff",
+      "masterSvg": "assets/folk-pilot/masters/bell.svg",
+      "width": 180,
+      "height": 230,
+      "parts": [
+        {
+          "id": "bell_bell",
+          "file": "parts/bell/bell.png",
+          "offsetX": 18,
+          "offsetY": -8,
+          "width": 144,
+          "height": 250,
+          "sourceBox": {
+            "x": 42,
+            "y": 16,
+            "width": 96,
+            "height": 202
+          },
+          "sha256": "7fc2ee3acbb4ba8f94d0b6167ff6edd994eccefe06413ecf7a1da977c5f52417",
+          "bytes": 9403,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "model": "fableon-svg-v1",
+          "reviewStatus": "pending_artistic_approval"
+        }
+      ]
+    }
+  },
+  "backgrounds": {
+    "courtyard": {
+      "masterPng": "masters/courtyard.png",
+      "masterPngSha256": "90d7870cc311d792074f973e2dba81f522075607973c11ea2d41aaed029146c6",
+      "masterSvg": "assets/folk-pilot/masters/courtyard.svg",
+      "width": 2600,
+      "height": 1500,
+      "layers": [
+        {
+          "id": "sky",
+          "file": "backgrounds/courtyard-sky.png",
+          "depth": 0.8,
+          "opacity": 1,
+          "width": 2600,
+          "height": 1500,
+          "sha256": "aad8f08484d78e4c04b6c9ca4d43059766420ec4ba184b2dac59a18c42b30c21",
+          "bytes": 323978,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "distant",
+          "file": "backgrounds/courtyard-distant.png",
+          "depth": 0.86,
+          "opacity": 1,
+          "width": 2600,
+          "height": 1500,
+          "sha256": "5767e1ff9b25563cf1452ccaf3bfd6b7461e37da3a4cc1873c3325521416c22f",
+          "bytes": 44016,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "main",
+          "file": "backgrounds/courtyard-main.png",
+          "depth": 0.93,
+          "opacity": 1,
+          "width": 2600,
+          "height": 1500,
+          "sha256": "de128f144912aa167a3275d7b2f551a3e4faa9afac2a64b4ada03b93dc05e993",
+          "bytes": 141983,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "foreground",
+          "file": "backgrounds/courtyard-foreground.png",
+          "depth": 1,
+          "opacity": 1,
+          "width": 2600,
+          "height": 1500,
+          "sha256": "4ccf9e33b8a1ea3f6b9155fd8537066ab95c158d3b9e109b4be227196d264919",
+          "bytes": 150775,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "reviewStatus": "pending_artistic_approval"
+        }
+      ]
+    },
+    "street": {
+      "masterPng": "masters/street.png",
+      "masterPngSha256": "a748777f5baac194df560f8b937041e215d7f51305347ba3ff2542e7d87a0b1c",
+      "masterSvg": "assets/folk-pilot/masters/street.svg",
+      "width": 2600,
+      "height": 1500,
+      "layers": [
+        {
+          "id": "sky",
+          "file": "backgrounds/street-sky.png",
+          "depth": 0.8,
+          "opacity": 1,
+          "width": 2600,
+          "height": 1500,
+          "sha256": "4ddf92aaa2936c97750e2cc0131d303e993ed97b5ed47b5e6451b4e792da61e6",
+          "bytes": 80845,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "distant",
+          "file": "backgrounds/street-distant.png",
+          "depth": 0.86,
+          "opacity": 1,
+          "width": 2600,
+          "height": 1500,
+          "sha256": "f2dfb44ee8f528c1c7c310777cf9e46111e702bbca5f9e4441a22361165aab5c",
+          "bytes": 44191,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "main",
+          "file": "backgrounds/street-main.png",
+          "depth": 0.93,
+          "opacity": 1,
+          "width": 2600,
+          "height": 1500,
+          "sha256": "aeb5434cbdc8f4e3f157f5db8101c8c5ffda5488043656dc440aa82b02023fb6",
+          "bytes": 142354,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "reviewStatus": "pending_artistic_approval"
+        },
+        {
+          "id": "foreground",
+          "file": "backgrounds/street-foreground.png",
+          "depth": 1,
+          "opacity": 1,
+          "width": 2600,
+          "height": 1500,
+          "sha256": "72e3e78a0f97427e4ad8fb7e24dead1e685325e4efba903737dc011eff7393fb",
+          "bytes": 56925,
+          "origin": "original-vector-authored",
+          "provider": "fableon-local-vector",
+          "reviewStatus": "pending_artistic_approval"
+        }
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "artisan_turbanTail",
+      "file": "parts/artisan/turbanTail.png",
+      "offsetX": 323,
+      "offsetY": 276,
+      "width": 153,
+      "height": 303,
+      "sourceBox": {
+        "x": 347.59,
+        "y": 300,
+        "width": 104.41,
+        "height": 254.85
+      },
+      "sha256": "979b2c7e7d089230d856cdceb960aad8efc1487fa4bc2805050774e6f7b37be2",
+      "bytes": 9307,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "artisan_farUpperArm",
+      "file": "parts/artisan/farUpperArm.png",
+      "offsetX": 374,
+      "offsetY": 451,
+      "width": 114,
+      "height": 215,
+      "sourceBox": {
+        "x": 398,
+        "y": 475,
+        "width": 66,
+        "height": 167
+      },
+      "sha256": "37f348b25a92a0797a755d0d0feca0d3ef187598edacfea93ac1f5ff6755c916",
+      "bytes": 7205,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "artisan_farForearm",
+      "file": "parts/artisan/farForearm.png",
+      "offsetX": 390,
+      "offsetY": 586,
+      "width": 104,
+      "height": 208,
+      "sourceBox": {
+        "x": 414,
+        "y": 610,
+        "width": 56,
+        "height": 160
+      },
+      "sha256": "5d29684b341dfc6c2d45ea7c20a887d20db11026178b9e4a3e6a8c284cf90bef",
+      "bytes": 5740,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "artisan_farHand",
+      "file": "parts/artisan/farHand.png",
+      "offsetX": 393,
+      "offsetY": 714,
+      "width": 99,
+      "height": 115,
+      "sourceBox": {
+        "x": 417.8,
+        "y": 738,
+        "width": 50.99,
+        "height": 66.85
+      },
+      "sha256": "9eb6650708ff0d9f7ef2dc8749d8a280616ccac2f244517066f7f7fecb0a4a51",
+      "bytes": 3377,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "artisan_farDhoti",
+      "file": "parts/artisan/farDhoti.png",
+      "offsetX": 331,
+      "offsetY": 626,
+      "width": 153,
+      "height": 273,
+      "sourceBox": {
+        "x": 355.16,
+        "y": 650,
+        "width": 104.98,
+        "height": 224.3
+      },
+      "sha256": "3c0760e872ddc8900d4939c2fa13a6ac6dde7272e2e5d8efdc127d260ee44386",
+      "bytes": 9419,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "artisan_farThigh",
+      "file": "parts/artisan/farThigh.png",
+      "offsetX": 346,
+      "offsetY": 646,
+      "width": 116,
+      "height": 234,
+      "sourceBox": {
+        "x": 370,
+        "y": 670,
+        "width": 68,
+        "height": 186
+      },
+      "sha256": "7a80214c010e2bcf3258eb6c5f024fea8587aae60681aa48b91486fb7b6cd9aa",
+      "bytes": 7476,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "artisan_farShin",
+      "file": "parts/artisan/farShin.png",
+      "offsetX": 345,
+      "offsetY": 800,
+      "width": 106,
+      "height": 231,
+      "sourceBox": {
+        "x": 369,
+        "y": 824,
+        "width": 58,
+        "height": 183
+      },
+      "sha256": "dbf71c7a1ae81fd741e5565a06245a0d5913267cd35fc0c2fea2b0e17e316fcb",
+      "bytes": 6161,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "artisan_farFoot",
+      "file": "parts/artisan/farFoot.png",
+      "offsetX": 350,
+      "offsetY": 927,
+      "width": 169,
+      "height": 117,
+      "sourceBox": {
+        "x": 374.95,
+        "y": 951.41,
+        "width": 120.58,
+        "height": 68.59
+      },
+      "sha256": "3ed3d9ece2a7f4f9ab2beb1a34fc40c285113306db8c9c836094af5ef16c432e",
+      "bytes": 4036,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "artisan_torso",
+      "file": "parts/artisan/torso.png",
+      "offsetX": 327,
+      "offsetY": 384,
+      "width": 246,
+      "height": 320,
+      "sourceBox": {
+        "x": 351.21,
+        "y": 408.58,
+        "width": 197.53,
+        "height": 271.42
+      },
+      "sha256": "ef09ff13e7ad9d574e42ecd7e037bc7aefb733b03a143b0913ac180ee48a6425",
+      "bytes": 16717,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "artisan_sash",
+      "file": "parts/artisan/sash.png",
+      "offsetX": 336,
+      "offsetY": 598,
+      "width": 245,
+      "height": 217,
+      "sourceBox": {
+        "x": 360,
+        "y": 622,
+        "width": 196.75,
+        "height": 168.34
+      },
+      "sha256": "96d81b7d2cfc824a7a0e7694026db08b94dcdddc0946194dfcb0a65dd8cf434e",
+      "bytes": 9158,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "artisan_pelvis",
+      "file": "parts/artisan/pelvis.png",
+      "offsetX": 334,
+      "offsetY": 624,
+      "width": 226,
+      "height": 193,
+      "sourceBox": {
+        "x": 358,
+        "y": 648,
+        "width": 178,
+        "height": 144.13
+      },
+      "sha256": "d410f031dcfe001944f8c93e57d5744f95edbfb5b13ae8f002344eb4ef791729",
+      "bytes": 11196,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "artisan_nearDhoti",
+      "file": "parts/artisan/nearDhoti.png",
+      "offsetX": 387,
+      "offsetY": 628,
+      "width": 153,
+      "height": 285,
+      "sourceBox": {
+        "x": 411.66,
+        "y": 652,
+        "width": 104.34,
+        "height": 236.66
+      },
+      "sha256": "8d978cf8bb996fd73407b832d488f6e20f18f5ecb563cad77165d90a94b580e8",
+      "bytes": 10304,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "artisan_nearThigh",
+      "file": "parts/artisan/nearThigh.png",
+      "offsetX": 419,
+      "offsetY": 646,
+      "width": 115,
+      "height": 235,
+      "sourceBox": {
+        "x": 443,
+        "y": 670,
+        "width": 67,
+        "height": 187
+      },
+      "sha256": "75f5bfb9385f3cd295937ae27b413d60ece269dcc404eddf1f28509899ab0f4d",
+      "bytes": 7819,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "artisan_nearShin",
+      "file": "parts/artisan/nearShin.png",
+      "offsetX": 426,
+      "offsetY": 800,
+      "width": 108,
+      "height": 232,
+      "sourceBox": {
+        "x": 450,
+        "y": 824,
+        "width": 60,
+        "height": 184
+      },
+      "sha256": "4eb6905655fd78e1334781bf488a98937e361b7241d00a702b5700f6a6ad5706",
+      "bytes": 6436,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "artisan_nearFoot",
+      "file": "parts/artisan/nearFoot.png",
+      "offsetX": 433,
+      "offsetY": 925,
+      "width": 173,
+      "height": 119,
+      "sourceBox": {
+        "x": 457.03,
+        "y": 949.96,
+        "width": 124.49,
+        "height": 70.04
+      },
+      "sha256": "0ca4d0a60962e36ef5a9b4973f27647e6884ca58d07989d96139dd9b5be8d8b0",
+      "bytes": 4214,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "artisan_neck",
+      "file": "parts/artisan/neck.png",
+      "offsetX": 416,
+      "offsetY": 364,
+      "width": 114,
+      "height": 124,
+      "sourceBox": {
+        "x": 440,
+        "y": 388,
+        "width": 66,
+        "height": 76
+      },
+      "sha256": "a96d06060e353a8b2009b3e0807ad9bde8a00c8ff1589f41bb5174d5ccb0c404",
+      "bytes": 2558,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "artisan_necklace",
+      "file": "parts/artisan/necklace.png",
+      "offsetX": 406,
+      "offsetY": 404,
+      "width": 140,
+      "height": 86,
+      "sourceBox": {
+        "x": 430,
+        "y": 428,
+        "width": 92,
+        "height": 38
+      },
+      "sha256": "e5932d4282d1e8a73376c6c9247f11788d5c23da4e827bd442fb33c61493f4b0",
+      "bytes": 3015,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "artisan_head",
+      "file": "parts/artisan/head.png",
+      "offsetX": 402,
+      "offsetY": 218,
+      "width": 177,
+      "height": 230,
+      "sourceBox": {
+        "x": 426,
+        "y": 242.96,
+        "width": 128.53,
+        "height": 181.07
+      },
+      "sha256": "8bcad895460df369992f12c946e9e83dcbf354c91b4ee3219346fed2e2ea1f78",
+      "bytes": 9346,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "artisan_eye",
+      "file": "parts/artisan/eye.png",
+      "offsetX": 454,
+      "offsetY": 271,
+      "width": 86,
+      "height": 68,
+      "sourceBox": {
+        "x": 478,
+        "y": 295.6,
+        "width": 38,
+        "height": 19.34
+      },
+      "sha256": "0351803a18d2e32d679f6a48de7cecbd53c59cff9755b4b54650862af1659314",
+      "bytes": 1513,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "artisan_eyelid",
+      "file": "parts/artisan/eyelid.png",
+      "offsetX": 454,
+      "offsetY": 271,
+      "width": 86,
+      "height": 68,
+      "sourceBox": {
+        "x": 478,
+        "y": 295.6,
+        "width": 38,
+        "height": 19.34
+      },
+      "sha256": "74d767634ed3ce3f8ee6249c3b7a6165faeeaed582d54f90e7a64d249ff650b6",
+      "bytes": 1264,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "artisan_brow",
+      "file": "parts/artisan/brow.png",
+      "offsetX": 446,
+      "offsetY": 255,
+      "width": 100,
+      "height": 59,
+      "sourceBox": {
+        "x": 470,
+        "y": 279.6,
+        "width": 52,
+        "height": 10.4
+      },
+      "sha256": "75c3f7cb717d6edfdbd779c3f8bb00e5c7e13c5fa04a982848aebd79f2155202",
+      "bytes": 1067,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "artisan_mustache",
+      "file": "parts/artisan/mustache.png",
+      "offsetX": 487,
+      "offsetY": 317,
+      "width": 85,
+      "height": 79,
+      "sourceBox": {
+        "x": 511.92,
+        "y": 341.92,
+        "width": 36.08,
+        "height": 30.08
+      },
+      "sha256": "bcd5959a0ea0906e6442384c66da9cf99fed933a50e2f7d3d6f676956425b748",
+      "bytes": 1586,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "artisan_earring",
+      "file": "parts/artisan/earring.png",
+      "offsetX": 410,
+      "offsetY": 312,
+      "width": 68,
+      "height": 101,
+      "sourceBox": {
+        "x": 434,
+        "y": 336,
+        "width": 20,
+        "height": 53
+      },
+      "sha256": "2ea7fc0ec3697e7628744608a2bcf6c654ad65e27ea6b7997054c1904b80d4d0",
+      "bytes": 1953,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "artisan_turban",
+      "file": "parts/artisan/turban.png",
+      "offsetX": 387,
+      "offsetY": 149,
+      "width": 198,
+      "height": 173,
+      "sourceBox": {
+        "x": 411.61,
+        "y": 173,
+        "width": 149.39,
+        "height": 124.09
+      },
+      "sha256": "d4cf3bd12e875ca0c0892ec2d5f9461c052b037456fb87629d055f1be69ee8a8",
+      "bytes": 9825,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "artisan_shoulderSash",
+      "file": "parts/artisan/shoulderSash.png",
+      "offsetX": 452,
+      "offsetY": 386,
+      "width": 100,
+      "height": 172,
+      "sourceBox": {
+        "x": 476,
+        "y": 410,
+        "width": 51.52,
+        "height": 124
+      },
+      "sha256": "a9b1a1b36df6eedde012080289d650478507f4ca07d10e04cda3e34414e8a868",
+      "bytes": 4920,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "artisan_nearUpperArm",
+      "file": "parts/artisan/nearUpperArm.png",
+      "offsetX": 470,
+      "offsetY": 446,
+      "width": 119,
+      "height": 221,
+      "sourceBox": {
+        "x": 494,
+        "y": 470,
+        "width": 71,
+        "height": 173
+      },
+      "sha256": "e26031e2ffd1fd5f0aba1c37aed360a1d712a655f06ad431895ca64e79d28d5b",
+      "bytes": 8117,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "artisan_nearForearm",
+      "file": "parts/artisan/nearForearm.png",
+      "offsetX": 495,
+      "offsetY": 586,
+      "width": 106,
+      "height": 209,
+      "sourceBox": {
+        "x": 519,
+        "y": 610,
+        "width": 58,
+        "height": 161
+      },
+      "sha256": "083849464b6dbbae3d1f643ba1d6e5c053909af520e2e473a39e710792c2e50b",
+      "bytes": 6257,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "artisan_handOpen",
+      "file": "parts/artisan/handOpen.png",
+      "offsetX": 497,
+      "offsetY": 712,
+      "width": 97,
+      "height": 113,
+      "sourceBox": {
+        "x": 521.95,
+        "y": 736,
+        "width": 48.84,
+        "height": 64.41
+      },
+      "sha256": "e1921ff968294ed6e9a96d66dda808976f31cffaa37a76de815256c1e4c08036",
+      "bytes": 3600,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "artisan_handGrip",
+      "file": "parts/artisan/handGrip.png",
+      "offsetX": 496,
+      "offsetY": 714,
+      "width": 98,
+      "height": 107,
+      "sourceBox": {
+        "x": 520.81,
+        "y": 738,
+        "width": 49.44,
+        "height": 58
+      },
+      "sha256": "80543d3cd287a1ea835cfce4a7a040ebc85d94a12e3df03d8d021b4597ab9cb9",
+      "bytes": 4106,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "horse_tailBase",
+      "file": "parts/horse/tailBase.png",
+      "offsetX": 280,
+      "offsetY": 356,
+      "width": 214,
+      "height": 281,
+      "sourceBox": {
+        "x": 304.43,
+        "y": 380,
+        "width": 165.57,
+        "height": 232.93
+      },
+      "sha256": "998112c6eaf78d798365f2ab39196bd93774ed6101b0476b82a6584146d3daab",
+      "bytes": 10479,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "horse_tailTuft",
+      "file": "parts/horse/tailTuft.png",
+      "offsetX": 244,
+      "offsetY": 532,
+      "width": 144,
+      "height": 258,
+      "sourceBox": {
+        "x": 268.98,
+        "y": 556,
+        "width": 95.4,
+        "height": 209.86
+      },
+      "sha256": "526ec056c42e7d352974c22f36991f9dcbbf4381185f7a4614dbcc8ac082a060",
+      "bytes": 8447,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "horse_farFrontUpper",
+      "file": "parts/horse/farFrontUpper.png",
+      "offsetX": 739,
+      "offsetY": 496,
+      "width": 106,
+      "height": 237,
+      "sourceBox": {
+        "x": 763,
+        "y": 520,
+        "width": 58,
+        "height": 189
+      },
+      "sha256": "deed870426e38c2681fb31c2c0df9cc707362a2c4a786c015700d55d3e38fbe6",
+      "bytes": 6177,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "horse_farFrontLower",
+      "file": "parts/horse/farFrontLower.png",
+      "offsetX": 747,
+      "offsetY": 656,
+      "width": 98,
+      "height": 217,
+      "sourceBox": {
+        "x": 771,
+        "y": 680,
+        "width": 50,
+        "height": 169
+      },
+      "sha256": "1d1e3cfad3560c7030d14cb6250c23d1005b7e194c1b446250ed899fe8854c75",
+      "bytes": 5525,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "horse_farFrontHoof",
+      "file": "parts/horse/farFrontHoof.png",
+      "offsetX": 754,
+      "offsetY": 792,
+      "width": 103,
+      "height": 126,
+      "sourceBox": {
+        "x": 778,
+        "y": 816,
+        "width": 54.6,
+        "height": 78
+      },
+      "sha256": "aa8a14d95b5e17dcf5158a450966b0a6fc7e58365a3e2c936af76b05cc37209a",
+      "bytes": 2257,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "horse_farHindUpper",
+      "file": "parts/horse/farHindUpper.png",
+      "offsetX": 397,
+      "offsetY": 496,
+      "width": 110,
+      "height": 239,
+      "sourceBox": {
+        "x": 421,
+        "y": 520,
+        "width": 62,
+        "height": 191
+      },
+      "sha256": "ce7e536440f8afe8b1b909e9f6e65301c1aee4080afc09df3c9d1d91063dc468",
+      "bytes": 6365,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "horse_farHindLower",
+      "file": "parts/horse/farHindLower.png",
+      "offsetX": 408,
+      "offsetY": 656,
+      "width": 100,
+      "height": 218,
+      "sourceBox": {
+        "x": 432,
+        "y": 680,
+        "width": 52,
+        "height": 170
+      },
+      "sha256": "97164d763c7e83a9c6a0cb3f09606a629781d7eb1fca393368d6d344d30f53f9",
+      "bytes": 5553,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "horse_farHindHoof",
+      "file": "parts/horse/farHindHoof.png",
+      "offsetX": 416,
+      "offsetY": 792,
+      "width": 103,
+      "height": 126,
+      "sourceBox": {
+        "x": 440,
+        "y": 816,
+        "width": 54.65,
+        "height": 78
+      },
+      "sha256": "1805e7a316076a019e73d13619b8d3fde3ac53b2556fb94121a4635ee2f2fd54",
+      "bytes": 2247,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "horse_torso",
+      "file": "parts/horse/torso.png",
+      "offsetX": 379,
+      "offsetY": 301,
+      "width": 554,
+      "height": 334,
+      "sourceBox": {
+        "x": 403.6,
+        "y": 325.54,
+        "width": 505.3,
+        "height": 285.97
+      },
+      "sha256": "b6087fdde2042b988da8ef5436ed5e5276c66a2466e1f478a410586b42d66c1a",
+      "bytes": 25400,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "horse_mane",
+      "file": "parts/horse/mane.png",
+      "offsetX": 840,
+      "offsetY": 228,
+      "width": 204,
+      "height": 245,
+      "sourceBox": {
+        "x": 864,
+        "y": 252.5,
+        "width": 155.3,
+        "height": 196.83
+      },
+      "sha256": "036cad9952547ddc5e7403227f8660fed2a4abc8d8f3777bd7b6690e3e8d5685",
+      "bytes": 9835,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "horse_farEar",
+      "file": "parts/horse/farEar.png",
+      "offsetX": 994,
+      "offsetY": 92,
+      "width": 87,
+      "height": 130,
+      "sourceBox": {
+        "x": 1018.49,
+        "y": 116,
+        "width": 38.19,
+        "height": 82
+      },
+      "sha256": "3a170e775c6e69a68ad68f4ed3f289d3a7c54b727a62027f0b7e09d61cbe4b11",
+      "bytes": 2981,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "horse_neck",
+      "file": "parts/horse/neck.png",
+      "offsetX": 809,
+      "offsetY": 231,
+      "width": 289,
+      "height": 306,
+      "sourceBox": {
+        "x": 833.75,
+        "y": 255.72,
+        "width": 240.58,
+        "height": 257.07
+      },
+      "sha256": "638034247592a14771b22aebaf78fd336a814c0d167f3f33a1b0803700846616",
+      "bytes": 15477,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "horse_head",
+      "file": "parts/horse/head.png",
+      "offsetX": 975,
+      "offsetY": 190,
+      "width": 218,
+      "height": 223,
+      "sourceBox": {
+        "x": 999.75,
+        "y": 214.52,
+        "width": 169.98,
+        "height": 174.84
+      },
+      "sha256": "7315693d57cd2875f27ef7231379e9640ff978ff91730d23cc52da78ff250fc8",
+      "bytes": 9484,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "horse_nearEar",
+      "file": "parts/horse/nearEar.png",
+      "offsetX": 1022,
+      "offsetY": 106,
+      "width": 90,
+      "height": 130,
+      "sourceBox": {
+        "x": 1046.49,
+        "y": 130,
+        "width": 41.06,
+        "height": 82
+      },
+      "sha256": "36872577845f61f574ba50c6c4e780ee3c4c2b01e4c8f0bd105730effcb41439",
+      "bytes": 3249,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "horse_eye",
+      "file": "parts/horse/eye.png",
+      "offsetX": 1022,
+      "offsetY": 237,
+      "width": 86,
+      "height": 67,
+      "sourceBox": {
+        "x": 1046,
+        "y": 261.6,
+        "width": 38,
+        "height": 18.17
+      },
+      "sha256": "94b497a6938cba482d19ccd7a9feefe95c769b52ff131c1184ae48b6b2af9c94",
+      "bytes": 1498,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "horse_forelock",
+      "file": "parts/horse/forelock.png",
+      "offsetX": 1000,
+      "offsetY": 161,
+      "width": 104,
+      "height": 111,
+      "sourceBox": {
+        "x": 1024,
+        "y": 185.85,
+        "width": 56,
+        "height": 62.65
+      },
+      "sha256": "925b49dd69df186ef6f258e3d2e01ef9a2d2f4812ca9539ffc9546d1c9ab012d",
+      "bytes": 2720,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "horse_harnessCollar",
+      "file": "parts/horse/harnessCollar.png",
+      "offsetX": 840,
+      "offsetY": 336,
+      "width": 129,
+      "height": 252,
+      "sourceBox": {
+        "x": 864,
+        "y": 360,
+        "width": 80.5,
+        "height": 204
+      },
+      "sha256": "aa62f235b0c3a23ab23c31e8faea6a24799b4330f64b23abf7ff050156fcaafb",
+      "bytes": 8624,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "horse_saddleBlanket",
+      "file": "parts/horse/saddleBlanket.png",
+      "offsetX": 574,
+      "offsetY": 300,
+      "width": 254,
+      "height": 262,
+      "sourceBox": {
+        "x": 598,
+        "y": 324.46,
+        "width": 206,
+        "height": 213.54
+      },
+      "sha256": "c9ae75e0af6130534920cdc51dd60bd3651833792009a5dc81c7afd1254cff16",
+      "bytes": 14894,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "horse_harnessStrap",
+      "file": "parts/horse/harnessStrap.png",
+      "offsetX": 536,
+      "offsetY": 462,
+      "width": 300,
+      "height": 87,
+      "sourceBox": {
+        "x": 560,
+        "y": 486,
+        "width": 252,
+        "height": 39
+      },
+      "sha256": "83e419c966657fc062ee073c7a0c61e5da254f6bfdec04943b95be0474530cb2",
+      "bytes": 5805,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "horse_bridle",
+      "file": "parts/horse/bridle.png",
+      "offsetX": 1024,
+      "offsetY": 208,
+      "width": 150,
+      "height": 172,
+      "sourceBox": {
+        "x": 1048,
+        "y": 232,
+        "width": 102,
+        "height": 124
+      },
+      "sha256": "480529a2f2ce5304f0e8e6b91664812c539fb6511f542459b5fe794d09d85a35",
+      "bytes": 7836,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "horse_nearFrontUpper",
+      "file": "parts/horse/nearFrontUpper.png",
+      "offsetX": 807,
+      "offsetY": 496,
+      "width": 111,
+      "height": 239,
+      "sourceBox": {
+        "x": 831,
+        "y": 520,
+        "width": 63,
+        "height": 191
+      },
+      "sha256": "4ba733bc28d6038cb6404a2d90ce3c66832f0b7c3135d0b46cd68d828805dcf6",
+      "bytes": 7258,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "horse_nearFrontLower",
+      "file": "parts/horse/nearFrontLower.png",
+      "offsetX": 816,
+      "offsetY": 656,
+      "width": 100,
+      "height": 218,
+      "sourceBox": {
+        "x": 840,
+        "y": 680,
+        "width": 52,
+        "height": 170
+      },
+      "sha256": "e1315649d43808d75962bbe7005372d61184a74504bc85bf982e2f8b26896505",
+      "bytes": 5849,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "horse_nearFrontHoof",
+      "file": "parts/horse/nearFrontHoof.png",
+      "offsetX": 822,
+      "offsetY": 792,
+      "width": 105,
+      "height": 126,
+      "sourceBox": {
+        "x": 846,
+        "y": 816,
+        "width": 56.6,
+        "height": 78
+      },
+      "sha256": "c1a03fcfb502dd1cb4f5a5c7c545a4254c0682658a06f543150f44420139e07f",
+      "bytes": 2730,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "horse_nearHindUpper",
+      "file": "parts/horse/nearHindUpper.png",
+      "offsetX": 458,
+      "offsetY": 496,
+      "width": 114,
+      "height": 240,
+      "sourceBox": {
+        "x": 482,
+        "y": 520,
+        "width": 66,
+        "height": 192
+      },
+      "sha256": "72be3c31a3e554980ba2918e0b49919b1745d64745c02adec8f19a9557b28d79",
+      "bytes": 7607,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "horse_nearHindLower",
+      "file": "parts/horse/nearHindLower.png",
+      "offsetX": 465,
+      "offsetY": 656,
+      "width": 103,
+      "height": 219,
+      "sourceBox": {
+        "x": 489,
+        "y": 680,
+        "width": 55,
+        "height": 171
+      },
+      "sha256": "999bfff0df3174ba9e37ddb8d654055636a3e97cce65e217541572131e9ad4c9",
+      "bytes": 5998,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "horse_nearHindHoof",
+      "file": "parts/horse/nearHindHoof.png",
+      "offsetX": 472,
+      "offsetY": 792,
+      "width": 107,
+      "height": 126,
+      "sourceBox": {
+        "x": 496,
+        "y": 816,
+        "width": 58.6,
+        "height": 78
+      },
+      "sha256": "436c81c2064c037b87941525f78ee42227349fca11721c1c28e61110b7e81c01",
+      "bytes": 2745,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "horse_harnessAnchor",
+      "file": "parts/horse/harnessAnchor.png",
+      "offsetX": 893,
+      "offsetY": 415,
+      "width": 74,
+      "height": 95,
+      "sourceBox": {
+        "x": 917,
+        "y": 439,
+        "width": 26,
+        "height": 47
+      },
+      "sha256": "f90b24d4429a2b136f06fae2d2db834d545f51386d4401003ac3332d787f370b",
+      "bytes": 1436,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "cart_farWheel",
+      "file": "parts/cart/farWheel.png",
+      "offsetX": 438,
+      "offsetY": 458,
+      "width": 284,
+      "height": 284,
+      "sourceBox": {
+        "x": 462,
+        "y": 482,
+        "width": 236,
+        "height": 236
+      },
+      "sha256": "f60b649bca6efe1c01b89f9e9044e19461d634d9e38e646fa0083928ea5a06db",
+      "bytes": 26027,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "cart_shafts",
+      "file": "parts/cart/shafts.png",
+      "offsetX": 586,
+      "offsetY": 326,
+      "width": 718,
+      "height": 208,
+      "sourceBox": {
+        "x": 610,
+        "y": 350,
+        "width": 670,
+        "height": 160
+      },
+      "sha256": "4b0daf9d4eede3f5910e619c8cd76d88efa5d5f80f5d10c3565351be51f01294",
+      "bytes": 15988,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "cart_cartBody",
+      "file": "parts/cart/cartBody.png",
+      "offsetX": 74,
+      "offsetY": 159,
+      "width": 586,
+      "height": 357,
+      "sourceBox": {
+        "x": 98,
+        "y": 183.91,
+        "width": 538,
+        "height": 308.88
+      },
+      "sha256": "797f3e43e99814bd32104a0ffe9e3e00d1d4691bcc83858b8cbd956048a24174",
+      "bytes": 39980,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "cart_nearWheel",
+      "file": "parts/cart/nearWheel.png",
+      "offsetX": 100,
+      "offsetY": 440,
+      "width": 300,
+      "height": 300,
+      "sourceBox": {
+        "x": 124,
+        "y": 464,
+        "width": 252,
+        "height": 252
+      },
+      "sha256": "f8bb944146543a44f95a1f07256a3c530b9a0b8ae01908f0494dd8c2fdcb150a",
+      "bytes": 31751,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    },
+    {
+      "id": "bell_bell",
+      "file": "parts/bell/bell.png",
+      "offsetX": 18,
+      "offsetY": -8,
+      "width": 144,
+      "height": 250,
+      "sourceBox": {
+        "x": 42,
+        "y": 16,
+        "width": 96,
+        "height": 202
+      },
+      "sha256": "7fc2ee3acbb4ba8f94d0b6167ff6edd994eccefe06413ecf7a1da977c5f52417",
+      "bytes": 9403,
+      "origin": "original-vector-authored",
+      "provider": "fableon-local-vector",
+      "model": "fableon-svg-v1",
+      "reviewStatus": "pending_artistic_approval"
+    }
+  ],
+  "inventoryNote": "Original local vector artwork. AI image generation blocked; no paid provider was contacted."
+}

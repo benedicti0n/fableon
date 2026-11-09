@@ -1,0 +1,22 @@
+{
+  "name": "@fableon/character-motion",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Reusable deterministic motion presets for Fableon's nine-part Little Bird rig.",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fableon/sprite-motion": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "~6.0.3"
+  }
+}

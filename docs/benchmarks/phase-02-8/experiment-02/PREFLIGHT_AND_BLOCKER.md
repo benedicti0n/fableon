@@ -1,238 +1,259 @@
-# Phase 2.8 Experiment 2 — First/Last-Frame Preflight and Blocker
+# Phase 2.8 Experiment 2 — Revised First/Last-Frame Preflight and Blocker
 
 **Date:** 2026-11-09  
-**Status:** **BLOCKED BEFORE PAID GENERATION — ENDPOINT FRAME IS NOT COMPATIBLE WITH THE START FRAME**  
+**Revision:** 2 — revised endpoint re-check  
+**Status:** **BLOCKED BEFORE PAID GENERATION — SCENE ALIGNMENT IMPROVED, CHARACTER IDENTITY STILL FAILS**  
 **Provider:** Google Gemini  
 **Model:** `gemini-omni-1.2-flash`  
-**Planned request:** 3 seconds, 720p native, 16:9, start + end frame conditioning  
+**Planned request:** 3 seconds, 720p native, 16:9, start + end conditioning  
 **Spend:** **$0.00** — no API request was made  
 **Video artifacts:** None created
 
 ## 1. Decision
 
-The supplied endpoint frame is a different scene from the start frame. It is not
-a continuation of the same camera, forest, branch, lighting, or character
-proportions. Using it as a last-frame condition would ask the model to
-interpolate between two incompatible compositions, which is exactly the failure
-mode this experiment was meant to avoid.
+The revised endpoint is a major improvement over the first endpoint. The branch,
+right-side trunk, lighting direction, flowers, and lower composition now align
+closely with the start frame. The pair is no longer a different scene.
 
-**Stop before any paid call.** Do not submit the request until a matching
-endpoint frame is supplied or generated from the start frame.
+However, two material mismatches remain:
+
+1. The revised endpoint introduces a **large left-side tree trunk** that is not
+   present in the start frame.
+2. The perched bird is still a **different character construction**: much larger
+   eye, shorter/thicker beak, rounder head and body, shorter tail, and simplified
+   wing markings.
+
+Those are not pose-only differences. They violate the experiment’s requirement
+to preserve character identity and forest geometry. A first/last-frame
+generation would have to morph the bird’s face/body and add or remove a tree,
+so the result would not be a clean endpoint-conditioning test.
+
+**Stop before submitting the paid request.** Do not spend the $0.25 cap on this
+pair.
 
 ## 2. Repository state
 
-- **Starting HEAD:** `67b46dc`
+- **Starting HEAD:** `6db440e`
 - **Branch:** `main`
-- **Working tree before this check:** clean
-- **New untracked input:** `assets/premium-video-v1/end-frame.png`
-- **Prior Experiment 1 artifacts:** preserved unchanged
-- **No push performed**
+- **Working tree at re-check start:** clean except the replaced endpoint asset
+- **Revised endpoint:** `assets/premium-video-v1/end-frame.png`
+- **Revised endpoint SHA-256:**
+  `e0d3a948382e9b93d52dfa969108b52ab78737927293b64dfaab6bbb5a87d106`
+- **Start frame SHA-256:**
+  `3bd6ed479b7febc43c25fcb44b46f68d760d335ecfe9bdd7c4d6b8c725a0e9d1`
+- No push performed
+- No Phase 3 work started
 
-## 3. Credentials and provider capability
+The previous endpoint (`e3bec87…`) remains in git history and is not used by
+this revision.
 
-The local `.env` now contains `GEMINI_API_KEY`. Presence was verified; the
-value was not printed, logged, copied into documentation, or committed.
+## 3. Input assets
 
-Current Gemini documentation (accessed 2026-11-09) confirms:
+| Property      | Start frame                               | Revised end frame                       |
+| ------------- | ----------------------------------------- | --------------------------------------- |
+| Path          | `assets/premium-video-v1/start-frame.png` | `assets/premium-video-v1/end-frame.png` |
+| Dimensions    | 1672×941                                  | 1672×941                                |
+| Aspect ratio  | 1.7768:1                                  | 1.7768:1                                |
+| Format        | PNG 8-bit RGB                             | PNG 8-bit RGB                           |
+| Size          | 2,970,254 bytes                           | 3,046,308 bytes                         |
+| Decodes       | Yes                                       | Yes                                     |
+| One bird      | Yes                                       | Yes                                     |
+| Text / labels | None                                      | None                                    |
+| Alpha         | None                                      | None                                    |
+| SHA-256       | `3bd6ed47…e9d1`                           | `e0d3a948…d106`                         |
 
-- `gemini-omni-1.2-flash` supports image-to-video and first/last-frame
-  interpolation.
-- First/last-frame interpolation supports **3 to 10 seconds**.
-- Two images are supplied in the request input list, followed by a text prompt.
-- 720p is the native/default output tier; 1080p and 4K are upscaled.
-- Standard pricing is **$12.00 per 1M video tokens**; 720p uses approximately
-  **5,792 tokens per second**, or about **$0.07/s**.
-- A 3-second 720p attempt is approximately **$0.21**, within the **$0.25**
-  experiment cap.
+Both files pass the technical checks. Provenance for both is user-supplied;
+macOS metadata records a download source of `https://chatgpt.com/`. Neither is
+a cleared production asset.
 
-The provider and budget are viable. The **input gate** is the blocker.
+## 4. Compatibility findings
 
-## 4. Input assets
+| Check                                            | Result           | Finding                                                                                                       |
+| ------------------------------------------------ | ---------------- | ------------------------------------------------------------------------------------------------------------- |
+| Same dimensions                                  | **PASS**         | 1672×941                                                                                                      |
+| Same aspect ratio                                | **PASS**         | 1.7768:1                                                                                                      |
+| Both decode                                      | **PASS**         | Valid PNGs                                                                                                    |
+| One bird / no text                               | **PASS**         | No labels, panels, or multiple birds                                                                          |
+| Branch geometry                                  | **PASS (close)** | Same curved mossy branch and contact area                                                                     |
+| Right-side trunk                                 | **PASS (close)** | Same dominant right trunk and foliage                                                                         |
+| Lower-left flowers                               | **PASS (close)** | Same flower cluster and placement                                                                             |
+| Lighting direction                               | **PASS (close)** | Warm beams from the upper right                                                                               |
+| Camera framing                                   | **PASS (close)** | Same 16:9 composition and branch placement                                                                    |
+| Left-side forest geometry                        | **FAIL**         | Revised endpoint adds a large left tree trunk that is absent from the start frame                             |
+| Character identity                               | **FAIL**         | Different eye size, beak shape, head/body ratio, tail length, and wing markings                               |
+| Clean compositing                                | **PARTIAL**      | Feet grip the branch and no hard matte halo is obvious, but the bird reads as a separately designed character |
+| Suitable for clean first/last-frame conditioning | **FAIL**         | The model would have to morph identity and add/remove background geometry                                     |
 
-| Property            | Start frame                                                        | End frame                                                          |
-| ------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
-| Path                | `assets/premium-video-v1/start-frame.png`                          | `assets/premium-video-v1/end-frame.png`                            |
-| Dimensions          | 1672×941                                                           | 1672×941                                                           |
-| Aspect ratio        | 1.7768:1                                                           | 1.7768:1                                                           |
-| Format              | PNG, 8-bit RGB, non-interlaced                                     | PNG, 8-bit RGB, non-interlaced                                     |
-| Size                | 2,970,254 bytes                                                    | 2,932,950 bytes                                                    |
-| SHA-256             | `3bd6ed479b7febc43c25fcb44b46f68d760d335ecfe9bdd7c4d6b8c725a0e9d1` | `e3bec87ff5f258ba0fd08639cc80fc18ff5aefcbb0895fd59b05928d5b15eed7` |
-| One bird            | Yes                                                                | Yes                                                                |
-| Typography / labels | None                                                               | None                                                               |
-| Multiple birds      | No                                                                 | No                                                                 |
-| Alpha channel       | None                                                               | None                                                               |
+Scene-level alignment is now good. Character-level alignment is not.
 
-Both files decode correctly and pass the basic technical checks: same
-dimensions, same aspect ratio, one bird, no text, no labels, no checkerboard,
-no multiple character copies.
+## 5. Quantitative evidence
 
-Provenance for both: user-supplied; macOS metadata records a download source of
-`https://chatgpt.com/`. No embedded license or authorship metadata was found.
-Neither image is a cleared production asset.
-
-## 5. Compatibility findings
-
-| Check                                               | Result                                                                                        |
-| --------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| Same dimensions                                     | **PASS** — 1672×941                                                                           |
-| Same aspect ratio                                   | **PASS** — 1.7768:1                                                                           |
-| Both decode                                         | **PASS**                                                                                      |
-| One bird / no text                                  | **PASS**                                                                                      |
-| Same camera framing                                 | **FAIL**                                                                                      |
-| Same forest layout                                  | **FAIL**                                                                                      |
-| Same tree positions                                 | **FAIL** — dominant trunk is on the right in the start frame and on the left in the end frame |
-| Same branch geometry                                | **FAIL** — thin curved branch vs thick lower branch with different contact area               |
-| Same lighting direction                             | **FAIL** — warm beams from upper right vs upper center/left                                   |
-| Same character proportions                          | **FAIL** — slender, long-tailed bird vs rounder, shorter-tailed bird                          |
-| Same facial identity                                | **FAIL** — eye size, beak shape, head/body ratio, and wing markings differ                    |
-| Suitable for reliable first/last-frame conditioning | **FAIL**                                                                                      |
-
-## 6. Visual mismatch detail
-
-### Background and tree placement
-
-- **Start frame:** a large textured tree trunk occupies the right edge. The
-  forest opens toward the center with vertical trunks and a bright sunlit gap.
-  The branch emerges from the lower left and curves up toward the right trunk.
-- **End frame:** a large tree trunk occupies the left side. The branch is much
-  thicker, lower, and more horizontal, with a broad mossy top. The forest
-  layout, trunk spacing, and depth cues do not match the start frame.
-
-### Branch geometry and landing area
-
-- The start branch is comparatively thin, curved, and moss-covered, with a
-  readable contact area in the lower-right third.
-- The end branch is a thick, broad, nearly horizontal limb with different moss
-  distribution and a different perch location.
-- These are not the same physical branch. A model conditioned on both would
-  have to morph or replace the branch during the landing.
-
-### Lighting
-
-- Start: strong warm sunbeams from the **upper right**, with the brightest
-  patch near the right trunk and a cooler, misty center.
-- End: bright sunbeams from the **upper center/left**, with a warmer, more
-  evenly lit canopy and different shadow direction.
-- Relighting the forest mid-shot would be a visible continuity failure.
-
-### Camera and composition
-
-- Start: bird in flight at the left of center, wings raised, body angled toward
-  the branch; the branch occupies the lower-right third.
-- End: bird perched at center-right, wings folded, body larger in frame; the
-  branch fills the lower third.
-- The subject scale and placement are not a continuation of the same static
-  camera setup.
-
-### Character identity
-
-- Start bird: slender body, long blue tail, longer wings, smaller eye, finer
-  beak, more articulated feather layers.
-- End bird: rounder body, shorter tail, larger eye, shorter/thicker beak,
-  simplified wing markings, different head-to-body ratio.
-- The palette family is similar (chestnut, cream, golden ochre, slate blue), but
-  the character is not the same construction or proportion.
-
-## 7. Quantitative diagnostics
-
-Global comparison of the two source PNGs at native resolution:
+### Revised pair vs start frame
 
 | Metric                            |        Value |
 | --------------------------------- | -----------: |
-| SSIM, all channels                | **0.144777** |
-| SSIM, R                           |     0.132816 |
-| SSIM, G                           |     0.154829 |
-| SSIM, B                           |     0.146687 |
-| Mean absolute difference (0–255)  |     **62.7** |
-| Pixels differing by more than 10  |   **99.16%** |
-| Pixels differing by more than 25  |   **93.26%** |
-| Pixels differing by more than 50  |   **76.97%** |
-| Pixels differing by more than 100 |   **39.27%** |
+| SSIM, all channels                | **0.761365** |
+| SSIM, R                           |     0.757769 |
+| SSIM, G                           |     0.767817 |
+| SSIM, B                           |     0.758508 |
+| Mean absolute difference (0–255)  |    **13.32** |
+| Pixels differing by more than 10  |       28.81% |
+| Pixels differing by more than 25  |       24.46% |
+| Pixels differing by more than 50  |       16.91% |
+| Pixels differing by more than 100 |        6.14% |
 
 Per-region mean absolute difference:
 
-| Region       |   MAD |
-| ------------ | ----: |
-| Top left     | 65.76 |
-| Top right    | 58.11 |
-| Bottom left  | 65.85 |
-| Bottom right | 61.10 |
-| Center       | 54.42 |
+| Region       |       MAD | Interpretation                                  |
+| ------------ | --------: | ----------------------------------------------- |
+| Top left     | **34.42** | New left tree trunk and denser foliage          |
+| Top right    |      8.14 | Right trunk/canopy aligns well                  |
+| Bottom left  |      6.31 | Branch/flowers align well                       |
+| Bottom right |      4.43 | Branch/trunk/flowers align well                 |
+| Center       | **27.97** | Bird identity/pose and midground foliage differ |
 
-The mismatch is global, not limited to the bird’s pose. This is not a compatible
-start/end pair.
+The mismatch is now concentrated in the upper-left background and the bird, not
+spread across the whole frame.
 
-## 8. Side-by-side evidence
+### Revision 1 vs revision 2
 
-- `docs/benchmarks/phase-02-8/experiment-02/start-end-comparison.png` —
-  left: start frame; middle: end frame; right: amplified absolute difference.
-- `docs/benchmarks/phase-02-8/experiment-02/start-end-bird-crops.png` —
-  left: start bird crop; right: end bird crop.
+| Pair                                  |         SSIM | Global MAD |
+| ------------------------------------- | -----------: | ---------: |
+| Original start vs revision 1 endpoint |     0.144777 |       62.7 |
+| Original start vs revision 2 endpoint | **0.761365** |  **13.32** |
 
-The difference panel is dominated by background structure, confirming that the
-forest, branch, and lighting changed, not just the bird pose.
+The revision is a large improvement. It is still not a clean identity match.
 
-## 9. Why this blocks generation
+### Region diagnostics
 
-Gemini’s first/last-frame mode is designed to interpolate a continuous
-transition between two images. When the images disagree on scene geometry, the
-model has three bad options:
+| Region                     |     SSIM / metric | Interpretation                                                                                      |
+| -------------------------- | ----------------: | --------------------------------------------------------------------------------------------------- |
+| Upper-left background crop | SSIM **0.355067** | The added left trunk is a real geometry change                                                      |
+| Bird head crop             | SSIM **0.184237** | Diagnostic only; crop alignment is approximate, but confirms a substantial facial-design difference |
 
-1. morph the background and branch to reconcile them;
-2. snap or cut between compositions;
-3. ignore one endpoint and animate only one image.
+The head-crop SSIM is not a formal identity score because the two heads are not
+pixel-aligned and the birds are in different poses. It is used only to support
+the visual finding. The direct head comparison is the stronger evidence.
 
-All three would invalidate the experiment. The correct action is to fix the
-endpoint asset, not to spend money and hope the model resolves an impossible
-transition.
+## 6. Visual evidence
 
-## 10. Required corrections
+- `docs/benchmarks/phase-02-8/experiment-02/start-end-comparison.png`
+  - left: start frame;
+  - middle: revised end frame;
+  - right: amplified absolute difference.
+- `docs/benchmarks/phase-02-8/experiment-02/start-end-bird-crops.png`
+  - left: start bird;
+  - right: revised end bird.
+- `docs/benchmarks/phase-02-8/experiment-02/start-end-head-crops.png`
+  - left: start head close-up;
+  - right: revised end head close-up.
+- `docs/benchmarks/phase-02-8/experiment-02/start-end-left-trunk-crops.png`
+  - left: start upper-left background;
+  - right: revised end upper-left background.
+- `docs/benchmarks/phase-02-8/experiment-02/end-frame-revision-comparison.png`
+  - left: rejected revision 1 endpoint;
+  - right: revised revision 2 endpoint.
 
-The endpoint must be generated from the **same start frame and camera setup**,
-or authored to match it. It should preserve:
+## 7. Remaining visual defects
 
-1. **Camera:** identical framing, focal length, subject scale, and composition.
-2. **Forest:** same trunk positions, canopy density, depth layers, and color
-   temperature.
-3. **Branch:** same physical branch, same curve, thickness, moss distribution,
-   and landing contact area.
-4. **Lighting:** same sun direction, beam pattern, highlight placement, and
-   shadow direction.
-5. **Character:** same head/body ratio, eye size, beak shape, tail length,
-   wing markings, feather layers, and palette.
-6. **Pose:** the bird perched on the same branch, wings folded, feet gripping,
-   in a pose that can be reached from the start frame within 3 seconds.
+### D1 — Added left-side tree trunk
 
-Recommended workflow: use the start frame plus the approved character
-reference to generate a matching endpoint, then re-run this compatibility check
-before any paid video request. Do not use a separately composed scene.
+The start frame’s upper-left is open forest with thin trunks and foliage. The
+revised endpoint adds a large, detailed tree trunk and branch structure in that
+region. A model interpolating the pair would have to grow a tree during the
+landing or ignore the endpoint’s left side.
 
-A useful screening gate is:
+### D2 — Character identity drift
 
-- identical dimensions and aspect ratio;
-- matching trunk/branch landmarks;
-- matching lighting direction;
-- visually consistent character construction;
-- no typography or multiple birds.
+The revised bird remains a different design:
 
-SSIM alone is not a sufficient gate because the bird pose legitimately changes
-between start and end. The background and branch must be inspected directly.
-For reference, the current pair’s SSIM of **0.145** is far below what a genuine
-same-camera continuation would produce.
+- eye is substantially larger relative to the head;
+- beak is shorter and thicker;
+- head is rounder and the body is plumper;
+- tail is shorter;
+- wing markings are broader and less layered;
+- facial feather markings and cream/chestnut transitions differ.
 
-## 11. Cost and spend
+The palette family is correct, but the construction is not the same character.
+This is the same class of defect Experiment 1 exposed.
 
-| Item                                 |                      Value |
-| ------------------------------------ | -------------------------: |
-| Paid API requests                    |                      **0** |
-| Spend                                |                  **$0.00** |
-| Estimated 3 s 720p cost if unblocked |                     ~$0.21 |
-| Experiment cap                       |                      $0.25 |
-| Interaction ID                       | None — no request was made |
-| Video artifacts                      |                       None |
+### D3 — Compositing assessment
 
-No request was submitted, so there is no usage record, no interaction ID, no
-generated MP4, and no billable charge from this experiment.
+No hard white matte halo or floating feet are obvious at normal viewing. The
+visible foot grips the moss, and the branch contact is plausible. The remaining
+issue is not a crude cutout edge; it is that the perched bird is a different
+character design composited into the scene.
+
+## 8. Provider and model verification
+
+Current Gemini documentation was checked on 2026-11-09:
+
+- `gemini-omni-1.2-flash` supports first/last-frame interpolation.
+- First/last-frame interpolation supports **3–10 seconds**.
+- Two images are supplied in the input list, followed by a text prompt.
+- 720p is native/default; 1080p and 4K are upscaled.
+- Standard pricing: **$12.00 per 1M video tokens**; 720p uses about
+  **5,792 tokens/s**, or **~$0.07/s**.
+- A 3-second 720p attempt is approximately **$0.21**, within the **$0.25**
+  experiment cap.
+
+The local `.env` contains `GEMINI_API_KEY`. The value was not printed, logged,
+or committed. No request was sent.
+
+## 9. Planned request — not executed
+
+| Parameter         | Value                           |
+| ----------------- | ------------------------------- |
+| Provider          | Google Gemini                   |
+| Model             | `gemini-omni-1.2-flash`         |
+| Mode              | First/last-frame image-to-video |
+| Duration          | 3 seconds                       |
+| Resolution        | 720p native                     |
+| Aspect ratio      | 16:9                            |
+| Images            | Start frame + revised end frame |
+| Prompt            | Balanced-motion landing prompt  |
+| Attempts          | 1                               |
+| Automatic retries | None                            |
+| Interaction ID    | **None**                        |
+| Provider status   | **Not called**                  |
+
+## 10. Cost and spend
+
+| Item                        |     Value |
+| --------------------------- | --------: |
+| Paid API requests           |     **0** |
+| Spend                       | **$0.00** |
+| Estimated cost if unblocked |    ~$0.21 |
+| Experiment cap              |     $0.25 |
+| Remaining under cap         |     $0.25 |
+| Usage record                |      None |
+
+No `cost-report.json`, `metadata.json`, or generated MP4 exists.
+
+## 11. Required corrections
+
+The endpoint must preserve both the scene and the character:
+
+1. **Keep the same left-side forest geometry.** Do not add a large left trunk
+   that is absent from the start frame. Use the start frame’s background as the
+   scene base.
+2. **Preserve the start bird’s facial construction:** eye size, beak shape,
+   head/body ratio, cheek/feather markings, and cream/chestnut transitions.
+3. **Preserve the start bird’s body and wing design:** slender body, long tail,
+   layered slate-blue wing feathers, and golden accents.
+4. **Use a perched pose derived from the start character**, not a newly designed
+   rounder bird.
+5. **Keep the existing branch, right trunk, flowers, and lighting** that already
+   match.
+6. **Check feet and branch contact** at high resolution; the current contact is
+   plausible but should be preserved.
+7. Re-run this compatibility check before any paid request.
+
+Recommended workflow: use the start frame as the scene base and inpaint/compose
+a perched version of the **same** bird onto the existing branch, rather than
+generating a new scene or a new character. A matching endpoint should differ
+from the start primarily in the bird’s pose and wing position, not in the forest
+or facial design.
 
 ## 12. What was deliberately not created
 
@@ -244,14 +265,16 @@ generated MP4, and no billable charge from this experiment.
 - `cost-report.json`
 - `EVALUATION.md` with fabricated scores
 
-Only the input-comparison evidence and this blocker document were created.
+Only updated input-comparison evidence and this blocker document exist.
 
 ## 13. Next action
 
-1. Generate or author a matching endpoint frame from the start frame.
-2. Re-run the side-by-side and quantitative compatibility check.
-3. If the endpoint passes, submit **one** 3-second, 720p, 16:9 first/last-frame
+1. Produce a revision 3 endpoint from the start frame, preserving the left
+   background and the start bird’s facial/body identity.
+2. Re-run the comparison and check the head, tail, wing markings, left
+   background, and feet.
+3. If the pair passes, submit exactly one 3-second, 720p, 16:9 first/last-frame
    request under the $0.25 cap.
-4. If it fails again, stop and report the specific mismatch; do not spend.
+4. If it fails, stop again and report the specific mismatch.
 
 No Phase 3 work was started. No push was performed.

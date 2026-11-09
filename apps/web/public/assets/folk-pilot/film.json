@@ -1,0 +1,343 @@
+{
+  "id": "the-little-brass-bell",
+  "title": "The Little Brass Bell",
+  "specVersion": "folk-pilot-v1",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "world": {
+    "width": 2400,
+    "height": 1350
+  },
+  "groundY": 1120,
+  "seed": 20261110,
+  "shots": [
+    {
+      "id": "shot-1",
+      "title": "Morning in the Village",
+      "startFrame": 0,
+      "frameCount": 120,
+      "background": "courtyard",
+      "camera": [
+        {
+          "frame": 0,
+          "x": 1200,
+          "y": 700,
+          "zoom": 1.0,
+          "easing": "easeInOutCubic"
+        },
+        {
+          "frame": 119,
+          "x": 1300,
+          "y": 720,
+          "zoom": 1.07,
+          "easing": "easeInOutCubic"
+        }
+      ],
+      "transitionIn": {
+        "type": "fadeFromBlack",
+        "frames": 18
+      },
+      "transitionOut": null,
+      "artisan": null,
+      "horse": null,
+      "cart": null,
+      "bell": {
+        "mode": "hidden"
+      },
+      "notes": "Slow courtyard reveal with architecture, sun, and drifting dust."
+    },
+    {
+      "id": "shot-2",
+      "title": "The Artisan",
+      "startFrame": 120,
+      "frameCount": 144,
+      "background": "courtyard",
+      "camera": [
+        {
+          "frame": 0,
+          "x": 850,
+          "y": 740,
+          "zoom": 1.14,
+          "easing": "easeInOutCubic"
+        },
+        {
+          "frame": 143,
+          "x": 1050,
+          "y": 760,
+          "zoom": 1.12,
+          "easing": "easeInOutCubic"
+        }
+      ],
+      "transitionIn": {
+        "type": "crossfade",
+        "frames": 10
+      },
+      "transitionOut": null,
+      "artisan": {
+        "action": "walk",
+        "fromX": 150,
+        "toX": 680,
+        "scale": 0.52,
+        "startFrame": 0,
+        "endFrame": 143,
+        "speed": 88,
+        "bell": "hand"
+      },
+      "horse": null,
+      "cart": null,
+      "bell": {
+        "mode": "hand"
+      },
+      "notes": "Artisan walks in with the brass bell: leg articulation, opposing arm swing, blink, prop in hand."
+    },
+    {
+      "id": "shot-3",
+      "title": "The Horse and Cart",
+      "startFrame": 264,
+      "frameCount": 168,
+      "background": "courtyard",
+      "camera": [
+        {
+          "frame": 0,
+          "x": 950,
+          "y": 760,
+          "zoom": 1.13,
+          "easing": "easeInOutCubic"
+        },
+        {
+          "frame": 167,
+          "x": 950,
+          "y": 760,
+          "zoom": 1.12,
+          "easing": "easeInOutCubic"
+        }
+      ],
+      "transitionIn": {
+        "type": "crossfade",
+        "frames": 10
+      },
+      "transitionOut": null,
+      "artisan": {
+        "action": "idle",
+        "fromX": 680,
+        "toX": 680,
+        "scale": 0.52,
+        "startFrame": 0,
+        "endFrame": 167,
+        "speed": 0,
+        "bell": "hand"
+      },
+      "horse": {
+        "action": "walk",
+        "fromX": -300,
+        "toX": 500,
+        "scale": 0.58,
+        "startFrame": 0,
+        "endFrame": 167,
+        "speed": 114
+      },
+      "cart": {
+        "offsetX": -275,
+        "scale": 0.6,
+        "distanceStart": 120,
+        "speed": 114,
+        "wheelRadius": 118
+      },
+      "bell": {
+        "mode": "hand"
+      },
+      "notes": "Horse and decorated cart enter with four-leg gait, harness, head motion, tail sway, and wheel rotation."
+    },
+    {
+      "id": "shot-4",
+      "title": "The Brass Bell",
+      "startFrame": 432,
+      "frameCount": 168,
+      "background": "courtyard",
+      "camera": [
+        {
+          "frame": 0,
+          "x": 950,
+          "y": 780,
+          "zoom": 1.28,
+          "easing": "easeInOutCubic"
+        },
+        {
+          "frame": 167,
+          "x": 1000,
+          "y": 760,
+          "zoom": 1.3,
+          "easing": "easeInOutCubic"
+        }
+      ],
+      "transitionIn": {
+        "type": "crossfade",
+        "frames": 10
+      },
+      "transitionOut": null,
+      "artisan": {
+        "action": "reach",
+        "fromX": 680,
+        "toX": 680,
+        "scale": 0.52,
+        "startFrame": 0,
+        "endFrame": 167,
+        "speed": 0,
+        "bell": "hand",
+        "reach": {
+          "targetX": 1039,
+          "targetY": 864,
+          "startFrame": 26,
+          "endFrame": 78,
+          "gripFrame": 60,
+          "releaseFrame": 96
+        }
+      },
+      "horse": {
+        "action": "nod",
+        "fromX": 500,
+        "toX": 500,
+        "scale": 0.58,
+        "startFrame": 0,
+        "endFrame": 167,
+        "speed": 0,
+        "nodStartFrame": 92
+      },
+      "cart": {
+        "offsetX": -275,
+        "scale": 0.6,
+        "distanceStart": 360,
+        "speed": 0,
+        "wheelRadius": 118
+      },
+      "bell": {
+        "mode": "transfer",
+        "attachFrame": 72
+      },
+      "notes": "Artisan reaches, grips, and attaches the bell; horse nods; hand releases; object stays on the harness."
+    },
+    {
+      "id": "shot-5",
+      "title": "The Journey Continues",
+      "startFrame": 600,
+      "frameCount": 120,
+      "background": "street",
+      "camera": [
+        {
+          "frame": 0,
+          "x": 1000,
+          "y": 760,
+          "zoom": 1.1,
+          "easing": "easeInOutCubic"
+        },
+        {
+          "frame": 119,
+          "x": 1150,
+          "y": 780,
+          "zoom": 1.02,
+          "easing": "easeInOutCubic"
+        }
+      ],
+      "transitionIn": {
+        "type": "crossfade",
+        "frames": 10
+      },
+      "transitionOut": {
+        "type": "fadeToBlack",
+        "frames": 24
+      },
+      "artisan": {
+        "action": "watch",
+        "fromX": 220,
+        "toX": 220,
+        "scale": 0.52,
+        "startFrame": 0,
+        "endFrame": 119,
+        "speed": 0,
+        "bell": "none"
+      },
+      "horse": {
+        "action": "walk",
+        "fromX": 800,
+        "toX": 1300,
+        "scale": 0.58,
+        "startFrame": 0,
+        "endFrame": 119,
+        "speed": 120
+      },
+      "cart": {
+        "offsetX": -275,
+        "scale": 0.6,
+        "distanceStart": 360,
+        "speed": 120,
+        "wheelRadius": 118
+      },
+      "bell": {
+        "mode": "harness"
+      },
+      "notes": "Horse and cart recede down the lane; artisan watches; bell sways on the harness; final fade."
+    }
+  ],
+  "titles": [
+    {
+      "id": "opening-title",
+      "text": "The Little Brass Bell",
+      "startFrame": 20,
+      "endFrame": 108,
+      "fadeInFrames": 16,
+      "fadeOutFrames": 16,
+      "x": 960,
+      "y": 238,
+      "maxWidth": 1250,
+      "fontSize": 76,
+      "color": "#fff2cf",
+      "align": "center"
+    },
+    {
+      "id": "ending-title",
+      "text": "Every journey carries a little music.",
+      "startFrame": 650,
+      "endFrame": 706,
+      "fadeInFrames": 16,
+      "fadeOutFrames": 16,
+      "x": 960,
+      "y": 150,
+      "maxWidth": 1100,
+      "fontSize": 46,
+      "color": "#fff2cf",
+      "align": "center"
+    }
+  ],
+  "motion": {
+    "artisan": {
+      "walkSpeed": 112,
+      "cycleSeconds": 1.1,
+      "bob": 5,
+      "armSwingDeg": 26,
+      "stepLift": 26,
+      "idleSwayDeg": 3,
+      "blinkIntervalFrames": 72,
+      "blinkDurationFrames": 3,
+      "headTurnDeg": 16
+    },
+    "horse": {
+      "walkSpeed": 86,
+      "cycleSeconds": 1.15,
+      "bob": 6,
+      "stepLift": 34,
+      "headNodDeg": 7,
+      "tailSwayDeg": 9,
+      "legOffsets": {
+        "nearFront": 0,
+        "farFront": 0.5,
+        "nearHind": 0.5,
+        "farHind": 0
+      }
+    },
+    "cart": {
+      "wheelRadius": 118,
+      "bounce": 2
+    }
+  }
+}

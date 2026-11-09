@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="230" viewBox="0 0 180 230">
+  <g id="part-bell" data-part="bell" ><path d="M90 16 C76 16 68 28 68 42 L68 54 C52 64 42 82 42 102 L42 150 C42 164 52 174 66 174 L114 174 C128 174 138 164 138 150 L138 102 C138 82 128 64 112 54 L112 42 C112 28 104 16 90 16 Z" fill="#e0b354" stroke="#2a1710" stroke-width="8"/>
+     <path d="M68 72 C78 64 102 64 112 72" fill="none" stroke="#b8872f" stroke-width="6"/>
+     <path d="M54 108 C76 120 104 120 126 108" fill="none" stroke="#b55034" stroke-width="8"/>
+     <path d="M48 140 C76 152 104 152 132 140" fill="none" stroke="#b55034" stroke-width="8"/>
+     <path d="M78 52 C84 46 96 46 102 52" fill="none" stroke="#f2e3c6" stroke-width="4"/>
+     <circle cx="90" cy="86" r="10" fill="#b55034" stroke="#2a1710" stroke-width="4"/>
+     <path d="M90 174 L90 194" stroke="#2a1710" stroke-width="8"/>
+     <circle cx="90" cy="204" r="14" fill="#b8872f" stroke="#2a1710" stroke-width="6"/>
+     <circle cx="90" cy="204" r="5" fill="#f2e3c6"/>
+     <path d="M68 28 C62 34 60 42 60 50" fill="none" stroke="#f2e3c6" stroke-width="5" opacity="0.7"/></g>
+</svg>

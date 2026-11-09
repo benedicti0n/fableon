@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="800" viewBox="0 0 1300 800">
+  <defs>
+    <pattern id="cartDiamonds" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M0 18 L18 0 L36 18 L18 36 Z" fill="none" stroke="#e0b354" stroke-width="2.5" opacity="0.8"/>
+    </pattern>
+    <pattern id="cartStripes" width="18" height="18" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="18" fill="#f2e3c6" opacity="0.35"/>
+    </pattern>
+  </defs>
+
+  <g id="part-farWheel" data-part="farWheel" ><circle cx="580" cy="600" r="118" fill="#b77a2b" stroke="#2a1710" stroke-width="9"/>
+     <circle cx="580" cy="600" r="98" fill="none" stroke="#29445f" stroke-width="9"/>
+     <circle cx="580" cy="600" r="24" fill="#e0b354" stroke="#2a1710" stroke-width="6"/>
+     <line x1="604.0" y1="600.0" x2="678.0" y2="600.0" stroke="#2a1710" stroke-width="7"/><line x1="600.8" y1="612.0" x2="664.9" y2="649.0" stroke="#2a1710" stroke-width="7"/><line x1="592.0" y1="620.8" x2="629.0" y2="684.9" stroke="#2a1710" stroke-width="7"/><line x1="580.0" y1="624.0" x2="580.0" y2="698.0" stroke="#2a1710" stroke-width="7"/><line x1="568.0" y1="620.8" x2="531.0" y2="684.9" stroke="#2a1710" stroke-width="7"/><line x1="559.2" y1="612.0" x2="495.1" y2="649.0" stroke="#2a1710" stroke-width="7"/><line x1="556.0" y1="600.0" x2="482.0" y2="600.0" stroke="#2a1710" stroke-width="7"/><line x1="559.2" y1="588.0" x2="495.1" y2="551.0" stroke="#2a1710" stroke-width="7"/><line x1="568.0" y1="579.2" x2="531.0" y2="515.1" stroke="#2a1710" stroke-width="7"/><line x1="580.0" y1="576.0" x2="580.0" y2="502.0" stroke="#2a1710" stroke-width="7"/><line x1="592.0" y1="579.2" x2="629.0" y2="515.1" stroke="#2a1710" stroke-width="7"/><line x1="600.8" y1="588.0" x2="664.9" y2="551.0" stroke="#2a1710" stroke-width="7"/>
+     <circle cx="580" cy="600" r="8" fill="#f2e3c6" stroke="#2a1710" stroke-width="3"/></g>
+
+  <g id="part-shafts" data-part="shafts" ><path d="M610 382 C760 366 1040 352 1280 350 L1280 388 C1040 390 760 408 622 426 Z" fill="#b77a2b" stroke="#2a1710" stroke-width="9"/>
+     <path d="M610 466 C760 458 1040 448 1280 442 L1280 480 C1040 486 760 498 622 510 Z" fill="#b77a2b" stroke="#2a1710" stroke-width="9"/>
+     <path d="M1180 350 L1180 480" stroke="#29445f" stroke-width="10"/>
+     <circle cx="1180" cy="415" r="12" fill="#e0b354" stroke="#2a1710" stroke-width="4"/></g>
+
+  <g id="part-cartBody" data-part="cartBody" ><path d="M106 292 C162 266 478 250 614 282 L636 462 C524 500 224 506 98 462 Z" fill="#d39a3d" stroke="#2a1710" stroke-width="10" stroke-linejoin="round"/>
+     <path d="M120 330 C234 306 482 296 606 322 L618 424 C502 454 244 460 114 428 Z" fill="url(#cartDiamonds)" opacity="0.55"/>
+     <path d="M114 360 C242 338 486 330 612 350" fill="none" stroke="#b55034" stroke-width="12"/>
+     <path d="M126 444 C250 474 496 470 622 438" fill="none" stroke="#29445f" stroke-width="14"/>
+     <path d="M146 292 C158 222 248 186 354 184 C462 182 562 214 584 280 C536 260 448 246 360 248 C272 250 192 264 146 292 Z" fill="#29445f" stroke="#2a1710" stroke-width="10" stroke-linejoin="round"/>
+     <path d="M160 276 C236 248 462 238 568 272" fill="none" stroke="#e0b354" stroke-width="7"/>
+     <path d="M180 244 C252 222 450 214 542 240" fill="none" stroke="#f2e3c6" stroke-width="4" stroke-dasharray="10 10" opacity="0.8"/>
+     <path d="M142 300 C152 328 154 352 146 378 M160 292 C172 330 174 360 166 392 M178 288 C188 330 190 364 182 400" stroke="#e0b354" stroke-width="5" stroke-linecap="round"/>
+     <path d="M580 292 C570 330 568 360 576 394 M596 296 C586 334 584 362 592 396" stroke="#e0b354" stroke-width="5" stroke-linecap="round"/>
+     <circle cx="354" cy="382" r="26" fill="#b55034" stroke="#2a1710" stroke-width="6"/>
+     <path d="M354 360 L370 382 L354 404 L338 382 Z" fill="#e0b354" opacity="0.9"/></g>
+
+  <g id="part-nearWheel" data-part="nearWheel" ><circle cx="250" cy="590" r="126" fill="#d39a3d" stroke="#2a1710" stroke-width="10"/>
+     <circle cx="250" cy="590" r="103" fill="none" stroke="#b55034" stroke-width="10"/>
+     <circle cx="250" cy="590" r="90" fill="url(#cartStripes)" opacity="0.4"/>
+     <circle cx="250" cy="590" r="26" fill="#e0b354" stroke="#2a1710" stroke-width="6"/>
+     <line x1="276.0" y1="590.0" x2="353.0" y2="590.0" stroke="#2a1710" stroke-width="8"/><line x1="272.5" y1="603.0" x2="339.2" y2="641.5" stroke="#2a1710" stroke-width="8"/><line x1="263.0" y1="612.5" x2="301.5" y2="679.2" stroke="#2a1710" stroke-width="8"/><line x1="250.0" y1="616.0" x2="250.0" y2="693.0" stroke="#2a1710" stroke-width="8"/><line x1="237.0" y1="612.5" x2="198.5" y2="679.2" stroke="#2a1710" stroke-width="8"/><line x1="227.5" y1="603.0" x2="160.8" y2="641.5" stroke="#2a1710" stroke-width="8"/><line x1="224.0" y1="590.0" x2="147.0" y2="590.0" stroke="#2a1710" stroke-width="8"/><line x1="227.5" y1="577.0" x2="160.8" y2="538.5" stroke="#2a1710" stroke-width="8"/><line x1="237.0" y1="567.5" x2="198.5" y2="500.8" stroke="#2a1710" stroke-width="8"/><line x1="250.0" y1="564.0" x2="250.0" y2="487.0" stroke="#2a1710" stroke-width="8"/><line x1="263.0" y1="567.5" x2="301.5" y2="500.8" stroke="#2a1710" stroke-width="8"/><line x1="272.5" y1="577.0" x2="339.2" y2="538.5" stroke="#2a1710" stroke-width="8"/>
+     <circle cx="250" cy="590" r="9" fill="#f2e3c6" stroke="#2a1710" stroke-width="3"/></g>
+</svg>

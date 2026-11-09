@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1100" viewBox="0 0 900 1100">
+  <defs>
+    <pattern id="coatDots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="6" cy="6" r="2.2" fill="#e0b354" opacity="0.85"/>
+      <circle cx="19" cy="18" r="1.4" fill="#f2e3c6" opacity="0.65"/>
+    </pattern>
+    <pattern id="dhotiLines" width="34" height="34" patternUnits="userSpaceOnUse" patternTransform="rotate(8)">
+      <line x1="0" y1="0" x2="0" y2="34" stroke="#dcc9a4" stroke-width="2" opacity="0.7"/>
+    </pattern>
+  </defs>
+
+  <g id="part-turbanTail" data-part="turbanTail" ><path d="M430 300 C360 330 340 410 350 500 C356 548 380 566 404 548 C420 536 414 506 402 480 C382 430 398 370 452 340 Z" fill="#29445f" stroke="#2a1710" stroke-width="8" stroke-linejoin="round"/>
+     <path d="M425 330 C382 370 374 430 386 490" fill="none" stroke="#e0b354" stroke-width="6" stroke-dasharray="10 12" opacity="0.8"/></g>
+
+  <g id="part-farUpperArm" data-part="farUpperArm" ><line x1="415" y1="475" x2="432" y2="610" stroke="#2a1710" stroke-width="62" stroke-linecap="round"/><line x1="415" y1="475" x2="432" y2="610" stroke="#29445f" stroke-width="48" stroke-linecap="round"/>
+     <path d="M398 520 L438 532" stroke="#e0b354" stroke-width="6"/>
+     <circle cx="432" cy="610" r="32" fill="#2a1710"/><circle cx="432" cy="610" r="25" fill="#3e6385"/><circle cx="432" cy="610" r="20" fill="none" stroke="#e0b354" stroke-width="4"/></g>
+  <g id="part-farForearm" data-part="farForearm" ><line x1="432" y1="610" x2="442" y2="742" stroke="#2a1710" stroke-width="53" stroke-linecap="round"/><line x1="432" y1="610" x2="442" y2="742" stroke="#a9633c" stroke-width="39" stroke-linecap="round"/>
+     <path d="M426 690 l22 0 M424 706 l22 0" stroke="#e0b354" stroke-width="4"/>
+     <circle cx="442" cy="742" r="28" fill="#2a1710"/><circle cx="442" cy="742" r="21" fill="#a9633c"/><circle cx="442" cy="742" r="16" fill="none" stroke="#e0b354" stroke-width="4"/></g>
+  <g id="part-farHand" data-part="farHand" ><path d="M427 738 C414 754 414 786 432 800 C446 811 464 802 468 786 C472 772 460 760 450 750 Z" fill="#a9633c" stroke="#2a1710" stroke-width="7"/>
+     <path d="M434 762 C428 776 432 790 442 796" fill="none" stroke="#e0a06b" stroke-width="4"/></g>
+
+  <g id="part-farDhoti" data-part="farDhoti" ><path d="M365 650 C350 716 352 798 372 850 C394 884 444 882 458 846 C466 808 450 720 436 662 Z" fill="#f2e3c6" stroke="#2a1710" stroke-width="8"/>
+     <path d="M372 700 C400 712 428 710 452 698 M368 760 C398 776 430 774 458 758" fill="none" stroke="#dcc9a4" stroke-width="4"/>
+     <path d="M358 838 C384 856 430 858 456 838" fill="none" stroke="#29445f" stroke-width="10"/></g>
+  <g id="part-farThigh" data-part="farThigh" ><line x1="405" y1="670" x2="402" y2="824" stroke="#2a1710" stroke-width="68" stroke-linecap="round"/><line x1="405" y1="670" x2="402" y2="824" stroke="#f2e3c6" stroke-width="54" stroke-linecap="round"/>
+     <path d="M378 730 C398 740 420 740 438 730" fill="none" stroke="#dcc9a4" stroke-width="4"/>
+     <circle cx="402" cy="824" r="32" fill="#2a1710"/><circle cx="402" cy="824" r="25" fill="#dcc9a4"/><circle cx="402" cy="824" r="20" fill="none" stroke="#29445f" stroke-width="4"/></g>
+  <g id="part-farShin" data-part="farShin" ><line x1="402" y1="824" x2="398" y2="978" stroke="#2a1710" stroke-width="54" stroke-linecap="round"/><line x1="402" y1="824" x2="398" y2="978" stroke="#a9633c" stroke-width="40" stroke-linecap="round"/>
+     <path d="M386 900 C398 906 412 906 422 900" fill="none" stroke="#e0b354" stroke-width="5"/>
+     <circle cx="398" cy="978" r="29" fill="#2a1710"/><circle cx="398" cy="978" r="22" fill="#a9633c"/><circle cx="398" cy="978" r="17" fill="none" stroke="#e0b354" stroke-width="4"/></g>
+  <g id="part-farFoot" data-part="farFoot" ><path d="M380 972 C380 950 414 944 430 962 C442 976 476 982 492 998 C500 1008 494 1020 478 1020 L388 1020 C376 1020 370 1000 380 972 Z" fill="#5a2f1d" stroke="#2a1710" stroke-width="8"/>
+     <path d="M390 996 C420 1004 458 1004 486 996" fill="none" stroke="#e0b354" stroke-width="5"/></g>
+
+  <g id="part-torso" data-part="torso" ><path d="M356 446 C380 414 446 400 506 414 C540 422 552 452 548 492 L532 636 C528 668 500 680 456 680 C410 680 376 666 370 634 L354 496 C350 472 350 458 356 446 Z" fill="#d39a3d" stroke="#2a1710" stroke-width="9" stroke-linejoin="round"/>
+     <path d="M390 426 C410 470 414 530 402 600 L430 664 L468 672 L452 590 C440 528 448 466 480 424 Z" fill="url(#coatDots)" opacity="0.65"/>
+     <path d="M356 446 C382 470 396 510 398 548 L380 610" fill="none" stroke="#b55034" stroke-width="14" stroke-linecap="round"/>
+     <path d="M506 414 C498 456 500 496 518 536 L532 600" fill="none" stroke="#29445f" stroke-width="16" stroke-linecap="round"/>
+     <path d="M506 414 C528 424 542 444 544 468" fill="none" stroke="#f2e3c6" stroke-width="5"/>
+     <path d="M430 452 L430 640" stroke="#b77a2b" stroke-width="3" opacity="0.6"/>
+     <circle cx="488" cy="476" r="5" fill="#e0b354" stroke="#2a1710" stroke-width="2"/>
+     <circle cx="494" cy="516" r="5" fill="#e0b354" stroke="#2a1710" stroke-width="2"/>
+     <circle cx="500" cy="556" r="5" fill="#e0b354" stroke="#2a1710" stroke-width="2"/>
+     <path d="M400 640 C424 650 468 654 508 642" fill="none" stroke="#b55034" stroke-width="8"/></g>
+
+  <g id="part-sash" data-part="sash" ><path d="M362 622 C402 644 492 650 536 626 L542 668 C498 690 404 686 360 662 Z" fill="#b55034" stroke="#2a1710" stroke-width="8"/>
+     <path d="M370 638 C412 656 488 660 530 640" fill="none" stroke="#e0b354" stroke-width="5" stroke-dasharray="12 8"/>
+     <path d="M520 658 C556 684 566 736 548 778 C540 796 522 794 522 774 C522 744 512 706 498 680 Z" fill="#8f3a26" stroke="#2a1710" stroke-width="7"/></g>
+
+  <g id="part-pelvis" data-part="pelvis" ><path d="M364 648 C400 670 486 674 530 648 L536 744 C520 786 470 800 420 788 C384 780 362 760 358 728 Z" fill="#f2e3c6" stroke="#2a1710" stroke-width="8"/>
+     <path d="M370 696 C412 716 486 718 528 696 M376 742 C416 760 488 760 522 742" fill="none" stroke="#dcc9a4" stroke-width="4"/>
+     <path d="M414 660 C430 700 432 744 424 786 M472 660 C458 700 456 744 466 786" fill="none" stroke="#dcc9a4" stroke-width="3" opacity="0.7"/></g>
+
+  <g id="part-nearDhoti" data-part="nearDhoti" ><path d="M416 652 C428 714 430 792 414 848 C400 890 452 902 486 872 C512 850 520 786 512 724 L496 664 Z" fill="#f2e3c6" stroke="#2a1710" stroke-width="8"/>
+     <path d="M424 708 C452 720 486 718 510 704 M418 766 C452 782 490 778 516 758 M424 824 C454 838 488 834 512 816" fill="none" stroke="#dcc9a4" stroke-width="4"/>
+     <path d="M416 846 C442 862 486 860 510 840" fill="none" stroke="#29445f" stroke-width="10"/></g>
+  <g id="part-nearThigh" data-part="nearThigh" ><line x1="470" y1="670" x2="476" y2="824" stroke="#2a1710" stroke-width="72" stroke-linecap="round"/><line x1="470" y1="670" x2="476" y2="824" stroke="#f2e3c6" stroke-width="58" stroke-linecap="round"/>
+     <path d="M444 722 C464 732 490 732 510 722" fill="none" stroke="#dcc9a4" stroke-width="4"/>
+     <circle cx="476" cy="824" r="33" fill="#2a1710"/><circle cx="476" cy="824" r="26" fill="#dcc9a4"/><circle cx="476" cy="824" r="21" fill="none" stroke="#29445f" stroke-width="4"/></g>
+  <g id="part-nearShin" data-part="nearShin" ><line x1="476" y1="824" x2="480" y2="978" stroke="#2a1710" stroke-width="57" stroke-linecap="round"/><line x1="476" y1="824" x2="480" y2="978" stroke="#c98254" stroke-width="43" stroke-linecap="round"/>
+     <path d="M462 900 C474 906 492 906 504 900" fill="none" stroke="#e0b354" stroke-width="6"/>
+     <circle cx="480" cy="978" r="30" fill="#2a1710"/><circle cx="480" cy="978" r="23" fill="#c98254"/><circle cx="480" cy="978" r="18" fill="none" stroke="#e0b354" stroke-width="4"/></g>
+  <g id="part-nearFoot" data-part="nearFoot" ><path d="M462 972 C462 948 498 942 514 962 C526 976 562 982 578 998 C586 1008 580 1020 564 1020 L472 1020 C458 1020 452 1000 462 972 Z" fill="#5a2f1d" stroke="#2a1710" stroke-width="8"/>
+     <path d="M472 996 C504 1004 546 1004 572 996" fill="none" stroke="#e0b354" stroke-width="5"/></g>
+
+  <g id="part-neck" data-part="neck" ><path d="M444 388 L500 388 L506 452 C490 468 458 468 440 452 Z" fill="#c98254" stroke="#2a1710" stroke-width="8"/>
+     <path d="M452 438 C466 446 482 446 498 436" fill="none" stroke="#a9633c" stroke-width="4"/></g>
+
+  <g id="part-necklace" data-part="necklace" ><path d="M430 430 C452 462 500 462 522 428" fill="none" stroke="#e0b354" stroke-width="10"/>
+     <path d="M430 430 C452 462 500 462 522 428" fill="none" stroke="#2a1710" stroke-width="3" stroke-dasharray="2 10"/>
+     <circle cx="476" cy="458" r="8" fill="#b55034" stroke="#2a1710" stroke-width="3"/>
+     <circle cx="476" cy="458" r="3" fill="#e0b354"/></g>
+
+  <g id="part-head" data-part="head" ><path d="M432 300 C432 258 460 238 490 244 C514 248 528 268 530 292 C532 306 542 312 550 320 C560 330 552 342 540 344 L536 360 C534 374 522 382 508 386 L514 414 C492 430 456 426 438 408 L436 372 C424 356 424 326 432 300 Z" fill="#c98254" stroke="#2a1710" stroke-width="9" stroke-linejoin="round"/>
+     <path d="M438 300 C448 286 470 278 492 282 C506 284 516 292 520 304" fill="none" stroke="#a9633c" stroke-width="4" opacity="0.75"/>
+     <path d="M528 330 C536 334 538 340 532 344" fill="none" stroke="#2a1710" stroke-width="4"/>
+     <ellipse cx="444" cy="318" rx="18" ry="26" fill="#c98254" stroke="#2a1710" stroke-width="7"/>
+     <path d="M438 312 C446 308 450 316 446 322" fill="none" stroke="#a9633c" stroke-width="3"/></g>
+
+  <g id="part-eye" data-part="eye" ><path d="M478 302 C492 292 508 294 516 306 C506 316 490 318 478 310 Z" fill="#f2e3c6" stroke="#2a1710" stroke-width="4"/>
+     <circle cx="500" cy="305" r="7" fill="#332018"/>
+     <circle cx="502" cy="303" r="2.4" fill="#f2e3c6"/></g>
+  <g id="part-eyelid" data-part="eyelid" data-variant="alternate"><path d="M478 302 C492 292 508 294 516 306 C506 316 490 318 478 310 Z" fill="#c98254" stroke="#2a1710" stroke-width="4"/></g>
+  <g id="part-brow" data-part="brow" ><path d="M470 286 C486 276 510 278 522 290" fill="none" stroke="#332018" stroke-width="9" stroke-linecap="round"/></g>
+  <g id="part-mustache" data-part="mustache" ><path d="M514 354 C524 348 540 350 548 360 C536 362 526 366 518 372 C512 366 510 360 514 354 Z" fill="#332018" stroke="#2a1710" stroke-width="3"/>
+     <path d="M512 344 C520 340 528 342 534 348" fill="none" stroke="#332018" stroke-width="3"/></g>
+  <g id="part-earring" data-part="earring" ><circle cx="444" cy="346" r="10" fill="#e0b354" stroke="#2a1710" stroke-width="3"/>
+     <path d="M444 356 L444 372" stroke="#e0b354" stroke-width="5"/>
+     <circle cx="444" cy="380" r="9" fill="#b55034" stroke="#2a1710" stroke-width="3"/></g>
+
+  <g id="part-turban" data-part="turban" ><path d="M416 272 C400 238 430 196 470 190 C512 184 546 208 548 244 C550 266 538 284 520 292 C504 300 476 298 458 290 C440 282 426 282 416 272 Z" fill="#cf5a32" stroke="#2a1710" stroke-width="9" stroke-linejoin="round"/>
+     <path d="M412 256 C444 270 500 272 544 252" fill="none" stroke="#f2e3c6" stroke-width="14"/>
+     <path d="M414 258 C446 272 500 274 542 254" fill="none" stroke="#29445f" stroke-width="6"/>
+     <path d="M430 220 C456 236 494 238 526 224" fill="none" stroke="#e0b354" stroke-width="5" stroke-dasharray="8 8"/>
+     <path d="M516 200 L552 182" stroke="#e0b354" stroke-width="6"/>
+     <circle cx="554" cy="180" r="7" fill="#b55034" stroke="#2a1710" stroke-width="3"/>
+     <path d="M452 196 C470 208 492 212 516 208" fill="none" stroke="#f2e3c6" stroke-width="4" opacity="0.7"/></g>
+
+  <g id="part-shoulderSash" data-part="shoulderSash" ><path d="M494 410 C520 420 532 444 526 470 C516 502 500 520 486 534 C494 498 492 462 476 432 Z" fill="#f2e3c6" stroke="#2a1710" stroke-width="7"/>
+     <path d="M500 424 C514 438 516 458 508 478" fill="none" stroke="#e0b354" stroke-width="4" stroke-dasharray="8 7"/></g>
+
+  <g id="part-nearUpperArm" data-part="nearUpperArm" ><line x1="508" y1="470" x2="532" y2="610" stroke="#2a1710" stroke-width="66" stroke-linecap="round"/><line x1="508" y1="470" x2="532" y2="610" stroke="#29445f" stroke-width="52" stroke-linecap="round"/>
+     <path d="M494 512 L544 528" stroke="#e0b354" stroke-width="6"/>
+     <path d="M500 548 L544 560" stroke="#f2e3c6" stroke-width="4" opacity="0.7"/>
+     <circle cx="532" cy="610" r="33" fill="#2a1710"/><circle cx="532" cy="610" r="26" fill="#3e6385"/><circle cx="532" cy="610" r="21" fill="none" stroke="#e0b354" stroke-width="4"/></g>
+  <g id="part-nearForearm" data-part="nearForearm" ><line x1="532" y1="610" x2="548" y2="742" stroke="#2a1710" stroke-width="56" stroke-linecap="round"/><line x1="532" y1="610" x2="548" y2="742" stroke="#c98254" stroke-width="42" stroke-linecap="round"/>
+     <path d="M522 682 L558 694" stroke="#e0b354" stroke-width="5"/>
+     <path d="M526 704 L560 714" stroke="#e0b354" stroke-width="5"/>
+     <circle cx="548" cy="742" r="29" fill="#2a1710"/><circle cx="548" cy="742" r="22" fill="#c98254"/><circle cx="548" cy="742" r="17" fill="none" stroke="#e0b354" stroke-width="4"/></g>
+  <g id="part-handOpen" data-part="handOpen" ><path d="M532 736 C518 752 518 782 536 796 C550 806 566 798 570 782 C574 766 562 752 552 744 Z" fill="#c98254" stroke="#2a1710" stroke-width="7"/>
+     <path d="M540 758 C534 772 536 786 544 792 M550 754 C546 770 548 782 554 788 M558 754 C556 768 558 778 562 784" fill="none" stroke="#a9633c" stroke-width="3"/></g>
+  <g id="part-handGrip" data-part="handGrip" data-variant="alternate"><path d="M530 738 C516 752 518 780 536 792 C552 802 568 792 570 776 C572 762 562 748 552 742 Z" fill="#c98254" stroke="#2a1710" stroke-width="7"/>
+     <path d="M536 758 C548 754 560 760 562 772 C564 784 552 792 540 788 C530 784 528 768 536 758 Z" fill="#a9633c" stroke="#2a1710" stroke-width="4"/>
+     <path d="M542 762 L556 766 M540 772 L558 776" stroke="#e0a06b" stroke-width="3"/></g>
+</svg>

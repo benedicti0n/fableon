@@ -260,7 +260,11 @@ async function main() {
   let server = null;
   let baseUrl = args.baseUrl;
   if (!baseUrl) {
-    for (const candidate of ["http://localhost:3100", "http://localhost:3140"]) {
+    for (const candidate of [
+      "http://localhost:3100",
+      "http://localhost:3130",
+      "http://localhost:3140",
+    ]) {
       if (await serverIsReady(candidate)) {
         baseUrl = candidate;
         break;

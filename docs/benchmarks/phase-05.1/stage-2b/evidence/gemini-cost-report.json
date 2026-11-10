@@ -1,0 +1,36 @@
+{
+  "generatedAt": "2026-11-10",
+  "provider": "gemini",
+  "authorizationId": "auth_1794315751766_c1eef16a",
+  "requestsUsed": 5,
+  "maxRequests": 10,
+  "capUsd": 3,
+  "spentUsd": 0.272609,
+  "remainingUsd": 2.727391,
+  "completedRequests": 5,
+  "failedRequests": 0,
+  "imagesReturned": 5,
+  "estimatedRequestSumUsd": 0.274313,
+  "completedUsageCostUsd": 0.272608,
+  "usage": {
+    "input": 13739,
+    "output": 13139,
+    "total": 32369
+  },
+  "partsInPack": 31,
+  "costPerPartUsd": 0.008794,
+  "costPerCompletedRigUsd": 0.272609,
+  "costPerFirstEightSecondAnimationUsd": 0.272609,
+  "incrementalReuseApiCostUsd": 0,
+  "rejectedSheets": 1,
+  "notes": "Gemini original arms sheet rejected for merged bent arms; one counted repair sheet used. No failed HTTP requests in Stage 2B.",
+  "cumulative": {
+    "stage2aConservativeUsd": 0.205989,
+    "stage2aCompletedUsageUsd": 0.10341,
+    "stage2bUsd": 0.272609,
+    "cumulativeConservativeUsd": 0.478598,
+    "cumulativeCompletedUsageUsd": 0.376019,
+    "cumulativeCostPerPartUsd": 0.015439,
+    "cumulativeCostPerFirstAnimationUsd": 0.376019
+  }
+}

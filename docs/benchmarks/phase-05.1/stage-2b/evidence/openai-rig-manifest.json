@@ -1,0 +1,1955 @@
+{
+  "format": "fableon.generated-folk-pack",
+  "version": 1,
+  "id": "openai-folk-pilot",
+  "title": "Stage 2B openai complete artisan rig",
+  "provider": "openai",
+  "model": "gpt-image-2.6-sunburst",
+  "experimentId": "phase-05.1-stage-2b",
+  "rigId": "artisan_v2",
+  "generationMode": "provider-generated",
+  "aiGeneration": {
+    "status": "generated",
+    "reason": ""
+  },
+  "characters": {},
+  "backgrounds": {},
+  "parts": [
+    {
+      "id": "artisan_head",
+      "file": "parts/artisan_head.png",
+      "offsetX": 353.1842105263158,
+      "offsetY": 123.80000000000004,
+      "width": 234,
+      "height": 230,
+      "sha256": "f0af872f3d22d0aded508f8ab32829abd5bfed666ec0c21bde36e951548863ae",
+      "bytes": 429275,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 289.5,
+        "y": 535.8
+      },
+      "targetPivot": {
+        "x": 470,
+        "y": 340
+      },
+      "scale": 0.40350877192982454,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.2530527527800503,
+        "warnings": [
+          "black-halo: 76589 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 79258 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai head sheet cell 0; trimmed 579x570, scaled 0.4035 to target height 230."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "neck",
+        "parentNodeId": "neck",
+        "overlap": {
+          "x": -16,
+          "y": -14,
+          "width": 32,
+          "height": 30
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -35,
+          "max": 35
+        }
+      }
+    },
+    {
+      "id": "artisan_turban",
+      "file": "parts/artisan_turban.png",
+      "offsetX": 369.20740103270225,
+      "offsetY": 94.29999999999998,
+      "width": 202,
+      "height": 173,
+      "sha256": "3b363f9523b9b84702106c9d3684b61ed17f065276a46877fb414c46e4ee7cf1",
+      "bytes": 489599,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 338.5,
+        "y": 522.9
+      },
+      "targetPivot": {
+        "x": 470,
+        "y": 250
+      },
+      "scale": 0.2977624784853701,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.41654611694297766,
+        "warnings": [
+          "black-halo: 63319 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 147850 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai head sheet cell 1; trimmed 677x581, scaled 0.2978 to target height 173."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_turbanTail",
+      "file": "parts/artisan_turbanTail.png",
+      "offsetX": 344.2794871794872,
+      "offsetY": 304.85,
+      "width": 171,
+      "height": 303,
+      "sha256": "4063af64e168a025b4792cb5666cdf9558e7da0d4044af4234401f49db705791",
+      "bytes": 239748,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 165.5,
+        "y": 29.25
+      },
+      "targetPivot": {
+        "x": 430,
+        "y": 320
+      },
+      "scale": 0.517948717948718,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.31941023058847834,
+        "warnings": [
+          "black-halo: 42890 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 54117 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai head sheet cell 2; trimmed 331x585, scaled 0.5179 to target height 303."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_mustache",
+      "file": "parts/artisan_mustache.png",
+      "offsetX": 464.89233576642334,
+      "offsetY": 210.5,
+      "width": 150,
+      "height": 79,
+      "sha256": "d6b74554d25b6579ac1355f290667a1e2f9067aecfeef1191f182eaac1741554",
+      "bytes": 105000,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 260.5,
+        "y": 137
+      },
+      "targetPivot": {
+        "x": 540,
+        "y": 250
+      },
+      "scale": 0.28832116788321166,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.14847219692618072,
+        "warnings": [
+          "black-halo: 121559 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 16366 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai head sheet cell 3; trimmed 521x274, scaled 0.2883 to target height 79."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_earring",
+      "file": "parts/artisan_earring.png",
+      "offsetX": 364.8455598455598,
+      "offsetY": 227,
+      "width": 80,
+      "height": 80,
+      "sha256": "c3a763d4a8134b5227f1b2a8f4c41b87b6ac437ec66e6017a5662b827cabe209",
+      "bytes": 230666,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 260,
+        "y": 51.800000000000004
+      },
+      "targetPivot": {
+        "x": 405,
+        "y": 235
+      },
+      "scale": 0.15444015444015444,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.5415466290466291,
+        "warnings": [
+          "black-halo: 60087 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 125942 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai head sheet cell 4; trimmed 520x518, scaled 0.1544 to target height 80."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_eye",
+      "file": "parts/artisan_eye.png",
+      "offsetX": 455.46975088967974,
+      "offsetY": 171,
+      "width": 119,
+      "height": 68,
+      "sha256": "7c108dca128505dad7f7d8cfb28cd30a58acad0b53fa496a71be824a2c0e4d8c",
+      "bytes": 173914,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 246,
+        "y": 140.5
+      },
+      "targetPivot": {
+        "x": 515,
+        "y": 205
+      },
+      "scale": 0.24199288256227758,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.29033938026213,
+        "warnings": [
+          "black-halo: 46013 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 40140 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai head sheet cell 5; trimmed 492x281, scaled 0.2420 to target height 68."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_eyelid",
+      "file": "parts/artisan_eyelid.png",
+      "offsetX": 451.67175572519085,
+      "offsetY": 171,
+      "width": 127,
+      "height": 68,
+      "sha256": "aebbd4a3e5a429aa0a4b8d2222ef2f73fb9f5a3cfd37500156026cea86d25e90",
+      "bytes": 150656,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 244,
+        "y": 131
+      },
+      "targetPivot": {
+        "x": 515,
+        "y": 205
+      },
+      "scale": 0.2595419847328244,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.29024058315605056,
+        "warnings": [
+          "black-halo: 32359 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 37109 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai head sheet cell 6; trimmed 488x262, scaled 0.2595 to target height 68."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_brow",
+      "file": "parts/artisan_brow.png",
+      "offsetX": 439.22549019607845,
+      "offsetY": 155.5,
+      "width": 152,
+      "height": 59,
+      "sha256": "d400998b953b29498250e70f8c46a70e42d5ef83cbb645c2bc9de95ee1af8c28",
+      "bytes": 76165,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 262,
+        "y": 102
+      },
+      "targetPivot": {
+        "x": 515,
+        "y": 185
+      },
+      "scale": 0.28921568627450983,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.38616973506960034,
+        "warnings": [
+          "black-halo: 65616 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 30456 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai head sheet cell 7; trimmed 524x204, scaled 0.2892 to target height 59."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_neck",
+      "file": "parts/artisan_neck.png",
+      "offsetX": 416.2906976744186,
+      "offsetY": 328.4,
+      "width": 107,
+      "height": 124,
+      "sha256": "0de154c421ffebee225753680be908c8e8e63815e40612abab85d41b45b91f1c",
+      "bytes": 319963,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 223.5,
+        "y": 464.40000000000003
+      },
+      "targetPivot": {
+        "x": 470,
+        "y": 440
+      },
+      "scale": 0.24031007751937986,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.23407557705981305,
+        "warnings": [
+          "black-halo: 54078 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 53780 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai head sheet cell 8; trimmed 447x516, scaled 0.2403 to target height 124."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "neck",
+        "parentNodeId": "torso",
+        "overlap": {
+          "x": -16,
+          "y": -14,
+          "width": 32,
+          "height": 30
+        },
+        "occlusion": "cover-over",
+        "limits": {
+          "min": -35,
+          "max": 35
+        },
+        "coverNodeId": "necklace"
+      }
+    },
+    {
+      "id": "artisan_torso",
+      "file": "parts/artisan_torso.png",
+      "offsetX": 329.531914893617,
+      "offsetY": 380,
+      "width": 221,
+      "height": 320,
+      "sha256": "7db240408b7de3cc1f02f102bd610ebd70e1f4b93edfc786699197cb78993fbe",
+      "bytes": 878149,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 324.5,
+        "y": 470
+      },
+      "targetPivot": {
+        "x": 440,
+        "y": 540
+      },
+      "scale": 0.3404255319148936,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.2898944366127922,
+        "warnings": [
+          "black-halo: 107910 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 171396 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai body sheet cell 0; trimmed 649x940, scaled 0.3404 to target height 320."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_sash",
+      "file": "parts/artisan_sash.png",
+      "offsetX": 355.30043859649123,
+      "offsetY": 539.5,
+      "width": 189,
+      "height": 217,
+      "sha256": "76077010105ef587bbd63758fec3fddff9803930e901c452aff050c23c3542ee",
+      "bytes": 443294,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 298.5,
+        "y": 342
+      },
+      "targetPivot": {
+        "x": 450,
+        "y": 648
+      },
+      "scale": 0.3172514619883041,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.41301781813551186,
+        "warnings": [
+          "black-halo: 87394 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 149057 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai body sheet cell 1; trimmed 597x684, scaled 0.3173 to target height 217."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_necklace",
+      "file": "parts/artisan_necklace.png",
+      "offsetX": 429.34584980237156,
+      "offsetY": 439.68,
+      "width": 93,
+      "height": 86,
+      "sha256": "53510a2d6b1448c3d995e8c643413615188786eed0ac9de35017615672d32a1d",
+      "bytes": 351012,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 274.5,
+        "y": 60.72
+      },
+      "targetPivot": {
+        "x": 476,
+        "y": 450
+      },
+      "scale": 0.16996047430830039,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.5079051383399209,
+        "warnings": [
+          "black-halo: 62217 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 132298 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai body sheet cell 2; trimmed 549x506, scaled 0.1700 to target height 86."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_shoulderSash",
+      "file": "parts/artisan_shoulderSash.png",
+      "offsetX": 447.72935779816515,
+      "offsetY": 354,
+      "width": 105,
+      "height": 172,
+      "sha256": "bdbf8b78c3d1719705973559ec830cdadcdceb837be9cc6625f959a3b3a16eea",
+      "bytes": 476852,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 265,
+        "y": 436
+      },
+      "targetPivot": {
+        "x": 500,
+        "y": 440
+      },
+      "scale": 0.19724770642201836,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.4460338410939934,
+        "warnings": [
+          "black-halo: 85587 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 160459 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai body sheet cell 3; trimmed 530x872, scaled 0.1972 to target height 172."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_pelvis",
+      "file": "parts/artisan_pelvis.png",
+      "offsetX": 328.771052631579,
+      "offsetY": 640.7,
+      "width": 222,
+      "height": 193,
+      "sha256": "9a2d1a188945f39f690f056a68e4c23be54872eaf764f32b1cc70e4894d6d736",
+      "bytes": 474319,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 328.5,
+        "y": 57
+      },
+      "targetPivot": {
+        "x": 440,
+        "y": 660
+      },
+      "scale": 0.3385964912280702,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.14058319314267403,
+        "warnings": [
+          "black-halo: 96307 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 52595 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai body sheet cell 4; trimmed 657x570, scaled 0.3386 to target height 193."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_nearUpperArm",
+      "file": "parts/artisan_nearUpperArm.png",
+      "offsetX": 431.07636655948556,
+      "offsetY": 458.95,
+      "width": 154,
+      "height": 221,
+      "sha256": "6fe584305166d383afd45e656ddbe35536c193d345e076cec7bc9ccbbee6affa",
+      "bytes": 255677,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 216.5,
+        "y": 31.1
+      },
+      "targetPivot": {
+        "x": 508,
+        "y": 470
+      },
+      "scale": 0.3553054662379421,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.3503115183829263,
+        "warnings": [
+          "black-halo: 40990 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 74438 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai arms sheet cell 0; trimmed 433x622, scaled 0.3553 to target height 221."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "shoulder",
+        "parentNodeId": "torso",
+        "overlap": {
+          "x": -22,
+          "y": -18,
+          "width": 44,
+          "height": 50
+        },
+        "occlusion": "parent-over-child",
+        "limits": {
+          "min": -95,
+          "max": 95
+        }
+      }
+    },
+    {
+      "id": "artisan_nearForearm",
+      "file": "parts/artisan_nearForearm.png",
+      "offsetX": 462.1591666666667,
+      "offsetY": 599.55,
+      "width": 140,
+      "height": 209,
+      "sha256": "b73f3ae73db77dbb6c52b60ec8c5f0065d2441ca2db94070d3f2fba37ed9ab77",
+      "bytes": 236894,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 200.5,
+        "y": 30
+      },
+      "targetPivot": {
+        "x": 532,
+        "y": 610
+      },
+      "scale": 0.34833333333333333,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.40431837073981713,
+        "warnings": [
+          "black-halo: 47303 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 83564 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai arms sheet cell 1; trimmed 401x600, scaled 0.3483 to target height 209."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "elbow",
+        "parentNodeId": "nearUpperArm",
+        "overlap": {
+          "x": -18,
+          "y": -20,
+          "width": 36,
+          "height": 44
+        },
+        "occlusion": "cover-over",
+        "limits": {
+          "min": -140,
+          "max": 5
+        },
+        "coverNodeId": "nearElbowCover"
+      }
+    },
+    {
+      "id": "artisan_nearElbowCover",
+      "file": "parts/artisan_nearElbowCover.png",
+      "offsetX": 472.0879765395895,
+      "offsetY": 565,
+      "width": 120,
+      "height": 90,
+      "sha256": "e7108f3607ba398dda8f2087e2aeafdf21d83f17c9cafb88a3d819d6f6277cdb",
+      "bytes": 172228,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 227,
+        "y": 170.5
+      },
+      "targetPivot": {
+        "x": 532,
+        "y": 610
+      },
+      "scale": 0.26392961876832843,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.16486235095017246,
+        "warnings": [
+          "black-halo: 40972 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 24303 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai arms sheet cell 2; trimmed 454x341, scaled 0.2639 to target height 90."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_handOpen",
+      "file": "parts/artisan_handOpen.png",
+      "offsetX": 543.8810921501706,
+      "offsetY": 702.45,
+      "width": 69,
+      "height": 113,
+      "sha256": "4fd0ca7f19897b3e3466aaa0fc34fd4b52215edd95bf7df9292e29b619c01e93",
+      "bytes": 201912,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 21.36,
+        "y": 205.1
+      },
+      "targetPivot": {
+        "x": 548,
+        "y": 742
+      },
+      "scale": 0.19283276450511946,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.23402327721747135,
+        "warnings": [
+          "black-halo: 51515 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 45881 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai arms sheet cell 3; trimmed 356x586, scaled 0.1928 to target height 113."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "wrist",
+        "parentNodeId": "nearForearm",
+        "overlap": {
+          "x": -14,
+          "y": -14,
+          "width": 28,
+          "height": 30
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -70,
+          "max": 70
+        }
+      }
+    },
+    {
+      "id": "artisan_handGrip",
+      "file": "parts/artisan_handGrip.png",
+      "offsetX": 542.3633014354067,
+      "offsetY": 704.55,
+      "width": 94,
+      "height": 107,
+      "sha256": "81bbd1f9016983d2d4a1cb80507ab8cea9d6d7664d5f56f0071ea729855ee195",
+      "bytes": 157067,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 22.02,
+        "y": 146.29999999999998
+      },
+      "targetPivot": {
+        "x": 548,
+        "y": 742
+      },
+      "scale": 0.25598086124401914,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.18312843043948737,
+        "warnings": [
+          "black-halo: 46551 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 27344 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai arms sheet cell 4; trimmed 367x418, scaled 0.2560 to target height 107."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "wrist",
+        "parentNodeId": "nearForearm",
+        "overlap": {
+          "x": -14,
+          "y": -14,
+          "width": 28,
+          "height": 30
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -70,
+          "max": 70
+        }
+      }
+    },
+    {
+      "id": "artisan_farUpperArm",
+      "file": "parts/artisan_farUpperArm.png",
+      "offsetX": 340.6443719412724,
+      "offsetY": 464.25,
+      "width": 149,
+      "height": 215,
+      "sha256": "2492be032ea7ef33390ae8bae35621db5981c44658eac3e946e23258c834357a",
+      "bytes": 253580,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 212,
+        "y": 30.650000000000002
+      },
+      "targetPivot": {
+        "x": 415,
+        "y": 475
+      },
+      "scale": 0.35073409461663946,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.29990150512481145,
+        "warnings": [
+          "black-halo: 46701 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 60335 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai arms sheet cell 5; trimmed 424x613, scaled 0.3507 to target height 215."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "shoulder",
+        "parentNodeId": "torso",
+        "overlap": {
+          "x": -22,
+          "y": -18,
+          "width": 44,
+          "height": 50
+        },
+        "occlusion": "parent-over-child",
+        "limits": {
+          "min": -95,
+          "max": 95
+        }
+      }
+    },
+    {
+      "id": "artisan_farForearm",
+      "file": "parts/artisan_farForearm.png",
+      "offsetX": 363.06776859504134,
+      "offsetY": 599.6,
+      "width": 138,
+      "height": 208,
+      "sha256": "e732eca4eccbd0dbba9846ae3ef753e5e31b4bdfae0bc66381c9ee00b3896dc4",
+      "bytes": 240391,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 200.5,
+        "y": 30.25
+      },
+      "targetPivot": {
+        "x": 432,
+        "y": 610
+      },
+      "scale": 0.343801652892562,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.3805115310896313,
+        "warnings": [
+          "black-halo: 49167 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 79954 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai arms sheet cell 6; trimmed 401x605, scaled 0.3438 to target height 208."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "elbow",
+        "parentNodeId": "farUpperArm",
+        "overlap": {
+          "x": -18,
+          "y": -20,
+          "width": 36,
+          "height": 44
+        },
+        "occlusion": "cover-over",
+        "limits": {
+          "min": -140,
+          "max": 5
+        },
+        "coverNodeId": "farElbowCover"
+      }
+    },
+    {
+      "id": "artisan_farElbowCover",
+      "file": "parts/artisan_farElbowCover.png",
+      "offsetX": 372.6997084548105,
+      "offsetY": 565,
+      "width": 119,
+      "height": 90,
+      "sha256": "249837461a73002a3821a5b7d096ffb8c8059312c9feb65b3da8b54b8065d2a3",
+      "bytes": 170716,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 226,
+        "y": 171.5
+      },
+      "targetPivot": {
+        "x": 432,
+        "y": 610
+      },
+      "scale": 0.26239067055393583,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.1793002915451895,
+        "warnings": [
+          "black-halo: 38638 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 26492 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai arms sheet cell 7; trimmed 452x343, scaled 0.2624 to target height 90."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_farHand",
+      "file": "parts/artisan_farHand.png",
+      "offsetX": 437.85075376884424,
+      "offsetY": 701.75,
+      "width": 69,
+      "height": 115,
+      "sha256": "af789ac94bdd9e3e41dfe1acba3e126276c55216fc073300a25bdd9b20eeb48d",
+      "bytes": 208337,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 21.54,
+        "y": 208.95
+      },
+      "targetPivot": {
+        "x": 442,
+        "y": 742
+      },
+      "scale": 0.19262981574539365,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.24708967306355362,
+        "warnings": [
+          "black-halo: 52981 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 49501 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai arms sheet cell 8; trimmed 359x597, scaled 0.1926 to target height 115."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "wrist",
+        "parentNodeId": "farForearm",
+        "overlap": {
+          "x": -14,
+          "y": -14,
+          "width": 28,
+          "height": 30
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -70,
+          "max": 70
+        }
+      }
+    },
+    {
+      "id": "artisan_nearThigh",
+      "file": "parts/artisan_nearThigh.png",
+      "offsetX": 379.0921052631579,
+      "offsetY": 658.25,
+      "width": 182,
+      "height": 235,
+      "sha256": "112674effa3b11695765121d5546c9105ffb903006d8ae3d20d84c65aef897e7",
+      "bytes": 291524,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 220.5,
+        "y": 28.5
+      },
+      "targetPivot": {
+        "x": 470,
+        "y": 670
+      },
+      "scale": 0.41228070175438597,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.15759637188208617,
+        "warnings": [
+          "black-halo: 62392 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 34046 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai legs sheet cell 0; trimmed 441x570, scaled 0.4123 to target height 235."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "hip",
+        "parentNodeId": "pelvis",
+        "overlap": {
+          "x": -18,
+          "y": -18,
+          "width": 36,
+          "height": 44
+        },
+        "occlusion": "cover-over",
+        "limits": {
+          "min": -45,
+          "max": 45
+        },
+        "coverNodeId": "nearDhoti"
+      }
+    },
+    {
+      "id": "artisan_nearShin",
+      "file": "parts/artisan_nearShin.png",
+      "offsetX": 398.4118616144975,
+      "offsetY": 800.8,
+      "width": 155,
+      "height": 232,
+      "sha256": "ca3c10111d8c279920a3012418746b1e10665c1c76389fc720cdb0d1732cf4ce",
+      "bytes": 240094,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 203,
+        "y": 60.7
+      },
+      "targetPivot": {
+        "x": 476,
+        "y": 824
+      },
+      "scale": 0.38220757825370677,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.4554743103854051,
+        "warnings": [
+          "black-halo: 40584 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 83530 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai legs sheet cell 1; trimmed 406x607, scaled 0.3822 to target height 232."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "knee",
+        "parentNodeId": "nearThigh",
+        "overlap": {
+          "x": -16,
+          "y": -16,
+          "width": 32,
+          "height": 38
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -5,
+          "max": 85
+        }
+      }
+    },
+    {
+      "id": "artisan_nearFoot",
+      "file": "parts/artisan_nearFoot.png",
+      "offsetX": 452.31306532663314,
+      "offsetY": 942.3,
+      "width": 277,
+      "height": 119,
+      "sha256": "97076adaa017165d357cdf3045243dc6f33d8cb5ef82157b715f079a7637d6a8",
+      "bytes": 115620,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 46.300000000000004,
+        "y": 59.699999999999996
+      },
+      "targetPivot": {
+        "x": 480,
+        "y": 978
+      },
+      "scale": 0.5979899497487438,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.25784429707934925,
+        "warnings": [
+          "black-halo: 30743 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 23176 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai legs sheet cell 2; trimmed 463x199, scaled 0.5980 to target height 119."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "ankle",
+        "parentNodeId": "nearShin",
+        "overlap": {
+          "x": -14,
+          "y": -14,
+          "width": 28,
+          "height": 28
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -35,
+          "max": 35
+        }
+      }
+    },
+    {
+      "id": "artisan_nearDhoti",
+      "file": "parts/artisan_nearDhoti.png",
+      "offsetX": 372.305510534846,
+      "offsetY": 655.75,
+      "width": 195,
+      "height": 285,
+      "sha256": "8453b189f272565f8252065182b9e2861ab26b6329966a885593c27a01818e51",
+      "bytes": 305116,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 211.5,
+        "y": 30.85
+      },
+      "targetPivot": {
+        "x": 470,
+        "y": 670
+      },
+      "scale": 0.4619124797406807,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.20799184646213853,
+        "warnings": [
+          "black-halo: 65971 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 47954 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai legs sheet cell 3; trimmed 423x617, scaled 0.4619 to target height 285."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_farThigh",
+      "file": "parts/artisan_farThigh.png",
+      "offsetX": 315.35611510791364,
+      "offsetY": 658.3,
+      "width": 179,
+      "height": 234,
+      "sha256": "e992f1dc6b172792b32782cff5207758e733c254fdf8590e3f2b7091f39f0e2e",
+      "bytes": 281001,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 213,
+        "y": 27.8
+      },
+      "targetPivot": {
+        "x": 405,
+        "y": 670
+      },
+      "scale": 0.420863309352518,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.15405140676191442,
+        "warnings": [
+          "black-halo: 58782 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 33063 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai legs sheet cell 4; trimmed 426x556, scaled 0.4209 to target height 234."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "hip",
+        "parentNodeId": "pelvis",
+        "overlap": {
+          "x": -18,
+          "y": -18,
+          "width": 36,
+          "height": 44
+        },
+        "occlusion": "cover-over",
+        "limits": {
+          "min": -45,
+          "max": 45
+        },
+        "coverNodeId": "farDhoti"
+      }
+    },
+    {
+      "id": "artisan_farShin",
+      "file": "parts/artisan_farShin.png",
+      "offsetX": 326.1972176759411,
+      "offsetY": 800.9,
+      "width": 152,
+      "height": 231,
+      "sha256": "c99b822071bc64e0103cf711fbebf69cf3bf4dc52ab061ecf9a9513113104ac9",
+      "bytes": 238886,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 200.5,
+        "y": 61.1
+      },
+      "targetPivot": {
+        "x": 402,
+        "y": 824
+      },
+      "scale": 0.3780687397708674,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.45861614376497384,
+        "warnings": [
+          "black-halo: 41225 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 86012 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai legs sheet cell 5; trimmed 401x611, scaled 0.3781 to target height 231."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "knee",
+        "parentNodeId": "farThigh",
+        "overlap": {
+          "x": -16,
+          "y": -16,
+          "width": 32,
+          "height": 38
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -5,
+          "max": 85
+        }
+      }
+    },
+    {
+      "id": "artisan_farFoot",
+      "file": "parts/artisan_farFoot.png",
+      "offsetX": 370.9145,
+      "offsetY": 942.9,
+      "width": 271,
+      "height": 117,
+      "sha256": "311fa2e862eef610a3f389ca2285c6477b7e7ffdf39390cab02db2e7400f8a6c",
+      "bytes": 115904,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 46.300000000000004,
+        "y": 60
+      },
+      "targetPivot": {
+        "x": 398,
+        "y": 978
+      },
+      "scale": 0.585,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.2582613390928726,
+        "warnings": [
+          "black-halo: 31231 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 23083 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai legs sheet cell 6; trimmed 463x200, scaled 0.5850 to target height 117."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "ankle",
+        "parentNodeId": "farShin",
+        "overlap": {
+          "x": -14,
+          "y": -14,
+          "width": 28,
+          "height": 28
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -35,
+          "max": 35
+        }
+      }
+    },
+    {
+      "id": "artisan_farDhoti",
+      "file": "parts/artisan_farDhoti.png",
+      "offsetX": 312.87931034482756,
+      "offsetY": 656.35,
+      "width": 184,
+      "height": 273,
+      "sha256": "823780277d0552a85d849476007df79f5530de23c02ffc23cacee60f7510c35d",
+      "bytes": 297616,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 205.5,
+        "y": 30.450000000000003
+      },
+      "targetPivot": {
+        "x": 405,
+        "y": 670
+      },
+      "scale": 0.4482758620689655,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.19804314040407672,
+        "warnings": [
+          "black-halo: 64326 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 45253 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from openai legs sheet cell 7; trimmed 411x609, scaled 0.4483 to target height 273."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    }
+  ],
+  "missingSlots": [],
+  "rigManifest": {
+    "artisan_turbanTail": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "turbanTail",
+      "parentNodeId": "head",
+      "pivot": {
+        "x": 430,
+        "y": 320
+      },
+      "drawOrder": 0
+    },
+    "artisan_farHand": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "farHand",
+      "parentNodeId": "farForearm",
+      "pivot": {
+        "x": 442,
+        "y": 742
+      },
+      "drawOrder": 5,
+      "joint": {
+        "kind": "wrist",
+        "parentNodeId": "farForearm",
+        "overlap": {
+          "x": -14,
+          "y": -14,
+          "width": 28,
+          "height": 30
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -70,
+          "max": 70
+        }
+      }
+    },
+    "artisan_farForearm": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "farForearm",
+      "parentNodeId": "farUpperArm",
+      "pivot": {
+        "x": 432,
+        "y": 610
+      },
+      "drawOrder": 3,
+      "joint": {
+        "kind": "elbow",
+        "parentNodeId": "farUpperArm",
+        "overlap": {
+          "x": -18,
+          "y": -20,
+          "width": 36,
+          "height": 44
+        },
+        "occlusion": "cover-over",
+        "limits": {
+          "min": -140,
+          "max": 5
+        },
+        "coverNodeId": "farElbowCover"
+      }
+    },
+    "artisan_farUpperArm": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "farUpperArm",
+      "parentNodeId": "torso",
+      "pivot": {
+        "x": 415,
+        "y": 475
+      },
+      "drawOrder": 2,
+      "joint": {
+        "kind": "shoulder",
+        "parentNodeId": "torso",
+        "overlap": {
+          "x": -22,
+          "y": -18,
+          "width": 44,
+          "height": 50
+        },
+        "occlusion": "parent-over-child",
+        "limits": {
+          "min": -95,
+          "max": 95
+        }
+      }
+    },
+    "artisan_farDhoti": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "farDhoti",
+      "parentNodeId": "farThigh",
+      "pivot": {
+        "x": 405,
+        "y": 670
+      },
+      "drawOrder": 9
+    },
+    "artisan_farThigh": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "farThigh",
+      "parentNodeId": "pelvis",
+      "pivot": {
+        "x": 405,
+        "y": 670
+      },
+      "drawOrder": 6,
+      "joint": {
+        "kind": "hip",
+        "parentNodeId": "pelvis",
+        "overlap": {
+          "x": -18,
+          "y": -18,
+          "width": 36,
+          "height": 44
+        },
+        "occlusion": "cover-over",
+        "limits": {
+          "min": -45,
+          "max": 45
+        },
+        "coverNodeId": "farDhoti"
+      }
+    },
+    "artisan_farShin": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "farShin",
+      "parentNodeId": "farThigh",
+      "pivot": {
+        "x": 402,
+        "y": 824
+      },
+      "drawOrder": 7,
+      "joint": {
+        "kind": "knee",
+        "parentNodeId": "farThigh",
+        "overlap": {
+          "x": -16,
+          "y": -16,
+          "width": 32,
+          "height": 38
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -5,
+          "max": 85
+        }
+      }
+    },
+    "artisan_farFoot": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "farFoot",
+      "parentNodeId": "farShin",
+      "pivot": {
+        "x": 398,
+        "y": 978
+      },
+      "drawOrder": 8,
+      "joint": {
+        "kind": "ankle",
+        "parentNodeId": "farShin",
+        "overlap": {
+          "x": -14,
+          "y": -14,
+          "width": 28,
+          "height": 28
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -35,
+          "max": 35
+        }
+      }
+    },
+    "artisan_pelvis": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "pelvis",
+      "parentNodeId": null,
+      "pivot": {
+        "x": 440,
+        "y": 660
+      },
+      "drawOrder": 11
+    },
+    "artisan_nearDhoti": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "nearDhoti",
+      "parentNodeId": "nearThigh",
+      "pivot": {
+        "x": 470,
+        "y": 670
+      },
+      "drawOrder": 15
+    },
+    "artisan_nearThigh": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "nearThigh",
+      "parentNodeId": "pelvis",
+      "pivot": {
+        "x": 470,
+        "y": 670
+      },
+      "drawOrder": 12,
+      "joint": {
+        "kind": "hip",
+        "parentNodeId": "pelvis",
+        "overlap": {
+          "x": -18,
+          "y": -18,
+          "width": 36,
+          "height": 44
+        },
+        "occlusion": "cover-over",
+        "limits": {
+          "min": -45,
+          "max": 45
+        },
+        "coverNodeId": "nearDhoti"
+      }
+    },
+    "artisan_nearShin": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "nearShin",
+      "parentNodeId": "nearThigh",
+      "pivot": {
+        "x": 476,
+        "y": 824
+      },
+      "drawOrder": 13,
+      "joint": {
+        "kind": "knee",
+        "parentNodeId": "nearThigh",
+        "overlap": {
+          "x": -16,
+          "y": -16,
+          "width": 32,
+          "height": 38
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -5,
+          "max": 85
+        }
+      }
+    },
+    "artisan_nearFoot": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "nearFoot",
+      "parentNodeId": "nearShin",
+      "pivot": {
+        "x": 480,
+        "y": 978
+      },
+      "drawOrder": 14,
+      "joint": {
+        "kind": "ankle",
+        "parentNodeId": "nearShin",
+        "overlap": {
+          "x": -14,
+          "y": -14,
+          "width": 28,
+          "height": 28
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -35,
+          "max": 35
+        }
+      }
+    },
+    "artisan_torso": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "torso",
+      "parentNodeId": "pelvis",
+      "pivot": {
+        "x": 440,
+        "y": 540
+      },
+      "drawOrder": 20
+    },
+    "artisan_sash": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "sash",
+      "parentNodeId": "torso",
+      "pivot": {
+        "x": 450,
+        "y": 648
+      },
+      "drawOrder": 22
+    },
+    "artisan_necklace": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "necklace",
+      "parentNodeId": "torso",
+      "pivot": {
+        "x": 476,
+        "y": 450
+      },
+      "drawOrder": 26
+    },
+    "artisan_neck": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "neck",
+      "parentNodeId": "torso",
+      "pivot": {
+        "x": 470,
+        "y": 440
+      },
+      "drawOrder": 25,
+      "joint": {
+        "kind": "neck",
+        "parentNodeId": "torso",
+        "overlap": {
+          "x": -16,
+          "y": -14,
+          "width": 32,
+          "height": 30
+        },
+        "occlusion": "cover-over",
+        "limits": {
+          "min": -35,
+          "max": 35
+        },
+        "coverNodeId": "necklace"
+      }
+    },
+    "artisan_head": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "head",
+      "parentNodeId": "neck",
+      "pivot": {
+        "x": 470,
+        "y": 340
+      },
+      "drawOrder": 30,
+      "joint": {
+        "kind": "neck",
+        "parentNodeId": "neck",
+        "overlap": {
+          "x": -16,
+          "y": -14,
+          "width": 32,
+          "height": 30
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -35,
+          "max": 35
+        }
+      }
+    },
+    "artisan_eye": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "eye",
+      "parentNodeId": "head",
+      "pivot": {
+        "x": 500,
+        "y": 305
+      },
+      "drawOrder": 31
+    },
+    "artisan_eyelid": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "eyelid",
+      "parentNodeId": "head",
+      "pivot": {
+        "x": 500,
+        "y": 305
+      },
+      "drawOrder": 32
+    },
+    "artisan_brow": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "brow",
+      "parentNodeId": "head",
+      "pivot": {
+        "x": 500,
+        "y": 286
+      },
+      "drawOrder": 33
+    },
+    "artisan_mustache": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "mustache",
+      "parentNodeId": "head",
+      "pivot": {
+        "x": 530,
+        "y": 355
+      },
+      "drawOrder": 34
+    },
+    "artisan_earring": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "earring",
+      "parentNodeId": "head",
+      "pivot": {
+        "x": 444,
+        "y": 350
+      },
+      "drawOrder": 35
+    },
+    "artisan_turban": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "turban",
+      "parentNodeId": "head",
+      "pivot": {
+        "x": 470,
+        "y": 250
+      },
+      "drawOrder": 36
+    },
+    "artisan_shoulderSash": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "shoulderSash",
+      "parentNodeId": "torso",
+      "pivot": {
+        "x": 500,
+        "y": 440
+      },
+      "drawOrder": 37
+    },
+    "artisan_nearUpperArm": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "nearUpperArm",
+      "parentNodeId": "torso",
+      "pivot": {
+        "x": 508,
+        "y": 470
+      },
+      "drawOrder": 18,
+      "joint": {
+        "kind": "shoulder",
+        "parentNodeId": "torso",
+        "overlap": {
+          "x": -22,
+          "y": -18,
+          "width": 44,
+          "height": 50
+        },
+        "occlusion": "parent-over-child",
+        "limits": {
+          "min": -95,
+          "max": 95
+        }
+      }
+    },
+    "artisan_nearForearm": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "nearForearm",
+      "parentNodeId": "nearUpperArm",
+      "pivot": {
+        "x": 532,
+        "y": 610
+      },
+      "drawOrder": 41,
+      "joint": {
+        "kind": "elbow",
+        "parentNodeId": "nearUpperArm",
+        "overlap": {
+          "x": -18,
+          "y": -20,
+          "width": 36,
+          "height": 44
+        },
+        "occlusion": "cover-over",
+        "limits": {
+          "min": -140,
+          "max": 5
+        },
+        "coverNodeId": "nearElbowCover"
+      }
+    },
+    "artisan_handOpen": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "handOpen",
+      "parentNodeId": "nearForearm",
+      "pivot": {
+        "x": 548,
+        "y": 742
+      },
+      "drawOrder": 43,
+      "joint": {
+        "kind": "wrist",
+        "parentNodeId": "nearForearm",
+        "overlap": {
+          "x": -14,
+          "y": -14,
+          "width": 28,
+          "height": 30
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -70,
+          "max": 70
+        }
+      }
+    },
+    "artisan_handGrip": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "handGrip",
+      "parentNodeId": "nearForearm",
+      "pivot": {
+        "x": 548,
+        "y": 742
+      },
+      "drawOrder": 44,
+      "joint": {
+        "kind": "wrist",
+        "parentNodeId": "nearForearm",
+        "overlap": {
+          "x": -14,
+          "y": -14,
+          "width": 28,
+          "height": 30
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -70,
+          "max": 70
+        }
+      }
+    },
+    "artisan_nearElbowCover": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "nearElbowCover",
+      "parentNodeId": "nearForearm",
+      "pivot": {
+        "x": 532,
+        "y": 610
+      },
+      "drawOrder": 42
+    },
+    "artisan_farElbowCover": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "farElbowCover",
+      "parentNodeId": "farForearm",
+      "pivot": {
+        "x": 432,
+        "y": 610
+      },
+      "drawOrder": 4
+    }
+  }
+}

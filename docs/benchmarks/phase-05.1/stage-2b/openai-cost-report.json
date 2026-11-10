@@ -1,0 +1,36 @@
+{
+  "generatedAt": "2026-11-10",
+  "provider": "openai",
+  "authorizationId": "auth_1794315751164_678c8d79",
+  "requestsUsed": 4,
+  "maxRequests": 10,
+  "capUsd": 4,
+  "spentUsd": 0.40372,
+  "remainingUsd": 3.59628,
+  "completedRequests": 4,
+  "failedRequests": 0,
+  "imagesReturned": 4,
+  "estimatedRequestSumUsd": 1.310165,
+  "completedUsageCostUsd": 0.40372,
+  "usage": {
+    "input": 10088,
+    "output": 11776,
+    "total": 21864
+  },
+  "partsInPack": 31,
+  "costPerPartUsd": 0.013023,
+  "costPerCompletedRigUsd": 0.40372,
+  "costPerFirstEightSecondAnimationUsd": 0.40372,
+  "incrementalReuseApiCostUsd": 0,
+  "rejectedSheets": 0,
+  "notes": "All four generated sheets accepted; local registration repairs only.",
+  "cumulative": {
+    "stage2aConservativeUsd": 0.24461,
+    "stage2aCompletedUsageUsd": 0.24461,
+    "stage2bUsd": 0.40372,
+    "cumulativeConservativeUsd": 0.64833,
+    "cumulativeCompletedUsageUsd": 0.64833,
+    "cumulativeCostPerPartUsd": 0.020914,
+    "cumulativeCostPerFirstAnimationUsd": 0.64833
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "ok": true,
+  "rigId": "artisan_v2",
+  "requiredPartCount": 31,
+  "presentPartCount": 31,
+  "missingPartIds": [],
+  "errors": [],
+  "warnings": [],
+  "checkedHashes": 31
+}

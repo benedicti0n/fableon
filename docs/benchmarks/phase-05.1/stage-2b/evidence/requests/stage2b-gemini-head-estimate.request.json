@@ -1,0 +1,69 @@
+{
+  "requestKey": "stage2b-gemini-head-estimate",
+  "mode": "estimate",
+  "provider": "gemini",
+  "model": "gemini-nano-banana-2.1",
+  "experimentId": "phase-05.1-stage-2b",
+  "sheet": "head",
+  "prompt": "Use the approved artisan master as the exact identity, proportion, palette and outline reference. Preserve the saffron turban, indigo turban tail, ochre angrakha, maroon sash, gold jewellery, warm skin, bold black ink outlines, flat earthy fills and decorative geometric fabric motifs. Original Rajasthani folk-art cutout design. No photorealism, no 3D render, no anime anatomy, no soft AI gradient, no text, no labels, no grid lines, no shadows, no ground plane, no complete character.\n\nCreate one 3x3 rig-parts sheet. Each cell contains exactly one isolated body part, centered and fully inside its cell. Do not overlap cells. Do not draw connecting limbs or a full body. Keep the same profile orientation, outline weight and scale relationship as the master.\n\nRow 1: bare face and ear only, no turban, no moustache, no earring; saffron turban wrap; indigo turban tail.\nRow 2: detached moustache; gold hoop earring; one open expressive eye.\nRow 3: one closed eyelid; one eyebrow; short neck with a collar overlap.\n\nUse a perfectly flat, uniform chroma-key green (#00FF00) background. Do not use green on the character. Every part must be fully separated by wide green gutters.",
+  "body": {
+    "experimentId": "phase-05.1-stage-2b",
+    "provider": "gemini",
+    "model": "gemini-nano-banana-2.1",
+    "operation": "generate-part",
+    "prompt": "Use the approved artisan master as the exact identity, proportion, palette and outline reference. Preserve the saffron turban, indigo turban tail, ochre angrakha, maroon sash, gold jewellery, warm skin, bold black ink outlines, flat earthy fills and decorative geometric fabric motifs. Original Rajasthani folk-art cutout design. No photorealism, no 3D render, no anime anatomy, no soft AI gradient, no text, no labels, no grid lines, no shadows, no ground plane, no complete character.\n\nCreate one 3x3 rig-parts sheet. Each cell contains exactly one isolated body part, centered and fully inside its cell. Do not overlap cells. Do not draw connecting limbs or a full body. Keep the same profile orientation, outline weight and scale relationship as the master.\n\nRow 1: bare face and ear only, no turban, no moustache, no earring; saffron turban wrap; indigo turban tail.\nRow 2: detached moustache; gold hoop earring; one open expressive eye.\nRow 3: one closed eyelid; one eyebrow; short neck with a collar overlap.\n\nUse a perfectly flat, uniform chroma-key green (#00FF00) background. Do not use green on the character. Every part must be fully separated by wide green gutters.",
+    "width": 1024,
+    "height": 1024,
+    "quality": "standard",
+    "imageSize": "2K",
+    "aspectRatio": "1:1",
+    "outputCount": 1,
+    "transparentBackground": false,
+    "requestKey": "stage2b-gemini-head-estimate",
+    "references": [
+      {
+        "id": "artisan-master",
+        "path": "/Users/benediction/Downloads/Web Dev projects/fableon/outputs/folk-provider-benchmark/gemini/attempts/stage2a-gemini-master-retry2/output-00.png",
+        "mimeType": "image/jpeg"
+      },
+      {
+        "id": "stage2a-head",
+        "path": "/Users/benediction/Downloads/Web Dev projects/fableon/outputs/folk-provider-benchmark/stage-2a/gemini-pack/parts/artisan_head.png",
+        "mimeType": "image/png"
+      }
+    ],
+    "note": "Chroma-key green sheet for explicit mask/repair; no native transparency."
+  },
+  "references": [
+    {
+      "id": "artisan-master",
+      "path": "/Users/benediction/Downloads/Web Dev projects/fableon/outputs/folk-provider-benchmark/gemini/attempts/stage2a-gemini-master-retry2/output-00.png"
+    },
+    {
+      "id": "stage2a-head",
+      "path": "/Users/benediction/Downloads/Web Dev projects/fableon/outputs/folk-provider-benchmark/stage-2a/gemini-pack/parts/artisan_head.png"
+    }
+  ],
+  "estimate": {
+    "provider": "gemini",
+    "model": "gemini-nano-banana-2.1",
+    "pricingVersion": "gemini-image-2026-11-10",
+    "pricingSource": "https://ai.google.dev/gemini-api/docs/pricing",
+    "pricingVerified": true,
+    "estimateBasis": "Published token-equivalent pricing: 1K=1,120, 2K=1,680, 4K=3,780 image output tokens at $30/1M.",
+    "inputTextTokens": 495,
+    "inputImageTokens": 2240,
+    "outputImageTokens": 1680,
+    "estimatedCostUsd": 0.0545025,
+    "maxCostUsd": 0.0545025,
+    "currency": "USD",
+    "assumptions": [
+      "Reference images are bounded at 1,120 image input tokens each.",
+      "Text input is bounded at one token per four characters plus 200 tokens.",
+      "Actual token usage depends on the provider response and must be reconciled."
+    ]
+  },
+  "authorization": null,
+  "authorizationError": "The spending request is still pending explicit approval.",
+  "attemptedAt": "2026-11-10T13:05:11.967Z"
+}

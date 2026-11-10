@@ -1,138 +1,94 @@
 {
   "generatedAt": "2026-11-10",
-  "stage": "phase-05.1-stage-2b preparation",
-  "stage2a": {
-    "generatedAt": "2026-11-10",
-    "experimentId": "phase-05.1-folk-pilot",
-    "providers": {
-      "openai": {
-        "capUsd": 1.5,
-        "spentUsd": 0.24461,
-        "reservedUsd": 0,
-        "remainingUsd": 1.25539,
-        "requestsUsed": 5,
-        "maxRequests": 6,
-        "estimatedCostUsd": 0.396015,
-        "completedUsageCostUsd": 0.24461,
-        "failedAttemptHeldUsd": 0,
-        "successfulRequests": 5,
-        "failedRequests": 0,
-        "imagesReturned": 5,
-        "acceptedImages": 5,
-        "rejectedImages": 0,
-        "usableAssets": 5,
-        "costPerUsableAssetUsd": 0.048922,
-        "completedUsageCostPerUsableAssetUsd": 0.048922,
-        "providerReportedBilledUsd": null,
-        "notes": "All five OpenAI requests returned images; reconciled from provider token usage. No provider invoice is available."
-      },
-      "gemini": {
-        "capUsd": 1,
-        "spentUsd": 0.205989,
-        "reservedUsd": 0,
-        "remainingUsd": 0.794011,
-        "requestsUsed": 4,
-        "maxRequests": 6,
-        "estimatedCostUsd": 0.206631,
-        "completedUsageCostUsd": 0.10341,
-        "failedAttemptHeldUsd": 0.102579,
-        "successfulRequests": 2,
-        "failedRequests": 2,
-        "imagesReturned": 2,
-        "acceptedImages": 2,
-        "rejectedImages": 0,
-        "usableAssets": 5,
-        "costPerUsableAssetUsd": 0.041198,
-        "completedUsageCostPerUsableAssetUsd": 0.020682,
-        "providerReportedBilledUsd": null,
-        "notes": "Two Gemini attempts failed before usable output: a 400 mime-type rejection and a 502 response-shape failure. Failed-attempt holds are conservative; the 400 is likely unbilled, the 502 may have been billed. No provider invoice is available."
-      }
-    },
-    "combined": {
-      "capUsd": 2.5,
-      "spentUsd": 0.450599,
-      "remainingUsd": 2.049401,
-      "completedUsageCostUsd": 0.34802,
-      "totalImagesReturned": 7,
-      "failedAttempts": 2
-    }
-  },
-  "stage2b": {
-    "status": "pending-authorization",
-    "experimentId": "phase-05.1-stage-2b",
-    "paidCallsMade": 0,
-    "spentUsd": 0,
-    "reservedUsd": 0,
-    "estimatedSheetCostsUsd": {
-      "openai": {
-        "head": 0.327565,
-        "body": 0.327555,
-        "arms": 0.363425,
-        "legs": 0.29162
-      },
-      "gemini": {
-        "head": 0.0545025,
-        "body": 0.054498,
-        "arms": 0.0561885,
-        "legs": 0.052791
-      }
-    },
-    "estimatedProviderTotalsUsd": {
-      "openai": 1.310165,
-      "gemini": 0.21798
-    },
-    "estimatedCombinedUsd": 1.528145,
-    "pendingAuthorizations": {
-      "openai": {
-        "id": "auth_1794315751164_678c8d79",
-        "capUsd": 4,
-        "maxRequests": 10,
-        "maxOutputsPerRequest": 1,
-        "maxWidth": 2048,
-        "maxHeight": 2048,
-        "status": "pending",
-        "approvedBy": null,
-        "expiresAt": "2026-11-13T13:02:30.000Z"
-      },
-      "gemini": {
-        "id": "auth_1794315751766_c1eef16a",
-        "capUsd": 3,
-        "maxRequests": 10,
-        "maxOutputsPerRequest": 1,
-        "maxWidth": 2048,
-        "maxHeight": 2048,
-        "status": "pending",
-        "approvedBy": null,
-        "expiresAt": "2026-11-13T13:02:30.000Z"
-      }
-    },
-    "pendingCeilingUsd": 7,
-    "notes": [
-      "No Stage 2B paid request has been submitted.",
-      "Estimates are conservative reservation bounds, not invoices.",
-      "The four-sheet plan leaves room for one manual repair per sheet inside each cap."
-    ]
-  },
-  "cumulative": {
-    "completedUsageCostUsd": 0.34802,
-    "conservativeSpentUsd": 0.450599,
-    "activeRemainingBudgetUsd": 2.049401,
-    "projectedIfStage2BExecutesAtEstimateUsd": 1.978744
-  },
-  "projectedUnitCosts": {
+  "experimentId": "phase-05.1-stage-2b",
+  "providers": {
     "openai": {
-      "partsInContract": 31,
-      "projectedTotalStage2AConservativePlusStage2BEstimateUsd": 1.554775,
-      "projectedCostPerPartUsd": 0.050154,
-      "projectedCostPerFirstEightSecondAnimationUsd": 1.554775,
-      "incrementalReuseApiCostUsd": 0
+      "provider": "openai",
+      "authorizationId": "auth_1794315751164_678c8d79",
+      "requestsUsed": 4,
+      "maxRequests": 10,
+      "capUsd": 4,
+      "spentUsd": 0.40372,
+      "remainingUsd": 3.59628,
+      "completedRequests": 4,
+      "failedRequests": 0,
+      "imagesReturned": 4,
+      "estimatedRequestSumUsd": 1.310165,
+      "completedUsageCostUsd": 0.40372,
+      "usage": {
+        "input": 10088,
+        "output": 11776,
+        "total": 21864
+      },
+      "partsInPack": 31,
+      "costPerPartUsd": 0.013023,
+      "costPerCompletedRigUsd": 0.40372,
+      "costPerFirstEightSecondAnimationUsd": 0.40372,
+      "incrementalReuseApiCostUsd": 0,
+      "rejectedSheets": 0,
+      "notes": "All four generated sheets accepted; local registration repairs only."
     },
     "gemini": {
-      "partsInContract": 31,
-      "projectedTotalStage2AConservativePlusStage2BEstimateUsd": 0.423969,
-      "projectedCostPerPartUsd": 0.013676,
-      "projectedCostPerFirstEightSecondAnimationUsd": 0.423969,
-      "incrementalReuseApiCostUsd": 0
+      "provider": "gemini",
+      "authorizationId": "auth_1794315751766_c1eef16a",
+      "requestsUsed": 5,
+      "maxRequests": 10,
+      "capUsd": 3,
+      "spentUsd": 0.272609,
+      "remainingUsd": 2.727391,
+      "completedRequests": 5,
+      "failedRequests": 0,
+      "imagesReturned": 5,
+      "estimatedRequestSumUsd": 0.274313,
+      "completedUsageCostUsd": 0.272608,
+      "usage": {
+        "input": 13739,
+        "output": 13139,
+        "total": 32369
+      },
+      "partsInPack": 31,
+      "costPerPartUsd": 0.008794,
+      "costPerCompletedRigUsd": 0.272609,
+      "costPerFirstEightSecondAnimationUsd": 0.272609,
+      "incrementalReuseApiCostUsd": 0,
+      "rejectedSheets": 1,
+      "notes": "Gemini original arms sheet rejected for merged bent arms; one counted repair sheet used. No failed HTTP requests in Stage 2B."
+    }
+  },
+  "combined": {
+    "capUsd": 7,
+    "spentUsd": 0.676329,
+    "remainingUsd": 6.323671,
+    "requestsUsed": 9,
+    "imagesReturned": 9,
+    "partsInPacks": 62,
+    "costPerPartUsd": 0.010909
+  },
+  "cumulative": {
+    "openai": {
+      "stage2aConservativeUsd": 0.24461,
+      "stage2aCompletedUsageUsd": 0.24461,
+      "stage2bUsd": 0.40372,
+      "cumulativeConservativeUsd": 0.64833,
+      "cumulativeCompletedUsageUsd": 0.64833,
+      "cumulativeCostPerPartUsd": 0.020914,
+      "cumulativeCostPerFirstAnimationUsd": 0.64833
+    },
+    "gemini": {
+      "stage2aConservativeUsd": 0.205989,
+      "stage2aCompletedUsageUsd": 0.10341,
+      "stage2bUsd": 0.272609,
+      "cumulativeConservativeUsd": 0.478598,
+      "cumulativeCompletedUsageUsd": 0.376019,
+      "cumulativeCostPerPartUsd": 0.015439,
+      "cumulativeCostPerFirstAnimationUsd": 0.376019
+    },
+    "combined": {
+      "stage2aConservativeUsd": 0.450599,
+      "stage2aCompletedUsageUsd": 0.34802,
+      "stage2bUsd": 0.676329,
+      "cumulativeConservativeUsd": 1.126928,
+      "cumulativeCompletedUsageUsd": 1.024349
     }
   }
 }

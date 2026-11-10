@@ -1,0 +1,38 @@
+{
+  "generatedAt": "2026-11-10T14:08:01.949Z",
+  "provider": "gemini",
+  "variant": "base",
+  "configId": "stage2b-walk-reach-grip",
+  "width": 1280,
+  "height": 720,
+  "fps": 24,
+  "frames": 192,
+  "durationSeconds": 8,
+  "packDir": "outputs/folk-provider-benchmark/stage-2b/gemini/pack",
+  "video": "outputs/folk-provider-benchmark/stage-2b/gemini/character-test.mp4",
+  "contact": "outputs/folk-provider-benchmark/stage-2b/gemini/contact-base.png",
+  "validation": {
+    "ok": true,
+    "rigId": "artisan_v2",
+    "requiredPartCount": 31,
+    "presentPartCount": 31,
+    "missingPartIds": [],
+    "errors": [],
+    "warnings": [],
+    "checkedHashes": 31
+  },
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1280,
+        "height": 720,
+        "avg_frame_rate": "24/1",
+        "duration": "8.000000",
+        "nb_frames": "192"
+      }
+    ]
+  },
+  "videoSha256": "957cbffbce9ebcea15b455e2c7a4318f162e59a21ff2fae2b850c6fa61da53b5"
+}

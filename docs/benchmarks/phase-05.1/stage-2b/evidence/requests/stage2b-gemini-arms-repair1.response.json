@@ -1,0 +1,71 @@
+{
+  "requestKey": "stage2b-gemini-arms-repair1",
+  "provider": "gemini",
+  "model": "gemini-nano-banana-2.1",
+  "requestId": "v1_ChdueUR6YXBMbUVNS0I2OTRQanVXMjJBOBIXbnlEemFwTG1FTUtCNjk0UGp1VzIyQTg",
+  "estimate": {
+    "provider": "gemini",
+    "model": "gemini-nano-banana-2.1",
+    "pricingVersion": "gemini-image-2026-11-10",
+    "pricingSource": "https://ai.google.dev/gemini-api/docs/pricing",
+    "pricingVerified": true,
+    "estimateBasis": "Published token-equivalent pricing: 1K=1,120, 2K=1,680, 4K=3,780 image output tokens at $30/1M.",
+    "inputTextTokens": 595,
+    "inputImageTokens": 3360,
+    "outputImageTokens": 1680,
+    "estimatedCostUsd": 0.0563325,
+    "maxCostUsd": 0.0563325,
+    "currency": "USD",
+    "assumptions": [
+      "Reference images are bounded at 1,120 image input tokens each.",
+      "Text input is bounded at one token per four characters plus 200 tokens.",
+      "Actual token usage depends on the provider response and must be reconciled."
+    ]
+  },
+  "reconciledCostUsd": 0.0559815,
+  "costBasis": "published per-image token equivalent plus reported input tokens",
+  "usage": {
+    "inputTokens": 3721,
+    "outputTokens": 2782,
+    "totalTokens": 8486,
+    "inputImageTokens": null,
+    "outputImageTokens": null,
+    "providerReportedCostUsd": null,
+    "rawUsage": {
+      "total_tokens": 8486,
+      "total_input_tokens": 3721,
+      "input_tokens_by_modality": [
+        {
+          "modality": "text",
+          "tokens": 361
+        },
+        {
+          "modality": "image",
+          "tokens": 3360
+        }
+      ],
+      "total_cached_tokens": 0,
+      "total_output_tokens": 2782,
+      "output_tokens_by_modality": [
+        {
+          "modality": "image",
+          "tokens": 1680
+        }
+      ],
+      "total_tool_use_tokens": 0,
+      "total_thought_tokens": 1983,
+      "initial_input_tokens": 3721
+    }
+  },
+  "files": [
+    {
+      "index": 0,
+      "path": "outputs/folk-provider-benchmark/gemini/attempts/stage2b-gemini-arms-repair1/output-00.png",
+      "sha256": "035f57a82190732b710f27e9b826f014116ed6b2ca267853da6b453afc506c19",
+      "bytes": 1250367,
+      "url": "/api/studio/providers/packs/gemini/attempts/stage2b-gemini-arms-repair1/output-00.png"
+    }
+  ],
+  "reviewStatus": "pending",
+  "message": "Generated outputs are not auto-accepted. Review them in Studio."
+}

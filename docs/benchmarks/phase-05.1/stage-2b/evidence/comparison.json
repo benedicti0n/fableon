@@ -1,0 +1,76 @@
+{
+  "generatedAt": "2026-11-10T14:09:00.096Z",
+  "files": {
+    "openai": "outputs/folk-provider-benchmark/stage-2b/openai/character-test.mp4",
+    "gemini": "outputs/folk-provider-benchmark/stage-2b/gemini/character-test.mp4",
+    "openaiVariation": "outputs/folk-provider-benchmark/stage-2b/openai/variation.mp4",
+    "geminiVariation": "outputs/folk-provider-benchmark/stage-2b/gemini/variation.mp4"
+  },
+  "probes": {
+    "openai": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "24/1",
+          "duration": "8.000000",
+          "nb_frames": "192"
+        }
+      ]
+    },
+    "gemini": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "24/1",
+          "duration": "8.000000",
+          "nb_frames": "192"
+        }
+      ]
+    },
+    "openaiVariation": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "24/1",
+          "duration": "8.000000",
+          "nb_frames": "192"
+        }
+      ]
+    },
+    "geminiVariation": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "24/1",
+          "duration": "8.000000",
+          "nb_frames": "192"
+        }
+      ]
+    }
+  },
+  "hashes": {
+    "openai": "53855e1cb31392cb50e6c557ebdf9c2adcb81fd933e31d3bb5bc1ec92fe1094a",
+    "gemini": "957cbffbce9ebcea15b455e2c7a4318f162e59a21ff2fae2b850c6fa61da53b5",
+    "openaiVariation": "a240617db7eaa737ecc46eb527cba865a3680456e38940e747a5770ebf595aae",
+    "geminiVariation": "84a8a503c2f683658dc4c01e3e2b23f4fad31c69aa4e879e69e9733bda06df57",
+    "sideBySide": "7ff9aa6c761a4b115a9b4ef447b052390270dbf3a6ac90036edd1249a97897fc",
+    "variationSideBySide": "30e2001c2b0320ae8f605a273ef7b9c36625ab096732f8abd7d1b1ebbd05e742"
+  },
+  "outputs": {
+    "sideBySide": "outputs/folk-provider-benchmark/stage-2b/comparison/side-by-side.mp4",
+    "variationSideBySide": "outputs/folk-provider-benchmark/stage-2b/comparison/variation-side-by-side.mp4",
+    "contact": "outputs/folk-provider-benchmark/stage-2b/comparison/comparison-contact-sheet.png"
+  }
+}

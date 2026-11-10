@@ -89,10 +89,23 @@ It cannot prove a complete 31-part character, clothing continuity or natural wal
 
 This prevents a manifest with 31 filenames from being declared complete without seam geometry.
 
-## 6. Remaining work
+## 6. Executed result
 
-1. Generate the four provider sheets under the pending Stage 2B authorizations.
-2. Replace the diagnostic transforms with the real sheet registration.
-3. Inspect the elbow cover at 0–90° with the actual artwork.
-4. Validate the hip/dhoti and neck/necklace covers at walk and head-turn poses.
-5. Reject any provider part that exposes a severe gap or breaks identity.
+Both provider packs now contain 31 validated parts and render through the full eight-second
+walk–reach–grip–release test.
+
+| Check                  | OpenAI                                      | Gemini                                    |
+| ---------------------- | ------------------------------------------- | ----------------------------------------- |
+| Shoulder articulation  | acceptable, visible sleeve seam             | weak; upper arm reads as a tube           |
+| Elbow 0–90°            | acceptable; cover and overlap close the gap | moderate; cover helps, forearm is tubular |
+| Wrist/grip swap        | pass                                        | pass                                      |
+| Hip/knee/ankle         | pass; cloth thigh compromise                | pass after thigh recolor and shin crop    |
+| Bell attach/detach     | pass                                        | pass                                      |
+| Severe transparent gap | none observed in sampled frames             | none observed after repair                |
+
+Local repairs included facial pivots for both providers, a Gemini torso shoulder-patch fill,
+Gemini leg segmentation and thigh recoloring, Gemini shin-edge cropping, a turban lift, a brow
+reduction, and turban-tail fragment removal.
+
+Remaining defects are artistic, not structural: the shoulder and elbow seams remain visible, and
+the characters still read as cutout puppets. Neither provider is approved for a full film.

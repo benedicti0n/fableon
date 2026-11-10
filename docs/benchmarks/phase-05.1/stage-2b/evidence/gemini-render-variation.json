@@ -1,0 +1,38 @@
+{
+  "generatedAt": "2026-11-10T14:08:45.781Z",
+  "provider": "gemini",
+  "variant": "variation",
+  "configId": "stage2b-variation-fast-low-reach",
+  "width": 1280,
+  "height": 720,
+  "fps": 24,
+  "frames": 192,
+  "durationSeconds": 8,
+  "packDir": "outputs/folk-provider-benchmark/stage-2b/gemini/pack",
+  "video": "outputs/folk-provider-benchmark/stage-2b/gemini/variation.mp4",
+  "contact": "outputs/folk-provider-benchmark/stage-2b/gemini/contact-variation.png",
+  "validation": {
+    "ok": true,
+    "rigId": "artisan_v2",
+    "requiredPartCount": 31,
+    "presentPartCount": 31,
+    "missingPartIds": [],
+    "errors": [],
+    "warnings": [],
+    "checkedHashes": 31
+  },
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1280,
+        "height": 720,
+        "avg_frame_rate": "24/1",
+        "duration": "8.000000",
+        "nb_frames": "192"
+      }
+    ]
+  },
+  "videoSha256": "84a8a503c2f683658dc4c01e3e2b23f4fad31c69aa4e879e69e9733bda06df57"
+}

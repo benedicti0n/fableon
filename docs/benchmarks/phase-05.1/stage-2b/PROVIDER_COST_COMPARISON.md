@@ -1,121 +1,91 @@
 # Phase 5.1 Stage 2B — Provider Cost Comparison
 
 **Date:** 2026-11-10  
-**Stage 2B paid calls:** 0  
-**Stage 2B authorization:** pending, not granted
+**Stage 2B paid calls:** 9 (4 OpenAI, 5 Gemini)  
+**Stage 2B completed-usage cost:** $0.676329  
+**Stage 2B remaining budget:** $6.323671
 
 ## 1. Stage 2A actuals (historical, unchanged)
 
-| Metric                          |    OpenAI |    Gemini |  Combined |
-| ------------------------------- | --------: | --------: | --------: |
-| Requests used                   |     5 / 6 |     4 / 6 |         9 |
-| Images returned                 |         5 |         2 |         7 |
-| Usable assets                   |         5 |         5 |        10 |
-| Conservative ledger spend       | $0.244610 | $0.205989 | $0.450599 |
-| Completed-usage cost            | $0.244610 | $0.103410 | $0.348020 |
-| Failed-attempt hold             | $0.000000 | $0.102579 | $0.102579 |
-| Cost per usable asset (ledger)  | $0.048922 | $0.041198 | $0.045060 |
-| Cost per usable asset (usage)   | $0.048922 | $0.020682 | $0.034802 |
-| Provider-reported billed amount |      none |      none |      none |
+| Metric                    |    OpenAI |    Gemini |  Combined |
+| ------------------------- | --------: | --------: | --------: |
+| Requests used             |     5 / 6 |     4 / 6 |         9 |
+| Images returned           |         5 |         2 |         7 |
+| Usable assets             |         5 |         5 |        10 |
+| Conservative ledger spend | $0.244610 | $0.205989 | $0.450599 |
+| Completed-usage cost      | $0.244610 | $0.103410 | $0.348020 |
+| Failed-attempt hold       | $0.000000 | $0.102579 | $0.102579 |
 
-### Gemini reconciliation
+Gemini reconciliation: $0.205989 − $0.103410 = **$0.102579**, exactly two failed attempts at
+$0.0512895 each. The 400 mime rejection is likely unbilled; the 502 response-shape failure may have
+been billed. No invoice exists, so the conservative holds remain.
 
-```
-Conservative ledger        $0.205989
-Completed successful usage $0.103410
-Difference                 $0.102579
-```
+## 2. Stage 2B actuals
 
-The difference is exactly two failed requests at $0.0512895 each:
+| Metric                            |    OpenAI |            Gemini |  Combined |
+| --------------------------------- | --------: | ----------------: | --------: |
+| Requests used                     |    4 / 10 |            5 / 10 |         9 |
+| Images returned                   |         4 |                 5 |         9 |
+| 31-part packs                     |         1 |                 1 |         2 |
+| Rejected sheets                   |         0 | 1 (original arms) |         1 |
+| Estimated request sum             | $1.310165 |         $0.274313 | $1.584478 |
+| Completed-usage cost              | $0.403720 |         $0.272609 | $0.676329 |
+| Remaining cap                     | $3.596280 |         $2.727391 | $6.323671 |
+| Cost per part                     | $0.013023 |         $0.008794 | $0.010909 |
+| Cost per completed rig            | $0.403720 |         $0.272609 | $0.676329 |
+| Cost per first 8-second animation | $0.403720 |         $0.272609 | $0.676329 |
+| Incremental API cost of reuse     | $0.000000 |         $0.000000 | $0.000000 |
 
-| Request                        | Result                           | Accounting                              |
-| ------------------------------ | -------------------------------- | --------------------------------------- |
-| `stage2a-gemini-master`        | HTTP 400, PNG mime rejected      | conservative hold; likely unbilled      |
-| `stage2a-gemini-master-retry1` | HTTP 502, image shape not parsed | conservative hold; may have been billed |
+The Gemini repair sheet (`stage2b-gemini-arms-repair1`) is counted separately. The original Gemini
+arms sheet was rejected for merging complete bent arms into the forearm cells. No Stage 2B HTTP
+request failed; the rejection is an artistic/layout rejection, not a transport failure.
 
-The 400 was rejected before image generation, so it is probably not billed. The 502 may represent a
-billed generation whose response we could not parse at the time. No invoice is available. The
-holds remain in the ledger; historical events were not altered.
+## 3. Cumulative Stage 2A + 2B
 
-## 2. Stage 2B estimate
+| Metric                                       |    OpenAI |              Gemini |  Combined |
+| -------------------------------------------- | --------: | ------------------: | --------: |
+| Stage 2A conservative                        | $0.244610 |           $0.205989 | $0.450599 |
+| Stage 2A completed usage                     | $0.244610 |           $0.103410 | $0.348020 |
+| Stage 2B completed usage                     | $0.403720 |           $0.272609 | $0.676329 |
+| Cumulative conservative                      | $0.648330 |           $0.478598 | $1.126928 |
+| Cumulative completed usage                   | $0.648330 |           $0.376019 | $1.024349 |
+| Cumulative cost per part                     | $0.020914 | $0.012130–$0.015439 |         — |
+| Cumulative cost per first 8-second animation | $0.648330 | $0.376019–$0.478598 |         — |
 
-Free estimate calls only. No request was submitted to a provider.
+Gemini’s range reflects completed usage versus the conservative Stage 2A holds. The conservative
+figure is the safer accounting figure; the completed-usage figure is the lower-bound estimate.
 
-| Sheet               |        OpenAI |        Gemini |
-| ------------------- | ------------: | ------------: |
-| Head (3×3)          |     $0.327565 |    $0.0545025 |
-| Body (3×2)          |     $0.327555 |    $0.0544980 |
-| Arms (3×3)          |     $0.363425 |    $0.0561885 |
-| Legs (4×2)          |     $0.291620 |    $0.0527910 |
-| **Base plan total** | **$1.310165** | **$0.217980** |
-| Combined base plan  | **$1.528145** |               |
+## 4. Local production cost
 
-These are conservative reservation bounds, not invoices. The plan permits one manual repair per
-sheet inside the caps, but each repair must be a deliberate, counted request; no automatic retry
-is allowed.
+| Item                                        | Measured/estimated                                                           |
+| ------------------------------------------- | ---------------------------------------------------------------------------- |
+| Provider generation wall time (9 requests)  | 13:39:28–13:48:59 UTC ≈ 9.5 minutes                                          |
+| Local render time per 8-second clip         | ≈ 20.7 seconds (`/usr/bin/time`; 192 frames)                                 |
+| Four provider clips (base + variation each) | ≈ 83 seconds local compute                                                   |
+| Additional comparison/contact renders       | under 10 seconds                                                             |
+| Manual repair time                          | not separately instrumented; local scripts plus repeated visual registration |
+| Incremental API cost of the reused rig      | $0                                                                           |
 
-### Proposed caps
+Local compute, electricity and human/engineering time are not included in provider spend.
 
-| Provider |   Cap | Requests | Outputs/request | Resolution      | Status      |
-| -------- | ----: | -------: | --------------: | --------------- | ----------- |
-| OpenAI   | $4.00 |       10 |               1 | up to 2048×2048 | pending     |
-| Gemini   | $3.00 |       10 |               1 | 2K              | pending     |
-| Combined | $7.00 |       20 |               — | —               | not granted |
+## 5. Lease on the caps
 
-Estimated headroom:
+| Provider |   Cap |     Spent | Remaining | Requests left |
+| -------- | ----: | --------: | --------: | ------------: |
+| OpenAI   | $4.00 | $0.403720 | $3.596280 |             6 |
+| Gemini   | $3.00 | $0.272609 | $2.727391 |             5 |
+| Combined | $7.00 | $0.676329 | $6.323671 |            11 |
 
-- OpenAI: $4.00 − $1.310165 = **$2.689835**.
-- Gemini: $3.00 − $0.217980 = **$2.782020**.
+No unused request is treated as a refund, and no reservation is reused for a future experiment.
+The Stage 2B approvals remain active until their expiration or revocation.
 
-## 3. Cumulative accounting
+## 6. Cost of a usable character
 
-| Metric                                           |     Value |
-| ------------------------------------------------ | --------: |
-| Stage 2A completed-usage cost                    | $0.348020 |
-| Stage 2A conservative spend                      | $0.450599 |
-| Stage 2B spent to date                           | $0.000000 |
-| Active remaining Stage 2A budget                 | $2.049401 |
-| Pending Stage 2B ceiling                         | $7.000000 |
-| Projected total if Stage 2B executes at estimate | $1.978744 |
+At the measured Stage 2B marginal cost:
 
-The projected total uses Stage 2A conservative spend plus the Stage 2B estimate. Completed actual
-cost will be lower if usage reconciles below the reservations.
+- OpenAI: **$0.403720** for a 31-part rig and first eight-second animation.
+- Gemini: **$0.272609** for a 31-part rig and first eight-second animation.
+- Reuse: **$0 provider API cost** for a second motion configuration; local render only.
 
-## 4. Projected unit economics
-
-These are projections, not achieved costs. The packs are not generated yet.
-
-| Metric                                      |    OpenAI |    Gemini |
-| ------------------------------------------- | --------: | --------: |
-| Contract parts                              |        31 |        31 |
-| Stage 2A conservative + Stage 2B estimate   | $1.554775 | $0.423969 |
-| Projected cost per approved part            | $0.050154 | $0.013676 |
-| Projected cost per first 8-second animation | $1.554775 | $0.423969 |
-| Incremental API cost of reusing the rig     | $0.000000 | $0.000000 |
-
-The incremental reuse cost is zero **provider API cost** only. It does not include local compute,
-electricity, engineering time or manual repair time.
-
-## 5. Production time and manual work
-
-No Stage 2B provider artwork exists yet, so actual generation count, repair hours and render time
-cannot be claimed. The preparation work completed so far is engineering time, not provider spend.
-The final report must separate:
-
-- provider API spend;
-- local render compute time;
-- manual repair time;
-- engineering time;
-- approved/rejected/repaired part counts.
-
-## 6. Authorization state
-
-The two pending records are stored at
-`docs/benchmarks/phase-05.1/stage-2b/authorizations-pending.json`.
-
-- OpenAI: `auth_1794315751164_678c8d79`, $4.00, 10 requests, pending, `approvedBy: null`.
-- Gemini: `auth_1794315751766_c1eef16a`, $3.00, 10 requests, pending, `approvedBy: null`.
-- Both expire `2026-11-13T13:02:30.000Z`.
-
-No Stage 2B spending is authorized until both are explicitly approved with the exact confirmation
-strings. The Stage 2A authorizations are a different experiment and cannot be used.
+These are production-cost estimates, not a full-film budget. They exclude the remaining artistic
+repair needed for either provider.

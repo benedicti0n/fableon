@@ -3,8 +3,8 @@
 **Date:** 2026-11-10  
 **Baseline HEAD:** `ad9d0b4`  
 **Experiment:** `phase-05.1-stage-2b`  
-**Paid Stage 2B calls:** **0**  
-**Authorization state:** two records created, both **pending**, neither approved
+**Paid Stage 2B calls:** **9** (4 OpenAI, 5 Gemini)  
+**Authorization state:** both records **active** and reconciled; this document records the pre-execution preparation and the executed status
 
 ## 1. What was preserved
 
@@ -155,47 +155,42 @@ References:
 The Stage 2A parts are preserved as identity references and fallbacks. They are not silently
 reused if the new sheet produces a better complete rig.
 
-## 6. Stage 2B cost estimate
+## 6. Stage 2B execution result
 
-All eight sheet estimates were produced through the free server estimate endpoint.
+The two pending records were explicitly approved and executed. Full results are in
+`docs/reports/PHASE_05_1_STAGE_2B_REPORT.md` and `QUALITY_REVIEW.md`.
 
-| Sheet     |        OpenAI |        Gemini |
-| --------- | ------------: | ------------: |
-| Head      |     $0.327565 |    $0.0545025 |
-| Body      |     $0.327555 |     $0.054498 |
-| Arms      |     $0.363425 |    $0.0561885 |
-| Legs      |     $0.291620 |     $0.052791 |
-| **Total** | **$1.310165** | **$0.217980** |
+| Metric               |    OpenAI |            Gemini |
+| -------------------- | --------: | ----------------: |
+| Requests used        |    4 / 10 |            5 / 10 |
+| Images returned      |         4 |                 5 |
+| 31-part pack         |     valid |             valid |
+| Rejected sheet       |         0 | 1 (original arms) |
+| Repair sheet         |         0 |                 1 |
+| Completed-usage cost | $0.403720 |         $0.272609 |
+| Remaining budget     | $3.596280 |         $2.727391 |
 
-Combined estimate: **$1.528145**, before any manual repair attempts. The proposed caps leave
-substantial headroom for one repair per sheet and for a failed attempt that must not be retried
-automatically.
+The Gemini repair call was manually chosen after the original arms sheet merged upper arms and
+bent forearms. No request was automatically retried. The Gemini leg sheet was segmented locally
+rather than regenerated. All generated sheets and repair evidence are preserved.
 
-No Stage 2B paid request has been made.
+## 7. Final authorizations
 
-## 7. Pending authorizations
+| Provider | Authorization                 |       Cap | Requests | Outputs | Status     |
+| -------- | ----------------------------- | --------: | -------: | ------: | ---------- |
+| OpenAI   | `auth_1794315751164_678c8d79` |     $4.00 |       10 |       1 | **active** |
+| Gemini   | `auth_1794315751766_c1eef16a` |     $3.00 |       10 |       1 | **active** |
+| Combined | —                             | **$7.00** |        — |       — | **active** |
 
-| Provider | Authorization ID              |       Cap | Requests | Outputs | Status          |
-| -------- | ----------------------------- | --------: | -------: | ------: | --------------- |
-| OpenAI   | `auth_1794315751164_678c8d79` |     $4.00 |       10 |       1 | **pending**     |
-| Gemini   | `auth_1794315751766_c1eef16a` |     $3.00 |       10 |       1 | **pending**     |
-| Combined | —                             | **$7.00** |        — |       — | **not granted** |
+Both were approved by `delegated-local-operator` at 2026-11-10T13:39:21Z. They expire at
+`2026-11-13T13:02:30.000Z`. No Stage 2A authorization was reused.
 
-Both expire at `2026-11-13T13:02:30.000Z`. Both have `approvedBy: null`, `spentCostUsd: 0`,
-`reservedCostUsd: 0` and `requestCount: 0`.
+## 8. Remaining work
 
-Rerunning the operator CLI with the same limits returns `pending-existing`; it does not create a
-duplicate or activate anything.
+The packs are technically complete and both eight-second tests render. Remaining work is artistic:
 
-## 8. What remains blocked
+- OpenAI needs shoulder/wrist cleanup before a full-film decision.
+- Gemini needs another targeted arm/face/clothing pass.
+- Neither provider is approved for a full film.
 
-The following require explicit approval of the two pending records:
-
-- any OpenAI or Gemini generation call;
-- provider pack preparation from generated sheets;
-- the OpenAI/Gemini eight-second videos;
-- the provider comparison videos and final quality review;
-- the final Stage 2B execution report with actual spend and visual approval.
-
-Offline work that can continue without approval is limited to test and documentation refinement.
-No provider request may be submitted from this state.
+No additional Stage 2B authorization was created, and no full-library or Phase 6 work was started.

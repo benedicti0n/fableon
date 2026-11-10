@@ -1,0 +1,49 @@
+{
+  "exportedAt": "2026-11-10",
+  "experimentId": "phase-05.1-stage-2b",
+  "records": [
+    {
+      "id": "auth_1794315751164_678c8d79",
+      "experimentId": "phase-05.1-stage-2b",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "status": "active",
+      "requestedBy": "delegated-local-operator",
+      "createdAt": "2026-11-10T13:02:31.164Z",
+      "approvedBy": "delegated-local-operator",
+      "approvedAt": "2026-11-10T13:39:21.166Z",
+      "expiresAt": "2026-11-13T13:02:30.000Z",
+      "maxCostUsd": 4,
+      "maxRequests": 10,
+      "maxOutputsPerRequest": 1,
+      "maxWidth": 2048,
+      "maxHeight": 2048,
+      "spentCostUsd": 0.40371999999999997,
+      "reservedCostUsd": 0,
+      "requestCount": 4,
+      "notes": "Stage 2B pending authorization. No activation until the user explicitly approves this provider, cap and request count."
+    },
+    {
+      "id": "auth_1794315751766_c1eef16a",
+      "experimentId": "phase-05.1-stage-2b",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "status": "active",
+      "requestedBy": "delegated-local-operator",
+      "createdAt": "2026-11-10T13:02:31.766Z",
+      "approvedBy": "delegated-local-operator",
+      "approvedAt": "2026-11-10T13:39:21.383Z",
+      "expiresAt": "2026-11-13T13:02:30.000Z",
+      "maxCostUsd": 3,
+      "maxRequests": 10,
+      "maxOutputsPerRequest": 1,
+      "maxWidth": 2048,
+      "maxHeight": 2048,
+      "spentCostUsd": 0.27260850000000003,
+      "reservedCostUsd": 0,
+      "requestCount": 5,
+      "notes": "Stage 2B pending authorization. No activation until the user explicitly approves this provider, cap and request count."
+    }
+  ],
+  "note": "Both Stage 2B authorizations active; usage reconciled. No automatic retry. Stage 2A is a separate experiment."
+}

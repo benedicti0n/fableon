@@ -1,0 +1,86 @@
+{
+  "generatedAt": "2026-11-10T14:00:55.854Z",
+  "provider": "openai",
+  "packDir": "outputs/folk-provider-benchmark/stage-2b/openai/pack",
+  "sheets": {
+    "head": {
+      "requestKey": "stage2b-openai-head",
+      "source": "outputs/folk-provider-benchmark/stage-2b/openai/generated/head.png",
+      "width": 2048,
+      "height": 2048,
+      "cells": 9,
+      "parts": [
+        "artisan_head",
+        "artisan_turban",
+        "artisan_turbanTail",
+        "artisan_mustache",
+        "artisan_earring",
+        "artisan_eye",
+        "artisan_eyelid",
+        "artisan_brow",
+        "artisan_neck"
+      ]
+    },
+    "body": {
+      "requestKey": "stage2b-openai-body",
+      "source": "outputs/folk-provider-benchmark/stage-2b/openai/generated/body.png",
+      "width": 2048,
+      "height": 2048,
+      "cells": 6,
+      "parts": [
+        "artisan_torso",
+        "artisan_sash",
+        "artisan_necklace",
+        "artisan_shoulderSash",
+        "artisan_pelvis"
+      ]
+    },
+    "arms": {
+      "requestKey": "stage2b-openai-arms",
+      "source": "outputs/folk-provider-benchmark/stage-2b/openai/generated/arms.png",
+      "width": 2048,
+      "height": 2048,
+      "cells": 9,
+      "parts": [
+        "artisan_nearUpperArm",
+        "artisan_nearForearm",
+        "artisan_nearElbowCover",
+        "artisan_handOpen",
+        "artisan_handGrip",
+        "artisan_farUpperArm",
+        "artisan_farForearm",
+        "artisan_farElbowCover",
+        "artisan_farHand"
+      ]
+    },
+    "legs": {
+      "requestKey": "stage2b-openai-legs",
+      "source": "outputs/folk-provider-benchmark/stage-2b/openai/generated/legs.png",
+      "width": 2048,
+      "height": 2048,
+      "cells": 8,
+      "parts": [
+        "artisan_nearThigh",
+        "artisan_nearShin",
+        "artisan_nearFoot",
+        "artisan_nearDhoti",
+        "artisan_farThigh",
+        "artisan_farShin",
+        "artisan_farFoot",
+        "artisan_farDhoti"
+      ]
+    }
+  },
+  "partCount": 31,
+  "missingSlots": [],
+  "validation": {
+    "ok": true,
+    "rigId": "artisan_v2",
+    "requiredPartCount": 31,
+    "presentPartCount": 31,
+    "missingPartIds": [],
+    "errors": [],
+    "warnings": [],
+    "checkedHashes": 31
+  }
+}

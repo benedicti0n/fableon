@@ -1,0 +1,38 @@
+{
+  "generatedAt": "2026-11-10T14:08:46.005Z",
+  "provider": "openai",
+  "variant": "variation",
+  "configId": "stage2b-variation-fast-low-reach",
+  "width": 1280,
+  "height": 720,
+  "fps": 24,
+  "frames": 192,
+  "durationSeconds": 8,
+  "packDir": "outputs/folk-provider-benchmark/stage-2b/openai/pack",
+  "video": "outputs/folk-provider-benchmark/stage-2b/openai/variation.mp4",
+  "contact": "outputs/folk-provider-benchmark/stage-2b/openai/contact-variation.png",
+  "validation": {
+    "ok": true,
+    "rigId": "artisan_v2",
+    "requiredPartCount": 31,
+    "presentPartCount": 31,
+    "missingPartIds": [],
+    "errors": [],
+    "warnings": [],
+    "checkedHashes": 31
+  },
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1280,
+        "height": 720,
+        "avg_frame_rate": "24/1",
+        "duration": "8.000000",
+        "nb_frames": "192"
+      }
+    ]
+  },
+  "videoSha256": "a240617db7eaa737ecc46eb527cba865a3680456e38940e747a5770ebf595aae"
+}

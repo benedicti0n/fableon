@@ -1,0 +1,86 @@
+{
+  "requestKey": "stage2b-gemini-arms-repair1",
+  "mode": "generate",
+  "provider": "gemini",
+  "model": "gemini-nano-banana-2.1",
+  "experimentId": "phase-05.1-stage-2b",
+  "sheet": "arms",
+  "prompt": "Use the approved artisan master as the exact identity, proportion, palette and outline reference. Preserve the saffron turban, indigo turban tail, ochre angrakha, maroon sash, gold jewellery, warm skin, bold black ink outlines, flat earthy fills and decorative geometric fabric motifs. Original Rajasthani folk-art cutout design. No photorealism, no 3D render, no anime anatomy, no soft AI gradient, no text, no labels, no grid lines, no shadows, no ground plane, no complete character.\n\nCreate one 3x3 rig-parts sheet. Each cell contains exactly one isolated body part, centered and fully inside its cell. Do not overlap cells. Do not draw connecting limbs or a full body. Keep the same profile orientation, outline weight and scale relationship as the master.\n\nRow 1: near upper arm sleeve segment; near forearm with cuff; near elbow cover shaped as a matching fabric cuff, not a plain circle.\nRow 2: near open hand; near gripping hand; far upper arm sleeve segment.\nRow 3: far forearm with cuff; far elbow cover; far open hand.\n\nUse a perfectly flat, uniform chroma-key green (#00FF00) background. Do not use green on the character. Every part must be fully separated by wide green gutters.\n\nREPAIR CONSTRAINT: Every arm must be split into a straight upper-arm sleeve segment and a straight forearm segment. Do NOT draw a complete bent arm anywhere. The near-forearm cell must contain ONLY a straight forearm from elbow cuff to wrist, with no upper arm and no hand. The far-forearm cell must do the same. The upper-arm cells must contain sleeve only. Keep the same 3x3 order.",
+  "body": {
+    "experimentId": "phase-05.1-stage-2b",
+    "provider": "gemini",
+    "model": "gemini-nano-banana-2.1",
+    "operation": "generate-part",
+    "prompt": "Use the approved artisan master as the exact identity, proportion, palette and outline reference. Preserve the saffron turban, indigo turban tail, ochre angrakha, maroon sash, gold jewellery, warm skin, bold black ink outlines, flat earthy fills and decorative geometric fabric motifs. Original Rajasthani folk-art cutout design. No photorealism, no 3D render, no anime anatomy, no soft AI gradient, no text, no labels, no grid lines, no shadows, no ground plane, no complete character.\n\nCreate one 3x3 rig-parts sheet. Each cell contains exactly one isolated body part, centered and fully inside its cell. Do not overlap cells. Do not draw connecting limbs or a full body. Keep the same profile orientation, outline weight and scale relationship as the master.\n\nRow 1: near upper arm sleeve segment; near forearm with cuff; near elbow cover shaped as a matching fabric cuff, not a plain circle.\nRow 2: near open hand; near gripping hand; far upper arm sleeve segment.\nRow 3: far forearm with cuff; far elbow cover; far open hand.\n\nUse a perfectly flat, uniform chroma-key green (#00FF00) background. Do not use green on the character. Every part must be fully separated by wide green gutters.\n\nREPAIR CONSTRAINT: Every arm must be split into a straight upper-arm sleeve segment and a straight forearm segment. Do NOT draw a complete bent arm anywhere. The near-forearm cell must contain ONLY a straight forearm from elbow cuff to wrist, with no upper arm and no hand. The far-forearm cell must do the same. The upper-arm cells must contain sleeve only. Keep the same 3x3 order.",
+    "width": 1024,
+    "height": 1024,
+    "quality": "standard",
+    "imageSize": "2K",
+    "aspectRatio": "1:1",
+    "outputCount": 1,
+    "transparentBackground": false,
+    "requestKey": "stage2b-gemini-arms-repair1",
+    "references": [
+      {
+        "id": "artisan-master",
+        "path": "/Users/benediction/Downloads/Web Dev projects/fableon/outputs/folk-provider-benchmark/gemini/attempts/stage2a-gemini-master-retry2/output-00.png",
+        "mimeType": "image/jpeg"
+      },
+      {
+        "id": "stage2a-near-upper-arm",
+        "path": "/Users/benediction/Downloads/Web Dev projects/fableon/outputs/folk-provider-benchmark/stage-2a/gemini-pack/parts/artisan_nearUpperArm.png",
+        "mimeType": "image/png"
+      },
+      {
+        "id": "stage2a-near-forearm",
+        "path": "/Users/benediction/Downloads/Web Dev projects/fableon/outputs/folk-provider-benchmark/stage-2a/gemini-pack/parts/artisan_nearForearm.png",
+        "mimeType": "image/png"
+      }
+    ],
+    "note": "Chroma-key green sheet for explicit mask/repair; no native transparency."
+  },
+  "references": [
+    {
+      "id": "artisan-master",
+      "path": "/Users/benediction/Downloads/Web Dev projects/fableon/outputs/folk-provider-benchmark/gemini/attempts/stage2a-gemini-master-retry2/output-00.png"
+    },
+    {
+      "id": "stage2a-near-upper-arm",
+      "path": "/Users/benediction/Downloads/Web Dev projects/fableon/outputs/folk-provider-benchmark/stage-2a/gemini-pack/parts/artisan_nearUpperArm.png"
+    },
+    {
+      "id": "stage2a-near-forearm",
+      "path": "/Users/benediction/Downloads/Web Dev projects/fableon/outputs/folk-provider-benchmark/stage-2a/gemini-pack/parts/artisan_nearForearm.png"
+    }
+  ],
+  "estimate": {
+    "provider": "gemini",
+    "model": "gemini-nano-banana-2.1",
+    "pricingVersion": "gemini-image-2026-11-10",
+    "pricingSource": "https://ai.google.dev/gemini-api/docs/pricing",
+    "pricingVerified": true,
+    "estimateBasis": "Published token-equivalent pricing: 1K=1,120, 2K=1,680, 4K=3,780 image output tokens at $30/1M.",
+    "inputTextTokens": 595,
+    "inputImageTokens": 3360,
+    "outputImageTokens": 1680,
+    "estimatedCostUsd": 0.0563325,
+    "maxCostUsd": 0.0563325,
+    "currency": "USD",
+    "assumptions": [
+      "Reference images are bounded at 1,120 image input tokens each.",
+      "Text input is bounded at one token per four characters plus 200 tokens.",
+      "Actual token usage depends on the provider response and must be reconciled."
+    ]
+  },
+  "authorization": {
+    "id": "auth_1794315751766_c1eef16a",
+    "status": "active",
+    "maxCostUsd": 3,
+    "spentCostUsd": 0.21662700000000001,
+    "reservedCostUsd": 0,
+    "remainingUsd": 2.783373,
+    "expiresAt": "2026-11-13T13:02:30.000Z"
+  },
+  "authorizationError": null,
+  "attemptedAt": "2026-11-10T13:48:12.840Z"
+}

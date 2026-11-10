@@ -72,7 +72,12 @@ keeps the generated sheet readable and avoids inventing an unrelated component.
 
 ## Current per-provider state
 
-| Provider | Master | Stage 2A parts preserved | Stage 2B parts | Pack status                       |
-| -------- | ------ | ------------------------ | -------------- | --------------------------------- |
-| OpenAI   | yes    | 4                        | 0              | waiting for pending authorization |
-| Gemini   | yes    | 4                        | 0              | waiting for pending authorization |
+| Provider | Master | Stage 2A parts preserved | Stage 2B parts | Pack status                  |
+| -------- | ------ | -----------------------: | -------------: | ---------------------------- |
+| OpenAI   | yes    |                        4 |             31 | **valid, 31 / 31**           |
+| Gemini   | yes    |                        4 |             31 | **valid, 31 / 31, repaired** |
+
+Gemini’s original arms sheet was rejected for merging upper arms and bent forearms; the pack uses
+the counted `stage2b-gemini-arms-repair1` sheet. Gemini’s legs were segmented locally from
+full-leg cells, its feet use the separate shoe cells, and its thighs were recolored to cloth.
+These are local repairs, not silently accepted sheet cells.

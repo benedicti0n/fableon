@@ -1,0 +1,84 @@
+{
+  "requestKey": "stage2b-openai-arms",
+  "mode": "generate",
+  "provider": "openai",
+  "model": "gpt-image-2.6-sunburst",
+  "experimentId": "phase-05.1-stage-2b",
+  "sheet": "arms",
+  "prompt": "Use the approved artisan master as the exact identity, proportion, palette and outline reference. Preserve the saffron turban, indigo turban tail, ochre angrakha, maroon sash, gold jewellery, warm skin, bold black ink outlines, flat earthy fills and decorative geometric fabric motifs. Original Rajasthani folk-art cutout design. No photorealism, no 3D render, no anime anatomy, no soft AI gradient, no text, no labels, no grid lines, no shadows, no ground plane, no complete character.\n\nCreate one 3x3 rig-parts sheet. Each cell contains exactly one isolated body part, centered and fully inside its cell. Do not overlap cells. Do not draw connecting limbs or a full body. Keep the same profile orientation, outline weight and scale relationship as the master.\n\nRow 1: near upper arm sleeve segment; near forearm with cuff; near elbow cover shaped as a matching fabric cuff, not a plain circle.\nRow 2: near open hand; near gripping hand; far upper arm sleeve segment.\nRow 3: far forearm with cuff; far elbow cover; far open hand.\n\nUse a fully transparent background. Every part must have clean native alpha and be separated from every other part by transparent gutters.",
+  "body": {
+    "experimentId": "phase-05.1-stage-2b",
+    "provider": "openai",
+    "model": "gpt-image-2.6-sunburst",
+    "operation": "generate-part",
+    "prompt": "Use the approved artisan master as the exact identity, proportion, palette and outline reference. Preserve the saffron turban, indigo turban tail, ochre angrakha, maroon sash, gold jewellery, warm skin, bold black ink outlines, flat earthy fills and decorative geometric fabric motifs. Original Rajasthani folk-art cutout design. No photorealism, no 3D render, no anime anatomy, no soft AI gradient, no text, no labels, no grid lines, no shadows, no ground plane, no complete character.\n\nCreate one 3x3 rig-parts sheet. Each cell contains exactly one isolated body part, centered and fully inside its cell. Do not overlap cells. Do not draw connecting limbs or a full body. Keep the same profile orientation, outline weight and scale relationship as the master.\n\nRow 1: near upper arm sleeve segment; near forearm with cuff; near elbow cover shaped as a matching fabric cuff, not a plain circle.\nRow 2: near open hand; near gripping hand; far upper arm sleeve segment.\nRow 3: far forearm with cuff; far elbow cover; far open hand.\n\nUse a fully transparent background. Every part must have clean native alpha and be separated from every other part by transparent gutters.",
+    "width": 2048,
+    "height": 2048,
+    "quality": "medium",
+    "aspectRatio": "1:1",
+    "outputCount": 1,
+    "transparentBackground": true,
+    "requestKey": "stage2b-openai-arms",
+    "references": [
+      {
+        "id": "artisan-master",
+        "path": "/Users/benediction/Downloads/Web Dev projects/fableon/outputs/folk-provider-benchmark/openai/attempts/stage2a-openai-master/output-00.png",
+        "mimeType": "image/png"
+      },
+      {
+        "id": "stage2a-near-upper-arm",
+        "path": "/Users/benediction/Downloads/Web Dev projects/fableon/outputs/folk-provider-benchmark/stage-2a/openai-pack/parts/artisan_nearUpperArm.png",
+        "mimeType": "image/png"
+      },
+      {
+        "id": "stage2a-near-forearm",
+        "path": "/Users/benediction/Downloads/Web Dev projects/fableon/outputs/folk-provider-benchmark/stage-2a/openai-pack/parts/artisan_nearForearm.png",
+        "mimeType": "image/png"
+      }
+    ]
+  },
+  "references": [
+    {
+      "id": "artisan-master",
+      "path": "/Users/benediction/Downloads/Web Dev projects/fableon/outputs/folk-provider-benchmark/openai/attempts/stage2a-openai-master/output-00.png"
+    },
+    {
+      "id": "stage2a-near-upper-arm",
+      "path": "/Users/benediction/Downloads/Web Dev projects/fableon/outputs/folk-provider-benchmark/stage-2a/openai-pack/parts/artisan_nearUpperArm.png"
+    },
+    {
+      "id": "stage2a-near-forearm",
+      "path": "/Users/benediction/Downloads/Web Dev projects/fableon/outputs/folk-provider-benchmark/stage-2a/openai-pack/parts/artisan_nearForearm.png"
+    }
+  ],
+  "estimate": {
+    "provider": "openai",
+    "model": "gpt-image-2.6-sunburst",
+    "pricingVersion": "openai-image-2026-11-10",
+    "pricingSource": "https://developers.openai.com/api/docs/pricing#image-generation",
+    "pricingVerified": true,
+    "estimateBasis": "Conservative upper bound: documented image-token rates with a 2× safety factor for GPT Image 2.6 token variation.",
+    "inputTextTokens": 493,
+    "inputImageTokens": 13440,
+    "outputImageTokens": 8448,
+    "estimatedCostUsd": 0.363425,
+    "maxCostUsd": 0.363425,
+    "currency": "USD",
+    "assumptions": [
+      "Image input tokens are bounded at 1,120 per 1K reference.",
+      "Output tokens use the documented earlier-model quality table scaled by requested megapixels, then doubled.",
+      "Actual usage will be reconciled from the provider response; this is not an invoice."
+    ]
+  },
+  "authorization": {
+    "id": "auth_1794315751164_678c8d79",
+    "status": "active",
+    "maxCostUsd": 4,
+    "spentCostUsd": 0.203185,
+    "reservedCostUsd": 0,
+    "remainingUsd": 3.796815,
+    "expiresAt": "2026-11-13T13:02:30.000Z"
+  },
+  "authorizationError": null,
+  "attemptedAt": "2026-11-10T13:41:36.902Z"
+}

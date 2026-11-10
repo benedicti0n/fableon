@@ -1,0 +1,38 @@
+{
+  "generatedAt": "2026-11-10T13:56:41.171Z",
+  "provider": "openai",
+  "variant": "base",
+  "configId": "stage2b-walk-reach-grip",
+  "width": 1280,
+  "height": 720,
+  "fps": 24,
+  "frames": 192,
+  "durationSeconds": 8,
+  "packDir": "outputs/folk-provider-benchmark/stage-2b/openai/pack",
+  "video": "outputs/folk-provider-benchmark/stage-2b/openai/character-test.mp4",
+  "contact": "outputs/folk-provider-benchmark/stage-2b/openai/contact-base.png",
+  "validation": {
+    "ok": true,
+    "rigId": "artisan_v2",
+    "requiredPartCount": 31,
+    "presentPartCount": 31,
+    "missingPartIds": [],
+    "errors": [],
+    "warnings": [],
+    "checkedHashes": 31
+  },
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1280,
+        "height": 720,
+        "avg_frame_rate": "24/1",
+        "duration": "8.000000",
+        "nb_frames": "192"
+      }
+    ]
+  },
+  "videoSha256": "53855e1cb31392cb50e6c557ebdf9c2adcb81fd933e31d3bb5bc1ec92fe1094a"
+}

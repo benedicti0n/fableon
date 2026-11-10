@@ -1,0 +1,1924 @@
+{
+  "format": "fableon.generated-folk-pack",
+  "version": 1,
+  "id": "gemini-folk-pilot",
+  "title": "Stage 2B gemini complete artisan rig",
+  "provider": "gemini",
+  "model": "gemini-nano-banana-2.1",
+  "experimentId": "phase-05.1-stage-2b",
+  "rigId": "artisan_v2",
+  "generationMode": "provider-generated",
+  "aiGeneration": {
+    "status": "generated",
+    "reason": ""
+  },
+  "characters": {},
+  "backgrounds": {},
+  "parts": [
+    {
+      "id": "artisan_head",
+      "file": "parts/artisan_head.png",
+      "offsetX": 364.5198675496689,
+      "offsetY": 123.80000000000001,
+      "width": 211,
+      "height": 230,
+      "sha256": "484be9c417c51452cadfff1e6e0465e061337ea31723bcea4375246d57ff87dd",
+      "bytes": 350358,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 277,
+        "y": 567.76
+      },
+      "targetPivot": {
+        "x": 470,
+        "y": 340
+      },
+      "scale": 0.38079470198675497,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.7570468835919382,
+        "transparentRatio": 0.24295311640806178,
+        "warnings": [
+          "transparent-color-residue: 81296 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from gemini head sheet cell 0; trimmed 554x604, scaled 0.3808 to target height 230."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "neck",
+        "parentNodeId": "neck",
+        "overlap": {
+          "x": -16,
+          "y": -14,
+          "width": 32,
+          "height": 30
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -35,
+          "max": 35
+        }
+      }
+    },
+    {
+      "id": "artisan_turban",
+      "file": "parts/artisan_turban.png",
+      "offsetX": 371.5036496350365,
+      "offsetY": 4.300000000000011,
+      "width": 197,
+      "height": 173,
+      "sha256": "29f4a6376a056c200f6f93f7900659750655d81f016db0bac625245bde619190",
+      "bytes": 465482,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 312,
+        "y": 493.2
+      },
+      "targetPivot": {
+        "x": 470,
+        "y": 160
+      },
+      "scale": 0.3156934306569343,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.6549895891821075,
+        "transparentRatio": 0.3450104108178926,
+        "warnings": [
+          "transparent-color-residue: 117977 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from gemini head sheet cell 1; trimmed 624x548, scaled 0.3157 to target height 173."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_turbanTail",
+      "file": "parts/artisan_turbanTail.png",
+      "offsetX": 281.98848684210526,
+      "offsetY": 304.85,
+      "width": 296,
+      "height": 303,
+      "sha256": "c79225926e8b2e3a4ec23a6acc9f7ea83003a755d1dede131c60a12fcd4eacbd",
+      "bytes": 375195,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 297,
+        "y": 30.400000000000002
+      },
+      "targetPivot": {
+        "x": 430,
+        "y": 320
+      },
+      "scale": 0.49835526315789475,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.321343921672869,
+        "transparentRatio": 0.6786560783271309,
+        "warnings": [
+          "transparent-color-residue: 244871 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from gemini head sheet cell 2; trimmed 594x608, scaled 0.4984 to target height 303."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_mustache",
+      "file": "parts/artisan_mustache.png",
+      "offsetX": 491.3465553235908,
+      "offsetY": 210.5,
+      "width": 97,
+      "height": 79,
+      "sha256": "14590d7af13d060bb20986584066584d07dd91aa2bfe0785e6472e78eaf218a1",
+      "bytes": 194340,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 295,
+        "y": 239.5
+      },
+      "targetPivot": {
+        "x": 540,
+        "y": 250
+      },
+      "scale": 0.1649269311064718,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.27511057641272424,
+        "transparentRatio": 0.7248894235872757,
+        "warnings": [
+          "transparent-color-residue: 204861 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from gemini head sheet cell 3; trimmed 590x479, scaled 0.1649 to target height 79."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_earring",
+      "file": "parts/artisan_earring.png",
+      "offsetX": 368.2291666666667,
+      "offsetY": 227,
+      "width": 74,
+      "height": 80,
+      "sha256": "c23589e4adafc8e55ee94600242ca6d84edc442cb2d0bf32b9588318a6b51b3e",
+      "bytes": 201638,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 176.5,
+        "y": 38.400000000000006
+      },
+      "targetPivot": {
+        "x": 405,
+        "y": 235
+      },
+      "scale": 0.20833333333333334,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.39705057837582625,
+        "transparentRatio": 0.6029494216241738,
+        "warnings": [
+          "transparent-color-residue: 81731 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from gemini head sheet cell 4; trimmed 353x384, scaled 0.2083 to target height 80."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_eye",
+      "file": "parts/artisan_eye.png",
+      "offsetX": 487.1693548387097,
+      "offsetY": 171,
+      "width": 56,
+      "height": 68,
+      "sha256": "e8c7977562e02e57d2e372f499ae28d6690b6f0019f86a9a6c1fd4f987b2d268",
+      "bytes": 189996,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 203,
+        "y": 248
+      },
+      "targetPivot": {
+        "x": 515,
+        "y": 205
+      },
+      "scale": 0.13709677419354838,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.3283658430001589,
+        "transparentRatio": 0.6716341569998411,
+        "warnings": [
+          "transparent-color-residue: 135251 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from gemini head sheet cell 5; trimmed 406x496, scaled 0.1371 to target height 68."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_eyelid",
+      "file": "parts/artisan_eyelid.png",
+      "offsetX": 462.3463035019455,
+      "offsetY": 171,
+      "width": 105,
+      "height": 68,
+      "sha256": "afbeccc69de0025daac5cf4786ac7480472024a63db8ed3861b8453783f243da",
+      "bytes": 113973,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 199,
+        "y": 128.5
+      },
+      "targetPivot": {
+        "x": 515,
+        "y": 205
+      },
+      "scale": 0.26459143968871596,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.5483350605165908,
+        "transparentRatio": 0.45166493948340924,
+        "warnings": [
+          "transparent-color-residue: 46199 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from gemini head sheet cell 6; trimmed 398x257, scaled 0.2646 to target height 68."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_brow",
+      "file": "parts/artisan_brow.png",
+      "offsetX": 417.81007751937983,
+      "offsetY": 152.5,
+      "width": 194,
+      "height": 59,
+      "sha256": "e98ae546391c6ba9a77410d2bec635a909da05869ebfcf298eba842563e612c4",
+      "bytes": 52026,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 212.5,
+        "y": 64.5
+      },
+      "targetPivot": {
+        "x": 515,
+        "y": 182
+      },
+      "scale": 0.4573643410852713,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.41608755129958963,
+        "transparentRatio": 0.5839124487004104,
+        "warnings": [
+          "transparent-color-residue: 32013 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from gemini head sheet cell 7; trimmed 425x129, scaled 0.4574 to target height 59."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_neck",
+      "file": "parts/artisan_neck.png",
+      "offsetX": 401.2226720647773,
+      "offsetY": 328.4,
+      "width": 138,
+      "height": 124,
+      "sha256": "83bc7aa84537c92240e5d534d4600d7aee8c6ce958f15a9b81d88c39e55f34e8",
+      "bytes": 384955,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 274,
+        "y": 444.6
+      },
+      "targetPivot": {
+        "x": 470,
+        "y": 440
+      },
+      "scale": 0.25101214574898784,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.6269688820591625,
+        "transparentRatio": 0.3730311179408375,
+        "warnings": [
+          "transparent-color-residue: 100984 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from gemini head sheet cell 8; trimmed 548x494, scaled 0.2510 to target height 124."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "neck",
+        "parentNodeId": "torso",
+        "overlap": {
+          "x": -16,
+          "y": -14,
+          "width": 32,
+          "height": 30
+        },
+        "occlusion": "cover-over",
+        "limits": {
+          "min": -35,
+          "max": 35
+        },
+        "coverNodeId": "necklace"
+      }
+    },
+    {
+      "id": "artisan_torso",
+      "file": "parts/artisan_torso.png",
+      "offsetX": 335.5844155844156,
+      "offsetY": 380,
+      "width": 209,
+      "height": 320,
+      "sha256": "c7ed74318eb49587751ca847ae7892950137c8ca7806d667f897ddf4db030158",
+      "bytes": 735105,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 301.5,
+        "y": 462
+      },
+      "targetPivot": {
+        "x": 440,
+        "y": 540
+      },
+      "scale": 0.3463203463203463,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.6884696287681362,
+        "transparentRatio": 0.3115303712318638,
+        "warnings": [
+          "transparent-color-residue: 173576 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from gemini body sheet cell 0; trimmed 603x924, scaled 0.3463 to target height 320."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_sash",
+      "file": "parts/artisan_sash.png",
+      "offsetX": 335.2942804428044,
+      "offsetY": 539.5,
+      "width": 229,
+      "height": 217,
+      "sha256": "bf1127789fa2618a0c0374e28e9f984bcc9a20ae5eb87fb1b35579f5fa81cd09",
+      "bytes": 385554,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 286.5,
+        "y": 271
+      },
+      "targetPivot": {
+        "x": 450,
+        "y": 648
+      },
+      "scale": 0.4003690036900369,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.449930127573527,
+        "transparentRatio": 0.550069872426473,
+        "warnings": [
+          "transparent-color-residue: 170833 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from gemini body sheet cell 1; trimmed 573x542, scaled 0.4004 to target height 217."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_necklace",
+      "file": "parts/artisan_necklace.png",
+      "offsetX": 426.8571428571429,
+      "offsetY": 439.68,
+      "width": 98,
+      "height": 86,
+      "sha256": "3e89ec886b9523929e5cda0f1a8f38030eabcc3b0e259702b83c12e7f9602ef5",
+      "bytes": 228178,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 260,
+        "y": 54.6
+      },
+      "targetPivot": {
+        "x": 476,
+        "y": 450
+      },
+      "scale": 0.189010989010989,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.14993660185967878,
+        "transparentRatio": 0.8500633981403212,
+        "warnings": [
+          "transparent-color-residue: 201125 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from gemini body sheet cell 2; trimmed 520x455, scaled 0.1890 to target height 86."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_shoulderSash",
+      "file": "parts/artisan_shoulderSash.png",
+      "offsetX": 426.6712141882674,
+      "offsetY": 354,
+      "width": 147,
+      "height": 172,
+      "sha256": "82ebdfdfb95087096049aed3fea1869555a11c240e5cfdb9fbaa5d281fb651d7",
+      "bytes": 564334,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 312.5,
+        "y": 366.5
+      },
+      "targetPivot": {
+        "x": 500,
+        "y": 440
+      },
+      "scale": 0.23465211459754434,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.4324474761255116,
+        "transparentRatio": 0.5675525238744884,
+        "warnings": [
+          "transparent-color-residue: 260010 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from gemini body sheet cell 3; trimmed 625x733, scaled 0.2347 to target height 172."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_pelvis",
+      "file": "parts/artisan_pelvis.png",
+      "offsetX": 370.8534063260341,
+      "offsetY": 640.7,
+      "width": 138,
+      "height": 193,
+      "sha256": "c8adc6ebd547f6eb3271440ba195d1507179cfcf5f585bb1b37e0ab823bfc3e0",
+      "bytes": 626530,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 294.5,
+        "y": 82.2
+      },
+      "targetPivot": {
+        "x": 440,
+        "y": 660
+      },
+      "scale": 0.23479318734793186,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.6480776936454629,
+        "transparentRatio": 0.35192230635453714,
+        "warnings": [
+          "transparent-color-residue: 170386 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from gemini body sheet cell 4; trimmed 589x822, scaled 0.2348 to target height 193."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_nearUpperArm",
+      "file": "parts/artisan_nearUpperArm.png",
+      "offsetX": 471.1666666666667,
+      "offsetY": 458.95,
+      "width": 74,
+      "height": 221,
+      "sha256": "4acb661ef12b5f10c0c7b399957fb40b2aaa13c3e024d38eea35e57ccaa75dae",
+      "bytes": 157088,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 96.5,
+        "y": 28.950000000000003
+      },
+      "targetPivot": {
+        "x": 508,
+        "y": 470
+      },
+      "scale": 0.38169257340241797,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.8469220650218798,
+        "transparentRatio": 0.15307793497812022,
+        "warnings": [
+          "transparent-color-residue: 17106 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from gemini arms sheet cell 0; trimmed 193x579, scaled 0.3817 to target height 221."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "shoulder",
+        "parentNodeId": "torso",
+        "overlap": {
+          "x": -22,
+          "y": -18,
+          "width": 44,
+          "height": 50
+        },
+        "occlusion": "parent-over-child",
+        "limits": {
+          "min": -95,
+          "max": 95
+        }
+      }
+    },
+    {
+      "id": "artisan_nearForearm",
+      "file": "parts/artisan_nearForearm.png",
+      "offsetX": 496.0907335907336,
+      "offsetY": 599.55,
+      "width": 72,
+      "height": 209,
+      "sha256": "5cc2fc089dbf86c319b4050183e492016c52013f5610e46ba64fe4fa9d8528cc",
+      "bytes": 109194,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 89,
+        "y": 25.900000000000002
+      },
+      "targetPivot": {
+        "x": 532,
+        "y": 610
+      },
+      "scale": 0.4034749034749035,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.8169602186456119,
+        "transparentRatio": 0.1830397813543881,
+        "warnings": [
+          "transparent-color-residue: 16877 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from gemini arms sheet cell 1; trimmed 178x518, scaled 0.4035 to target height 209."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "elbow",
+        "parentNodeId": "nearUpperArm",
+        "overlap": {
+          "x": -18,
+          "y": -20,
+          "width": 36,
+          "height": 44
+        },
+        "occlusion": "cover-over",
+        "limits": {
+          "min": -140,
+          "max": 5
+        },
+        "coverNodeId": "nearElbowCover"
+      }
+    },
+    {
+      "id": "artisan_nearElbowCover",
+      "file": "parts/artisan_nearElbowCover.png",
+      "offsetX": 492.4961832061069,
+      "offsetY": 565,
+      "width": 79,
+      "height": 90,
+      "sha256": "0f23593f5549f77a09efa268f00d829ed1bdc721e730d3852cd4a7c287696903",
+      "bytes": 97840,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 115,
+        "y": 131
+      },
+      "targetPivot": {
+        "x": 532,
+        "y": 610
+      },
+      "scale": 0.3435114503816794,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.6985230667109193,
+        "transparentRatio": 0.30147693328908065,
+        "warnings": [
+          "transparent-color-residue: 18167 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from gemini arms sheet cell 2; trimmed 230x262, scaled 0.3435 to target height 90."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_handOpen",
+      "file": "parts/artisan_handOpen.png",
+      "offsetX": 544.5314438502674,
+      "offsetY": 702.45,
+      "width": 58,
+      "height": 113,
+      "sha256": "59f1d47426ec9a4c54354224dffe1faf01d4205463eabf77cf920705e0b14850",
+      "bytes": 171392,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 17.22,
+        "y": 196.35
+      },
+      "targetPivot": {
+        "x": 548,
+        "y": 742
+      },
+      "scale": 0.2014260249554367,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.3726670268994516,
+        "transparentRatio": 0.6273329731005485,
+        "warnings": [
+          "transparent-color-residue: 101005 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from gemini arms sheet cell 3; trimmed 287x561, scaled 0.2014 to target height 113."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "wrist",
+        "parentNodeId": "nearForearm",
+        "overlap": {
+          "x": -14,
+          "y": -14,
+          "width": 28,
+          "height": 30
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -70,
+          "max": 70
+        }
+      }
+    },
+    {
+      "id": "artisan_handGrip",
+      "file": "parts/artisan_handGrip.png",
+      "offsetX": 539.3686666666666,
+      "offsetY": 704.55,
+      "width": 144,
+      "height": 107,
+      "sha256": "67c9c49d7c11b344d5c25f7d35b99a348e58ed141e669b0a466709737cf34525",
+      "bytes": 127001,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 21.779999999999998,
+        "y": 94.5
+      },
+      "targetPivot": {
+        "x": 548,
+        "y": 742
+      },
+      "scale": 0.3962962962962963,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.6167431894704622,
+        "transparentRatio": 0.3832568105295378,
+        "warnings": [
+          "transparent-color-residue: 37563 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from gemini arms sheet cell 4; trimmed 363x270, scaled 0.3963 to target height 107."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "wrist",
+        "parentNodeId": "nearForearm",
+        "overlap": {
+          "x": -14,
+          "y": -14,
+          "width": 28,
+          "height": 30
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -70,
+          "max": 70
+        }
+      }
+    },
+    {
+      "id": "artisan_farUpperArm",
+      "file": "parts/artisan_farUpperArm.png",
+      "offsetX": 380.31672297297297,
+      "offsetY": 464.25,
+      "width": 69,
+      "height": 215,
+      "sha256": "8b9eb81e468eb8e035b658cbe4f4ef2fbfdaeba7b0f7d2bbb378b0194470c192",
+      "bytes": 165367,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 95.5,
+        "y": 29.6
+      },
+      "targetPivot": {
+        "x": 415,
+        "y": 475
+      },
+      "scale": 0.36317567567567566,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.8410393377670865,
+        "transparentRatio": 0.15896066223291355,
+        "warnings": [
+          "transparent-color-residue: 17974 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from gemini arms sheet cell 5; trimmed 191x592, scaled 0.3632 to target height 215."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "shoulder",
+        "parentNodeId": "torso",
+        "overlap": {
+          "x": -22,
+          "y": -18,
+          "width": 44,
+          "height": 50
+        },
+        "occlusion": "parent-over-child",
+        "limits": {
+          "min": -95,
+          "max": 95
+        }
+      }
+    },
+    {
+      "id": "artisan_farForearm",
+      "file": "parts/artisan_farForearm.png",
+      "offsetX": 396.131021194605,
+      "offsetY": 599.6,
+      "width": 72,
+      "height": 208,
+      "sha256": "ea737fcd699b1e9773e05a4743691e5517dbc33fa43e1d9c74d592d29cc2fbe6",
+      "bytes": 112007,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 89.5,
+        "y": 25.950000000000003
+      },
+      "targetPivot": {
+        "x": 432,
+        "y": 610
+      },
+      "scale": 0.4007707129094412,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.8190869850701284,
+        "transparentRatio": 0.18091301492987158,
+        "warnings": [
+          "transparent-color-residue: 16807 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from gemini arms sheet cell 6; trimmed 179x519, scaled 0.4008 to target height 208."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "elbow",
+        "parentNodeId": "farUpperArm",
+        "overlap": {
+          "x": -18,
+          "y": -20,
+          "width": 36,
+          "height": 44
+        },
+        "occlusion": "cover-over",
+        "limits": {
+          "min": -140,
+          "max": 5
+        },
+        "coverNodeId": "farElbowCover"
+      }
+    },
+    {
+      "id": "artisan_farElbowCover",
+      "file": "parts/artisan_farElbowCover.png",
+      "offsetX": 392.70652173913044,
+      "offsetY": 565,
+      "width": 79,
+      "height": 90,
+      "sha256": "cf507b2c3e1afc82a88a8034ccc5a3a73454e2baa0b2917f0ee048f11c531c16",
+      "bytes": 107333,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 120.5,
+        "y": 138
+      },
+      "targetPivot": {
+        "x": 432,
+        "y": 610
+      },
+      "scale": 0.32608695652173914,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.6967346202417464,
+        "transparentRatio": 0.30326537975825363,
+        "warnings": [
+          "transparent-color-residue: 20172 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from gemini arms sheet cell 7; trimmed 241x276, scaled 0.3261 to target height 90."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_farHand",
+      "file": "parts/artisan_farHand.png",
+      "offsetX": 430.53026315789475,
+      "offsetY": 701.75,
+      "width": 191,
+      "height": 115,
+      "sha256": "5cda89a7d2c28e3b51b97273216c0ecf5c00491b02a3fbebc5220c1e6d92e8e9",
+      "bytes": 112390,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 22.74,
+        "y": 79.8
+      },
+      "targetPivot": {
+        "x": 442,
+        "y": 742
+      },
+      "scale": 0.5043859649122807,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.6610887376753228,
+        "transparentRatio": 0.3389112623246771,
+        "warnings": [
+          "transparent-color-residue: 29286 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from gemini arms sheet cell 8; trimmed 379x228, scaled 0.5044 to target height 115."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "wrist",
+        "parentNodeId": "farForearm",
+        "overlap": {
+          "x": -14,
+          "y": -14,
+          "width": 28,
+          "height": 30
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -70,
+          "max": 70
+        }
+      }
+    },
+    {
+      "id": "artisan_nearDhoti",
+      "file": "parts/artisan_nearDhoti.png",
+      "offsetX": 396.07003891050584,
+      "offsetY": 655.75,
+      "width": 148,
+      "height": 285,
+      "sha256": "b987b646a8cdd9c311e9eb66f651aacaefadde8ced8700117a9e29902bdecdde",
+      "bytes": 418365,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 200,
+        "y": 38.550000000000004
+      },
+      "targetPivot": {
+        "x": 470,
+        "y": 670
+      },
+      "scale": 0.36964980544747084,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.8109792477302205,
+        "transparentRatio": 0.18902075226977952,
+        "warnings": [
+          "transparent-color-residue: 58294 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from Gemini legs sheet cell 0; trimmed 400x771, scaled 0.3696 to target height 285."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_farDhoti",
+      "file": "parts/artisan_farDhoti.png",
+      "offsetX": 334.66603053435114,
+      "offsetY": 656.35,
+      "width": 141,
+      "height": 273,
+      "sha256": "295106fc04c89dc12177a56bb553259f6d94891403a2b8e2f487615834711678",
+      "bytes": 419323,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 202.5,
+        "y": 39.300000000000004
+      },
+      "targetPivot": {
+        "x": 405,
+        "y": 670
+      },
+      "scale": 0.3473282442748092,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.8416077655263406,
+        "transparentRatio": 0.1583922344736594,
+        "warnings": [
+          "transparent-color-residue: 50421 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from Gemini legs sheet cell 4; trimmed 405x786, scaled 0.3473 to target height 273."
+      ],
+      "rigId": "artisan_v2",
+      "joint": null
+    },
+    {
+      "id": "artisan_nearThigh",
+      "file": "parts/artisan_nearThigh.png",
+      "offsetX": 350.36082474226805,
+      "offsetY": 658.25,
+      "width": 179,
+      "height": 235,
+      "sha256": "f8f64723378d49e86f172d157e00a247eb364e2aebfb7afd7e489a4ea2644dd6",
+      "bytes": 155189,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 185,
+        "y": 24.25
+      },
+      "targetPivot": {
+        "x": 440,
+        "y": 670
+      },
+      "scale": 0.4845360824742268,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.43773753134577875,
+        "transparentRatio": 0.5622624686542212,
+        "warnings": [
+          "transparent-color-residue: 100627 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from Gemini straight-leg cell 1, 0-62%; shin crop removes 0px of dhoti edge; trimmed 370x485, scaled 0.4845 to target height 235."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "hip",
+        "parentNodeId": "pelvis",
+        "overlap": {
+          "x": -18,
+          "y": -18,
+          "width": 36,
+          "height": 44
+        },
+        "occlusion": "cover-over",
+        "limits": {
+          "min": -45,
+          "max": 45
+        },
+        "coverNodeId": "nearDhoti"
+      }
+    },
+    {
+      "id": "artisan_nearShin",
+      "file": "parts/artisan_nearShin.png",
+      "offsetX": 406.31007751937983,
+      "offsetY": 800.8,
+      "width": 139,
+      "height": 232,
+      "sha256": "35f880505670276c0499eba33cf02e087540ca0639c54b59570c12ccbf2c7f0c",
+      "bytes": 50814,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 77.5,
+        "y": 25.8
+      },
+      "targetPivot": {
+        "x": 476,
+        "y": 824
+      },
+      "scale": 0.8992248062015504,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.7824456114028507,
+        "transparentRatio": 0.2175543885971493,
+        "warnings": [
+          "transparent-color-residue: 8700 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from Gemini straight-leg cell 1, 52-85%; shin crop removes 147px of dhoti edge; trimmed 155x258, scaled 0.8992 to target height 232."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "knee",
+        "parentNodeId": "nearThigh",
+        "overlap": {
+          "x": -16,
+          "y": -16,
+          "width": 32,
+          "height": 38
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -5,
+          "max": 85
+        }
+      }
+    },
+    {
+      "id": "artisan_farThigh",
+      "file": "parts/artisan_farThigh.png",
+      "offsetX": 288.6768292682927,
+      "offsetY": 658.3,
+      "width": 173,
+      "height": 234,
+      "sha256": "c1581684f8d2d9dee4015b02bb0292275ee3665b3c991021a521352dee79b74a",
+      "bytes": 148939,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 181.5,
+        "y": 24.6
+      },
+      "targetPivot": {
+        "x": 375,
+        "y": 670
+      },
+      "scale": 0.47560975609756095,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.44955094179040966,
+        "transparentRatio": 0.5504490582095903,
+        "warnings": [
+          "transparent-color-residue: 97993 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from Gemini straight-leg cell 5, 0-62%; shin crop removes 0px of dhoti edge; trimmed 363x492, scaled 0.4756 to target height 234."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "hip",
+        "parentNodeId": "pelvis",
+        "overlap": {
+          "x": -18,
+          "y": -18,
+          "width": 36,
+          "height": 44
+        },
+        "occlusion": "cover-over",
+        "limits": {
+          "min": -45,
+          "max": 45
+        },
+        "coverNodeId": "farDhoti"
+      }
+    },
+    {
+      "id": "artisan_farShin",
+      "file": "parts/artisan_farShin.png",
+      "offsetX": 333.2290076335878,
+      "offsetY": 800.9,
+      "width": 138,
+      "height": 231,
+      "sha256": "90da17035ae4d3b7ba65329daf4c3d447a819077b26719c00a1c583afab85da5",
+      "bytes": 51260,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 78,
+        "y": 26.200000000000003
+      },
+      "targetPivot": {
+        "x": 402,
+        "y": 824
+      },
+      "scale": 0.8816793893129771,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.7911528674887454,
+        "transparentRatio": 0.20884713251125464,
+        "warnings": [
+          "transparent-color-residue: 8536 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from Gemini straight-leg cell 5, 52-85%; shin crop removes 149px of dhoti edge; trimmed 156x262, scaled 0.8817 to target height 231."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "knee",
+        "parentNodeId": "farThigh",
+        "overlap": {
+          "x": -16,
+          "y": -16,
+          "width": 32,
+          "height": 38
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -5,
+          "max": 85
+        }
+      }
+    },
+    {
+      "id": "artisan_nearFoot",
+      "file": "parts/artisan_nearFoot.png",
+      "offsetX": 467.27456647398844,
+      "offsetY": 942.3,
+      "width": 127,
+      "height": 119,
+      "sha256": "972524605722d884b5326a581d23af7802e0f1e5bb801ef873f679c57530cab7",
+      "bytes": 165329,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 37,
+        "y": 103.8
+      },
+      "targetPivot": {
+        "x": 480,
+        "y": 978
+      },
+      "scale": 0.3439306358381503,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.5412826120918607,
+        "transparentRatio": 0.4587173879081394,
+        "warnings": [
+          "transparent-color-residue: 58725 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from Gemini shoe cell 2; trimmed 370x346, scaled 0.3439 to target height 119."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "ankle",
+        "parentNodeId": "nearShin",
+        "overlap": {
+          "x": -14,
+          "y": -14,
+          "width": 28,
+          "height": 28
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -35,
+          "max": 35
+        }
+      }
+    },
+    {
+      "id": "artisan_farFoot",
+      "file": "parts/artisan_farFoot.png",
+      "offsetX": 386.59088397790055,
+      "offsetY": 942.9,
+      "width": 114,
+      "height": 117,
+      "sha256": "266ccac47628e16971ed9be70f26f70925ba70ad17e9785e932f7efdda1e952a",
+      "bytes": 156119,
+      "origin": "provider-generated",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 35.300000000000004,
+        "y": 108.6
+      },
+      "targetPivot": {
+        "x": 398,
+        "y": 978
+      },
+      "scale": 0.32320441988950277,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0.5317483918426119,
+        "transparentRatio": 0.46825160815738814,
+        "warnings": [
+          "transparent-color-residue: 59836 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "Derived from Gemini shoe cell 6; trimmed 353x362, scaled 0.3232 to target height 117."
+      ],
+      "rigId": "artisan_v2",
+      "joint": {
+        "kind": "ankle",
+        "parentNodeId": "farShin",
+        "overlap": {
+          "x": -14,
+          "y": -14,
+          "width": 28,
+          "height": 28
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -35,
+          "max": 35
+        }
+      }
+    }
+  ],
+  "missingSlots": [],
+  "rigManifest": {
+    "artisan_turbanTail": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "turbanTail",
+      "parentNodeId": "head",
+      "pivot": {
+        "x": 430,
+        "y": 320
+      },
+      "drawOrder": 0
+    },
+    "artisan_farHand": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "farHand",
+      "parentNodeId": "farForearm",
+      "pivot": {
+        "x": 442,
+        "y": 742
+      },
+      "drawOrder": 5,
+      "joint": {
+        "kind": "wrist",
+        "parentNodeId": "farForearm",
+        "overlap": {
+          "x": -14,
+          "y": -14,
+          "width": 28,
+          "height": 30
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -70,
+          "max": 70
+        }
+      }
+    },
+    "artisan_farForearm": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "farForearm",
+      "parentNodeId": "farUpperArm",
+      "pivot": {
+        "x": 432,
+        "y": 610
+      },
+      "drawOrder": 3,
+      "joint": {
+        "kind": "elbow",
+        "parentNodeId": "farUpperArm",
+        "overlap": {
+          "x": -18,
+          "y": -20,
+          "width": 36,
+          "height": 44
+        },
+        "occlusion": "cover-over",
+        "limits": {
+          "min": -140,
+          "max": 5
+        },
+        "coverNodeId": "farElbowCover"
+      }
+    },
+    "artisan_farUpperArm": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "farUpperArm",
+      "parentNodeId": "torso",
+      "pivot": {
+        "x": 415,
+        "y": 475
+      },
+      "drawOrder": 2,
+      "joint": {
+        "kind": "shoulder",
+        "parentNodeId": "torso",
+        "overlap": {
+          "x": -22,
+          "y": -18,
+          "width": 44,
+          "height": 50
+        },
+        "occlusion": "parent-over-child",
+        "limits": {
+          "min": -95,
+          "max": 95
+        }
+      }
+    },
+    "artisan_farDhoti": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "farDhoti",
+      "parentNodeId": "farThigh",
+      "pivot": {
+        "x": 405,
+        "y": 670
+      },
+      "drawOrder": 9
+    },
+    "artisan_farThigh": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "farThigh",
+      "parentNodeId": "pelvis",
+      "pivot": {
+        "x": 405,
+        "y": 670
+      },
+      "drawOrder": 6,
+      "joint": {
+        "kind": "hip",
+        "parentNodeId": "pelvis",
+        "overlap": {
+          "x": -18,
+          "y": -18,
+          "width": 36,
+          "height": 44
+        },
+        "occlusion": "cover-over",
+        "limits": {
+          "min": -45,
+          "max": 45
+        },
+        "coverNodeId": "farDhoti"
+      }
+    },
+    "artisan_farShin": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "farShin",
+      "parentNodeId": "farThigh",
+      "pivot": {
+        "x": 402,
+        "y": 824
+      },
+      "drawOrder": 7,
+      "joint": {
+        "kind": "knee",
+        "parentNodeId": "farThigh",
+        "overlap": {
+          "x": -16,
+          "y": -16,
+          "width": 32,
+          "height": 38
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -5,
+          "max": 85
+        }
+      }
+    },
+    "artisan_farFoot": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "farFoot",
+      "parentNodeId": "farShin",
+      "pivot": {
+        "x": 398,
+        "y": 978
+      },
+      "drawOrder": 8,
+      "joint": {
+        "kind": "ankle",
+        "parentNodeId": "farShin",
+        "overlap": {
+          "x": -14,
+          "y": -14,
+          "width": 28,
+          "height": 28
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -35,
+          "max": 35
+        }
+      }
+    },
+    "artisan_pelvis": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "pelvis",
+      "parentNodeId": null,
+      "pivot": {
+        "x": 440,
+        "y": 660
+      },
+      "drawOrder": 11
+    },
+    "artisan_nearDhoti": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "nearDhoti",
+      "parentNodeId": "nearThigh",
+      "pivot": {
+        "x": 470,
+        "y": 670
+      },
+      "drawOrder": 15
+    },
+    "artisan_nearThigh": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "nearThigh",
+      "parentNodeId": "pelvis",
+      "pivot": {
+        "x": 470,
+        "y": 670
+      },
+      "drawOrder": 12,
+      "joint": {
+        "kind": "hip",
+        "parentNodeId": "pelvis",
+        "overlap": {
+          "x": -18,
+          "y": -18,
+          "width": 36,
+          "height": 44
+        },
+        "occlusion": "cover-over",
+        "limits": {
+          "min": -45,
+          "max": 45
+        },
+        "coverNodeId": "nearDhoti"
+      }
+    },
+    "artisan_nearShin": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "nearShin",
+      "parentNodeId": "nearThigh",
+      "pivot": {
+        "x": 476,
+        "y": 824
+      },
+      "drawOrder": 13,
+      "joint": {
+        "kind": "knee",
+        "parentNodeId": "nearThigh",
+        "overlap": {
+          "x": -16,
+          "y": -16,
+          "width": 32,
+          "height": 38
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -5,
+          "max": 85
+        }
+      }
+    },
+    "artisan_nearFoot": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "nearFoot",
+      "parentNodeId": "nearShin",
+      "pivot": {
+        "x": 480,
+        "y": 978
+      },
+      "drawOrder": 14,
+      "joint": {
+        "kind": "ankle",
+        "parentNodeId": "nearShin",
+        "overlap": {
+          "x": -14,
+          "y": -14,
+          "width": 28,
+          "height": 28
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -35,
+          "max": 35
+        }
+      }
+    },
+    "artisan_torso": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "torso",
+      "parentNodeId": "pelvis",
+      "pivot": {
+        "x": 440,
+        "y": 540
+      },
+      "drawOrder": 20
+    },
+    "artisan_sash": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "sash",
+      "parentNodeId": "torso",
+      "pivot": {
+        "x": 450,
+        "y": 648
+      },
+      "drawOrder": 22
+    },
+    "artisan_necklace": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "necklace",
+      "parentNodeId": "torso",
+      "pivot": {
+        "x": 476,
+        "y": 450
+      },
+      "drawOrder": 26
+    },
+    "artisan_neck": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "neck",
+      "parentNodeId": "torso",
+      "pivot": {
+        "x": 470,
+        "y": 440
+      },
+      "drawOrder": 25,
+      "joint": {
+        "kind": "neck",
+        "parentNodeId": "torso",
+        "overlap": {
+          "x": -16,
+          "y": -14,
+          "width": 32,
+          "height": 30
+        },
+        "occlusion": "cover-over",
+        "limits": {
+          "min": -35,
+          "max": 35
+        },
+        "coverNodeId": "necklace"
+      }
+    },
+    "artisan_head": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "head",
+      "parentNodeId": "neck",
+      "pivot": {
+        "x": 470,
+        "y": 340
+      },
+      "drawOrder": 30,
+      "joint": {
+        "kind": "neck",
+        "parentNodeId": "neck",
+        "overlap": {
+          "x": -16,
+          "y": -14,
+          "width": 32,
+          "height": 30
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -35,
+          "max": 35
+        }
+      }
+    },
+    "artisan_eye": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "eye",
+      "parentNodeId": "head",
+      "pivot": {
+        "x": 500,
+        "y": 305
+      },
+      "drawOrder": 31
+    },
+    "artisan_eyelid": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "eyelid",
+      "parentNodeId": "head",
+      "pivot": {
+        "x": 500,
+        "y": 305
+      },
+      "drawOrder": 32
+    },
+    "artisan_brow": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "brow",
+      "parentNodeId": "head",
+      "pivot": {
+        "x": 500,
+        "y": 286
+      },
+      "drawOrder": 33
+    },
+    "artisan_mustache": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "mustache",
+      "parentNodeId": "head",
+      "pivot": {
+        "x": 530,
+        "y": 355
+      },
+      "drawOrder": 34
+    },
+    "artisan_earring": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "earring",
+      "parentNodeId": "head",
+      "pivot": {
+        "x": 444,
+        "y": 350
+      },
+      "drawOrder": 35
+    },
+    "artisan_turban": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "turban",
+      "parentNodeId": "head",
+      "pivot": {
+        "x": 470,
+        "y": 250
+      },
+      "drawOrder": 36
+    },
+    "artisan_shoulderSash": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "shoulderSash",
+      "parentNodeId": "torso",
+      "pivot": {
+        "x": 500,
+        "y": 440
+      },
+      "drawOrder": 37
+    },
+    "artisan_nearUpperArm": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "nearUpperArm",
+      "parentNodeId": "torso",
+      "pivot": {
+        "x": 508,
+        "y": 470
+      },
+      "drawOrder": 18,
+      "joint": {
+        "kind": "shoulder",
+        "parentNodeId": "torso",
+        "overlap": {
+          "x": -22,
+          "y": -18,
+          "width": 44,
+          "height": 50
+        },
+        "occlusion": "parent-over-child",
+        "limits": {
+          "min": -95,
+          "max": 95
+        }
+      }
+    },
+    "artisan_nearForearm": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "nearForearm",
+      "parentNodeId": "nearUpperArm",
+      "pivot": {
+        "x": 532,
+        "y": 610
+      },
+      "drawOrder": 41,
+      "joint": {
+        "kind": "elbow",
+        "parentNodeId": "nearUpperArm",
+        "overlap": {
+          "x": -18,
+          "y": -20,
+          "width": 36,
+          "height": 44
+        },
+        "occlusion": "cover-over",
+        "limits": {
+          "min": -140,
+          "max": 5
+        },
+        "coverNodeId": "nearElbowCover"
+      }
+    },
+    "artisan_handOpen": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "handOpen",
+      "parentNodeId": "nearForearm",
+      "pivot": {
+        "x": 548,
+        "y": 742
+      },
+      "drawOrder": 43,
+      "joint": {
+        "kind": "wrist",
+        "parentNodeId": "nearForearm",
+        "overlap": {
+          "x": -14,
+          "y": -14,
+          "width": 28,
+          "height": 30
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -70,
+          "max": 70
+        }
+      }
+    },
+    "artisan_handGrip": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "handGrip",
+      "parentNodeId": "nearForearm",
+      "pivot": {
+        "x": 548,
+        "y": 742
+      },
+      "drawOrder": 44,
+      "joint": {
+        "kind": "wrist",
+        "parentNodeId": "nearForearm",
+        "overlap": {
+          "x": -14,
+          "y": -14,
+          "width": 28,
+          "height": 30
+        },
+        "occlusion": "child-over-parent",
+        "limits": {
+          "min": -70,
+          "max": 70
+        }
+      }
+    },
+    "artisan_nearElbowCover": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "nearElbowCover",
+      "parentNodeId": "nearForearm",
+      "pivot": {
+        "x": 532,
+        "y": 610
+      },
+      "drawOrder": 42
+    },
+    "artisan_farElbowCover": {
+      "actor": "artisan",
+      "rigId": "artisan_v2",
+      "nodeId": "farElbowCover",
+      "parentNodeId": "farForearm",
+      "pivot": {
+        "x": 432,
+        "y": 610
+      },
+      "drawOrder": 4
+    }
+  }
+}

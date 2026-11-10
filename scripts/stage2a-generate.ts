@@ -15,7 +15,7 @@ function arg(name: string, fallback?: string): string {
   return process.argv[index + 1]!;
 }
 
-async function api(pathname: string, body?: unknown): Promise<any> {
+async function api<T = unknown>(pathname: string, body?: unknown): Promise<T> {
   const response = await fetch(
     `${process.env.FABLEON_BASE_URL ?? "http://localhost:3173"}${pathname}`,
     {
@@ -25,16 +25,26 @@ async function api(pathname: string, body?: unknown): Promise<any> {
     },
   );
   const text = await response.text();
-  let parsed: any = null;
+  let parsed: unknown = null;
   try {
     parsed = text ? JSON.parse(text) : null;
   } catch {
     parsed = null;
   }
   if (!response.ok) {
-    throw new Error(`${pathname} → ${response.status}: ${parsed?.error?.message ?? text}`);
+    const errorBody =
+      typeof parsed === "object" && parsed !== null
+        ? (parsed as Record<string, unknown>)["error"]
+        : null;
+    const message =
+      typeof errorBody === "object" &&
+      errorBody !== null &&
+      typeof (errorBody as Record<string, unknown>)["message"] === "string"
+        ? String((errorBody as Record<string, unknown>)["message"])
+        : text;
+    throw new Error(`${pathname} → ${response.status}: ${message}`);
   }
-  return parsed;
+  return parsed as T;
 }
 
 function geminiChroma(prompt: string): string {
@@ -49,9 +59,18 @@ async function main() {
   if (provider !== "openai" && provider !== "gemini")
     throw new Error("provider must be openai or gemini");
   const experimentId = "phase-05.1-folk-pilot";
-  const status = await api("/api/studio/providers/status");
+  const status = await api<{
+    authorizations: Array<{
+      experimentId: string;
+      provider: string;
+      status: string;
+      maxCostUsd: number;
+      spentCostUsd: number;
+      reservedCostUsd: number;
+    }>;
+  }>("/api/studio/providers/status");
   const authorization = status.authorizations.find(
-    (record: any) =>
+    (record) =>
       record.experimentId === experimentId &&
       record.provider === provider &&
       record.status === "active",
@@ -114,7 +133,10 @@ Keep all four pieces fully separated by green gutters, same palette, same outlin
       : {}),
   };
 
-  const estimate = await api("/api/studio/providers/estimate", body);
+  const estimate = await api<{ estimate: unknown; authorization?: { remainingUsd: number } }>(
+    "/api/studio/providers/estimate",
+    body,
+  );
   const dir = path.join("outputs", "folk-provider-benchmark", "stage-2a", "requests");
   await mkdir(dir, { recursive: true });
   const requestRecord = {
@@ -149,7 +171,13 @@ Keep all four pieces fully separated by green gutters, same palette, same outlin
     ),
   );
 
-  const result = await api("/api/studio/providers/generate", body);
+  const result = await api<{
+    files: unknown;
+    usage: unknown;
+    reconciledCostUsd: number;
+    estimate: unknown;
+    requestId: string | null;
+  }>("/api/studio/providers/generate", body);
   await writeFile(
     path.join(dir, `${requestKey}.response.json`),
     `${JSON.stringify(result, null, 2)}\n`,

@@ -119,12 +119,20 @@ export function FolkRigEditor({ packUrl }: FolkRigEditorProps = {}) {
               Rotating a joint here changes the actual Canvas output, not a decorative slider.
             </p>
           </div>
-          <Link
-            href="/studio/folk"
-            className="rounded-md border border-ink-700 bg-ink-900 px-3 py-2 text-xs text-mist-300 hover:text-paper-50"
-          >
-            Back to production
-          </Link>
+          <div className="flex gap-2">
+            <Link
+              href="/studio/folk/rigs/connectors"
+              className="rounded-md border border-ochre-500/60 bg-ochre-500/10 px-3 py-2 text-xs text-ochre-200"
+            >
+              Connector calibration
+            </Link>
+            <Link
+              href="/studio/folk"
+              className="rounded-md border border-ink-700 bg-ink-900 px-3 py-2 text-xs text-mist-300 hover:text-paper-50"
+            >
+              Back to production
+            </Link>
+          </div>
         </div>
 
         {error ? (

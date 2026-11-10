@@ -107,4 +107,13 @@ test.describe("Phase 5.1 provider safety and Studio", () => {
     await expect(page.getByText(/Stage 1 stops at the paid-generation gate/i)).toBeVisible();
     await page.screenshot({ path: path.join(artifactDir, "provider-production-gate.png") });
   });
+
+  test("loads the persistent connector calibration editor", async ({ page }) => {
+    await page.goto("/studio/folk/rigs/connectors");
+    await expect(page.getByRole("heading", { name: "Connector calibration" })).toBeVisible();
+    await expect(page.getByText("nearForearm", { exact: false }).first()).toBeVisible();
+    await expect(page.getByText(/socket/).first()).toBeVisible();
+    await expect(page.getByRole("button", { name: "Save connectors" })).toBeVisible();
+    await expect(page.getByText("Debug overlay")).toBeVisible();
+  });
 });

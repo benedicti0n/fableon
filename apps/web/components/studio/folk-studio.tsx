@@ -34,7 +34,19 @@ interface RenderJobView {
 const ACTIVE_STATUSES = new Set(["queued", "rendering", "encoding"]);
 const TOTAL_FRAMES = 720;
 
-export function FolkStudio() {
+export interface FolkStudioProps {
+  readonly packUrl?: string;
+  readonly exportEnabled?: boolean;
+  readonly heading?: string;
+  readonly subtitle?: string;
+}
+
+export function FolkStudio({
+  packUrl,
+  exportEnabled = true,
+  heading,
+  subtitle,
+}: FolkStudioProps = {}) {
   const [config, setConfig] = useState<FolkFilmConfig | null>(null);
   const [renderer, setRenderer] = useState<FolkRenderer | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -57,7 +69,15 @@ export function FolkStudio() {
     let cancelled = false;
     void (async () => {
       try {
-        const [nextConfig, assets] = await Promise.all([loadFolkConfig(), loadFolkAssets()]);
+        const [nextConfig, assets] = await Promise.all([
+          loadFolkConfig(),
+          packUrl
+            ? loadFolkAssets({
+                manifestUrl: `${packUrl.replace(/\/+$/, "")}/manifest.json`,
+                baseUrl: packUrl,
+              })
+            : loadFolkAssets(),
+        ]);
         if (!cancelled) {
           setConfig(nextConfig);
           setRenderer(new FolkRenderer(assets, nextConfig));
@@ -69,7 +89,7 @@ export function FolkStudio() {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [packUrl]);
 
   useEffect(() => {
     if (!renderer) return;
@@ -190,12 +210,11 @@ export function FolkStudio() {
             Phase 5 · folk-art production
           </p>
           <h1 className="mt-2 font-serif text-4xl tracking-tight text-paper-50">
-            {config?.title ?? "The Little Brass Bell"}
+            {heading ?? config?.title ?? "The Little Brass Bell"}
           </h1>
           <p className="mt-2 max-w-3xl text-sm leading-6 text-mist-400">
-            30-second, five-shot cutout film · original local vector masters · 61 reusable body
-            parts · no image or video generation API contacted. AI generation is blocked on this
-            host and the pilot uses original vector artwork.
+            {subtitle ??
+              "30-second, five-shot cutout film · original local vector masters · 61 reusable body parts · no image or video generation API contacted. AI generation is blocked on this host and the pilot uses original vector artwork."}
           </p>
         </div>
         <div className="rounded-lg border border-ink-700 bg-ink-900 px-4 py-3 font-mono text-[10px] text-mist-400">
@@ -355,111 +374,124 @@ export function FolkStudio() {
         </div>
 
         <div className="space-y-4">
-          <Panel title="Local export" status="No paid API" bodyClassName="space-y-3">
-            <div className="grid grid-cols-2 gap-2">
-              <label className="space-y-1">
-                <span className={studioLabelClassName}>Start frame</span>
-                <input
-                  id="folk-export-start"
-                  type="number"
-                  min={0}
-                  max={719}
-                  value={exportStart}
-                  onChange={(event) => setExportStart(Number(event.target.value))}
-                  className={studioInputClassName}
-                />
-              </label>
-              <label className="space-y-1">
-                <span className={studioLabelClassName}>End frame</span>
-                <input
-                  id="folk-export-end"
-                  type="number"
-                  min={0}
-                  max={719}
-                  value={exportEnd}
-                  onChange={(event) => setExportEnd(Number(event.target.value))}
-                  className={studioInputClassName}
-                />
-              </label>
-            </div>
-            <label className="block space-y-1">
-              <span className={studioLabelClassName}>Export resolution</span>
-              <select
-                id="folk-export-resolution"
-                value={exportResolution}
-                onChange={(event) => setExportResolution(event.target.value)}
-                className={studioSelectClassName}
-              >
-                <option value="1280x720">1280×720</option>
-                <option value="1920x1080">1920×1080</option>
-              </select>
-            </label>
-            <button
-              type="button"
-              data-testid="folk-start-export"
-              disabled={isStartingExport || activeJob}
-              onClick={() => void startExport()}
-              className={studioPrimaryButtonClassName}
-            >
-              {isStartingExport ? "Starting…" : "Start local export"}
-            </button>
-            <p className="text-[11px] leading-5 text-mist-500">
-              A separate local render process rasterizes the same Canvas renderer used above and
-              encodes with FFmpeg. No provider is contacted.
-            </p>
-            {exportError ? (
-              <p
-                role="alert"
-                className="rounded border border-clay-500/40 bg-clay-500/10 px-2 py-1 text-xs text-clay-500"
-              >
-                {exportError}
-              </p>
-            ) : null}
-            {job ? (
-              <div
-                data-testid="folk-export-panel"
-                className="space-y-2 rounded-md border border-ink-700 bg-ink-950 p-3"
-              >
-                <div className="flex items-center justify-between text-[11px]">
-                  <span className="font-mono text-mist-400">{job.status}</span>
-                  <span className="font-mono text-mist-500">
-                    {job.renderedFrames}/{job.totalFrames}
-                  </span>
-                </div>
-                <div
-                  role="progressbar"
-                  data-testid="folk-export-progress"
-                  aria-valuenow={exportProgress}
-                  aria-valuemin={0}
-                  aria-valuemax={100}
-                  className="h-2 overflow-hidden rounded bg-ink-800"
-                >
-                  <div
-                    className="h-full bg-ochre-500 transition-[width]"
-                    style={{ width: `${exportProgress}%` }}
+          {exportEnabled ? (
+            <Panel title="Local export" status="No paid API" bodyClassName="space-y-3">
+              <div className="grid grid-cols-2 gap-2">
+                <label className="space-y-1">
+                  <span className={studioLabelClassName}>Start frame</span>
+                  <input
+                    id="folk-export-start"
+                    type="number"
+                    min={0}
+                    max={719}
+                    value={exportStart}
+                    onChange={(event) => setExportStart(Number(event.target.value))}
+                    className={studioInputClassName}
                   />
-                </div>
-                {activeJob ? (
-                  <button
-                    type="button"
-                    onClick={() => void cancelExport()}
-                    className={studioSecondaryButtonClassName}
-                  >
-                    Cancel export
-                  </button>
-                ) : null}
-                {job.error ? <p className="text-[11px] text-clay-500">{job.error}</p> : null}
-                {job.status === "completed" ? (
-                  <video
-                    data-testid="folk-export-video"
-                    controls
-                    className="w-full rounded border border-ink-700"
-                    src={`/api/studio/composition/export/${job.id}/video`}
+                </label>
+                <label className="space-y-1">
+                  <span className={studioLabelClassName}>End frame</span>
+                  <input
+                    id="folk-export-end"
+                    type="number"
+                    min={0}
+                    max={719}
+                    value={exportEnd}
+                    onChange={(event) => setExportEnd(Number(event.target.value))}
+                    className={studioInputClassName}
                   />
-                ) : null}
+                </label>
               </div>
-            ) : null}
-          </Panel>
+              <label className="block space-y-1">
+                <span className={studioLabelClassName}>Export resolution</span>
+                <select
+                  id="folk-export-resolution"
+                  value={exportResolution}
+                  onChange={(event) => setExportResolution(event.target.value)}
+                  className={studioSelectClassName}
+                >
+                  <option value="1280x720">1280×720</option>
+                  <option value="1920x1080">1920×1080</option>
+                </select>
+              </label>
+              <button
+                type="button"
+                data-testid="folk-start-export"
+                disabled={isStartingExport || activeJob}
+                onClick={() => void startExport()}
+                className={studioPrimaryButtonClassName}
+              >
+                {isStartingExport ? "Starting…" : "Start local export"}
+              </button>
+              <p className="text-[11px] leading-5 text-mist-500">
+                A separate local render process rasterizes the same Canvas renderer used above and
+                encodes with FFmpeg. No provider is contacted.
+              </p>
+              {exportError ? (
+                <p
+                  role="alert"
+                  className="rounded border border-clay-500/40 bg-clay-500/10 px-2 py-1 text-xs text-clay-500"
+                >
+                  {exportError}
+                </p>
+              ) : null}
+              {job ? (
+                <div
+                  data-testid="folk-export-panel"
+                  className="space-y-2 rounded-md border border-ink-700 bg-ink-950 p-3"
+                >
+                  <div className="flex items-center justify-between text-[11px]">
+                    <span className="font-mono text-mist-400">{job.status}</span>
+                    <span className="font-mono text-mist-500">
+                      {job.renderedFrames}/{job.totalFrames}
+                    </span>
+                  </div>
+                  <div
+                    role="progressbar"
+                    data-testid="folk-export-progress"
+                    aria-valuenow={exportProgress}
+                    aria-valuemin={0}
+                    aria-valuemax={100}
+                    className="h-2 overflow-hidden rounded bg-ink-800"
+                  >
+                    <div
+                      className="h-full bg-ochre-500 transition-[width]"
+                      style={{ width: `${exportProgress}%` }}
+                    />
+                  </div>
+                  {activeJob ? (
+                    <button
+                      type="button"
+                      onClick={() => void cancelExport()}
+                      className={studioSecondaryButtonClassName}
+                    >
+                      Cancel export
+                    </button>
+                  ) : null}
+                  {job.error ? <p className="text-[11px] text-clay-500">{job.error}</p> : null}
+                  {job.status === "completed" ? (
+                    <video
+                      data-testid="folk-export-video"
+                      controls
+                      className="w-full rounded border border-ink-700"
+                      src={`/api/studio/composition/export/${job.id}/video`}
+                    />
+                  ) : null}
+                </div>
+              ) : null}
+            </Panel>
+          ) : (
+            <Panel
+              title="Local export"
+              status="Gated"
+              bodyClassName="space-y-2 text-[11px] leading-5 text-mist-400"
+            >
+              <p>
+                Provider-pack export is disabled in this preview. Stage 2 requires an approved
+                provider pack and a separate production authorization.
+              </p>
+            </Panel>
+          )}
 
           <Panel
             title="Production gates"

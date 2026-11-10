@@ -234,10 +234,10 @@ export class FolkRenderer {
       context.setTransform(matrix.a, matrix.b, matrix.c, matrix.d, matrix.e, matrix.f);
       context.drawImage(
         layer.image,
-        BACKGROUND_DRAW.x,
-        BACKGROUND_DRAW.y,
-        BACKGROUND_DRAW.width,
-        BACKGROUND_DRAW.height,
+        layer.drawX ?? BACKGROUND_DRAW.x,
+        layer.drawY ?? BACKGROUND_DRAW.y,
+        layer.drawWidth ?? BACKGROUND_DRAW.width,
+        layer.drawHeight ?? BACKGROUND_DRAW.height,
       );
       context.restore();
     }

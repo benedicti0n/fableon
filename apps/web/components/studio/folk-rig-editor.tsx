@@ -33,7 +33,11 @@ const PRESETS: Record<ActorId, { readonly label: string; readonly frame: number 
   ],
 };
 
-export function FolkRigEditor() {
+export interface FolkRigEditorProps {
+  readonly packUrl?: string;
+}
+
+export function FolkRigEditor({ packUrl }: FolkRigEditorProps = {}) {
   const [config, setConfig] = useState<FolkFilmConfig | null>(null);
   const [renderer, setRenderer] = useState<FolkRenderer | null>(null);
   const [actor, setActor] = useState<ActorId>("artisan");
@@ -53,7 +57,15 @@ export function FolkRigEditor() {
     let cancelled = false;
     void (async () => {
       try {
-        const [nextConfig, assets] = await Promise.all([loadFolkConfig(), loadFolkAssets()]);
+        const [nextConfig, assets] = await Promise.all([
+          loadFolkConfig(),
+          packUrl
+            ? loadFolkAssets({
+                manifestUrl: `${packUrl.replace(/\/+$/, "")}/manifest.json`,
+                baseUrl: packUrl,
+              })
+            : loadFolkAssets(),
+        ]);
         if (!cancelled) {
           setConfig(nextConfig);
           setRenderer(new FolkRenderer(assets, nextConfig));
@@ -65,7 +77,7 @@ export function FolkRigEditor() {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [packUrl]);
 
   useEffect(() => {
     if (!renderer || !config) return;

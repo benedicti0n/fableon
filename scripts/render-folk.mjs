@@ -29,6 +29,7 @@ function parseArgs(argv) {
     output: DEFAULT_OUTPUT,
     artifactsDir: null,
     config: "/assets/folk-pilot/film.json",
+    pack: null,
     jobId: null,
     production: "folk-pilot",
     statusFile: null,
@@ -68,6 +69,9 @@ function parseArgs(argv) {
         break;
       case "--config":
         args.config = next;
+        break;
+      case "--pack":
+        args.pack = next;
         break;
       case "--production":
         args.production = next;
@@ -315,10 +319,13 @@ async function main() {
     const page = await browser.newPage({ viewport: { width: 1920, height: 1080 } });
     const pageErrors = [];
     page.on("pageerror", (error) => pageErrors.push(error.message));
-    await page.goto(`${baseUrl}/studio/folk/render?config=${encodeURIComponent(args.config)}`, {
-      waitUntil: "domcontentloaded",
-      timeout: 180_000,
-    });
+    await page.goto(
+      `${baseUrl}/studio/folk/render?config=${encodeURIComponent(args.config)}${args.pack ? `&pack=${encodeURIComponent(args.pack)}` : ""}`,
+      {
+        waitUntil: "domcontentloaded",
+        timeout: 180_000,
+      },
+    );
     await page.waitForFunction(() => window.__FABLEON_FOLK__?.ready === true, null, {
       timeout: 180_000,
     });
@@ -329,6 +336,7 @@ async function main() {
       specHash: window.__FABLEON_FOLK__.specHash,
       title: window.__FABLEON_FOLK__.title,
       configUrl: window.__FABLEON_FOLK__.configUrl,
+      packUrl: window.__FABLEON_FOLK__.packUrl,
     }));
     if (film.frameCount !== 720 || film.fps !== 24) {
       throw new Error(`Unexpected film contract: ${JSON.stringify(film)}`);
@@ -475,6 +483,7 @@ async function main() {
       audioPresent: false,
       ffprobe: probe,
       configUrl: args.config,
+      packUrl: args.pack,
       production: args.production,
       generationMode: "original-local-vector-art",
       paidApiCalls: 0,

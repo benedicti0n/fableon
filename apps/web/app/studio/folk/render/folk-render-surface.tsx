@@ -15,6 +15,7 @@ export interface FolkRenderApi {
   readonly specVersion: string;
   readonly specHash: string;
   readonly configUrl: string;
+  readonly packUrl: string | null;
   renderFrame(frame: number, width: number, height: number): string;
   renderDebug(frame: number, width: number, height: number): string;
   renderContactSheet(frames: readonly number[]): string;
@@ -36,7 +37,16 @@ export function FolkRenderSurface() {
       try {
         const params = new URLSearchParams(window.location.search);
         const configUrl = params.get("config") ?? "/assets/folk-pilot/film.json";
-        const [config, assets] = await Promise.all([loadFolkConfig(configUrl), loadFolkAssets()]);
+        const packUrl = params.get("pack");
+        const [config, assets] = await Promise.all([
+          loadFolkConfig(configUrl),
+          packUrl
+            ? loadFolkAssets({
+                manifestUrl: `${packUrl.replace(/\/+$/, "")}/manifest.json`,
+                baseUrl: packUrl,
+              })
+            : loadFolkAssets(),
+        ]);
         if (cancelled) return;
         const renderer = new FolkRenderer(assets, config);
         const configResponse = await fetch(configUrl, { cache: "no-store" });
@@ -53,6 +63,7 @@ export function FolkRenderSurface() {
           specVersion: config.specVersion,
           specHash,
           configUrl,
+          packUrl,
           renderFrame: (frame, width, height) => renderer.renderFrameDataUrl(frame, width, height),
           renderDebug: (frame, width, height) => {
             const canvas = document.createElement("canvas");

@@ -19,7 +19,7 @@ export function StudioHeader() {
           <span className="font-mono text-[10px] tracking-[0.18em] text-mist-400 uppercase">
             AI Video Studio
           </span>
-          <Badge variant="accent">Phase 5</Badge>
+          <Badge variant="accent">Phase 5.1</Badge>
         </div>
         <nav aria-label="Studio" className="ml-auto flex flex-wrap items-center gap-1 text-xs">
           <Link
@@ -27,6 +27,12 @@ export function StudioHeader() {
             className="rounded-md px-3 py-2 text-mist-300 transition-colors hover:bg-ink-850 hover:text-paper-50"
           >
             Projects
+          </Link>
+          <Link
+            href="/studio/providers"
+            className="rounded-md px-3 py-2 text-mist-300 transition-colors hover:bg-ink-850 hover:text-paper-50"
+          >
+            Providers
           </Link>
           <Link
             href="/studio/folk"

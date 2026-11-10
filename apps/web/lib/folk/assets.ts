@@ -13,6 +13,10 @@ export interface FolkBackgroundLayerAsset {
   readonly image: CanvasImageSource;
   readonly depth: number;
   readonly opacity: number;
+  readonly drawX?: number;
+  readonly drawY?: number;
+  readonly drawWidth?: number;
+  readonly drawHeight?: number;
 }
 
 export interface FolkAssets {
@@ -42,6 +46,9 @@ export interface FolkAssetManifest {
   readonly id: string;
   readonly title: string;
   readonly generationMode: string;
+  readonly provider?: string;
+  readonly model?: string;
+  readonly experimentId?: string;
   readonly aiGeneration: {
     readonly status: string;
     readonly reason: string;
@@ -75,6 +82,10 @@ export interface FolkAssetManifest {
           readonly depth: number;
           readonly opacity: number;
           readonly sha256: string;
+          readonly drawX?: number;
+          readonly drawY?: number;
+          readonly drawWidth?: number;
+          readonly drawHeight?: number;
         }[];
       }
     >
@@ -105,7 +116,10 @@ function assertManifest(value: unknown): asserts value is FolkAssetManifest {
     throw new Error("The folk asset manifest is not an object.");
   }
   const manifest = value as Record<string, unknown>;
-  if (manifest["format"] !== "fableon.folk-asset-pack") {
+  if (
+    manifest["format"] !== "fableon.folk-asset-pack" &&
+    manifest["format"] !== "fableon.generated-folk-pack"
+  ) {
     throw new Error("The folk asset manifest format is invalid.");
   }
   if (!Array.isArray(manifest["parts"])) {
@@ -113,52 +127,65 @@ function assertManifest(value: unknown): asserts value is FolkAssetManifest {
   }
 }
 
-let cached: Promise<FolkAssets> | null = null;
+export interface LoadFolkAssetsOptions {
+  readonly manifestUrl?: string;
+  readonly baseUrl?: string;
+}
 
-export function loadFolkAssets(): Promise<FolkAssets> {
-  if (!cached) {
-    cached = (async () => {
-      const response = await fetch("/assets/folk-pilot/manifest.json", { cache: "no-store" });
-      if (!response.ok) {
-        throw new Error(`Could not load the folk manifest (HTTP ${response.status}).`);
-      }
-      const manifest = (await response.json()) as unknown;
-      assertManifest(manifest);
-      const partEntries = manifest.parts;
-      const parts = new Map<string, FolkPartAsset>();
-      await Promise.all(
-        partEntries.map(async (entry) => {
-          const image = await decodeImage(`/assets/folk-pilot/${entry.file}`);
-          parts.set(entry.id, {
-            id: entry.id,
-            image,
-            offsetX: entry.offsetX,
-            offsetY: entry.offsetY,
-            width: entry.width,
-            height: entry.height,
-            sha256: entry.sha256,
-          });
-        }),
-      );
-      const backgrounds = new Map<string, readonly FolkBackgroundLayerAsset[]>();
-      await Promise.all(
-        Object.entries(manifest.backgrounds).map(async ([id, background]) => {
-          const layers = await Promise.all(
-            background.layers.map(async (layer) => ({
-              id: layer.id,
-              image: await decodeImage(`/assets/folk-pilot/${layer.file}`),
-              depth: layer.depth,
-              opacity: layer.opacity,
-            })),
-          );
-          backgrounds.set(id, layers);
-        }),
-      );
-      return { manifest, parts, backgrounds };
-    })().catch((error) => {
-      cached = null;
-      throw error;
-    });
-  }
-  return cached;
+const cache = new Map<string, Promise<FolkAssets>>();
+
+export function loadFolkAssets(options: LoadFolkAssetsOptions = {}): Promise<FolkAssets> {
+  const manifestUrl = options.manifestUrl ?? "/assets/folk-pilot/manifest.json";
+  const baseUrl = (options.baseUrl ?? "/assets/folk-pilot").replace(/\/+$/, "");
+  const key = `${manifestUrl}|${baseUrl}`;
+  const existing = cache.get(key);
+  if (existing) return existing;
+  const pending = (async () => {
+    const response = await fetch(manifestUrl, { cache: "no-store" });
+    if (!response.ok) {
+      throw new Error(`Could not load the folk manifest (HTTP ${response.status}).`);
+    }
+    const manifest = (await response.json()) as unknown;
+    assertManifest(manifest);
+    const partEntries = manifest.parts;
+    const parts = new Map<string, FolkPartAsset>();
+    await Promise.all(
+      partEntries.map(async (entry) => {
+        const image = await decodeImage(`${baseUrl}/${entry.file}`);
+        parts.set(entry.id, {
+          id: entry.id,
+          image,
+          offsetX: entry.offsetX,
+          offsetY: entry.offsetY,
+          width: entry.width,
+          height: entry.height,
+          sha256: entry.sha256,
+        });
+      }),
+    );
+    const backgrounds = new Map<string, readonly FolkBackgroundLayerAsset[]>();
+    await Promise.all(
+      Object.entries(manifest.backgrounds).map(async ([id, background]) => {
+        const layers = await Promise.all(
+          background.layers.map(async (layer) => ({
+            id: layer.id,
+            image: await decodeImage(`${baseUrl}/${layer.file}`),
+            depth: layer.depth,
+            opacity: layer.opacity,
+            ...(layer.drawX !== undefined ? { drawX: layer.drawX } : {}),
+            ...(layer.drawY !== undefined ? { drawY: layer.drawY } : {}),
+            ...(layer.drawWidth !== undefined ? { drawWidth: layer.drawWidth } : {}),
+            ...(layer.drawHeight !== undefined ? { drawHeight: layer.drawHeight } : {}),
+          })),
+        );
+        backgrounds.set(id, layers);
+      }),
+    );
+    return { manifest, parts, backgrounds };
+  })().catch((error) => {
+    cache.delete(key);
+    throw error;
+  });
+  cache.set(key, pending);
+  return pending;
 }

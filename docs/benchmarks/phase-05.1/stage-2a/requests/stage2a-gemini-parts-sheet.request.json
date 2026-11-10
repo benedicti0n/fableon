@@ -1,0 +1,59 @@
+{
+  "requestKey": "stage2a-gemini-parts-sheet",
+  "provider": "gemini",
+  "model": "gemini-nano-banana-2.1",
+  "mode": "sheet",
+  "operation": "generate-part",
+  "prompt": "Use the approved artisan master as the exact identity and style reference.\n\nCreate a single 2x2 rig-part sheet on a perfectly flat, uniform chroma-key green (#00FF00) background. No green on the character. No grid lines, labels, text, shadows, or extra pieces.\n\nTop-left: ONLY the head — face, ear, moustache, earring, saffron turban and indigo turban tail, with a short neck stump and 24 px of hidden neck overlap.\nTop-right: ONLY the torso/shoulder anchor — ochre angrakha torso with collar, buttons, sash and shoulder area; no head, no arms, no legs.\nBottom-left: ONLY the near upper arm — indigo sleeve segment with a rounded shoulder end and a rounded elbow end, with hidden overlap at both joints.\nBottom-right: ONLY the near forearm — indigo elbow cuff, warm-skin forearm, gold wrist band and open hand, with hidden overlap at the elbow.\n\nKeep all four pieces fully separated by green gutters, same palette, same outline weight, same proportions as the master. Do not include other body parts or a full character.",
+  "body": {
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "gemini",
+    "model": "gemini-nano-banana-2.1",
+    "operation": "generate-part",
+    "prompt": "Use the approved artisan master as the exact identity and style reference.\n\nCreate a single 2x2 rig-part sheet on a perfectly flat, uniform chroma-key green (#00FF00) background. No green on the character. No grid lines, labels, text, shadows, or extra pieces.\n\nTop-left: ONLY the head — face, ear, moustache, earring, saffron turban and indigo turban tail, with a short neck stump and 24 px of hidden neck overlap.\nTop-right: ONLY the torso/shoulder anchor — ochre angrakha torso with collar, buttons, sash and shoulder area; no head, no arms, no legs.\nBottom-left: ONLY the near upper arm — indigo sleeve segment with a rounded shoulder end and a rounded elbow end, with hidden overlap at both joints.\nBottom-right: ONLY the near forearm — indigo elbow cuff, warm-skin forearm, gold wrist band and open hand, with hidden overlap at the elbow.\n\nKeep all four pieces fully separated by green gutters, same palette, same outline weight, same proportions as the master. Do not include other body parts or a full character.",
+    "width": 1024,
+    "height": 1024,
+    "quality": "standard",
+    "imageSize": "2K",
+    "aspectRatio": "1:1",
+    "outputCount": 1,
+    "transparentBackground": false,
+    "requestKey": "stage2a-gemini-parts-sheet",
+    "references": [
+      {
+        "id": "artisan-master",
+        "path": "/Users/benediction/Downloads/Web Dev projects/fableon/outputs/folk-provider-benchmark/gemini/attempts/stage2a-gemini-master-retry2/output-00.png",
+        "mimeType": "image/png"
+      }
+    ]
+  },
+  "estimate": {
+    "provider": "gemini",
+    "model": "gemini-nano-banana-2.1",
+    "pricingVersion": "gemini-image-2026-11-10",
+    "pricingSource": "https://ai.google.dev/gemini-api/docs/pricing",
+    "pricingVerified": true,
+    "estimateBasis": "Published token-equivalent pricing: 1K=1,120, 2K=1,680, 4K=3,780 image output tokens at $30/1M.",
+    "inputTextTokens": 455,
+    "inputImageTokens": 1120,
+    "outputImageTokens": 1680,
+    "estimatedCostUsd": 0.0527625,
+    "maxCostUsd": 0.0527625,
+    "currency": "USD",
+    "assumptions": [
+      "Reference images are bounded at 1,120 image input tokens each.",
+      "Text input is bounded at one token per four characters plus 200 tokens.",
+      "Actual token usage depends on the provider response and must be reconciled."
+    ]
+  },
+  "authorization": {
+    "id": "auth_1794308322845_6b6082a5",
+    "status": "active",
+    "maxCostUsd": 1,
+    "spentCostUsd": 0.1535475,
+    "reservedCostUsd": 0,
+    "remainingUsd": 0.8464525,
+    "expiresAt": "2026-11-11T10:58:42.604Z"
+  },
+  "attemptedAt": "2026-11-10T11:18:31.659Z"
+}

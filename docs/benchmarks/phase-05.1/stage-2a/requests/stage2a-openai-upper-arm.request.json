@@ -1,0 +1,58 @@
+{
+  "requestKey": "stage2a-openai-upper-arm",
+  "provider": "openai",
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "part",
+  "operation": "generate-part",
+  "prompt": "Original Rajasthani/Indian folk-art cutout animation design. Bold consistent black ink outline, flat earthy fills, minimal gradient shading. Decorative geometric fabric motifs, stylized profile face, prominent expressive eye. Readable silhouette, rig-friendly separated limbs, hidden overlap at joints. No photorealism, no 3D render, no anime anatomy, no soft AI gradient, no text. Do not copy any recognizable existing cartoon character or exact reference frame.\nUse the approved Village artisan master as the exact identity and style reference.\nProduce only near upper arm in an indigo sleeve, with shoulder and elbow overlap.\nMatch the master's palette, outline weight, fabric pattern scale, proportions and lighting.\nExtend hidden geometry 20–30 px past the visible joint so rotation does not open a hole.\nDo not include other body parts, text, labels, ground shadow, or a character sheet.\nTransparent PNG, straight alpha, no checkerboard, no white halo.",
+  "body": {
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "openai",
+    "model": "gpt-image-2.6-sunburst",
+    "operation": "generate-part",
+    "prompt": "Original Rajasthani/Indian folk-art cutout animation design. Bold consistent black ink outline, flat earthy fills, minimal gradient shading. Decorative geometric fabric motifs, stylized profile face, prominent expressive eye. Readable silhouette, rig-friendly separated limbs, hidden overlap at joints. No photorealism, no 3D render, no anime anatomy, no soft AI gradient, no text. Do not copy any recognizable existing cartoon character or exact reference frame.\nUse the approved Village artisan master as the exact identity and style reference.\nProduce only near upper arm in an indigo sleeve, with shoulder and elbow overlap.\nMatch the master's palette, outline weight, fabric pattern scale, proportions and lighting.\nExtend hidden geometry 20–30 px past the visible joint so rotation does not open a hole.\nDo not include other body parts, text, labels, ground shadow, or a character sheet.\nTransparent PNG, straight alpha, no checkerboard, no white halo.",
+    "width": 1024,
+    "height": 1024,
+    "quality": "medium",
+    "aspectRatio": "1:1",
+    "outputCount": 1,
+    "transparentBackground": true,
+    "requestKey": "stage2a-openai-upper-arm",
+    "references": [
+      {
+        "id": "artisan-master",
+        "path": "/Users/benediction/Downloads/Web Dev projects/fableon/outputs/folk-provider-benchmark/openai/attempts/stage2a-openai-master/output-00.png",
+        "mimeType": "image/png"
+      }
+    ]
+  },
+  "estimate": {
+    "provider": "openai",
+    "model": "gpt-image-2.6-sunburst",
+    "pricingVersion": "openai-image-2026-11-10",
+    "pricingSource": "https://developers.openai.com/api/docs/pricing#image-generation",
+    "pricingVerified": true,
+    "estimateBasis": "Conservative upper bound: documented image-token rates with a 2× safety factor for GPT Image 2.6 token variation.",
+    "inputTextTokens": 440,
+    "inputImageTokens": 1120,
+    "outputImageTokens": 2112,
+    "estimatedCostUsd": 0.07452,
+    "maxCostUsd": 0.07452,
+    "currency": "USD",
+    "assumptions": [
+      "Image input tokens are bounded at 1,120 per 1K reference.",
+      "Output tokens use the documented earlier-model quality table scaled by requested megapixels, then doubled.",
+      "Actual usage will be reconciled from the provider response; this is not an invoice."
+    ]
+  },
+  "authorization": {
+    "id": "auth_1794308320695_bc6c13cc",
+    "status": "active",
+    "maxCostUsd": 1.5,
+    "spentCostUsd": 0.14021,
+    "reservedCostUsd": 0,
+    "remainingUsd": 1.35979,
+    "expiresAt": "2026-11-11T10:58:40.348Z"
+  },
+  "attemptedAt": "2026-11-10T11:16:10.843Z"
+}

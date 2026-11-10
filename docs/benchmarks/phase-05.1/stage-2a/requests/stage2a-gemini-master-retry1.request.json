@@ -1,0 +1,53 @@
+{
+  "requestKey": "stage2a-gemini-master-retry1",
+  "provider": "gemini",
+  "model": "gemini-nano-banana-2.1",
+  "mode": "master",
+  "operation": "generate-master",
+  "prompt": "Original Rajasthani/Indian folk-art cutout animation design. Bold consistent black ink outline, flat earthy fills, minimal gradient shading. Decorative geometric fabric motifs, stylized profile face, prominent expressive eye. Readable silhouette, rig-friendly separated limbs, hidden overlap at joints. No photorealism, no 3D render, no anime anatomy, no soft AI gradient, no text. Do not copy any recognizable existing cartoon character or exact reference frame.\nCharacter: Village artisan.\nOrientation: Full-body side profile facing right; restrained three-quarter cues only in the face.\nProportions: Adult, slightly oversized head, shoulder width about 1.4 head widths, arms to mid-thigh, clear hip/knee/ankle separation.\nFace: Warm terracotta skin, prominent almond eye, straight nose, curled black moustache, stable neutral expression, gold earring.\nHeadwear/hair: Saffron wrapped turban with an indigo band, gold pin, long indigo turban tail behind the head.\nClothing/harness: Ochre angrakha with terracotta and indigo trim, cream dhoti, terracotta sash, indigo sleeves, brown mojari shoes, gold jewellery.\nPalette: #d39a3d, #29445f, #b55034, #f2e3c6, #e0b354, #c98254.\nOutline: 7–10 px dark ink silhouette at master scale; 3–5 px interior detail.\nIdentity anchors that must remain stable in every subsequent edit: saffron turban, indigo turban tail, curled moustache, gold earring, ochre angrakha, cream dhoti.\nRender on a flat uncluttered cream background; this provider has no native transparency, so the asset will be masked in a separate explicit repair step.",
+  "body": {
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "gemini",
+    "model": "gemini-nano-banana-2.1",
+    "operation": "generate-master",
+    "prompt": "Original Rajasthani/Indian folk-art cutout animation design. Bold consistent black ink outline, flat earthy fills, minimal gradient shading. Decorative geometric fabric motifs, stylized profile face, prominent expressive eye. Readable silhouette, rig-friendly separated limbs, hidden overlap at joints. No photorealism, no 3D render, no anime anatomy, no soft AI gradient, no text. Do not copy any recognizable existing cartoon character or exact reference frame.\nCharacter: Village artisan.\nOrientation: Full-body side profile facing right; restrained three-quarter cues only in the face.\nProportions: Adult, slightly oversized head, shoulder width about 1.4 head widths, arms to mid-thigh, clear hip/knee/ankle separation.\nFace: Warm terracotta skin, prominent almond eye, straight nose, curled black moustache, stable neutral expression, gold earring.\nHeadwear/hair: Saffron wrapped turban with an indigo band, gold pin, long indigo turban tail behind the head.\nClothing/harness: Ochre angrakha with terracotta and indigo trim, cream dhoti, terracotta sash, indigo sleeves, brown mojari shoes, gold jewellery.\nPalette: #d39a3d, #29445f, #b55034, #f2e3c6, #e0b354, #c98254.\nOutline: 7–10 px dark ink silhouette at master scale; 3–5 px interior detail.\nIdentity anchors that must remain stable in every subsequent edit: saffron turban, indigo turban tail, curled moustache, gold earring, ochre angrakha, cream dhoti.\nRender on a flat uncluttered cream background; this provider has no native transparency, so the asset will be masked in a separate explicit repair step.",
+    "width": 1536,
+    "height": 1024,
+    "quality": "standard",
+    "imageSize": "2K",
+    "aspectRatio": "3:2",
+    "outputCount": 1,
+    "transparentBackground": false,
+    "requestKey": "stage2a-gemini-master-retry1",
+    "references": []
+  },
+  "estimate": {
+    "provider": "gemini",
+    "model": "gemini-nano-banana-2.1",
+    "pricingVersion": "gemini-image-2026-11-10",
+    "pricingSource": "https://ai.google.dev/gemini-api/docs/pricing",
+    "pricingVerified": true,
+    "estimateBasis": "Published token-equivalent pricing: 1K=1,120, 2K=1,680, 4K=3,780 image output tokens at $30/1M.",
+    "inputTextTokens": 593,
+    "inputImageTokens": 0,
+    "outputImageTokens": 1680,
+    "estimatedCostUsd": 0.0512895,
+    "maxCostUsd": 0.0512895,
+    "currency": "USD",
+    "assumptions": [
+      "Reference images are bounded at 1,120 image input tokens each.",
+      "Text input is bounded at one token per four characters plus 200 tokens.",
+      "Actual token usage depends on the provider response and must be reconciled."
+    ]
+  },
+  "authorization": {
+    "id": "auth_1794308322845_6b6082a5",
+    "status": "active",
+    "maxCostUsd": 1,
+    "spentCostUsd": 0.0512895,
+    "reservedCostUsd": 0,
+    "remainingUsd": 0.9487105,
+    "expiresAt": "2026-11-11T10:58:42.604Z"
+  },
+  "attemptedAt": "2026-11-10T11:10:17.346Z"
+}

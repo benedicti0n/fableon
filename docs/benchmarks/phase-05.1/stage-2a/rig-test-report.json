@@ -1,0 +1,404 @@
+{
+  "openai": {
+    "frames": 13,
+    "video": "/Users/benediction/Downloads/Web Dev projects/fableon/outputs/folk-provider-benchmark/stage-2a/openai/rig-test/elbow-openai.mp4",
+    "rotations": [
+      {
+        "bend": 0,
+        "torso": {
+          "rotation": 0
+        },
+        "head": {
+          "rotation": 0
+        },
+        "upperArm": {
+          "rotation": -21.5
+        },
+        "forearm": {
+          "rotation": 44.3
+        }
+      },
+      {
+        "bend": 5,
+        "torso": {
+          "rotation": 0
+        },
+        "head": {
+          "rotation": 0
+        },
+        "upperArm": {
+          "rotation": -22.1
+        },
+        "forearm": {
+          "rotation": 39.3
+        }
+      },
+      {
+        "bend": 10,
+        "torso": {
+          "rotation": 0
+        },
+        "head": {
+          "rotation": 0
+        },
+        "upperArm": {
+          "rotation": -22.7
+        },
+        "forearm": {
+          "rotation": 34.3
+        }
+      },
+      {
+        "bend": 15,
+        "torso": {
+          "rotation": 0
+        },
+        "head": {
+          "rotation": 0
+        },
+        "upperArm": {
+          "rotation": -23.3
+        },
+        "forearm": {
+          "rotation": 29.299999999999997
+        }
+      },
+      {
+        "bend": 20,
+        "torso": {
+          "rotation": 0
+        },
+        "head": {
+          "rotation": 0
+        },
+        "upperArm": {
+          "rotation": -23.9
+        },
+        "forearm": {
+          "rotation": 24.299999999999997
+        }
+      },
+      {
+        "bend": 25,
+        "torso": {
+          "rotation": 0
+        },
+        "head": {
+          "rotation": 0
+        },
+        "upperArm": {
+          "rotation": -24.5
+        },
+        "forearm": {
+          "rotation": 19.299999999999997
+        }
+      },
+      {
+        "bend": 30,
+        "torso": {
+          "rotation": 0
+        },
+        "head": {
+          "rotation": 0
+        },
+        "upperArm": {
+          "rotation": -25.1
+        },
+        "forearm": {
+          "rotation": 14.299999999999997
+        }
+      },
+      {
+        "bend": 35,
+        "torso": {
+          "rotation": 0
+        },
+        "head": {
+          "rotation": 0
+        },
+        "upperArm": {
+          "rotation": -25.7
+        },
+        "forearm": {
+          "rotation": 9.299999999999997
+        }
+      },
+      {
+        "bend": 40,
+        "torso": {
+          "rotation": 0
+        },
+        "head": {
+          "rotation": 0
+        },
+        "upperArm": {
+          "rotation": -26.3
+        },
+        "forearm": {
+          "rotation": 4.299999999999997
+        }
+      },
+      {
+        "bend": 45,
+        "torso": {
+          "rotation": 0
+        },
+        "head": {
+          "rotation": 0
+        },
+        "upperArm": {
+          "rotation": -26.9
+        },
+        "forearm": {
+          "rotation": -0.7000000000000028
+        }
+      },
+      {
+        "bend": 50,
+        "torso": {
+          "rotation": 0
+        },
+        "head": {
+          "rotation": 0
+        },
+        "upperArm": {
+          "rotation": -27.5
+        },
+        "forearm": {
+          "rotation": -5.700000000000003
+        }
+      },
+      {
+        "bend": 55,
+        "torso": {
+          "rotation": 0
+        },
+        "head": {
+          "rotation": 0
+        },
+        "upperArm": {
+          "rotation": -28.1
+        },
+        "forearm": {
+          "rotation": -10.700000000000003
+        }
+      },
+      {
+        "bend": 60,
+        "torso": {
+          "rotation": 0
+        },
+        "head": {
+          "rotation": 0
+        },
+        "upperArm": {
+          "rotation": -28.7
+        },
+        "forearm": {
+          "rotation": -15.700000000000003
+        }
+      }
+    ]
+  },
+  "gemini": {
+    "frames": 13,
+    "video": "/Users/benediction/Downloads/Web Dev projects/fableon/outputs/folk-provider-benchmark/stage-2a/gemini/rig-test/elbow-gemini.mp4",
+    "rotations": [
+      {
+        "bend": 0,
+        "torso": {
+          "rotation": 0
+        },
+        "head": {
+          "rotation": 0
+        },
+        "upperArm": {
+          "rotation": 0
+        },
+        "forearm": {
+          "rotation": 90
+        }
+      },
+      {
+        "bend": 5,
+        "torso": {
+          "rotation": 0
+        },
+        "head": {
+          "rotation": 0
+        },
+        "upperArm": {
+          "rotation": -0.6
+        },
+        "forearm": {
+          "rotation": 85
+        }
+      },
+      {
+        "bend": 10,
+        "torso": {
+          "rotation": 0
+        },
+        "head": {
+          "rotation": 0
+        },
+        "upperArm": {
+          "rotation": -1.2
+        },
+        "forearm": {
+          "rotation": 80
+        }
+      },
+      {
+        "bend": 15,
+        "torso": {
+          "rotation": 0
+        },
+        "head": {
+          "rotation": 0
+        },
+        "upperArm": {
+          "rotation": -1.7999999999999998
+        },
+        "forearm": {
+          "rotation": 75
+        }
+      },
+      {
+        "bend": 20,
+        "torso": {
+          "rotation": 0
+        },
+        "head": {
+          "rotation": 0
+        },
+        "upperArm": {
+          "rotation": -2.4
+        },
+        "forearm": {
+          "rotation": 70
+        }
+      },
+      {
+        "bend": 25,
+        "torso": {
+          "rotation": 0
+        },
+        "head": {
+          "rotation": 0
+        },
+        "upperArm": {
+          "rotation": -3
+        },
+        "forearm": {
+          "rotation": 65
+        }
+      },
+      {
+        "bend": 30,
+        "torso": {
+          "rotation": 0
+        },
+        "head": {
+          "rotation": 0
+        },
+        "upperArm": {
+          "rotation": -3.5999999999999996
+        },
+        "forearm": {
+          "rotation": 60
+        }
+      },
+      {
+        "bend": 35,
+        "torso": {
+          "rotation": 0
+        },
+        "head": {
+          "rotation": 0
+        },
+        "upperArm": {
+          "rotation": -4.2
+        },
+        "forearm": {
+          "rotation": 55
+        }
+      },
+      {
+        "bend": 40,
+        "torso": {
+          "rotation": 0
+        },
+        "head": {
+          "rotation": 0
+        },
+        "upperArm": {
+          "rotation": -4.8
+        },
+        "forearm": {
+          "rotation": 50
+        }
+      },
+      {
+        "bend": 45,
+        "torso": {
+          "rotation": 0
+        },
+        "head": {
+          "rotation": 0
+        },
+        "upperArm": {
+          "rotation": -5.3999999999999995
+        },
+        "forearm": {
+          "rotation": 45
+        }
+      },
+      {
+        "bend": 50,
+        "torso": {
+          "rotation": 0
+        },
+        "head": {
+          "rotation": 0
+        },
+        "upperArm": {
+          "rotation": -6
+        },
+        "forearm": {
+          "rotation": 40
+        }
+      },
+      {
+        "bend": 55,
+        "torso": {
+          "rotation": 0
+        },
+        "head": {
+          "rotation": 0
+        },
+        "upperArm": {
+          "rotation": -6.6
+        },
+        "forearm": {
+          "rotation": 35
+        }
+      },
+      {
+        "bend": 60,
+        "torso": {
+          "rotation": 0
+        },
+        "head": {
+          "rotation": 0
+        },
+        "upperArm": {
+          "rotation": -7.199999999999999
+        },
+        "forearm": {
+          "rotation": 30
+        }
+      }
+    ]
+  }
+}

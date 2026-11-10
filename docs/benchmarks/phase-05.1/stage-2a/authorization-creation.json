@@ -1,0 +1,31 @@
+{
+  "createdAt": "2026-11-10",
+  "actor": "delegated-local-operator",
+  "delegation": "Explicit user instruction in the automatic-authorization request; provider- and experiment-scoped.",
+  "records": [
+    {
+      "outcome": "created-and-approved",
+      "id": "auth_1794308320695_bc6c13cc",
+      "experimentId": "phase-05.1-folk-pilot",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "status": "active",
+      "maxCostUsd": 1.5,
+      "maxRequests": 6,
+      "maxOutputsPerRequest": 1
+    },
+    {
+      "outcome": "created-and-approved",
+      "id": "auth_1794308322845_6b6082a5",
+      "experimentId": "phase-05.1-folk-pilot",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "status": "active",
+      "maxCostUsd": 1.0,
+      "maxRequests": 6,
+      "maxOutputsPerRequest": 1
+    }
+  ],
+  "idempotency": "A second CLI run returned reused-active for both records without creating duplicates or resetting consumed budgets.",
+  "combinedCeilingUsd": 2.5
+}

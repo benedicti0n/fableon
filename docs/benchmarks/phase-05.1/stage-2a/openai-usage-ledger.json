@@ -1,0 +1,611 @@
+[
+  {
+    "id": "evt_1794308320702_80926b11",
+    "at": "2026-11-10T10:58:40.702Z",
+    "type": "authorization-requested",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "openai",
+    "model": "gpt-image-2.6-sunburst",
+    "requestKey": null,
+    "authorizationId": "auth_1794308320695_bc6c13cc",
+    "operation": "authorization-request",
+    "attempt": 1,
+    "outputCount": 0,
+    "inputReferenceCount": 0,
+    "status": "pending",
+    "estimatedCostUsd": 0,
+    "reconciledCostUsd": 0,
+    "usage": null,
+    "outputHashes": [],
+    "note": "Pending request only; no spending authorized.",
+    "meta": {
+      "maxCostUsd": 1.5
+    }
+  },
+  {
+    "id": "evt_1794308322213_186c037b",
+    "at": "2026-11-10T10:58:42.213Z",
+    "type": "authorization-approved",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "openai",
+    "model": "gpt-image-2.6-sunburst",
+    "requestKey": null,
+    "authorizationId": "auth_1794308320695_bc6c13cc",
+    "operation": "authorization-approve",
+    "attempt": 1,
+    "outputCount": 0,
+    "inputReferenceCount": 0,
+    "status": "active",
+    "estimatedCostUsd": 0,
+    "reconciledCostUsd": 0,
+    "usage": null,
+    "outputHashes": [],
+    "note": "Explicit user approval persisted. No generation was executed by this action.",
+    "meta": {
+      "maxCostUsd": 1.5
+    }
+  },
+  {
+    "id": "evt_1794308634854_42dd8aa8",
+    "at": "2026-11-10T11:03:54.854Z",
+    "type": "generation-requested",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "openai",
+    "model": "gpt-image-2.6-sunburst",
+    "requestKey": "stage2a-openai-master",
+    "authorizationId": "auth_1794308320695_bc6c13cc",
+    "operation": "generate-master",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 0,
+    "status": "requested",
+    "estimatedCostUsd": 0.09792,
+    "reconciledCostUsd": null,
+    "usage": null,
+    "outputHashes": [],
+    "note": "A paid request was explicitly authorized and reserved.",
+    "meta": {
+      "estimateBasis": "Conservative upper bound: documented image-token rates with a 2× safety factor for GPT Image 2.6 token variation."
+    }
+  },
+  {
+    "id": "evt_1794308634935_4a60da4a",
+    "at": "2026-11-10T11:03:54.936Z",
+    "type": "generation-authorized",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "openai",
+    "model": "gpt-image-2.6-sunburst",
+    "requestKey": "stage2a-openai-master",
+    "authorizationId": "auth_1794308320695_bc6c13cc",
+    "operation": "generate-master",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 0,
+    "status": "reserved",
+    "estimatedCostUsd": 0.09792,
+    "reconciledCostUsd": null,
+    "usage": null,
+    "outputHashes": [],
+    "note": "Reservation persisted before the provider call.",
+    "meta": {
+      "remainingBeforeUsd": 1.5
+    }
+  },
+  {
+    "id": "evt_1794308634953_dddb288b",
+    "at": "2026-11-10T11:03:54.953Z",
+    "type": "generation-submitted",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "openai",
+    "model": "gpt-image-2.6-sunburst",
+    "requestKey": "stage2a-openai-master",
+    "authorizationId": "auth_1794308320695_bc6c13cc",
+    "operation": "generate-master",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 0,
+    "status": "submitted",
+    "estimatedCostUsd": 0.09792,
+    "reconciledCostUsd": null,
+    "usage": null,
+    "outputHashes": [],
+    "note": "At most one attempt; no automatic retry.",
+    "meta": {}
+  },
+  {
+    "id": "evt_1794308663429_ce176cba",
+    "at": "2026-11-10T11:04:23.429Z",
+    "type": "generation-completed",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "openai",
+    "model": "gpt-image-2.6-sunburst",
+    "requestKey": "stage2a-openai-master",
+    "authorizationId": "auth_1794308320695_bc6c13cc",
+    "operation": "generate-master",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 0,
+    "status": "completed",
+    "estimatedCostUsd": 0.09792,
+    "reconciledCostUsd": 0.035795,
+    "usage": {
+      "inputTokens": 367,
+      "outputTokens": 1132,
+      "totalTokens": 1499,
+      "inputImageTokens": null,
+      "outputImageTokens": null,
+      "providerReportedCostUsd": null,
+      "rawUsage": {
+        "input_tokens": 367,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 367
+        },
+        "output_tokens": 1132,
+        "output_tokens_details": {
+          "image_tokens": 1132,
+          "text_tokens": 0
+        },
+        "total_tokens": 1499
+      }
+    },
+    "outputHashes": ["f0634647c1fc35e9c0bbd0b37d1722a62dc23ace121c55223e6d4fe712fa92b2"],
+    "note": "Cost basis: provider usage tokens (image input at $8/M, text at $5/M). Outputs await visual review; not auto-accepted.",
+    "meta": {
+      "requestId": "req_3cc247b2fc7a4e79a4e82d714d123ba1",
+      "files": [
+        "outputs/folk-provider-benchmark/openai/attempts/stage2a-openai-master/output-00.png"
+      ]
+    }
+  },
+  {
+    "id": "evt_1794309264124_ecc086cf",
+    "at": "2026-11-10T11:14:24.124Z",
+    "type": "generation-requested",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "openai",
+    "model": "gpt-image-2.6-sunburst",
+    "requestKey": "stage2a-openai-head",
+    "authorizationId": "auth_1794308320695_bc6c13cc",
+    "operation": "generate-part",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 1,
+    "status": "requested",
+    "estimatedCostUsd": 0.07453,
+    "reconciledCostUsd": null,
+    "usage": null,
+    "outputHashes": [],
+    "note": "A paid request was explicitly authorized and reserved.",
+    "meta": {
+      "estimateBasis": "Conservative upper bound: documented image-token rates with a 2× safety factor for GPT Image 2.6 token variation."
+    }
+  },
+  {
+    "id": "evt_1794309264134_a5594429",
+    "at": "2026-11-10T11:14:24.134Z",
+    "type": "generation-authorized",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "openai",
+    "model": "gpt-image-2.6-sunburst",
+    "requestKey": "stage2a-openai-head",
+    "authorizationId": "auth_1794308320695_bc6c13cc",
+    "operation": "generate-part",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 1,
+    "status": "reserved",
+    "estimatedCostUsd": 0.07453,
+    "reconciledCostUsd": null,
+    "usage": null,
+    "outputHashes": [],
+    "note": "Reservation persisted before the provider call.",
+    "meta": {
+      "remainingBeforeUsd": 1.464205
+    }
+  },
+  {
+    "id": "evt_1794309264138_5c77b1e0",
+    "at": "2026-11-10T11:14:24.138Z",
+    "type": "generation-submitted",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "openai",
+    "model": "gpt-image-2.6-sunburst",
+    "requestKey": "stage2a-openai-head",
+    "authorizationId": "auth_1794308320695_bc6c13cc",
+    "operation": "generate-part",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 1,
+    "status": "submitted",
+    "estimatedCostUsd": 0.07453,
+    "reconciledCostUsd": null,
+    "usage": null,
+    "outputHashes": [],
+    "note": "At most one attempt; no automatic retry.",
+    "meta": {}
+  },
+  {
+    "id": "evt_1794309290725_bff9daf6",
+    "at": "2026-11-10T11:14:50.725Z",
+    "type": "generation-completed",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "openai",
+    "model": "gpt-image-2.6-sunburst",
+    "requestKey": "stage2a-openai-head",
+    "authorizationId": "auth_1794308320695_bc6c13cc",
+    "operation": "generate-part",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 1,
+    "status": "completed",
+    "estimatedCostUsd": 0.07453,
+    "reconciledCostUsd": 0.052215,
+    "usage": {
+      "inputTokens": 1749,
+      "outputTokens": 1449,
+      "totalTokens": 3198,
+      "inputImageTokens": null,
+      "outputImageTokens": null,
+      "providerReportedCostUsd": null,
+      "rawUsage": {
+        "input_tokens": 1749,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 213
+        },
+        "output_tokens": 1449,
+        "output_tokens_details": {
+          "image_tokens": 1449,
+          "text_tokens": 0
+        },
+        "total_tokens": 3198
+      }
+    },
+    "outputHashes": ["004ecfb1c1da02eba675d076b3d865160ad6fc912758da457f57805c8d70f277"],
+    "note": "Cost basis: provider usage tokens (image input at $8/M, text at $5/M). Outputs await visual review; not auto-accepted.",
+    "meta": {
+      "requestId": "req_ddb7a9f96c68472788fd3dfd5ee5baef",
+      "files": ["outputs/folk-provider-benchmark/openai/attempts/stage2a-openai-head/output-00.png"]
+    }
+  },
+  {
+    "id": "evt_1794309314208_7b2e1897",
+    "at": "2026-11-10T11:15:14.208Z",
+    "type": "generation-requested",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "openai",
+    "model": "gpt-image-2.6-sunburst",
+    "requestKey": "stage2a-openai-torso",
+    "authorizationId": "auth_1794308320695_bc6c13cc",
+    "operation": "generate-part",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 1,
+    "status": "requested",
+    "estimatedCostUsd": 0.07451,
+    "reconciledCostUsd": null,
+    "usage": null,
+    "outputHashes": [],
+    "note": "A paid request was explicitly authorized and reserved.",
+    "meta": {
+      "estimateBasis": "Conservative upper bound: documented image-token rates with a 2× safety factor for GPT Image 2.6 token variation."
+    }
+  },
+  {
+    "id": "evt_1794309314218_16cb5be2",
+    "at": "2026-11-10T11:15:14.218Z",
+    "type": "generation-authorized",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "openai",
+    "model": "gpt-image-2.6-sunburst",
+    "requestKey": "stage2a-openai-torso",
+    "authorizationId": "auth_1794308320695_bc6c13cc",
+    "operation": "generate-part",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 1,
+    "status": "reserved",
+    "estimatedCostUsd": 0.07451,
+    "reconciledCostUsd": null,
+    "usage": null,
+    "outputHashes": [],
+    "note": "Reservation persisted before the provider call.",
+    "meta": {
+      "remainingBeforeUsd": 1.41199
+    }
+  },
+  {
+    "id": "evt_1794309314222_7bf8791f",
+    "at": "2026-11-10T11:15:14.222Z",
+    "type": "generation-submitted",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "openai",
+    "model": "gpt-image-2.6-sunburst",
+    "requestKey": "stage2a-openai-torso",
+    "authorizationId": "auth_1794308320695_bc6c13cc",
+    "operation": "generate-part",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 1,
+    "status": "submitted",
+    "estimatedCostUsd": 0.07451,
+    "reconciledCostUsd": null,
+    "usage": null,
+    "outputHashes": [],
+    "note": "At most one attempt; no automatic retry.",
+    "meta": {}
+  },
+  {
+    "id": "evt_1794309345341_cfd5d568",
+    "at": "2026-11-10T11:15:45.341Z",
+    "type": "generation-completed",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "openai",
+    "model": "gpt-image-2.6-sunburst",
+    "requestKey": "stage2a-openai-torso",
+    "authorizationId": "auth_1794308320695_bc6c13cc",
+    "operation": "generate-part",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 1,
+    "status": "completed",
+    "estimatedCostUsd": 0.07451,
+    "reconciledCostUsd": 0.0522,
+    "usage": {
+      "inputTokens": 1746,
+      "outputTokens": 1449,
+      "totalTokens": 3195,
+      "inputImageTokens": null,
+      "outputImageTokens": null,
+      "providerReportedCostUsd": null,
+      "rawUsage": {
+        "input_tokens": 1746,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 210
+        },
+        "output_tokens": 1449,
+        "output_tokens_details": {
+          "image_tokens": 1449,
+          "text_tokens": 0
+        },
+        "total_tokens": 3195
+      }
+    },
+    "outputHashes": ["018028a3b81df8b62695dc841a164192d406970f1091a14340ecd57adbe1db51"],
+    "note": "Cost basis: provider usage tokens (image input at $8/M, text at $5/M). Outputs await visual review; not auto-accepted.",
+    "meta": {
+      "requestId": "req_9955c135d0e648f5b5ba2327df25afd3",
+      "files": [
+        "outputs/folk-provider-benchmark/openai/attempts/stage2a-openai-torso/output-00.png"
+      ]
+    }
+  },
+  {
+    "id": "evt_1794309370923_ef9cb97c",
+    "at": "2026-11-10T11:16:10.923Z",
+    "type": "generation-requested",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "openai",
+    "model": "gpt-image-2.6-sunburst",
+    "requestKey": "stage2a-openai-upper-arm",
+    "authorizationId": "auth_1794308320695_bc6c13cc",
+    "operation": "generate-part",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 1,
+    "status": "requested",
+    "estimatedCostUsd": 0.07452,
+    "reconciledCostUsd": null,
+    "usage": null,
+    "outputHashes": [],
+    "note": "A paid request was explicitly authorized and reserved.",
+    "meta": {
+      "estimateBasis": "Conservative upper bound: documented image-token rates with a 2× safety factor for GPT Image 2.6 token variation."
+    }
+  },
+  {
+    "id": "evt_1794309370973_10e41c48",
+    "at": "2026-11-10T11:16:10.973Z",
+    "type": "generation-authorized",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "openai",
+    "model": "gpt-image-2.6-sunburst",
+    "requestKey": "stage2a-openai-upper-arm",
+    "authorizationId": "auth_1794308320695_bc6c13cc",
+    "operation": "generate-part",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 1,
+    "status": "reserved",
+    "estimatedCostUsd": 0.07452,
+    "reconciledCostUsd": null,
+    "usage": null,
+    "outputHashes": [],
+    "note": "Reservation persisted before the provider call.",
+    "meta": {
+      "remainingBeforeUsd": 1.35979
+    }
+  },
+  {
+    "id": "evt_1794309370979_f8c758df",
+    "at": "2026-11-10T11:16:10.979Z",
+    "type": "generation-submitted",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "openai",
+    "model": "gpt-image-2.6-sunburst",
+    "requestKey": "stage2a-openai-upper-arm",
+    "authorizationId": "auth_1794308320695_bc6c13cc",
+    "operation": "generate-part",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 1,
+    "status": "submitted",
+    "estimatedCostUsd": 0.07452,
+    "reconciledCostUsd": null,
+    "usage": null,
+    "outputHashes": [],
+    "note": "At most one attempt; no automatic retry.",
+    "meta": {}
+  },
+  {
+    "id": "evt_1794309396895_a48dcb72",
+    "at": "2026-11-10T11:16:36.895Z",
+    "type": "generation-completed",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "openai",
+    "model": "gpt-image-2.6-sunburst",
+    "requestKey": "stage2a-openai-upper-arm",
+    "authorizationId": "auth_1794308320695_bc6c13cc",
+    "operation": "generate-part",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 1,
+    "status": "completed",
+    "estimatedCostUsd": 0.07452,
+    "reconciledCostUsd": 0.052195,
+    "usage": {
+      "inputTokens": 1745,
+      "outputTokens": 1449,
+      "totalTokens": 3194,
+      "inputImageTokens": null,
+      "outputImageTokens": null,
+      "providerReportedCostUsd": null,
+      "rawUsage": {
+        "input_tokens": 1745,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 209
+        },
+        "output_tokens": 1449,
+        "output_tokens_details": {
+          "image_tokens": 1449,
+          "text_tokens": 0
+        },
+        "total_tokens": 3194
+      }
+    },
+    "outputHashes": ["b10ad471ffab43bffef545c737676de91a0ceabccfb146cc5be7a82c1366727b"],
+    "note": "Cost basis: provider usage tokens (image input at $8/M, text at $5/M). Outputs await visual review; not auto-accepted.",
+    "meta": {
+      "requestId": "req_9c7599f9d0d44ed7a26ba8e3168e2346",
+      "files": [
+        "outputs/folk-provider-benchmark/openai/attempts/stage2a-openai-upper-arm/output-00.png"
+      ]
+    }
+  },
+  {
+    "id": "evt_1794309435709_385fe136",
+    "at": "2026-11-10T11:17:15.709Z",
+    "type": "generation-requested",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "openai",
+    "model": "gpt-image-2.6-sunburst",
+    "requestKey": "stage2a-openai-forearm",
+    "authorizationId": "auth_1794308320695_bc6c13cc",
+    "operation": "generate-part",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 1,
+    "status": "requested",
+    "estimatedCostUsd": 0.074535,
+    "reconciledCostUsd": null,
+    "usage": null,
+    "outputHashes": [],
+    "note": "A paid request was explicitly authorized and reserved.",
+    "meta": {
+      "estimateBasis": "Conservative upper bound: documented image-token rates with a 2× safety factor for GPT Image 2.6 token variation."
+    }
+  },
+  {
+    "id": "evt_1794309435717_8c4fc69a",
+    "at": "2026-11-10T11:17:15.717Z",
+    "type": "generation-authorized",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "openai",
+    "model": "gpt-image-2.6-sunburst",
+    "requestKey": "stage2a-openai-forearm",
+    "authorizationId": "auth_1794308320695_bc6c13cc",
+    "operation": "generate-part",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 1,
+    "status": "reserved",
+    "estimatedCostUsd": 0.074535,
+    "reconciledCostUsd": null,
+    "usage": null,
+    "outputHashes": [],
+    "note": "Reservation persisted before the provider call.",
+    "meta": {
+      "remainingBeforeUsd": 1.307595
+    }
+  },
+  {
+    "id": "evt_1794309435724_9b9800ee",
+    "at": "2026-11-10T11:17:15.724Z",
+    "type": "generation-submitted",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "openai",
+    "model": "gpt-image-2.6-sunburst",
+    "requestKey": "stage2a-openai-forearm",
+    "authorizationId": "auth_1794308320695_bc6c13cc",
+    "operation": "generate-part",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 1,
+    "status": "submitted",
+    "estimatedCostUsd": 0.074535,
+    "reconciledCostUsd": null,
+    "usage": null,
+    "outputHashes": [],
+    "note": "At most one attempt; no automatic retry.",
+    "meta": {}
+  },
+  {
+    "id": "evt_1794309461972_a08537e3",
+    "at": "2026-11-10T11:17:41.972Z",
+    "type": "generation-completed",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "openai",
+    "model": "gpt-image-2.6-sunburst",
+    "requestKey": "stage2a-openai-forearm",
+    "authorizationId": "auth_1794308320695_bc6c13cc",
+    "operation": "generate-part",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 1,
+    "status": "completed",
+    "estimatedCostUsd": 0.074535,
+    "reconciledCostUsd": 0.052205,
+    "usage": {
+      "inputTokens": 1747,
+      "outputTokens": 1449,
+      "totalTokens": 3196,
+      "inputImageTokens": null,
+      "outputImageTokens": null,
+      "providerReportedCostUsd": null,
+      "rawUsage": {
+        "input_tokens": 1747,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 211
+        },
+        "output_tokens": 1449,
+        "output_tokens_details": {
+          "image_tokens": 1449,
+          "text_tokens": 0
+        },
+        "total_tokens": 3196
+      }
+    },
+    "outputHashes": ["3282432a2b08b2ddee83b963312807fceba469bac9ebfc92941071b642327cd5"],
+    "note": "Cost basis: provider usage tokens (image input at $8/M, text at $5/M). Outputs await visual review; not auto-accepted.",
+    "meta": {
+      "requestId": "req_9783ebfb9bc24131b1401966935ede35",
+      "files": [
+        "outputs/folk-provider-benchmark/openai/attempts/stage2a-openai-forearm/output-00.png"
+      ]
+    }
+  }
+]

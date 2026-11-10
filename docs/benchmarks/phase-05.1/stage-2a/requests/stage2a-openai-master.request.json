@@ -1,0 +1,52 @@
+{
+  "requestKey": "stage2a-openai-master",
+  "provider": "openai",
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "master",
+  "operation": "generate-master",
+  "prompt": "Original Rajasthani/Indian folk-art cutout animation design. Bold consistent black ink outline, flat earthy fills, minimal gradient shading. Decorative geometric fabric motifs, stylized profile face, prominent expressive eye. Readable silhouette, rig-friendly separated limbs, hidden overlap at joints. No photorealism, no 3D render, no anime anatomy, no soft AI gradient, no text. Do not copy any recognizable existing cartoon character or exact reference frame.\nCharacter: Village artisan.\nOrientation: Full-body side profile facing right; restrained three-quarter cues only in the face.\nProportions: Adult, slightly oversized head, shoulder width about 1.4 head widths, arms to mid-thigh, clear hip/knee/ankle separation.\nFace: Warm terracotta skin, prominent almond eye, straight nose, curled black moustache, stable neutral expression, gold earring.\nHeadwear/hair: Saffron wrapped turban with an indigo band, gold pin, long indigo turban tail behind the head.\nClothing/harness: Ochre angrakha with terracotta and indigo trim, cream dhoti, terracotta sash, indigo sleeves, brown mojari shoes, gold jewellery.\nPalette: #d39a3d, #29445f, #b55034, #f2e3c6, #e0b354, #c98254.\nOutline: 7–10 px dark ink silhouette at master scale; 3–5 px interior detail.\nIdentity anchors that must remain stable in every subsequent edit: saffron turban, indigo turban tail, curled moustache, gold earring, ochre angrakha, cream dhoti.\nRender on a fully transparent background with clean alpha edges and no white fringe.",
+  "body": {
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "openai",
+    "model": "gpt-image-2.6-sunburst",
+    "operation": "generate-master",
+    "prompt": "Original Rajasthani/Indian folk-art cutout animation design. Bold consistent black ink outline, flat earthy fills, minimal gradient shading. Decorative geometric fabric motifs, stylized profile face, prominent expressive eye. Readable silhouette, rig-friendly separated limbs, hidden overlap at joints. No photorealism, no 3D render, no anime anatomy, no soft AI gradient, no text. Do not copy any recognizable existing cartoon character or exact reference frame.\nCharacter: Village artisan.\nOrientation: Full-body side profile facing right; restrained three-quarter cues only in the face.\nProportions: Adult, slightly oversized head, shoulder width about 1.4 head widths, arms to mid-thigh, clear hip/knee/ankle separation.\nFace: Warm terracotta skin, prominent almond eye, straight nose, curled black moustache, stable neutral expression, gold earring.\nHeadwear/hair: Saffron wrapped turban with an indigo band, gold pin, long indigo turban tail behind the head.\nClothing/harness: Ochre angrakha with terracotta and indigo trim, cream dhoti, terracotta sash, indigo sleeves, brown mojari shoes, gold jewellery.\nPalette: #d39a3d, #29445f, #b55034, #f2e3c6, #e0b354, #c98254.\nOutline: 7–10 px dark ink silhouette at master scale; 3–5 px interior detail.\nIdentity anchors that must remain stable in every subsequent edit: saffron turban, indigo turban tail, curled moustache, gold earring, ochre angrakha, cream dhoti.\nRender on a fully transparent background with clean alpha edges and no white fringe.",
+    "width": 1536,
+    "height": 1024,
+    "quality": "medium",
+    "aspectRatio": "3:2",
+    "outputCount": 1,
+    "transparentBackground": true,
+    "requestKey": "stage2a-openai-master",
+    "references": []
+  },
+  "estimate": {
+    "provider": "openai",
+    "model": "gpt-image-2.6-sunburst",
+    "pricingVersion": "openai-image-2026-11-10",
+    "pricingSource": "https://developers.openai.com/api/docs/pricing#image-generation",
+    "pricingVerified": true,
+    "estimateBasis": "Conservative upper bound: documented image-token rates with a 2× safety factor for GPT Image 2.6 token variation.",
+    "inputTextTokens": 576,
+    "inputImageTokens": 0,
+    "outputImageTokens": 3168,
+    "estimatedCostUsd": 0.09792,
+    "maxCostUsd": 0.09792,
+    "currency": "USD",
+    "assumptions": [
+      "Image input tokens are bounded at 1,120 per 1K reference.",
+      "Output tokens use the documented earlier-model quality table scaled by requested megapixels, then doubled.",
+      "Actual usage will be reconciled from the provider response; this is not an invoice."
+    ]
+  },
+  "authorization": {
+    "id": "auth_1794308320695_bc6c13cc",
+    "status": "active",
+    "maxCostUsd": 1.5,
+    "spentCostUsd": 0,
+    "reservedCostUsd": 0,
+    "remainingUsd": 1.5,
+    "expiresAt": "2026-11-11T10:58:40.348Z"
+  },
+  "attemptedAt": "2026-11-10T11:03:53.975Z"
+}

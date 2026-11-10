@@ -1,0 +1,140 @@
+{
+  "version": 1,
+  "authorizations": [
+    {
+      "id": "auth_1794308320695_bc6c13cc",
+      "experimentId": "phase-05.1-folk-pilot",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "status": "active",
+      "requestedBy": "delegated-local-operator",
+      "createdAt": "2026-11-10T10:58:40.695Z",
+      "approvedBy": "delegated-local-operator",
+      "approvedAt": "2026-11-10T10:58:42.210Z",
+      "expiresAt": "2026-11-11T10:58:40.348Z",
+      "revokedBy": null,
+      "revokedAt": null,
+      "maxCostUsd": 1.5,
+      "maxRequests": 6,
+      "maxOutputsPerRequest": 1,
+      "maxWidth": 2048,
+      "maxHeight": 2048,
+      "pricingVersion": "openai-image-2026-11-10",
+      "spentCostUsd": 0.24461,
+      "reservedCostUsd": 0,
+      "requestCount": 5,
+      "reservations": [
+        {
+          "requestKey": "stage2a-openai-master",
+          "maxCostUsd": 0.09792,
+          "createdAt": "2026-11-10T11:03:54.843Z",
+          "status": "completed",
+          "outputCount": 1,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "requestKey": "stage2a-openai-head",
+          "maxCostUsd": 0.07453,
+          "createdAt": "2026-11-10T11:14:24.120Z",
+          "status": "completed",
+          "outputCount": 1,
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "requestKey": "stage2a-openai-torso",
+          "maxCostUsd": 0.07451,
+          "createdAt": "2026-11-10T11:15:14.202Z",
+          "status": "completed",
+          "outputCount": 1,
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "requestKey": "stage2a-openai-upper-arm",
+          "maxCostUsd": 0.07452,
+          "createdAt": "2026-11-10T11:16:10.909Z",
+          "status": "completed",
+          "outputCount": 1,
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "requestKey": "stage2a-openai-forearm",
+          "maxCostUsd": 0.074535,
+          "createdAt": "2026-11-10T11:17:15.706Z",
+          "status": "completed",
+          "outputCount": 1,
+          "width": 1024,
+          "height": 1024
+        }
+      ],
+      "notes": "Delegated local-operator authorization explicitly requested for Stage 2A. Caps are provider- and experiment-scoped.",
+      "updatedAt": "2026-11-10T11:17:41.970Z"
+    },
+    {
+      "id": "auth_1794308322845_6b6082a5",
+      "experimentId": "phase-05.1-folk-pilot",
+      "provider": "gemini",
+      "model": "gemini-nano-banana-2.1",
+      "status": "active",
+      "requestedBy": "delegated-local-operator",
+      "createdAt": "2026-11-10T10:58:42.845Z",
+      "approvedBy": "delegated-local-operator",
+      "approvedAt": "2026-11-10T10:58:42.944Z",
+      "expiresAt": "2026-11-11T10:58:42.604Z",
+      "revokedBy": null,
+      "revokedAt": null,
+      "maxCostUsd": 1,
+      "maxRequests": 6,
+      "maxOutputsPerRequest": 1,
+      "maxWidth": 2048,
+      "maxHeight": 2048,
+      "pricingVersion": "gemini-image-2026-11-10",
+      "spentCostUsd": 0.205989,
+      "reservedCostUsd": 0,
+      "requestCount": 4,
+      "reservations": [
+        {
+          "requestKey": "stage2a-gemini-master",
+          "maxCostUsd": 0.0512895,
+          "createdAt": "2026-11-10T11:05:52.382Z",
+          "status": "completed",
+          "outputCount": 1,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "requestKey": "stage2a-gemini-master-retry1",
+          "maxCostUsd": 0.0512895,
+          "createdAt": "2026-11-10T11:10:18.216Z",
+          "status": "completed",
+          "outputCount": 1,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "requestKey": "stage2a-gemini-master-retry2",
+          "maxCostUsd": 0.0512895,
+          "createdAt": "2026-11-10T11:13:25.897Z",
+          "status": "completed",
+          "outputCount": 1,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "requestKey": "stage2a-gemini-parts-sheet",
+          "maxCostUsd": 0.0527625,
+          "createdAt": "2026-11-10T11:18:31.699Z",
+          "status": "completed",
+          "outputCount": 1,
+          "width": 1024,
+          "height": 1024
+        }
+      ],
+      "notes": "Delegated local-operator authorization explicitly requested for Stage 2A. Caps are provider- and experiment-scoped.",
+      "updatedAt": "2026-11-10T11:19:13.190Z"
+    }
+  ]
+}

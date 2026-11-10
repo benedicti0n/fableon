@@ -1,0 +1,470 @@
+[
+  {
+    "id": "evt_1794308322877_494b9ab3",
+    "at": "2026-11-10T10:58:42.877Z",
+    "type": "authorization-requested",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "gemini",
+    "model": "gemini-nano-banana-2.1",
+    "requestKey": null,
+    "authorizationId": "auth_1794308322845_6b6082a5",
+    "operation": "authorization-request",
+    "attempt": 1,
+    "outputCount": 0,
+    "inputReferenceCount": 0,
+    "status": "pending",
+    "estimatedCostUsd": 0,
+    "reconciledCostUsd": 0,
+    "usage": null,
+    "outputHashes": [],
+    "note": "Pending request only; no spending authorized.",
+    "meta": {
+      "maxCostUsd": 1
+    }
+  },
+  {
+    "id": "evt_1794308322946_9f47b287",
+    "at": "2026-11-10T10:58:42.946Z",
+    "type": "authorization-approved",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "gemini",
+    "model": "gemini-nano-banana-2.1",
+    "requestKey": null,
+    "authorizationId": "auth_1794308322845_6b6082a5",
+    "operation": "authorization-approve",
+    "attempt": 1,
+    "outputCount": 0,
+    "inputReferenceCount": 0,
+    "status": "active",
+    "estimatedCostUsd": 0,
+    "reconciledCostUsd": 0,
+    "usage": null,
+    "outputHashes": [],
+    "note": "Explicit user approval persisted. No generation was executed by this action.",
+    "meta": {
+      "maxCostUsd": 1
+    }
+  },
+  {
+    "id": "evt_1794308752444_2357a517",
+    "at": "2026-11-10T11:05:52.444Z",
+    "type": "generation-requested",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "gemini",
+    "model": "gemini-nano-banana-2.1",
+    "requestKey": "stage2a-gemini-master",
+    "authorizationId": "auth_1794308322845_6b6082a5",
+    "operation": "generate-master",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 0,
+    "status": "requested",
+    "estimatedCostUsd": 0.0512895,
+    "reconciledCostUsd": null,
+    "usage": null,
+    "outputHashes": [],
+    "note": "A paid request was explicitly authorized and reserved.",
+    "meta": {
+      "estimateBasis": "Published token-equivalent pricing: 1K=1,120, 2K=1,680, 4K=3,780 image output tokens at $30/1M."
+    }
+  },
+  {
+    "id": "evt_1794308752796_53c5a933",
+    "at": "2026-11-10T11:05:52.796Z",
+    "type": "generation-authorized",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "gemini",
+    "model": "gemini-nano-banana-2.1",
+    "requestKey": "stage2a-gemini-master",
+    "authorizationId": "auth_1794308322845_6b6082a5",
+    "operation": "generate-master",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 0,
+    "status": "reserved",
+    "estimatedCostUsd": 0.0512895,
+    "reconciledCostUsd": null,
+    "usage": null,
+    "outputHashes": [],
+    "note": "Reservation persisted before the provider call.",
+    "meta": {
+      "remainingBeforeUsd": 1
+    }
+  },
+  {
+    "id": "evt_1794308752936_1d32e24e",
+    "at": "2026-11-10T11:05:52.936Z",
+    "type": "generation-submitted",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "gemini",
+    "model": "gemini-nano-banana-2.1",
+    "requestKey": "stage2a-gemini-master",
+    "authorizationId": "auth_1794308322845_6b6082a5",
+    "operation": "generate-master",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 0,
+    "status": "submitted",
+    "estimatedCostUsd": 0.0512895,
+    "reconciledCostUsd": null,
+    "usage": null,
+    "outputHashes": [],
+    "note": "At most one attempt; no automatic retry.",
+    "meta": {}
+  },
+  {
+    "id": "evt_1794308754169_c78986e5",
+    "at": "2026-11-10T11:05:54.169Z",
+    "type": "generation-failed",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "gemini",
+    "model": "gemini-nano-banana-2.1",
+    "requestKey": "stage2a-gemini-master",
+    "authorizationId": "auth_1794308322845_6b6082a5",
+    "operation": "generate-master",
+    "attempt": 1,
+    "outputCount": 0,
+    "inputReferenceCount": 0,
+    "status": "failed",
+    "estimatedCostUsd": 0.0512895,
+    "reconciledCostUsd": 0.0512895,
+    "usage": null,
+    "outputHashes": [],
+    "note": "Failed after submission; reserved maximum retained until invoice reconciliation: The value 'image/png' is not supported for 'response_format.mime_type'. Supported values: 'image/jpeg'.",
+    "meta": {}
+  },
+  {
+    "id": "evt_1794309018278_d0303c69",
+    "at": "2026-11-10T11:10:18.278Z",
+    "type": "generation-requested",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "gemini",
+    "model": "gemini-nano-banana-2.1",
+    "requestKey": "stage2a-gemini-master-retry1",
+    "authorizationId": "auth_1794308322845_6b6082a5",
+    "operation": "generate-master",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 0,
+    "status": "requested",
+    "estimatedCostUsd": 0.0512895,
+    "reconciledCostUsd": null,
+    "usage": null,
+    "outputHashes": [],
+    "note": "A paid request was explicitly authorized and reserved.",
+    "meta": {
+      "estimateBasis": "Published token-equivalent pricing: 1K=1,120, 2K=1,680, 4K=3,780 image output tokens at $30/1M."
+    }
+  },
+  {
+    "id": "evt_1794309018338_d6c3a610",
+    "at": "2026-11-10T11:10:18.338Z",
+    "type": "generation-authorized",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "gemini",
+    "model": "gemini-nano-banana-2.1",
+    "requestKey": "stage2a-gemini-master-retry1",
+    "authorizationId": "auth_1794308322845_6b6082a5",
+    "operation": "generate-master",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 0,
+    "status": "reserved",
+    "estimatedCostUsd": 0.0512895,
+    "reconciledCostUsd": null,
+    "usage": null,
+    "outputHashes": [],
+    "note": "Reservation persisted before the provider call.",
+    "meta": {
+      "remainingBeforeUsd": 0.9487105
+    }
+  },
+  {
+    "id": "evt_1794309018373_aede3e48",
+    "at": "2026-11-10T11:10:18.373Z",
+    "type": "generation-submitted",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "gemini",
+    "model": "gemini-nano-banana-2.1",
+    "requestKey": "stage2a-gemini-master-retry1",
+    "authorizationId": "auth_1794308322845_6b6082a5",
+    "operation": "generate-master",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 0,
+    "status": "submitted",
+    "estimatedCostUsd": 0.0512895,
+    "reconciledCostUsd": null,
+    "usage": null,
+    "outputHashes": [],
+    "note": "At most one attempt; no automatic retry.",
+    "meta": {}
+  },
+  {
+    "id": "evt_1794309084263_ecfe28ba",
+    "at": "2026-11-10T11:11:24.263Z",
+    "type": "generation-failed",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "gemini",
+    "model": "gemini-nano-banana-2.1",
+    "requestKey": "stage2a-gemini-master-retry1",
+    "authorizationId": "auth_1794308322845_6b6082a5",
+    "operation": "generate-master",
+    "attempt": 1,
+    "outputCount": 0,
+    "inputReferenceCount": 0,
+    "status": "failed",
+    "estimatedCostUsd": 0.0512895,
+    "reconciledCostUsd": 0.0512895,
+    "usage": null,
+    "outputHashes": [],
+    "note": "Failed after submission; reserved maximum retained until invoice reconciliation: Gemini returned no output_image.data.",
+    "meta": {}
+  },
+  {
+    "id": "evt_1794309205898_150572df",
+    "at": "2026-11-10T11:13:25.898Z",
+    "type": "generation-requested",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "gemini",
+    "model": "gemini-nano-banana-2.1",
+    "requestKey": "stage2a-gemini-master-retry2",
+    "authorizationId": "auth_1794308322845_6b6082a5",
+    "operation": "generate-master",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 0,
+    "status": "requested",
+    "estimatedCostUsd": 0.0512895,
+    "reconciledCostUsd": null,
+    "usage": null,
+    "outputHashes": [],
+    "note": "A paid request was explicitly authorized and reserved.",
+    "meta": {
+      "estimateBasis": "Published token-equivalent pricing: 1K=1,120, 2K=1,680, 4K=3,780 image output tokens at $30/1M."
+    }
+  },
+  {
+    "id": "evt_1794309205900_79795f5f",
+    "at": "2026-11-10T11:13:25.900Z",
+    "type": "generation-authorized",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "gemini",
+    "model": "gemini-nano-banana-2.1",
+    "requestKey": "stage2a-gemini-master-retry2",
+    "authorizationId": "auth_1794308322845_6b6082a5",
+    "operation": "generate-master",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 0,
+    "status": "reserved",
+    "estimatedCostUsd": 0.0512895,
+    "reconciledCostUsd": null,
+    "usage": null,
+    "outputHashes": [],
+    "note": "Reservation persisted before the provider call.",
+    "meta": {
+      "remainingBeforeUsd": 0.897421
+    }
+  },
+  {
+    "id": "evt_1794309205901_be44ca31",
+    "at": "2026-11-10T11:13:25.901Z",
+    "type": "generation-submitted",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "gemini",
+    "model": "gemini-nano-banana-2.1",
+    "requestKey": "stage2a-gemini-master-retry2",
+    "authorizationId": "auth_1794308322845_6b6082a5",
+    "operation": "generate-master",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 0,
+    "status": "submitted",
+    "estimatedCostUsd": 0.0512895,
+    "reconciledCostUsd": null,
+    "usage": null,
+    "outputHashes": [],
+    "note": "At most one attempt; no automatic retry.",
+    "meta": {}
+  },
+  {
+    "id": "evt_1794309234203_74fba7fa",
+    "at": "2026-11-10T11:13:54.203Z",
+    "type": "generation-completed",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "gemini",
+    "model": "gemini-nano-banana-2.1",
+    "requestKey": "stage2a-gemini-master-retry2",
+    "authorizationId": "auth_1794308322845_6b6082a5",
+    "operation": "generate-master",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 0,
+    "status": "completed",
+    "estimatedCostUsd": 0.0512895,
+    "reconciledCostUsd": 0.0509685,
+    "usage": {
+      "inputTokens": 379,
+      "outputTokens": 2098,
+      "totalTokens": 3705,
+      "inputImageTokens": null,
+      "outputImageTokens": null,
+      "providerReportedCostUsd": null,
+      "rawUsage": {
+        "total_tokens": 3705,
+        "total_input_tokens": 379,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 379
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 2098,
+        "output_tokens_by_modality": [
+          {
+            "modality": "image",
+            "tokens": 1680
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 1228,
+        "initial_input_tokens": 379
+      }
+    },
+    "outputHashes": ["02fcbb305e47d72ae74774740ff16d7512ef44316cf64e482b3b24ab1f4b0eec"],
+    "note": "Cost basis: published per-image token equivalent plus reported input tokens. Outputs await visual review; not auto-accepted.",
+    "meta": {
+      "requestId": "v1_ChdWdnp5YXYtdUtxakc2OTRQbXFicHVBOBIXVnZ6eWF2LXVLcWpHNjk0UG1xYnB1QTg",
+      "files": [
+        "outputs/folk-provider-benchmark/gemini/attempts/stage2a-gemini-master-retry2/output-00.png"
+      ]
+    }
+  },
+  {
+    "id": "evt_1794309511705_482ba357",
+    "at": "2026-11-10T11:18:31.705Z",
+    "type": "generation-requested",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "gemini",
+    "model": "gemini-nano-banana-2.1",
+    "requestKey": "stage2a-gemini-parts-sheet",
+    "authorizationId": "auth_1794308322845_6b6082a5",
+    "operation": "generate-part",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 1,
+    "status": "requested",
+    "estimatedCostUsd": 0.0527625,
+    "reconciledCostUsd": null,
+    "usage": null,
+    "outputHashes": [],
+    "note": "A paid request was explicitly authorized and reserved.",
+    "meta": {
+      "estimateBasis": "Published token-equivalent pricing: 1K=1,120, 2K=1,680, 4K=3,780 image output tokens at $30/1M."
+    }
+  },
+  {
+    "id": "evt_1794309511714_1f8bc9c2",
+    "at": "2026-11-10T11:18:31.714Z",
+    "type": "generation-authorized",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "gemini",
+    "model": "gemini-nano-banana-2.1",
+    "requestKey": "stage2a-gemini-parts-sheet",
+    "authorizationId": "auth_1794308322845_6b6082a5",
+    "operation": "generate-part",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 1,
+    "status": "reserved",
+    "estimatedCostUsd": 0.0527625,
+    "reconciledCostUsd": null,
+    "usage": null,
+    "outputHashes": [],
+    "note": "Reservation persisted before the provider call.",
+    "meta": {
+      "remainingBeforeUsd": 0.8464525
+    }
+  },
+  {
+    "id": "evt_1794309511723_be0684bd",
+    "at": "2026-11-10T11:18:31.723Z",
+    "type": "generation-submitted",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "gemini",
+    "model": "gemini-nano-banana-2.1",
+    "requestKey": "stage2a-gemini-parts-sheet",
+    "authorizationId": "auth_1794308322845_6b6082a5",
+    "operation": "generate-part",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 1,
+    "status": "submitted",
+    "estimatedCostUsd": 0.0527625,
+    "reconciledCostUsd": null,
+    "usage": null,
+    "outputHashes": [],
+    "note": "At most one attempt; no automatic retry.",
+    "meta": {}
+  },
+  {
+    "id": "evt_1794309553191_145af11e",
+    "at": "2026-11-10T11:19:13.191Z",
+    "type": "generation-completed",
+    "experimentId": "phase-05.1-folk-pilot",
+    "provider": "gemini",
+    "model": "gemini-nano-banana-2.1",
+    "requestKey": "stage2a-gemini-parts-sheet",
+    "authorizationId": "auth_1794308322845_6b6082a5",
+    "operation": "generate-part",
+    "attempt": 1,
+    "outputCount": 1,
+    "inputReferenceCount": 1,
+    "status": "completed",
+    "estimatedCostUsd": 0.0527625,
+    "reconciledCostUsd": 0.0524415,
+    "usage": {
+      "inputTokens": 1361,
+      "outputTokens": 2583,
+      "totalTokens": 4643,
+      "inputImageTokens": null,
+      "outputImageTokens": null,
+      "providerReportedCostUsd": null,
+      "rawUsage": {
+        "total_tokens": 4643,
+        "total_input_tokens": 1361,
+        "input_tokens_by_modality": [
+          {
+            "modality": "image",
+            "tokens": 1120
+          },
+          {
+            "modality": "text",
+            "tokens": 241
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 2583,
+        "output_tokens_by_modality": [
+          {
+            "modality": "image",
+            "tokens": 1680
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 699,
+        "initial_input_tokens": 1361
+      }
+    },
+    "outputHashes": ["a59c013cf81133d87f891c69fdf8e872d98b23c0897f489ab5efca1b07c7cf3a"],
+    "note": "Cost basis: published per-image token equivalent plus reported input tokens. Outputs await visual review; not auto-accepted.",
+    "meta": {
+      "requestId": "v1_ChdpZjN5YXBQcUx1R042OTRQN3QzcHlBVRIXaWYzeWFwUHFMdUdONjk0UDd0M3B5QVU",
+      "files": [
+        "outputs/folk-provider-benchmark/gemini/attempts/stage2a-gemini-parts-sheet/output-00.png"
+      ]
+    }
+  }
+]

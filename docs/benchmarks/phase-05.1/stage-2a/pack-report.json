@@ -1,0 +1,219 @@
+{
+  "preparedAt": "2026-11-10T11:47:22.103Z",
+  "openai": {
+    "manifestPath": "outputs/folk-provider-benchmark/stage-2a/openai-pack/manifest.json",
+    "parts": [
+      {
+        "id": "artisan_head",
+        "status": "needs_repair",
+        "alpha": {
+          "hasAlpha": true,
+          "opaqueRatio": 0,
+          "transparentRatio": 0.3430890957446808,
+          "warnings": [
+            "black-halo: 138693 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+            "transparent-color-residue: 235222 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+          ]
+        },
+        "offsetX": 277.85,
+        "offsetY": 15.550000000000011,
+        "width": 360,
+        "height": 423,
+        "scale": 0.45,
+        "sourcePivot": {
+          "x": 427,
+          "y": 921
+        },
+        "targetPivot": {
+          "x": 470,
+          "y": 430
+        }
+      },
+      {
+        "id": "artisan_torso",
+        "status": "needs_repair",
+        "alpha": {
+          "hasAlpha": true,
+          "opaqueRatio": 0,
+          "transparentRatio": 0.37138491570128856,
+          "warnings": [
+            "black-halo: 98261 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+            "transparent-color-residue: 252635 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+          ]
+        },
+        "offsetX": 243.1,
+        "offsetY": 289.95,
+        "width": 392,
+        "height": 532,
+        "scale": 0.55,
+        "sourcePivot": {
+          "x": 358,
+          "y": 491
+        },
+        "targetPivot": {
+          "x": 440,
+          "y": 560
+        }
+      },
+      {
+        "id": "artisan_nearUpperArm",
+        "status": "needs_repair",
+        "alpha": {
+          "hasAlpha": true,
+          "opaqueRatio": 0,
+          "transparentRatio": 0.4386147169521469,
+          "warnings": [
+            "black-halo: 53189 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+            "transparent-color-residue: 190092 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+          ]
+        },
+        "offsetX": 436.94,
+        "offsetY": 480.76,
+        "width": 122,
+        "height": 207,
+        "scale": 0.22,
+        "sourcePivot": {
+          "x": 423,
+          "y": 42
+        },
+        "targetPivot": {
+          "x": 530,
+          "y": 490
+        }
+      },
+      {
+        "id": "artisan_nearForearm",
+        "status": "needs_repair",
+        "alpha": {
+          "hasAlpha": true,
+          "opaqueRatio": 0,
+          "transparentRatio": 0.5645023482898612,
+          "warnings": [
+            "black-halo: 42777 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+            "transparent-color-residue: 159550 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+          ]
+        },
+        "offsetX": 474.8,
+        "offsetY": 640.4,
+        "width": 98,
+        "height": 186,
+        "scale": 0.22,
+        "sourcePivot": {
+          "x": 160,
+          "y": 180
+        },
+        "targetPivot": {
+          "x": 510,
+          "y": 680
+        }
+      }
+    ],
+    "missingSlots": 57
+  },
+  "gemini": {
+    "manifestPath": "outputs/folk-provider-benchmark/stage-2a/gemini-pack/manifest.json",
+    "parts": [
+      {
+        "id": "artisan_head",
+        "status": "ready",
+        "alpha": {
+          "hasAlpha": true,
+          "opaqueRatio": 0.541901776384535,
+          "transparentRatio": 0.458098223615465,
+          "warnings": [
+            "transparent-color-residue: 276192 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+          ]
+        },
+        "offsetX": 277.5,
+        "offsetY": 65.90499999999997,
+        "width": 385,
+        "height": 392,
+        "scale": 0.5,
+        "sourcePivot": {
+          "x": 385,
+          "y": 728.19
+        },
+        "targetPivot": {
+          "x": 470,
+          "y": 430
+        }
+      },
+      {
+        "id": "artisan_torso",
+        "status": "ready",
+        "alpha": {
+          "hasAlpha": true,
+          "opaqueRatio": 0.6911286748411878,
+          "transparentRatio": 0.3088713251588122,
+          "warnings": [
+            "transparent-color-residue: 183986 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+          ]
+        },
+        "offsetX": 255.20000000000002,
+        "offsetY": 269.90000000000003,
+        "width": 370,
+        "height": 580,
+        "scale": 0.6,
+        "sourcePivot": {
+          "x": 308,
+          "y": 483.5
+        },
+        "targetPivot": {
+          "x": 440,
+          "y": 560
+        }
+      },
+      {
+        "id": "artisan_nearUpperArm",
+        "status": "ready",
+        "alpha": {
+          "hasAlpha": true,
+          "opaqueRatio": 0.8207716964637721,
+          "transparentRatio": 0.1792283035362279,
+          "warnings": [
+            "transparent-color-residue: 20912 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+          ]
+        },
+        "offsetX": 490.275,
+        "offsetY": 479.5,
+        "width": 79,
+        "height": 180,
+        "scale": 0.35,
+        "sourcePivot": {
+          "x": 113.5,
+          "y": 30
+        },
+        "targetPivot": {
+          "x": 530,
+          "y": 490
+        }
+      },
+      {
+        "id": "artisan_nearForearm",
+        "status": "ready",
+        "alpha": {
+          "hasAlpha": true,
+          "opaqueRatio": 0.5047741410056588,
+          "transparentRatio": 0.49522585899434124,
+          "warnings": [
+            "transparent-color-residue: 141074 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+          ]
+        },
+        "offsetX": 515.2,
+        "offsetY": 677.2,
+        "width": 247,
+        "height": 118,
+        "scale": 0.32,
+        "sourcePivot": {
+          "x": 140,
+          "y": 40
+        },
+        "targetPivot": {
+          "x": 560,
+          "y": 690
+        }
+      }
+    ],
+    "missingSlots": 57
+  }
+}

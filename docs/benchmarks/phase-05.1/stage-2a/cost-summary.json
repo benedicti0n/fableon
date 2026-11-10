@@ -1,0 +1,56 @@
+{
+  "generatedAt": "2026-11-10",
+  "experimentId": "phase-05.1-folk-pilot",
+  "providers": {
+    "openai": {
+      "capUsd": 1.5,
+      "spentUsd": 0.24461,
+      "reservedUsd": 0,
+      "remainingUsd": 1.25539,
+      "requestsUsed": 5,
+      "maxRequests": 6,
+      "estimatedCostUsd": 0.396015,
+      "completedUsageCostUsd": 0.24461,
+      "failedAttemptHeldUsd": 0,
+      "successfulRequests": 5,
+      "failedRequests": 0,
+      "imagesReturned": 5,
+      "acceptedImages": 5,
+      "rejectedImages": 0,
+      "usableAssets": 5,
+      "costPerUsableAssetUsd": 0.048922,
+      "completedUsageCostPerUsableAssetUsd": 0.048922,
+      "providerReportedBilledUsd": null,
+      "notes": "All five OpenAI requests returned images; reconciled from provider token usage. No provider invoice is available."
+    },
+    "gemini": {
+      "capUsd": 1,
+      "spentUsd": 0.205989,
+      "reservedUsd": 0,
+      "remainingUsd": 0.794011,
+      "requestsUsed": 4,
+      "maxRequests": 6,
+      "estimatedCostUsd": 0.206631,
+      "completedUsageCostUsd": 0.10341,
+      "failedAttemptHeldUsd": 0.102579,
+      "successfulRequests": 2,
+      "failedRequests": 2,
+      "imagesReturned": 2,
+      "acceptedImages": 2,
+      "rejectedImages": 0,
+      "usableAssets": 5,
+      "costPerUsableAssetUsd": 0.041198,
+      "completedUsageCostPerUsableAssetUsd": 0.020682,
+      "providerReportedBilledUsd": null,
+      "notes": "Two Gemini attempts failed before usable output: a 400 mime-type rejection and a 502 response-shape failure. Failed-attempt holds are conservative; the 400 is likely unbilled, the 502 may have been billed. No provider invoice is available."
+    }
+  },
+  "combined": {
+    "capUsd": 2.5,
+    "spentUsd": 0.450599,
+    "remainingUsd": 2.049401,
+    "completedUsageCostUsd": 0.34802,
+    "totalImagesReturned": 7,
+    "failedAttempts": 2
+  }
+}

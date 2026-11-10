@@ -1,0 +1,59 @@
+{
+  "requestKey": "stage2a-openai-master",
+  "provider": "openai",
+  "model": "gpt-image-2.6-sunburst",
+  "requestId": "req_3cc247b2fc7a4e79a4e82d714d123ba1",
+  "estimate": {
+    "provider": "openai",
+    "model": "gpt-image-2.6-sunburst",
+    "pricingVersion": "openai-image-2026-11-10",
+    "pricingSource": "https://developers.openai.com/api/docs/pricing#image-generation",
+    "pricingVerified": true,
+    "estimateBasis": "Conservative upper bound: documented image-token rates with a 2× safety factor for GPT Image 2.6 token variation.",
+    "inputTextTokens": 576,
+    "inputImageTokens": 0,
+    "outputImageTokens": 3168,
+    "estimatedCostUsd": 0.09792,
+    "maxCostUsd": 0.09792,
+    "currency": "USD",
+    "assumptions": [
+      "Image input tokens are bounded at 1,120 per 1K reference.",
+      "Output tokens use the documented earlier-model quality table scaled by requested megapixels, then doubled.",
+      "Actual usage will be reconciled from the provider response; this is not an invoice."
+    ]
+  },
+  "reconciledCostUsd": 0.035795,
+  "costBasis": "provider usage tokens (image input at $8/M, text at $5/M)",
+  "usage": {
+    "inputTokens": 367,
+    "outputTokens": 1132,
+    "totalTokens": 1499,
+    "inputImageTokens": null,
+    "outputImageTokens": null,
+    "providerReportedCostUsd": null,
+    "rawUsage": {
+      "input_tokens": 367,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 367
+      },
+      "output_tokens": 1132,
+      "output_tokens_details": {
+        "image_tokens": 1132,
+        "text_tokens": 0
+      },
+      "total_tokens": 1499
+    }
+  },
+  "files": [
+    {
+      "index": 0,
+      "path": "outputs/folk-provider-benchmark/openai/attempts/stage2a-openai-master/output-00.png",
+      "sha256": "f0634647c1fc35e9c0bbd0b37d1722a62dc23ace121c55223e6d4fe712fa92b2",
+      "bytes": 1347216,
+      "url": "/api/studio/providers/packs/openai/attempts/stage2a-openai-master/output-00.png"
+    }
+  ],
+  "reviewStatus": "pending",
+  "message": "Generated outputs are not auto-accepted. Review them in Studio."
+}

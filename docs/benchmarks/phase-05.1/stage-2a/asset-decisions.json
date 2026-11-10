@@ -1,0 +1,95 @@
+{
+  "experimentId": "phase-05.1-folk-pilot",
+  "openai": {
+    "master": {
+      "file": "outputs/folk-provider-benchmark/openai/attempts/stage2a-openai-master/output-00.png",
+      "status": "accepted",
+      "notes": "Strong identity; real alpha; transparent output."
+    },
+    "parts": [
+      {
+        "id": "artisan_head",
+        "file": "outputs/folk-provider-benchmark/stage-2a/openai-pack/parts/artisan_head.png",
+        "status": "accepted-with-repair",
+        "notes": "Alpha valid; trimmed; black-halo warning from linework; pivot registered."
+      },
+      {
+        "id": "artisan_torso",
+        "file": "outputs/folk-provider-benchmark/stage-2a/openai-pack/parts/artisan_torso.png",
+        "status": "accepted-with-repair",
+        "notes": "Alpha valid; trimmed; no shoulder sleeves; used as diagnostic anchor."
+      },
+      {
+        "id": "artisan_nearUpperArm",
+        "file": "outputs/folk-provider-benchmark/stage-2a/openai-pack/parts/artisan_nearUpperArm.png",
+        "status": "accepted-with-repair",
+        "notes": "Alpha valid; diagonal source rotated in diagnostic rig; scaled."
+      },
+      {
+        "id": "artisan_nearForearm",
+        "file": "outputs/folk-provider-benchmark/stage-2a/openai-pack/parts/artisan_nearForearm.png",
+        "status": "accepted-with-repair",
+        "notes": "Alpha valid; includes hand; cuff pivot repaired to close elbow gap."
+      }
+    ],
+    "rejected": [],
+    "remainingRequests": 1,
+    "remainingBudgetUsd": 1.25539
+  },
+  "gemini": {
+    "master": {
+      "file": "outputs/folk-provider-benchmark/gemini/attempts/stage2a-gemini-master-retry2/output-00.png",
+      "status": "accepted",
+      "notes": "Strong side-profile identity; opaque cream background; no native alpha."
+    },
+    "sheet": {
+      "file": "outputs/folk-provider-benchmark/gemini/attempts/stage2a-gemini-parts-sheet/output-00.png",
+      "status": "accepted",
+      "notes": "Four-part 2x2 sheet on chroma green."
+    },
+    "parts": [
+      {
+        "id": "artisan_head",
+        "file": "outputs/folk-provider-benchmark/stage-2a/gemini-pack/parts/artisan_head.png",
+        "status": "accepted-with-repair",
+        "notes": "Chroma-keyed, despilled, cropped, pivoted."
+      },
+      {
+        "id": "artisan_torso",
+        "file": "outputs/folk-provider-benchmark/stage-2a/gemini-pack/parts/artisan_torso.png",
+        "status": "accepted-with-repair",
+        "notes": "Chroma-keyed, despilled, cropped, pivoted."
+      },
+      {
+        "id": "artisan_nearUpperArm",
+        "file": "outputs/folk-provider-benchmark/stage-2a/gemini-pack/parts/artisan_nearUpperArm.png",
+        "status": "accepted-with-repair",
+        "notes": "Chroma-keyed, despilled, cropped; shoulder pivot corrected."
+      },
+      {
+        "id": "artisan_nearForearm",
+        "file": "outputs/folk-provider-benchmark/stage-2a/gemini-pack/parts/artisan_nearForearm.png",
+        "status": "accepted-with-repair",
+        "notes": "Chroma-keyed, despilled, cropped; hand included."
+      }
+    ],
+    "rejected": [
+      {
+        "request": "stage2a-gemini-master",
+        "status": "failed",
+        "reason": "HTTP 400: response_format.mime_type image/png unsupported; JPEG only."
+      },
+      {
+        "request": "stage2a-gemini-master-retry1",
+        "status": "failed",
+        "reason": "HTTP 502: response image was in steps[]; adapter did not yet parse that shape."
+      }
+    ],
+    "remainingRequests": 2,
+    "remainingBudgetUsd": 0.794011
+  },
+  "notes": [
+    "No full library generated.",
+    "No provider invoice available; failed Gemini holds are conservative."
+  ]
+}

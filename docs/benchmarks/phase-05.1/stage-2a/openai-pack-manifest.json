@@ -1,0 +1,829 @@
+{
+  "format": "fableon.generated-folk-pack",
+  "version": 1,
+  "id": "openai-folk-pilot",
+  "title": "Stage 2A OpenAI artisan parts",
+  "provider": "openai",
+  "model": "gpt-image-2.6-sunburst",
+  "experimentId": "phase-05.1-folk-pilot",
+  "generationMode": "provider-generated",
+  "aiGeneration": {
+    "status": "generated",
+    "reason": ""
+  },
+  "characters": {},
+  "backgrounds": {},
+  "parts": [
+    {
+      "id": "artisan_head",
+      "file": "parts/artisan_head.png",
+      "offsetX": 277.85,
+      "offsetY": 15.550000000000011,
+      "width": 360,
+      "height": 423,
+      "sha256": "9ac031cd4a6a5f44654535eadd856e7af17f9dda79840f46c39fdbbecef86c1a",
+      "bytes": 1077808,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 427,
+        "y": 921
+      },
+      "targetPivot": {
+        "x": 470,
+        "y": 430
+      },
+      "scale": 0.45,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.3430890957446808,
+        "warnings": [
+          "black-halo: 138693 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 235222 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "OpenAI reference-guided part; transparent output trimmed and registered to the Stage 2A diagnostic rig."
+      ]
+    },
+    {
+      "id": "artisan_torso",
+      "file": "parts/artisan_torso.png",
+      "offsetX": 243.1,
+      "offsetY": 289.95,
+      "width": 392,
+      "height": 532,
+      "sha256": "60a4c058d755b54b0e782577aa602ad687f31f6d73205f94ecf4cea7453dc708",
+      "bytes": 1005018,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 358,
+        "y": 491
+      },
+      "targetPivot": {
+        "x": 440,
+        "y": 560
+      },
+      "scale": 0.55,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.37138491570128856,
+        "warnings": [
+          "black-halo: 98261 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 252635 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "OpenAI reference-guided part; transparent output trimmed and registered to the Stage 2A diagnostic rig."
+      ]
+    },
+    {
+      "id": "artisan_nearUpperArm",
+      "file": "parts/artisan_nearUpperArm.png",
+      "offsetX": 436.94,
+      "offsetY": 480.76,
+      "width": 122,
+      "height": 207,
+      "sha256": "ac57ce33c88c850d6d79ce6bf63cc443a75fb16b8aead4f2cdbad9843a64ebac",
+      "bytes": 509203,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 423,
+        "y": 42
+      },
+      "targetPivot": {
+        "x": 530,
+        "y": 490
+      },
+      "scale": 0.22,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.4386147169521469,
+        "warnings": [
+          "black-halo: 53189 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 190092 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "OpenAI reference-guided part; transparent output trimmed and registered to the Stage 2A diagnostic rig."
+      ]
+    },
+    {
+      "id": "artisan_nearForearm",
+      "file": "parts/artisan_nearForearm.png",
+      "offsetX": 474.8,
+      "offsetY": 640.4,
+      "width": 98,
+      "height": 186,
+      "sha256": "9157fb78a326e11c87841487f70f1397a6b6640b54944c4fff75a581255bca6b",
+      "bytes": 429599,
+      "origin": "provider-generated",
+      "provider": "openai",
+      "model": "gpt-image-2.6-sunburst",
+      "reviewStatus": "pending_artistic_approval",
+      "sourcePivot": {
+        "x": 160,
+        "y": 180
+      },
+      "targetPivot": {
+        "x": 510,
+        "y": 680
+      },
+      "scale": 0.22,
+      "alpha": {
+        "hasAlpha": true,
+        "opaqueRatio": 0,
+        "transparentRatio": 0.5645023482898612,
+        "warnings": [
+          "black-halo: 42777 semi-transparent near-black fringe pixels were detected. This may be intentional linework or an alpha fringe artifact.",
+          "transparent-color-residue: 159550 fully transparent pixels retain RGB color. Fableon preserves them rather than destructively keying; they should not affect straight-alpha compositing."
+        ]
+      },
+      "repairHistory": [
+        "OpenAI reference-guided part; transparent output trimmed and registered to the Stage 2A diagnostic rig."
+      ]
+    }
+  ],
+  "missingSlots": [
+    "artisan_turbanTail",
+    "artisan_farHand",
+    "artisan_farForearm",
+    "artisan_farUpperArm",
+    "artisan_farDhoti",
+    "artisan_farThigh",
+    "artisan_farShin",
+    "artisan_farFoot",
+    "artisan_pelvis",
+    "artisan_nearDhoti",
+    "artisan_nearThigh",
+    "artisan_nearShin",
+    "artisan_nearFoot",
+    "artisan_sash",
+    "artisan_necklace",
+    "artisan_neck",
+    "artisan_eye",
+    "artisan_eyelid",
+    "artisan_brow",
+    "artisan_mustache",
+    "artisan_earring",
+    "artisan_turban",
+    "artisan_shoulderSash",
+    "artisan_handOpen",
+    "artisan_handGrip",
+    "horse_tailTuft",
+    "horse_tailBase",
+    "horse_farFrontHoof",
+    "horse_farFrontLower",
+    "horse_farFrontUpper",
+    "horse_farHindHoof",
+    "horse_farHindLower",
+    "horse_farHindUpper",
+    "horse_torso",
+    "horse_mane",
+    "horse_saddleBlanket",
+    "horse_neck",
+    "horse_harnessCollar",
+    "horse_harnessStrap",
+    "horse_farEar",
+    "horse_harnessAnchor",
+    "horse_head",
+    "horse_eye",
+    "horse_forelock",
+    "horse_nearEar",
+    "horse_bridle",
+    "horse_nearFrontUpper",
+    "horse_nearFrontLower",
+    "horse_nearFrontHoof",
+    "horse_nearHindUpper",
+    "horse_nearHindLower",
+    "horse_nearHindHoof",
+    "cart_farWheel",
+    "cart_shafts",
+    "cart_cartBody",
+    "cart_nearWheel",
+    "bell_bell"
+  ],
+  "rigManifest": {
+    "artisan_turbanTail": {
+      "actor": "artisan",
+      "nodeId": "turbanTail",
+      "parentNodeId": "head",
+      "pivot": {
+        "x": 430,
+        "y": 320
+      },
+      "drawOrder": 0
+    },
+    "artisan_farHand": {
+      "actor": "artisan",
+      "nodeId": "farHand",
+      "parentNodeId": "farForearm",
+      "pivot": {
+        "x": 442,
+        "y": 742
+      },
+      "drawOrder": 2
+    },
+    "artisan_farForearm": {
+      "actor": "artisan",
+      "nodeId": "farForearm",
+      "parentNodeId": "farUpperArm",
+      "pivot": {
+        "x": 432,
+        "y": 610
+      },
+      "drawOrder": 3
+    },
+    "artisan_farUpperArm": {
+      "actor": "artisan",
+      "nodeId": "farUpperArm",
+      "parentNodeId": "torso",
+      "pivot": {
+        "x": 415,
+        "y": 475
+      },
+      "drawOrder": 4
+    },
+    "artisan_farDhoti": {
+      "actor": "artisan",
+      "nodeId": "farDhoti",
+      "parentNodeId": "farThigh",
+      "pivot": {
+        "x": 405,
+        "y": 670
+      },
+      "drawOrder": 5
+    },
+    "artisan_farThigh": {
+      "actor": "artisan",
+      "nodeId": "farThigh",
+      "parentNodeId": "pelvis",
+      "pivot": {
+        "x": 405,
+        "y": 670
+      },
+      "drawOrder": 6
+    },
+    "artisan_farShin": {
+      "actor": "artisan",
+      "nodeId": "farShin",
+      "parentNodeId": "farThigh",
+      "pivot": {
+        "x": 402,
+        "y": 824
+      },
+      "drawOrder": 7
+    },
+    "artisan_farFoot": {
+      "actor": "artisan",
+      "nodeId": "farFoot",
+      "parentNodeId": "farShin",
+      "pivot": {
+        "x": 398,
+        "y": 978
+      },
+      "drawOrder": 8
+    },
+    "artisan_pelvis": {
+      "actor": "artisan",
+      "nodeId": "pelvis",
+      "parentNodeId": null,
+      "pivot": {
+        "x": 440,
+        "y": 660
+      },
+      "drawOrder": 10
+    },
+    "artisan_nearDhoti": {
+      "actor": "artisan",
+      "nodeId": "nearDhoti",
+      "parentNodeId": "nearThigh",
+      "pivot": {
+        "x": 470,
+        "y": 670
+      },
+      "drawOrder": 12
+    },
+    "artisan_nearThigh": {
+      "actor": "artisan",
+      "nodeId": "nearThigh",
+      "parentNodeId": "pelvis",
+      "pivot": {
+        "x": 470,
+        "y": 670
+      },
+      "drawOrder": 13
+    },
+    "artisan_nearShin": {
+      "actor": "artisan",
+      "nodeId": "nearShin",
+      "parentNodeId": "nearThigh",
+      "pivot": {
+        "x": 476,
+        "y": 824
+      },
+      "drawOrder": 14
+    },
+    "artisan_nearFoot": {
+      "actor": "artisan",
+      "nodeId": "nearFoot",
+      "parentNodeId": "nearShin",
+      "pivot": {
+        "x": 480,
+        "y": 978
+      },
+      "drawOrder": 15
+    },
+    "artisan_torso": {
+      "actor": "artisan",
+      "nodeId": "torso",
+      "parentNodeId": "pelvis",
+      "pivot": {
+        "x": 440,
+        "y": 540
+      },
+      "drawOrder": 20
+    },
+    "artisan_sash": {
+      "actor": "artisan",
+      "nodeId": "sash",
+      "parentNodeId": "torso",
+      "pivot": {
+        "x": 450,
+        "y": 648
+      },
+      "drawOrder": 22
+    },
+    "artisan_necklace": {
+      "actor": "artisan",
+      "nodeId": "necklace",
+      "parentNodeId": "torso",
+      "pivot": {
+        "x": 476,
+        "y": 450
+      },
+      "drawOrder": 24
+    },
+    "artisan_neck": {
+      "actor": "artisan",
+      "nodeId": "neck",
+      "parentNodeId": "torso",
+      "pivot": {
+        "x": 470,
+        "y": 440
+      },
+      "drawOrder": 25
+    },
+    "artisan_head": {
+      "actor": "artisan",
+      "nodeId": "head",
+      "parentNodeId": "neck",
+      "pivot": {
+        "x": 470,
+        "y": 340
+      },
+      "drawOrder": 30
+    },
+    "artisan_eye": {
+      "actor": "artisan",
+      "nodeId": "eye",
+      "parentNodeId": "head",
+      "pivot": {
+        "x": 500,
+        "y": 305
+      },
+      "drawOrder": 31
+    },
+    "artisan_eyelid": {
+      "actor": "artisan",
+      "nodeId": "eyelid",
+      "parentNodeId": "head",
+      "pivot": {
+        "x": 500,
+        "y": 305
+      },
+      "drawOrder": 32
+    },
+    "artisan_brow": {
+      "actor": "artisan",
+      "nodeId": "brow",
+      "parentNodeId": "head",
+      "pivot": {
+        "x": 500,
+        "y": 286
+      },
+      "drawOrder": 33
+    },
+    "artisan_mustache": {
+      "actor": "artisan",
+      "nodeId": "mustache",
+      "parentNodeId": "head",
+      "pivot": {
+        "x": 530,
+        "y": 355
+      },
+      "drawOrder": 34
+    },
+    "artisan_earring": {
+      "actor": "artisan",
+      "nodeId": "earring",
+      "parentNodeId": "head",
+      "pivot": {
+        "x": 444,
+        "y": 350
+      },
+      "drawOrder": 35
+    },
+    "artisan_turban": {
+      "actor": "artisan",
+      "nodeId": "turban",
+      "parentNodeId": "head",
+      "pivot": {
+        "x": 470,
+        "y": 250
+      },
+      "drawOrder": 36
+    },
+    "artisan_shoulderSash": {
+      "actor": "artisan",
+      "nodeId": "shoulderSash",
+      "parentNodeId": "torso",
+      "pivot": {
+        "x": 500,
+        "y": 440
+      },
+      "drawOrder": 37
+    },
+    "artisan_nearUpperArm": {
+      "actor": "artisan",
+      "nodeId": "nearUpperArm",
+      "parentNodeId": "torso",
+      "pivot": {
+        "x": 508,
+        "y": 470
+      },
+      "drawOrder": 40
+    },
+    "artisan_nearForearm": {
+      "actor": "artisan",
+      "nodeId": "nearForearm",
+      "parentNodeId": "nearUpperArm",
+      "pivot": {
+        "x": 532,
+        "y": 610
+      },
+      "drawOrder": 41
+    },
+    "artisan_handOpen": {
+      "actor": "artisan",
+      "nodeId": "handOpen",
+      "parentNodeId": "nearForearm",
+      "pivot": {
+        "x": 548,
+        "y": 742
+      },
+      "drawOrder": 42
+    },
+    "artisan_handGrip": {
+      "actor": "artisan",
+      "nodeId": "handGrip",
+      "parentNodeId": "nearForearm",
+      "pivot": {
+        "x": 548,
+        "y": 742
+      },
+      "drawOrder": 43
+    },
+    "horse_tailTuft": {
+      "actor": "horse",
+      "nodeId": "tailTuft",
+      "parentNodeId": "tailBase",
+      "pivot": {
+        "x": 320,
+        "y": 560
+      },
+      "drawOrder": 1
+    },
+    "horse_tailBase": {
+      "actor": "horse",
+      "nodeId": "tailBase",
+      "parentNodeId": "torso",
+      "pivot": {
+        "x": 452,
+        "y": 380
+      },
+      "drawOrder": 2
+    },
+    "horse_farFrontHoof": {
+      "actor": "horse",
+      "nodeId": "farFrontHoof",
+      "parentNodeId": "farFrontLower",
+      "pivot": {
+        "x": 796,
+        "y": 824
+      },
+      "drawOrder": 3
+    },
+    "horse_farFrontLower": {
+      "actor": "horse",
+      "nodeId": "farFrontLower",
+      "parentNodeId": "farFrontUpper",
+      "pivot": {
+        "x": 796,
+        "y": 680
+      },
+      "drawOrder": 4
+    },
+    "horse_farFrontUpper": {
+      "actor": "horse",
+      "nodeId": "farFrontUpper",
+      "parentNodeId": "torso",
+      "pivot": {
+        "x": 792,
+        "y": 520
+      },
+      "drawOrder": 5
+    },
+    "horse_farHindHoof": {
+      "actor": "horse",
+      "nodeId": "farHindHoof",
+      "parentNodeId": "farHindLower",
+      "pivot": {
+        "x": 458,
+        "y": 824
+      },
+      "drawOrder": 6
+    },
+    "horse_farHindLower": {
+      "actor": "horse",
+      "nodeId": "farHindLower",
+      "parentNodeId": "farHindUpper",
+      "pivot": {
+        "x": 458,
+        "y": 680
+      },
+      "drawOrder": 7
+    },
+    "horse_farHindUpper": {
+      "actor": "horse",
+      "nodeId": "farHindUpper",
+      "parentNodeId": "torso",
+      "pivot": {
+        "x": 452,
+        "y": 520
+      },
+      "drawOrder": 8
+    },
+    "horse_torso": {
+      "actor": "horse",
+      "nodeId": "torso",
+      "parentNodeId": null,
+      "pivot": {
+        "x": 650,
+        "y": 430
+      },
+      "drawOrder": 10
+    },
+    "horse_mane": {
+      "actor": "horse",
+      "nodeId": "mane",
+      "parentNodeId": "torso",
+      "pivot": {
+        "x": 930,
+        "y": 320
+      },
+      "drawOrder": 12
+    },
+    "horse_saddleBlanket": {
+      "actor": "horse",
+      "nodeId": "saddleBlanket",
+      "parentNodeId": "torso",
+      "pivot": {
+        "x": 700,
+        "y": 400
+      },
+      "drawOrder": 14
+    },
+    "horse_neck": {
+      "actor": "horse",
+      "nodeId": "neck",
+      "parentNodeId": "torso",
+      "pivot": {
+        "x": 880,
+        "y": 400
+      },
+      "drawOrder": 15
+    },
+    "horse_harnessCollar": {
+      "actor": "horse",
+      "nodeId": "harnessCollar",
+      "parentNodeId": "torso",
+      "pivot": {
+        "x": 900,
+        "y": 430
+      },
+      "drawOrder": 16
+    },
+    "horse_harnessStrap": {
+      "actor": "horse",
+      "nodeId": "harnessStrap",
+      "parentNodeId": "torso",
+      "pivot": {
+        "x": 690,
+        "y": 500
+      },
+      "drawOrder": 17
+    },
+    "horse_farEar": {
+      "actor": "horse",
+      "nodeId": "farEar",
+      "parentNodeId": "head",
+      "pivot": {
+        "x": 1035,
+        "y": 175
+      },
+      "drawOrder": 18
+    },
+    "horse_harnessAnchor": {
+      "actor": "horse",
+      "nodeId": "harnessAnchor",
+      "parentNodeId": "torso",
+      "pivot": {
+        "x": 930,
+        "y": 452
+      },
+      "drawOrder": 19
+    },
+    "horse_head": {
+      "actor": "horse",
+      "nodeId": "head",
+      "parentNodeId": "neck",
+      "pivot": {
+        "x": 1060,
+        "y": 270
+      },
+      "drawOrder": 20
+    },
+    "horse_eye": {
+      "actor": "horse",
+      "nodeId": "eye",
+      "parentNodeId": "head",
+      "pivot": {
+        "x": 1068,
+        "y": 270
+      },
+      "drawOrder": 22
+    },
+    "horse_forelock": {
+      "actor": "horse",
+      "nodeId": "forelock",
+      "parentNodeId": "head",
+      "pivot": {
+        "x": 1050,
+        "y": 220
+      },
+      "drawOrder": 23
+    },
+    "horse_nearEar": {
+      "actor": "horse",
+      "nodeId": "nearEar",
+      "parentNodeId": "head",
+      "pivot": {
+        "x": 1060,
+        "y": 170
+      },
+      "drawOrder": 24
+    },
+    "horse_bridle": {
+      "actor": "horse",
+      "nodeId": "bridle",
+      "parentNodeId": "head",
+      "pivot": {
+        "x": 1090,
+        "y": 290
+      },
+      "drawOrder": 25
+    },
+    "horse_nearFrontUpper": {
+      "actor": "horse",
+      "nodeId": "nearFrontUpper",
+      "parentNodeId": "torso",
+      "pivot": {
+        "x": 860,
+        "y": 520
+      },
+      "drawOrder": 40
+    },
+    "horse_nearFrontLower": {
+      "actor": "horse",
+      "nodeId": "nearFrontLower",
+      "parentNodeId": "nearFrontUpper",
+      "pivot": {
+        "x": 866,
+        "y": 680
+      },
+      "drawOrder": 41
+    },
+    "horse_nearFrontHoof": {
+      "actor": "horse",
+      "nodeId": "nearFrontHoof",
+      "parentNodeId": "nearFrontLower",
+      "pivot": {
+        "x": 866,
+        "y": 824
+      },
+      "drawOrder": 42
+    },
+    "horse_nearHindUpper": {
+      "actor": "horse",
+      "nodeId": "nearHindUpper",
+      "parentNodeId": "torso",
+      "pivot": {
+        "x": 520,
+        "y": 520
+      },
+      "drawOrder": 45
+    },
+    "horse_nearHindLower": {
+      "actor": "horse",
+      "nodeId": "nearHindLower",
+      "parentNodeId": "nearHindUpper",
+      "pivot": {
+        "x": 516,
+        "y": 680
+      },
+      "drawOrder": 46
+    },
+    "horse_nearHindHoof": {
+      "actor": "horse",
+      "nodeId": "nearHindHoof",
+      "parentNodeId": "nearHindLower",
+      "pivot": {
+        "x": 516,
+        "y": 824
+      },
+      "drawOrder": 47
+    },
+    "cart_farWheel": {
+      "actor": "cart",
+      "nodeId": "farWheel",
+      "parentNodeId": "cartBody",
+      "pivot": {
+        "x": 580,
+        "y": 600
+      },
+      "drawOrder": 2
+    },
+    "cart_shafts": {
+      "actor": "cart",
+      "nodeId": "shafts",
+      "parentNodeId": "cartBody",
+      "pivot": {
+        "x": 610,
+        "y": 430
+      },
+      "drawOrder": 5
+    },
+    "cart_cartBody": {
+      "actor": "cart",
+      "nodeId": "cartBody",
+      "parentNodeId": null,
+      "pivot": {
+        "x": 360,
+        "y": 380
+      },
+      "drawOrder": 10
+    },
+    "cart_nearWheel": {
+      "actor": "cart",
+      "nodeId": "nearWheel",
+      "parentNodeId": "cartBody",
+      "pivot": {
+        "x": 250,
+        "y": 590
+      },
+      "drawOrder": 12
+    },
+    "bell_bell": {
+      "actor": "bell",
+      "nodeId": "bell",
+      "parentNodeId": null,
+      "pivot": {
+        "x": 90,
+        "y": 16
+      },
+      "drawOrder": 1
+    }
+  }
+}

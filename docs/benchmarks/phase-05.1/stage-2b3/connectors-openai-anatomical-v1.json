@@ -1,0 +1,1300 @@
+{
+  "format": "fableon.connector-rig",
+  "version": 1,
+  "provider": "openai",
+  "generatedAt": "2026-11-10T17:03:08.568Z",
+  "sourcePack": "outputs/folk-provider-benchmark/stage-2b/openai/pack/manifest.json",
+  "rig": {
+    "id": "artisan_openai_anatomical_v1",
+    "rootPartId": "artisan_pelvis",
+    "parts": [
+      {
+        "id": "artisan_turbanTail",
+        "rigNodeId": "turbanTail",
+        "partId": "artisan_turbanTail",
+        "drawOrder": 0,
+        "crop": {
+          "x": 344.2794871794872,
+          "y": 304.85,
+          "width": 171,
+          "height": 303,
+          "sourceWidth": 330.1485148514851,
+          "sourceHeight": 585
+        },
+        "scale": 0.517948717948718,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.5012895486579696,
+            "y": 0.049999999999999926,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_head",
+          "parentConnector": "attach_turbanTail",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_farHand",
+        "rigNodeId": "farHand",
+        "partId": "artisan_farHand",
+        "drawOrder": 5,
+        "crop": {
+          "x": 437.85075376884424,
+          "y": 701.75,
+          "width": 69,
+          "height": 115,
+          "sourceWidth": 358.2,
+          "sourceHeight": 597
+        },
+        "scale": 0.19262981574539365,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.06013400335008344,
+            "y": 0.35,
+            "kind": "joint"
+          },
+          {
+            "id": "wrist",
+            "x": 0.06013400335008344,
+            "y": 0.35,
+            "kind": "joint"
+          },
+          {
+            "id": "grip",
+            "x": 0.06013400335008344,
+            "y": 0.6108695652173913,
+            "kind": "grip"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_farForearm",
+          "parentConnector": "attach_farHand",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -70,
+            "max": 70
+          }
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_farForearm",
+        "rigNodeId": "farForearm",
+        "partId": "artisan_farForearm",
+        "drawOrder": 3,
+        "crop": {
+          "x": 363.06776859504134,
+          "y": 599.6,
+          "width": 138,
+          "height": 208,
+          "sourceWidth": 401.3942307692308,
+          "sourceHeight": 605
+        },
+        "scale": 0.343801652892562,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.4995089232243381,
+            "y": 0.04999999999999989,
+            "kind": "joint"
+          },
+          {
+            "id": "elbow",
+            "x": 0.4995089232243381,
+            "y": 0.04999999999999989,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_farHand",
+            "x": 0.5719726913402802,
+            "y": 0.6846153846153845,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_farElbowCover",
+            "x": 0.4995089232243381,
+            "y": 0.04999999999999989,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_farUpperArm",
+          "parentConnector": "attach_farForearm",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -140,
+            "max": 5
+          }
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_farUpperArm",
+        "rigNodeId": "farUpperArm",
+        "partId": "artisan_farUpperArm",
+        "drawOrder": 2,
+        "crop": {
+          "x": 340.6443719412724,
+          "y": 464.25,
+          "width": 149,
+          "height": 215,
+          "sourceWidth": 424.8232558139535,
+          "sourceHeight": 613
+        },
+        "scale": 0.35073409461663946,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.49903106079682935,
+            "y": 0.05,
+            "kind": "joint"
+          },
+          {
+            "id": "shoulder",
+            "x": 0.49903106079682935,
+            "y": 0.05,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_farForearm",
+            "x": 0.613125020528373,
+            "y": 0.6779069767441861,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_torso",
+          "parentConnector": "attach_farUpperArm",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -95,
+            "max": 95
+          }
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_farDhoti",
+        "rigNodeId": "farDhoti",
+        "partId": "artisan_farDhoti",
+        "drawOrder": 9,
+        "crop": {
+          "x": 312.87931034482756,
+          "y": 656.35,
+          "width": 184,
+          "height": 273,
+          "sourceWidth": 410.46153846153845,
+          "sourceHeight": 609
+        },
+        "scale": 0.4482758620689655,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.5006559220389807,
+            "y": 0.04999999999999992,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_farThigh",
+          "parentConnector": "attach_farDhoti",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_farThigh",
+        "rigNodeId": "farThigh",
+        "partId": "artisan_farThigh",
+        "drawOrder": 6,
+        "crop": {
+          "x": 315.35611510791364,
+          "y": 658.3,
+          "width": 179,
+          "height": 234,
+          "sourceWidth": 425.3162393162393,
+          "sourceHeight": 556
+        },
+        "scale": 0.420863309352518,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.500803826212773,
+            "y": 0.0500000000000002,
+            "kind": "joint"
+          },
+          {
+            "id": "hip",
+            "x": 0.500803826212773,
+            "y": 0.0500000000000002,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_farDhoti",
+            "x": 0.500803826212773,
+            "y": 0.0500000000000002,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_farShin",
+            "x": 0.48404404967646014,
+            "y": 0.7081196581196583,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_pelvis",
+          "parentConnector": "attach_farThigh",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -45,
+            "max": 45
+          }
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_farShin",
+        "rigNodeId": "farShin",
+        "partId": "artisan_farShin",
+        "drawOrder": 7,
+        "crop": {
+          "x": 326.1972176759411,
+          "y": 800.9,
+          "width": 152,
+          "height": 231,
+          "sourceWidth": 402.0432900432901,
+          "sourceHeight": 611
+        },
+        "scale": 0.3780687397708674,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.49870251528986126,
+            "y": 0.1000000000000001,
+            "kind": "joint"
+          },
+          {
+            "id": "knee",
+            "x": 0.49870251528986126,
+            "y": 0.1000000000000001,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_farFoot",
+            "x": 0.472386725816177,
+            "y": 0.7666666666666667,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_farThigh",
+          "parentConnector": "attach_farShin",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -5,
+            "max": 85
+          }
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_farFoot",
+        "rigNodeId": "farFoot",
+        "partId": "artisan_farFoot",
+        "drawOrder": 8,
+        "crop": {
+          "x": 370.9145,
+          "y": 942.9,
+          "width": 271,
+          "height": 117,
+          "sourceWidth": 463.2478632478633,
+          "sourceHeight": 200
+        },
+        "scale": 0.585,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.09994649446494475,
+            "y": 0.3000000000000002,
+            "kind": "joint"
+          },
+          {
+            "id": "ankle",
+            "x": 0.09994649446494475,
+            "y": 0.3000000000000002,
+            "kind": "joint"
+          },
+          {
+            "id": "sole",
+            "x": 0.09994649446494475,
+            "y": 0.5393162393162395,
+            "kind": "contact"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_farShin",
+          "parentConnector": "attach_farFoot",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -35,
+            "max": 35
+          }
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_pelvis",
+        "rigNodeId": "pelvis",
+        "partId": "artisan_pelvis",
+        "drawOrder": 11,
+        "crop": {
+          "x": 328.771052631579,
+          "y": 640.7,
+          "width": 222,
+          "height": 193,
+          "sourceWidth": 655.6476683937824,
+          "sourceHeight": 570
+        },
+        "scale": 0.3385964912280702,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.501031294452347,
+            "y": 0.09999999999999977,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_farThigh",
+            "x": 0.3433736367946893,
+            "y": 0.15181347150259045,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_nearThigh",
+            "x": 0.636166429587482,
+            "y": 0.15181347150259045,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_torso",
+            "x": 0.501031294452347,
+            "y": -0.5217616580310883,
+            "kind": "joint"
+          }
+        ],
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_nearDhoti",
+        "rigNodeId": "nearDhoti",
+        "partId": "artisan_nearDhoti",
+        "drawOrder": 15,
+        "crop": {
+          "x": 372.305510534846,
+          "y": 655.75,
+          "width": 195,
+          "height": 285,
+          "sourceWidth": 422.1578947368421,
+          "sourceHeight": 617
+        },
+        "scale": 0.4619124797406807,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.5009973818725846,
+            "y": 0.05,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_nearThigh",
+          "parentConnector": "attach_nearDhoti",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_nearThigh",
+        "rigNodeId": "nearThigh",
+        "partId": "artisan_nearThigh",
+        "drawOrder": 12,
+        "crop": {
+          "x": 379.0921052631579,
+          "y": 658.25,
+          "width": 182,
+          "height": 235,
+          "sourceWidth": 441.4468085106383,
+          "sourceHeight": 570
+        },
+        "scale": 0.41228070175438597,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.49949392712550594,
+            "y": 0.05,
+            "kind": "joint"
+          },
+          {
+            "id": "hip",
+            "x": 0.49949392712550594,
+            "y": 0.05,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_nearDhoti",
+            "x": 0.49949392712550594,
+            "y": 0.05,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_nearShin",
+            "x": 0.532460960092539,
+            "y": 0.7053191489361702,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_pelvis",
+          "parentConnector": "attach_nearThigh",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -45,
+            "max": 45
+          }
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_nearShin",
+        "rigNodeId": "nearShin",
+        "partId": "artisan_nearShin",
+        "drawOrder": 13,
+        "crop": {
+          "x": 398.4118616144975,
+          "y": 800.8,
+          "width": 155,
+          "height": 232,
+          "sourceWidth": 405.53879310344826,
+          "sourceHeight": 607
+        },
+        "scale": 0.38220757825370677,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.5005686347451772,
+            "y": 0.1000000000000002,
+            "kind": "joint"
+          },
+          {
+            "id": "knee",
+            "x": 0.5005686347451772,
+            "y": 0.1000000000000002,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_nearFoot",
+            "x": 0.5263750863580805,
+            "y": 0.7637931034482761,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_nearThigh",
+          "parentConnector": "attach_nearShin",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -5,
+            "max": 85
+          }
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_nearFoot",
+        "rigNodeId": "nearFoot",
+        "partId": "artisan_nearFoot",
+        "drawOrder": 14,
+        "crop": {
+          "x": 452.31306532663314,
+          "y": 942.3,
+          "width": 277,
+          "height": 119,
+          "sourceWidth": 463.21848739495795,
+          "sourceHeight": 199
+        },
+        "scale": 0.5979899497487438,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.09995283275583705,
+            "y": 0.3000000000000004,
+            "kind": "joint"
+          },
+          {
+            "id": "ankle",
+            "x": 0.09995283275583705,
+            "y": 0.3000000000000004,
+            "kind": "joint"
+          },
+          {
+            "id": "sole",
+            "x": 0.09995283275583705,
+            "y": 0.5352941176470593,
+            "kind": "contact"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_nearShin",
+          "parentConnector": "attach_nearFoot",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -35,
+            "max": 35
+          }
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_torso",
+        "rigNodeId": "torso",
+        "partId": "artisan_torso",
+        "drawOrder": 20,
+        "crop": {
+          "x": 329.531914893617,
+          "y": 380,
+          "width": 221,
+          "height": 320,
+          "sourceWidth": 649.1875,
+          "sourceHeight": 940
+        },
+        "scale": 0.3404255319148936,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.49985558871666513,
+            "y": 0.5,
+            "kind": "joint"
+          },
+          {
+            "id": "waist",
+            "x": 0.49985558871666513,
+            "y": 0.5,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_farUpperArm",
+            "x": 0.3867334167709638,
+            "y": 0.296875,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_sash",
+            "x": 0.5451044574949457,
+            "y": 0.8375,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_necklace",
+            "x": 0.6627515163184751,
+            "y": 0.21875,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_neck",
+            "x": 0.6356021950515068,
+            "y": 0.1875,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_shoulderSash",
+            "x": 0.7713488013863484,
+            "y": 0.1875,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_nearUpperArm",
+            "x": 0.8075478964089728,
+            "y": 0.28125,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_pelvis",
+          "parentConnector": "attach_torso",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_sash",
+        "rigNodeId": "sash",
+        "partId": "artisan_sash",
+        "drawOrder": 22,
+        "crop": {
+          "x": 355.30043859649123,
+          "y": 539.5,
+          "width": 189,
+          "height": 217,
+          "sourceWidth": 595.741935483871,
+          "sourceHeight": 684
+        },
+        "scale": 0.3172514619883041,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.5010558804418453,
+            "y": 0.5,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_torso",
+          "parentConnector": "attach_sash",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_necklace",
+        "rigNodeId": "necklace",
+        "partId": "artisan_necklace",
+        "drawOrder": 26,
+        "crop": {
+          "x": 429.34584980237156,
+          "y": 439.68,
+          "width": 93,
+          "height": 86,
+          "sourceWidth": 547.186046511628,
+          "sourceHeight": 506.00000000000006
+        },
+        "scale": 0.16996047430830039,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.5016575290067574,
+            "y": 0.11999999999999993,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_torso",
+          "parentConnector": "attach_necklace",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_neck",
+        "rigNodeId": "neck",
+        "partId": "artisan_neck",
+        "drawOrder": 25,
+        "crop": {
+          "x": 416.2906976744186,
+          "y": 328.4,
+          "width": 107,
+          "height": 124,
+          "sourceWidth": 445.258064516129,
+          "sourceHeight": 516
+        },
+        "scale": 0.24031007751937986,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.5019560965007608,
+            "y": 0.9000000000000001,
+            "kind": "joint"
+          },
+          {
+            "id": "base",
+            "x": 0.5019560965007608,
+            "y": 0.9000000000000001,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_head",
+            "x": 0.5019560965007608,
+            "y": 0.09354838709677438,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_torso",
+          "parentConnector": "attach_neck",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -35,
+            "max": 35
+          }
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_head",
+        "rigNodeId": "head",
+        "partId": "artisan_head",
+        "drawOrder": 30,
+        "crop": {
+          "x": 353.1842105263158,
+          "y": 123.80000000000004,
+          "width": 234,
+          "height": 230,
+          "sourceWidth": 579.9130434782609,
+          "sourceHeight": 570
+        },
+        "scale": 0.40350877192982454,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.499212775528565,
+            "y": 0.9399999999999998,
+            "kind": "joint"
+          },
+          {
+            "id": "neck",
+            "x": 0.499212775528565,
+            "y": 0.9399999999999998,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_turbanTail",
+            "x": 0.3282726045883941,
+            "y": 0.8530434782608693,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_eye",
+            "x": 0.6915204678362573,
+            "y": 0.3530434782608694,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_eyelid",
+            "x": 0.6915204678362573,
+            "y": 0.3530434782608694,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_brow",
+            "x": 0.6915204678362573,
+            "y": 0.26608695652173897,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_mustache",
+            "x": 0.7983580746738642,
+            "y": 0.5486956521739129,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_earring",
+            "x": 0.22143499775078726,
+            "y": 0.483478260869565,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_turban",
+            "x": 0.499212775528565,
+            "y": 0.5486956521739129,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_neck",
+          "parentConnector": "attach_head",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -35,
+            "max": 35
+          }
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_eye",
+        "rigNodeId": "eye",
+        "partId": "artisan_eye",
+        "drawOrder": 31,
+        "crop": {
+          "x": 455.46975088967974,
+          "y": 171,
+          "width": 119,
+          "height": 68,
+          "sourceWidth": 491.75,
+          "sourceHeight": 281
+        },
+        "scale": 0.24199288256227758,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.5002541942043719,
+            "y": 0.5,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_head",
+          "parentConnector": "attach_eye",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_eyelid",
+        "rigNodeId": "eyelid",
+        "partId": "artisan_eyelid",
+        "drawOrder": 32,
+        "crop": {
+          "x": 451.67175572519085,
+          "y": 171,
+          "width": 127,
+          "height": 68,
+          "sourceWidth": 489.32352941176475,
+          "sourceHeight": 262
+        },
+        "scale": 0.2595419847328244,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.4986475927150327,
+            "y": 0.5,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_head",
+          "parentConnector": "attach_eyelid",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_brow",
+        "rigNodeId": "brow",
+        "partId": "artisan_brow",
+        "drawOrder": 33,
+        "crop": {
+          "x": 439.22549019607845,
+          "y": 155.5,
+          "width": 152,
+          "height": 59,
+          "sourceWidth": 525.5593220338983,
+          "sourceHeight": 203.99999999999997
+        },
+        "scale": 0.28921568627450983,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.4985165118679049,
+            "y": 0.5,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_head",
+          "parentConnector": "attach_brow",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_mustache",
+        "rigNodeId": "mustache",
+        "partId": "artisan_mustache",
+        "drawOrder": 34,
+        "crop": {
+          "x": 464.89233576642334,
+          "y": 210.5,
+          "width": 150,
+          "height": 79,
+          "sourceWidth": 520.253164556962,
+          "sourceHeight": 274
+        },
+        "scale": 0.28832116788321166,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.5007177615571777,
+            "y": 0.5,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_head",
+          "parentConnector": "attach_mustache",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_earring",
+        "rigNodeId": "earring",
+        "partId": "artisan_earring",
+        "drawOrder": 35,
+        "crop": {
+          "x": 364.8455598455598,
+          "y": 227,
+          "width": 80,
+          "height": 80,
+          "sourceWidth": 518,
+          "sourceHeight": 518
+        },
+        "scale": 0.15444015444015444,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.5019305019305023,
+            "y": 0.1,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_head",
+          "parentConnector": "attach_earring",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_turban",
+        "rigNodeId": "turban",
+        "partId": "artisan_turban",
+        "drawOrder": 36,
+        "crop": {
+          "x": 369.20740103270225,
+          "y": 94.29999999999998,
+          "width": 202,
+          "height": 173,
+          "sourceWidth": 678.393063583815,
+          "sourceHeight": 581
+        },
+        "scale": 0.2977624784853701,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.4989732622143453,
+            "y": 0.9000000000000001,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_head",
+          "parentConnector": "attach_turban",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_shoulderSash",
+        "rigNodeId": "shoulderSash",
+        "partId": "artisan_shoulderSash",
+        "drawOrder": 37,
+        "crop": {
+          "x": 447.72935779816515,
+          "y": 354,
+          "width": 105,
+          "height": 172,
+          "sourceWidth": 532.3255813953488,
+          "sourceHeight": 872
+        },
+        "scale": 0.19724770642201836,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.49781564001747475,
+            "y": 0.5,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_torso",
+          "parentConnector": "attach_shoulderSash",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_nearUpperArm",
+        "rigNodeId": "nearUpperArm",
+        "partId": "artisan_nearUpperArm",
+        "drawOrder": 18,
+        "crop": {
+          "x": 431.07636655948556,
+          "y": 458.95,
+          "width": 154,
+          "height": 221,
+          "sourceWidth": 433.42986425339365,
+          "sourceHeight": 622
+        },
+        "scale": 0.3553054662379421,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.49950411325009375,
+            "y": 0.05000000000000005,
+            "kind": "joint"
+          },
+          {
+            "id": "shoulder",
+            "x": 0.49950411325009375,
+            "y": 0.05000000000000005,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_nearForearm",
+            "x": 0.6553482690942496,
+            "y": 0.6834841628959276,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_torso",
+          "parentConnector": "attach_nearUpperArm",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -95,
+            "max": 95
+          }
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_nearForearm",
+        "rigNodeId": "nearForearm",
+        "partId": "artisan_nearForearm",
+        "drawOrder": 41,
+        "crop": {
+          "x": 462.1591666666667,
+          "y": 599.55,
+          "width": 140,
+          "height": 209,
+          "sourceWidth": 401.9138755980861,
+          "sourceHeight": 600
+        },
+        "scale": 0.34833333333333333,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.4988630952380951,
+            "y": 0.05000000000000022,
+            "kind": "joint"
+          },
+          {
+            "id": "elbow",
+            "x": 0.4988630952380951,
+            "y": 0.05000000000000022,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_handOpen",
+            "x": 0.6131488095238093,
+            "y": 0.6815789473684213,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_handGrip",
+            "x": 0.6131488095238093,
+            "y": 0.6815789473684213,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_nearElbowCover",
+            "x": 0.4988630952380951,
+            "y": 0.05000000000000022,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_nearUpperArm",
+          "parentConnector": "attach_nearForearm",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -140,
+            "max": 5
+          }
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_handOpen",
+        "rigNodeId": "handOpen",
+        "partId": "artisan_handOpen",
+        "drawOrder": 43,
+        "crop": {
+          "x": 543.8810921501706,
+          "y": 702.45,
+          "width": 69,
+          "height": 113,
+          "sourceWidth": 357.8230088495575,
+          "sourceHeight": 586
+        },
+        "scale": 0.19283276450511946,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.05969431666419397,
+            "y": 0.3499999999999996,
+            "kind": "joint"
+          },
+          {
+            "id": "wrist",
+            "x": 0.05969431666419397,
+            "y": 0.3499999999999996,
+            "kind": "joint"
+          },
+          {
+            "id": "grip",
+            "x": 0.05969431666419397,
+            "y": 0.6154867256637164,
+            "kind": "grip"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_nearForearm",
+          "parentConnector": "attach_handOpen",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -70,
+            "max": 70
+          }
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_handGrip",
+        "rigNodeId": "handGrip",
+        "partId": "artisan_handGrip",
+        "drawOrder": 44,
+        "crop": {
+          "x": 542.3633014354067,
+          "y": 704.55,
+          "width": 94,
+          "height": 107,
+          "sourceWidth": 367.21495327102804,
+          "sourceHeight": 418
+        },
+        "scale": 0.25598086124401914,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.05996487834673726,
+            "y": 0.3500000000000004,
+            "kind": "joint"
+          },
+          {
+            "id": "wrist",
+            "x": 0.05996487834673726,
+            "y": 0.3500000000000004,
+            "kind": "joint"
+          },
+          {
+            "id": "grip",
+            "x": 0.05996487834673726,
+            "y": 0.6303738317757014,
+            "kind": "grip"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_nearForearm",
+          "parentConnector": "attach_handGrip",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -70,
+            "max": 70
+          }
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_nearElbowCover",
+        "rigNodeId": "nearElbowCover",
+        "partId": "artisan_nearElbowCover",
+        "drawOrder": 42,
+        "crop": {
+          "x": 472.0879765395895,
+          "y": 565,
+          "width": 120,
+          "height": 90,
+          "sourceWidth": 454.6666666666667,
+          "sourceHeight": 341
+        },
+        "scale": 0.26392961876832843,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.4992668621700877,
+            "y": 0.5,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_nearForearm",
+          "parentConnector": "attach_nearElbowCover",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_farElbowCover",
+        "rigNodeId": "farElbowCover",
+        "partId": "artisan_farElbowCover",
+        "drawOrder": 4,
+        "crop": {
+          "x": 372.6997084548105,
+          "y": 565,
+          "width": 119,
+          "height": 90,
+          "sourceWidth": 453.52222222222224,
+          "sourceHeight": 343.00000000000006
+        },
+        "scale": 0.26239067055393583,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.49832177769066816,
+            "y": 0.5,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_farForearm",
+          "parentConnector": "attach_farElbowCover",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from openai Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      }
+    ]
+  },
+  "bell": {
+    "id": "bell",
+    "crop": {
+      "x": -72,
+      "y": -250,
+      "width": 144,
+      "height": 250,
+      "sourceWidth": 144,
+      "sourceHeight": 250
+    },
+    "connectors": [
+      {
+        "id": "grip",
+        "x": 0.5,
+        "y": 0.08,
+        "kind": "grip"
+      },
+      {
+        "id": "placement",
+        "x": 0.5,
+        "y": 1,
+        "kind": "contact"
+      }
+    ]
+  },
+  "anatomicalLandmarks": "openai-landmarks.json",
+  "calibrationStatus": "versioned-registration-unchanged-artwork-blocked"
+}

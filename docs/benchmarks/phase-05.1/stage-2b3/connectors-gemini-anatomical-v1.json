@@ -1,0 +1,1300 @@
+{
+  "format": "fableon.connector-rig",
+  "version": 1,
+  "provider": "gemini",
+  "generatedAt": "2026-11-10T16:58:29.049Z",
+  "sourcePack": "outputs/folk-provider-benchmark/stage-2b/gemini/pack/manifest.json",
+  "rig": {
+    "id": "artisan_gemini_anatomical_v1",
+    "rootPartId": "artisan_pelvis",
+    "parts": [
+      {
+        "id": "artisan_turbanTail",
+        "rigNodeId": "turbanTail",
+        "partId": "artisan_turbanTail",
+        "drawOrder": 0,
+        "crop": {
+          "x": 281.98848684210526,
+          "y": 304.85,
+          "width": 296,
+          "height": 303,
+          "sourceWidth": 593.953795379538,
+          "sourceHeight": 608
+        },
+        "scale": 0.49835526315789475,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.5000388958036984,
+            "y": 0.049999999999999926,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_head",
+          "parentConnector": "attach_turbanTail",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_farHand",
+        "rigNodeId": "farHand",
+        "partId": "artisan_farHand",
+        "drawOrder": 5,
+        "crop": {
+          "x": 430.53026315789475,
+          "y": 701.75,
+          "width": 191,
+          "height": 115,
+          "sourceWidth": 378.6782608695652,
+          "sourceHeight": 228
+        },
+        "scale": 0.5043859649122807,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.06005097823091753,
+            "y": 0.35,
+            "kind": "joint"
+          },
+          {
+            "id": "wrist",
+            "x": 0.06005097823091753,
+            "y": 0.35,
+            "kind": "joint"
+          },
+          {
+            "id": "grip",
+            "x": 0.06005097823091753,
+            "y": 0.6108695652173913,
+            "kind": "grip"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_farForearm",
+          "parentConnector": "attach_farHand",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -70,
+            "max": 70
+          }
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_farForearm",
+        "rigNodeId": "farForearm",
+        "partId": "artisan_farForearm",
+        "drawOrder": 3,
+        "crop": {
+          "x": 396.131021194605,
+          "y": 599.6,
+          "width": 72,
+          "height": 208,
+          "sourceWidth": 179.65384615384616,
+          "sourceHeight": 519
+        },
+        "scale": 0.4007707129094412,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.49818026118604153,
+            "y": 0.04999999999999989,
+            "kind": "joint"
+          },
+          {
+            "id": "elbow",
+            "x": 0.49818026118604153,
+            "y": 0.04999999999999989,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_farHand",
+            "x": 0.6370691500749304,
+            "y": 0.6846153846153845,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_farElbowCover",
+            "x": 0.49818026118604153,
+            "y": 0.04999999999999989,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_farUpperArm",
+          "parentConnector": "attach_farForearm",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -140,
+            "max": 5
+          }
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_farUpperArm",
+        "rigNodeId": "farUpperArm",
+        "partId": "artisan_farUpperArm",
+        "drawOrder": 2,
+        "crop": {
+          "x": 380.31672297297297,
+          "y": 464.25,
+          "width": 69,
+          "height": 215,
+          "sourceWidth": 189.9906976744186,
+          "sourceHeight": 592
+        },
+        "scale": 0.36317567567567566,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.5026561887974932,
+            "y": 0.05,
+            "kind": "joint"
+          },
+          {
+            "id": "shoulder",
+            "x": 0.5026561887974932,
+            "y": 0.05,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_farForearm",
+            "x": 0.7490330003916961,
+            "y": 0.6779069767441861,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_torso",
+          "parentConnector": "attach_farUpperArm",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -95,
+            "max": 95
+          }
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_farDhoti",
+        "rigNodeId": "farDhoti",
+        "partId": "artisan_farDhoti",
+        "drawOrder": 9,
+        "crop": {
+          "x": 334.66603053435114,
+          "y": 656.35,
+          "width": 141,
+          "height": 273,
+          "sourceWidth": 405.9560439560439,
+          "sourceHeight": 786
+        },
+        "scale": 0.3473282442748092,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.4988224784797792,
+            "y": 0.04999999999999992,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_farThigh",
+          "parentConnector": "attach_farDhoti",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_farThigh",
+        "rigNodeId": "farThigh",
+        "partId": "artisan_farThigh",
+        "drawOrder": 6,
+        "crop": {
+          "x": 288.6768292682927,
+          "y": 658.3,
+          "width": 173,
+          "height": 234,
+          "sourceWidth": 363.7435897435898,
+          "sourceHeight": 492
+        },
+        "scale": 0.47560975609756095,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.4989778655011983,
+            "y": 0.0500000000000002,
+            "kind": "joint"
+          },
+          {
+            "id": "hip",
+            "x": 0.4989778655011983,
+            "y": 0.0500000000000002,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_farDhoti",
+            "x": 0.6723882701254758,
+            "y": 0.0500000000000002,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_farShin",
+            "x": 0.6550472296630481,
+            "y": 0.7081196581196583,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_pelvis",
+          "parentConnector": "attach_farThigh",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -45,
+            "max": 45
+          }
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_farShin",
+        "rigNodeId": "farShin",
+        "partId": "artisan_farShin",
+        "drawOrder": 7,
+        "crop": {
+          "x": 333.2290076335878,
+          "y": 800.9,
+          "width": 138,
+          "height": 231,
+          "sourceWidth": 156.51948051948054,
+          "sourceHeight": 262
+        },
+        "scale": 0.8816793893129771,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.49834052439429133,
+            "y": 0.1000000000000001,
+            "kind": "joint"
+          },
+          {
+            "id": "knee",
+            "x": 0.49834052439429133,
+            "y": 0.1000000000000001,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_farFoot",
+            "x": 0.4693550171479145,
+            "y": 0.7666666666666667,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_farThigh",
+          "parentConnector": "attach_farShin",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -5,
+            "max": 85
+          }
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_farFoot",
+        "rigNodeId": "farFoot",
+        "partId": "artisan_farFoot",
+        "drawOrder": 8,
+        "crop": {
+          "x": 386.59088397790055,
+          "y": 942.9,
+          "width": 114,
+          "height": 117,
+          "sourceWidth": 352.71794871794873,
+          "sourceHeight": 362
+        },
+        "scale": 0.32320441988950277,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.10007996510613557,
+            "y": 0.3000000000000002,
+            "kind": "joint"
+          },
+          {
+            "id": "ankle",
+            "x": 0.10007996510613557,
+            "y": 0.3000000000000002,
+            "kind": "joint"
+          },
+          {
+            "id": "sole",
+            "x": 0.10007996510613557,
+            "y": 0.5393162393162395,
+            "kind": "contact"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_farShin",
+          "parentConnector": "attach_farFoot",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -35,
+            "max": 35
+          }
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_pelvis",
+        "rigNodeId": "pelvis",
+        "partId": "artisan_pelvis",
+        "drawOrder": 11,
+        "crop": {
+          "x": 370.8534063260341,
+          "y": 640.7,
+          "width": 138,
+          "height": 193,
+          "sourceWidth": 587.7512953367876,
+          "sourceHeight": 822
+        },
+        "scale": 0.23479318734793186,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.501062272999753,
+            "y": 0.09999999999999977,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_farThigh",
+            "x": 0.030047780246129883,
+            "y": 0.15181347150259045,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_nearThigh",
+            "x": 0.501062272999753,
+            "y": 0.15181347150259045,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_torso",
+            "x": 0.501062272999753,
+            "y": -0.5217616580310883,
+            "kind": "joint"
+          }
+        ],
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_nearDhoti",
+        "rigNodeId": "nearDhoti",
+        "partId": "artisan_nearDhoti",
+        "drawOrder": 15,
+        "crop": {
+          "x": 396.07003891050584,
+          "y": 655.75,
+          "width": 148,
+          "height": 285,
+          "sourceWidth": 400.37894736842105,
+          "sourceHeight": 771
+        },
+        "scale": 0.36964980544747084,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.49952676411820374,
+            "y": 0.05,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_nearThigh",
+          "parentConnector": "attach_nearDhoti",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_nearThigh",
+        "rigNodeId": "nearThigh",
+        "partId": "artisan_nearThigh",
+        "drawOrder": 12,
+        "crop": {
+          "x": 350.36082474226805,
+          "y": 658.25,
+          "width": 179,
+          "height": 235,
+          "sourceWidth": 369.4255319148936,
+          "sourceHeight": 485
+        },
+        "scale": 0.4845360824742268,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.5007775154063238,
+            "y": 0.05,
+            "kind": "joint"
+          },
+          {
+            "id": "hip",
+            "x": 0.5007775154063238,
+            "y": 0.05,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_nearDhoti",
+            "x": 0.6683752807694522,
+            "y": 0.05,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_nearShin",
+            "x": 0.701894833842078,
+            "y": 0.7053191489361702,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_pelvis",
+          "parentConnector": "attach_nearThigh",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -45,
+            "max": 45
+          }
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_nearShin",
+        "rigNodeId": "nearShin",
+        "partId": "artisan_nearShin",
+        "drawOrder": 13,
+        "crop": {
+          "x": 406.31007751937983,
+          "y": 800.8,
+          "width": 139,
+          "height": 232,
+          "sourceWidth": 154.57758620689654,
+          "sourceHeight": 258
+        },
+        "scale": 0.8992248062015504,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.50136634878144,
+            "y": 0.1000000000000002,
+            "kind": "joint"
+          },
+          {
+            "id": "knee",
+            "x": 0.50136634878144,
+            "y": 0.1000000000000002,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_nearFoot",
+            "x": 0.5301433271987063,
+            "y": 0.7637931034482761,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_nearThigh",
+          "parentConnector": "attach_nearShin",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -5,
+            "max": 85
+          }
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_nearFoot",
+        "rigNodeId": "nearFoot",
+        "partId": "artisan_nearFoot",
+        "drawOrder": 14,
+        "crop": {
+          "x": 467.27456647398844,
+          "y": 942.3,
+          "width": 127,
+          "height": 119,
+          "sourceWidth": 369.26050420168065,
+          "sourceHeight": 346
+        },
+        "scale": 0.3439306358381503,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.10020026398434297,
+            "y": 0.3000000000000004,
+            "kind": "joint"
+          },
+          {
+            "id": "ankle",
+            "x": 0.10020026398434297,
+            "y": 0.3000000000000004,
+            "kind": "joint"
+          },
+          {
+            "id": "sole",
+            "x": 0.10020026398434297,
+            "y": 0.5352941176470593,
+            "kind": "contact"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_nearShin",
+          "parentConnector": "attach_nearFoot",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -35,
+            "max": 35
+          }
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_torso",
+        "rigNodeId": "torso",
+        "partId": "artisan_torso",
+        "drawOrder": 20,
+        "crop": {
+          "x": 335.5844155844156,
+          "y": 380,
+          "width": 209,
+          "height": 320,
+          "sourceWidth": 603.4875000000001,
+          "sourceHeight": 924
+        },
+        "scale": 0.3463203463203463,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.49959609768222213,
+            "y": 0.5,
+            "kind": "joint"
+          },
+          {
+            "id": "waist",
+            "x": 0.49959609768222213,
+            "y": 0.5,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_farUpperArm",
+            "x": 0.37997887280183934,
+            "y": 0.296875,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_sash",
+            "x": 0.5474429876343753,
+            "y": 0.8375,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_necklace",
+            "x": 0.6718449015099733,
+            "y": 0.21875,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_neck",
+            "x": 0.6431367675386814,
+            "y": 0.1875,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_shoulderSash",
+            "x": 0.7866774373951407,
+            "y": 0.1875,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_nearUpperArm",
+            "x": 0.8249549493568632,
+            "y": 0.28125,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_pelvis",
+          "parentConnector": "attach_torso",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_sash",
+        "rigNodeId": "sash",
+        "partId": "artisan_sash",
+        "drawOrder": 22,
+        "crop": {
+          "x": 335.2942804428044,
+          "y": 539.5,
+          "width": 229,
+          "height": 217,
+          "sourceWidth": 571.9723502304147,
+          "sourceHeight": 542
+        },
+        "scale": 0.4003690036900369,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.50089833867771,
+            "y": 0.5,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_torso",
+          "parentConnector": "attach_sash",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_necklace",
+        "rigNodeId": "necklace",
+        "partId": "artisan_necklace",
+        "drawOrder": 26,
+        "crop": {
+          "x": 426.8571428571429,
+          "y": 439.68,
+          "width": 98,
+          "height": 86,
+          "sourceWidth": 518.4883720930233,
+          "sourceHeight": 455
+        },
+        "scale": 0.189010989010989,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.5014577259475216,
+            "y": 0.11999999999999993,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_torso",
+          "parentConnector": "attach_necklace",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_neck",
+        "rigNodeId": "neck",
+        "partId": "artisan_neck",
+        "drawOrder": 25,
+        "crop": {
+          "x": 401.2226720647773,
+          "y": 328.4,
+          "width": 138,
+          "height": 124,
+          "sourceWidth": 549.7741935483872,
+          "sourceHeight": 494.00000000000006
+        },
+        "scale": 0.25101214574898784,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.4983864343132078,
+            "y": 0.9000000000000001,
+            "kind": "joint"
+          },
+          {
+            "id": "base",
+            "x": 0.4983864343132078,
+            "y": 0.9000000000000001,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_head",
+            "x": 0.4983864343132078,
+            "y": 0.09354838709677438,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_torso",
+          "parentConnector": "attach_neck",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -35,
+            "max": 35
+          }
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_head",
+        "rigNodeId": "head",
+        "partId": "artisan_head",
+        "drawOrder": 30,
+        "crop": {
+          "x": 364.5198675496689,
+          "y": 123.80000000000001,
+          "width": 211,
+          "height": 230,
+          "sourceWidth": 554.104347826087,
+          "sourceHeight": 604
+        },
+        "scale": 0.38079470198675497,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.49990584099682983,
+            "y": 0.94,
+            "kind": "joint"
+          },
+          {
+            "id": "neck",
+            "x": 0.49990584099682983,
+            "y": 0.94,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_turbanTail",
+            "x": 0.31033238128119006,
+            "y": 0.8530434782608696,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_eye",
+            "x": 0.7131759831769247,
+            "y": 0.3530434782608695,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_eyelid",
+            "x": 0.7131759831769247,
+            "y": 0.3530434782608695,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_brow",
+            "x": 0.7131759831769247,
+            "y": 0.25304347826086954,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_mustache",
+            "x": 0.8316593954991995,
+            "y": 0.548695652173913,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_earring",
+            "x": 0.19184896895891515,
+            "y": 0.4834782608695652,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_turban",
+            "x": 0.49990584099682983,
+            "y": 0.15739130434782603,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_neck",
+          "parentConnector": "attach_head",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -35,
+            "max": 35
+          }
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_eye",
+        "rigNodeId": "eye",
+        "partId": "artisan_eye",
+        "drawOrder": 31,
+        "crop": {
+          "x": 487.1693548387097,
+          "y": 171,
+          "width": 56,
+          "height": 68,
+          "sourceWidth": 408.47058823529414,
+          "sourceHeight": 496.00000000000006
+        },
+        "scale": 0.13709677419354838,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.4969758064516126,
+            "y": 0.5,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_head",
+          "parentConnector": "attach_eye",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_eyelid",
+        "rigNodeId": "eyelid",
+        "partId": "artisan_eyelid",
+        "drawOrder": 32,
+        "crop": {
+          "x": 462.3463035019455,
+          "y": 171,
+          "width": 105,
+          "height": 68,
+          "sourceWidth": 396.8382352941176,
+          "sourceHeight": 257
+        },
+        "scale": 0.26459143968871596,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.5014637761719476,
+            "y": 0.5,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_head",
+          "parentConnector": "attach_eyelid",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_brow",
+        "rigNodeId": "brow",
+        "partId": "artisan_brow",
+        "drawOrder": 33,
+        "crop": {
+          "x": 417.81007751937983,
+          "y": 152.5,
+          "width": 194,
+          "height": 59,
+          "sourceWidth": 424.1694915254237,
+          "sourceHeight": 129
+        },
+        "scale": 0.4573643410852713,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.5009789818588668,
+            "y": 0.5,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_head",
+          "parentConnector": "attach_brow",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_mustache",
+        "rigNodeId": "mustache",
+        "partId": "artisan_mustache",
+        "drawOrder": 34,
+        "crop": {
+          "x": 491.3465553235908,
+          "y": 210.5,
+          "width": 97,
+          "height": 79,
+          "sourceWidth": 588.1392405063292,
+          "sourceHeight": 479.00000000000006
+        },
+        "scale": 0.1649269311064718,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.5015819038805073,
+            "y": 0.5,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_head",
+          "parentConnector": "attach_mustache",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_earring",
+        "rigNodeId": "earring",
+        "partId": "artisan_earring",
+        "drawOrder": 35,
+        "crop": {
+          "x": 368.2291666666667,
+          "y": 227,
+          "width": 74,
+          "height": 80,
+          "sourceWidth": 355.2,
+          "sourceHeight": 384
+        },
+        "scale": 0.20833333333333334,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.4969031531531529,
+            "y": 0.1,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_head",
+          "parentConnector": "attach_earring",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_turban",
+        "rigNodeId": "turban",
+        "partId": "artisan_turban",
+        "drawOrder": 36,
+        "crop": {
+          "x": 371.5036496350365,
+          "y": 4.300000000000011,
+          "width": 197,
+          "height": 173,
+          "sourceWidth": 624.0231213872833,
+          "sourceHeight": 548
+        },
+        "scale": 0.3156934306569343,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.49998147393382497,
+            "y": 0.8999999999999999,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_head",
+          "parentConnector": "attach_turban",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_shoulderSash",
+        "rigNodeId": "shoulderSash",
+        "partId": "artisan_shoulderSash",
+        "drawOrder": 37,
+        "crop": {
+          "x": 426.6712141882674,
+          "y": 354,
+          "width": 147,
+          "height": 172,
+          "sourceWidth": 626.4593023255813,
+          "sourceHeight": 733
+        },
+        "scale": 0.23465211459754434,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.4988352776308339,
+            "y": 0.5,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_torso",
+          "parentConnector": "attach_shoulderSash",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_nearUpperArm",
+        "rigNodeId": "nearUpperArm",
+        "partId": "artisan_nearUpperArm",
+        "drawOrder": 18,
+        "crop": {
+          "x": 471.1666666666667,
+          "y": 458.95,
+          "width": 74,
+          "height": 221,
+          "sourceWidth": 193.8733031674208,
+          "sourceHeight": 579
+        },
+        "scale": 0.38169257340241797,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.4977477477477475,
+            "y": 0.05000000000000005,
+            "kind": "joint"
+          },
+          {
+            "id": "shoulder",
+            "x": 0.4977477477477475,
+            "y": 0.05000000000000005,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_nearForearm",
+            "x": 0.8220720720720718,
+            "y": 0.6834841628959276,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_torso",
+          "parentConnector": "attach_nearUpperArm",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -95,
+            "max": 95
+          }
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_nearForearm",
+        "rigNodeId": "nearForearm",
+        "partId": "artisan_nearForearm",
+        "drawOrder": 41,
+        "crop": {
+          "x": 496.0907335907336,
+          "y": 599.55,
+          "width": 72,
+          "height": 209,
+          "sourceWidth": 178.44976076555022,
+          "sourceHeight": 518
+        },
+        "scale": 0.4034749034749035,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.4987398112398114,
+            "y": 0.05000000000000022,
+            "kind": "joint"
+          },
+          {
+            "id": "elbow",
+            "x": 0.4987398112398114,
+            "y": 0.05000000000000022,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_handOpen",
+            "x": 0.7209620334620337,
+            "y": 0.6815789473684213,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_handGrip",
+            "x": 0.7209620334620337,
+            "y": 0.6815789473684213,
+            "kind": "joint"
+          },
+          {
+            "id": "attach_nearElbowCover",
+            "x": 0.4987398112398114,
+            "y": 0.05000000000000022,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_nearUpperArm",
+          "parentConnector": "attach_nearForearm",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -140,
+            "max": 5
+          }
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_handOpen",
+        "rigNodeId": "handOpen",
+        "partId": "artisan_handOpen",
+        "drawOrder": 43,
+        "crop": {
+          "x": 544.5314438502674,
+          "y": 702.45,
+          "width": 58,
+          "height": 113,
+          "sourceWidth": 287.94690265486724,
+          "sourceHeight": 561
+        },
+        "scale": 0.2014260249554367,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.05980269223676981,
+            "y": 0.3499999999999996,
+            "kind": "joint"
+          },
+          {
+            "id": "wrist",
+            "x": 0.05980269223676981,
+            "y": 0.3499999999999996,
+            "kind": "joint"
+          },
+          {
+            "id": "grip",
+            "x": 0.05980269223676981,
+            "y": 0.6154867256637164,
+            "kind": "grip"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_nearForearm",
+          "parentConnector": "attach_handOpen",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -70,
+            "max": 70
+          }
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_handGrip",
+        "rigNodeId": "handGrip",
+        "partId": "artisan_handGrip",
+        "drawOrder": 44,
+        "crop": {
+          "x": 539.3686666666666,
+          "y": 704.55,
+          "width": 144,
+          "height": 107,
+          "sourceWidth": 363.3644859813084,
+          "sourceHeight": 270
+        },
+        "scale": 0.3962962962962963,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.05993981481481509,
+            "y": 0.3500000000000004,
+            "kind": "joint"
+          },
+          {
+            "id": "wrist",
+            "x": 0.05993981481481509,
+            "y": 0.3500000000000004,
+            "kind": "joint"
+          },
+          {
+            "id": "grip",
+            "x": 0.05993981481481509,
+            "y": 0.6303738317757014,
+            "kind": "grip"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_nearForearm",
+          "parentConnector": "attach_handGrip",
+          "childConnector": "socket",
+          "limitsDeg": {
+            "min": -70,
+            "max": 70
+          }
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_nearElbowCover",
+        "rigNodeId": "nearElbowCover",
+        "partId": "artisan_nearElbowCover",
+        "drawOrder": 42,
+        "crop": {
+          "x": 492.4961832061069,
+          "y": 565,
+          "width": 79,
+          "height": 90,
+          "sourceWidth": 229.97777777777776,
+          "sourceHeight": 262
+        },
+        "scale": 0.3435114503816794,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.5000483138467484,
+            "y": 0.5,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_nearForearm",
+          "parentConnector": "attach_nearElbowCover",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      },
+      {
+        "id": "artisan_farElbowCover",
+        "rigNodeId": "farElbowCover",
+        "partId": "artisan_farElbowCover",
+        "drawOrder": 4,
+        "crop": {
+          "x": 392.70652173913044,
+          "y": 565,
+          "width": 79,
+          "height": 90,
+          "sourceWidth": 242.26666666666665,
+          "sourceHeight": 276
+        },
+        "scale": 0.32608695652173914,
+        "connectors": [
+          {
+            "id": "socket",
+            "x": 0.4973858007705008,
+            "y": 0.5,
+            "kind": "joint"
+          }
+        ],
+        "attachment": {
+          "parentPartId": "artisan_farForearm",
+          "parentConnector": "attach_farElbowCover",
+          "childConnector": "socket"
+        },
+        "notes": "Calibrated from gemini Stage 2B registration; pivot and connector positions derive from sourcePivot and targetPivot."
+      }
+    ]
+  },
+  "bell": {
+    "id": "bell",
+    "crop": {
+      "x": -72,
+      "y": -250,
+      "width": 144,
+      "height": 250,
+      "sourceWidth": 144,
+      "sourceHeight": 250
+    },
+    "connectors": [
+      {
+        "id": "grip",
+        "x": 0.5,
+        "y": 0.08,
+        "kind": "grip"
+      },
+      {
+        "id": "placement",
+        "x": 0.5,
+        "y": 1,
+        "kind": "contact"
+      }
+    ]
+  },
+  "anatomicalLandmarks": "gemini-landmarks.json",
+  "calibrationStatus": "versioned-registration-unchanged-artwork-blocked"
+}

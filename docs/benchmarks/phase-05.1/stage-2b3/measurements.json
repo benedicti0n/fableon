@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-11-10",
+  "referenceResolution": "1280x720",
+  "socket": {
+    "openai": {
+      "maxRenderedPx": 2.2566479328863614e-13,
+      "averageRenderedPx": 2.7502774430188386e-14
+    },
+    "gemini": {
+      "maxRenderedPx": 2.228957952529976e-13,
+      "averageRenderedPx": 2.7619289847976935e-14
+    }
+  },
+  "silhouetteIou": {
+    "openai": 0.5086337098289084,
+    "gemini": 0.4619791352590002
+  },
+  "landmarkError": {
+    "openai": "unavailable \u2014 master landmarks are inferred from a different view; not used to claim improvement",
+    "gemini": "unavailable \u2014 master landmarks are inferred from a different view; not used to claim improvement"
+  },
+  "calibration": {
+    "openai": {
+      "rigId": "artisan_openai_anatomical_v1",
+      "registrationChanged": false,
+      "parts": 31,
+      "attachments": 30
+    },
+    "gemini": {
+      "rigId": "artisan_gemini_anatomical_v1",
+      "registrationChanged": false,
+      "parts": 31,
+      "attachments": 30
+    }
+  },
+  "verdict": "ARTWORK-BLOCKED for shoulder, wrist-band, shoe, Gemini arm and facial registration.",
+  "notes": [
+    "No new artwork generated.",
+    "No provider calls.",
+    "Versioned rigs preserve the Stage 2B.2 socket geometry.",
+    "The master reconstruction shows the neutral assembly differs materially from the master silhouette.",
+    "No numeric landmark improvement is claimed."
+  ]
+}

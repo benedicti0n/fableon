@@ -1,0 +1,187 @@
+{
+  "format": "fableon.anatomical-landmarks",
+  "version": 1,
+  "id": "artisan_openai_anatomical_landmarks_v1",
+  "characterId": "artisan_openai",
+  "masterPath": "docs/benchmarks/phase-05.1/stage-2a/openai-master.png",
+  "masterWidth": 1536,
+  "masterHeight": 1024,
+  "silhouette": {
+    "minX": 465,
+    "minY": 0,
+    "maxX": 1002,
+    "maxY": 1024
+  },
+  "landmarks": [
+    {
+      "id": "head-center",
+      "semantic": "head-center",
+      "x": 0.55,
+      "y": 0.13,
+      "origin": "observed",
+      "confidence": 0.8,
+      "side": "center",
+      "notes": "Estimated from master silhouette; far-side joints are occluded and inferred."
+    },
+    {
+      "id": "neck",
+      "semantic": "neck",
+      "x": 0.55,
+      "y": 0.29,
+      "origin": "inferred",
+      "confidence": 0.5,
+      "side": "center",
+      "notes": "Estimated from master silhouette; far-side joints are occluded and inferred."
+    },
+    {
+      "id": "eye",
+      "semantic": "eye",
+      "x": 0.63,
+      "y": 0.14,
+      "origin": "observed",
+      "confidence": 0.7,
+      "side": "near",
+      "notes": "Estimated from master silhouette; far-side joints are occluded and inferred."
+    },
+    {
+      "id": "nose",
+      "semantic": "nose",
+      "x": 0.69,
+      "y": 0.18,
+      "origin": "observed",
+      "confidence": 0.7,
+      "side": "near",
+      "notes": "Estimated from master silhouette; far-side joints are occluded and inferred."
+    },
+    {
+      "id": "shoulder-near",
+      "semantic": "shoulder",
+      "x": 0.62,
+      "y": 0.34,
+      "origin": "inferred",
+      "confidence": 0.45,
+      "side": "near",
+      "notes": "Estimated from master silhouette; far-side joints are occluded and inferred."
+    },
+    {
+      "id": "elbow-near",
+      "semantic": "elbow",
+      "x": 0.62,
+      "y": 0.51,
+      "origin": "inferred",
+      "confidence": 0.4,
+      "side": "near",
+      "notes": "Estimated from master silhouette; far-side joints are occluded and inferred."
+    },
+    {
+      "id": "wrist-near",
+      "semantic": "wrist",
+      "x": 0.58,
+      "y": 0.64,
+      "origin": "inferred",
+      "confidence": 0.4,
+      "side": "near",
+      "notes": "Estimated from master silhouette; far-side joints are occluded and inferred."
+    },
+    {
+      "id": "shoulder-far",
+      "semantic": "shoulder",
+      "x": 0.43,
+      "y": 0.34,
+      "origin": "inferred",
+      "confidence": 0.35,
+      "side": "far",
+      "notes": "Estimated from master silhouette; far-side joints are occluded and inferred."
+    },
+    {
+      "id": "elbow-far",
+      "semantic": "elbow",
+      "x": 0.39,
+      "y": 0.51,
+      "origin": "inferred",
+      "confidence": 0.3,
+      "side": "far",
+      "notes": "Estimated from master silhouette; far-side joints are occluded and inferred."
+    },
+    {
+      "id": "wrist-far",
+      "semantic": "wrist",
+      "x": 0.38,
+      "y": 0.64,
+      "origin": "inferred",
+      "confidence": 0.3,
+      "side": "far",
+      "notes": "Estimated from master silhouette; far-side joints are occluded and inferred."
+    },
+    {
+      "id": "hip-near",
+      "semantic": "hip",
+      "x": 0.55,
+      "y": 0.63,
+      "origin": "inferred",
+      "confidence": 0.45,
+      "side": "near",
+      "notes": "Estimated from master silhouette; far-side joints are occluded and inferred."
+    },
+    {
+      "id": "knee-near",
+      "semantic": "knee",
+      "x": 0.52,
+      "y": 0.82,
+      "origin": "inferred",
+      "confidence": 0.4,
+      "side": "near",
+      "notes": "Estimated from master silhouette; far-side joints are occluded and inferred."
+    },
+    {
+      "id": "ankle-near",
+      "semantic": "ankle",
+      "x": 0.48,
+      "y": 0.93,
+      "origin": "inferred",
+      "confidence": 0.4,
+      "side": "near",
+      "notes": "Estimated from master silhouette; far-side joints are occluded and inferred."
+    },
+    {
+      "id": "sole-near",
+      "semantic": "sole",
+      "x": 0.48,
+      "y": 0.985,
+      "origin": "inferred",
+      "confidence": 0.45,
+      "side": "near",
+      "notes": "Estimated from master silhouette; far-side joints are occluded and inferred."
+    },
+    {
+      "id": "hip-far",
+      "semantic": "hip",
+      "x": 0.48,
+      "y": 0.63,
+      "origin": "inferred",
+      "confidence": 0.35,
+      "side": "far",
+      "notes": "Estimated from master silhouette; far-side joints are occluded and inferred."
+    },
+    {
+      "id": "knee-far",
+      "semantic": "knee",
+      "x": 0.44,
+      "y": 0.82,
+      "origin": "inferred",
+      "confidence": 0.3,
+      "side": "far",
+      "notes": "Estimated from master silhouette; far-side joints are occluded and inferred."
+    },
+    {
+      "id": "ankle-far",
+      "semantic": "ankle",
+      "x": 0.42,
+      "y": 0.93,
+      "origin": "inferred",
+      "confidence": 0.3,
+      "side": "far",
+      "notes": "Estimated from master silhouette; far-side joints are occluded and inferred."
+    }
+  ]
+}

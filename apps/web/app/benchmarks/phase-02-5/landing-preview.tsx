@@ -139,9 +139,12 @@ export function LandingPreview() {
   const [isExporting, setIsExporting] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const playbackStartRef = useRef<{ frame: number; time: number } | null>(null);
+  const safeFrame = Number.isFinite(frame)
+    ? Math.min(Math.max(Math.round(frame), 0), LANDING_FRAME_COUNT - 1)
+    : 0;
 
-  const phase = landingPhaseForFrame(frame);
-  const timestamp = formatTimestamp(frame, LANDING_FPS);
+  const phase = landingPhaseForFrame(safeFrame);
+  const timestamp = formatTimestamp(safeFrame, LANDING_FPS);
 
   useEffect(() => {
     let cancelled = false;
@@ -238,13 +241,13 @@ export function LandingPreview() {
     let cancelled = false;
     const start = performance.now();
     try {
-      renderLandingFrame(context, frame, benchmark, {
+      renderLandingFrame(context, safeFrame, benchmark, {
         hiddenPartIds: [...hiddenParts],
       });
       const elapsed = performance.now() - start;
       queueMicrotask(() => {
         if (!cancelled) {
-          setRenderedFrame(frame);
+          setRenderedFrame(safeFrame);
           setRenderMs(elapsed);
           setError(null);
         }
@@ -260,7 +263,7 @@ export function LandingPreview() {
     return () => {
       cancelled = true;
     };
-  }, [benchmark, frame, hiddenParts]);
+  }, [benchmark, safeFrame, hiddenParts]);
 
   useEffect(() => {
     if (!isPlaying) {
@@ -307,8 +310,8 @@ export function LandingPreview() {
       return;
     }
 
-    const startFrame = frame >= LANDING_FRAME_COUNT - 1 ? 0 : frame;
-    if (startFrame !== frame) {
+    const startFrame = safeFrame >= LANDING_FRAME_COUNT - 1 ? 0 : safeFrame;
+    if (startFrame !== safeFrame) {
       setFrame(startFrame);
     }
     playbackStartRef.current = { frame: startFrame, time: performance.now() };
@@ -346,12 +349,12 @@ export function LandingPreview() {
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.href = url;
-      link.download = `little-bird-frame-${String(frame).padStart(3, "0")}.png`;
+      link.download = `little-bird-frame-${String(safeFrame).padStart(3, "0")}.png`;
       document.body.append(link);
       link.click();
       link.remove();
       URL.revokeObjectURL(url);
-      setExportMessage(`Exported frame ${frame} as PNG.`);
+      setExportMessage(`Exported frame ${safeFrame} as PNG.`);
     } catch (caught) {
       setExportMessage(caught instanceof Error ? caught.message : String(caught));
     } finally {
@@ -383,7 +386,7 @@ export function LandingPreview() {
       <section className="mt-6 rounded-xl border border-ink-700 bg-ink-900 p-3">
         <div
           data-testid="landing-preview-surface"
-          data-frame={frame}
+          data-frame={safeFrame}
           data-rendered-frame={renderedFrame ?? -1}
           data-phase={phase}
           data-ready={benchmark ? "true" : "false"}
@@ -394,7 +397,7 @@ export function LandingPreview() {
             width={1920}
             height={1080}
             role="img"
-            aria-label={`Little Bird landing frame ${frame}`}
+            aria-label={`Little Bird landing frame ${safeFrame}`}
             className="block h-full w-full"
           />
           {!benchmark && !error ? (
@@ -433,8 +436,8 @@ export function LandingPreview() {
             </button>
             <button
               type="button"
-              onClick={() => seek(frame - 1)}
-              disabled={frame <= 0}
+              onClick={() => seek(safeFrame - 1)}
+              disabled={safeFrame <= 0}
               aria-label="Previous frame"
               className="rounded-md border border-ink-600 px-3 py-1.5 text-xs text-mist-200 disabled:opacity-40"
             >
@@ -442,8 +445,8 @@ export function LandingPreview() {
             </button>
             <button
               type="button"
-              onClick={() => seek(frame + 1)}
-              disabled={frame >= LANDING_FRAME_COUNT - 1}
+              onClick={() => seek(safeFrame + 1)}
+              disabled={safeFrame >= LANDING_FRAME_COUNT - 1}
               aria-label="Next frame"
               className="rounded-md border border-ink-600 px-3 py-1.5 text-xs text-mist-200 disabled:opacity-40"
             >
@@ -460,7 +463,7 @@ export function LandingPreview() {
             </button>
           </div>
           <div className="flex items-end gap-3 font-mono text-[10px] text-mist-400">
-            <output aria-label="Current frame">Frame {frame}</output>
+            <output aria-label="Current frame">Frame {safeFrame}</output>
             <output aria-label="Current timestamp">{timestamp}</output>
             <output aria-label="Current phase" className="text-ochre-300 uppercase">
               {phase}
@@ -472,7 +475,7 @@ export function LandingPreview() {
           <div className="mb-1 flex justify-between font-mono text-[9px] tracking-[0.1em] text-mist-500 uppercase">
             <span>Frame</span>
             <span>
-              {frame} / {LANDING_FRAME_COUNT - 1}
+              {safeFrame} / {LANDING_FRAME_COUNT - 1}
             </span>
           </div>
           <input

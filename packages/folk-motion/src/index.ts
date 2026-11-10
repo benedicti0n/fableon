@@ -1,3 +1,4 @@
+export * from "./anatomy";
 export * from "./artisan-v2";
 export * from "./connectors";
 export * from "./ik";

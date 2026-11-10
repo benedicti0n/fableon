@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-11-10T16:58:57.551Z",
+  "provider": "openai",
+  "camera": {
+    "scale": 1,
+    "x": 32.67779683457775,
+    "y": 23.923658424481005
+  },
+  "bounds": {
+    "minX": 248.54786576759852,
+    "minY": -14.709642286117148,
+    "maxX": 966.0965405632459,
+    "maxY": 686.8623254371552
+  },
+  "config": "stage2b1-polished",
+  "frames": 192,
+  "fps": 24,
+  "resolution": [1280, 720],
+  "video": "outputs/folk-provider-benchmark/stage-2b2/openai/polished-character.mp4",
+  "variation": "outputs/folk-provider-benchmark/stage-2b2/openai/variation.mp4",
+  "walking": "outputs/folk-provider-benchmark/stage-2b2/openai/walking-diagnostic.mp4",
+  "jointStress": "outputs/folk-provider-benchmark/stage-2b2/openai/joint-stress-test.png",
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1280,
+        "height": 720,
+        "avg_frame_rate": "24/1",
+        "duration": "8.000000",
+        "nb_frames": "192"
+      }
+    ]
+  },
+  "hashes": {
+    "video": "5e83003211ec71eba63a80917f8193af87692165789ba0fce6edde9f4ffb27c0",
+    "variation": "824a6b601d6e87b08dc6fd8009370e320712510b6ccb732592ca5e99667d8726",
+    "walking": "a48d3acd65450e10833c695b04a79bdb4704b3f447669e43712fddb67391c4fb"
+  }
+}

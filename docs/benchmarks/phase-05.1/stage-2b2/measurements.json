@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-11-10T17:06:14.633Z",
+  "providers": {
+    "openai": {
+      "rigId": "artisan_openai_connectors_v1",
+      "parts": 31,
+      "attachments": 30,
+      "connectorPointsPerFrame": 82,
+      "maxErrorRigPx": 3.639754730461873e-13,
+      "averageErrorRigPx": 4.4359313597078044e-14,
+      "maxErrorRenderedPx": 2.2566479328863614e-13,
+      "averageErrorRenderedPx": 2.7502774430188386e-14,
+      "samples": 5760
+    },
+    "gemini": {
+      "rigId": "artisan_gemini_connectors_v1",
+      "parts": 31,
+      "attachments": 30,
+      "connectorPointsPerFrame": 82,
+      "maxErrorRigPx": 3.595093471822542e-13,
+      "averageErrorRigPx": 4.454724169028538e-14,
+      "maxErrorRenderedPx": 2.228957952529976e-13,
+      "averageErrorRenderedPx": 2.7619289847976935e-14,
+      "samples": 5760
+    }
+  }
+}

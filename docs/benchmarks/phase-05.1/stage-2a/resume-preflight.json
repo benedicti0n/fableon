@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-11-10",
+  "head": "e747a62491b0be693e5ce1b3593312b342e3de72",
+  "dataDir": "/Users/benediction/Downloads/Web Dev projects/fableon/.fableon-data",
+  "providers": [
+    {
+      "provider": "openai",
+      "configured": true
+    },
+    {
+      "provider": "gemini",
+      "configured": true
+    }
+  ],
+  "authorizations": [],
+  "packs": [],
+  "providerCallsMade": 0,
+  "decision": "BLOCKED_NO_ACTIVE_AUTHORIZATION",
+  "note": "Credentials are loaded in the server environment, but no active, approved spending record exists. The only authorization record found anywhere is a pending phase-05.1-browser-test request in .fableon-data/playwright."
+}

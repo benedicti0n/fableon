@@ -80,8 +80,9 @@ test.describe("Studio paint preview", () => {
     await waitForPreview(page, 1140);
 
     await page.getByRole("button", { name: "Play animation" }).click();
-    await expect(page.getByRole("button", { name: "Pause playback" })).toBeVisible();
-
+    // From frame 1140 the short playback can finish before a Pause-label
+    // assertion is observed. The contract under test is advance-to-1151 and
+    // stop, which is asserted below without racing the transient label.
     await expect(page.getByTestId("preview-surface")).toHaveAttribute("data-frame", "1151", {
       timeout: 10_000,
     });

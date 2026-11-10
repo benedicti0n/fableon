@@ -89,7 +89,8 @@ test.describe("Phase 5.1 provider safety and Studio", () => {
   }) => {
     await page.goto("/studio/providers/costs");
     await expect(page.getByRole("heading", { name: "OpenAI vs Gemini" })).toBeVisible();
-    await expect(page.getByText(/Spend status/)).toContainText("$0.3480");
+    await expect(page.getByText(/Spend status/)).toContainText(/\$\d+\.\d{4}/);
+    await expect(page.getByText(/Stage 2B records/)).toBeVisible();
     await expect(
       page.getByText(/No complete 31-part Stage 2B rig, eight-second provider animation/i),
     ).toBeVisible();

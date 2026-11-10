@@ -144,7 +144,7 @@ async function main() {
       : []),
   ];
 
-  const prompt = stage2bSheetPrompt(provider, sheet);
+  const prompt = `${stage2bSheetPrompt(provider, sheet)}${arg("prompt-extra", "")}`;
   const width = provider === "openai" ? 2048 : 1024;
   const height = provider === "openai" ? 2048 : 1024;
   const body = {

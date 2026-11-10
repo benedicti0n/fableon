@@ -72,8 +72,8 @@ export const STAGE2B_BASE_CONFIG: Stage2BConfig = {
   },
   bell: {
     pedestal: { x: 850, y: 560 },
-    scale: 0.16,
-    handOffset: { x: 0, y: 22 },
+    scale: 0.3,
+    handOffset: { x: 0, y: 30 },
   },
   headTurnDeg: 8,
   blinkIntervalFrames: 72,

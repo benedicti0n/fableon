@@ -97,6 +97,7 @@ function statePayload(config: Stage2BConfig, manifest: PackManifest) {
       phase: state.phase,
       placement: state.placement,
       bell: { x: state.bellWorld.x, y: state.bellWorld.y, scale: config.bell.scale },
+      pedestal: config.bell.pedestal,
       nodes: state.nodes
         .filter((node) => node.visible)
         .map((node) => {
@@ -140,16 +141,17 @@ function htmlFor(
     ctx.fillStyle=sky; ctx.fillRect(0,0,${STAGE2B_WIDTH},${STAGE2B_HEIGHT});
     ctx.fillStyle='#d79b5b'; ctx.fillRect(0,620,${STAGE2B_WIDTH},100);
     ctx.fillStyle='#c58a4a'; ctx.fillRect(0,620,${STAGE2B_WIDTH},4);
-    // Courtyard wall and pedestal, deliberately minimal and identical for A/B.
+    // Courtyard wall, deliberately minimal and identical for A/B.
     ctx.fillStyle='#b9773f'; ctx.fillRect(60,260,1160,360);
     ctx.fillStyle='#a96635'; ctx.fillRect(60,260,1160,22);
     for(let x=110;x<1200;x+=150){ctx.fillStyle='#c98a4e';ctx.fillRect(x,310,92,250);ctx.fillStyle='#b9773f';ctx.fillRect(x+18,340,56,220);}
-    ctx.fillStyle='#7d4a2b'; ctx.fillRect(805,560,90,60);
-    ctx.fillStyle='#9a5a32'; ctx.fillRect(795,548,110,16);
-    // Actor.
+    // Actor and pedestal share rig coordinates so the bell cannot float.
     ctx.save();
     const p=state.placement;
     ctx.translate(p.x,p.y); ctx.scale(p.scale,p.scale);
+    const ped=state.pedestal;
+    ctx.fillStyle='#7d4a2b'; ctx.fillRect(ped.x-45,ped.y,90,60);
+    ctx.fillStyle='#9a5a32'; ctx.fillRect(ped.x-55,ped.y-12,110,16);
     for(const node of state.nodes){
       const img=imgs[node.partId]; if(!img) continue;
       const m=node.matrix;

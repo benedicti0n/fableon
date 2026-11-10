@@ -3,32 +3,42 @@
 **Date:** 2026-11-10  
 **Starting HEAD:** `ad9d0b4`  
 **Experiment:** `phase-05.1-stage-2b`  
-**Paid Stage 2B calls:** **0**  
-**Status:** offline engineering complete; **provider generation blocked by pending authorization**
+**Paid Stage 2B calls:** **9** (4 OpenAI, 5 Gemini)  
+**Stage 2B completed-usage cost:** **$0.676329**  
+**Outcome:** both providers produced validated 31-part packs and eight-second walk–reach–grip tests. OpenAI is the stronger candidate; Gemini remains conditional and needs further repair. Neither is approved for a full film.
 
 ## 1. Executive summary
 
-Stage 2B successfully replaced the Stage 2A four-part diagnostic with a real 31-part rig contract,
-joint-overlap metadata, seam-aware draw order, pack validation and a configuration-driven
-eight-second animation renderer.
+Stage 2B moved beyond the four-part Stage 2A diagnostic to a complete 31-part artisan rig per
+provider, with explicit joint metadata, seam-aware draw order, elbow/joint covers, pack
+validation, deterministic animation and local video rendering.
 
-No Stage 2B provider artwork was requested. The two Stage 2B authorizations exist only as
-**pending** records with `approvedBy: null`; therefore no paid call, no Stage 2B pack and no
-provider video can be claimed. The Stage 2A artwork and ledgers remain intact.
+The experiment executed nine paid requests inside the approved **$7.00** Stage 2B ceiling:
 
-The offline deliverable is ready to resume from the pending approval without repeating the joint,
-animation or renderer work.
+- OpenAI: 4 sheet requests, 4 images, 31-part pack, **$0.403720**.
+- Gemini: 5 sheet requests, 5 images, one rejected arm sheet and one counted repair, 31-part pack,
+  **$0.272609**.
 
-## 2. Git
+Both packs validate and both render at 1280×720, 24 fps, 192 frames, **8.000 seconds**, with the
+same background, camera, prop, motion configuration and renderer. Both reuse the rig for a second
+motion configuration with **zero additional provider calls**.
 
-| Purpose                                                | Commit                       |
-| ------------------------------------------------------ | ---------------------------- |
-| Starting point                                         | `ad9d0b4`                    |
-| Joint overlap and seam concealment                     | `ec1329f`                    |
-| Prepare-only authorization and Stage 2B sheet plans    | `b936f9a`                    |
-| Renderer, comparison and rig workspace                 | `c29da67`                    |
-| Preparation reports and pending-authorization evidence | this docs commit             |
-| This final report                                      | final HEAD after this commit |
+OpenAI is the stronger, more coherent character. Gemini is cheaper and technically complete, but
+its arms, face and clothing required substantially more local repair and still read as more
+assembled. Neither pack is production-ready for a full film.
+
+## 2. Starting and final Git HEAD
+
+| Purpose                                             | Commit                       |
+| --------------------------------------------------- | ---------------------------- |
+| Starting point                                      | `ad9d0b4`                    |
+| Joint overlap and seam concealment                  | `ec1329f`                    |
+| Prepare-only authorization and Stage 2B sheet plans | `b936f9a`                    |
+| Renderer, comparison and rig workspace              | `c29da67`                    |
+| Stage 2B pack repair and animation completion       | `5e9e402`                    |
+| Landing-preview frame clamp                         | `7afd7a4`                    |
+| Provider packs, renders and quality evidence        | `69f442f`                    |
+| This execution report                               | final HEAD after this commit |
 
 No push was performed.
 
@@ -36,275 +46,271 @@ No push was performed.
 
 | Asset                         | OpenAI                                    | Gemini                                    |
 | ----------------------------- | ----------------------------------------- | ----------------------------------------- |
-| Master                        | original transparent PNG, 1536×1024       | opaque JPEG, 2528×1696                    |
-| Extracted parts               | head, torso, near upper arm, near forearm | head, torso, near upper arm, near forearm |
-| Images returned               | 5                                         | 2 (master + four-part sheet)              |
-| Usable assets                 | 5                                         | 5                                         |
+| Master                        | transparent PNG 1536×1024                 | opaque JPEG 2528×1696                     |
+| Preserved Stage 2A parts      | head, torso, near upper arm, near forearm | head, torso, near upper arm, near forearm |
+| Stage 2A images returned      | 5                                         | 2                                         |
 | Stage 2A requests used        | 5 / 6                                     | 4 / 6                                     |
 | Stage 2A conservative spend   | $0.244610                                 | $0.205989                                 |
 | Stage 2A completed-usage cost | $0.244610                                 | $0.103410                                 |
-| Failed-attempt hold           | $0.000000                                 | $0.102579                                 |
+| Stage 2A failed-attempt hold  | $0.000000                                 | $0.102579                                 |
 
-Stage 2A combined conservative spend: **$0.450599**. Completed successful usage:
-**$0.348020**. All original files, requests, responses, ledgers and failed-attempt evidence are
-preserved.
+The Stage 2A masters, parts, ledgers, requests, failures and videos remain preserved.
 
 ## 4. Engineering changes
 
-- Added `FolkJoint` metadata to `@fableon/folk-motion`.
-- Added joint kinds, parent binding, hidden-overlap rectangles, occlusion ownership, optional
-  cover nodes, rotation limits and diagnostics.
-- Added `ARTISAN_V2_RIG` with 31 parts and 15 joints.
-- Added near/far elbow cover nodes.
-- Added seam-aware draw order for shoulders, elbows, wrists, hips, knees, ankles and neck.
-- Added pack validation for required slots, hashes, hierarchy, occlusion order, cover order and
-  overlap bounds.
-- Added a 31-slot provider generation plan: four sheets per provider.
-- Added a prepare-only authorization CLI. Activation now requires an explicit `--activate` flag.
-- Added a deterministic, configuration-driven 192-frame animation module.
+- Extended `@fableon/folk-motion` with joint metadata: kind, parent, hidden-overlap rectangle,
+  occlusion ownership, optional cover node, rotation limits and diagnostics.
+- Added `ARTISAN_V2_RIG`: 31 parts, 15 joints, near/far elbow covers, seam-aware draw order.
+- Added pack validation: required slots, hashes, hierarchy, overlap bounds, occlusion order, cover
+  order and limits.
+- Added a four-sheet-per-provider generation plan covering every rig slot exactly once.
+- Added a prepare-only authorization CLI; activation requires an explicit `--activate` flag.
+- Added deterministic, configuration-driven 192-frame animation with a reusable variation config.
 - Added a local canvas/FFmpeg renderer that refuses incomplete packs and makes no provider calls.
-- Added a Stage 2B Studio status page and local video-serving route.
-- Added Stage 2B comparison and render scripts.
-- Updated browser tests for real Stage 2A costs and Stage 2B UI state.
+- Added Stage 2B Studio status and local video-serving routes.
+- Added comparison scripts for side-by-side MP4s and contact sheets.
+- Fixed the landing-preview playback frame clamp discovered during the browser suite.
 
 ## 5. Joint-concealment improvements
 
-The old rig drew the upper arm above the torso, producing the Stage 2A oval shoulder. The v2 rig
-draws the torso above the upper-arm top, shifts the arm outward for registration, expands hidden
-overlap around the elbow pivot, and adds real elbow-cover nodes to the final pack contract.
+The Stage 2A oval shoulder and visible elbow hinge were addressed with:
 
-`before-after-elbow.png` compares old and new layering using only the preserved Stage 2A artwork at
-0°, 15°, 30°, 45°, 60°, 75° and 90° for both providers.
+- torso-over-upper-arm layering for the shoulder;
+- expanded hidden overlap around the elbow pivot;
+- real elbow-cover sprites in both packs;
+- forearm/hand above upper arm; dhoti above thigh; necklace above neck;
+- joint validation before rendering.
 
-Observed:
+The `before-after-elbow.png` diagnostic used only Stage 2A artwork and showed the mechanism before
+paid generation. The final packs then used the real cover sprites.
 
-- The shoulder oval is removed in both providers.
-- OpenAI’s forearm connects through the expanded overlap without a transparent elbow gap through
-  90°, though the sleeve is thinner and still visibly assembled.
-- Gemini retains the cleaner sheet-derived elbow seam; its upper arm is still small relative to
-  the torso.
-- The final cover artwork is part of the generation contract; no vector circle was fabricated.
-
-This is an engineering diagnostic, not artistic approval.
+Residual defects remain: the shoulder and elbow seams are still visible, and the characters read
+as cutout puppets. The seam system works technically; it does not fully solve artistic cohesion.
 
 ## 6. Provider-generation attempts
 
-**Stage 2B paid attempts: 0.**
+| #   | Provider | Request     | Result                              | Reconciled |
+| --- | -------- | ----------- | ----------------------------------- | ---------: |
+| 1   | OpenAI   | head sheet  | success                             |  $0.101935 |
+| 2   | OpenAI   | body sheet  | success                             |  $0.101250 |
+| 3   | OpenAI   | arms sheet  | success                             |  $0.103245 |
+| 4   | OpenAI   | legs sheet  | success                             |  $0.097290 |
+| 5   | Gemini   | head sheet  | success                             |  $0.054162 |
+| 6   | Gemini   | body sheet  | success                             |  $0.054159 |
+| 7   | Gemini   | arms sheet  | HTTP success, artistically rejected |  $0.055848 |
+| 8   | Gemini   | legs sheet  | success                             |  $0.052458 |
+| 9   | Gemini   | arms repair | success, accepted                   |  $0.055982 |
 
-Eight free estimate requests were made through the server estimate endpoint:
-
-| Sheet     |        OpenAI |        Gemini |
-| --------- | ------------: | ------------: |
-| Head      |     $0.327565 |    $0.0545025 |
-| Body      |     $0.327555 |    $0.0544980 |
-| Arms      |     $0.363425 |    $0.0561885 |
-| Legs      |     $0.291620 |    $0.0527910 |
-| **Total** | **$1.310165** | **$0.217980** |
-
-Combined estimate: **$1.528145**. No image was returned and no provider request was submitted.
+No automatic retries. The Gemini repair was a manual decision after the original arms sheet
+merged upper arms and bent forearms into the forearm cells.
 
 ## 7. Final part inventory per provider
 
-| Provider | Master | Stage 2A parts preserved | Stage 2B parts | 31-part pack  |
-| -------- | ------ | -----------------------: | -------------: | ------------- |
-| OpenAI   | yes    |                        4 |              0 | not generated |
-| Gemini   | yes    |                        4 |              0 | not generated |
+| Provider |   Parts | Pack                | Rejected sheets | Repair sheets |
+| -------- | ------: | ------------------- | --------------: | ------------: |
+| OpenAI   | 31 / 31 | `artisan_openai_v2` |               0 |             0 |
+| Gemini   | 31 / 31 | `artisan_gemini_v2` |               1 |             1 |
 
-The complete 31-slot contract is documented in `CHARACTER_PART_INVENTORY.md`. The four Stage 2A
-parts per provider remain available as identity references and fallbacks; they are not a complete
-Stage 2B pack.
+Both packs include head, face and turban, torso/sash/pelvis, both arms and hands, elbow covers,
+both legs, feet, dhoti panels and neck. The full inventory is in `CHARACTER_PART_INVENTORY.md`.
 
 ## 8. Missing or rejected components
 
-Every Stage 2B contract part is currently missing because generation is not authorized:
-
-- head, turban, turban tail, moustache, earring, eye, eyelid, brow, neck;
-- torso, sash, necklace, shoulder sash, pelvis;
-- near/far upper arms, forearms, elbow covers, open/grip/far hands;
-- near/far thighs, shins, feet, dhoti panels.
-
-No Stage 2B output has been rejected, because no Stage 2B output exists. Stage 2A’s two failed
-Gemini attempts remain preserved and are not reclassified.
+- Missing slots: **none** in either pack.
+- Rejected output: Gemini original arms sheet (`stage2b-gemini-arms`) — complete bent arms instead
+  of separate straight forearms. Preserved, not deleted.
+- Accepted repair: `stage2b-gemini-arms-repair1`.
+- Local rejections/repairs: Gemini torso shoulder blob filled; Gemini legs split at knee/shin;
+  Gemini thighs recolored to cloth; Gemini shin edges cropped; Gemini turban lifted, brow reduced,
+  facial pivots moved; OpenAI facial pivots moved; both packs re-registered.
+- No silent regeneration occurred.
 
 ## 9. Rig compatibility
 
-| Check                                    | Result |
-| ---------------------------------------- | ------ |
-| 31 required slots resolve                | PASS   |
-| 15 joint contracts validate              | PASS   |
-| Parent/child hierarchy and draw order    | PASS   |
-| Rotation limits                          | PASS   |
-| Hand open/grip exclusivity               | PASS   |
-| Hip/knee/ankle chain                     | PASS   |
-| Neck/head blink and rotation             | PASS   |
-| Pack validator rejects invalid manifests | PASS   |
-| Renderer rejects incomplete packs        | PASS   |
-| Existing horse/cart rigs unchanged       | PASS   |
+| Check                   | OpenAI | Gemini |
+| ----------------------- | ------ | ------ |
+| 31 required slots       | PASS   | PASS   |
+| Hashes                  | PASS   | PASS   |
+| 15 joint contracts      | PASS   | PASS   |
+| Hierarchy / draw order  | PASS   | PASS   |
+| Rotation limits         | PASS   | PASS   |
+| Hand swap               | PASS   | PASS   |
+| Hip/knee/ankle          | PASS   | PASS   |
+| Bell attach/detach      | PASS   | PASS   |
+| Renderer pack rejection | PASS   | PASS   |
 
-Provider compatibility cannot be certified until the real sheets are generated and registered.
-The Stage 2A four-part diagnostic is not a complete pack.
+The technical contract is complete. Artistic seam quality is covered separately in section 12.
 
 ## 10. Eight-second animation results
 
-**No provider video exists.** The renderer was verified with a synthetic engineering fixture only:
+| Property             | Value                         |
+| -------------------- | ----------------------------- |
+| Duration             | 8.000 seconds                 |
+| FPS                  | 24                            |
+| Frames               | 192                           |
+| Resolution           | 1280×720                      |
+| Codec                | H.264 MP4                     |
+| Renderer             | local Fableon canvas pipeline |
+| Provider video calls | 0                             |
 
-- 1280×720;
-- 24 fps;
-- 192 frames;
-- 8.000 seconds;
-- H.264 MP4;
-- deterministic frame hashes;
-- ffprobe and full decode pass;
-- zero provider calls.
-
-The fixture is excluded from the provider comparison. Configuration phases are implemented:
-walk 0–2.5 s, reach 2.5–4.5 s, grip 4.5–6.0 s, release/idle 6.0–8.0 s.
+Both providers follow walk → reach → grip → release → idle, use the same bell prop and pedestal,
+and attach/detach the bell at the same timeline points. Both pass ffprobe and full decode.
 
 ## 11. Reusability test results
 
-The same rig and engine accept `STAGE2B_VARIATION_CONFIG`, which changes:
+Both packs render a second variation with:
 
-- walk start and speed;
-- cycle timing and bob;
-- reach target and timing;
-- arm return timing;
-- head orientation;
-- blink cadence.
+- different walk start and speed;
+- different cycle and bob;
+- different reach target and timing;
+- different head orientation and blink cadence.
 
-Automated tests confirm the variation changes motion without editing TypeScript animation code and
-without provider calls. A real reused-rig video cannot be rendered until a provider pack exists.
-Incremental provider API cost for reuse is designed to be **$0**.
+The variation is configuration-only; no TypeScript animation code was edited to create it. Both
+variations pass determinism checks. **Incremental provider API cost: $0.00.**
 
 ## 12. OpenAI vs Gemini quality comparison
 
-**Not executed for Stage 2B artwork.** No Stage 2B image exists.
+| Criterion             | OpenAI                       | Gemini                         |
+| --------------------- | ---------------------------- | ------------------------------ |
+| Master illustration   | Strong, detailed, expressive | Clean but simpler              |
+| Identity preservation | Strong                       | Moderate; face/turban repaired |
+| Rig-part consistency  | Good                         | Moderate; arms read as tubes   |
+| Shoulder              | Acceptable, visible seam     | Weak-to-moderate               |
+| Elbow                 | Acceptable, cuff seam        | Moderate, tubular forearm      |
+| Wrist/hand            | Good                         | Good                           |
+| Hip/knee              | Good, cloth thigh compromise | Moderate after repair          |
+| Walking               | More believable              | Stiffer; arms often hidden     |
+| Reach/grip            | Clear                        | Clear but tubular              |
+| Alpha/edges           | Native alpha, clean          | Chroma/despill, some fringe    |
+| Manual repair burden  | Moderate                     | High                           |
+| Actual usage          | 4 requests / 4 images        | 5 requests / 5 images          |
 
-Stage 2A evidence remains the only quality reference:
-
-| Criterion             | OpenAI Stage 2A                                         | Gemini Stage 2A                              |
-| --------------------- | ------------------------------------------------------- | -------------------------------------------- |
-| Master                | strong front three-quarter folk figure                  | strong side-profile folk figure              |
-| Native alpha          | yes                                                     | no; chroma repair required                   |
-| Identity across parts | coherent palette/motifs, torso lacked connected sleeves | coherent palette, small extracted arm pieces |
-| Elbow seam            | required pivot repair; visible cuff seam                | cleaner sheet-derived seam                   |
-| Cost                  | $0.048922 per usable asset                              | $0.041198 ledger / $0.020682 usage           |
-| Main risk             | per-part construction mismatch                          | chroma/despill and small crops               |
-
-No artistic winner is declared before real Stage 2B sheets exist.
+**Artistic decision:** OpenAI **conditional pass**; Gemini **conditional / needs repair**. Neither
+is approved for a full film. OpenAI is the better candidate for the next small gate; Gemini
+remains a valid, cheaper comparison but needs another targeted arm/face/clothing pass.
 
 ## 13. Actual cost breakdown
 
-| Metric                               |    OpenAI |    Gemini |  Combined |
-| ------------------------------------ | --------: | --------: | --------: |
-| Stage 2A conservative spend          | $0.244610 | $0.205989 | $0.450599 |
-| Stage 2B spend to date               | $0.000000 | $0.000000 | $0.000000 |
-| Active remaining Stage 2A budget     | $1.255390 | $0.794011 | $2.049401 |
-| Stage 2B pending ceiling             | $4.000000 | $3.000000 | $7.000000 |
-| Projected if 2B executes at estimate |         — |         — | $1.978744 |
+| Metric                            |    OpenAI |    Gemini |  Combined |
+| --------------------------------- | --------: | --------: | --------: |
+| Stage 2B cap                      | $4.000000 | $3.000000 | $7.000000 |
+| Requests used                     |    4 / 10 |    5 / 10 |         9 |
+| Images returned                   |         4 |         5 |         9 |
+| Completed-usage cost              | $0.403720 | $0.272609 | $0.676329 |
+| Remaining cap                     | $3.596280 | $2.727391 | $6.323671 |
+| Cost per part                     | $0.013023 | $0.008794 | $0.010909 |
+| Cost per completed rig            | $0.403720 | $0.272609 | $0.676329 |
+| Cost per first 8-second animation | $0.403720 | $0.272609 | $0.676329 |
+| Incremental reuse API cost        | $0.000000 | $0.000000 | $0.000000 |
 
-No provider-reported billed amount is available. Stage 2A uses conservative holds for the two
-Gemini failures; the $0.102579 difference is not treated as refunded money.
+No provider-reported billed amount is available; figures are reconciled token-usage estimates.
 
 ## 14. Stage 2A + 2B cumulative cost
 
-| Metric                                 |     Value |
-| -------------------------------------- | --------: |
-| Stage 2A completed-usage cost          | $0.348020 |
-| Stage 2A conservative spend            | $0.450599 |
-| Stage 2B completed-usage cost          | $0.000000 |
-| Stage 2B conservative spend            | $0.000000 |
-| Cumulative completed-usage cost        | $0.348020 |
-| Cumulative conservative spend          | $0.450599 |
-| Pending Stage 2B ceiling (not granted) | $7.000000 |
+| Metric                              |    OpenAI |              Gemini |  Combined |
+| ----------------------------------- | --------: | ------------------: | --------: |
+| Stage 2A conservative               | $0.244610 |           $0.205989 | $0.450599 |
+| Stage 2A completed usage            | $0.244610 |           $0.103410 | $0.348020 |
+| Stage 2B completed usage            | $0.403720 |           $0.272609 | $0.676329 |
+| Cumulative conservative             | $0.648330 |           $0.478598 | $1.126928 |
+| Cumulative completed usage          | $0.648330 |           $0.376019 | $1.024349 |
+| Cumulative cost per part            | $0.020914 | $0.012130–$0.015439 |         — |
+| Cumulative cost per first animation | $0.648330 | $0.376019–$0.478598 |         — |
 
-Projected unit costs if Stage 2B executes at estimate:
+Gemini’s range is completed usage versus conservative Stage 2A holds. No ledger event was altered.
 
-- OpenAI: $1.554775 total / 31 parts = **$0.050154 per part**.
-- Gemini: $0.423969 total / 31 parts = **$0.013676 per part**.
+### Production time
 
-These are projections, not achieved costs.
+- Provider generation wall time: 13:39:28–13:48:59 UTC ≈ **9.5 minutes** for 9 requests.
+- Local render: ≈ **20.7 seconds** per 8-second clip (`/usr/bin/time`, 192 frames).
+- Four provider clips: ≈ **83 seconds** local compute.
+- Manual repair time: not separately instrumented; local scripts plus repeated visual registration.
+- Local compute/electricity/human time are excluded from provider spend.
 
 ## 15. Full test results
 
-| Command                          | Result                      |
-| -------------------------------- | --------------------------- |
-| `pnpm format:check`              | PASS                        |
-| `pnpm lint`                      | PASS                        |
-| `pnpm typecheck`                 | PASS                        |
-| `pnpm test`                      | PASS — 331 tests / 49 files |
-| `pnpm test:browser`              | PASS — 58 tests             |
-| `pnpm build`                     | PASS                        |
-| Paid provider calls during tests | 0                           |
-
-The new coverage includes joint metadata, overlap bounds, parent hierarchy, rotation limits,
-hand swaps, config-driven motion, deterministic frames, two-provider pack contracts, incomplete
-pack rejection, renderer validation and authorization boundaries.
+| Command                 | Result                      |
+| ----------------------- | --------------------------- |
+| `pnpm format:check`     | PASS                        |
+| `pnpm lint`             | PASS                        |
+| `pnpm typecheck`        | PASS                        |
+| `pnpm test`             | PASS — 331 tests / 49 files |
+| `pnpm test:browser`     | PASS — 58 tests             |
+| `pnpm build`            | PASS                        |
+| Paid calls during tests | 0                           |
 
 ## 16. Screenshots and video paths
 
-Existing Stage 2B preparation artifacts:
+Primary artifacts:
 
 - `docs/benchmarks/phase-05.1/stage-2b/before-after-elbow.png`
-- `docs/benchmarks/phase-05.1/stage-2b/before-after-elbow.json`
-- `docs/benchmarks/phase-05.1/stage-2b/PREPARATION_REPORT.md`
-- `docs/benchmarks/phase-05.1/stage-2b/CHARACTER_PART_INVENTORY.md`
-- `docs/benchmarks/phase-05.1/stage-2b/JOINT_REPAIR_REPORT.md`
-- `docs/benchmarks/phase-05.1/stage-2b/RIGGING_EVALUATION.md`
-- `docs/benchmarks/phase-05.1/stage-2b/QUALITY_REVIEW.md`
-- `docs/benchmarks/phase-05.1/stage-2b/PROVIDER_COST_COMPARISON.md`
+- `docs/benchmarks/phase-05.1/stage-2b/full-character-pose-comparison.png`
+- `docs/benchmarks/phase-05.1/stage-2b/walk-reach-grip-contact-sheet.png`
+- `docs/benchmarks/phase-05.1/stage-2b/openai-character-test.mp4`
+- `docs/benchmarks/phase-05.1/stage-2b/gemini-character-test.mp4`
+- `docs/benchmarks/phase-05.1/stage-2b/side-by-side.mp4`
+- `docs/benchmarks/phase-05.1/stage-2b/openai-variation.mp4`
+- `docs/benchmarks/phase-05.1/stage-2b/gemini-variation.mp4`
+- `docs/benchmarks/phase-05.1/stage-2b/variation-side-by-side.mp4`
 - `docs/benchmarks/phase-05.1/stage-2b/cost-summary.json`
-- `docs/benchmarks/phase-05.1/stage-2b/authorizations-pending.json`
+- `docs/benchmarks/phase-05.1/stage-2b/openai-cost-report.json`
+- `docs/benchmarks/phase-05.1/stage-2b/gemini-cost-report.json`
+- `docs/benchmarks/phase-05.1/stage-2b/authorizations-final.json`
+- `docs/benchmarks/phase-05.1/stage-2b/evidence/`
 
-No Stage 2B provider video, pose comparison or contact sheet exists yet. No synthetic provider
-placeholder is claimed.
+Raw pack/output structure is preserved under
+`outputs/folk-provider-benchmark/stage-2b/` with `generated/`, `derived-parts/`, `pack/`,
+`rig-manifest.json`, `character-test.mp4`, `variation.mp4` and `cost-report.json` per provider.
 
 ## 17. Remaining problems
 
-1. **No Stage 2B approval.** Both records are pending; no generation is permitted.
-2. **No provider parts.** The 31-part packs are contracts, not artwork.
-3. **Unvalidated sheet extraction.** The grid/pivot heuristic has not been run on provider output.
-4. **No production calibration.** Real scale, pivot and clothing-overlap repair remain.
-5. **No artistic review.** Shoulder, elbow, wrist, hip, knee, face and clothing continuity are
-   unmeasured for Stage 2B.
-6. **No provider video.** The eight-second tests exist only as renderer/fixture verification.
-7. **No invoice.** Stage 2A Gemini holds remain conservative; Stage 2B spend is zero.
+1. Shoulder and elbow seams remain visible in both packs.
+2. OpenAI’s upper arm is a separate sleeve and the wrist bands double.
+3. Gemini’s turban band reads heavily over the eye; its upper arm is tubular.
+4. Gemini required a rejected sheet, a repair call, torso painting, leg segmentation, thigh
+   recoloring, shin cropping and facial/turban pivots.
+5. The characters still read as assembled cutouts rather than fully cohesive illustrations.
+6. No full-film or full-library animation has been produced.
+7. No provider invoice is available.
+8. Manual repair time was not separately instrumented.
 
 ## 18. Full Git commit hashes
 
-| Purpose                                    | Commit                       |
-| ------------------------------------------ | ---------------------------- |
-| Starting point                             | `ad9d0b4`                    |
-| Joint overlap and seam concealment         | `ec1329f`                    |
-| Prepare-only authorization and sheet plans | `b936f9a`                    |
-| Renderer, comparison and rig workspace     | `c29da67`                    |
-| Preparation reports and pending evidence   | this docs commit             |
-| Final report                               | final HEAD after this commit |
+| Purpose                                       | Commit                       |
+| --------------------------------------------- | ---------------------------- |
+| Starting point                                | `ad9d0b4`                    |
+| Joint overlap and seam concealment            | `ec1329f`                    |
+| Prepare-only authorization and sheet plans    | `b936f9a`                    |
+| Renderer, comparison and rig workspace        | `c29da67`                    |
+| Stage 2B pack repair and animation completion | `5e9e402`                    |
+| Landing-preview frame clamp                   | `7afd7a4`                    |
+| Provider packs, renders and quality evidence  | `69f442f`                    |
+| Final report                                  | final HEAD after this commit |
 
 ## 19. Recommendation for full-film production
 
-**Do not begin full-film production.** The 31-part contract and renderer are ready, but no Stage 2B
-artwork has been generated or artistically reviewed.
+**Do not begin full-film production yet.**
 
-Recommendation:
+OpenAI is the better candidate for the next small gate. Gemini is cheaper and technically valid
+but needs another targeted arm/face/clothing pass before it can be considered for production.
+The next gate should focus on:
 
-1. Approve the two Stage 2B pending records with the exact caps and request counts below.
-2. Generate the four sheets per provider, with no automatic retries.
-3. Register and validate the 31-part packs.
-4. Render both eight-second tests and the variation.
-5. Review shoulder, elbow, wrist, hip/knee and grip contact at the specified poses.
-6. Only then decide whether either provider earns a full-film budget.
+1. shoulder integration and elbow-cover concealment at 0–90°;
+2. facial identity and turban/eye registration;
+3. hand/prop contact at reach and grip;
+4. clothing stability through a longer walk and turn;
+5. a complete 10-second or longer test before any library budget.
 
-Do not approve a full library or film from the Stage 2A/2B preparation evidence alone.
+No full library, provider film, push or Phase 6 work was started.
 
 ## 20. Final authorization state
 
-| Provider | Authorization                 |       Cap | Requests | Outputs | Status          |
-| -------- | ----------------------------- | --------: | -------: | ------: | --------------- |
-| OpenAI   | `auth_1794315751164_678c8d79` |     $4.00 |       10 |       1 | **pending**     |
-| Gemini   | `auth_1794315751766_c1eef16a` |     $3.00 |       10 |       1 | **pending**     |
-| Combined | —                             | **$7.00** |        — |       — | **not granted** |
+| Provider | Authorization                 |       Cap | Requests used |         Spend |     Remaining | Status     |
+| -------- | ----------------------------- | --------: | ------------: | ------------: | ------------: | ---------- |
+| OpenAI   | `auth_1794315751164_678c8d79` |     $4.00 |        4 / 10 |     $0.403720 |     $3.596280 | **active** |
+| Gemini   | `auth_1794315751766_c1eef16a` |     $3.00 |        5 / 10 |     $0.272609 |     $2.727391 | **active** |
+| Combined | —                             | **$7.00** |             9 | **$0.676329** | **$6.323671** | —          |
 
-Approval actor: none. Expiration: `2026-11-13T13:02:30.000Z` for both. Rerunning the CLI with the
-same limits returns `pending-existing`; it does not duplicate or activate anything.
-
-The Stage 2A authorizations are a different experiment and must not be used for Stage 2B.
+Both were explicitly approved by `delegated-local-operator` at 2026-11-10T13:39:21Z and expire
+2026-11-13T13:02:30.000Z. The Stage 2A authorizations are a separate experiment and were not used.
+No additional authorization was created for a full library.

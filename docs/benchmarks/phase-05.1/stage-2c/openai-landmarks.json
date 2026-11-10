@@ -1,0 +1,187 @@
+{
+  "format": "fableon.anatomical-landmarks",
+  "version": 1,
+  "id": "artisan_openai_anatomical_landmarks_v1_stage2c",
+  "characterId": "artisan_openai",
+  "masterPath": "docs/benchmarks/phase-05.1/stage-2a/openai-master.png",
+  "masterWidth": 1536,
+  "masterHeight": 1024,
+  "silhouette": {
+    "minX": 465,
+    "minY": 0,
+    "maxX": 1002,
+    "maxY": 1024
+  },
+  "landmarks": [
+    {
+      "id": "head-center",
+      "semantic": "head-center",
+      "x": 0.62,
+      "y": 0.14,
+      "origin": "manual",
+      "confidence": 0.6,
+      "side": "center",
+      "notes": "Stage 2C manual correction onto the visible near/far limb; far side remains inferred."
+    },
+    {
+      "id": "neck",
+      "semantic": "neck",
+      "x": 0.55,
+      "y": 0.29,
+      "origin": "inferred",
+      "confidence": 0.5,
+      "side": "center",
+      "notes": "Estimated from master silhouette; far-side joints are occluded and inferred."
+    },
+    {
+      "id": "eye",
+      "semantic": "eye",
+      "x": 0.7,
+      "y": 0.14,
+      "origin": "manual",
+      "confidence": 0.6,
+      "side": "near",
+      "notes": "Stage 2C manual correction onto the visible near/far limb; far side remains inferred."
+    },
+    {
+      "id": "nose",
+      "semantic": "nose",
+      "x": 0.73,
+      "y": 0.18,
+      "origin": "manual",
+      "confidence": 0.6,
+      "side": "near",
+      "notes": "Stage 2C manual correction onto the visible near/far limb; far side remains inferred."
+    },
+    {
+      "id": "shoulder-near",
+      "semantic": "shoulder",
+      "x": 0.72,
+      "y": 0.34,
+      "origin": "manual",
+      "confidence": 0.6,
+      "side": "near",
+      "notes": "Stage 2C manual correction onto the visible near/far limb; far side remains inferred."
+    },
+    {
+      "id": "elbow-near",
+      "semantic": "elbow",
+      "x": 0.74,
+      "y": 0.51,
+      "origin": "manual",
+      "confidence": 0.6,
+      "side": "near",
+      "notes": "Stage 2C manual correction onto the visible near/far limb; far side remains inferred."
+    },
+    {
+      "id": "wrist-near",
+      "semantic": "wrist",
+      "x": 0.76,
+      "y": 0.66,
+      "origin": "manual",
+      "confidence": 0.6,
+      "side": "near",
+      "notes": "Stage 2C manual correction onto the visible near/far limb; far side remains inferred."
+    },
+    {
+      "id": "shoulder-far",
+      "semantic": "shoulder",
+      "x": 0.3,
+      "y": 0.34,
+      "origin": "manual",
+      "confidence": 0.6,
+      "side": "far",
+      "notes": "Stage 2C manual correction onto the visible near/far limb; far side remains inferred."
+    },
+    {
+      "id": "elbow-far",
+      "semantic": "elbow",
+      "x": 0.3,
+      "y": 0.51,
+      "origin": "manual",
+      "confidence": 0.6,
+      "side": "far",
+      "notes": "Stage 2C manual correction onto the visible near/far limb; far side remains inferred."
+    },
+    {
+      "id": "wrist-far",
+      "semantic": "wrist",
+      "x": 0.28,
+      "y": 0.66,
+      "origin": "manual",
+      "confidence": 0.6,
+      "side": "far",
+      "notes": "Stage 2C manual correction onto the visible near/far limb; far side remains inferred."
+    },
+    {
+      "id": "hip-near",
+      "semantic": "hip",
+      "x": 0.63,
+      "y": 0.64,
+      "origin": "manual",
+      "confidence": 0.6,
+      "side": "near",
+      "notes": "Stage 2C manual correction onto the visible near/far limb; far side remains inferred."
+    },
+    {
+      "id": "knee-near",
+      "semantic": "knee",
+      "x": 0.61,
+      "y": 0.82,
+      "origin": "manual",
+      "confidence": 0.6,
+      "side": "near",
+      "notes": "Stage 2C manual correction onto the visible near/far limb; far side remains inferred."
+    },
+    {
+      "id": "ankle-near",
+      "semantic": "ankle",
+      "x": 0.57,
+      "y": 0.93,
+      "origin": "manual",
+      "confidence": 0.6,
+      "side": "near",
+      "notes": "Stage 2C manual correction onto the visible near/far limb; far side remains inferred."
+    },
+    {
+      "id": "sole-near",
+      "semantic": "sole",
+      "x": 0.57,
+      "y": 0.985,
+      "origin": "manual",
+      "confidence": 0.6,
+      "side": "near",
+      "notes": "Stage 2C manual correction onto the visible near/far limb; far side remains inferred."
+    },
+    {
+      "id": "hip-far",
+      "semantic": "hip",
+      "x": 0.45,
+      "y": 0.64,
+      "origin": "manual",
+      "confidence": 0.6,
+      "side": "far",
+      "notes": "Stage 2C manual correction onto the visible near/far limb; far side remains inferred."
+    },
+    {
+      "id": "knee-far",
+      "semantic": "knee",
+      "x": 0.43,
+      "y": 0.82,
+      "origin": "manual",
+      "confidence": 0.6,
+      "side": "far",
+      "notes": "Stage 2C manual correction onto the visible near/far limb; far side remains inferred."
+    },
+    {
+      "id": "ankle-far",
+      "semantic": "ankle",
+      "x": 0.41,
+      "y": 0.93,
+      "origin": "manual",
+      "confidence": 0.6,
+      "side": "far",
+      "notes": "Stage 2C manual correction onto the visible near/far limb; far side remains inferred."
+    }
+  ]
+}

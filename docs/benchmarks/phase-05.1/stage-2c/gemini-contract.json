@@ -1,0 +1,225 @@
+{
+  "format": "fableon.rig-first-part-contract",
+  "version": 1,
+  "experimentId": "phase-05.1-stage-2c",
+  "characterId": "artisan_gemini",
+  "provider": "gemini",
+  "master": {
+    "source": "docs/benchmarks/phase-05.1/stage-2a/gemini-master.png",
+    "width": 2528,
+    "height": 1696,
+    "silhouette": {
+      "minX": 893,
+      "minY": 92,
+      "maxX": 1586,
+      "maxY": 1617
+    },
+    "sha256": "02fcbb305e47d72ae74774740ff16d7512ef44316cf64e482b3b24ab1f4b0eec"
+  },
+  "parts": [
+    {
+      "id": "nearUpperArm",
+      "characterId": "artisan_gemini",
+      "provider": "gemini",
+      "role": "upper-arm",
+      "masterAsset": "docs/benchmarks/phase-05.1/stage-2a/gemini-master.png",
+      "sourceMaster": "docs/benchmarks/phase-05.1/stage-2a/gemini-master.png",
+      "parentJoint": "shoulder",
+      "childJoint": "elbow",
+      "masterLandmarks": {
+        "parent": {
+          "x": 0.82,
+          "y": 0.33
+        },
+        "child": {
+          "x": 0.8300000000000001,
+          "y": 0.49
+        }
+      },
+      "expectedSegmentLengthPx": 244.09839184230609,
+      "expectedNeutralLocation": {
+        "x": 0.5794007120253164,
+        "y": 0.42290683962264153
+      },
+      "expectedVisibleRegion": {
+        "minX": 1274.26,
+        "minY": 408.25,
+        "maxX": 1655.19,
+        "maxY": 1026.25
+      },
+      "expectedSpriteOrientationDeg": 88.37314327661413,
+      "allowedScaleAdjustment": {
+        "min": 0.85,
+        "max": 1.15
+      },
+      "hiddenOverlapZone": {
+        "parent": 65,
+        "child": 65
+      },
+      "occlusionOwner": "child-over-parent",
+      "decorationOwner": ["sleeve-pattern"],
+      "sourcePixelProvenance": [
+        "docs/benchmarks/phase-05.1/stage-2a/gemini-master.png",
+        "visible-nearUpperArm.png"
+      ],
+      "providerGenerationReference": null,
+      "approvalStatus": "needs-editing",
+      "notes": [
+        "Master/rig segment ratio 1.718. Visible master region extracted by a capsule mask; hidden shoulder/elbow/hip/knee geometry still must be supplied by source-preserving repair."
+      ]
+    },
+    {
+      "id": "nearForearm",
+      "characterId": "artisan_gemini",
+      "provider": "gemini",
+      "role": "forearm",
+      "masterAsset": "docs/benchmarks/phase-05.1/stage-2a/gemini-master.png",
+      "sourceMaster": "docs/benchmarks/phase-05.1/stage-2a/gemini-master.png",
+      "parentJoint": "elbow",
+      "childJoint": "wrist",
+      "masterLandmarks": {
+        "parent": {
+          "x": 0.8300000000000001,
+          "y": 0.49
+        },
+        "child": {
+          "x": 0.8300000000000001,
+          "y": 0.64
+        }
+      },
+      "expectedSegmentLengthPx": 228.75,
+      "expectedNeutralLocation": {
+        "x": 0.5807713607594936,
+        "y": 0.562278891509434
+      },
+      "expectedVisibleRegion": {
+        "minX": 1307.19,
+        "minY": 678.25,
+        "maxX": 1629.19,
+        "maxY": 1229
+      },
+      "expectedSpriteOrientationDeg": 90,
+      "allowedScaleAdjustment": {
+        "min": 0.85,
+        "max": 1.15
+      },
+      "hiddenOverlapZone": {
+        "parent": 56,
+        "child": 56
+      },
+      "occlusionOwner": "child-over-parent",
+      "decorationOwner": ["forearm-pattern"],
+      "sourcePixelProvenance": [
+        "docs/benchmarks/phase-05.1/stage-2a/gemini-master.png",
+        "visible-nearForearm.png"
+      ],
+      "providerGenerationReference": null,
+      "approvalStatus": "needs-editing",
+      "notes": [
+        "Master/rig segment ratio 1.720. Visible master region extracted by a capsule mask; hidden shoulder/elbow/hip/knee geometry still must be supplied by source-preserving repair."
+      ]
+    },
+    {
+      "id": "nearThigh",
+      "characterId": "artisan_gemini",
+      "provider": "gemini",
+      "role": "thigh",
+      "masterAsset": "docs/benchmarks/phase-05.1/stage-2a/gemini-master.png",
+      "sourceMaster": "docs/benchmarks/phase-05.1/stage-2a/gemini-master.png",
+      "parentJoint": "hip",
+      "childJoint": "knee",
+      "masterLandmarks": {
+        "parent": {
+          "x": 0.5800000000000001,
+          "y": 0.6
+        },
+        "child": {
+          "x": 0.5599999999999999,
+          "y": 0.8
+        }
+      },
+      "expectedSegmentLengthPx": 305.31475496608414,
+      "expectedNeutralLocation": {
+        "x": 0.5094976265822785,
+        "y": 0.6836674528301887
+      },
+      "expectedVisibleRegion": {
+        "minX": 1061.08,
+        "minY": 787,
+        "maxX": 1514.94,
+        "maxY": 1532
+      },
+      "expectedSpriteOrientationDeg": 92.60188050145895,
+      "allowedScaleAdjustment": {
+        "min": 0.85,
+        "max": 1.15
+      },
+      "hiddenOverlapZone": {
+        "parent": 77,
+        "child": 77
+      },
+      "occlusionOwner": "cover-over",
+      "decorationOwner": ["dhoti-overlap"],
+      "sourcePixelProvenance": [
+        "docs/benchmarks/phase-05.1/stage-2a/gemini-master.png",
+        "visible-nearThigh.png"
+      ],
+      "providerGenerationReference": null,
+      "approvalStatus": "needs-editing",
+      "notes": [
+        "Master/rig segment ratio 1.981. Visible master region extracted by a capsule mask; hidden shoulder/elbow/hip/knee geometry still must be supplied by source-preserving repair."
+      ]
+    },
+    {
+      "id": "nearShin",
+      "characterId": "artisan_gemini",
+      "provider": "gemini",
+      "role": "shin",
+      "masterAsset": "docs/benchmarks/phase-05.1/stage-2a/gemini-master.png",
+      "sourceMaster": "docs/benchmarks/phase-05.1/stage-2a/gemini-master.png",
+      "parentJoint": "knee",
+      "childJoint": "ankle",
+      "masterLandmarks": {
+        "parent": {
+          "x": 0.5599999999999999,
+          "y": 0.8
+        },
+        "child": {
+          "x": 0.5299999999999999,
+          "y": 0.92
+        }
+      },
+      "expectedSegmentLengthPx": 184.17715412069975,
+      "expectedNeutralLocation": {
+        "x": 0.5026443829113924,
+        "y": 0.8275353773584906
+      },
+      "expectedVisibleRegion": {
+        "minX": 1090.29,
+        "minY": 1142,
+        "maxX": 1451.08,
+        "maxY": 1665
+      },
+      "expectedSpriteOrientationDeg": 96.4813876861072,
+      "allowedScaleAdjustment": {
+        "min": 0.85,
+        "max": 1.15
+      },
+      "hiddenOverlapZone": {
+        "parent": 59,
+        "child": 59
+      },
+      "occlusionOwner": "child-over-parent",
+      "decorationOwner": ["shin-outline"],
+      "sourcePixelProvenance": [
+        "docs/benchmarks/phase-05.1/stage-2a/gemini-master.png",
+        "visible-nearShin.png"
+      ],
+      "providerGenerationReference": null,
+      "approvalStatus": "source-preserved",
+      "notes": [
+        "Master/rig segment ratio 1.196. Visible master region extracted by a capsule mask; hidden shoulder/elbow/hip/knee geometry still must be supplied by source-preserving repair."
+      ]
+    }
+  ]
+}

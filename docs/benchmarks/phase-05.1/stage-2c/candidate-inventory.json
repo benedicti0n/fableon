@@ -1,0 +1,70 @@
+{
+  "generatedAt": "2026-11-11",
+  "experimentId": "phase-05.1-stage-2c",
+  "paidCandidates": [],
+  "offlineExtracts": [
+    {
+      "provider": "openai",
+      "part": "nearUpperArm",
+      "file": "openai-visible-nearUpperArm.png",
+      "status": "unapproved-extraction"
+    },
+    {
+      "provider": "openai",
+      "part": "nearForearm",
+      "file": "openai-visible-nearForearm.png",
+      "status": "unapproved-extraction"
+    },
+    {
+      "provider": "openai",
+      "part": "nearThigh",
+      "file": "openai-visible-nearThigh.png",
+      "status": "unapproved-extraction"
+    },
+    {
+      "provider": "openai",
+      "part": "nearShin",
+      "file": "openai-visible-nearShin.png",
+      "status": "unapproved-extraction"
+    },
+    {
+      "provider": "gemini",
+      "part": "nearUpperArm",
+      "file": "gemini-visible-nearUpperArm.png",
+      "status": "unapproved-extraction"
+    },
+    {
+      "provider": "gemini",
+      "part": "nearForearm",
+      "file": "gemini-visible-nearForearm.png",
+      "status": "unapproved-extraction"
+    },
+    {
+      "provider": "gemini",
+      "part": "nearThigh",
+      "file": "gemini-visible-nearThigh.png",
+      "status": "unapproved-extraction"
+    },
+    {
+      "provider": "gemini",
+      "part": "nearShin",
+      "file": "gemini-visible-nearShin.png",
+      "status": "unapproved-extraction"
+    }
+  ],
+  "pendingAuthorizations": {
+    "openai": {
+      "id": "auth_1794337129045_16948671",
+      "status": "pending",
+      "capUsd": 2,
+      "requests": 4
+    },
+    "gemini": {
+      "id": "auth_1794337129377_7e5ac5a0",
+      "status": "pending",
+      "capUsd": 1.5,
+      "requests": 4
+    }
+  },
+  "note": "No paid artwork generated. Offline extracts are source-master regions, not approved production sprites."
+}

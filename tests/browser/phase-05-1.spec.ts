@@ -89,9 +89,9 @@ test.describe("Phase 5.1 provider safety and Studio", () => {
   }) => {
     await page.goto("/studio/providers/costs");
     await expect(page.getByRole("heading", { name: "OpenAI vs Gemini" })).toBeVisible();
-    await expect(page.getByText(/Stage 1 status/)).toContainText("0.00");
+    await expect(page.getByText(/Spend status/)).toContainText("$0.3480");
     await expect(
-      page.getByText(/No provider master, part, background, rig, film, or provider cost/i),
+      page.getByText(/No complete 31-part Stage 2B rig, eight-second provider animation/i),
     ).toBeVisible();
     await page.screenshot({ path: path.join(artifactDir, "provider-costs.png") });
 

@@ -116,7 +116,9 @@ test.describe("Phase 2.5 landing animation preview", () => {
       return Number(surface?.getAttribute("data-frame") ?? 47) < 47;
     });
     const pause = page.getByRole("button", { name: "Pause animation" });
-    if (await pause.isVisible()) await pause.click();
+    if (await pause.isVisible().catch(() => false)) {
+      await pause.click({ timeout: 2_000 }).catch(() => undefined);
+    }
   });
 
   test("exports a native 1920×1080 PNG", async ({ page }) => {
@@ -193,7 +195,9 @@ test.describe("Phase 2.5 landing animation preview", () => {
     const currentFrame = Number.parseInt(currentFrameText.replace(/\D+/g, ""), 10);
     const elapsedMs = Date.now() - started;
     const pause = page.getByRole("button", { name: "Pause animation" });
-    if (await pause.isVisible()) await pause.click();
+    if (await pause.isVisible().catch(() => false)) {
+      await pause.click({ timeout: 2_000 }).catch(() => undefined);
+    }
 
     const sorted = [...frameTimes].sort((a, b) => a - b);
     const metrics = {

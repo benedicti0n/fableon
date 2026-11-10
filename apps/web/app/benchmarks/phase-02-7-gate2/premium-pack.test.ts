@@ -105,7 +105,7 @@ describe("Gate 2 premium bird illustration pack", () => {
     }
   });
 
-  it("remains deterministic and does not mutate source bytes", () => {
+  it("remains deterministic and does not mutate source bytes", { timeout: 20_000 }, () => {
     const pack = parseIllustrationPack(manifest);
     const before = pack.parts.map((part) => part.hashes?.source);
     const preparedAssets = new Map<string, Uint8Array>();

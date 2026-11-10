@@ -21,6 +21,9 @@ export default async function ProviderCostsPage() {
     buildProviderCostSummary(),
     listProviderAuthorizations(),
   ]);
+  const stage2b = authorizations.filter(
+    (authorization) => authorization.experimentId === "phase-05.1-stage-2b",
+  );
   const rows = [
     ["Generation requests", summary.openai.generationRequests, summary.gemini.generationRequests],
     [
@@ -65,8 +68,9 @@ export default async function ProviderCostsPage() {
               OpenAI vs Gemini
             </h1>
             <p className="mt-2 max-w-3xl text-sm leading-6 text-mist-400">
-              Actuals only. Stage 1 has made zero paid requests. Unknown charges are shown as
-              unknown, not zero. Authorization caps are separate from reported usage.
+              Actuals from completed provider work. Unknown charges are shown as unknown, not zero.
+              Authorization caps are separate from reported usage; Stage 2B has made no paid
+              request.
             </p>
           </div>
           <Link
@@ -78,11 +82,13 @@ export default async function ProviderCostsPage() {
         </div>
 
         <div className="rounded-lg border border-ochre-500/40 bg-ochre-500/10 p-4 text-sm text-ochre-100">
-          Stage 1 status: <strong>{authorizations.length}</strong> authorization record(s),{" "}
+          Spend status: <strong>{authorizations.length}</strong> authorization record(s),{" "}
           <strong>
             {summary.actualCashSpendUsd === 0 ? "$0.00" : money(summary.actualCashSpendUsd)}
           </strong>{" "}
-          actual reconciled spend. No film has been claimed for either provider.
+          actual reconciled spend. Stage 2B records: <strong>{stage2b.length}</strong>, with{" "}
+          <strong>{stage2b.filter((entry) => entry.status === "active").length}</strong> active. No
+          film has been claimed for either provider.
         </div>
 
         <div className="overflow-x-auto rounded-lg border border-ink-700">
@@ -138,9 +144,9 @@ export default async function ProviderCostsPage() {
         <div className="rounded-lg border border-ink-700 bg-ink-950 p-4 text-[11px] leading-6 text-mist-400">
           <h2 className="font-serif text-xl text-paper-50">What is not yet claimed</h2>
           <p className="mt-2">
-            No provider master, part, background, rig, film, or provider cost is claimed as
-            complete. The adapters and gates are implemented and tested with mocked HTTP; Stage 2
-            begins only after a separate explicit approval for each provider cap.
+            No complete 31-part Stage 2B rig, eight-second provider animation, or provider film is
+            claimed yet. The Stage 2A masters, parts and costs are real and preserved. Stage 2B
+            generation waits for explicit approval of its separate experiment-scoped caps.
           </p>
           <p className="mt-1 text-mist-500">{summary.notes.join(" ")}</p>
         </div>

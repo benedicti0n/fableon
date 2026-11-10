@@ -297,6 +297,9 @@ export function ProviderWorkspace() {
           <Link className={studioSecondaryButtonClassName} href="/studio/providers/assets">
             Rig slots
           </Link>
+          <Link className={studioSecondaryButtonClassName} href="/studio/providers/stage-2b">
+            Stage 2B rigs
+          </Link>
           <Link className={studioSecondaryButtonClassName} href="/studio/providers/production">
             Production
           </Link>

@@ -1,0 +1,30 @@
+{
+  "generatedAt": "2026-11-10T12:56:53.817Z",
+  "source": "Stage 2A provider packs, existing artwork only",
+  "angles": [0, 15, 30, 45, 60, 75, 90],
+  "before": {
+    "registration": "Stage 2A target pivots and original draw order",
+    "shoulderOcclusion": "upper arm above torso",
+    "elbowOcclusion": "forearm above upper arm"
+  },
+  "after": {
+    "registration": "Stage 2B v2 draw order plus 3% upper-arm and 6% forearm overlap expansion around the pivot",
+    "shoulderOcclusion": "torso above upper arm",
+    "elbowOcclusion": "forearm above upper arm with expanded hidden overlap"
+  },
+  "providers": {
+    "openai": {
+      "base": {
+        "upper": -21.5,
+        "forearm": 44.3
+      }
+    },
+    "gemini": {
+      "base": {
+        "upper": 0,
+        "forearm": 90
+      }
+    }
+  },
+  "note": "Diagnostic registration test with the existing four Stage 2A parts, not a production character pack."
+}

@@ -1,0 +1,49 @@
+{
+  "testedAt": "2026-11-10",
+  "head": "c39831dc15d11cbcbac93bf63ba1d4875286be0a",
+  "providerCallsMade": 0,
+  "activeAuthorizations": [],
+  "credentials": {
+    "source": "ignored repository-root .env",
+    "trackedInGit": false,
+    "ignoredByGit": true,
+    "openai": {
+      "present": true,
+      "classicOpenAIPrefix": true,
+      "formatStatus": "plausible OpenAI project key format; account entitlement unverified"
+    },
+    "gemini": {
+      "present": true,
+      "classicGoogleAPIKeyPrefix": false,
+      "formatStatus": "non-classic key shape; server status reports configured, account entitlement unverified"
+    },
+    "normalDevCommandLoadsRootEnv": false,
+    "note": "Next runs with apps/web as its working directory; exporting the root .env or placing keys in apps/web/.env.local is required for the server to see them."
+  },
+  "providers": [
+    {
+      "provider": "openai",
+      "configuredWhenEnvExported": true,
+      "models": ["gpt-image-2.6-sunburst", "gpt-image-2.6-flare"],
+      "estimateForOneArtisanMaster1536x1024Medium": 0.096195,
+      "authorization": null,
+      "generateAttemptHttpStatus": 403,
+      "generateAttemptErrorCode": "authorization_missing"
+    },
+    {
+      "provider": "gemini",
+      "configuredWhenEnvExported": true,
+      "models": ["gemini-nano-banana-2.1"],
+      "estimateForOneArtisanMaster1536x1024At2K": 0.050746,
+      "authorization": null,
+      "generateAttemptHttpStatus": 403,
+      "generateAttemptErrorCode": "authorization_missing"
+    }
+  ],
+  "proposedCapsNotGranted": {
+    "openaiSmallGateUsd": 1.5,
+    "geminiSmallGateUsd": 1.0,
+    "maxOutputsPerProvider": 6
+  },
+  "decision": "BLOCKED_PENDING_EXPLICIT_AUTHORIZATION"
+}

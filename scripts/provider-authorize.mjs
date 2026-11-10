@@ -1,11 +1,13 @@
 #!/usr/bin/env node
 /**
- * Delegated local-operator authorization CLI.
+ * Operator CLI for provider spending authorizations.
  *
- * This does not write authorization JSON directly. It creates and approves
- * records through the same server-side domain/API path used by Fableon Studio.
- * The approval actor is recorded as a delegated local operator, per explicit
- * user delegation. It is idempotent for an already-active matching record.
+ * Creates pending records through the same server-side domain/API path used by
+ * Fableon Studio. It never writes authorization JSON directly and never
+ * disables the spending gate.
+ *
+ * Default behavior is prepare-only. Activation requires the explicit
+ * `--activate` flag so a prompt cannot silently turn into paid permission.
  */
 function parseArgs(argv) {
   const args = {
@@ -13,11 +15,21 @@ function parseArgs(argv) {
     experiment: "phase-05.1-folk-pilot",
     operator: "delegated-local-operator",
     requestedBy: "delegated-local-operator",
+    activate: false,
   };
   for (let index = 2; index < argv.length; index += 1) {
     const key = argv[index];
+    if (!key.startsWith("--")) throw new Error(`Unexpected argument ${key}.`);
+    if (key === "--activate") {
+      args.activate = true;
+      continue;
+    }
+    if (key === "--prepare-only") {
+      args.activate = false;
+      continue;
+    }
     const value = argv[index + 1];
-    if (!key.startsWith("--") || value === undefined) throw new Error(`Missing value for ${key}.`);
+    if (value === undefined) throw new Error(`Missing value for ${key}.`);
     index += 1;
     switch (key) {
       case "--base-url":
@@ -55,6 +67,9 @@ function parseArgs(argv) {
         break;
       case "--requested-by":
         args.requestedBy = value;
+        break;
+      case "--notes":
+        args.notes = value;
         break;
       default:
         throw new Error(`Unknown argument ${key}.`);
@@ -110,6 +125,32 @@ function sameLimits(record, args) {
   );
 }
 
+function summary(record, outcome) {
+  return {
+    outcome,
+    authorization: {
+      id: record.id,
+      experimentId: record.experimentId,
+      provider: record.provider,
+      model: record.model,
+      status: record.status,
+      approvedBy: record.approvedBy,
+      approvedAt: record.approvedAt,
+      expiresAt: record.expiresAt,
+      maxCostUsd: record.maxCostUsd,
+      spentCostUsd: record.spentCostUsd,
+      reservedCostUsd: record.reservedCostUsd,
+      remainingUsd: record.maxCostUsd - record.spentCostUsd - record.reservedCostUsd,
+      requestCount: record.requestCount,
+      maxRequests: record.maxRequests,
+      maxOutputsPerRequest: record.maxOutputsPerRequest,
+      maxWidth: record.maxWidth,
+      maxHeight: record.maxHeight,
+      notes: record.notes,
+    },
+  };
+}
+
 async function main() {
   const args = parseArgs(process.argv);
   const status = await request(args.baseUrl, "/api/studio/providers/status");
@@ -121,40 +162,15 @@ async function main() {
         `An active authorization exists with different limits (${active.id}); refusing to create a duplicate or reset consumed budget.`,
       );
     }
-    const remaining = active.maxCostUsd - active.spentCostUsd - active.reservedCostUsd;
-    console.log(
-      JSON.stringify(
-        {
-          outcome: "reused-active",
-          authorization: {
-            id: active.id,
-            experimentId: active.experimentId,
-            provider: active.provider,
-            model: active.model,
-            status: active.status,
-            approvedBy: active.approvedBy,
-            approvedAt: active.approvedAt,
-            expiresAt: active.expiresAt,
-            maxCostUsd: active.maxCostUsd,
-            spentCostUsd: active.spentCostUsd,
-            reservedCostUsd: active.reservedCostUsd,
-            remainingUsd: remaining,
-            requestCount: active.requestCount,
-            maxRequests: active.maxRequests,
-          },
-        },
-        null,
-        2,
-      ),
-    );
+    console.log(JSON.stringify(summary(active, "reused-active"), null, 2));
     return;
   }
 
   const pending = existing.find(
     (record) => record.status === "pending" && sameLimits(record, args),
   );
-  let authorizationId = pending?.id;
-  if (!authorizationId) {
+  let authorization = pending ?? null;
+  if (!authorization) {
     const created = await request(args.baseUrl, "/api/studio/providers/authorizations", {
       method: "POST",
       body: JSON.stringify({
@@ -169,15 +185,27 @@ async function main() {
         maxHeight: args.maxHeight ?? 2048,
         expiresAt: args.expiresAt ?? new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(),
         notes:
-          "Delegated local-operator authorization explicitly requested for Stage 2A. Caps are provider- and experiment-scoped.",
+          args.notes ??
+          `Pending operator authorization for ${args.experiment}. No spending until explicit approval.`,
       }),
     });
-    authorizationId = created.authorization.id;
+    authorization = created.authorization;
+  }
+
+  if (!args.activate) {
+    console.log(
+      JSON.stringify(
+        summary(authorization, pending ? "pending-existing" : "created-pending"),
+        null,
+        2,
+      ),
+    );
+    return;
   }
 
   const approved = await request(
     args.baseUrl,
-    `/api/studio/providers/authorizations/${authorizationId}/approve`,
+    `/api/studio/providers/authorizations/${authorization.id}/approve`,
     {
       method: "POST",
       body: JSON.stringify({
@@ -186,28 +214,12 @@ async function main() {
       }),
     },
   );
-  const record = approved.authorization;
   console.log(
     JSON.stringify(
-      {
-        outcome: pending ? "approved-existing-pending" : "created-and-approved",
-        authorization: {
-          id: record.id,
-          experimentId: record.experimentId,
-          provider: record.provider,
-          model: record.model,
-          status: record.status,
-          approvedBy: record.approvedBy,
-          approvedAt: record.approvedAt,
-          expiresAt: record.expiresAt,
-          maxCostUsd: record.maxCostUsd,
-          spentCostUsd: record.spentCostUsd,
-          reservedCostUsd: record.reservedCostUsd,
-          remainingUsd: record.maxCostUsd - record.spentCostUsd - record.reservedCostUsd,
-          requestCount: record.requestCount,
-          maxRequests: record.maxRequests,
-        },
-      },
+      summary(
+        approved.authorization,
+        pending ? "approved-existing-pending" : "created-and-approved",
+      ),
       null,
       2,
     ),

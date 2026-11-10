@@ -1,0 +1,10 @@
+page.evaluate: TypeError: c.toDataURL is not a function
+    at draw (<anonymous>:1:4119131)
+    at window.render (<anonymous>:1:4119174)
+    at eval (eval at evaluate (:370:30), <anonymous>:1:11)
+    at UtilityScript.evaluate (<anonymous>:372:16)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+    at main (/Users/benediction/Downloads/Web Dev projects/fableon/scripts/stage2c2-render-original.ts:236:28)
+
+[supervisor] wall-clock timeout after 15000 ms; sending SIGTERM to process group 14168
+[supervisor] final status: TIMEOUT

@@ -1,0 +1,43 @@
+2026-11-10T23:47:18.389Z assembly-start
+2026-11-10T23:47:18.393Z renderer-bundle-build-start
+2026-11-10T23:47:18.713Z renderer-bundle-build-done
+2026-11-10T23:47:18.713Z bundle /private/var/folders/cr/8rgz9nyd2_j5gqhftt3_97gc0000gn/T/opencode/stage2c4/bundle/renderer.js
+2026-11-10T23:47:18.811Z browser-launched
+2026-11-10T23:47:18.812Z provider-start openai
+2026-11-10T23:47:18.816Z paid-part openai nearUpperArm 338x855 scale=0.25848
+2026-11-10T23:47:18.816Z paid-part openai nearForearm 279x862 scale=0.24246
+2026-11-10T23:47:18.817Z paid-part openai nearThigh 432x981 scale=0.23955
+2026-11-10T23:47:18.817Z paid-part openai nearShin 430x879 scale=0.26394
+2026-11-10T23:47:18.838Z hidden-part openai artisan_nearElbowCover
+2026-11-10T23:47:18.839Z hidden-part openai artisan_handOpen
+2026-11-10T23:47:18.839Z hidden-part openai artisan_handGrip
+2026-11-10T23:47:18.843Z hidden-part openai artisan_nearFoot
+2026-11-10T23:47:18.843Z hidden-part openai artisan_nearDhoti
+2026-11-10T23:47:18.856Z payload openai parts=32 backgrounds=2
+2026-11-10T23:47:18.858Z transforms openai finite=true missing=0
+2026-11-10T23:47:19.518Z renderer-ready openai
+2026-11-10T23:47:19.669Z frame-saved openai neutral
+2026-11-10T23:47:19.737Z frame-saved openai reach
+2026-11-10T23:47:19.801Z frame-saved openai elbow-45
+2026-11-10T23:47:19.864Z frame-saved openai elbow-90
+2026-11-10T23:47:19.902Z provider-done openai
+2026-11-10T23:47:19.902Z provider-start gemini
+2026-11-10T23:47:19.904Z paid-part gemini nearUpperArm 286x646 scale=0.34211
+2026-11-10T23:47:19.905Z paid-part gemini nearForearm 339x833 scale=0.25090
+2026-11-10T23:47:19.906Z paid-part gemini nearThigh 638x1306 scale=0.17994
+2026-11-10T23:47:19.906Z paid-part gemini nearShin 431x1266 scale=0.18325
+2026-11-10T23:47:19.926Z hidden-part gemini artisan_nearElbowCover
+2026-11-10T23:47:19.926Z hidden-part gemini artisan_handOpen
+2026-11-10T23:47:19.926Z hidden-part gemini artisan_handGrip
+2026-11-10T23:47:19.934Z hidden-part gemini artisan_nearDhoti
+2026-11-10T23:47:19.943Z hidden-part gemini artisan_nearFoot
+2026-11-10T23:47:19.951Z payload gemini parts=32 backgrounds=2
+2026-11-10T23:47:19.951Z transforms gemini finite=true missing=0
+2026-11-10T23:47:20.540Z renderer-ready gemini
+2026-11-10T23:47:20.679Z frame-saved gemini neutral
+2026-11-10T23:47:20.740Z frame-saved gemini reach
+2026-11-10T23:47:20.800Z frame-saved gemini elbow-45
+2026-11-10T23:47:20.862Z frame-saved gemini elbow-90
+2026-11-10T23:47:20.888Z provider-done gemini
+2026-11-10T23:47:20.907Z browser-closed
+2026-11-10T23:47:20.907Z assembly-finished

@@ -1,0 +1,10 @@
+Prior Playwright Chromium orphan groups observed after the Stage 2C.4 runs:
+
+- PGID 4098: chromium_headless_shell group from an earlier Stage 2C.4 diagnostic failure.
+- PGID 42941: Chrome for Testing group started before Stage 2C.4.
+
+Both groups were terminated with SIGTERM. A follow-up process scan for
+`playwright_chromiumdev_profile`, `chrome-headless-shell` and
+`Google Chrome for Testing` returned no matches.
+
+No application server or unrelated process was killed.

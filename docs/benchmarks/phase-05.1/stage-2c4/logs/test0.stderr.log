@@ -1,0 +1,3 @@
+
+[supervisor] wall-clock timeout after 2500 ms; sending SIGTERM to process group 17399
+[supervisor] final status: TIMEOUT

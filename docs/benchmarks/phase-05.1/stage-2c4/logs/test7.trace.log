@@ -1,0 +1,40 @@
+2026-11-10T23:47:21.497Z video-start
+2026-11-10T23:47:21.605Z browser-launched
+2026-11-10T23:47:21.605Z video-provider-start openai
+2026-11-10T23:47:21.608Z paid-part openai nearUpperArm 338x855 scale=0.25848
+2026-11-10T23:47:21.609Z paid-part openai nearForearm 279x862 scale=0.24246
+2026-11-10T23:47:21.610Z paid-part openai nearThigh 432x981 scale=0.23955
+2026-11-10T23:47:21.611Z paid-part openai nearShin 430x879 scale=0.26394
+2026-11-10T23:47:21.615Z hidden-part openai artisan_nearElbowCover
+2026-11-10T23:47:21.615Z hidden-part openai artisan_handOpen
+2026-11-10T23:47:21.615Z hidden-part openai artisan_handGrip
+2026-11-10T23:47:21.615Z hidden-part openai artisan_nearFoot
+2026-11-10T23:47:21.615Z hidden-part openai artisan_nearDhoti
+2026-11-10T23:47:21.618Z payload openai parts=32 backgrounds=2
+2026-11-10T23:47:22.289Z renderer-ready openai
+2026-11-10T23:47:22.443Z frame openai 0 source=26
+2026-11-10T23:47:22.907Z frame openai 7 source=33
+2026-11-10T23:47:23.403Z frame openai 15 source=41
+2026-11-10T23:47:23.918Z frame openai 23 source=49
+2026-11-10T23:47:24.102Z encoded openai
+2026-11-10T23:47:24.209Z video-done openai frames=24
+2026-11-10T23:47:24.209Z video-provider-start gemini
+2026-11-10T23:47:24.210Z paid-part gemini nearUpperArm 286x646 scale=0.34211
+2026-11-10T23:47:24.211Z paid-part gemini nearForearm 339x833 scale=0.25090
+2026-11-10T23:47:24.214Z paid-part gemini nearThigh 638x1306 scale=0.17994
+2026-11-10T23:47:24.216Z paid-part gemini nearShin 431x1266 scale=0.18325
+2026-11-10T23:47:24.218Z hidden-part gemini artisan_nearElbowCover
+2026-11-10T23:47:24.218Z hidden-part gemini artisan_handOpen
+2026-11-10T23:47:24.218Z hidden-part gemini artisan_handGrip
+2026-11-10T23:47:24.218Z hidden-part gemini artisan_nearDhoti
+2026-11-10T23:47:24.218Z hidden-part gemini artisan_nearFoot
+2026-11-10T23:47:24.223Z payload gemini parts=32 backgrounds=2
+2026-11-10T23:47:24.849Z renderer-ready gemini
+2026-11-10T23:47:24.987Z frame gemini 0 source=26
+2026-11-10T23:47:25.412Z frame gemini 7 source=33
+2026-11-10T23:47:25.894Z frame gemini 15 source=41
+2026-11-10T23:47:26.401Z frame gemini 23 source=49
+2026-11-10T23:47:26.481Z encoded gemini
+2026-11-10T23:47:26.578Z video-done gemini frames=24
+2026-11-10T23:47:26.593Z browser-closed
+2026-11-10T23:47:26.594Z video-finished

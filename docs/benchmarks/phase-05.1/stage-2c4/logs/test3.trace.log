@@ -1,0 +1,11 @@
+2026-11-10T23:47:15.294Z decode-start
+2026-11-10T23:47:15.295Z decode-start openaiArmSheet docs/benchmarks/phase-05.1/stage-2c2/openai/arm-sheet.png
+2026-11-10T23:47:15.362Z decode-done openaiArmSheet png 1536x1024 alpha=true
+2026-11-10T23:47:15.363Z decode-start openaiUpperArm docs/benchmarks/phase-05.1/stage-2c2/openai/upperArm.png
+2026-11-10T23:47:15.382Z decode-done openaiUpperArm png 338x855 alpha=true
+2026-11-10T23:47:15.382Z decode-start geminiArmSheet docs/benchmarks/phase-05.1/stage-2c2/gemini/arm-sheet.png
+2026-11-10T23:47:15.461Z decode-done geminiArmSheet jpeg 2528x1696 alpha=false
+2026-11-10T23:47:15.461Z decode-start geminiUpperArm docs/benchmarks/phase-05.1/stage-2c2/gemini/upperArm.png
+2026-11-10T23:47:15.477Z decode-done geminiUpperArm png 290x650 alpha=true
+2026-11-10T23:47:15.478Z decode-report docs/benchmarks/phase-05.1/stage-2c4/smoke/03-decode.json
+2026-11-10T23:47:15.478Z decode-finished

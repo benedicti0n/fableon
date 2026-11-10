@@ -1,0 +1,25 @@
+{
+  "marker": "single-sprite-ok",
+  "source": "outputs/folk-provider-benchmark/stage-2c4/openai/parts/nearUpperArm.png",
+  "sourceSha256": "f2577446f7244200b0728a619fe87c9de5a17165ce0d8b1c5cda5531e6384f9d",
+  "output": "outputs/folk-provider-benchmark/stage-2c4/openai/single-sprite-frame.png",
+  "metadata": {
+    "format": "png",
+    "mediaType": "image/png",
+    "width": 640,
+    "height": 640,
+    "space": "srgb",
+    "channels": 4,
+    "depth": "uchar",
+    "density": 72,
+    "isProgressive": false,
+    "isPalette": false,
+    "bitsPerSample": 8,
+    "hasProfile": false,
+    "hasAlpha": true,
+    "autoOrient": {
+      "width": 640,
+      "height": 640
+    }
+  }
+}

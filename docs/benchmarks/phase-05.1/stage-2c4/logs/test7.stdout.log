@@ -1,0 +1,95 @@
+{
+  "marker": "video-ok",
+  "report": {
+    "openai": {
+      "video": "outputs/folk-provider-benchmark/stage-2c4/openai/articulation-1s.mp4",
+      "bytes": 76703,
+      "sha256": "b010cc68941474dd2832cae218066c0d77603c1cc814329fcced251341ce0664",
+      "probe": {
+        "width": 640,
+        "height": 360,
+        "avg_frame_rate": "24/1",
+        "duration": "1.000000",
+        "nb_read_frames": "24"
+      },
+      "decoded": true,
+      "frameCount": 24,
+      "frameHashes": [
+        "379afcc8bf60c723683d0cb900aa95ff7dfba8220164fe9fe3757cb121b16093",
+        "1a81c365687ef8de6a7315a6ff62ebec89964c6276e2127d33a99f167da02a4c",
+        "eb25265bb8a194bc1fb6b7ad229ea19b32dd13aacfc5853456e87f98d89da1c8",
+        "79a8786b217a1d849301eadf690c4ebae1f84133d578c61c67cc928b8c9b9cb7",
+        "b7fdad49857e7861d47019878a220dc1533de61d5df3d63f517bde2ae2c06346",
+        "0842d6d03b32a41b90fcdc5b79f34e1ab5a38347ddf66b17edc93301569af9e4",
+        "6fe79f0ece74d295dbcc0616e68e81203bb28c29b7fe161a20e854311024bb4f",
+        "d8dbc8eddbbd51c5e85718078c5d9f0846dbaf9fb4c7f43bf0365f05ee403aed",
+        "e70a779696d83c718d5585eb54a6873c9a09d8e39914f0e5a5c8ef71ae9db1cf",
+        "2e15716c98eb0e781e94db94577317667aa6ec907b5102e079c0c3936cc5deae",
+        "a29e81a95841908482c4f9a3432319357a71602d7d7239add2e1fc871bd83ee0",
+        "b4781799fd09073460780d9da112738b0127d6abcecd883e3a163489b2e40ae7",
+        "ccf021689939877cc4f3397b0b70492f85e63c12e67d2c1b1c5e375aebf3997f",
+        "a048f344d6363e8aa72f03c4404239f9c7d9fbfaa6cd0ae5e3c75ee197a0077b",
+        "956b2daae2f755da689d5b2a7d94f57bfbf226aec9ff86d8ce80b287efe740f2",
+        "676a3ce39e4a897e7a28626e13346a7abf69347cdcb6217b98ed2a1398ea4aee",
+        "cf8e4e11981ad9d6e487a978a8904138cc30b3a7a4bb78ebaf898f507ce701ff",
+        "53d03835bfa2348df9b283ac345682b85fca5135830bcfb081c82b5f4bfdc2ab",
+        "29279adc8a07ded7d7068ca68c89ea171c9f03995c9a50377dcb6caff557fb68",
+        "7202f6030876613e0cdc9519e42e5889ec6792212b2e107b04b30a057dfdb8d3",
+        "f48ca5823c4d73609ac5b252a6686fe69e2b65632ab070366cd87979f1eadd2a",
+        "2c74473a2dfd49cbc6b87d53bfcfdc86c80051de70f0fa34c8b541a84a255cf3",
+        "c9f38f2dfc4cc6f909534856c9559ff202c642cd3683eda33c6a3ac9547e83da",
+        "4fd20d69a0d9b97056ff1c349446def07910cb90157152110392d90ff0b61bdf"
+      ],
+      "sourceFrames": {
+        "start": 26,
+        "end": 49
+      },
+      "contactSheet": "docs/benchmarks/phase-05.1/stage-2c4/articulation-openai.png"
+    },
+    "gemini": {
+      "video": "outputs/folk-provider-benchmark/stage-2c4/gemini/articulation-1s.mp4",
+      "bytes": 71502,
+      "sha256": "e3e1cb29aa0d1b0ec3bbd8cb2db1fb7b8bdf831272b31ff2218f5cff008948ca",
+      "probe": {
+        "width": 640,
+        "height": 360,
+        "avg_frame_rate": "24/1",
+        "duration": "1.000000",
+        "nb_read_frames": "24"
+      },
+      "decoded": true,
+      "frameCount": 24,
+      "frameHashes": [
+        "65264554d583a6f0480af81bcd8400259129f62cbf16511bff1b4fa460a6a54d",
+        "06dc738565375c55e8a80287522eae370827086503274c624b3a17330238dba9",
+        "1c9ac3a1f3589c9a512bd756890ffbd24ccd4038588615e5806d67e72cf4c4c4",
+        "682347f9022f1e933035915864d13f472e237352a33ba867a237a140c8c76d0a",
+        "035b9bc0a8c2d93f0a6f408dc43d18075ce339462f77dae9b34ef46608ca3537",
+        "989fa338de0899c128015c3c46c9dbc7a341fdfba7766ec399e094ec8de71102",
+        "59936cf00457b8d0a7237680d47fc7b3ee178c1a90b95a5fb288bc49c07cb908",
+        "b917ab0b38eb5d8d733f012475cfb26e91756318398b22fa646c24b69b6ce737",
+        "dc901ff5c6bf984ca01129149a71002be3c7e9436f9820c3835e5c2354a8207d",
+        "d0e7c5ddf77da5043394196eb5c253709478657c2b99dc9e4355bb06c865e3aa",
+        "e7ee8570d2c5161bc0030c44e845a7710fd1040615faee78ec1b1ec0f9464207",
+        "fa123b82e777ae4a26a8fe9e8ff5a2a2a98cf395bb99e7f6c9d738939ab1a138",
+        "f73fed6992806f214801d149cbc5ce61facdd7e1057e0880669f91a296deb327",
+        "ef5a63cda39d94c0602623be95f90d33ec473cb1f51083a15df3916039408eeb",
+        "c15bda0cec4ed801dc8b55f7c44b533cb6e908a1be921dbbc8a2dfabcf4ac8d0",
+        "fb23d878729cf44e5f2c292f4d426ad1e9d5866b26cb97813e3cc50821712dbd",
+        "a347f3edfa75aa2dae2f1f706b2f110d4358455f0c89c6acfa71031bf7978c3b",
+        "53f3b260374e3cea8124089f73494711c955ea19ca525765a0d57e0987d7bb58",
+        "2850684fd51d2bd15e8d7dd4beb750d0ef926b9ac58594f827dfab929513ec2c",
+        "def693fa7c4f2b615e3d699941fe0b269f363698cd0530fa52a79011ed227834",
+        "1d8bdf12d4dacd7f760d11a63ea76c1e0f40175e7c68c8a3538951b22bb69053",
+        "837916c6803aa22cde642371e4c8dcaee14b1033076ccbb3dc0430d89570b37c",
+        "5160dc39926b98ec7842e4d15f5a1d70b38e2052092dcf520359a4d350cfc9da",
+        "dbd10367b6d004648d0f4b5204926f0108e37bc63b1f310cd5899d3613bfa0cc"
+      ],
+      "sourceFrames": {
+        "start": 26,
+        "end": 49
+      },
+      "contactSheet": "docs/benchmarks/phase-05.1/stage-2c4/articulation-gemini.png"
+    }
+  }
+}

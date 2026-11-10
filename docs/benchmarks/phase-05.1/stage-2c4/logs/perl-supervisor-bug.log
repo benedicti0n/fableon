@@ -1,0 +1,7 @@
+$ perl -e 'alarm 60; exec @ARGV' 60 ./node_modules/.bin/tsx -e 'console.error("SHOULD_RUN")'
+exit=0
+stdout_bytes=0
+stderr_bytes=0
+
+Reason: the literal `60` was placed in @ARGV, so `exec @ARGV` attempted to execute a program named `60` instead of tsx. The intended command never ran, and the supervisor and child wrote no output.
+Correct form: `perl -e 'alarm shift; exec @ARGV' 60 <command>`.

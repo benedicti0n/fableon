@@ -1,0 +1,120 @@
+{
+  "openai": {
+    "video": "outputs/folk-provider-benchmark/stage-2c4/legacy/openai/articulation-test.mp4",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "24/1",
+          "duration": "0.041667",
+          "nb_frames": "1"
+        }
+      ]
+    },
+    "parts": {
+      "upperArm": {
+        "file": "outputs/folk-provider-benchmark/stage-2c4/legacy/openai/parts/upperArm.png",
+        "width": 338,
+        "height": 855,
+        "scale": 0.20350877192982456,
+        "targetPivot": {
+          "x": 508,
+          "y": 470
+        }
+      },
+      "forearm": {
+        "file": "outputs/folk-provider-benchmark/stage-2c4/legacy/openai/parts/forearm.png",
+        "width": 279,
+        "height": 862,
+        "scale": 0.15661252900232017,
+        "targetPivot": {
+          "x": 532,
+          "y": 610
+        }
+      },
+      "thigh": {
+        "file": "outputs/folk-provider-benchmark/stage-2c4/legacy/openai/parts/thigh.png",
+        "width": 432,
+        "height": 981,
+        "scale": 0.11722731906218145,
+        "targetPivot": {
+          "x": 470,
+          "y": 670
+        }
+      },
+      "shin": {
+        "file": "outputs/folk-provider-benchmark/stage-2c4/legacy/openai/parts/shin.png",
+        "width": 430,
+        "height": 879,
+        "scale": 0.13083048919226395,
+        "targetPivot": {
+          "x": 476,
+          "y": 824
+        }
+      }
+    },
+    "sha256": "b828aec7110bf1ef824451ea4cfbc6aa759a4a8f5412484fa1d5b4bc9a9b7632"
+  },
+  "gemini": {
+    "video": "outputs/folk-provider-benchmark/stage-2c4/legacy/gemini/articulation-test.mp4",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "24/1",
+          "duration": "0.041667",
+          "nb_frames": "1"
+        }
+      ]
+    },
+    "parts": {
+      "upperArm": {
+        "file": "outputs/folk-provider-benchmark/stage-2c4/legacy/gemini/parts/upperArm.png",
+        "width": 290,
+        "height": 650,
+        "scale": 0.2676923076923077,
+        "targetPivot": {
+          "x": 508,
+          "y": 470
+        }
+      },
+      "forearm": {
+        "file": "outputs/folk-provider-benchmark/stage-2c4/legacy/gemini/parts/forearm.png",
+        "width": 343,
+        "height": 837,
+        "scale": 0.2735961768219833,
+        "targetPivot": {
+          "x": 532,
+          "y": 610
+        }
+      },
+      "thigh": {
+        "file": "outputs/folk-provider-benchmark/stage-2c4/legacy/gemini/parts/thigh.png",
+        "width": 641,
+        "height": 1310,
+        "scale": 0.08778625954198473,
+        "targetPivot": {
+          "x": 470,
+          "y": 670
+        }
+      },
+      "shin": {
+        "file": "outputs/folk-provider-benchmark/stage-2c4/legacy/gemini/parts/shin.png",
+        "width": 435,
+        "height": 1269,
+        "scale": 0.14420803782505912,
+        "targetPivot": {
+          "x": 476,
+          "y": 824
+        }
+      }
+    },
+    "sha256": "0a3f1c1de16c6d516864760a4c5d7da0d7d35e3d26ffd64f0b14d359149802c9"
+  }
+}

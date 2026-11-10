@@ -192,12 +192,20 @@ export function ConnectorRigEditor() {
               inputs; saving writes only connector metadata, never the generated artwork.
             </p>
           </div>
-          <Link
-            href="/studio/folk/rigs"
-            className="rounded-md border border-ink-700 bg-ink-900 px-3 py-2 text-xs text-mist-300"
-          >
-            Back to rig editor
-          </Link>
+          <div className="flex gap-2">
+            <Link
+              href="/studio/folk/rigs/stage-2c"
+              className="rounded-md border border-ochre-500/60 bg-ochre-500/10 px-3 py-2 text-xs text-ochre-200"
+            >
+              Stage 2C blueprints
+            </Link>
+            <Link
+              href="/studio/folk/rigs"
+              className="rounded-md border border-ink-700 bg-ink-900 px-3 py-2 text-xs text-mist-300"
+            >
+              Back to rig editor
+            </Link>
+          </div>
         </div>
 
         {error ? (

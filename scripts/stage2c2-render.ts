@@ -1,17 +1,28 @@
 #!/usr/bin/env node
+import { appendFileSync, mkdirSync, writeFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { createRequire } from "node:module";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { spawnSync } from "node:child_process";
 import path from "node:path";
-import { chromium } from "@playwright/test";
+import { chromium, type Browser } from "@playwright/test";
 import { resolveFolkPose, type FolkRig } from "../packages/folk-motion/src/index.ts";
 
 const require = createRequire(new URL("../apps/web/package.json", import.meta.url));
 const sharp = require("sharp");
 const root = process.cwd();
-const stage = path.join(root, "outputs", "folk-provider-benchmark", "stage-2c2");
-const docs = path.join(root, "docs", "benchmarks", "phase-05.1", "stage-2c2");
+const stage =
+  process.env["STAGE2C4_LEGACY_STAGE"] ??
+  path.join(root, "outputs", "folk-provider-benchmark", "stage-2c2");
+const docs =
+  process.env["STAGE2C4_LEGACY_DOCS"] ??
+  path.join(root, "docs", "benchmarks", "phase-05.1", "stage-2c2");
+const TRACE = process.env["STAGE2C4_TRACE"] ?? "/tmp/stage2c4-trace.log";
+mkdirSync(path.dirname(TRACE), { recursive: true });
+writeFileSync(TRACE, "");
+const log = (message: string) => appendFileSync(TRACE, `${new Date().toISOString()} ${message}\n`);
+const maxFrames = Math.max(1, Number(process.env["STAGE2C4_MAX_FRAMES"] ?? "120"));
+let activeBrowser: Browser | null = null;
 
 async function keyGreen(source: string, target: string) {
   const { data, info } = await sharp(source)
@@ -54,11 +65,13 @@ async function trim(source: string, target: string) {
 }
 
 async function main() {
+  log("main-start");
   await mkdir(stage, { recursive: true });
   await mkdir(docs, { recursive: true });
   const providers = ["openai", "gemini"] as const;
   const report: Record<string, unknown> = {};
   for (const provider of providers) {
+    log(`provider-start ${provider}`);
     const dir = path.join(stage, provider, "parts");
     await mkdir(dir, { recursive: true });
     const parts: Record<
@@ -79,6 +92,7 @@ async function main() {
       ["leg", "shin", 1, 195, 115],
     ] as const;
     for (const [assembly, part, cell, targetArm, targetLeg] of defs) {
+      log(`part-start ${provider} ${assembly} ${part}`);
       const sheet = path.join(
         root,
         "outputs",
@@ -133,6 +147,7 @@ async function main() {
         x: t.width * 0.5,
         y: part === "forearm" || part === "shin" ? t.height * 0.08 : t.height * 0.06,
       };
+      log(`part-done ${provider} ${part} ${t.width}x${t.height}`);
       parts[part] = {
         file: trimmed,
         width: t.width,
@@ -142,6 +157,7 @@ async function main() {
         targetPivot,
       };
     }
+    log(`context-parts-start ${provider}`);
     // existing torso and pelvis for context
     for (const [, file] of [
       ["torso", "torso"],
@@ -194,11 +210,13 @@ async function main() {
         { id: "shin", partId: "shin", parentId: "thigh", pivot: { x: 476, y: 824 }, drawOrder: 3 },
       ],
     };
+    log(`images-start ${provider}`);
     const images: Record<string, string> = {};
     for (const part of Object.keys(parts))
       images[part] = (await readFile(parts[part]!.file)).toString("base64");
     for (const id of ["torso", "pelvis"])
       images[id] = (await readFile(path.join(dir, `${id}.png`))).toString("base64");
+    log(`frames-start ${provider}`);
     const frames = [];
     for (let f = 0; f < 120; f++) {
       const phase = (f / 119) * Math.PI * 2;
@@ -224,23 +242,39 @@ async function main() {
         leg: legNodes.map((n) => ({ id: n.id, partId: n.partId, world: n.world })),
       });
     }
+    log(`browser-launch-start ${provider}`);
     const browser = await chromium.launch({ headless: true });
+    activeBrowser = browser;
+    log(`browser-launch-done ${provider}`);
     const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
+    page.setDefaultTimeout(15000);
+    page.on("pageerror", (error) => log(`PAGEERROR ${error.message}`));
+    page.on("console", (message) => {
+      if (message.type() === "error") log(`CONSOLE ${message.text()}`);
+    });
     const payload = { provider, frames, images, parts };
-    const html = `<!doctype html><html><body style="margin:0;background:#1a0d08"><canvas id="c" width="1280" height="720"></canvas><script>const p=${JSON.stringify(payload)};const c=document.getElementById('c').getContext('2d');const imgs={};for(const [id,b] of Object.entries(p.images)){const i=new Image();i.src='data:image/png;base64,'+b;imgs[id]=i;}function draw(index){const f=p.frames[index];c.fillStyle='#1a0d08';c.fillRect(0,0,1280,720);for(let y=0;y<720;y+=24)for(let x=0;x<1280;x+=24){c.fillStyle=((x/24+y/24)%2===0)?'#d9d9d9':'#f3f3f3';c.fillRect(x,y,24,24);}c.fillStyle='#fff2cf';c.font='600 24px Georgia';c.fillText(p.provider+' · arm / leg articulation · frame '+f.f,30,40);function drawSet(nodes,ox,oy){for(const n of nodes){const part=p.parts[n.partId];if(!part)continue;const m=n.world;c.save();c.setTransform(m.a,m.b,m.c,m.d,m.e+ox,m.f+oy);c.drawImage(imgs[n.partId],part.targetPivot.x-part.sourcePivot.x*part.scale,part.targetPivot.y-part.sourcePivot.y*part.scale,part.width*part.scale,part.height*part.scale);c.restore();}}drawSet(f.arm,60,120);drawSet(f.leg,700,50);return c.toDataURL('image/png');}window.render=(i)=>draw(i);Promise.all(Object.values(imgs).map(i=>i.decode())).then(()=>window.ready=true);</script></body></html>`;
+    const html = `<!doctype html><html><body style="margin:0;background:#1a0d08"><canvas id="c" width="1280" height="720"></canvas><script>const p=${JSON.stringify(payload)};const c=document.getElementById('c').getContext('2d');const imgs={};for(const [id,b] of Object.entries(p.images)){const i=new Image();i.src='data:image/png;base64,'+b;imgs[id]=i;}function draw(index){const f=p.frames[index];c.fillStyle='#1a0d08';c.fillRect(0,0,1280,720);for(let y=0;y<720;y+=24)for(let x=0;x<1280;x+=24){c.fillStyle=((x/24+y/24)%2===0)?'#d9d9d9':'#f3f3f3';c.fillRect(x,y,24,24);}c.fillStyle='#fff2cf';c.font='600 24px Georgia';c.fillText(p.provider+' · arm / leg articulation · frame '+f.f,30,40);function drawSet(nodes,ox,oy){for(const n of nodes){const part=p.parts[n.partId];if(!part)continue;const m=n.world;c.save();c.setTransform(m.a,m.b,m.c,m.d,m.e+ox,m.f+oy);c.drawImage(imgs[n.partId],part.targetPivot.x-part.sourcePivot.x*part.scale,part.targetPivot.y-part.sourcePivot.y*part.scale,part.width*part.scale,part.height*part.scale);c.restore();}}drawSet(f.arm,60,120);drawSet(f.leg,700,50);return document.getElementById('c').toDataURL('image/png');}window.render=(i)=>draw(i);Promise.all(Object.values(imgs).map(i=>i.decode())).then(()=>window.ready=true);</script></body></html>`;
+    log(`page-setcontent-start ${provider} payloadBytes=${html.length}`);
     await page.setContent(html, { waitUntil: "load" });
+    log(`page-setcontent-done ${provider}`);
     await page.waitForFunction(() => window.ready === true, null, { timeout: 30000 });
+    log(`page-ready ${provider}`);
     const frameDir = path.join(stage, provider, "frames");
     await mkdir(frameDir, { recursive: true });
-    for (let i = 0; i < 120; i++) {
+    log(`frame-loop-start ${provider} max=${maxFrames}`);
+    for (let i = 0; i < maxFrames; i++) {
       const d = await page.evaluate((n) => window.render(n), i);
       const b = d.split(",", 2)[1];
       await writeFile(
         path.join(frameDir, `frame-${String(i).padStart(4, "0")}.png`),
         Buffer.from(b, "base64"),
       );
+      if (i === 0 || (i + 1) % 10 === 0) log(`frame-done ${provider} ${i}`);
     }
+    log(`frame-loop-done ${provider}`);
     await browser.close();
+    activeBrowser = null;
+    log(`browser-closed ${provider}`);
     const video = path.join(stage, provider, "articulation-test.mp4");
     const ff = spawnSync(
       "ffmpeg",
@@ -284,7 +318,9 @@ async function main() {
       encoding: "utf8",
     });
     if (decode.status !== 0) throw new Error("decode failed");
-    await sharp(path.join(frameDir, "frame-0060.png"))
+    await sharp(
+      path.join(frameDir, `frame-${String(Math.min(60, maxFrames - 1)).padStart(4, "0")}.png`),
+    )
       .resize(960, 540)
       .png()
       .toFile(path.join(docs, `${provider}-articulation-frame.png`));
@@ -312,7 +348,18 @@ async function main() {
   await writeFile(path.join(docs, "render-report.json"), JSON.stringify(report, null, 2) + "\n");
   console.log(JSON.stringify(report, null, 2));
 }
-main().catch((e) => {
-  console.error(e instanceof Error ? (e.stack ?? e.message) : String(e));
-  process.exitCode = 1;
-});
+main()
+  .then(() => log("main-done"))
+  .catch(async (e) => {
+    log(`ERROR ${e instanceof Error ? (e.stack ?? e.message) : String(e)}`);
+    console.error(e instanceof Error ? (e.stack ?? e.message) : String(e));
+    if (activeBrowser) {
+      await activeBrowser.close().catch((closeError: unknown) => {
+        log(
+          `browser-close-error ${closeError instanceof Error ? closeError.message : String(closeError)}`,
+        );
+      });
+      activeBrowser = null;
+    }
+    process.exit(1);
+  });

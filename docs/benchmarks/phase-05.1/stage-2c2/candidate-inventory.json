@@ -1,0 +1,58 @@
+{
+  "acceptedPaidSheets": [
+    {
+      "provider": "openai",
+      "arm": "openai/arm-sheet.png",
+      "leg": "openai/leg-sheet.png"
+    },
+    {
+      "provider": "gemini",
+      "arm": "gemini/arm-sheet.png",
+      "leg": "gemini/leg-sheet.png"
+    }
+  ],
+  "extractedParts": [
+    {
+      "provider": "openai",
+      "part": "upperArm",
+      "file": "openai/upperArm.png"
+    },
+    {
+      "provider": "openai",
+      "part": "forearm",
+      "file": "openai/forearm.png"
+    },
+    {
+      "provider": "openai",
+      "part": "thigh",
+      "file": "openai/thigh.png"
+    },
+    {
+      "provider": "openai",
+      "part": "shin",
+      "file": "openai/shin.png"
+    },
+    {
+      "provider": "gemini",
+      "part": "upperArm",
+      "file": "gemini/upperArm.png"
+    },
+    {
+      "provider": "gemini",
+      "part": "forearm",
+      "file": "gemini/forearm.png"
+    },
+    {
+      "provider": "gemini",
+      "part": "thigh",
+      "file": "gemini/thigh.png"
+    },
+    {
+      "provider": "gemini",
+      "part": "shin",
+      "file": "gemini/shin.png"
+    }
+  ],
+  "rejected": [],
+  "unrendered": "Articulation test blocked by local renderer hang; no video claimed."
+}

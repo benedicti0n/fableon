@@ -1,0 +1,38 @@
+{
+  "generatedAt": "2026-11-11",
+  "experimentId": "phase-05.1-stage-2c",
+  "providers": {
+    "openai": {
+      "requestsSubmitted": 2,
+      "successfulRequests": 2,
+      "failedRequests": 0,
+      "imagesReturned": 2,
+      "rejectedCandidates": 0,
+      "acceptedSheets": 2,
+      "spentUsd": 0.085175,
+      "capUsd": 2.0,
+      "remainingUsd": 1.914825,
+      "notes": "Arm and leg repair sheets accepted for extracted-part evaluation; no provider invoice."
+    },
+    "gemini": {
+      "requestsSubmitted": 2,
+      "successfulRequests": 2,
+      "failedRequests": 0,
+      "imagesReturned": 2,
+      "rejectedCandidates": 0,
+      "acceptedSheets": 2,
+      "spentUsd": 0.104733,
+      "capUsd": 1.5,
+      "remainingUsd": 1.395267,
+      "notes": "Arm and leg repair sheets accepted for extracted-part evaluation; no provider invoice."
+    }
+  },
+  "combined": {
+    "spentUsd": 0.189908,
+    "capUsd": 3.5,
+    "remainingUsd": 3.310092,
+    "requestsSubmitted": 4,
+    "imagesReturned": 4
+  },
+  "renderStatus": "BLOCKED \u2014 local combined prepare/render script stalled during frame extraction; no paid video generation performed."
+}

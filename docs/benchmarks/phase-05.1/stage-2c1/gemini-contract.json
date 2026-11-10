@@ -1,0 +1,259 @@
+{
+  "format": "fableon.rig-first-part-contract",
+  "version": 1,
+  "experimentId": "phase-05.1-stage-2c1",
+  "characterId": "artisan_gemini",
+  "provider": "gemini",
+  "master": {
+    "source": "docs/benchmarks/phase-05.1/stage-2a/gemini-master.png",
+    "width": 2528,
+    "height": 1696,
+    "sha256": "02fcbb305e47d72ae74774740ff16d7512ef44316cf64e482b3b24ab1f4b0eec",
+    "silhouette": {
+      "minX": 893,
+      "minY": 92,
+      "maxX": 1586,
+      "maxY": 1617
+    }
+  },
+  "landmarks": {
+    "head-center": {
+      "x": 0.5584415584415584,
+      "y": 0.13639344262295083,
+      "masterPixel": {
+        "x": 1280,
+        "y": 300
+      },
+      "origin": "observed",
+      "confidence": 0.9
+    },
+    "eye": {
+      "x": 0.6594516594516594,
+      "y": 0.16918032786885245,
+      "masterPixel": {
+        "x": 1350,
+        "y": 350
+      },
+      "origin": "observed",
+      "confidence": 0.9
+    },
+    "nose": {
+      "x": 0.7748917748917749,
+      "y": 0.2019672131147541,
+      "masterPixel": {
+        "x": 1430,
+        "y": 400
+      },
+      "origin": "observed",
+      "confidence": 0.9
+    },
+    "shoulder-near": {
+      "x": 0.6161616161616161,
+      "y": 0.300327868852459,
+      "masterPixel": {
+        "x": 1320,
+        "y": 550
+      },
+      "origin": "manual",
+      "confidence": 0.65
+    },
+    "elbow-near": {
+      "x": 0.847041847041847,
+      "y": 0.4642622950819672,
+      "masterPixel": {
+        "x": 1480,
+        "y": 800
+      },
+      "origin": "manual",
+      "confidence": 0.65
+    },
+    "wrist-near": {
+      "x": 0.8759018759018758,
+      "y": 0.6281967213114754,
+      "masterPixel": {
+        "x": 1500,
+        "y": 1050
+      },
+      "origin": "manual",
+      "confidence": 0.65
+    },
+    "shoulder-far": {
+      "x": 0.3708513708513709,
+      "y": 0.300327868852459,
+      "masterPixel": {
+        "x": 1150,
+        "y": 550
+      },
+      "origin": "inferred",
+      "confidence": 0.4
+    },
+    "elbow-far": {
+      "x": 0.2987012987012987,
+      "y": 0.4642622950819672,
+      "masterPixel": {
+        "x": 1100,
+        "y": 800
+      },
+      "origin": "inferred",
+      "confidence": 0.4
+    },
+    "wrist-far": {
+      "x": 0.2987012987012987,
+      "y": 0.6281967213114754,
+      "masterPixel": {
+        "x": 1100,
+        "y": 1050
+      },
+      "origin": "inferred",
+      "confidence": 0.4
+    },
+    "hip-near": {
+      "x": 0.5873015873015873,
+      "y": 0.6937704918032787,
+      "masterPixel": {
+        "x": 1300,
+        "y": 1150
+      },
+      "origin": "manual",
+      "confidence": 0.65
+    },
+    "knee-near": {
+      "x": 0.5873015873015873,
+      "y": 0.8904918032786885,
+      "masterPixel": {
+        "x": 1300,
+        "y": 1450
+      },
+      "origin": "manual",
+      "confidence": 0.65
+    },
+    "ankle-near": {
+      "x": 0.5873015873015873,
+      "y": 0.9888524590163934,
+      "masterPixel": {
+        "x": 1300,
+        "y": 1600
+      },
+      "origin": "manual",
+      "confidence": 0.65
+    },
+    "sole-near": {
+      "x": 0.5873015873015873,
+      "y": 1.0150819672131148,
+      "masterPixel": {
+        "x": 1300,
+        "y": 1640
+      },
+      "origin": "manual",
+      "confidence": 0.65
+    },
+    "hip-far": {
+      "x": 0.5151515151515151,
+      "y": 0.6937704918032787,
+      "masterPixel": {
+        "x": 1250,
+        "y": 1150
+      },
+      "origin": "inferred",
+      "confidence": 0.4
+    },
+    "knee-far": {
+      "x": 0.47186147186147187,
+      "y": 0.8904918032786885,
+      "masterPixel": {
+        "x": 1220,
+        "y": 1450
+      },
+      "origin": "inferred",
+      "confidence": 0.4
+    },
+    "ankle-far": {
+      "x": 0.47186147186147187,
+      "y": 0.9888524590163934,
+      "masterPixel": {
+        "x": 1220,
+        "y": 1600
+      },
+      "origin": "inferred",
+      "confidence": 0.4
+    }
+  },
+  "parts": [
+    {
+      "id": "nearUpperArm",
+      "mask": "gemini-mask-nearUpperArm.png",
+      "extract": "gemini-extract-nearUpperArm.png",
+      "polygon": [
+        [1200, 520],
+        [1440, 520],
+        [1480, 840],
+        [1230, 840]
+      ],
+      "missingZones": {
+        "shoulder": [1320, 550, 34],
+        "elbow": [1480, 800, 30],
+        "hip": [1300, 1150, 32],
+        "knee": [1300, 1450, 30]
+      },
+      "status": "needs-review",
+      "note": "Editable polygon source mask; hidden joint geometry still missing."
+    },
+    {
+      "id": "nearForearm",
+      "mask": "gemini-mask-nearForearm.png",
+      "extract": "gemini-extract-nearForearm.png",
+      "polygon": [
+        [1420, 820],
+        [1530, 820],
+        [1530, 1080],
+        [1440, 1080]
+      ],
+      "missingZones": {
+        "shoulder": [1320, 550, 34],
+        "elbow": [1480, 800, 30],
+        "hip": [1300, 1150, 32],
+        "knee": [1300, 1450, 30]
+      },
+      "status": "needs-review",
+      "note": "Editable polygon source mask; hidden joint geometry still missing."
+    },
+    {
+      "id": "nearThigh",
+      "mask": "gemini-mask-nearThigh.png",
+      "extract": "gemini-extract-nearThigh.png",
+      "polygon": [
+        [1180, 1120],
+        [1420, 1120],
+        [1420, 1500],
+        [1180, 1500]
+      ],
+      "missingZones": {
+        "shoulder": [1320, 550, 34],
+        "elbow": [1480, 800, 30],
+        "hip": [1300, 1150, 32],
+        "knee": [1300, 1450, 30]
+      },
+      "status": "needs-review",
+      "note": "Editable polygon source mask; hidden joint geometry still missing."
+    },
+    {
+      "id": "nearShin",
+      "mask": "gemini-mask-nearShin.png",
+      "extract": "gemini-extract-nearShin.png",
+      "polygon": [
+        [1270, 1460],
+        [1350, 1460],
+        [1350, 1600],
+        [1270, 1600]
+      ],
+      "missingZones": {
+        "shoulder": [1320, 550, 34],
+        "elbow": [1480, 800, 30],
+        "hip": [1300, 1150, 32],
+        "knee": [1300, 1450, 30]
+      },
+      "status": "needs-review",
+      "note": "Editable polygon source mask; hidden joint geometry still missing."
+    }
+  ]
+}

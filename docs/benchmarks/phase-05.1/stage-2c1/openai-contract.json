@@ -1,0 +1,260 @@
+{
+  "format": "fableon.rig-first-part-contract",
+  "version": 1,
+  "experimentId": "phase-05.1-stage-2c1",
+  "characterId": "artisan_openai",
+  "provider": "openai",
+  "master": {
+    "source": "docs/benchmarks/phase-05.1/stage-2a/openai-master.png",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "f0634647c1fc35e9c0bbd0b37d1722a62dc23ace121c55223e6d4fe712fa92b2",
+    "silhouette": {
+      "minX": 465,
+      "minY": 0,
+      "maxX": 1002,
+      "maxY": 1024
+    }
+  },
+  "landmarks": {
+    "head-center": {
+      "x": 0.5493482309124768,
+      "y": 0.146484375,
+      "masterPixel": {
+        "x": 760,
+        "y": 150
+      },
+      "origin": "observed",
+      "confidence": 0.9
+    },
+    "eye": {
+      "x": 0.6238361266294227,
+      "y": 0.146484375,
+      "masterPixel": {
+        "x": 800,
+        "y": 150
+      },
+      "origin": "observed",
+      "confidence": 0.9
+    },
+    "nose": {
+      "x": 0.7169459962756052,
+      "y": 0.185546875,
+      "masterPixel": {
+        "x": 850,
+        "y": 190
+      },
+      "origin": "observed",
+      "confidence": 0.9
+    },
+    "shoulder-near": {
+      "x": 0.6610800744878957,
+      "y": 0.302734375,
+      "masterPixel": {
+        "x": 820,
+        "y": 310
+      },
+      "origin": "manual",
+      "confidence": 0.65
+    },
+    "elbow-near": {
+      "x": 0.7355679702048417,
+      "y": 0.48828125,
+      "masterPixel": {
+        "x": 860,
+        "y": 500
+      },
+      "origin": "manual",
+      "confidence": 0.65
+    },
+    "wrist-near": {
+      "x": 0.7728119180633147,
+      "y": 0.576171875,
+      "masterPixel": {
+        "x": 880,
+        "y": 590
+      },
+      "origin": "manual",
+      "confidence": 0.65
+    },
+    "shoulder-far": {
+      "x": 0.25139664804469275,
+      "y": 0.302734375,
+      "masterPixel": {
+        "x": 600,
+        "y": 310
+      },
+      "origin": "inferred",
+      "confidence": 0.4
+    },
+    "elbow-far": {
+      "x": 0.17690875232774675,
+      "y": 0.48828125,
+      "masterPixel": {
+        "x": 560,
+        "y": 500
+      },
+      "origin": "inferred",
+      "confidence": 0.4
+    },
+    "wrist-far": {
+      "x": 0.13966480446927373,
+      "y": 0.576171875,
+      "masterPixel": {
+        "x": 540,
+        "y": 590
+      },
+      "origin": "inferred",
+      "confidence": 0.4
+    },
+    "hip-near": {
+      "x": 0.5307262569832403,
+      "y": 0.673828125,
+      "masterPixel": {
+        "x": 750,
+        "y": 690
+      },
+      "origin": "manual",
+      "confidence": 0.65
+    },
+    "knee-near": {
+      "x": 0.5493482309124768,
+      "y": 0.830078125,
+      "masterPixel": {
+        "x": 760,
+        "y": 850
+      },
+      "origin": "manual",
+      "confidence": 0.65
+    },
+    "ankle-near": {
+      "x": 0.6238361266294227,
+      "y": 0.9375,
+      "masterPixel": {
+        "x": 800,
+        "y": 960
+      },
+      "origin": "manual",
+      "confidence": 0.65
+    },
+    "sole-near": {
+      "x": 0.6610800744878957,
+      "y": 0.9765625,
+      "masterPixel": {
+        "x": 820,
+        "y": 1000
+      },
+      "origin": "manual",
+      "confidence": 0.65
+    },
+    "hip-far": {
+      "x": 0.2886405959031657,
+      "y": 0.673828125,
+      "masterPixel": {
+        "x": 620,
+        "y": 690
+      },
+      "origin": "inferred",
+      "confidence": 0.4
+    },
+    "knee-far": {
+      "x": 0.30726256983240224,
+      "y": 0.830078125,
+      "masterPixel": {
+        "x": 630,
+        "y": 850
+      },
+      "origin": "inferred",
+      "confidence": 0.4
+    },
+    "ankle-far": {
+      "x": 0.25139664804469275,
+      "y": 0.9375,
+      "masterPixel": {
+        "x": 600,
+        "y": 960
+      },
+      "origin": "inferred",
+      "confidence": 0.4
+    }
+  },
+  "parts": [
+    {
+      "id": "nearUpperArm",
+      "mask": "openai-mask-nearUpperArm.png",
+      "extract": "openai-extract-nearUpperArm.png",
+      "polygon": [
+        [760, 290],
+        [900, 290],
+        [910, 520],
+        [830, 530],
+        [780, 420]
+      ],
+      "missingZones": {
+        "shoulder": [820, 310, 34],
+        "elbow": [860, 500, 30],
+        "hip": [750, 690, 32],
+        "knee": [760, 850, 30]
+      },
+      "status": "needs-review",
+      "note": "Editable polygon source mask; hidden joint geometry still missing."
+    },
+    {
+      "id": "nearForearm",
+      "mask": "openai-mask-nearForearm.png",
+      "extract": "openai-extract-nearForearm.png",
+      "polygon": [
+        [820, 510],
+        [910, 510],
+        [910, 640],
+        [830, 640]
+      ],
+      "missingZones": {
+        "shoulder": [820, 310, 34],
+        "elbow": [860, 500, 30],
+        "hip": [750, 690, 32],
+        "knee": [760, 850, 30]
+      },
+      "status": "needs-review",
+      "note": "Editable polygon source mask; hidden joint geometry still missing."
+    },
+    {
+      "id": "nearThigh",
+      "mask": "openai-mask-nearThigh.png",
+      "extract": "openai-extract-nearThigh.png",
+      "polygon": [
+        [660, 670],
+        [860, 670],
+        [900, 930],
+        [700, 930]
+      ],
+      "missingZones": {
+        "shoulder": [820, 310, 34],
+        "elbow": [860, 500, 30],
+        "hip": [750, 690, 32],
+        "knee": [760, 850, 30]
+      },
+      "status": "needs-review",
+      "note": "Editable polygon source mask; hidden joint geometry still missing."
+    },
+    {
+      "id": "nearShin",
+      "mask": "openai-mask-nearShin.png",
+      "extract": "openai-extract-nearShin.png",
+      "polygon": [
+        [790, 890],
+        [870, 890],
+        [870, 960],
+        [790, 960]
+      ],
+      "missingZones": {
+        "shoulder": [820, 310, 34],
+        "elbow": [860, 500, 30],
+        "hip": [750, 690, 32],
+        "knee": [760, 850, 30]
+      },
+      "status": "needs-review",
+      "note": "Editable polygon source mask; hidden joint geometry still missing."
+    }
+  ]
+}

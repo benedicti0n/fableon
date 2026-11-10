@@ -37,6 +37,10 @@ export interface ReachOptions {
   readonly endFrame: number;
   readonly gripFrame: number;
   readonly releaseFrame?: number;
+  /** Frame at which the extended arm starts returning to the rest pose. */
+  readonly returnFrame?: number;
+  /** Frame at which the return completes. Defaults to 24 frames after returnFrame. */
+  readonly returnEndFrame?: number;
 }
 
 export type ArtisanAction = "idle" | "walk" | "reach" | "watch";
@@ -136,15 +140,22 @@ function reachArm(
   };
 }
 
+function reachProgressFor(frame: number, reach: ReachOptions): number {
+  if (frame < reach.startFrame) return 0;
+  if (frame <= reach.endFrame) {
+    return easeInOut((frame - reach.startFrame) / Math.max(1, reach.endFrame - reach.startFrame));
+  }
+  if (reach.returnFrame === undefined || frame < reach.returnFrame) return 1;
+  const end = reach.returnEndFrame ?? reach.returnFrame + 24;
+  return 1 - easeInOut((frame - reach.returnFrame) / Math.max(1, end - reach.returnFrame));
+}
+
 export function artisanPose(options: ArtisanPoseOptions): FolkPose {
   const { config, frame, globalFrame, action } = options;
   const cycle = phaseAt(frame, config.cycleSeconds);
   const walking = action === "walk";
   const reachProgress =
-    action === "reach" && options.reach
-      ? (frame - options.reach.startFrame) /
-        Math.max(1, options.reach.endFrame - options.reach.startFrame)
-      : 0;
+    action === "reach" && options.reach ? reachProgressFor(frame, options.reach) : 0;
   const grip =
     action === "reach" && options.reach
       ? frame >= options.reach.gripFrame &&

@@ -7,6 +7,8 @@ import {
   type Vec2,
 } from "@fableon/sprite-motion";
 
+import { validateFolkJoint, type FolkJoint } from "./joints";
+
 export interface FolkRigNode {
   readonly id: string;
   readonly partId: string;
@@ -15,6 +17,8 @@ export interface FolkRigNode {
   readonly pivot: Vec2;
   readonly drawOrder: number;
   readonly visible?: boolean;
+  /** Optional seam/overlap contract for articulated joints. */
+  readonly joint?: FolkJoint;
 }
 
 export interface FolkRig {
@@ -42,6 +46,7 @@ export interface ResolvedFolkNode {
   readonly drawOrder: number;
   readonly pivot: Vec2;
   readonly visible: boolean;
+  readonly joint: FolkJoint | null;
   readonly world: Matrix2D;
 }
 
@@ -66,9 +71,10 @@ function validateRig(rig: FolkRig): void {
       throw new FolkRigError(`Node "${node.id}" references missing parent "${node.parentId}".`);
     }
   }
+  const byId = new Map(rig.nodes.map((node) => [node.id, node]));
+  for (const node of rig.nodes) validateFolkJoint(node, byId);
   const visiting = new Set<string>();
   const visited = new Set<string>();
-  const byId = new Map(rig.nodes.map((node) => [node.id, node]));
   const visit = (id: string) => {
     if (visited.has(id)) return;
     if (visiting.has(id)) throw new FolkRigError(`Cycle in folk rig "${rig.id}" at "${id}".`);
@@ -117,6 +123,7 @@ export function resolveFolkPose(rig: FolkRig, pose: FolkPose): readonly Resolved
       drawOrder: node.drawOrder,
       pivot: node.pivot,
       visible: pose.nodes[node.id]?.visible ?? node.visible ?? true,
+      joint: node.joint ?? null,
       world,
     };
     resolved.set(node.id, result);

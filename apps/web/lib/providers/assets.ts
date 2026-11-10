@@ -15,6 +15,7 @@ import { RIG_SLOTS, type RigSlot } from "./rig-slots";
 export interface ProcessedPart {
   readonly id: string;
   readonly slot: RigSlot;
+  readonly rigId: string;
   readonly file: string;
   readonly sourceFile: string;
   readonly width: number;
@@ -33,6 +34,7 @@ export interface ProcessedPart {
   };
   readonly status: "ready" | "needs_repair" | "rejected";
   readonly notes: readonly string[];
+  readonly joint: RigSlot["joint"] | null;
 }
 
 export interface PartInput {
@@ -65,6 +67,8 @@ export interface PreparePackInput {
   readonly parts: readonly PartInput[];
   readonly backgrounds: readonly BackgroundInput[];
   readonly generationMode: "provider-generated" | "engineering-test-fixture";
+  /** Limits pack completeness checks to one actor/rig contract. */
+  readonly slots?: readonly RigSlot[];
 }
 
 export interface PreparedProviderPack {
@@ -132,8 +136,12 @@ export function registrationFor(input: {
   };
 }
 
-async function processPart(input: PartInput, outputDir: string): Promise<ProcessedPart> {
-  const slot = RIG_SLOTS.find((entry) => entry.partId === input.slot);
+async function processPart(
+  input: PartInput,
+  outputDir: string,
+  slots: readonly RigSlot[],
+): Promise<ProcessedPart> {
+  const slot = slots.find((entry) => entry.partId === input.slot);
   if (!slot) throw new Error(`Unknown rig slot "${input.slot}".`);
   const file = path.join(outputDir, "parts", `${slot.partId}.png`);
   await mkdir(path.dirname(file), { recursive: true });
@@ -167,6 +175,7 @@ async function processPart(input: PartInput, outputDir: string): Promise<Process
   return {
     id: slot.partId,
     slot,
+    rigId: slot.rigId,
     file,
     sourceFile: input.sourcePath,
     width: registration.width,
@@ -185,6 +194,7 @@ async function processPart(input: PartInput, outputDir: string): Promise<Process
     },
     status: rejected ? "rejected" : needsRepair ? "needs_repair" : "ready",
     notes: input.notes ? [input.notes] : [],
+    joint: slot.joint ?? null,
   };
 }
 
@@ -236,16 +246,17 @@ async function processBackground(
 
 export async function prepareProviderPack(input: PreparePackInput): Promise<PreparedProviderPack> {
   await mkdir(input.outputDir, { recursive: true });
+  const slots = input.slots ?? RIG_SLOTS;
   const parts: ProcessedPart[] = [];
   for (const partInput of input.parts) {
-    parts.push(await processPart(partInput, input.outputDir));
+    parts.push(await processPart(partInput, input.outputDir, slots));
   }
   const backgrounds: Array<PreparedProviderPack["backgrounds"][number]> = [];
   for (const background of input.backgrounds) {
     backgrounds.push(await processBackground(background, input.outputDir));
   }
   const provided = new Set(parts.map((part) => part.id));
-  const missingSlots = RIG_SLOTS.map((slot) => slot.partId).filter((id) => !provided.has(id));
+  const missingSlots = slots.map((slot) => slot.partId).filter((id) => !provided.has(id));
   const relative = (file: string) => path.relative(input.outputDir, file).split(path.sep).join("/");
   const manifestParts = await Promise.all(
     parts.map(async (part) => ({
@@ -266,6 +277,8 @@ export async function prepareProviderPack(input: PreparePackInput): Promise<Prep
       scale: part.scale,
       alpha: part.alpha,
       repairHistory: part.notes,
+      rigId: part.rigId,
+      joint: part.joint,
     })),
   );
   const manifest = {
@@ -276,6 +289,7 @@ export async function prepareProviderPack(input: PreparePackInput): Promise<Prep
     provider: input.provider,
     model: input.model,
     experimentId: input.experimentId,
+    rigId: slots[0]?.rigId ?? null,
     generationMode: input.generationMode,
     aiGeneration: {
       status: input.generationMode === "provider-generated" ? "generated" : "test-fixture",
@@ -305,14 +319,16 @@ export async function prepareProviderPack(input: PreparePackInput): Promise<Prep
     parts: manifestParts,
     missingSlots,
     rigManifest: Object.fromEntries(
-      RIG_SLOTS.map((slot) => [
+      slots.map((slot) => [
         slot.partId,
         {
           actor: slot.actor,
+          rigId: slot.rigId,
           nodeId: slot.nodeId,
           parentNodeId: slot.parentNodeId,
           pivot: slot.pivot,
           drawOrder: slot.drawOrder,
+          ...(slot.joint ? { joint: slot.joint } : {}),
         },
       ]),
     ),
@@ -330,6 +346,8 @@ export async function prepareProviderPack(input: PreparePackInput): Promise<Prep
         model: input.model,
         experimentId: input.experimentId,
         generationMode: input.generationMode,
+        rigId: slots[0]?.rigId ?? null,
+        slotCount: slots.length,
         parts,
         missingSlots,
         backgroundCount: backgrounds.length,

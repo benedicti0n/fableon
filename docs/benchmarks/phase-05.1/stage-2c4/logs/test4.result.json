@@ -1,0 +1,13 @@
+{
+  "command": ["./node_modules/.bin/tsx", "scripts/stage2c4/04-extract.ts"],
+  "pid": 17436,
+  "startedAt": "2026-11-10T23:47:15.553Z",
+  "finishedAt": "2026-11-10T23:47:16.388Z",
+  "elapsedMs": 834,
+  "timeoutMs": 60000,
+  "timedOut": false,
+  "exitCode": 0,
+  "signal": null,
+  "stdout": "docs/benchmarks/phase-05.1/stage-2c4/logs/test4.stdout.log",
+  "stderr": "docs/benchmarks/phase-05.1/stage-2c4/logs/test4.stderr.log"
+}

@@ -1,0 +1,322 @@
+[
+  {
+    "format": "fableon.stage2c4.extraction-mask",
+    "version": 1,
+    "provider": "openai",
+    "part": "nearUpperArm",
+    "source": "docs/benchmarks/phase-05.1/stage-2c2/openai/arm-sheet.png",
+    "sourceSha256": "9186a76dafa97379ad794fef70b44803474a77c150db9f7e352d32751e9a87bb",
+    "mask": "outputs/folk-provider-benchmark/stage-2c4/openai/masks/nearUpperArm.mask.png",
+    "maskSha256": "ff7a4242ca74679053932664836e6b66145147343f6328b0c08c9d201688fbed",
+    "maskDimensions": {
+      "width": 1536,
+      "height": 1024
+    },
+    "sourceDimensions": {
+      "width": 1536,
+      "height": 1024
+    },
+    "extractionBox": {
+      "x": 221,
+      "y": 85,
+      "width": 338,
+      "height": 855
+    },
+    "candidate": "outputs/folk-provider-benchmark/stage-2c4/openai/parts/nearUpperArm.png",
+    "candidateSha256": "f2577446f7244200b0728a619fe87c9de5a17165ce0d8b1c5cda5531e6384f9d",
+    "candidateDimensions": {
+      "width": 338,
+      "height": 855
+    },
+    "alphaCounts": {
+      "transparent": 74590,
+      "translucent": 214400,
+      "opaque": 0,
+      "greenDominantOpaque": 0
+    },
+    "editOrigin": "source-alpha-mask",
+    "reviewStatus": "technical-test-only",
+    "createdAt": "2026-11-10T23:47:15.850Z",
+    "rawSha256": "b6150ae88d92210301146d8a5a388e0e756a6733c53e2a1566111196788eadb9"
+  },
+  {
+    "format": "fableon.stage2c4.extraction-mask",
+    "version": 1,
+    "provider": "openai",
+    "part": "nearForearm",
+    "source": "docs/benchmarks/phase-05.1/stage-2c2/openai/arm-sheet.png",
+    "sourceSha256": "9186a76dafa97379ad794fef70b44803474a77c150db9f7e352d32751e9a87bb",
+    "mask": "outputs/folk-provider-benchmark/stage-2c4/openai/masks/nearForearm.mask.png",
+    "maskSha256": "5c92055d216694b2bce194324e36cfb5aac280b423bb6ad22403ed7e61409495",
+    "maskDimensions": {
+      "width": 1536,
+      "height": 1024
+    },
+    "sourceDimensions": {
+      "width": 1536,
+      "height": 1024
+    },
+    "extractionBox": {
+      "x": 1029,
+      "y": 84,
+      "width": 279,
+      "height": 862
+    },
+    "candidate": "outputs/folk-provider-benchmark/stage-2c4/openai/parts/nearForearm.png",
+    "candidateSha256": "abc612a79576fc53a75cd6efb80334883c58d625e5c59e12ccd09cc76bddbf0b",
+    "candidateDimensions": {
+      "width": 279,
+      "height": 862
+    },
+    "alphaCounts": {
+      "transparent": 73515,
+      "translucent": 166983,
+      "opaque": 0,
+      "greenDominantOpaque": 0
+    },
+    "editOrigin": "source-alpha-mask",
+    "reviewStatus": "technical-test-only",
+    "createdAt": "2026-11-10T23:47:15.903Z",
+    "rawSha256": "ef2436a03393c906963a277a4b0bb9d9d612bbfc29451a5e36721641abe12b34"
+  },
+  {
+    "format": "fableon.stage2c4.extraction-mask",
+    "version": 1,
+    "provider": "gemini",
+    "part": "nearUpperArm",
+    "source": "docs/benchmarks/phase-05.1/stage-2c2/gemini/arm-sheet.png",
+    "sourceSha256": "838a950e309fe9f22c1530a5705dd933e1fb1d54413cae3f7b3a8fe1fe1455d8",
+    "mask": "outputs/folk-provider-benchmark/stage-2c4/gemini/masks/nearUpperArm.mask.png",
+    "maskSha256": "660a7a948d2fb94c4febb2646ccdbbd38ba4d002db83ad2afcfce1e2c4f2a6cc",
+    "maskDimensions": {
+      "width": 2528,
+      "height": 1696
+    },
+    "sourceDimensions": {
+      "width": 2528,
+      "height": 1696
+    },
+    "extractionBox": {
+      "x": 494,
+      "y": 239,
+      "width": 286,
+      "height": 646
+    },
+    "candidate": "outputs/folk-provider-benchmark/stage-2c4/gemini/parts/nearUpperArm.png",
+    "candidateSha256": "821f96895dc31c608c6767b0468c32bfa8156f2e8a7e89032dcc18f6d1745c12",
+    "candidateDimensions": {
+      "width": 286,
+      "height": 646
+    },
+    "alphaCounts": {
+      "transparent": 50485,
+      "translucent": 719,
+      "opaque": 133552,
+      "greenDominantOpaque": 0
+    },
+    "editOrigin": "green-chroma-mask-with-despill",
+    "reviewStatus": "technical-test-only",
+    "createdAt": "2026-11-10T23:47:15.971Z",
+    "rawSha256": "bf36b18e7fe49916c74b72115d98be160bf455cbed24561d72854c40f6c165b7"
+  },
+  {
+    "format": "fableon.stage2c4.extraction-mask",
+    "version": 1,
+    "provider": "gemini",
+    "part": "nearForearm",
+    "source": "docs/benchmarks/phase-05.1/stage-2c2/gemini/arm-sheet.png",
+    "sourceSha256": "838a950e309fe9f22c1530a5705dd933e1fb1d54413cae3f7b3a8fe1fe1455d8",
+    "mask": "outputs/folk-provider-benchmark/stage-2c4/gemini/masks/nearForearm.mask.png",
+    "maskSha256": "6be9bf2080a03d908714c52e304313acea09e48a882203d6bc919edf60ec5d35",
+    "maskDimensions": {
+      "width": 2528,
+      "height": 1696
+    },
+    "sourceDimensions": {
+      "width": 2528,
+      "height": 1696
+    },
+    "extractionBox": {
+      "x": 1774,
+      "y": 621,
+      "width": 339,
+      "height": 833
+    },
+    "candidate": "outputs/folk-provider-benchmark/stage-2c4/gemini/parts/nearForearm.png",
+    "candidateSha256": "490968d2a2af4746477cf663cf272d9128c7d6e82430f428bf282d361dd5e29d",
+    "candidateDimensions": {
+      "width": 339,
+      "height": 833
+    },
+    "alphaCounts": {
+      "transparent": 148894,
+      "translucent": 1044,
+      "opaque": 132449,
+      "greenDominantOpaque": 0
+    },
+    "editOrigin": "green-chroma-mask-with-despill",
+    "reviewStatus": "technical-test-only",
+    "createdAt": "2026-11-10T23:47:16.036Z",
+    "rawSha256": "adab36e7f12bc4b94a78f59ae4b364173c105de394dcd7bed337379559d4e1ed"
+  },
+  {
+    "format": "fableon.stage2c4.extraction-mask",
+    "version": 1,
+    "provider": "openai",
+    "part": "nearThigh",
+    "source": "docs/benchmarks/phase-05.1/stage-2c2/openai/leg-sheet.png",
+    "sourceSha256": "ac2a8e9d919f6b1d5bbc9aa9b082c8a047af184e6e7711b2ed4494b0e55a4404",
+    "mask": "outputs/folk-provider-benchmark/stage-2c4/openai/masks/nearThigh.mask.png",
+    "maskSha256": "26efad45959fa3fbd960c951ae8554d68a58e26f405bb57fadddab39041f2e39",
+    "maskDimensions": {
+      "width": 1536,
+      "height": 1024
+    },
+    "sourceDimensions": {
+      "width": 1536,
+      "height": 1024
+    },
+    "extractionBox": {
+      "x": 104,
+      "y": 19,
+      "width": 432,
+      "height": 981
+    },
+    "candidate": "outputs/folk-provider-benchmark/stage-2c4/openai/parts/nearThigh.png",
+    "candidateSha256": "4b09a7b3716e949a28c6e4993c7ba9eb8d6ef3291173905bb8d57c0d7b85f10a",
+    "candidateDimensions": {
+      "width": 432,
+      "height": 981
+    },
+    "alphaCounts": {
+      "transparent": 122535,
+      "translucent": 301257,
+      "opaque": 0,
+      "greenDominantOpaque": 0
+    },
+    "editOrigin": "source-alpha-mask",
+    "reviewStatus": "technical-test-only",
+    "createdAt": "2026-11-10T23:47:16.106Z",
+    "rawSha256": "4921b24924c4dc0485fd1190f28c21907110f0f6ca73449ab559446b087d7a50"
+  },
+  {
+    "format": "fableon.stage2c4.extraction-mask",
+    "version": 1,
+    "provider": "openai",
+    "part": "nearShin",
+    "source": "docs/benchmarks/phase-05.1/stage-2c2/openai/leg-sheet.png",
+    "sourceSha256": "ac2a8e9d919f6b1d5bbc9aa9b082c8a047af184e6e7711b2ed4494b0e55a4404",
+    "mask": "outputs/folk-provider-benchmark/stage-2c4/openai/masks/nearShin.mask.png",
+    "maskSha256": "dd5adf2d745c9950452c121cc05b9646103d2790844d2bfb149a7c3823367c9e",
+    "maskDimensions": {
+      "width": 1536,
+      "height": 1024
+    },
+    "sourceDimensions": {
+      "width": 1536,
+      "height": 1024
+    },
+    "extractionBox": {
+      "x": 968,
+      "y": 110,
+      "width": 430,
+      "height": 879
+    },
+    "candidate": "outputs/folk-provider-benchmark/stage-2c4/openai/parts/nearShin.png",
+    "candidateSha256": "1a9ce7072f461e6d24fd8e05031c8f02093e70e8d2bc59c83ee596cc3917f0f9",
+    "candidateDimensions": {
+      "width": 430,
+      "height": 879
+    },
+    "alphaCounts": {
+      "transparent": 150385,
+      "translucent": 227585,
+      "opaque": 0,
+      "greenDominantOpaque": 0
+    },
+    "editOrigin": "source-alpha-mask",
+    "reviewStatus": "technical-test-only",
+    "createdAt": "2026-11-10T23:47:16.166Z",
+    "rawSha256": "9107c5c960b8d1ab711b22737b66957c799dbde26ba592ebeeb4bc8dba4dcf66"
+  },
+  {
+    "format": "fableon.stage2c4.extraction-mask",
+    "version": 1,
+    "provider": "gemini",
+    "part": "nearThigh",
+    "source": "docs/benchmarks/phase-05.1/stage-2c2/gemini/leg-sheet.png",
+    "sourceSha256": "66c2344e54bb2acd9c7fd41320da9af389b6736f17125038449743b823038156",
+    "mask": "outputs/folk-provider-benchmark/stage-2c4/gemini/masks/nearThigh.mask.png",
+    "maskSha256": "a254784b13c454905bdb09fac707e6adc7228acef9783bc32c2613e7ba5e72da",
+    "maskDimensions": {
+      "width": 2528,
+      "height": 1696
+    },
+    "sourceDimensions": {
+      "width": 2528,
+      "height": 1696
+    },
+    "extractionBox": {
+      "x": 341,
+      "y": 211,
+      "width": 638,
+      "height": 1306
+    },
+    "candidate": "outputs/folk-provider-benchmark/stage-2c4/gemini/parts/nearThigh.png",
+    "candidateSha256": "58dbde65e0e12f80469aa2d9e5b0d1a044a852f1f3828797a6694c74cc96f682",
+    "candidateDimensions": {
+      "width": 638,
+      "height": 1306
+    },
+    "alphaCounts": {
+      "transparent": 185334,
+      "translucent": 1654,
+      "opaque": 646240,
+      "greenDominantOpaque": 0
+    },
+    "editOrigin": "green-chroma-mask-with-despill",
+    "reviewStatus": "technical-test-only",
+    "createdAt": "2026-11-10T23:47:16.282Z",
+    "rawSha256": "e4fbff1b76c70c560db177bfa1e191fe11918fd14c0fc227173b3d8df7eaa778"
+  },
+  {
+    "format": "fableon.stage2c4.extraction-mask",
+    "version": 1,
+    "provider": "gemini",
+    "part": "nearShin",
+    "source": "docs/benchmarks/phase-05.1/stage-2c2/gemini/leg-sheet.png",
+    "sourceSha256": "66c2344e54bb2acd9c7fd41320da9af389b6736f17125038449743b823038156",
+    "mask": "outputs/folk-provider-benchmark/stage-2c4/gemini/masks/nearShin.mask.png",
+    "maskSha256": "7dae9a4e2c416f35afe3f3f4499af0313a14a13e31bdb1704ac6e0aea012de30",
+    "maskDimensions": {
+      "width": 2528,
+      "height": 1696
+    },
+    "sourceDimensions": {
+      "width": 2528,
+      "height": 1696
+    },
+    "extractionBox": {
+      "x": 1706,
+      "y": 221,
+      "width": 431,
+      "height": 1266
+    },
+    "candidate": "outputs/folk-provider-benchmark/stage-2c4/gemini/parts/nearShin.png",
+    "candidateSha256": "834416c46dabd8cd4e5ef7e691fa20f8b62db22083671f0830589056445e0540",
+    "candidateDimensions": {
+      "width": 431,
+      "height": 1266
+    },
+    "alphaCounts": {
+      "transparent": 206301,
+      "translucent": 1604,
+      "opaque": 337741,
+      "greenDominantOpaque": 0
+    },
+    "editOrigin": "green-chroma-mask-with-despill",
+    "reviewStatus": "technical-test-only",
+    "createdAt": "2026-11-10T23:47:16.372Z",
+    "rawSha256": "2f517082787e7134d669986f93d9ec365fd871b3e4e8299aa34440e1177ca334"
+  }
+]

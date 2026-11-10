@@ -1,0 +1,13 @@
+{
+  "command": ["./node_modules/.bin/tsx", "scripts/stage2c2-render.ts"],
+  "pid": 12858,
+  "startedAt": "2026-11-10T23:26:36.996Z",
+  "finishedAt": "2026-11-10T23:26:42.685Z",
+  "elapsedMs": 5687,
+  "timeoutMs": 45000,
+  "timedOut": false,
+  "exitCode": 0,
+  "signal": null,
+  "stdout": "docs/benchmarks/phase-05.1/stage-2c4/logs/legacy-one-frame.stdout.log",
+  "stderr": "docs/benchmarks/phase-05.1/stage-2c4/logs/legacy-one-frame.stderr.log"
+}

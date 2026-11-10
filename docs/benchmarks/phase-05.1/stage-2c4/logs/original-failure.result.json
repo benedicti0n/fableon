@@ -1,0 +1,13 @@
+{
+  "command": ["./node_modules/.bin/tsx", "scripts/stage2c2-render-original.ts"],
+  "pid": 14168,
+  "startedAt": "2026-11-10T23:34:47.620Z",
+  "finishedAt": "2026-11-10T23:35:02.686Z",
+  "elapsedMs": 15065,
+  "timeoutMs": 15000,
+  "timedOut": true,
+  "exitCode": 1,
+  "signal": null,
+  "stdout": "docs/benchmarks/phase-05.1/stage-2c4/logs/original-failure.stdout.log",
+  "stderr": "docs/benchmarks/phase-05.1/stage-2c4/logs/original-failure.stderr.log"
+}

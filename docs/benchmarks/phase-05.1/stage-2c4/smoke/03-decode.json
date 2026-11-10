@@ -1,0 +1,74 @@
+{
+  "openaiArmSheet": {
+    "file": "docs/benchmarks/phase-05.1/stage-2c2/openai/arm-sheet.png",
+    "sha256": "9186a76dafa97379ad794fef70b44803474a77c150db9f7e352d32751e9a87bb",
+    "bytes": 1058801,
+    "format": "png",
+    "width": 1536,
+    "height": 1024,
+    "channels": 4,
+    "hasAlpha": true,
+    "alpha": {
+      "transparent": 1171915,
+      "translucent": 400949,
+      "opaque": 0,
+      "total": 1572864
+    },
+    "centerPixel": [0, 0, 0, 0],
+    "entropy": 4.063572388840839
+  },
+  "openaiUpperArm": {
+    "file": "docs/benchmarks/phase-05.1/stage-2c2/openai/upperArm.png",
+    "sha256": "6779420f2eb49f7d1b39aba410eca9d40006f3d388128f8dd0d75fd0c0a11221",
+    "bytes": 354603,
+    "format": "png",
+    "width": 338,
+    "height": 855,
+    "channels": 4,
+    "hasAlpha": true,
+    "alpha": {
+      "transparent": 69993,
+      "translucent": 218997,
+      "opaque": 0,
+      "total": 288990
+    },
+    "centerPixel": [44, 68, 90, 253],
+    "entropy": 5.296843837022607
+  },
+  "geminiArmSheet": {
+    "file": "docs/benchmarks/phase-05.1/stage-2c2/gemini/arm-sheet.png",
+    "sha256": "838a950e309fe9f22c1530a5705dd933e1fb1d54413cae3f7b3a8fe1fe1455d8",
+    "bytes": 1142152,
+    "format": "jpeg",
+    "width": 2528,
+    "height": 1696,
+    "channels": 3,
+    "hasAlpha": false,
+    "alpha": {
+      "transparent": 0,
+      "translucent": 0,
+      "opaque": 4287488,
+      "total": 4287488
+    },
+    "centerPixel": [1, 254, 3, 255],
+    "entropy": 2.2666331954424095
+  },
+  "geminiUpperArm": {
+    "file": "docs/benchmarks/phase-05.1/stage-2c2/gemini/upperArm.png",
+    "sha256": "196bb9bd2ff192617d945588429c2d5e7d0264b074f5c719f6a541c2bd99043e",
+    "bytes": 296654,
+    "format": "png",
+    "width": 290,
+    "height": 650,
+    "channels": 4,
+    "hasAlpha": true,
+    "alpha": {
+      "transparent": 51369,
+      "translucent": 0,
+      "opaque": 137131,
+      "total": 188500
+    },
+    "centerPixel": [206, 132, 71, 255],
+    "entropy": 5.81487714353716
+  }
+}

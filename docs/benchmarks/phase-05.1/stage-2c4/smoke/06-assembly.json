@@ -1,0 +1,112 @@
+{
+  "openai": {
+    "payloadParts": 32,
+    "validation": {
+      "finite": true,
+      "missing": [],
+      "nodes": 29,
+      "shoulder": {
+        "x": 503.5991288051661,
+        "y": 464.83744594990355
+      },
+      "elbow": {
+        "x": 596.2900036869385,
+        "y": 572.4683045066001
+      },
+      "shoulderElbowDistance": 142.04224723651765
+    },
+    "frames": [
+      {
+        "name": "neutral",
+        "frame": 0,
+        "joint": null,
+        "extra": 0,
+        "file": "outputs/folk-provider-benchmark/stage-2c4/openai/production-neutral.png",
+        "width": 640,
+        "height": 360
+      },
+      {
+        "name": "reach",
+        "frame": 60,
+        "joint": null,
+        "extra": 0,
+        "file": "outputs/folk-provider-benchmark/stage-2c4/openai/production-reach.png",
+        "width": 640,
+        "height": 360
+      },
+      {
+        "name": "elbow-45",
+        "frame": 0,
+        "joint": "nearForearm",
+        "extra": -45,
+        "file": "outputs/folk-provider-benchmark/stage-2c4/openai/production-elbow-45.png",
+        "width": 640,
+        "height": 360
+      },
+      {
+        "name": "elbow-90",
+        "frame": 0,
+        "joint": "nearForearm",
+        "extra": -90,
+        "file": "outputs/folk-provider-benchmark/stage-2c4/openai/production-elbow-90.png",
+        "width": 640,
+        "height": 360
+      }
+    ]
+  },
+  "gemini": {
+    "payloadParts": 32,
+    "validation": {
+      "finite": true,
+      "missing": [],
+      "nodes": 29,
+      "shoulder": {
+        "x": 503.5991288051661,
+        "y": 464.83744594990355
+      },
+      "elbow": {
+        "x": 596.2900036869385,
+        "y": 572.4683045066001
+      },
+      "shoulderElbowDistance": 142.04224723651765
+    },
+    "frames": [
+      {
+        "name": "neutral",
+        "frame": 0,
+        "joint": null,
+        "extra": 0,
+        "file": "outputs/folk-provider-benchmark/stage-2c4/gemini/production-neutral.png",
+        "width": 640,
+        "height": 360
+      },
+      {
+        "name": "reach",
+        "frame": 60,
+        "joint": null,
+        "extra": 0,
+        "file": "outputs/folk-provider-benchmark/stage-2c4/gemini/production-reach.png",
+        "width": 640,
+        "height": 360
+      },
+      {
+        "name": "elbow-45",
+        "frame": 0,
+        "joint": "nearForearm",
+        "extra": -45,
+        "file": "outputs/folk-provider-benchmark/stage-2c4/gemini/production-elbow-45.png",
+        "width": 640,
+        "height": 360
+      },
+      {
+        "name": "elbow-90",
+        "frame": 0,
+        "joint": "nearForearm",
+        "extra": -90,
+        "file": "outputs/folk-provider-benchmark/stage-2c4/gemini/production-elbow-90.png",
+        "width": 640,
+        "height": 360
+      }
+    ]
+  }
+}

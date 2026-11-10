@@ -1,0 +1,103 @@
+{
+  "generatedAt": "2026-11-10T23:47:26.614Z",
+  "platform": "darwin arm64",
+  "node": "v25.9.0",
+  "tests": [
+    {
+      "test": "0",
+      "name": "Parent supervisor timeout cleanup",
+      "status": "PASS",
+      "started": "2026-11-10T23:47:11.276Z",
+      "lastCheckpoint": "{\"parent\":17399,\"grandchild\":17400,\"marker\":\"timeout-child-started\"}",
+      "durationMs": 2512,
+      "exitCode": null,
+      "timedOut": true,
+      "evidence": "logs/test0.stderr.log",
+      "note": "SIGTERM to child process group; grandchild PID also gone."
+    },
+    {
+      "test": "1",
+      "name": "Process startup",
+      "status": "PASS",
+      "started": "2026-11-10T23:47:13.902Z",
+      "lastCheckpoint": "2026-11-10T23:47:13.971Z process-done",
+      "durationMs": 71,
+      "exitCode": 0,
+      "timedOut": false,
+      "evidence": "logs/test1.trace.log",
+      "note": "Synchronous marker before application imports."
+    },
+    {
+      "test": "2",
+      "name": "Module loading",
+      "status": "PASS",
+      "started": "2026-11-10T23:47:14.043Z",
+      "lastCheckpoint": "2026-11-10T23:47:14.935Z imports-done",
+      "durationMs": 906,
+      "exitCode": 0,
+      "timedOut": false,
+      "evidence": "logs/test2.trace.log",
+      "note": "Sharp, Playwright, folk-motion, production renderer imported separately."
+    },
+    {
+      "test": "3",
+      "name": "Decode paid images",
+      "status": "PASS",
+      "started": "2026-11-10T23:47:15.018Z",
+      "lastCheckpoint": "2026-11-10T23:47:15.478Z decode-finished",
+      "durationMs": 466,
+      "exitCode": 0,
+      "timedOut": false,
+      "evidence": "smoke/03-decode.json",
+      "note": "OpenAI PNG and Gemini JPEG/PNG decoded; hashes and alpha recorded."
+    },
+    {
+      "test": "4",
+      "name": "Extract persistent masks",
+      "status": "PASS",
+      "started": "2026-11-10T23:47:15.553Z",
+      "lastCheckpoint": "2026-11-10T23:47:16.380Z extract-finished",
+      "durationMs": 834,
+      "exitCode": 0,
+      "timedOut": false,
+      "evidence": "smoke/04-extract.json",
+      "note": "Masks saved, reloaded, and applied for arm and leg candidates."
+    },
+    {
+      "test": "5",
+      "name": "Render one sprite",
+      "status": "PASS",
+      "started": "2026-11-10T23:47:16.459Z",
+      "lastCheckpoint": "2026-11-10T23:47:17.680Z browser-closed",
+      "durationMs": 1228,
+      "exitCode": 0,
+      "timedOut": false,
+      "evidence": "single-sprite-openai.png",
+      "note": "One paid upper-arm candidate rendered to PNG."
+    },
+    {
+      "test": "6",
+      "name": "Production articulated assembly",
+      "status": "PASS",
+      "started": "2026-11-10T23:47:17.757Z",
+      "lastCheckpoint": "2026-11-10T23:47:20.907Z assembly-finished",
+      "durationMs": 3161,
+      "exitCode": 0,
+      "timedOut": false,
+      "evidence": "smoke/06-assembly.json",
+      "note": "Neutral, reach, elbow -45 and -90 through production FolkRenderer."
+    },
+    {
+      "test": "7",
+      "name": "24-frame MP4",
+      "status": "PASS",
+      "started": "2026-11-10T23:47:20.990Z",
+      "lastCheckpoint": "2026-11-10T23:47:26.594Z video-finished",
+      "durationMs": 5619,
+      "exitCode": 0,
+      "timedOut": false,
+      "evidence": "smoke/07-video.json",
+      "note": "640x360, 24 FPS, 24 frames, FFprobe and full decode."
+    }
+  ]
+}

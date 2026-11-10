@@ -1,0 +1,13 @@
+{
+  "command": ["node", "scripts/stage2c4/timeout-child.mjs"],
+  "pid": 17399,
+  "startedAt": "2026-11-10T23:47:11.276Z",
+  "finishedAt": "2026-11-10T23:47:13.794Z",
+  "elapsedMs": 2512,
+  "timeoutMs": 2500,
+  "timedOut": true,
+  "exitCode": null,
+  "signal": "SIGTERM",
+  "stdout": "docs/benchmarks/phase-05.1/stage-2c4/logs/test0.stdout.log",
+  "stderr": "docs/benchmarks/phase-05.1/stage-2c4/logs/test0.stderr.log"
+}

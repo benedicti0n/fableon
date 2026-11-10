@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-11-10T15:29:41.413Z",
+  "provider": "gemini",
+  "camera": {
+    "scale": 1,
+    "x": 32.67779683457775,
+    "y": 23.90360848280835
+  },
+  "bounds": {
+    "minX": 248.54786576759852,
+    "minY": -14.669542402771917,
+    "maxX": 966.0965405632459,
+    "maxY": 686.8623254371552
+  },
+  "config": "stage2b1-polished",
+  "frames": 192,
+  "fps": 24,
+  "resolution": [1280, 720],
+  "video": "outputs/folk-provider-benchmark/stage-2b1/gemini/polished-character.mp4",
+  "variation": "outputs/folk-provider-benchmark/stage-2b1/gemini/variation.mp4",
+  "walking": "outputs/folk-provider-benchmark/stage-2b1/gemini/walking-diagnostic.mp4",
+  "jointStress": "outputs/folk-provider-benchmark/stage-2b1/gemini/joint-stress-test.png",
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1280,
+        "height": 720,
+        "avg_frame_rate": "24/1",
+        "duration": "8.000000",
+        "nb_frames": "192"
+      }
+    ]
+  },
+  "hashes": {
+    "video": "b5d9e3b7be143dc9f5f06962d811c503fafe7636fb276e29f59de7c505ccf63c",
+    "variation": "d45bb32b9d3eb5a3ec65acf668f30b4adfa80b44f7e91d65fc8d922128c9ed9b",
+    "walking": "99f92309b39f5db3380e55c99b0881345d6ff48bac00abfebfbe58eebf2dc57d"
+  }
+}

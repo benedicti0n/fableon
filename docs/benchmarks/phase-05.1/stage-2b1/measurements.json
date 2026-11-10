@@ -1,0 +1,63 @@
+{
+  "generatedAt": "2026-11-10T15:28:03.716Z",
+  "stanceSpansPx": {
+    "near": [0, 1.1368683772161603e-13, 0, 0, 0, 0, 0, 0],
+    "far": [0, 5.684341886080802e-14, 0, 0, 0, 0, 0, 0],
+    "max": 1.1368683772161603e-13
+  },
+  "swingClearancePx": {
+    "max": 27.999648527143563
+  },
+  "rootDisplacementPx": 320,
+  "contactOpenAI": {
+    "contactError": 11.564335502131735,
+    "attached": false,
+    "interaction": "contact"
+  },
+  "gripOpenAI": {
+    "contactError": 13.605414544507825,
+    "attached": true,
+    "interaction": "gripping"
+  },
+  "contactGemini": {
+    "contactError": 6.021318268889928,
+    "attached": false,
+    "interaction": "contact"
+  },
+  "gripGemini": {
+    "contactError": 6.7968146402775655,
+    "attached": true,
+    "interaction": "gripping"
+  },
+  "camera": {
+    "scale": 1,
+    "x": 32.67779683457775,
+    "y": 23.90360848280835
+  },
+  "bounds": {
+    "minX": 248.54786576759852,
+    "minY": -14.669542402771917,
+    "maxX": 966.0965405632459,
+    "maxY": 686.8623254371552
+  },
+  "deterministic": true,
+  "beforeAfter": {
+    "oldHandToTargetPx": {
+      "frame104": 107.45466913816344,
+      "frame120": 108.79358384127679
+    },
+    "newHandToTargetPx": {
+      "openaiContact": 11.564335502131735,
+      "openaiGrip": 13.605414544507825,
+      "geminiContact": 6.021318268889928,
+      "geminiGrip": 6.7968146402775655
+    },
+    "oldBellAttachmentMode": "handWorld used directly without contact validation",
+    "newBellAttachmentMode": "attached only within contact tolerance; release interpolates to pedestal"
+  },
+  "renderPerformance": {
+    "fullStage2B1BuildSeconds": 48.16,
+    "outputs": "6 MP4 clips + 2 joint sheets + comparison videos",
+    "providerApiCalls": 0
+  }
+}

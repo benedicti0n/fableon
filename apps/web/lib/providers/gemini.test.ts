@@ -66,6 +66,42 @@ describe("Gemini Nano Banana adapter", () => {
     expect(body.input[1]).toMatchObject({ type: "image", mime_type: "image/png" });
   });
 
+  it("parses the raw Interactions steps image shape and JPEG mime", async () => {
+    const fetchImpl = vi.fn(
+      async () =>
+        new Response(
+          JSON.stringify({
+            id: "interaction_steps",
+            status: "completed",
+            steps: [
+              {
+                type: "model_output",
+                content: [
+                  { type: "text", text: "Here is the part." },
+                  { type: "image", mime_type: "image/jpeg", data: "aGVsbG8=" },
+                ],
+              },
+            ],
+            usage: {
+              total_input_tokens: 120,
+              total_output_tokens: 1680,
+              total_tokens: 1800,
+            },
+          }),
+          { status: 200, headers: { "Content-Type": "application/json" } },
+        ),
+    );
+    const adapter = new GeminiImageAdapter({
+      apiKey: "test-key",
+      fetchImpl: fetchImpl as unknown as typeof fetch,
+    });
+    const result = await adapter.generate(request);
+    expect(result.images[0]?.mimeType).toBe("image/jpeg");
+    expect(result.images[0]?.dataBase64).toBe("aGVsbG8=");
+    expect(result.usage.inputTokens).toBe(120);
+    expect(result.usage.outputTokens).toBe(1680);
+  });
+
   it("rejects native transparency and mask requests", async () => {
     const adapter = new GeminiImageAdapter({ apiKey: "test-key" });
     await expect(adapter.generate({ ...request, transparentBackground: true })).rejects.toThrow(

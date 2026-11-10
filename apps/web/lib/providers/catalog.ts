@@ -84,7 +84,7 @@ export interface GenerationUsage {
 
 export interface GeneratedImage {
   readonly index: number;
-  readonly mimeType: "image/png" | "image/webp";
+  readonly mimeType: "image/png" | "image/jpeg" | "image/webp";
   readonly dataBase64: string;
   readonly revisedPrompt: string | null;
 }

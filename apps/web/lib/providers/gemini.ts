@@ -30,13 +30,73 @@ function usageFrom(body: unknown): ProviderGenerationResult["usage"] {
   const number = (key: string): number | null =>
     typeof usage[key] === "number" && Number.isFinite(usage[key]) ? usage[key] : null;
   return {
-    inputTokens: number("prompt_token_count") ?? number("input_tokens"),
-    outputTokens: number("candidates_token_count") ?? number("output_tokens"),
-    totalTokens: number("total_token_count") ?? number("total_tokens"),
+    inputTokens:
+      number("total_input_tokens") ?? number("prompt_token_count") ?? number("input_tokens"),
+    outputTokens:
+      number("total_output_tokens") ?? number("candidates_token_count") ?? number("output_tokens"),
+    totalTokens: number("total_tokens") ?? number("total_token_count"),
     inputImageTokens: null,
     outputImageTokens: null,
     providerReportedCostUsd: null,
     rawUsage: raw,
+  };
+}
+
+interface ExtractedGeminiImage {
+  readonly data: string;
+  readonly mimeType: "image/png" | "image/jpeg" | "image/webp";
+}
+
+function mimeType(value: unknown): ExtractedGeminiImage["mimeType"] {
+  return value === "image/png" || value === "image/webp" ? value : "image/jpeg";
+}
+
+function findImageInValue(value: unknown, depth = 0): ExtractedGeminiImage | null {
+  if (depth > 8) return null;
+  if (Array.isArray(value)) {
+    for (const item of value) {
+      const found = findImageInValue(item, depth + 1);
+      if (found) return found;
+    }
+    return null;
+  }
+  if (typeof value !== "object" || value === null) return null;
+  const record = value as Record<string, unknown>;
+  if (
+    (record["type"] === "image" || record["type"] === "output_image") &&
+    typeof record["data"] === "string"
+  ) {
+    return { data: record["data"], mimeType: mimeType(record["mime_type"]) };
+  }
+  if (typeof record["output_image"] === "object" && record["output_image"] !== null) {
+    const output = record["output_image"] as Record<string, unknown>;
+    if (typeof output["data"] === "string") {
+      return { data: output["data"], mimeType: mimeType(output["mime_type"]) };
+    }
+  }
+  for (const key of ["steps", "content", "contents", "output", "outputs", "candidates"]) {
+    const child = record[key];
+    if (child === undefined) continue;
+    const found = findImageInValue(child, depth + 1);
+    if (found) return found;
+  }
+  return null;
+}
+
+function responseShape(value: unknown): Record<string, unknown> {
+  const record =
+    typeof value === "object" && value !== null ? (value as Record<string, unknown>) : {};
+  return {
+    status: record["status"] ?? null,
+    id: record["id"] ?? null,
+    stepTypes: Array.isArray(record["steps"])
+      ? record["steps"].map((step) =>
+          typeof step === "object" && step !== null
+            ? ((step as Record<string, unknown>)["type"] ?? "unknown")
+            : typeof step,
+        )
+      : null,
+    outputImagePresent: Boolean(record["output_image"]),
   };
 }
 
@@ -83,7 +143,7 @@ export class GeminiImageAdapter {
       input,
       response_format: {
         type: "image",
-        mime_type: "image/png",
+        mime_type: "image/jpeg",
         aspect_ratio: request.aspectRatio,
         image_size: request.imageSize ?? "2K",
       },
@@ -124,13 +184,13 @@ export class GeminiImageAdapter {
     }
     const record =
       typeof parsed === "object" && parsed !== null ? (parsed as Record<string, unknown>) : {};
-    const output =
-      typeof record["output_image"] === "object" && record["output_image"] !== null
-        ? (record["output_image"] as Record<string, unknown>)
-        : null;
-    const data = output && typeof output["data"] === "string" ? output["data"] : null;
-    if (!data) {
-      throw new ProviderRequestError("Gemini returned no output_image.data.", 502, parsed);
+    const image = findImageInValue(parsed);
+    if (!image) {
+      throw new ProviderRequestError(
+        `Gemini returned no image content (${JSON.stringify(responseShape(parsed))}).`,
+        502,
+        responseShape(parsed),
+      );
     }
     return {
       provider: "gemini",
@@ -140,8 +200,8 @@ export class GeminiImageAdapter {
       images: [
         {
           index: 0,
-          mimeType: "image/png",
-          dataBase64: data,
+          mimeType: image.mimeType,
+          dataBase64: image.data,
           revisedPrompt: null,
         },
       ],

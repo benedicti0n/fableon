@@ -40,6 +40,7 @@ export interface PartInput {
   readonly sourcePath: string;
   readonly sourcePivot: { readonly x: number; readonly y: number };
   readonly scale?: number;
+  readonly targetPivot?: { readonly x: number; readonly y: number };
   readonly maskPath?: string;
   readonly notes?: string;
 }
@@ -146,11 +147,12 @@ async function processPart(input: PartInput, outputDir: string): Promise<Process
   }
   const pixels = await readRgbaPixels(file);
   const analysis = analyzePixels(pixels);
+  const targetPivot = input.targetPivot ?? slot.pivot;
   const registration = registrationFor({
     width: pixels.width,
     height: pixels.height,
     sourcePivot: input.sourcePivot,
-    targetPivot: slot.pivot,
+    targetPivot,
     ...(input.scale !== undefined ? { scale: input.scale } : {}),
   });
   const warnings = analysis.warnings.map((warning) => `${warning.code}: ${warning.message}`);
@@ -172,7 +174,7 @@ async function processPart(input: PartInput, outputDir: string): Promise<Process
     offsetX: registration.offsetX,
     offsetY: registration.offsetY,
     sourcePivot: input.sourcePivot,
-    targetPivot: slot.pivot,
+    targetPivot,
     scale: registration.scale,
     sha256: await fileHash(file),
     alpha: {

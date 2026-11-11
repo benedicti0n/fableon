@@ -4,6 +4,8 @@ import Link from "next/link";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { getRepoRoot } from "@/lib/studio/repository";
+import { getStage2C5State } from "@/lib/providers/stage2c5-storage";
+import { Stage2C5MaskWorkshop } from "@/components/studio/stage2c5-mask-workshop";
 export const metadata: Metadata = {
   title: "Stage 2C Blueprints",
   robots: { index: false, follow: false },
@@ -39,19 +41,22 @@ async function load(provider: string): Promise<Contract | null> {
   }
 }
 export default async function Stage2CBlueprintsPage() {
-  const openai = await load("openai");
-  const gemini = await load("gemini");
+  const [openai, gemini, stage2c5] = await Promise.all([
+    load("openai"),
+    load("gemini"),
+    getStage2C5State(),
+  ]);
   return (
     <main className="mx-auto max-w-[1500px] space-y-5 px-5 py-8">
       <div className="flex flex-wrap items-start gap-4">
         <div className="min-w-0 flex-1">
           <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-ochre-400">
-            Phase 5.1 · Stage 2C
+            Phase 5.1 · Stage 2C.5
           </p>
-          <h1 className="mt-2 font-serif text-4xl text-paper-50">Rig-first artwork blueprints</h1>
+          <h1 className="mt-2 font-serif text-4xl text-paper-50">Precision mask workshop</h1>
           <p className="mt-2 max-w-3xl text-sm leading-6 text-mist-400">
-            Master-referenced arm and leg guides, source-preserved visible regions and the
-            missing-artwork contract. Paid generation remains pending.
+            Edit source-resolution masks for the paid repair sheets, inspect the extracted part, and
+            save versioned revisions. Source sheets are immutable.
           </p>
         </div>
         <Link
@@ -61,6 +66,7 @@ export default async function Stage2CBlueprintsPage() {
           Connector editor
         </Link>
       </div>
+      <Stage2C5MaskWorkshop state={stage2c5} />
       <div className="grid gap-5 md:grid-cols-2">
         {(
           [

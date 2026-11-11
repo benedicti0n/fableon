@@ -45,6 +45,8 @@
     render: (frame, width, height) => renderer.renderFrameDataUrl(frame, width, height),
     renderRig: (frame, node, extra, width, height) =>
       renderer.renderRigTestDataUrl(frame, width, height, "artisan", node, extra),
+    renderPose: (frame, posePatch, debug, width, height) =>
+      renderer.renderPoseDataUrl(frame, width, height, "artisan", posePatch, debug),
   };
   window.__ready = true;
 })().catch((error) => {

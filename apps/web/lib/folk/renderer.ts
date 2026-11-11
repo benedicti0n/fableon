@@ -8,7 +8,13 @@ import {
 } from "@fableon/sprite-motion";
 
 import { titleFont, wrapTitle } from "@/lib/film/titles";
-import { ARTISAN_RIG, CART_RIG, HORSE_RIG, resolveFolkPose } from "@fableon/folk-motion";
+import {
+  ARTISAN_RIG,
+  CART_RIG,
+  HORSE_RIG,
+  resolveFolkPose,
+  type FolkPose,
+} from "@fableon/folk-motion";
 
 import type { FolkAssets } from "./assets";
 import type { FolkFilmConfig } from "./config";
@@ -154,6 +160,35 @@ export class FolkRenderer {
     canvas.width = width;
     canvas.height = height;
     this.renderScene(this.current, state, true, { debug: true });
+    const context = contextFor(canvas);
+    context.drawImage(this.current, 0, 0, width, height);
+    return canvas.toDataURL("image/png");
+  }
+
+  renderPoseDataUrl(
+    frame: number,
+    width: number,
+    height: number,
+    actorId: "artisan" | "horse" | "cart",
+    posePatch: FolkPose,
+    debug = false,
+  ): string {
+    const base = evaluateFolkFrame(this.config, frame);
+    const target = base[actorId];
+    if (!target) throw new Error(`Actor "${actorId}" is not present at frame ${frame}.`);
+    const rig = actorId === "artisan" ? ARTISAN_RIG : actorId === "horse" ? HORSE_RIG : CART_RIG;
+    const pose: FolkPose = {
+      nodes: { ...target.pose.nodes, ...posePatch.nodes },
+    };
+    const nodes = resolveFolkPose(rig, pose);
+    const state: FolkFrameState = {
+      ...base,
+      [actorId]: { ...target, pose, nodes },
+    };
+    const canvas = document.createElement("canvas");
+    canvas.width = width;
+    canvas.height = height;
+    this.renderScene(this.current, state, true, { debug });
     const context = contextFor(canvas);
     context.drawImage(this.current, 0, 0, width, height);
     return canvas.toDataURL("image/png");

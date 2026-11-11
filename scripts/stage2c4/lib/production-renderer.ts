@@ -100,9 +100,10 @@ export async function ensureRendererBundle(
   const entry = path.join(root, "scripts/stage2c4/renderer-entry.ts");
   const bootstrap = path.join(root, "scripts/stage2c4/production-bootstrap.js");
   const build = path.join(root, "scripts/stage2c4/vite.config.mjs");
+  const rendererSource = path.join(root, "apps/web/lib/folk/renderer.ts");
   const needsBuild =
     !existsSync(bundle) ||
-    [entry, bootstrap, build].some((file) => {
+    [entry, bootstrap, build, rendererSource].some((file) => {
       try {
         return statSync(file).mtimeMs > statSync(bundle).mtimeMs;
       } catch {

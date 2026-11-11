@@ -1,0 +1,806 @@
+{
+  "openai": {
+    "arm": {
+      "camera": {
+        "x": 950,
+        "y": 830,
+        "zoom": 2.6
+      },
+      "poses": [
+        {
+          "name": "neutral",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/openai/arm-poses/neutral.png"
+        },
+        {
+          "name": "shoulder-lift",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/openai/arm-poses/shoulder-lift.png"
+        },
+        {
+          "name": "elbow-30",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/openai/arm-poses/elbow-30.png"
+        },
+        {
+          "name": "elbow-60",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/openai/arm-poses/elbow-60.png"
+        },
+        {
+          "name": "elbow-90",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/openai/arm-poses/elbow-90.png"
+        },
+        {
+          "name": "wrist-out",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/openai/arm-poses/wrist-out.png"
+        },
+        {
+          "name": "wrist-in",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/openai/arm-poses/wrist-in.png"
+        },
+        {
+          "name": "open-hand",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/openai/arm-poses/open-hand.png"
+        }
+      ]
+    },
+    "leg": {
+      "camera": {
+        "x": 920,
+        "y": 1020,
+        "zoom": 2.4
+      },
+      "poses": [
+        {
+          "name": "neutral",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/openai/leg-poses/neutral.png"
+        },
+        {
+          "name": "hip-flex",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/openai/leg-poses/hip-flex.png"
+        },
+        {
+          "name": "knee-flex",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/openai/leg-poses/knee-flex.png"
+        },
+        {
+          "name": "knee-extend",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/openai/leg-poses/knee-extend.png"
+        },
+        {
+          "name": "ankle-up",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/openai/leg-poses/ankle-up.png"
+        },
+        {
+          "name": "ankle-down",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/openai/leg-poses/ankle-down.png"
+        },
+        {
+          "name": "heel",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/openai/leg-poses/heel.png"
+        },
+        {
+          "name": "toe-off",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/openai/leg-poses/toe-off.png"
+        }
+      ]
+    },
+    "armRegistration": {
+      "provider": "openai",
+      "camera": {
+        "x": 950,
+        "y": 830,
+        "zoom": 2.6
+      },
+      "masterDistances": {
+        "upperArm": 142.04224723651762,
+        "forearm": 132.9661611087573,
+        "thigh": 154.11683879446787,
+        "shin": 154.0519392932137
+      },
+      "parts": {
+        "nearUpperArm": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/openai/parts/nearUpperArm.png",
+          "offsetX": 464.3169590643275,
+          "offsetY": 456.74,
+          "width": 87.36608187134503,
+          "height": 221,
+          "scale": 0.2584795321637427,
+          "sourceFullHeight": 855,
+          "pivotFraction": 0.06,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 508,
+            "y": 470
+          }
+        },
+        "nearForearm": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/openai/parts/nearForearm.png",
+          "offsetX": 495.0681737073751,
+          "offsetY": 590.0249510498869,
+          "width": 73.8636525852499,
+          "height": 152.94121005887038,
+          "scale": 0.2896613826872545,
+          "sourceFullHeight": 862,
+          "pivotFraction": 0.08,
+          "splitLocal": 528,
+          "targetPivot": {
+            "x": 532,
+            "y": 610
+          }
+        },
+        "handOpen": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/openai/parts/handOpen.png",
+          "offsetX": 513.0958033861858,
+          "offsetY": 742,
+          "width": 69.80839322762833,
+          "height": 96.746901817543,
+          "scale": 0.2896613826872545,
+          "sourceFullHeight": 334,
+          "pivotFraction": 0,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 548,
+            "y": 742
+          }
+        },
+        "nearThigh": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/openai/parts/nearThigh.png",
+          "offsetX": 418.25688073394497,
+          "offsetY": 655.9,
+          "width": 103.4862385321101,
+          "height": 235,
+          "scale": 0.23955147808358818,
+          "sourceFullHeight": 981,
+          "pivotFraction": 0.06,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 470,
+            "y": 670
+          }
+        },
+        "nearShin": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/openai/parts/nearShin.png",
+          "offsetX": 433.10690093824553,
+          "offsetY": 807.1964193536347,
+          "width": 85.78619812350891,
+          "height": 170.85551993957904,
+          "scale": 0.23895876914626438,
+          "sourceFullHeight": 879,
+          "pivotFraction": 0.08,
+          "splitLocal": 715,
+          "targetPivot": {
+            "x": 476,
+            "y": 824
+          }
+        },
+        "nearFoot": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/openai/parts/nearFoot.png",
+          "offsetX": 428.6238646335532,
+          "offsetY": 978,
+          "width": 102.75227073289368,
+          "height": 39.18923813998736,
+          "scale": 0.23895876914626438,
+          "sourceFullHeight": 164,
+          "pivotFraction": 0,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 480,
+            "y": 978
+          }
+        }
+      }
+    },
+    "legRegistration": {
+      "provider": "openai",
+      "camera": {
+        "x": 920,
+        "y": 1020,
+        "zoom": 2.4
+      },
+      "masterDistances": {
+        "upperArm": 142.04224723651762,
+        "forearm": 132.9661611087573,
+        "thigh": 154.11683879446787,
+        "shin": 154.0519392932137
+      },
+      "parts": {
+        "nearUpperArm": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/openai/parts/nearUpperArm.png",
+          "offsetX": 464.3169590643275,
+          "offsetY": 456.74,
+          "width": 87.36608187134503,
+          "height": 221,
+          "scale": 0.2584795321637427,
+          "sourceFullHeight": 855,
+          "pivotFraction": 0.06,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 508,
+            "y": 470
+          }
+        },
+        "nearForearm": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/openai/parts/nearForearm.png",
+          "offsetX": 495.0681737073751,
+          "offsetY": 590.0249510498869,
+          "width": 73.8636525852499,
+          "height": 152.94121005887038,
+          "scale": 0.2896613826872545,
+          "sourceFullHeight": 862,
+          "pivotFraction": 0.08,
+          "splitLocal": 528,
+          "targetPivot": {
+            "x": 532,
+            "y": 610
+          }
+        },
+        "handOpen": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/openai/parts/handOpen.png",
+          "offsetX": 513.0958033861858,
+          "offsetY": 742,
+          "width": 69.80839322762833,
+          "height": 96.746901817543,
+          "scale": 0.2896613826872545,
+          "sourceFullHeight": 334,
+          "pivotFraction": 0,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 548,
+            "y": 742
+          }
+        },
+        "nearThigh": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/openai/parts/nearThigh.png",
+          "offsetX": 418.25688073394497,
+          "offsetY": 655.9,
+          "width": 103.4862385321101,
+          "height": 235,
+          "scale": 0.23955147808358818,
+          "sourceFullHeight": 981,
+          "pivotFraction": 0.06,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 470,
+            "y": 670
+          }
+        },
+        "nearShin": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/openai/parts/nearShin.png",
+          "offsetX": 433.10690093824553,
+          "offsetY": 807.1964193536347,
+          "width": 85.78619812350891,
+          "height": 170.85551993957904,
+          "scale": 0.23895876914626438,
+          "sourceFullHeight": 879,
+          "pivotFraction": 0.08,
+          "splitLocal": 715,
+          "targetPivot": {
+            "x": 476,
+            "y": 824
+          }
+        },
+        "nearFoot": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/openai/parts/nearFoot.png",
+          "offsetX": 428.6238646335532,
+          "offsetY": 978,
+          "width": 102.75227073289368,
+          "height": 39.18923813998736,
+          "scale": 0.23895876914626438,
+          "sourceFullHeight": 164,
+          "pivotFraction": 0,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 480,
+            "y": 978
+          }
+        }
+      }
+    },
+    "fullRegistration": {
+      "provider": "openai",
+      "camera": {
+        "x": 820,
+        "y": 760,
+        "zoom": 1.8
+      },
+      "masterDistances": {
+        "upperArm": 142.04224723651762,
+        "forearm": 132.9661611087573,
+        "thigh": 154.11683879446787,
+        "shin": 154.0519392932137
+      },
+      "parts": {
+        "nearUpperArm": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/openai/parts/nearUpperArm.png",
+          "offsetX": 464.3169590643275,
+          "offsetY": 456.74,
+          "width": 87.36608187134503,
+          "height": 221,
+          "scale": 0.2584795321637427,
+          "sourceFullHeight": 855,
+          "pivotFraction": 0.06,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 508,
+            "y": 470
+          }
+        },
+        "nearForearm": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/openai/parts/nearForearm.png",
+          "offsetX": 495.0681737073751,
+          "offsetY": 590.0249510498869,
+          "width": 73.8636525852499,
+          "height": 152.94121005887038,
+          "scale": 0.2896613826872545,
+          "sourceFullHeight": 862,
+          "pivotFraction": 0.08,
+          "splitLocal": 528,
+          "targetPivot": {
+            "x": 532,
+            "y": 610
+          }
+        },
+        "handOpen": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/openai/parts/handOpen.png",
+          "offsetX": 513.0958033861858,
+          "offsetY": 742,
+          "width": 69.80839322762833,
+          "height": 96.746901817543,
+          "scale": 0.2896613826872545,
+          "sourceFullHeight": 334,
+          "pivotFraction": 0,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 548,
+            "y": 742
+          }
+        },
+        "nearThigh": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/openai/parts/nearThigh.png",
+          "offsetX": 418.25688073394497,
+          "offsetY": 655.9,
+          "width": 103.4862385321101,
+          "height": 235,
+          "scale": 0.23955147808358818,
+          "sourceFullHeight": 981,
+          "pivotFraction": 0.06,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 470,
+            "y": 670
+          }
+        },
+        "nearShin": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/openai/parts/nearShin.png",
+          "offsetX": 433.10690093824553,
+          "offsetY": 807.1964193536347,
+          "width": 85.78619812350891,
+          "height": 170.85551993957904,
+          "scale": 0.23895876914626438,
+          "sourceFullHeight": 879,
+          "pivotFraction": 0.08,
+          "splitLocal": 715,
+          "targetPivot": {
+            "x": 476,
+            "y": 824
+          }
+        },
+        "nearFoot": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/openai/parts/nearFoot.png",
+          "offsetX": 428.6238646335532,
+          "offsetY": 978,
+          "width": 102.75227073289368,
+          "height": 39.18923813998736,
+          "scale": 0.23895876914626438,
+          "sourceFullHeight": 164,
+          "pivotFraction": 0,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 480,
+            "y": 978
+          }
+        }
+      }
+    }
+  },
+  "gemini": {
+    "arm": {
+      "camera": {
+        "x": 950,
+        "y": 830,
+        "zoom": 2.6
+      },
+      "poses": [
+        {
+          "name": "neutral",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/gemini/arm-poses/neutral.png"
+        },
+        {
+          "name": "shoulder-lift",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/gemini/arm-poses/shoulder-lift.png"
+        },
+        {
+          "name": "elbow-30",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/gemini/arm-poses/elbow-30.png"
+        },
+        {
+          "name": "elbow-60",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/gemini/arm-poses/elbow-60.png"
+        },
+        {
+          "name": "elbow-90",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/gemini/arm-poses/elbow-90.png"
+        },
+        {
+          "name": "wrist-out",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/gemini/arm-poses/wrist-out.png"
+        },
+        {
+          "name": "wrist-in",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/gemini/arm-poses/wrist-in.png"
+        },
+        {
+          "name": "open-hand",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/gemini/arm-poses/open-hand.png"
+        }
+      ]
+    },
+    "leg": {
+      "camera": {
+        "x": 920,
+        "y": 1020,
+        "zoom": 2.4
+      },
+      "poses": [
+        {
+          "name": "neutral",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/gemini/leg-poses/neutral.png"
+        },
+        {
+          "name": "hip-flex",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/gemini/leg-poses/hip-flex.png"
+        },
+        {
+          "name": "knee-flex",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/gemini/leg-poses/knee-flex.png"
+        },
+        {
+          "name": "knee-extend",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/gemini/leg-poses/knee-extend.png"
+        },
+        {
+          "name": "ankle-up",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/gemini/leg-poses/ankle-up.png"
+        },
+        {
+          "name": "ankle-down",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/gemini/leg-poses/ankle-down.png"
+        },
+        {
+          "name": "heel",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/gemini/leg-poses/heel.png"
+        },
+        {
+          "name": "toe-off",
+          "file": "outputs/folk-provider-benchmark/stage-2c5/gemini/leg-poses/toe-off.png"
+        }
+      ]
+    },
+    "armRegistration": {
+      "provider": "gemini",
+      "camera": {
+        "x": 950,
+        "y": 830,
+        "zoom": 2.6
+      },
+      "masterDistances": {
+        "upperArm": 142.04224723651762,
+        "forearm": 132.9661611087573,
+        "thigh": 154.11683879446787,
+        "shin": 154.0519392932137
+      },
+      "parts": {
+        "nearUpperArm": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/gemini/parts/nearUpperArm.png",
+          "offsetX": 459.07894736842104,
+          "offsetY": 456.74,
+          "width": 97.84210526315789,
+          "height": 221,
+          "scale": 0.34210526315789475,
+          "sourceFullHeight": 646,
+          "pivotFraction": 0.06,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 508,
+            "y": 470
+          }
+        },
+        "nearForearm": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/gemini/parts/nearForearm.png",
+          "offsetX": 496.14283221207944,
+          "offsetY": 591.4765762683176,
+          "width": 71.71433557584116,
+          "height": 151.48958484043968,
+          "scale": 0.2779625409916324,
+          "sourceFullHeight": 833,
+          "pivotFraction": 0.08,
+          "splitLocal": 545,
+          "targetPivot": {
+            "x": 532,
+            "y": 610
+          }
+        },
+        "handOpen": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/gemini/parts/handOpen.png",
+          "offsetX": 517.007176679433,
+          "offsetY": 742,
+          "width": 61.98564664113403,
+          "height": 80.05321180559014,
+          "scale": 0.2779625409916324,
+          "sourceFullHeight": 288,
+          "pivotFraction": 0,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 548,
+            "y": 742
+          }
+        },
+        "nearThigh": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/gemini/parts/nearThigh.png",
+          "offsetX": 412.59954058192955,
+          "offsetY": 655.9,
+          "width": 114.8009188361409,
+          "height": 235,
+          "scale": 0.17993874425727413,
+          "sourceFullHeight": 1306,
+          "pivotFraction": 0.06,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 440,
+            "y": 670
+          }
+        },
+        "nearShin": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/gemini/parts/nearShin.png",
+          "offsetX": 443.4118571170807,
+          "offsetY": 808.6843289504312,
+          "width": 65.1762857658386,
+          "height": 169.36761034278246,
+          "scale": 0.15122108066319861,
+          "sourceFullHeight": 1266,
+          "pivotFraction": 0.08,
+          "splitLocal": 1120,
+          "targetPivot": {
+            "x": 476,
+            "y": 824
+          }
+        },
+        "nearFoot": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/gemini/parts/nearFoot.png",
+          "offsetX": 464.87789193368013,
+          "offsetY": 978,
+          "width": 30.24421613263972,
+          "height": 22.078277776826997,
+          "scale": 0.15122108066319861,
+          "sourceFullHeight": 146,
+          "pivotFraction": 0,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 480,
+            "y": 978
+          }
+        }
+      }
+    },
+    "legRegistration": {
+      "provider": "gemini",
+      "camera": {
+        "x": 920,
+        "y": 1020,
+        "zoom": 2.4
+      },
+      "masterDistances": {
+        "upperArm": 142.04224723651762,
+        "forearm": 132.9661611087573,
+        "thigh": 154.11683879446787,
+        "shin": 154.0519392932137
+      },
+      "parts": {
+        "nearUpperArm": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/gemini/parts/nearUpperArm.png",
+          "offsetX": 459.07894736842104,
+          "offsetY": 456.74,
+          "width": 97.84210526315789,
+          "height": 221,
+          "scale": 0.34210526315789475,
+          "sourceFullHeight": 646,
+          "pivotFraction": 0.06,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 508,
+            "y": 470
+          }
+        },
+        "nearForearm": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/gemini/parts/nearForearm.png",
+          "offsetX": 496.14283221207944,
+          "offsetY": 591.4765762683176,
+          "width": 71.71433557584116,
+          "height": 151.48958484043968,
+          "scale": 0.2779625409916324,
+          "sourceFullHeight": 833,
+          "pivotFraction": 0.08,
+          "splitLocal": 545,
+          "targetPivot": {
+            "x": 532,
+            "y": 610
+          }
+        },
+        "handOpen": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/gemini/parts/handOpen.png",
+          "offsetX": 517.007176679433,
+          "offsetY": 742,
+          "width": 61.98564664113403,
+          "height": 80.05321180559014,
+          "scale": 0.2779625409916324,
+          "sourceFullHeight": 288,
+          "pivotFraction": 0,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 548,
+            "y": 742
+          }
+        },
+        "nearThigh": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/gemini/parts/nearThigh.png",
+          "offsetX": 412.59954058192955,
+          "offsetY": 655.9,
+          "width": 114.8009188361409,
+          "height": 235,
+          "scale": 0.17993874425727413,
+          "sourceFullHeight": 1306,
+          "pivotFraction": 0.06,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 440,
+            "y": 670
+          }
+        },
+        "nearShin": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/gemini/parts/nearShin.png",
+          "offsetX": 443.4118571170807,
+          "offsetY": 808.6843289504312,
+          "width": 65.1762857658386,
+          "height": 169.36761034278246,
+          "scale": 0.15122108066319861,
+          "sourceFullHeight": 1266,
+          "pivotFraction": 0.08,
+          "splitLocal": 1120,
+          "targetPivot": {
+            "x": 476,
+            "y": 824
+          }
+        },
+        "nearFoot": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/gemini/parts/nearFoot.png",
+          "offsetX": 464.87789193368013,
+          "offsetY": 978,
+          "width": 30.24421613263972,
+          "height": 22.078277776826997,
+          "scale": 0.15122108066319861,
+          "sourceFullHeight": 146,
+          "pivotFraction": 0,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 480,
+            "y": 978
+          }
+        }
+      }
+    },
+    "fullRegistration": {
+      "provider": "gemini",
+      "camera": {
+        "x": 820,
+        "y": 760,
+        "zoom": 1.8
+      },
+      "masterDistances": {
+        "upperArm": 142.04224723651762,
+        "forearm": 132.9661611087573,
+        "thigh": 154.11683879446787,
+        "shin": 154.0519392932137
+      },
+      "parts": {
+        "nearUpperArm": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/gemini/parts/nearUpperArm.png",
+          "offsetX": 459.07894736842104,
+          "offsetY": 456.74,
+          "width": 97.84210526315789,
+          "height": 221,
+          "scale": 0.34210526315789475,
+          "sourceFullHeight": 646,
+          "pivotFraction": 0.06,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 508,
+            "y": 470
+          }
+        },
+        "nearForearm": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/gemini/parts/nearForearm.png",
+          "offsetX": 496.14283221207944,
+          "offsetY": 591.4765762683176,
+          "width": 71.71433557584116,
+          "height": 151.48958484043968,
+          "scale": 0.2779625409916324,
+          "sourceFullHeight": 833,
+          "pivotFraction": 0.08,
+          "splitLocal": 545,
+          "targetPivot": {
+            "x": 532,
+            "y": 610
+          }
+        },
+        "handOpen": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/gemini/parts/handOpen.png",
+          "offsetX": 517.007176679433,
+          "offsetY": 742,
+          "width": 61.98564664113403,
+          "height": 80.05321180559014,
+          "scale": 0.2779625409916324,
+          "sourceFullHeight": 288,
+          "pivotFraction": 0,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 548,
+            "y": 742
+          }
+        },
+        "nearThigh": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/gemini/parts/nearThigh.png",
+          "offsetX": 412.59954058192955,
+          "offsetY": 655.9,
+          "width": 114.8009188361409,
+          "height": 235,
+          "scale": 0.17993874425727413,
+          "sourceFullHeight": 1306,
+          "pivotFraction": 0.06,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 440,
+            "y": 670
+          }
+        },
+        "nearShin": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/gemini/parts/nearShin.png",
+          "offsetX": 443.4118571170807,
+          "offsetY": 808.6843289504312,
+          "width": 65.1762857658386,
+          "height": 169.36761034278246,
+          "scale": 0.15122108066319861,
+          "sourceFullHeight": 1266,
+          "pivotFraction": 0.08,
+          "splitLocal": 1120,
+          "targetPivot": {
+            "x": 476,
+            "y": 824
+          }
+        },
+        "nearFoot": {
+          "source": "outputs/folk-provider-benchmark/stage-2c5/gemini/parts/nearFoot.png",
+          "offsetX": 464.87789193368013,
+          "offsetY": 978,
+          "width": 30.24421613263972,
+          "height": 22.078277776826997,
+          "scale": 0.15122108066319861,
+          "sourceFullHeight": 146,
+          "pivotFraction": 0,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 480,
+            "y": 978
+          }
+        }
+      }
+    }
+  }
+}

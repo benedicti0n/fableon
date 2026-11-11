@@ -1,0 +1,782 @@
+{
+  "format": "fableon.stage2c5.measurements",
+  "version": 1,
+  "generatedAt": "2026-11-11",
+  "baseline": {
+    "stage2b3_silhouette_iou": {
+      "openai": 0.5086337098289084,
+      "gemini": 0.4619791352590002
+    },
+    "stage2b3_socket": {
+      "openai": {
+        "maxRenderedPx": 2.2566479328863614e-13,
+        "averageRenderedPx": 2.7502774430188386e-14
+      },
+      "gemini": {
+        "maxRenderedPx": 2.228957952529976e-13,
+        "averageRenderedPx": 2.7619289847976935e-14
+      }
+    },
+    "note": "Stage 2B.3 silhouette IoU is historical. Stage 2C.5 did not recompute a full-master silhouette IoU; the matched 2C.4/2C.5 neutral frames are compared visually and by joint placement, not by a new IoU."
+  },
+  "providers": {
+    "openai": {
+      "masterDistances": {
+        "upperArm": 142.04224723651762,
+        "forearm": 132.9661611087573,
+        "thigh": 154.11683879446787,
+        "shin": 154.0519392932137
+      },
+      "targetPivots": {
+        "shoulder": {
+          "x": 508,
+          "y": 470
+        },
+        "elbow": {
+          "x": 532,
+          "y": 610
+        },
+        "wrist": {
+          "x": 548,
+          "y": 742
+        },
+        "hip": {
+          "x": 470,
+          "y": 670
+        },
+        "knee": {
+          "x": 476,
+          "y": 824
+        },
+        "ankle": {
+          "x": 480,
+          "y": 978
+        }
+      },
+      "connectorSeparationPx": 0,
+      "parts": {
+        "nearUpperArm": {
+          "targetWidth": 87.36608187134503,
+          "targetHeight": 221,
+          "scale": 0.2584795321637427,
+          "offsetX": 464.3169590643275,
+          "offsetY": 456.74,
+          "sourceFullHeight": 855,
+          "pivotFraction": 0.06,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 508,
+            "y": 470
+          },
+          "sourceFidelity": {
+            "visiblePixels": 214400,
+            "rgbMismatches": 0,
+            "ratio": 0
+          }
+        },
+        "nearForearm": {
+          "targetWidth": 73.8636525852499,
+          "targetHeight": 152.94121005887038,
+          "scale": 0.2896613826872545,
+          "offsetX": 495.0681737073751,
+          "offsetY": 590.0249510498869,
+          "sourceFullHeight": 862,
+          "pivotFraction": 0.08,
+          "splitLocal": 528,
+          "targetPivot": {
+            "x": 532,
+            "y": 610
+          },
+          "sourceFidelity": {
+            "visiblePixels": 103514,
+            "rgbMismatches": 0,
+            "ratio": 0
+          }
+        },
+        "handOpen": {
+          "targetWidth": 69.80839322762833,
+          "targetHeight": 96.746901817543,
+          "scale": 0.2896613826872545,
+          "offsetX": 513.0958033861858,
+          "offsetY": 742,
+          "sourceFullHeight": 334,
+          "pivotFraction": 0,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 548,
+            "y": 742
+          },
+          "sourceFidelity": {
+            "visiblePixels": 63469,
+            "rgbMismatches": 0,
+            "ratio": 0
+          }
+        },
+        "nearThigh": {
+          "targetWidth": 103.4862385321101,
+          "targetHeight": 235,
+          "scale": 0.23955147808358818,
+          "offsetX": 418.25688073394497,
+          "offsetY": 655.9,
+          "sourceFullHeight": 981,
+          "pivotFraction": 0.06,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 470,
+            "y": 670
+          },
+          "sourceFidelity": {
+            "visiblePixels": 301257,
+            "rgbMismatches": 0,
+            "ratio": 0
+          }
+        },
+        "nearShin": {
+          "targetWidth": 85.78619812350891,
+          "targetHeight": 170.85551993957904,
+          "scale": 0.23895876914626438,
+          "offsetX": 433.10690093824553,
+          "offsetY": 807.1964193536347,
+          "sourceFullHeight": 879,
+          "pivotFraction": 0.08,
+          "splitLocal": 715,
+          "targetPivot": {
+            "x": 476,
+            "y": 824
+          },
+          "sourceFidelity": {
+            "visiblePixels": 170999,
+            "rgbMismatches": 0,
+            "ratio": 0
+          }
+        },
+        "nearFoot": {
+          "targetWidth": 102.75227073289368,
+          "targetHeight": 39.18923813998736,
+          "scale": 0.23895876914626438,
+          "offsetX": 428.6238646335532,
+          "offsetY": 978,
+          "sourceFullHeight": 164,
+          "pivotFraction": 0,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 480,
+            "y": 978
+          },
+          "sourceFidelity": {
+            "visiblePixels": 56586,
+            "rgbMismatches": 0,
+            "ratio": 0
+          }
+        }
+      },
+      "video": {
+        "arm": {
+          "video": "outputs/folk-provider-benchmark/stage-2c5/openai/arm-articulation-2s.mp4",
+          "bytes": 399513,
+          "sha256": "69e220585122464b9f3e2b1d7caed11c1613cfa9a24ea56c2d864bff3432f110",
+          "probe": {
+            "width": 1280,
+            "height": 720,
+            "avg_frame_rate": "24/1",
+            "duration": "2.000000",
+            "nb_read_frames": "48"
+          },
+          "decoded": true,
+          "frameHashes": [
+            "a227a92cd345a3d2f93f41fb3168f90aec704f2f3c84d9b569031bcce53202af",
+            "79065f1ff706d044c9a810b4e686d6b1084428a2499e8db25a5bdc6d39f19903",
+            "c1038c0495d863b684fa8bf62ea1d063c02630a2f1ef7853346ad7ceeb51beaa",
+            "1a40e4f2d296005e6789eeaf1b933ce016c7477a184c3bd605624d16ae02c4fc",
+            "d29a1e3d9d74b56c303685bb098e4ab8e0673355406b040079194086b9188ba4",
+            "2b6dcea60ba5716c8972fae29ed610c5ccadf0974cb93644054fda482b7be272",
+            "bb02cd450eec3e25cd55c823c2cab8507ad73809c37f80c4e2370a320fefc9ae",
+            "0b81afa2a4ddaccead3d0454fb3f631c9ed90314724d752102e96a2f0e33012f",
+            "8ac4e83ee31e55cf2bfdd10256241acdf476a49b2dae9591255b0c7f40f7e7d2",
+            "84a69fa9d85140fb5394834e1e02b08cd0ac1228f6e3aae018c09ba62a6e2456",
+            "772a35dea7834c57f496ca6afbf25e84a04531a6e36573c20fbeab1f1107ff9b",
+            "f964bf69f39fc86b7c95771715993a4d73238c37b51c5294ec0978e3c87f4860",
+            "3bd551753e82bfd63be91325c26f69467449acda5297e3007297c2c194930325",
+            "10d9c439e84bb35f57d8812935a5db12e11d808f568f013a124a85daae912b4f",
+            "665f0fd994c8e098bd5bb90d5b740b97a2219ea599e52a390a22ac486f42dc41",
+            "cb8121ab5b27dc9267e5dc9c16e0793c30f2fad055d5ed2ed9086e854ab08c78",
+            "1fefdbfe6f6d71434dcaf9996fccc35f6b2c8f890f67b208d0a54b6cad28b619",
+            "9571e1893893eb1324a1d7567d550f3411a950b2b475711224c9541130ccff84",
+            "1363af6b3c477039993459646e62143fec8b31a9fe6480f24e6c17484397f86d",
+            "393419613e7b2f3115b1c124455f8c7d30ec160d6a9baa6b0dc9d2443fde5257",
+            "7a4745c22da4e195953b10964349a64de272eb70465d28ad750a64257c46b85c",
+            "f9748fd1fa7b1d25ffb9da9558625f4d068a0dba8b5d984ac575fb60d7183cc1",
+            "f9af75ee55e9c06be5e45f0150e448fea9cd0acf3c52be063de8346ca7839faa",
+            "c57cf37547b52c0c4ced6fffd6a5515af66a7f159d6821e659be1736a48873f2",
+            "a77e0d763787b1c7de0f8f6edd456d8228655e66df85b6134127dde15ed93f38",
+            "59ecfb31dddde243df937df0617b6cc6959137b55d2378fbd90fce75c69561e5",
+            "8c5441f12a5752ebd5fde4e67654cbc8fc11d68ac0a8f3fd373b122ac39b8f15",
+            "f6babb82072bb0c89dc54da69d4eacc1c6442ea3186c9a7a13a4de27739f93c6",
+            "d6ec2239a20982b1a9f036584b56388aca54823dfc3e3dba0944f58a577970a2",
+            "aa8ceeb60cd38646bb26ae7ef6a7f7a4802dfb7b4e580589bbfe98973e753882",
+            "4f66473dd40e6bbb05d73fd548bafb2a98bbc9fa74be13d201fa7cb0cdedb9ef",
+            "1b8aed51124def77683095d4f0623bcba977adb641a6bec1c128fdffbda774a6",
+            "aeb9fe895364624462f27da36433be3be4a70e8d10122e860b1f7060319694e0",
+            "50ce7c4bbf98fe2520710e655864106574fa7101daf2eda38316a61f47f612b7",
+            "416e95f36fd2c478fe0ea35685cb7e3343b0bb1475e3030187f6b18e3fe5c628",
+            "00130b23696fa267b0bcdc92c38ea7a9e4ec422d281f24a713e6f1c3ddae49fa",
+            "a9d5f7826abe95a7a1a617373f2eff7e5614a08670ba99cefc9e73f7d96888d0",
+            "51755f5ecceab18192443cd31fc0f4769dc5fa145b8783f478063ed13b1fee2d",
+            "0d9f59d360ce83c5c24ce54b9cfdd6e2e5aed6a1049bb96b0646cc71f0e04085",
+            "7ffb859333028e489ad370001eddaf55bf60aaad54075b9c677a67d1378d9990",
+            "b53d6be521b234af9dba6bc2684903b36f8f99b537ca504c87b12b0f9a39a3f8",
+            "d92912aefe2c02baa98c581f9f1c7fcf2cc81a7f3f0efd47d85806a42be94493",
+            "ca80c637371282b18a144e750ae125fb8f998048d64984cb068342ea1c73581c",
+            "40f3aca68824653abd66afcef7f90747d1e433c7594f21242fa2fc601ee2c5f2",
+            "5f4526de98a9b7d270483fdd0f9487f8acb745e0da50be78ccfa4715bc2c61fa",
+            "592a21c1a6e764e98bc38d3604fcce50fc7479374e31e99c4cdbf87c599be687",
+            "96e938590fc24b02907f0bc02658fe44afe0c77b171c2783d4adf010ef9040b1",
+            "a6c7833135db06b82428d94b8d0d00d87975a9d4cf3d1fd70a079d76ffdb4a68"
+          ],
+          "contactSheet": "docs/benchmarks/phase-05.1/stage-2c5/articulation-openai-arm.png"
+        },
+        "leg": {
+          "video": "outputs/folk-provider-benchmark/stage-2c5/openai/leg-articulation-2s.mp4",
+          "bytes": 352028,
+          "sha256": "d84e882e0d2de8371d387da58f7bd4c57309adb7e6e172d925bb24e4808ec58c",
+          "probe": {
+            "width": 1280,
+            "height": 720,
+            "avg_frame_rate": "24/1",
+            "duration": "2.000000",
+            "nb_read_frames": "48"
+          },
+          "decoded": true,
+          "frameHashes": [
+            "f5b0fef49d1c70f6f7724d2504ccff36efa01657fdfddfd6ac31aef1083299b4",
+            "0a0235c290dd8114c139ac2026ce38a038f6fc94e7de0c5881f44d4177babd6e",
+            "8f1bfb3ec39df062978c354db75437a1bf3602eef822dd8e7323d5d0f00d3d1c",
+            "e3fb53cb47c4dec92522885e900bca7f347ef462c8496f9e6e8acf70c2e453a3",
+            "a218864583f7e68052b131b53801a762f055658fb5721ac138b5e771593e4e67",
+            "278b07e73c2824bda1c6432b72f469cb826365474ca64d57b6574ba7544d7205",
+            "0241188a0722372772665dcf4353f43150e863c8d7fea64aa7f354528385e928",
+            "7cb2fed586f04606cb08233e00d331994192663ed453af69dfaff1cacc992d9a",
+            "fbed3cace5518d3fd6c9831006893bc11ac93327e17a2a19c7b4bb21bcb849c6",
+            "6a23bbaa1eafb5c56e9868ce2e04d4ac69d25cebfea95ea550be598a4322f28e",
+            "366fb8d17d8281f2417a98b2fec3be4ac52388486f81619828e04d6cbefe2373",
+            "6367b0769b47ad41a7fe2deed9dbdb926f006777202a84120b66f4a26a06909e",
+            "2cca47721f35e3405776180ce0918e4f9247f09f42b8c724db14690ebfaaf51e",
+            "a39a08ba18ab31104f25b71f5b758955e086800a461c27cb739af831138f2b6a",
+            "85bacb5aa7fb884893db333750f64bc0a20e0aac8155d8292dee01cc8de8cb42",
+            "d11a75ec01ae40f4d0f67d00ba37b03ea254dcd5d89a1891a620586b20a93ebe",
+            "ae784e3f32acf7744d5dcc1c71930d896b2ca8ac6d69dfaf3ed60419ceb60aae",
+            "bfef835c60cbefbc74c204f227f61eaf94ee5f7b9a5c7694a6adb542089b4f7f",
+            "44f5adbbe20ba079000f14b0ecb7f16219e7fb5006fd11083e90dee765c7df36",
+            "ffad8fd1d91b9fda71e50fcacf655a6632364a7a9d6d245fadd60ee403b5648c",
+            "33398654bfb5a62e178f0735a25672c80dde4ae625792c26bc4fa8e8c11d6735",
+            "39d1b385fde9b4817e2b4dc7fd5338e923d94e894052f101906f1e109271c167",
+            "bb93fbafb01fa123f56f6cedb6ccdc9b23264b671e68d560bc04f3d2bc2bab2d",
+            "527bb3fbfa9d44b2863516479755fdb8620f8f485195628759b94066371c6fb6",
+            "770f477a81e98453d65ccbdff99126851e6dcbfe22a10535cfd962b6a9fc3344",
+            "cd8bd0c90a7850f86bfed1c3fd040c36bef5767872fd5797b33388fcc6a10438",
+            "8a1576b4a7d1f20661a54512986ed0dc43762d736f522363db3ee743badcb3c9",
+            "709bba8e05cd8ecf5e5540c5513382c4f9d812b4f5a4acc3c11fc4e9f2b67793",
+            "3115b2ba9cb4769e25e9c1900a9f48f5ba3c3b389b5f46ae9d6126f4204b6bc3",
+            "d630ec4f013868a119f6e1e1441e3805c6010faa2099d17d64abe4a202ea26b8",
+            "3925d2aafab73b82de6e00944a818c701acc5167246c93d1a81c9a9cd72a1637",
+            "6923ca65bc79811831318807d443527fcafcba99bf53c6af5c1bcb73e1f6ef19",
+            "48925edf2f390e736910c4ed0e799d8492e49bcec8f5fe0429ba97c8a7ce137a",
+            "53cc07b8ed99d36032702696c64aa448ffae0a031d1d561ebfd6f309f1f24a2f",
+            "edad6d1e2894fa0247df5a7ef2f6d5bde2499ff2ce413f1bc15a60ec56c9d430",
+            "88132a7754c501c4330618dee5a0047dcca40488abbded73df23ba6c0f045ba7",
+            "896adebe6a07319c980ccf57ed9e0c23ce558521e83234e693ac98da8fa6974f",
+            "a88e87a04d6b13d77e93b2995b94f36dbda0ed8f3d231df8e26ac35b144f9fcf",
+            "92c2b2d8832d6d11ef9a98e4fcca01e8e6a498f6be930135cdf78c5653cb60a2",
+            "31828e82b025ff010997c643dca973ccfb39f851f55d367f367d7ea14575a877",
+            "2972315207a23a16bbf09491e2a710a72a6c3ace2b17ededfeee1bb2a96ec5c7",
+            "0e4caa6d5c6e76988bb93933aa8784438bdf16e3810d30aa0afd139026d2e432",
+            "2d84191d6e74e59b49d794a444657513af9449d9a885b999e476f15946d98362",
+            "d5a3f4adc0de659fb40f5c7c3404c010f4b709f84e27c5442243ba9606d4be9f",
+            "3f5837bd3336b640c31425f312d9c8bb8c0694eaba28abbe2bdd243eca7c08d1",
+            "dd4480889bde2083fec543760e3f39536479968aef990680314d15c4b419ef92",
+            "e97a0e189c05c24a43d0486bb002c287da4c9861115f47536320c69c05429ba7",
+            "28f38ade3f029293044fa5bf9c15a3e86d60e5bb2be1395d6151f70b460224c6"
+          ],
+          "contactSheet": "docs/benchmarks/phase-05.1/stage-2c5/articulation-openai-leg.png"
+        }
+      },
+      "sourceBounds": {
+        "nearUpperArm": {
+          "crop": {
+            "x": 221,
+            "y": 85,
+            "width": 338,
+            "height": 855
+          },
+          "source": "docs/benchmarks/phase-05.1/stage-2c2/openai/arm-sheet.png",
+          "maskSha256": "131fd1c6886a8287f83e0c58bbd4ace938b5b89e9df743906718b9f5880f4897",
+          "candidateSha256": "f2577446f7244200b0728a619fe87c9de5a17165ce0d8b1c5cda5531e6384f9d",
+          "candidateDimensions": {
+            "width": 338,
+            "height": 855
+          },
+          "greenDominant": 0
+        },
+        "nearForearm": {
+          "crop": {
+            "x": 1053,
+            "y": 84,
+            "width": 255,
+            "height": 528
+          },
+          "source": "docs/benchmarks/phase-05.1/stage-2c2/openai/arm-sheet.png",
+          "maskSha256": "689c32254ceae70c404410b0617dc09cc66e033ef0d6acf61b0f796469f134d3",
+          "candidateSha256": "1039110852b3f741f94ff9445551da5872c56f35a9b53b3b0291519ce2aebaf9",
+          "candidateDimensions": {
+            "width": 255,
+            "height": 528
+          },
+          "greenDominant": 0
+        },
+        "handOpen": {
+          "crop": {
+            "x": 1029,
+            "y": 612,
+            "width": 241,
+            "height": 334
+          },
+          "source": "docs/benchmarks/phase-05.1/stage-2c2/openai/arm-sheet.png",
+          "maskSha256": "41c2b9e8d505a2e9f1c035085ed0ac91e78e652f2d5cb628e1d779c996692bb1",
+          "candidateSha256": "c8eea0e3853e1c09892dc321b426c8be19881f308313c1cdb5d7bfc984c12947",
+          "candidateDimensions": {
+            "width": 241,
+            "height": 334
+          },
+          "greenDominant": 0
+        },
+        "nearThigh": {
+          "crop": {
+            "x": 104,
+            "y": 19,
+            "width": 432,
+            "height": 981
+          },
+          "source": "docs/benchmarks/phase-05.1/stage-2c2/openai/leg-sheet.png",
+          "maskSha256": "2a0c6b0ad4c6b2639bf9007a1a9fd5e564c4f11f4c31dd90c0495d31406b5483",
+          "candidateSha256": "4b09a7b3716e949a28c6e4993c7ba9eb8d6ef3291173905bb8d57c0d7b85f10a",
+          "candidateDimensions": {
+            "width": 432,
+            "height": 981
+          },
+          "greenDominant": 0
+        },
+        "nearShin": {
+          "crop": {
+            "x": 995,
+            "y": 110,
+            "width": 359,
+            "height": 715
+          },
+          "source": "docs/benchmarks/phase-05.1/stage-2c2/openai/leg-sheet.png",
+          "maskSha256": "3bbf336666dd28feba06fa0bd13f97fe68baa7db5a7629a29729c3f11c937c5a",
+          "candidateSha256": "e9f4ef62c88ba785cd9c464e2ca556b149985eab625ccb900bcbce91f59be91a",
+          "candidateDimensions": {
+            "width": 359,
+            "height": 715
+          },
+          "greenDominant": 0
+        },
+        "nearFoot": {
+          "crop": {
+            "x": 968,
+            "y": 825,
+            "width": 430,
+            "height": 164
+          },
+          "source": "docs/benchmarks/phase-05.1/stage-2c2/openai/leg-sheet.png",
+          "maskSha256": "4ab29277d683913959524220c95720f167e3d27ee1a6ae787bca81ec326140c2",
+          "candidateSha256": "d3cabc111f12047422c0cfc33e63e59c39ddc3e0427a20874190cd6d074e5dc3",
+          "candidateDimensions": {
+            "width": 430,
+            "height": 164
+          },
+          "greenDominant": 0
+        }
+      }
+    },
+    "gemini": {
+      "masterDistances": {
+        "upperArm": 142.04224723651762,
+        "forearm": 132.9661611087573,
+        "thigh": 154.11683879446787,
+        "shin": 154.0519392932137
+      },
+      "targetPivots": {
+        "shoulder": {
+          "x": 508,
+          "y": 470
+        },
+        "elbow": {
+          "x": 532,
+          "y": 610
+        },
+        "wrist": {
+          "x": 548,
+          "y": 742
+        },
+        "hip": {
+          "x": 470,
+          "y": 670
+        },
+        "knee": {
+          "x": 476,
+          "y": 824
+        },
+        "ankle": {
+          "x": 480,
+          "y": 978
+        }
+      },
+      "connectorSeparationPx": 0,
+      "parts": {
+        "nearUpperArm": {
+          "targetWidth": 97.84210526315789,
+          "targetHeight": 221,
+          "scale": 0.34210526315789475,
+          "offsetX": 459.07894736842104,
+          "offsetY": 456.74,
+          "sourceFullHeight": 646,
+          "pivotFraction": 0.06,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 508,
+            "y": 470
+          },
+          "sourceFidelity": {
+            "visiblePixels": 134271,
+            "rgbMismatches": 0,
+            "ratio": 0
+          }
+        },
+        "nearForearm": {
+          "targetWidth": 71.71433557584116,
+          "targetHeight": 151.48958484043968,
+          "scale": 0.2779625409916324,
+          "offsetX": 496.14283221207944,
+          "offsetY": 591.4765762683176,
+          "sourceFullHeight": 833,
+          "pivotFraction": 0.08,
+          "splitLocal": 545,
+          "targetPivot": {
+            "x": 532,
+            "y": 610
+          },
+          "sourceFidelity": {
+            "visiblePixels": 90328,
+            "rgbMismatches": 0,
+            "ratio": 0
+          }
+        },
+        "handOpen": {
+          "targetWidth": 61.98564664113403,
+          "targetHeight": 80.05321180559014,
+          "scale": 0.2779625409916324,
+          "offsetX": 517.007176679433,
+          "offsetY": 742,
+          "sourceFullHeight": 288,
+          "pivotFraction": 0,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 548,
+            "y": 742
+          },
+          "sourceFidelity": {
+            "visiblePixels": 43165,
+            "rgbMismatches": 0,
+            "ratio": 0
+          }
+        },
+        "nearThigh": {
+          "targetWidth": 114.8009188361409,
+          "targetHeight": 235,
+          "scale": 0.17993874425727413,
+          "offsetX": 412.59954058192955,
+          "offsetY": 655.9,
+          "sourceFullHeight": 1306,
+          "pivotFraction": 0.06,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 440,
+            "y": 670
+          },
+          "sourceFidelity": {
+            "visiblePixels": 647894,
+            "rgbMismatches": 0,
+            "ratio": 0
+          }
+        },
+        "nearShin": {
+          "targetWidth": 65.1762857658386,
+          "targetHeight": 169.36761034278246,
+          "scale": 0.15122108066319861,
+          "offsetX": 443.4118571170807,
+          "offsetY": 808.6843289504312,
+          "sourceFullHeight": 1266,
+          "pivotFraction": 0.08,
+          "splitLocal": 1120,
+          "targetPivot": {
+            "x": 476,
+            "y": 824
+          },
+          "sourceFidelity": {
+            "visiblePixels": 313272,
+            "rgbMismatches": 0,
+            "ratio": 0
+          }
+        },
+        "nearFoot": {
+          "targetWidth": 30.24421613263972,
+          "targetHeight": 22.078277776826997,
+          "scale": 0.15122108066319861,
+          "offsetX": 464.87789193368013,
+          "offsetY": 978,
+          "sourceFullHeight": 146,
+          "pivotFraction": 0,
+          "splitLocal": null,
+          "targetPivot": {
+            "x": 480,
+            "y": 978
+          },
+          "sourceFidelity": {
+            "visiblePixels": 26073,
+            "rgbMismatches": 0,
+            "ratio": 0
+          }
+        }
+      },
+      "video": {
+        "arm": {
+          "video": "outputs/folk-provider-benchmark/stage-2c5/gemini/arm-articulation-2s.mp4",
+          "bytes": 401428,
+          "sha256": "bddc3853f781482947edd0dd3533328d3a59a74e791a283e1ce16a85c27b60ed",
+          "probe": {
+            "width": 1280,
+            "height": 720,
+            "avg_frame_rate": "24/1",
+            "duration": "2.000000",
+            "nb_read_frames": "48"
+          },
+          "decoded": true,
+          "frameHashes": [
+            "6e9f766f995d75d764280805878e048b0094e0b1059ef8b138a7d4bebd5471cd",
+            "5e892051db5fc09130f2e2bef7e4bab53a17c99ea5e9bd0b94bef79dcb4e9544",
+            "77d890dc81b0354fbc4971eaa7eb0b3362691f74f330cfb81763c2c6dcf1a956",
+            "00d99e858a7bd2c2e99011d2b91a67efc1b5643d4d5643551b90c16cf67a71aa",
+            "19c4d438b60382f4a699cb3214ccc7f23753faa45ed6ff705a19b7ca9b95113d",
+            "bbe73a226b2757963ab02cbca9da12535cd8c3d079884c63476d8daeb99d7876",
+            "bb272d6a23973680ecb6074b497b97cf98e46033aa55bfdf0018f678f49ca606",
+            "3f20522be246a0a1d61ab3829117f363665f5a1fc17174380d2f64e3c2107b57",
+            "3405d663f2b0f11dffdefb7202bfa6eb71a82a5b8d77dc20cc1197b9861a38c1",
+            "996a10d30225cfb0472e3d652307c575146fd0a4de948d5562ffe950ac42ebcb",
+            "76d2dd455e791b5cfd761517ac4dc1673d283ff9c21fc8184f9bd9618b83852e",
+            "e8bbfb1b8b9cf1c1b21d8f8ccd2de451a71f0356a23c480e6958d51b8f1a43f5",
+            "afc2eb2dd8a301fd998113c181adf403181d4f415cb52dd494ad7503c9d4df4d",
+            "c40c660f8340c89a3cd4de83714cdf54eb3797509bb174ae3d9d3b3a7e389a76",
+            "a67c9abfdd69ee60454bfc057c6777d9cc2840032b799e947691d7e153c80f62",
+            "b363fab29eec99d701d42dfd5270797ea33fab74b039b27aefc309476aa69b32",
+            "7892522fa531eae667b3e7e01b2bd1eea6437407615f256322bfd2f6ad23fb98",
+            "d8aecf03e08d751483ddfbf55bc2f471495c54aad68c475af17920c4afa55e93",
+            "a071b97bd18650a4b8a4fac4f399a3ef68e194e3958ddaf8abf41e34864a56e6",
+            "c40ccdf03a27c2ac3dc94831906a5183bbd38c3947f8d9c47320cb7506aaae98",
+            "11dbe9c00ca302dcb1ee16894f1c3986ae7534365d777f54020920a16ca5c59c",
+            "faf3c920ecee02d6f1a30f040fce2dda20d5cae0adb911a13b9f0cd1472f89b6",
+            "69e003ec06388d4b05204386cf5a193df24a57d51d40df5ab8bb92a2030e496b",
+            "9faa24d287be34cf1914a9dbcf489a61bce9aa9abd5fd27e3ba356a2beccc819",
+            "996d6016325187fe8e635f762ce7871d0ffdf2c7d41f4a667d7846f15a57b7ff",
+            "fcf32ea9bcd37e6841051fbc79c19f3b7a8f53591b30dd44c5e7472774e7b08f",
+            "d5d768b6b4ae0ca84b8029916b7617e8e41f4292bbe448871fd67e8fdd444ee3",
+            "4f85cc729a7aaa0c20b084ca554f07f9ac8887ed7453ccdce7cb1eca14077ea9",
+            "f04569d28a75ef0adaced775d42a0ee12e32299dd630dd8dea40b7478e55d55b",
+            "bb3d7b85d11b078229f64bf277340032c9efbfe1d797a59f4a781893c19ec513",
+            "c0ba3c54edf9026ef37bf4f0ff75a8934da65287543c7f5141ec0e2f2e940e43",
+            "79dc04034510272dcc15263365d92f00254e4c6ae2675d697409ccd9a1bf80e9",
+            "9a4d0bec65d55d0cfcff6c155ed2d57c65665ec991db6fc7d5f922f0a3be7601",
+            "aafcb691e9b7d8ece0b6cffb3580ca5c492d56fbfdec258e4c7547b3cca35d18",
+            "0bed3e213a619562b74dc3923e130e5a7167b701d6e9255ab9c6dcd3ba329c79",
+            "43e51b62112b0eb820c824607908e1abe833fcb77334aaa70c1bd645aa07239e",
+            "f6fefb570aa6c673200cee423e4c4fefa28814df17142bbc741fe81757ee86b1",
+            "b705f57c1ff04bb3fd722cb77f2e99a6858d91211a784c25160ed5d64fab6d81",
+            "18000a0460445592daa8052519bf549abb9bb5cf4dae510b24e45d855963133a",
+            "7f176931114f66f190f2bb77d9aa8676b9ef592825de6aaab03993ccc0f4058c",
+            "6caf1a881f7a863438b3ecb3385935f5fa45376c5c3d487bff6dc16b2a64cae3",
+            "9906f9c2fd78160c1d80cc9e670f5a4f26e5da01761be448fa337083727c3bcd",
+            "2c086b14cffa7fa00cd17284ec484b8892aca5e8fb6cfc9d46a9c2442e8c1785",
+            "66cf4bb8c182a07fc253b8bd608e886e367a1217f1fc294a7ccba93a743ca0b7",
+            "8d9b4585197524db3ec5e4b3d59506b0f215b38d85ab74c1dc60bd4becf99745",
+            "0cd3cbe56f7c006d9882820c2342217575433fd429f877e35ee80e6a045aa735",
+            "c1647ad67769bc5d7f196002b6dd1d149ab1a5af05437ba4c5a5b11f64f89f04",
+            "7cc026329fac5f5e2d491b161ec47d44aac1084ad2c7c3da93fe9a650b79611b"
+          ],
+          "contactSheet": "docs/benchmarks/phase-05.1/stage-2c5/articulation-gemini-arm.png"
+        },
+        "leg": {
+          "video": "outputs/folk-provider-benchmark/stage-2c5/gemini/leg-articulation-2s.mp4",
+          "bytes": 300663,
+          "sha256": "6391b78a0c1324ea6edc6b35b9a62d73805ff45ea50547da8af3190b5ff1f274",
+          "probe": {
+            "width": 1280,
+            "height": 720,
+            "avg_frame_rate": "24/1",
+            "duration": "2.000000",
+            "nb_read_frames": "48"
+          },
+          "decoded": true,
+          "frameHashes": [
+            "39f9383b02d1b78a822a6f6f56bdaf8a490ed8f4d13baaee6bb0bf5dc820a286",
+            "97aa9299c159fc95124237811d2057b8ff192bff8696e296de34456197e965b2",
+            "2f4cf7785e2c058a71cdeffdc6b137e97ff44a8e0d030e1c1df9b6ace9e6cf1e",
+            "f56ae9deb8a1fb2c216fe3cebc5d6b3a4ab3c50b29b8c60510cc81e2dd6d4f04",
+            "cd75893ed942b242a9ce335685cc4eebade8c563bfca735c0e8bed8ca6344130",
+            "87cb9055a5c47a031085a615b0e7bf45bdad47887524aae412ccb0b24b53e10a",
+            "fc48f300eda5ba0b0db106c4712263b6a075472afa665eea4e682428ee493466",
+            "4d111c0320171158a1cca8d9539c0610219d5b482cc9ee28523f37b258a92d57",
+            "165abf9cc238d38cc9632b455e780ec74092d50264329b0b9310f60026b01259",
+            "45c71659c4d73488f2c1b7e207d6ba001ba39b81b55129ef4d4bd32b0d21aba8",
+            "5fec420ce24a1f59f99dd21afc01b830495e3ffd1094be1ff0a58d65ba31426c",
+            "bd2ef6b807d6e30749614a8fa7a49b673ef6750b42c4824cf73f2094e36a046b",
+            "ba011871236d5e24e3dd7719a878fc16a69b63be7832a033eb2e71e29befb31d",
+            "ed4508326a95f5b7439f458ea5b7064b9eb911ac196fad20f25848567d992397",
+            "55cb8faf7d94a709215e24c07f249aa42b20074e9d1dd62b012e24cb206db25a",
+            "07a0ad48ca6dd026d780b30c3e16a5a4a55e66d301225a16a9692a332ab3198d",
+            "bddd600f4c46ab7dcfb66412a1bfc69d13ef9b86f192842be64dabe94fd95d54",
+            "ce2ac68cbba11e789b81c84392db8bd628a8c72bc7a589254268c28933d96d93",
+            "35168822604f58b783e3232bf45cb53924102f756b5d789454033ffd4d81e850",
+            "976031cfe793cbc0e81a4a87e11d53db7ba4ac3273fee57fd2d833b2fc00902c",
+            "9b707ead91812166bd78c90d78bc4b90572a6f6dbc526c581f6e2760724d0b37",
+            "c9193a24965460fd4f5c2d7bc212de0a07fda1d2c3c1e402adbe87a326a3d7bc",
+            "3bc04dc00d831f38d313703c5227fb6e405aea48dcfb4abaf08c6ece8ec6cd7a",
+            "d48934f57dc05031669b6346730f4bdff0b76a9d8d0dd9d5d6407b39cf2adf08",
+            "d5e8f84a0df812086f08bbebaa99c03d9162491af519b51492eead891dee638e",
+            "0306b9672c001d22b85aa9b64e8e5429e80569ef2bd6da512ede8d816164d488",
+            "5081ef88e7ac28841c485b476d07bc23661e5c183727600973405f9094bcd5e6",
+            "512e4683a1c5f47bc7877d1181e823796d97adcbcb9139f5b720a9a787d95499",
+            "5654a416d595d7af0aff49841a11fcc9ab76dc5ebabf914cc80b989b2ce51dd2",
+            "8439c28c33e0e973cf5e9f361fef74a561602aa8bc4925d93472234167140ccf",
+            "b402d789837f8394481471c0bb03220fb77a42244a94646f29cb8df9ef98ccfc",
+            "dd10a85a4b5a87f894c1500f83db5996a70b05ad7762da036461adb0fe79e55d",
+            "e1c3861ce344845f9b15f8f29661ac8bfb162cb9c98559022dc4aa0a3815b3a0",
+            "ecbac7cd4f4975f156760c9f0e2ab82eb8d4a5fdb3216e2993a4e035bc4ba21b",
+            "c745b715989f17a9270a5b508959f61395cd65bd0ca64d70c0645bad34c8c434",
+            "be9d3599c4bc1a2b565a15e3da820b50222efd86a541df46850dffb4327bdf8b",
+            "33113d1e79332d618a36cb970063a59ad5031496f5e1c6b3b013670c813f4b1b",
+            "1f2298307a6106cf9c8c1feebd256342818ff25cd3bad93632a5cb5f9fc22285",
+            "a8a02e16d7f3285c7525f71f13b04f5944186b83ce0711f3f629861d004e3feb",
+            "34af5aa8680213ff02847c9711786a068bd62332dd2b68b5c58ae2c81b6e8986",
+            "e0903d3f84866d5d88279f2bc8d25d093f5e59b052d7e126038d92b0880a24bf",
+            "a812231aa803188b72633fed471696ba1ac3ac7bdcebd9d41181ad11c062f1d2",
+            "bfca29968a634235096d2ed94b3d9fc12683b487bb734ed6e83524ced98d0133",
+            "895f1c6aa40c09eb5c8e45dfa6fac2c2cee2997e1e13becd75c8e2f95a796ea2",
+            "402923ed0fcc36bb4a3486063853792bb8b0dc86ec4e884a3503624cf4cff7e9",
+            "7eba152f948628ec2e76028097c93308835c8fc5e73f0baea3685be58995fb47",
+            "e7b11c39ec2a002912837d71ac8093d919f42db353b4c673e25749afe6dfb2e4",
+            "aea5d6a14af5535741380d976f4293a6b68225eecd3b03cdb89aabcdc1e4d1b1"
+          ],
+          "contactSheet": "docs/benchmarks/phase-05.1/stage-2c5/articulation-gemini-leg.png"
+        }
+      },
+      "sourceBounds": {
+        "nearUpperArm": {
+          "crop": {
+            "x": 494,
+            "y": 239,
+            "width": 286,
+            "height": 646
+          },
+          "source": "docs/benchmarks/phase-05.1/stage-2c2/gemini/arm-sheet.png",
+          "maskSha256": "3e9fb8ff91cdf03b848c85359fb98695f400a23aa2a56752889a2668d9265a2d",
+          "candidateSha256": "49d02cac5b8a9c761ef70b21751a2fd85f4e73d859a99fee8901ab1cc91c3a2e",
+          "candidateDimensions": {
+            "width": 286,
+            "height": 646
+          },
+          "greenDominant": 0
+        },
+        "nearForearm": {
+          "crop": {
+            "x": 1774,
+            "y": 621,
+            "width": 258,
+            "height": 545
+          },
+          "source": "docs/benchmarks/phase-05.1/stage-2c2/gemini/arm-sheet.png",
+          "maskSha256": "a34eaa86692d2888238722a04a6adc07bb6a1e9576702c0a3f8cc1c8f8c76f96",
+          "candidateSha256": "2abecf5ff4169e71bc2cde73f7b236ad046d5b81873d4698872a36f43f206259",
+          "candidateDimensions": {
+            "width": 258,
+            "height": 545
+          },
+          "greenDominant": 0
+        },
+        "handOpen": {
+          "crop": {
+            "x": 1890,
+            "y": 1166,
+            "width": 223,
+            "height": 288
+          },
+          "source": "docs/benchmarks/phase-05.1/stage-2c2/gemini/arm-sheet.png",
+          "maskSha256": "2e86f46516431e44952a06531c5781136aef8614f6c49b2a697cbfec170a0ea7",
+          "candidateSha256": "239ce032c49e5707c3c5771b9cb7b3f80c96144334f27fb7ae4db494ac14fab2",
+          "candidateDimensions": {
+            "width": 223,
+            "height": 288
+          },
+          "greenDominant": 0
+        },
+        "nearThigh": {
+          "crop": {
+            "x": 341,
+            "y": 211,
+            "width": 638,
+            "height": 1306
+          },
+          "source": "docs/benchmarks/phase-05.1/stage-2c2/gemini/leg-sheet.png",
+          "maskSha256": "006d4a9f79b3fb230336971c8ad27e148a089a8ae26fb52e0ce772c2aa683f11",
+          "candidateSha256": "c00c78d6565baa1dada293301dadbb14644b3574bad0e0c566dad89c262e126e",
+          "candidateDimensions": {
+            "width": 638,
+            "height": 1306
+          },
+          "greenDominant": 0
+        },
+        "nearShin": {
+          "crop": {
+            "x": 1706,
+            "y": 221,
+            "width": 431,
+            "height": 1120
+          },
+          "source": "docs/benchmarks/phase-05.1/stage-2c2/gemini/leg-sheet.png",
+          "maskSha256": "96cf6eca3ab68319811bb5cb8e345e8337f3f43d9b21bf49fabbf3fd5ba24698",
+          "candidateSha256": "bcc557381a351c65ab3c21d1c824898b00c10bbe356fbff6048424ec29bdee37",
+          "candidateDimensions": {
+            "width": 431,
+            "height": 1120
+          },
+          "greenDominant": 0
+        },
+        "nearFoot": {
+          "crop": {
+            "x": 1845,
+            "y": 1341,
+            "width": 200,
+            "height": 146
+          },
+          "source": "docs/benchmarks/phase-05.1/stage-2c2/gemini/leg-sheet.png",
+          "maskSha256": "ee89d031604cfbf05ab429a25f98439ea47679127501dd58ba909d558c038da3",
+          "candidateSha256": "93789f9e871ddb7a22d90b778e1ac0ea185f58274c1c1a79997f5437aa59a04b",
+          "candidateDimensions": {
+            "width": 200,
+            "height": 146
+          },
+          "greenDominant": 0
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+Stage 2C.5 browser validation
+----------------------------
+Command: pnpm exec playwright test tests/browser/stage-2c5.spec.ts
+Result: 1 passed (8.9 s)
+
+Full browser suite:
+Command: pnpm test:browser
+Result: 60 passed (2.2 m)
+
+The Stage 2C.5 test opened the real workshop, loaded the OpenAI arm sheet,
+selected handOpen, painted and erased mask pixels, undid/redid, saved revision 1,
+previewed the extraction, reloaded the page, and confirmed revision 1 persisted
+with review status pending.

@@ -1,0 +1,20 @@
+{
+  "format": "fableon.stage2c5.test-summary",
+  "version": 1,
+  "unit": {
+    "command": "pnpm test",
+    "files": 58,
+    "tests": 376,
+    "result": "pass"
+  },
+  "browser": {
+    "command": "pnpm test:browser",
+    "tests": 60,
+    "result": "pass"
+  },
+  "format": "pass",
+  "lint": "pass",
+  "typecheck": "pass",
+  "build": "pass",
+  "paidCalls": 0
+}

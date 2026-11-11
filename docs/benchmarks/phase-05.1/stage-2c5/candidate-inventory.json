@@ -1,0 +1,521 @@
+{
+  "generatedAt": "2026-11-11T00:46:10.747Z",
+  "parts": [
+    {
+      "provider": "openai",
+      "part": "nearUpperArm",
+      "label": "OpenAI · near upper arm",
+      "role": "upper-arm",
+      "sourceSheet": "arm",
+      "sourcePath": "docs/benchmarks/phase-05.1/stage-2c2/openai/arm-sheet.png",
+      "sourceSha256": "9186a76dafa97379ad794fef70b44803474a77c150db9f7e352d32751e9a87bb",
+      "sourceFormat": "png",
+      "sourceWidth": 1536,
+      "sourceHeight": 1024,
+      "maskFile": "outputs/folk-provider-benchmark/stage-2c5/openai/masks/nearUpperArm.mask.png",
+      "maskSha256": "131fd1c6886a8287f83e0c58bbd4ace938b5b89e9df743906718b9f5880f4897",
+      "maskDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "candidateFile": "outputs/folk-provider-benchmark/stage-2c5/openai/parts/nearUpperArm.png",
+      "candidateSha256": "f2577446f7244200b0728a619fe87c9de5a17165ce0d8b1c5cda5531e6384f9d",
+      "candidateDimensions": {
+        "width": 338,
+        "height": 855
+      },
+      "crop": {
+        "x": 221,
+        "y": 85,
+        "width": 338,
+        "height": 855
+      },
+      "splitY": null,
+      "alphaCounts": {
+        "transparent": 74590,
+        "translucent": 214400,
+        "opaque": 0,
+        "greenDominant": 0
+      },
+      "revision": 1,
+      "editOrigin": "studio-stage2c5-seed-alpha",
+      "reviewStatus": "pending",
+      "technicalValidity": "pass",
+      "extractionCorrectness": "needs_review",
+      "articulationCompatibility": "unknown"
+    },
+    {
+      "provider": "openai",
+      "part": "nearForearm",
+      "label": "OpenAI · near forearm",
+      "role": "forearm",
+      "sourceSheet": "arm",
+      "sourcePath": "docs/benchmarks/phase-05.1/stage-2c2/openai/arm-sheet.png",
+      "sourceSha256": "9186a76dafa97379ad794fef70b44803474a77c150db9f7e352d32751e9a87bb",
+      "sourceFormat": "png",
+      "sourceWidth": 1536,
+      "sourceHeight": 1024,
+      "maskFile": "outputs/folk-provider-benchmark/stage-2c5/openai/masks/nearForearm.mask.png",
+      "maskSha256": "689c32254ceae70c404410b0617dc09cc66e033ef0d6acf61b0f796469f134d3",
+      "maskDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "candidateFile": "outputs/folk-provider-benchmark/stage-2c5/openai/parts/nearForearm.png",
+      "candidateSha256": "1039110852b3f741f94ff9445551da5872c56f35a9b53b3b0291519ce2aebaf9",
+      "candidateDimensions": {
+        "width": 255,
+        "height": 528
+      },
+      "crop": {
+        "x": 1053,
+        "y": 84,
+        "width": 255,
+        "height": 528
+      },
+      "splitY": 612,
+      "alphaCounts": {
+        "transparent": 31126,
+        "translucent": 103514,
+        "opaque": 0,
+        "greenDominant": 0
+      },
+      "revision": 1,
+      "editOrigin": "studio-stage2c5-seed-alpha-split-above",
+      "reviewStatus": "pending",
+      "technicalValidity": "pass",
+      "extractionCorrectness": "needs_review",
+      "articulationCompatibility": "unknown"
+    },
+    {
+      "provider": "openai",
+      "part": "handOpen",
+      "label": "OpenAI · near hand",
+      "role": "hand",
+      "sourceSheet": "arm",
+      "sourcePath": "docs/benchmarks/phase-05.1/stage-2c2/openai/arm-sheet.png",
+      "sourceSha256": "9186a76dafa97379ad794fef70b44803474a77c150db9f7e352d32751e9a87bb",
+      "sourceFormat": "png",
+      "sourceWidth": 1536,
+      "sourceHeight": 1024,
+      "maskFile": "outputs/folk-provider-benchmark/stage-2c5/openai/masks/handOpen.mask.png",
+      "maskSha256": "41c2b9e8d505a2e9f1c035085ed0ac91e78e652f2d5cb628e1d779c996692bb1",
+      "maskDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "candidateFile": "outputs/folk-provider-benchmark/stage-2c5/openai/parts/handOpen.png",
+      "candidateSha256": "c8eea0e3853e1c09892dc321b426c8be19881f308313c1cdb5d7bfc984c12947",
+      "candidateDimensions": {
+        "width": 241,
+        "height": 334
+      },
+      "crop": {
+        "x": 1029,
+        "y": 612,
+        "width": 241,
+        "height": 334
+      },
+      "splitY": 612,
+      "alphaCounts": {
+        "transparent": 17025,
+        "translucent": 63469,
+        "opaque": 0,
+        "greenDominant": 0
+      },
+      "revision": 1,
+      "editOrigin": "studio-stage2c5-seed-alpha-split-below",
+      "reviewStatus": "pending",
+      "technicalValidity": "pass",
+      "extractionCorrectness": "needs_review",
+      "articulationCompatibility": "unknown"
+    },
+    {
+      "provider": "openai",
+      "part": "nearThigh",
+      "label": "OpenAI · near thigh",
+      "role": "thigh",
+      "sourceSheet": "leg",
+      "sourcePath": "docs/benchmarks/phase-05.1/stage-2c2/openai/leg-sheet.png",
+      "sourceSha256": "ac2a8e9d919f6b1d5bbc9aa9b082c8a047af184e6e7711b2ed4494b0e55a4404",
+      "sourceFormat": "png",
+      "sourceWidth": 1536,
+      "sourceHeight": 1024,
+      "maskFile": "outputs/folk-provider-benchmark/stage-2c5/openai/masks/nearThigh.mask.png",
+      "maskSha256": "2a0c6b0ad4c6b2639bf9007a1a9fd5e564c4f11f4c31dd90c0495d31406b5483",
+      "maskDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "candidateFile": "outputs/folk-provider-benchmark/stage-2c5/openai/parts/nearThigh.png",
+      "candidateSha256": "4b09a7b3716e949a28c6e4993c7ba9eb8d6ef3291173905bb8d57c0d7b85f10a",
+      "candidateDimensions": {
+        "width": 432,
+        "height": 981
+      },
+      "crop": {
+        "x": 104,
+        "y": 19,
+        "width": 432,
+        "height": 981
+      },
+      "splitY": null,
+      "alphaCounts": {
+        "transparent": 122535,
+        "translucent": 301257,
+        "opaque": 0,
+        "greenDominant": 0
+      },
+      "revision": 1,
+      "editOrigin": "studio-stage2c5-seed-alpha",
+      "reviewStatus": "pending",
+      "technicalValidity": "pass",
+      "extractionCorrectness": "needs_review",
+      "articulationCompatibility": "unknown"
+    },
+    {
+      "provider": "openai",
+      "part": "nearShin",
+      "label": "OpenAI · near shin",
+      "role": "shin",
+      "sourceSheet": "leg",
+      "sourcePath": "docs/benchmarks/phase-05.1/stage-2c2/openai/leg-sheet.png",
+      "sourceSha256": "ac2a8e9d919f6b1d5bbc9aa9b082c8a047af184e6e7711b2ed4494b0e55a4404",
+      "sourceFormat": "png",
+      "sourceWidth": 1536,
+      "sourceHeight": 1024,
+      "maskFile": "outputs/folk-provider-benchmark/stage-2c5/openai/masks/nearShin.mask.png",
+      "maskSha256": "3bbf336666dd28feba06fa0bd13f97fe68baa7db5a7629a29729c3f11c937c5a",
+      "maskDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "candidateFile": "outputs/folk-provider-benchmark/stage-2c5/openai/parts/nearShin.png",
+      "candidateSha256": "e9f4ef62c88ba785cd9c464e2ca556b149985eab625ccb900bcbce91f59be91a",
+      "candidateDimensions": {
+        "width": 359,
+        "height": 715
+      },
+      "crop": {
+        "x": 995,
+        "y": 110,
+        "width": 359,
+        "height": 715
+      },
+      "splitY": 825,
+      "alphaCounts": {
+        "transparent": 85686,
+        "translucent": 170999,
+        "opaque": 0,
+        "greenDominant": 0
+      },
+      "revision": 1,
+      "editOrigin": "studio-stage2c5-seed-alpha-split-above",
+      "reviewStatus": "pending",
+      "technicalValidity": "pass",
+      "extractionCorrectness": "needs_review",
+      "articulationCompatibility": "unknown"
+    },
+    {
+      "provider": "openai",
+      "part": "nearFoot",
+      "label": "OpenAI · near foot",
+      "role": "foot",
+      "sourceSheet": "leg",
+      "sourcePath": "docs/benchmarks/phase-05.1/stage-2c2/openai/leg-sheet.png",
+      "sourceSha256": "ac2a8e9d919f6b1d5bbc9aa9b082c8a047af184e6e7711b2ed4494b0e55a4404",
+      "sourceFormat": "png",
+      "sourceWidth": 1536,
+      "sourceHeight": 1024,
+      "maskFile": "outputs/folk-provider-benchmark/stage-2c5/openai/masks/nearFoot.mask.png",
+      "maskSha256": "4ab29277d683913959524220c95720f167e3d27ee1a6ae787bca81ec326140c2",
+      "maskDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "candidateFile": "outputs/folk-provider-benchmark/stage-2c5/openai/parts/nearFoot.png",
+      "candidateSha256": "d3cabc111f12047422c0cfc33e63e59c39ddc3e0427a20874190cd6d074e5dc3",
+      "candidateDimensions": {
+        "width": 430,
+        "height": 164
+      },
+      "crop": {
+        "x": 968,
+        "y": 825,
+        "width": 430,
+        "height": 164
+      },
+      "splitY": 825,
+      "alphaCounts": {
+        "transparent": 13934,
+        "translucent": 56586,
+        "opaque": 0,
+        "greenDominant": 0
+      },
+      "revision": 1,
+      "editOrigin": "studio-stage2c5-seed-alpha-split-below",
+      "reviewStatus": "pending",
+      "technicalValidity": "pass",
+      "extractionCorrectness": "needs_review",
+      "articulationCompatibility": "unknown"
+    },
+    {
+      "provider": "gemini",
+      "part": "nearUpperArm",
+      "label": "Gemini · near upper arm",
+      "role": "upper-arm",
+      "sourceSheet": "arm",
+      "sourcePath": "docs/benchmarks/phase-05.1/stage-2c2/gemini/arm-sheet.png",
+      "sourceSha256": "838a950e309fe9f22c1530a5705dd933e1fb1d54413cae3f7b3a8fe1fe1455d8",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 2528,
+      "sourceHeight": 1696,
+      "maskFile": "outputs/folk-provider-benchmark/stage-2c5/gemini/masks/nearUpperArm.mask.png",
+      "maskSha256": "3e9fb8ff91cdf03b848c85359fb98695f400a23aa2a56752889a2668d9265a2d",
+      "maskDimensions": {
+        "width": 2528,
+        "height": 1696
+      },
+      "candidateFile": "outputs/folk-provider-benchmark/stage-2c5/gemini/parts/nearUpperArm.png",
+      "candidateSha256": "49d02cac5b8a9c761ef70b21751a2fd85f4e73d859a99fee8901ab1cc91c3a2e",
+      "candidateDimensions": {
+        "width": 286,
+        "height": 646
+      },
+      "crop": {
+        "x": 494,
+        "y": 239,
+        "width": 286,
+        "height": 646
+      },
+      "splitY": null,
+      "alphaCounts": {
+        "transparent": 50485,
+        "translucent": 719,
+        "opaque": 133552,
+        "greenDominant": 0
+      },
+      "revision": 1,
+      "editOrigin": "studio-stage2c5-seed-alpha",
+      "reviewStatus": "pending",
+      "technicalValidity": "pass",
+      "extractionCorrectness": "needs_review",
+      "articulationCompatibility": "unknown"
+    },
+    {
+      "provider": "gemini",
+      "part": "nearForearm",
+      "label": "Gemini · near forearm",
+      "role": "forearm",
+      "sourceSheet": "arm",
+      "sourcePath": "docs/benchmarks/phase-05.1/stage-2c2/gemini/arm-sheet.png",
+      "sourceSha256": "838a950e309fe9f22c1530a5705dd933e1fb1d54413cae3f7b3a8fe1fe1455d8",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 2528,
+      "sourceHeight": 1696,
+      "maskFile": "outputs/folk-provider-benchmark/stage-2c5/gemini/masks/nearForearm.mask.png",
+      "maskSha256": "a34eaa86692d2888238722a04a6adc07bb6a1e9576702c0a3f8cc1c8f8c76f96",
+      "maskDimensions": {
+        "width": 2528,
+        "height": 1696
+      },
+      "candidateFile": "outputs/folk-provider-benchmark/stage-2c5/gemini/parts/nearForearm.png",
+      "candidateSha256": "2abecf5ff4169e71bc2cde73f7b236ad046d5b81873d4698872a36f43f206259",
+      "candidateDimensions": {
+        "width": 258,
+        "height": 545
+      },
+      "crop": {
+        "x": 1774,
+        "y": 621,
+        "width": 258,
+        "height": 545
+      },
+      "splitY": 1166,
+      "alphaCounts": {
+        "transparent": 50282,
+        "translucent": 636,
+        "opaque": 89692,
+        "greenDominant": 0
+      },
+      "revision": 1,
+      "editOrigin": "studio-stage2c5-seed-alpha-split-above",
+      "reviewStatus": "pending",
+      "technicalValidity": "pass",
+      "extractionCorrectness": "needs_review",
+      "articulationCompatibility": "unknown"
+    },
+    {
+      "provider": "gemini",
+      "part": "handOpen",
+      "label": "Gemini · near hand",
+      "role": "hand",
+      "sourceSheet": "arm",
+      "sourcePath": "docs/benchmarks/phase-05.1/stage-2c2/gemini/arm-sheet.png",
+      "sourceSha256": "838a950e309fe9f22c1530a5705dd933e1fb1d54413cae3f7b3a8fe1fe1455d8",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 2528,
+      "sourceHeight": 1696,
+      "maskFile": "outputs/folk-provider-benchmark/stage-2c5/gemini/masks/handOpen.mask.png",
+      "maskSha256": "2e86f46516431e44952a06531c5781136aef8614f6c49b2a697cbfec170a0ea7",
+      "maskDimensions": {
+        "width": 2528,
+        "height": 1696
+      },
+      "candidateFile": "outputs/folk-provider-benchmark/stage-2c5/gemini/parts/handOpen.png",
+      "candidateSha256": "239ce032c49e5707c3c5771b9cb7b3f80c96144334f27fb7ae4db494ac14fab2",
+      "candidateDimensions": {
+        "width": 223,
+        "height": 288
+      },
+      "crop": {
+        "x": 1890,
+        "y": 1166,
+        "width": 223,
+        "height": 288
+      },
+      "splitY": 1166,
+      "alphaCounts": {
+        "transparent": 21059,
+        "translucent": 408,
+        "opaque": 42757,
+        "greenDominant": 0
+      },
+      "revision": 1,
+      "editOrigin": "studio-stage2c5-seed-alpha-split-below",
+      "reviewStatus": "pending",
+      "technicalValidity": "pass",
+      "extractionCorrectness": "needs_review",
+      "articulationCompatibility": "unknown"
+    },
+    {
+      "provider": "gemini",
+      "part": "nearThigh",
+      "label": "Gemini · near thigh",
+      "role": "thigh",
+      "sourceSheet": "leg",
+      "sourcePath": "docs/benchmarks/phase-05.1/stage-2c2/gemini/leg-sheet.png",
+      "sourceSha256": "66c2344e54bb2acd9c7fd41320da9af389b6736f17125038449743b823038156",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 2528,
+      "sourceHeight": 1696,
+      "maskFile": "outputs/folk-provider-benchmark/stage-2c5/gemini/masks/nearThigh.mask.png",
+      "maskSha256": "006d4a9f79b3fb230336971c8ad27e148a089a8ae26fb52e0ce772c2aa683f11",
+      "maskDimensions": {
+        "width": 2528,
+        "height": 1696
+      },
+      "candidateFile": "outputs/folk-provider-benchmark/stage-2c5/gemini/parts/nearThigh.png",
+      "candidateSha256": "c00c78d6565baa1dada293301dadbb14644b3574bad0e0c566dad89c262e126e",
+      "candidateDimensions": {
+        "width": 638,
+        "height": 1306
+      },
+      "crop": {
+        "x": 341,
+        "y": 211,
+        "width": 638,
+        "height": 1306
+      },
+      "splitY": null,
+      "alphaCounts": {
+        "transparent": 185334,
+        "translucent": 1654,
+        "opaque": 646240,
+        "greenDominant": 0
+      },
+      "revision": 1,
+      "editOrigin": "studio-stage2c5-seed-alpha",
+      "reviewStatus": "pending",
+      "technicalValidity": "pass",
+      "extractionCorrectness": "needs_review",
+      "articulationCompatibility": "unknown"
+    },
+    {
+      "provider": "gemini",
+      "part": "nearShin",
+      "label": "Gemini · near shin",
+      "role": "shin",
+      "sourceSheet": "leg",
+      "sourcePath": "docs/benchmarks/phase-05.1/stage-2c2/gemini/leg-sheet.png",
+      "sourceSha256": "66c2344e54bb2acd9c7fd41320da9af389b6736f17125038449743b823038156",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 2528,
+      "sourceHeight": 1696,
+      "maskFile": "outputs/folk-provider-benchmark/stage-2c5/gemini/masks/nearShin.mask.png",
+      "maskSha256": "96cf6eca3ab68319811bb5cb8e345e8337f3f43d9b21bf49fabbf3fd5ba24698",
+      "maskDimensions": {
+        "width": 2528,
+        "height": 1696
+      },
+      "candidateFile": "outputs/folk-provider-benchmark/stage-2c5/gemini/parts/nearShin.png",
+      "candidateSha256": "bcc557381a351c65ab3c21d1c824898b00c10bbe356fbff6048424ec29bdee37",
+      "candidateDimensions": {
+        "width": 431,
+        "height": 1120
+      },
+      "crop": {
+        "x": 1706,
+        "y": 221,
+        "width": 431,
+        "height": 1120
+      },
+      "splitY": 1341,
+      "alphaCounts": {
+        "transparent": 169448,
+        "translucent": 1359,
+        "opaque": 311913,
+        "greenDominant": 0
+      },
+      "revision": 1,
+      "editOrigin": "studio-stage2c5-seed-alpha-split-above",
+      "reviewStatus": "pending",
+      "technicalValidity": "pass",
+      "extractionCorrectness": "needs_review",
+      "articulationCompatibility": "unknown"
+    },
+    {
+      "provider": "gemini",
+      "part": "nearFoot",
+      "label": "Gemini · near foot",
+      "role": "foot",
+      "sourceSheet": "leg",
+      "sourcePath": "docs/benchmarks/phase-05.1/stage-2c2/gemini/leg-sheet.png",
+      "sourceSha256": "66c2344e54bb2acd9c7fd41320da9af389b6736f17125038449743b823038156",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 2528,
+      "sourceHeight": 1696,
+      "maskFile": "outputs/folk-provider-benchmark/stage-2c5/gemini/masks/nearFoot.mask.png",
+      "maskSha256": "ee89d031604cfbf05ab429a25f98439ea47679127501dd58ba909d558c038da3",
+      "maskDimensions": {
+        "width": 2528,
+        "height": 1696
+      },
+      "candidateFile": "outputs/folk-provider-benchmark/stage-2c5/gemini/parts/nearFoot.png",
+      "candidateSha256": "93789f9e871ddb7a22d90b778e1ac0ea185f58274c1c1a79997f5437aa59a04b",
+      "candidateDimensions": {
+        "width": 200,
+        "height": 146
+      },
+      "crop": {
+        "x": 1845,
+        "y": 1341,
+        "width": 200,
+        "height": 146
+      },
+      "splitY": 1341,
+      "alphaCounts": {
+        "transparent": 3127,
+        "translucent": 245,
+        "opaque": 25828,
+        "greenDominant": 0
+      },
+      "revision": 1,
+      "editOrigin": "studio-stage2c5-seed-alpha-split-below",
+      "reviewStatus": "pending",
+      "technicalValidity": "pass",
+      "extractionCorrectness": "needs_review",
+      "articulationCompatibility": "unknown"
+    }
+  ]
+}

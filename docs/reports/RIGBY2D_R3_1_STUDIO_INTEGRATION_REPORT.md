@@ -321,6 +321,8 @@ The full browser suite includes the preserved Little Bird/Phase 4/Phase 5 routes
 | `8df732a`     | `feat(rigby2d): vendor pinned runtime and add character runtime adapter` |
 | `6cd7e6a`     | `feat(studio): add Rigby2D runtime workspace, APIs and shot export`      |
 | `7b9f196`     | `feat(rigby2d): support Fableon clip start in test shots`                |
+| `612a225`     | `feat(rigby2d): record per-character frame exports and clean stale jobs` |
+| `76ad343`     | `fix(rigby2d): include the runtime commit in frame cache identity`       |
 | report commit | This report (final HEAD; see completion response)                        |
 
 No push was performed.

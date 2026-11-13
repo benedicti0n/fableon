@@ -471,6 +471,7 @@ export async function exportAnimationFrames(input: {
   readonly versionId: string;
   readonly sourceSha256: string;
   readonly sourcePath: string;
+  readonly runtimeCommit: string;
   readonly animation: string;
   readonly fps: number;
   readonly scale: number;
@@ -479,7 +480,7 @@ export async function exportAnimationFrames(input: {
 }): Promise<FrameRenderResult> {
   const cacheKey = makeFrameCacheKey({
     sourceSha256: input.sourceSha256,
-    runtimeCommit: "307f7bf00d086a776b4a3c88c6fcca6fab97c531",
+    runtimeCommit: input.runtimeCommit,
     animation: input.animation,
     fps: input.fps,
     scale: input.scale,

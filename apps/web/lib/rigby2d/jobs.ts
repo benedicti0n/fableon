@@ -331,7 +331,14 @@ export async function startRender(input: StartRenderInput): Promise<Rigby2DRende
   await writeRenderJob(job, input.dataRoot);
   const controller = new AbortController();
   registry().controllers.set(id, controller);
-  void runRenderJob(job, projectPath, version.sha256, input.dataRoot, controller.signal);
+  void runRenderJob(
+    job,
+    projectPath,
+    version.sha256,
+    version.runtimeCommit,
+    input.dataRoot,
+    controller.signal,
+  );
   return job;
 }
 
@@ -339,6 +346,7 @@ async function runRenderJob(
   job: Rigby2DRenderJob,
   projectPath: string,
   sourceSha256: string,
+  runtimeCommit: string,
   dataRoot: string | undefined,
   signal: AbortSignal,
 ): Promise<void> {
@@ -359,6 +367,7 @@ async function runRenderJob(
       versionId: job.versionId,
       sourceSha256,
       sourcePath: projectPath,
+      runtimeCommit,
       animation: job.animation,
       fps: job.fps,
       scale: job.scale,

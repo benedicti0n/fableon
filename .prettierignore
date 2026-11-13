@@ -7,3 +7,7 @@ coverage
 pnpm-lock.yaml
 next-env.d.ts
 docs/benchmarks/phase-02-7-gate2/source/
+vendor
+outputs
+.fableon-data
+test-results

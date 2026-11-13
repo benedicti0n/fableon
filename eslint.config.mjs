@@ -22,5 +22,6 @@ export default defineConfig([
     "**/out/**",
     "**/*.tsbuildinfo",
     "**/next-env.d.ts",
+    "vendor/**",
   ]),
 ]);

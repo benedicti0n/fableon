@@ -231,6 +231,9 @@ export function FolkStudio({
         <Link className={studioSecondaryButtonClassName} href="/studio/folk/rigs">
           Rig editor
         </Link>
+        <Link className={studioSecondaryButtonClassName} href="/studio/folk/rigby2d">
+          Rigby2D runtime
+        </Link>
         <Link className={studioSecondaryButtonClassName} href="/studio/folk/production">
           Shot board
         </Link>

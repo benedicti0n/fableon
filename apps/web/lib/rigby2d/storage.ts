@@ -1,5 +1,5 @@
 import { createHash, randomUUID } from "node:crypto";
-import { mkdir, readFile, rename, rm, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, rename, rm, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 import { getRigby2DDataRoot } from "./constants";
@@ -115,6 +115,37 @@ export async function createJobWorkspace(dataRoot?: string): Promise<JobWorkspac
 
 export async function removeJobWorkspace(jobDir: string): Promise<void> {
   await rm(jobDir, { recursive: true, force: true });
+}
+
+export async function cleanupExpiredTemporaryJobs(
+  dataRoot?: string,
+  maxAgeMs = 24 * 60 * 60 * 1000,
+): Promise<{ readonly removed: number }> {
+  const root = getRigby2DDataRoot(dataRoot);
+  let removed = 0;
+  for (const subdirectory of ["tmp", "jobs"]) {
+    const dir = path.join(root, subdirectory);
+    let entries;
+    try {
+      entries = await readdir(dir, { withFileTypes: true });
+    } catch (error) {
+      if (error instanceof Error && "code" in error && error.code === "ENOENT") continue;
+      throw error;
+    }
+    for (const entry of entries) {
+      if (!entry.isDirectory()) continue;
+      const target = path.join(dir, entry.name);
+      try {
+        const info = await stat(target);
+        if (Date.now() - info.mtimeMs <= maxAgeMs) continue;
+        await rm(target, { recursive: true, force: true });
+        removed += 1;
+      } catch {
+        // A concurrent job may have removed it already.
+      }
+    }
+  }
+  return { removed };
 }
 
 export function assertInside(parent: string, child: string): string {

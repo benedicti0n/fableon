@@ -16,7 +16,7 @@ import {
   type FrameRenderMetadata,
 } from "./frames";
 import { getRigby2DDataRoot } from "./constants";
-import { readVersion, getVersionProjectPath } from "./assets";
+import { readVersion, getVersionProjectPath, recordFrameExport } from "./assets";
 import { atomicWriteJson } from "./storage";
 
 export const RIGBY2D_RENDER_STATUSES = [
@@ -278,6 +278,12 @@ export async function startRender(input: StartRenderInput): Promise<Rigby2DRende
       frameRender: cached,
     };
     await writeRenderJob(job, input.dataRoot);
+    await recordFrameExport({
+      characterId: input.characterId,
+      versionId: input.versionId,
+      metadata: cached,
+      ...(input.dataRoot ? { dataRoot: input.dataRoot } : {}),
+    }).catch(() => undefined);
     return job;
   }
   const activeJobs = (await listRenderJobs(input.dataRoot)).filter(isActiveRender);
@@ -375,6 +381,12 @@ async function runRenderJob(
       error: null,
     };
     await writeRenderJob(current, dataRoot);
+    await recordFrameExport({
+      characterId: job.characterId,
+      versionId: job.versionId,
+      metadata: result.metadata,
+      ...(dataRoot ? { dataRoot } : {}),
+    }).catch(() => undefined);
   } catch (error) {
     const finishedAt = new Date().toISOString();
     const cancelled =

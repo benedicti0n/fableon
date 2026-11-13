@@ -159,6 +159,21 @@ describe("Rigby2D character runtime", () => {
     const frame = await runtime.getFrame(render.job.id, 0);
     expect(frame.path).toContain("0000.png");
     expect(frame.frameWidth).toBe(render.metadata.frameWidth);
+    const exportRecord = JSON.parse(
+      await readFile(
+        path.join(
+          dataRoot,
+          "rigby2d",
+          "characters",
+          "artisan-arm-r22",
+          "frame-exports",
+          `${render.metadata.cacheKey}.json`,
+        ),
+        "utf8",
+      ),
+    ) as { frameCount: number; animation: string };
+    expect(exportRecord.frameCount).toBe(render.metadata.frameCount);
+    expect(exportRecord.animation).toBe("showcase_ikfix");
     const cached = await runtime.startRender("artisan-arm-r22", "showcase_ikfix", 8);
     expect(cached.status).toBe("completed");
     expect(cached.cached).toBe(true);

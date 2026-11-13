@@ -629,6 +629,58 @@ export async function importCharacter(input: ImportCharacterInput): Promise<Impo
   });
 }
 
+export async function recordFrameExport(input: {
+  readonly characterId: string;
+  readonly versionId: string;
+  readonly metadata: {
+    readonly cacheKey: string;
+    readonly animation: string;
+    readonly fps: number;
+    readonly scale: number;
+    readonly frameCount: number;
+    readonly frameWidth: number;
+    readonly frameHeight: number;
+    readonly pivot: { readonly x: number; readonly y: number };
+    readonly origin: { readonly x: number; readonly y: number };
+    readonly durationSeconds: number;
+    readonly cacheBytes: number;
+    readonly sourceSha256: string;
+    readonly runtimeVersion: string;
+    readonly runtimeCommit: string;
+    readonly mcp: Rigby2DMcpEvidence;
+  };
+  readonly dataRoot?: string;
+}): Promise<void> {
+  const dir = path.join(getCharacterDir(input.characterId, input.dataRoot), "frame-exports");
+  await atomicWriteJson(path.join(dir, `${input.metadata.cacheKey}.json`), {
+    schemaVersion: 1,
+    characterId: input.characterId,
+    versionId: input.versionId,
+    exportedAt: new Date().toISOString(),
+    cacheKey: input.metadata.cacheKey,
+    animation: input.metadata.animation,
+    fps: input.metadata.fps,
+    scale: input.metadata.scale,
+    frameCount: input.metadata.frameCount,
+    frameWidth: input.metadata.frameWidth,
+    frameHeight: input.metadata.frameHeight,
+    pivot: input.metadata.pivot,
+    origin: input.metadata.origin,
+    durationSeconds: input.metadata.durationSeconds,
+    cacheBytes: input.metadata.cacheBytes,
+    sourceSha256: input.metadata.sourceSha256,
+    runtimeVersion: input.metadata.runtimeVersion,
+    runtimeCommit: input.metadata.runtimeCommit,
+    mcp: {
+      protocolVersion: input.metadata.mcp.protocolVersion,
+      toolCount: input.metadata.mcp.toolCount,
+      elapsedMs: input.metadata.mcp.elapsedMs,
+      peakRssKb: input.metadata.mcp.peakRssKb,
+      requestCount: input.metadata.mcp.requestCount,
+    },
+  });
+}
+
 export async function validateCharacterVersion(
   characterId: string,
   versionId: string,

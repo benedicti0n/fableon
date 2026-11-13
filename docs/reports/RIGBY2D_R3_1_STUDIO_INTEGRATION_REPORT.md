@@ -98,6 +98,7 @@ Fableon owns the timeline, shot, camera, background, actor placement and FFmpeg 
     versions/v1/character.rigby
     versions/v1/version.json
     validations/<versionId>-<timestamp>.json
+    frame-exports/<cacheKey>.json
   cache/frames/<content-key>/
     meta.json
     frames/0000.png … 0072.png
@@ -105,7 +106,7 @@ Fableon owns the timeline, shot, camera, background, actor placement and FFmpeg 
   jobs/<ephemeral job>/
 ```
 
-The `.rigby` source is written to a new version directory with `mkdir(..., { recursive: false })` and never overwritten. Imports are idempotent by SHA-256; a different hash creates `v2`, `v3`, etc. The manifest records character ID, name, runtime, runtime version/commit, source attribution, review status, timestamps, current version and version summaries. Path traversal is blocked by ID validation and `assertInside`.
+The `.rigby` source is written to a new version directory with `mkdir(..., { recursive: false })` and never overwritten. Imports are idempotent by SHA-256; a different hash creates `v2`, `v3`, etc. The manifest records character ID, name, runtime, runtime version/commit, source attribution, review status, timestamps, current version and version summaries. Each completed render also writes a per-character `frame-exports/<cacheKey>.json` record with frame count, canvas, pivot, origin, fps, scale, source hash and MCP evidence. Path traversal is blocked by ID validation and `assertInside`.
 
 ## 3. Imported character
 
@@ -128,7 +129,7 @@ The `.rigby` source is written to a new version directory with `mkdir(..., { rec
 
 The 22-vertex AutoRig candidate was imported. The rejected cuff-weight variants and the 85-vertex experimental mesh were **not** imported as production candidates. The R2.1 project is present only as `artisan-arm-r21`, marked `experimental_unreviewed`, for the historical angle regression.
 
-Evidence: `character-manifest.json`, `character-version.json`, `import.json`, `inspect.json`, `validation.json`, `source-hashes.json`.
+Evidence: `character-manifest.json`, `character-version.json`, `import.json`, `inspect.json`, `validation.json`, `character-frame-export.json`, `source-hashes.json`.
 
 ## 4. MCP evidence
 
@@ -244,7 +245,7 @@ Two shots were produced from the same actual Rigby2D frame sequence:
 
 Both are H.264, have no audio, and passed FFprobe frame-count, resolution, codec and duration checks plus a full decode. The shot page uses Fableon camera placement (`worldToScreen`), a neutral Fableon stage background, Fableon actor position/scale and fixed frame-index sampling. It is a dedicated minimal R3.1 test shot, not a rewrite of the existing Phase 4 film composer.
 
-Contact sheets: `contact-sheet.png`, `contact-sheet-offset.png`. Shot manifests: `shot-manifest.json`, `shot-manifest-offset.json`. Shot configs: `shot-config.json`, `shot-config-offset.json`.
+Contact sheets: `contact-sheet.png`, `contact-sheet-offset.png`. Shot manifests: `shot-manifest.json`, `shot-manifest-offset.json`. Shot configs: `shot-config.json`, `shot-config-offset.json`. Raw frame transparency is preserved (`421×972` RGBA, alpha min 0 / max 255; `transparency.json`); the MP4 is intentionally composited over the opaque neutral stage.
 
 ## 9. Cache and measured performance
 
@@ -289,6 +290,7 @@ Targeted coverage includes:
 - R2.2 32/61/91 pass;
 - frame origin stabilization and placement math;
 - content-addressed frame cache identity and frame count;
+- per-character frame-export metadata record;
 - actual Studio import/render/play/scrub/reload browser flow;
 - FFprobe and full-decode verification inside the shot script.
 

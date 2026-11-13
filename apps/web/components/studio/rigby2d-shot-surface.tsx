@@ -16,6 +16,7 @@ interface ShotSurfaceProps {
   readonly anchorX: number;
   readonly anchorY: number;
   readonly scale: number;
+  readonly clipStartFrame: number;
 }
 
 interface ShotApi {
@@ -116,6 +117,7 @@ export function Rigby2DShotSurface({
   anchorX,
   anchorY,
   scale,
+  clipStartFrame,
 }: ShotSurfaceProps): React.JSX.Element {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const [job, setJob] = useState<RenderJobView | null>(null);
@@ -181,22 +183,30 @@ export function Rigby2DShotSurface({
   useEffect(() => {
     if (!ready || !job?.frameRender || images.length === 0) return;
     const render = job.frameRender;
+    const startFrame = Math.min(
+      Math.max(0, Math.floor(clipStartFrame)),
+      Math.max(0, render.frameCount - 1),
+    );
+    const availableFrames = render.frameCount - startFrame;
     const api: ShotApi = {
       ready: true,
       renderId,
-      frameCount: render.frameCount,
+      frameCount: availableFrames,
       fps: render.fps,
       frameWidth: render.frameWidth,
       frameHeight: render.frameHeight,
       pivot: render.pivot,
       anchor: { x: anchorX, y: anchorY, scale },
       renderFrame: (frame, width, height) => {
+        if (frame < 0 || frame >= availableFrames) {
+          throw new Error(`Frame ${frame} is outside the clip.`);
+        }
         const canvas = document.createElement("canvas");
         canvas.width = width;
         canvas.height = height;
         const context = canvas.getContext("2d");
         if (!context) throw new Error("Canvas 2D is required.");
-        const image = images[frame];
+        const image = images[startFrame + frame];
         if (!image) throw new Error(`Frame ${frame} is outside the render.`);
         composeFrame(context, width, height, image, render, anchorX, anchorY, scale);
         return canvas.toDataURL("image/png");
@@ -220,7 +230,8 @@ export function Rigby2DShotSurface({
         context.font = '600 24px "Iowan Old Style", Georgia, serif';
         context.fillText("R3.1 · Rigby2D frames composited by Fableon", margin, 38);
         frames.forEach((frame, index) => {
-          const image = images[frame];
+          const sourceFrame = startFrame + frame;
+          const image = images[sourceFrame];
           if (!image) return;
           const column = index % columns;
           const row = Math.floor(index / columns);
@@ -235,7 +246,7 @@ export function Rigby2DShotSurface({
           context.drawImage(temp, x, y);
           context.fillStyle = "#d2a164";
           context.font = "12px Menlo, monospace";
-          context.fillText(`frame ${String(frame).padStart(3, "0")}`, x, y + tileHeight + 18);
+          context.fillText(`frame ${String(sourceFrame).padStart(3, "0")}`, x, y + tileHeight + 18);
         });
         return canvas.toDataURL("image/png");
       },
@@ -244,7 +255,7 @@ export function Rigby2DShotSurface({
     return () => {
       if (window.__FABLEON_RIGBY2D_SHOT__ === api) delete window.__FABLEON_RIGBY2D_SHOT__;
     };
-  }, [ready, job, images, renderId, anchorX, anchorY, scale]);
+  }, [ready, job, images, renderId, anchorX, anchorY, scale, clipStartFrame]);
 
   return (
     <div className="relative min-h-screen bg-ink-950">

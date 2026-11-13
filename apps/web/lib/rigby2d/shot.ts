@@ -8,6 +8,7 @@ export interface Rigby2DShotConfig {
   readonly height: number;
   readonly fps: number;
   readonly frameCount: number;
+  readonly clipStartFrame: number;
   readonly world: { readonly width: number; readonly height: number };
   readonly camera: { readonly centerX: number; readonly centerY: number; readonly zoom: number };
   readonly actor: {
@@ -34,6 +35,7 @@ export const DEFAULT_R2_2_SHOT: Rigby2DShotConfig = {
   height: 1080,
   fps: 24,
   frameCount: 73,
+  clipStartFrame: 0,
   world: { width: 1920, height: 1080 },
   camera: { centerX: 960, centerY: 540, zoom: 1 },
   actor: {

@@ -28,6 +28,7 @@ export default async function Rigby2DShotPage({ searchParams }: PageProps) {
       anchorX={numeric(first(params["anchorX"]), 960)}
       anchorY={numeric(first(params["anchorY"]), 1040)}
       scale={numeric(first(params["scale"]), 0.9)}
+      clipStartFrame={Math.max(0, Math.floor(numeric(first(params["startFrame"]), 0)))}
     />
   );
 }

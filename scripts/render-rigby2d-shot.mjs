@@ -28,6 +28,7 @@ function parseArgs(argv) {
     anchorX: 960,
     anchorY: 1040,
     actorScale: 0.9,
+    clipStartFrame: 0,
     output: DEFAULT_OUTPUT,
     artifactsDir: null,
     crf: 18,
@@ -87,6 +88,9 @@ function parseArgs(argv) {
       case "--actor-scale":
         args.actorScale = Number(next);
         break;
+      case "--clip-start-frame":
+        args.clipStartFrame = Number(next);
+        break;
       case "--output":
         args.output = resolve(next);
         break;
@@ -105,6 +109,9 @@ function parseArgs(argv) {
   }
   if (!Number.isFinite(args.actorScale) || args.actorScale <= 0) {
     throw new Error("Actor scale must be positive.");
+  }
+  if (!Number.isInteger(args.clipStartFrame) || args.clipStartFrame < 0) {
+    throw new Error("Clip start frame must be a non-negative integer.");
   }
   if (
     !Number.isInteger(args.width) ||
@@ -342,6 +349,7 @@ async function main() {
       anchorX: String(args.anchorX),
       anchorY: String(args.anchorY),
       scale: String(args.actorScale),
+      startFrame: String(args.clipStartFrame),
     });
     await page.goto(`${baseUrl}/studio/folk/rigby2d/render?${query.toString()}`, {
       waitUntil: "domcontentloaded",
@@ -362,8 +370,14 @@ async function main() {
         anchor: api.anchor,
       };
     });
-    if (shot.frameCount !== render.frameCount) {
-      throw new Error(`Shot frame count ${shot.frameCount}; API render ${render.frameCount}.`);
+    const expectedFrames = render.frameCount - args.clipStartFrame;
+    if (expectedFrames <= 0) {
+      throw new Error(
+        `Clip start frame ${args.clipStartFrame} is outside the ${render.frameCount}-frame render.`,
+      );
+    }
+    if (shot.frameCount !== expectedFrames) {
+      throw new Error(`Shot frame count ${shot.frameCount}; expected ${expectedFrames}.`);
     }
     if (pageErrors.length > 0) throw new Error(`Shot page errors: ${pageErrors.join(" | ")}`);
 
@@ -495,6 +509,7 @@ async function main() {
       fps: args.fps,
       frameCount: totalFrames,
       camera: { centerX: 960, centerY: 540, zoom: 1, rotation: 0 },
+      clipStartFrame: args.clipStartFrame,
       actor: {
         characterId: args.characterId,
         versionId: characterInfo.versionId,
